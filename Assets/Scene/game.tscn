@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cus0611rlcobu"]
+
+[ext_resource type="PackedScene" uid="uid://b6jiyrg2ell0u" path="res://Assets/Scene/lore.tscn" id="1_5oy4s"]
+[ext_resource type="Script" uid="uid://d3j16s6ni2tjl" path="res://Assets/Scripts/lore.gd" id="2_7i6p2"]
+[ext_resource type="Texture2D" uid="uid://bhbgttsjkuflj" path="res://Assets/Scene/Bg/Background (2).png" id="3_7ttw8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5oy4s"]
+distance = -46.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xn0nd"]
+texture = ExtResource("3_7ttw8")
+20:2/size_in_atlas = Vector2i(2, 2)
+20:2/0 = 0
+22:2/size_in_atlas = Vector2i(2, 2)
+22:2/0 = 0
+24:2/size_in_atlas = Vector2i(2, 2)
+24:2/0 = 0
+20:4/size_in_atlas = Vector2i(2, 2)
+20:4/0 = 0
+22:4/size_in_atlas = Vector2i(2, 2)
+22:4/0 = 0
+24:4/size_in_atlas = Vector2i(2, 2)
+24:4/0 = 0
+20:6/size_in_atlas = Vector2i(2, 2)
+20:6/0 = 0
+22:6/size_in_atlas = Vector2i(2, 2)
+22:6/0 = 0
+24:6/size_in_atlas = Vector2i(2, 2)
+24:6/0 = 0
+2:16/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:18/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:20/0 = 0
+7:20/0 = 0
+7:21/0 = 0
+7:19/0 = 0
+7:18/0 = 0
+6:17/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+7:17/0 = 0
+5:16/0 = 0
+4:16/0 = 0
+3:16/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+6:19/0 = 0
+6:21/0 = 0
+5:21/0 = 0
+4:21/0 = 0
+3:21/0 = 0
+2:21/0 = 0
+2:20/0 = 0
+2:19/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+3:19/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q485k"]
+sources/0 = SubResource("TileSetAtlasSource_xn0nd")
+
+[node name="Game" type="Node2D" unique_id=1882486537]
+
+[node name="Lore" parent="." unique_id=1659510779 instance=ExtResource("1_5oy4s")]
+script = ExtResource("2_7i6p2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=383641506]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=153297133]
+shape = SubResource("WorldBoundaryShape2D_5oy4s")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=549159152]
+tile_set = SubResource("TileSet_q485k")
+format = 2
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(131068, 1310720, 4, 262140, 1310720, 6, 262142, 1441792, 6, 196608, 1441792, 6, 196610, 1441792, 6, 196611, 1441792, 6, 196613, 1572864, 6, 65541, 1572864, 4, -65531, 1572864, 4, -131074, 1441792, 6, -2, 262144, 18, 131071, 196608, 17, 65536, 196608, 17, 65537, 196608, 17, 65539, 262144, 18, 3, 262144, 18, -65533, 196608, 17, -65534, 196608, 17, -65535, 262144, 18, -65536, 262144, 18, -327684, 1310720, 2, -131073, 1441792, 6, 262143, 1441792, 6, 196609, 1441792, 6, 196612, 1572864, 6, 196606, 196608, 21, 196607, 196608, 21, 131072, 196608, 21, 131073, 196608, 21, 131074, 196608, 20, 131075, 196608, 21, 131077, 1572864, 4, 65534, 262144, 18, -1, 196608, 17, 65535, 196608, 17, 0, 196608, 17, 1, 196608, 17, 2, 196608, 17, 65538, 196608, 17, 131070, 196608, 20, 131069, 196608, 20, 65533, 196608, 17, -65532, 196608, 17, 4, 196608, 17, 65540, 196608, 17, 5, 196608, 17, 131076, 196608, 21, 196605, 196608, 20, -65539, 1441792, 2, -65538, 1441792, 2, -65537, 1441792, 2, -131072, 1441792, 2, -131071, 1441792, 2, -131070, 1441792, 2, -131069, 1441792, 2, -131068, 1441792, 2, -65540, 1310720, 2, -131067, 1572864, 2, 65532, 1310720, 4, -3, 262144, 18)
