@@ -2,8 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cj274feyrapei" path="res://Assets/Sprite/Tilesets/Grass.png" id="1_lmjrh"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
-[ext_resource type="PackedScene" uid="uid://b6jiyrg2ell0u" path="res://Assets/Scene/lore.tscn" id="3_sygrn"]
-[ext_resource type="Script" uid="uid://d3j16s6ni2tjl" path="res://Assets/Scripts/lore.gd" id="4_w2o82"]
 [ext_resource type="Texture2D" uid="uid://c8us716ex6g4f" path="res://Assets/Sprite/Tilesets/Water.png" id="5_s1d72"]
 [ext_resource type="Texture2D" uid="uid://co38hy3810kc1" path="res://Assets/Sprite/Objects/Basic Grass Biom things 1.png" id="6_sygrn"]
 [ext_resource type="Texture2D" uid="uid://dlam8e53ngsj3" path="res://Assets/Sprite/Objects/Fences.png" id="7_w2o82"]
@@ -561,12 +559,6 @@ tile_set = SubResource("TileSet_1oq35")
 scale = Vector2(0.445, 0.445)
 tile_map_data = PackedByteArray("AAAAAAAAAAAHAAEAAAAAAP7/AAAHAAAAAAABAP7/AAAHAAAAAAD+//3/AAAGAAEAAAABAAAAAAAFAAEAAAD+////AAAFAAEAAAABAPz/AAAFAAEAAAD+/wEAAAAGAAEAAAD///z/AAAFAAEAAAAFAPj/AAABAAAAAAAIAPf/AAABAAAAAAALAPj/AAABAAAAAAAOAPf/AAABAAAAAAAPAPf/AAABAAAAAAAAAPr/AAABAAAAAAAAAPn/AAABAAAAAAABAPj/AAAAAAEAAAABAPf/AAAAAAEAAAD8//X/AAAAAAEAAAD9//X/AAAAAAEAAAABAPv/AAAGAAEAAAABAPn/AAAGAAEAAAAIAPj/AAAGAAEAAAAJAPj/AAAGAAEAAAD+//b/AAAHAAAAAAD///b/AAAHAAAAAAABAPX/AAAHAAEAAAABAPb/AAAHAAEAAAD8//b/AAAHAAEAAAD9//f/AAAHAAEAAAA=")
 tile_set = SubResource("TileSet_sygrn")
-
-[node name="Lore" parent="." unique_id=1659510779 instance=ExtResource("3_sygrn")]
-visible = false
-z_index = 2
-position = Vector2(143, 37)
-script = ExtResource("4_w2o82")
 
 [node name="trees" type="TileMapLayer" parent="." unique_id=330941603]
 z_index = 3
