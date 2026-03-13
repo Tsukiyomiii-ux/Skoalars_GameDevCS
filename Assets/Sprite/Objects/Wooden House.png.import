@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5e6atlnalp44"
-path="res://.godot/imported/Doors.png-479bc7f2ea34bfadb90830a3b8ca31df.ctex"
+uid="uid://bcu2p5eiphyje"
+path="res://.godot/imported/Wooden House.png-a5efe9410c3f69371c3b94125eb829a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/Doors.png"
-dest_files=["res://.godot/imported/Doors.png-479bc7f2ea34bfadb90830a3b8ca31df.ctex"]
+source_file="res://Assets/Sprite/Objects/Wooden House.png"
+dest_files=["res://.godot/imported/Wooden House.png-a5efe9410c3f69371c3b94125eb829a5.ctex"]
 
 [params]
 
