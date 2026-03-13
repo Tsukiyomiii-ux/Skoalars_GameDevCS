@@ -1,10 +1,11 @@
-[gd_scene format=4 uid="uid://drg3ms53ecqx0"]
+[gd_scene format=4 uid="uid://lecfwo7f72ia"]
 
 [ext_resource type="Texture2D" uid="uid://cj274feyrapei" path="res://Assets/Sprite/Tilesets/Grass.png" id="1_lmjrh"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
 [ext_resource type="PackedScene" uid="uid://b6jiyrg2ell0u" path="res://Assets/Scene/lore.tscn" id="3_sygrn"]
 [ext_resource type="Script" uid="uid://d3j16s6ni2tjl" path="res://Assets/Scripts/lore.gd" id="4_w2o82"]
 [ext_resource type="Texture2D" uid="uid://c8us716ex6g4f" path="res://Assets/Sprite/Tilesets/Water.png" id="5_s1d72"]
+[ext_resource type="Texture2D" uid="uid://cwe0yr18eyo0w" path="res://Assets/Sprite/Objects/Basic_Grass_Biom_things.png" id="6_sygrn"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mqwxg"]
 distance = -46.0
@@ -289,6 +290,55 @@ texture = ExtResource("5_s1d72")
 [sub_resource type="TileSet" id="TileSet_bnxhk"]
 sources/0 = SubResource("TileSetAtlasSource_mqwxg")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o503u"]
+texture = ExtResource("6_sygrn")
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/0 = 0
+1:0/size_in_atlas = Vector2i(2, 2)
+1:0/0 = 0
+3:0/size_in_atlas = Vector2i(2, 2)
+3:0/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:2/size_in_atlas = Vector2i(1, 2)
+8:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+5:3/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+5:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4jkg4"]
+tile_size = Vector2i(17, 16)
+sources/0 = SubResource("TileSetAtlasSource_o503u")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1oq35"]
+texture = ExtResource("6_sygrn")
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_f3pcw"]
+sources/0 = SubResource("TileSetAtlasSource_1oq35")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktv0f"]
+texture = ExtResource("6_sygrn")
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l2s30"]
+sources/0 = SubResource("TileSetAtlasSource_ktv0f")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3pcw"]
+texture = ExtResource("6_sygrn")
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ktv0f"]
+sources/0 = SubResource("TileSetAtlasSource_f3pcw")
+
 [node name="MainIsland" type="Node2D" unique_id=859178235]
 
 [node name="World Border" type="StaticBody2D" parent="." unique_id=654556152]
@@ -337,3 +387,26 @@ z_index = -2
 position = Vector2(0, 160)
 tile_map_data = PackedByteArray("AADt//b/AAAAAAAAAADu//b/AAABAAAAAADv//b/AAACAAAAAADt//f/AAADAAAAAADu//f/AAAAAAAAAADv//f/AAABAAAAAADt//j/AAAAAAAAAADu//j/AAABAAAAAADv//j/AAAAAAAAAADt//n/AAABAAAAAADu//n/AAAAAAAAAADv//n/AAACAAAAAADw//b/AAAAAAAAAADw//f/AAABAAAAAADw//j/AAAAAAAAAADw//n/AAAAAAAAAADt//X/AAABAAAAAADu//X/AAABAAAAAADv//X/AAABAAAAAADt//r/AAABAAAAAADu//r/AAABAAAAAADv//r/AAABAAAAAADx//j/AAABAAAAAADx//f/AAABAAAAAADx//b/AAABAAAAAADx//n/AAABAAAAAADw//r/AAABAAAAAADw//X/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_bnxhk")
+
+[node name="trees" type="TileMapLayer" parent="." unique_id=330941603]
+z_index = 3
+position = Vector2(173, 96)
+scale = Vector2(0.8, 0.8)
+tile_map_data = PackedByteArray("AADl/+z/AAABAAAAAADn/+3/AAADAAAAAADl/+7/AAABAAAAAADk//H/AAAHAAIAAADl//H/AAAFAAMAAADm//H/AAAFAAMAAADn//H/AAAHAAMAAAA=")
+tile_set = SubResource("TileSet_4jkg4")
+
+[node name="bush" type="TileMapLayer" parent="trees" unique_id=1727925241]
+scale = Vector2(0.3, 0.3)
+tile_map_data = PackedByteArray("AADj//D/AAABAAMAAACf/8j/AAABAAMAAGCg/8j/AAABAAMAAGCh/8j/AAABAAMAAGCi/8j/AAABAAMAAGCj/8j/AAABAAMAAGCk/8j/AAABAAMAAACn/8X/AAAAAAMAAACo/8X/AAAAAAMAAACp/8X/AAAAAAMAAACq/8X/AAAAAAMAAACq/8T/AAAAAAMAAAA=")
+tile_set = SubResource("TileSet_f3pcw")
+
+[node name="bush2" type="TileMapLayer" parent="trees/bush" unique_id=785920536]
+scale = Vector2(1.5, 1.5)
+tile_map_data = PackedByteArray("AAC//9v/AAABAAMAAADA/9v/AAABAAMAAADB/9v/AAABAAMAAADC/9v/AAABAAMAAADD/9v/AAABAAMAAADE/9n/AAABAAMAAADF/9n/AAABAAMAAADG/9n/AAABAAMAAADH/9n/AAABAAMAAADE/9L/AAAAAAMAAADD/9L/AAABAAMAAADC/9L/AAABAAMAAAA=")
+tile_set = SubResource("TileSet_l2s30")
+
+[node name="big bush" type="TileMapLayer" parent="trees/bush/bush2" unique_id=1488284608]
+z_index = -2
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AADi/+j/AAAAAAMAAADi/+f/AAABAAMAAADj/+f/AAABAAMAAADk/+f/AAAAAAMAAADl/+f/AAAAAAMAAADm/+f/AAABAAMAAADn/+f/AAAAAAMAAADo/+f/AAABAAMAAADh/+j/AAABAAMAAADf/+//AAABAAMAAADg/+//AAABAAMAAADh/+//AAABAAMAAADi/+//AAABAAMAAADj/+//AAABAAMAAAA=")
+tile_set = SubResource("TileSet_ktv0f")
