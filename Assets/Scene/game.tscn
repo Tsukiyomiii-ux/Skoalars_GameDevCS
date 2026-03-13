@@ -70,7 +70,7 @@ sources/0 = SubResource("TileSetAtlasSource_xn0nd")
 [node name="Game" type="Node2D" unique_id=1882486537]
 
 [node name="Lore" parent="." unique_id=1659510779 instance=ExtResource("1_5oy4s")]
-position = Vector2(71, 0)
+position = Vector2(42, 9)
 script = ExtResource("2_7i6p2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=383641506]
