@@ -662,7 +662,7 @@ tile_set = SubResource("TileSet_4jkg4")
 [node name="bush" type="TileMapLayer" parent="trees" unique_id=1727925241]
 z_index = -1
 scale = Vector2(0.3, 0.3)
-tile_map_data = PackedByteArray("AADj//D/AAABAAMAAACm//D/AAACAAIAAACn//H/AAACAAIAAACq//P/AAACAAIAAACu//L/AAACAAIAAACq//L/AAABAAIAAACp//H/AAABAAIAAACv//H/AAABAAIAAACl//H/AAACAAIAAAA=")
+tile_map_data = PackedByteArray("AADj//D/AAABAAMAAACm//D/AAACAAIAAACn//H/AAACAAIAAACq//P/AAACAAIAAACu//L/AAACAAIAAACq//L/AAABAAIAAACp//H/AAABAAIAAACv//H/AAABAAIAAACl//H/AAACAAIAAACx//D/AAACAAIAAACx/+z/AAACAAIAAAA=")
 tile_set = SubResource("TileSet_f3pcw")
 
 [node name="bush2" type="TileMapLayer" parent="trees/bush" unique_id=785920536]
