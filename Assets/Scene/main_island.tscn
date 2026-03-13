@@ -278,6 +278,7 @@ texture = ExtResource("6_sygrn")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
+0:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_f3pcw"]
 sources/0 = SubResource("TileSetAtlasSource_1oq35")
@@ -297,6 +298,8 @@ texture = ExtResource("6_sygrn")
 0:4/0 = 0
 0:3/0 = 0
 1:3/0 = 0
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_l2s30"]
 sources/0 = SubResource("TileSetAtlasSource_ktv0f")
@@ -305,17 +308,25 @@ sources/0 = SubResource("TileSetAtlasSource_ktv0f")
 texture = ExtResource("6_sygrn")
 0:3/0 = 0
 1:3/0 = 0
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/0 = 0
+6:3/0 = 0
+5:3/0 = 0
+8:2/size_in_atlas = Vector2i(1, 2)
+8:2/0 = 0
+2:2/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+7:3/0 = 0
+5:1/0 = 0
+6:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_62u1j"]
 sources/0 = SubResource("TileSetAtlasSource_t4n34")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62u1j"]
-texture = ExtResource("6_sygrn")
-0:3/0 = 0
-1:3/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_wxmp5"]
-sources/0 = SubResource("TileSetAtlasSource_62u1j")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sygrn"]
 texture = ExtResource("6_sygrn")
@@ -486,10 +497,11 @@ tile_set = SubResource("TileSet_bnxhk")
 z_index = 3
 position = Vector2(173, 96)
 scale = Vector2(0.8, 0.8)
-tile_map_data = PackedByteArray("AADl/+z/AAABAAAAAADn/+3/AAADAAAAAADl/+7/AAABAAAAAADk//H/AAAHAAIAAADl//H/AAAFAAMAAADm//H/AAAFAAMAAADn//H/AAAHAAMAAAA=")
+tile_map_data = PackedByteArray("AADl/+z/AAABAAAAAADn/+3/AAADAAAAAADl/+7/AAABAAAAAADp//H/AAAGAAMAAADq//H/AAAGAAMAAADr//H/AAAGAAMAAADs//H/AAAGAAMAAADo//H/AAAHAAMAAADn//H/AAAHAAMAAADm//H/AAAHAAMAAADl//H/AAAHAAMAAADk//H/AAAHAAMAAADj//H/AAAHAAMAAADi//H/AAAHAAMAAADj/+7/AAAAAAAAAADk/+7/AAABAAAAAADk/+z/AAABAAAAAADm/+z/AAADAAAAAADm/+3/AAADAAAAAADl/+3/AAADAAAAAADk/+3/AAADAAAAAADj/+z/AAABAAAAAADj/+3/AAAAAAAAAADj/+v/AAABAAAAAADk/+v/AAABAAAAAADk/+r/AAABAAAAAADj/+r/AAABAAAAAADl/+v/AAADAAAAAADl/+r/AAADAAAAAAA=")
 tile_set = SubResource("TileSet_4jkg4")
 
 [node name="bush" type="TileMapLayer" parent="trees" unique_id=1727925241]
+z_index = -1
 scale = Vector2(0.3, 0.3)
 tile_map_data = PackedByteArray("AADj//D/AAABAAMAAAA=")
 tile_set = SubResource("TileSet_f3pcw")
@@ -500,17 +512,10 @@ tile_map_data = PackedByteArray("AADD/9v/AAABAAMAAADE/9v/AAABAAMAAADF/9v/AAABAAM
 tile_set = SubResource("TileSet_l2s30")
 
 [node name="big bush" type="TileMapLayer" parent="trees/bush/bush2" unique_id=1488284608]
-z_index = -2
 position = Vector2(0, 2.7777405)
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AADh/+//AAABAAMAAADi/+//AAABAAMAAADj/+//AAABAAMAAADk/+//AAABAAMAAADi/+j/AAABAAMAAADi/+f/AAABAAMAAADj/+f/AAAAAAMAAADk/+f/AAAAAAMAAADl/+f/AAAAAAMAAADm/+f/AAAAAAMAAADn/+f/AAAAAAMAAADo/+f/AAAAAAMAAADp/+f/AAAAAAMAAADq/+f/AAAAAAMAAAA=")
+tile_map_data = PackedByteArray("AADh/+//AAABAAMAAADi/+//AAABAAMAAADj/+//AAABAAMAAADk/+//AAABAAMAAADj/+f/AAAAAAMAAADk/+f/AAAAAAMAAADl/+f/AAAAAAMAAADm/+f/AAAAAAMAAADn/+f/AAAAAAMAAADo/+f/AAAAAAMAAADp/+f/AAAAAAMAAADq/+f/AAAAAAMAAADg/+//AAAAAAMAAADf/+//AAABAAMAAADm/+//AAABAAMAAADn/+//AAABAAMAAADo/+//AAABAAMAAADp/+//AAABAAMAAADq/+//AAABAAMAAADl/+//AAABAAMAAADf/+7/AAAAAAAAAADf/+z/AAAAAAAAAADf/+3/AAAAAAAAAADf/+v/AAAAAAAAAADf/+r/AAAAAAAAAADf/+n/AAAAAAAAAADf/+j/AAAAAAAAAADg/+3/AAABAAMAAADh/+3/AAABAAMAAADg/+z/AAAAAAAAAADg/+7/AAAIAAIAAADh/+7/AAAIAAIAAADi/+7/AAAIAAIAAADj/+7/AAAIAAIAAADk/+7/AAAGAAEAAADk/+3/AAAGAAEAAADm/+v/AAAGAAEAAADl/+v/AAAGAAEAAADl/+r/AAAGAAEAAADl/+7/AAAGAAIAAADm/+7/AAAGAAIAAADn/+7/AAAGAAIAAADo/+7/AAAGAAIAAADp/+7/AAAGAAIAAADq/+7/AAAGAAIAAAA=")
 tile_set = SubResource("TileSet_62u1j")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="trees/bush" unique_id=318792547]
-z_index = -1
-scale = Vector2(0.9, 0.9)
-tile_map_data = PackedByteArray("AACb/8L/AAABAAMAAACc/8L/AAABAAMAAACd/8L/AAABAAMAAACe/8L/AAABAAMAAACf/8L/AAABAAMAAACl/77/AAAAAAMAAACm/77/AAAAAAMAAACn/77/AAAAAAMAAACj/77/AAABAAMAAACk/77/AAABAAMAAACi/77/AAAAAAMAAACo/77/AAABAAMAAAA=")
-tile_set = SubResource("TileSet_wxmp5")
 
 [node name="Trees" type="TileMapLayer" parent="." unique_id=1379883939]
 z_index = 1
@@ -534,7 +539,7 @@ tile_set = SubResource("TileSet_l2s30")
 [node name="Garden" type="TileMapLayer" parent="." unique_id=402959168]
 
 [node name="Fences" type="TileMapLayer" parent="Garden" unique_id=916890926]
-tile_map_data = PackedByteArray("AAAAAPb/AAAAAAAAAAABAPX/AAACAAMAAAAAAPX/AAABAAAAAAAAAPf/AAAAAAEAAAAAAPj/AAAAAAEAAAAAAPn/AAABAAIAAAABAPn/AAACAAMAAAACAPn/AAACAAMAAAADAPn/AAACAAMAAAAEAPn/AAACAAMAAAAFAPn/AAACAAMAAAAGAPn/AAACAAMAAAAGAPX/AAACAAMAAAAFAPX/AAACAAMAAAAEAPX/AAACAAMAAAADAPX/AAACAAMAAAACAPX/AAACAAMAAAAHAPn/AAADAAMAAAAHAPX/AAADAAAAAAAHAPb/AAAAAAEAAAAHAPf/AAAAAAEAAAAHAPj/AAAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAAAAPb/AAAAAAAAAAABAPX/AAACAAMAAAAAAPX/AAABAAAAAAAAAPf/AAAAAAEAAAAAAPj/AAAAAAEAAAAAAPn/AAABAAIAAAABAPn/AAACAAMAAAACAPn/AAACAAMAAAADAPn/AAACAAMAAAAEAPn/AAACAAMAAAAFAPn/AAACAAMAAAAGAPn/AAACAAMAAAAGAPX/AAACAAMAAAAFAPX/AAACAAMAAAAEAPX/AAACAAMAAAADAPX/AAACAAMAAAACAPX/AAACAAMAAAAHAPn/AAADAAMAAAAHAPX/AAADAAAAAAAHAPb/AAAAAAEAAAAHAPf/AAAAAAEAAAAHAPj/AAAAAAEAAADz//v/AAABAAAAAAD0//v/AAACAAAAAAD1//v/AAACAAAAAAD2//v/AAACAAAAAAD3//v/AAACAAAAAAD4//v/AAACAAAAAAD5//v/AAADAAAAAAA=")
 tile_set = SubResource("TileSet_ktv0f")
 
 [node name="Dirt" type="TileMapLayer" parent="Garden/Fences" unique_id=921967253]
