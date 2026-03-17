@@ -691,4 +691,4 @@ position = Vector2(-1.5, 5.25)
 shape = SubResource("RectangleShape2D_1oq35")
 
 [node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("13_f3pcw")]
-position = Vector2(56, 58)
+position = Vector2(-53.999992, 19.000004)
