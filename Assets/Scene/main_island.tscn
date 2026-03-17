@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://lecfwo7f72ia"]
+[gd_scene format=4 uid="uid://c5erwh2besr5r"]
 
 [ext_resource type="Texture2D" uid="uid://cj274feyrapei" path="res://Assets/Sprite/Tilesets/Grass.png" id="1_lmjrh"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
@@ -10,8 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c24xgug5ygxa2" path="res://Assets/Sprite/Objects/free_pixel_16_woods.png" id="10_4jkg4"]
 [ext_resource type="Texture2D" uid="uid://cqe4s1e3gfp8" path="res://Assets/Sprite/Objects/Basic_tools_and_meterials.png" id="11_4jkg4"]
 [ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="12_1oq35"]
-[ext_resource type="PackedScene" path="res://Assets/Scripts/skoalars.tscn" id="13_f3pcw"]
-[ext_resource type="Texture2D" uid="uid://k76d24eu30cl" path="res://Assets/Sprite/Objects/MCHome/Trees_animation.png" id="13_ktv0f"]
+[ext_resource type="PackedScene" uid="uid://dpsjtepclb0h0" path="res://Assets/Scripts/skoalars.tscn" id="13_f3pcw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mqwxg"]
 distance = -46.0
@@ -692,4 +691,4 @@ position = Vector2(-1.5, 5.25)
 shape = SubResource("RectangleShape2D_1oq35")
 
 [node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("13_f3pcw")]
-position = Vector2(-53.999992, 19.000004)
+position = Vector2(-57, 5.000001)
