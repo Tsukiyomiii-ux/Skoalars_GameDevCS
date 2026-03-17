@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://c5erwh2besr5r"]
+[gd_scene format=4 uid="uid://lecfwo7f72ia"]
 
 [ext_resource type="Texture2D" uid="uid://cj274feyrapei" path="res://Assets/Sprite/Tilesets/Grass.png" id="1_lmjrh"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c24xgug5ygxa2" path="res://Assets/Sprite/Objects/free_pixel_16_woods.png" id="10_4jkg4"]
 [ext_resource type="Texture2D" uid="uid://cqe4s1e3gfp8" path="res://Assets/Sprite/Objects/Basic_tools_and_meterials.png" id="11_4jkg4"]
 [ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="12_1oq35"]
-[ext_resource type="PackedScene" uid="uid://dpsjtepclb0h0" path="res://Assets/Scripts/skoalars.tscn" id="13_f3pcw"]
+[ext_resource type="PackedScene" path="res://Assets/Scripts/skoalars.tscn" id="13_f3pcw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mqwxg"]
 distance = -46.0
@@ -463,6 +463,14 @@ texture = ExtResource("10_4jkg4")
 [sub_resource type="TileSet" id="TileSet_o4rl6"]
 sources/0 = SubResource("TileSetAtlasSource_884xs")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_htla3"]
+texture = ExtResource("12_1oq35")
+0:14/size_in_atlas = Vector2i(3, 3)
+0:14/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t4n34"]
+sources/0 = SubResource("TileSetAtlasSource_htla3")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mqwxg"]
 texture = ExtResource("5_s1d72")
 0:0/0 = 0
@@ -631,6 +639,10 @@ position = Vector2(1.5258789e-05, 1.5258789e-05)
 scale = Vector2(0.4999999, 0.4999999)
 tile_map_data = PackedByteArray("AAAMAO//AAARAAAAAAABAPb/AAAGAAQAAAAAAPb/AAAGAAQAAAAAAPX/AAAGAAQAAAACAPb/AAAGAAQAAAADAPb/AAAGAAQAAAAEAPb/AAAGAAQAAAAFAPb/AAAGAAQAAAAGAPb/AAAGAAQAAAAHAPb/AAAGAAQAAAAIAPb/AAAGAAQAAAAJAPb/AAAGAAQAAAAKAPb/AAAGAAQAAAALAPb/AAAGAAQAAAAMAPb/AAAGAAQAAAANAPb/AAAGAAQAAAAOAPb/AAAGAAQAAAAPAPb/AAAGAAQAAAAQAPb/AAAGAAQAAAARAPb/AAAGAAQAAAABAPX/AAAFAAUAAAACAPX/AAAFAAUAAAADAPX/AAAFAAUAAAAEAPX/AAAFAAUAAAAFAPX/AAAFAAUAAAAGAPX/AAAFAAUAAAAHAPX/AAAFAAUAAAAIAPX/AAAFAAUAAAAJAPX/AAAFAAUAAAAKAPX/AAAFAAUAAAALAPX/AAAFAAUAAAAMAPX/AAAFAAUAAAANAPX/AAAFAAUAAAAOAPX/AAAFAAUAAAAPAPX/AAAFAAUAAAAQAPX/AAAFAAUAAAABAOj/AAARAAAAAADy/+//AAARAAAAAADq/+7/AAARAAAAAAA=")
 tile_set = SubResource("TileSet_o4rl6")
+
+[node name="morePlanr" type="TileMapLayer" parent="Garden" unique_id=979757364]
+tile_map_data = PackedByteArray("AAD0//f/AAAAAA4AAAD1//f/AAAAAA4AAAD1/wEAAAAAAA4AAAD1/wIAAAAAAA4AAAA=")
+tile_set = SubResource("TileSet_t4n34")
 
 [node name="Pond" type="TileMapLayer" parent="." unique_id=212589961]
 position = Vector2(18, 1)
