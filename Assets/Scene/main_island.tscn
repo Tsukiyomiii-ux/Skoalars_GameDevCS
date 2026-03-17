@@ -592,7 +592,7 @@ tile_set = SubResource("TileSet_4jkg4")
 
 [node name="Bushes" type="TileMapLayer" parent="." unique_id=1871328484]
 z_index = 1
-tile_map_data = PackedByteArray("AAD+//X/AAABAAMAAAD///X/AAABAAMAAAD+//n/AAABAAMAAAD///n/AAABAAMAAAD9//X/AAABAAMAAAA=")
+tile_map_data = PackedByteArray("AAD+//X/AAABAAMAAAD///X/AAABAAMAAAD+//n/AAABAAMAAAD///n/AAABAAMAAAD9//X/AAABAAMAAAADAAUAAAAAAAMAAAAAAAUAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_w2o82")
 
 [node name="Foliage" type="TileMapLayer" parent="Bushes" unique_id=399332979]
