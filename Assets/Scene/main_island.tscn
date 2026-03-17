@@ -463,6 +463,18 @@ texture = ExtResource("10_4jkg4")
 [sub_resource type="TileSet" id="TileSet_o4rl6"]
 sources/0 = SubResource("TileSetAtlasSource_884xs")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o4rl6"]
+texture = ExtResource("11_4jkg4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ml317"]
+sources/0 = SubResource("TileSetAtlasSource_o4rl6")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mqwxg"]
 texture = ExtResource("5_s1d72")
 0:0/0 = 0
@@ -490,18 +502,6 @@ texture = ExtResource("9_o503u")
 
 [sub_resource type="TileSet" id="TileSet_wxmp5"]
 sources/0 = SubResource("TileSetAtlasSource_62u1j")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o4rl6"]
-texture = ExtResource("11_4jkg4")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-2:1/0 = 0
-1:1/0 = 0
-0:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_ml317"]
-sources/0 = SubResource("TileSetAtlasSource_o4rl6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ml317"]
 texture = ExtResource("12_1oq35")
@@ -552,7 +552,7 @@ tile_set = SubResource("TileSet_sygrn")
 z_index = 3
 position = Vector2(173, 96)
 scale = Vector2(0.8, 0.8)
-tile_map_data = PackedByteArray("AADp//H/AAAGAAMAAADq//H/AAAGAAMAAADr//H/AAAGAAMAAADs//H/AAAGAAMAAADo//H/AAAHAAMAAADn//H/AAAHAAMAAADm//H/AAAHAAMAAADl//H/AAAHAAMAAADk//H/AAAHAAMAAADj//H/AAAHAAMAAADi//H/AAAHAAMAAADs//r/AAAAAAAAAADt//r/AAABAAAAAADv//r/AAADAAAAAAA=")
+tile_map_data = PackedByteArray("AADp//H/AAAGAAMAAADq//H/AAAGAAMAAADr//H/AAAGAAMAAADs//H/AAAGAAMAAADo//H/AAAHAAMAAADn//H/AAAHAAMAAADm//H/AAAHAAMAAADl//H/AAAHAAMAAADk//H/AAAHAAMAAADj//H/AAAHAAMAAADi//H/AAAHAAMAAADs//r/AAAAAAAAAADt//r/AAABAAAAAADv//r/AAADAAAAAAD5/wAAAAAAAAAAAAD//wEAAAABAAAAAAD8//3/AAABAAAAAAD1/wIAAAADAAAAAAACAAEAAAADAAAAAAA=")
 tile_set = SubResource("TileSet_4jkg4")
 
 [node name="pixels2" type="TileMapLayer" parent="trees" unique_id=1855996707]
@@ -632,6 +632,11 @@ scale = Vector2(0.4999999, 0.4999999)
 tile_map_data = PackedByteArray("AAAMAO//AAARAAAAAAABAPb/AAAGAAQAAAAAAPb/AAAGAAQAAAAAAPX/AAAGAAQAAAACAPb/AAAGAAQAAAADAPb/AAAGAAQAAAAEAPb/AAAGAAQAAAAFAPb/AAAGAAQAAAAGAPb/AAAGAAQAAAAHAPb/AAAGAAQAAAAIAPb/AAAGAAQAAAAJAPb/AAAGAAQAAAAKAPb/AAAGAAQAAAALAPb/AAAGAAQAAAAMAPb/AAAGAAQAAAANAPb/AAAGAAQAAAAOAPb/AAAGAAQAAAAPAPb/AAAGAAQAAAAQAPb/AAAGAAQAAAARAPb/AAAGAAQAAAABAPX/AAAFAAUAAAACAPX/AAAFAAUAAAADAPX/AAAFAAUAAAAEAPX/AAAFAAUAAAAFAPX/AAAFAAUAAAAGAPX/AAAFAAUAAAAHAPX/AAAFAAUAAAAIAPX/AAAFAAUAAAAJAPX/AAAFAAUAAAAKAPX/AAAFAAUAAAALAPX/AAAFAAUAAAAMAPX/AAAFAAUAAAANAPX/AAAFAAUAAAAOAPX/AAAFAAUAAAAPAPX/AAAFAAUAAAAQAPX/AAAFAAUAAAABAOj/AAARAAAAAADy/+//AAARAAAAAADq/+7/AAARAAAAAAA=")
 tile_set = SubResource("TileSet_o4rl6")
 
+[node name="Tools" type="TileMapLayer" parent="Garden" unique_id=1739444121]
+position = Vector2(3, -3)
+tile_map_data = PackedByteArray("AAD///r/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ml317")
+
 [node name="Pond" type="TileMapLayer" parent="." unique_id=212589961]
 position = Vector2(18, 1)
 
@@ -651,11 +656,6 @@ tile_set = SubResource("TileSet_884xs")
 [node name="BasicPlants" type="TileMapLayer" parent="." unique_id=1340616226]
 tile_map_data = PackedByteArray("AAD3//b/AAABAAEAAAD5//b/AAABAAEAAAD7//j/AAABAAEAAAD7//f/AAABAAEAAAD4//b/AAABAAEAAAD6//f/AAABAAEAAAD5//f/AAABAAEAAADz//z/AAACAAAAAAD0//3/AAACAAAAAADy//v/AAACAAAAAADx//v/AAACAAAAAADw//v/AAACAAAAAADv//v/AAACAAAAAADu//v/AAACAAAAAAD6//v/AAACAAAAAAD7//v/AAACAAAAAAD5//z/AAACAAAAAAD4//z/AAACAAAAAAD4//3/AAACAAAAAAD4//7/AAACAAAAAAD2//7/AAACAAAAAAD3//7/AAACAAAAAAD1//3/AAACAAAAAADt//v/AAACAAAAAAD9//b/AAACAAAAAAD+//b/AAABAAEAAAD+//f/AAABAAEAAAD+//j/AAABAAEAAAABAPb/AAAEAAAAAAABAPf/AAAEAAAAAAABAPj/AAAEAAAAAAACAPb/AAAEAAAAAAACAPf/AAAEAAAAAAACAPj/AAAEAAAAAAADAPb/AAADAAAAAAAEAPb/AAADAAAAAAADAPf/AAADAAAAAAAEAPf/AAADAAAAAAADAPj/AAADAAAAAAAEAPj/AAADAAAAAAAFAPb/AAAEAAEAAAAGAPb/AAAEAAEAAAA=")
 tile_set = SubResource("TileSet_wxmp5")
-
-[node name="Tools" type="TileMapLayer" parent="." unique_id=1739444121]
-position = Vector2(3, -3)
-tile_map_data = PackedByteArray("AAD///r/AAAAAAAAAAA=")
-tile_set = SubResource("TileSet_ml317")
 
 [node name="House" type="TileMapLayer" parent="." unique_id=352649161]
 
