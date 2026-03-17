@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c24xgug5ygxa2" path="res://Assets/Sprite/Objects/free_pixel_16_woods.png" id="10_4jkg4"]
 [ext_resource type="Texture2D" uid="uid://cqe4s1e3gfp8" path="res://Assets/Sprite/Objects/Basic_tools_and_meterials.png" id="11_4jkg4"]
 [ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="12_1oq35"]
-[ext_resource type="PackedScene" path="res://Assets/Scripts/skoalars.tscn" id="13_f3pcw"]
+[ext_resource type="PackedScene" uid="uid://dpsjtepclb0h0" path="res://Assets/Scripts/skoalars.tscn" id="13_f3pcw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mqwxg"]
 distance = -46.0
@@ -587,6 +587,7 @@ tile_set = SubResource("TileSet_62u1j")
 z_index = 1
 position = Vector2(0, 31)
 scale = Vector2(1.195, 1.195)
+tile_map_data = PackedByteArray("AAD7/wAAAAADAAAAAAD7////AAADAAAAAAD8////AAADAAAAAAD8//7/AAADAAAAAAD9//7/AAADAAAAAAD9//3/AAADAAAAAAD9//z/AAADAAAAAAD+//z/AAADAAAAAAD+//v/AAADAAAAAAD+//3/AAADAAAAAAD+//7/AAADAAAAAAD///7/AAADAAAAAAD/////AAADAAAAAAD//wAAAAADAAAAAAD+/wAAAAADAAAAAAD9////AAADAAAAAAD7//7/AAADAAAAAAD6//7/AAADAAAAAAD6//3/AAADAAAAAAD5//3/AAADAAAAAAD4//3/AAADAAAAAAD3//3/AAADAAAAAAD3//z/AAADAAAAAAA=")
 tile_set = SubResource("TileSet_4jkg4")
 
 [node name="Bushes" type="TileMapLayer" parent="." unique_id=1871328484]
