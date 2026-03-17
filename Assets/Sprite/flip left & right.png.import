@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwpopnws2gv3i"
-path="res://.godot/imported/free_pixel_16_woods.png-eaf6032150e7f426f5fdb95e2252518f.ctex"
+uid="uid://bvdd7a7bifx7v"
+path="res://.godot/imported/flip left & right.png-1ee93b09a920fa84ce6738c7fb327b7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/pixel_16_woods v2 free/pixel_16_woods v2 free/free_pixel_16_woods.png"
-dest_files=["res://.godot/imported/free_pixel_16_woods.png-eaf6032150e7f426f5fdb95e2252518f.ctex"]
+source_file="res://Assets/Sprite/flip left & right.png"
+dest_files=["res://.godot/imported/flip left & right.png-1ee93b09a920fa84ce6738c7fb327b7a.ctex"]
 
 [params]
 
