@@ -750,6 +750,9 @@ size = Vector2(59.205765, 74.588745)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_62u1j"]
 size = Vector2(20, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2nq2"]
+size = Vector2(35, 32)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oldau"]
 texture = ExtResource("8_l2s30")
 28:24/size_in_atlas = Vector2i(2, 3)
@@ -897,6 +900,7 @@ tile_map_data = PackedByteArray("AADg/+7/AAAIAAIAAADh/+7/AAAIAAIAAADi/+7/AAAIAAI
 tile_set = SubResource("TileSet_62u1j")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="trees" unique_id=245011156]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trees/StaticBody2D" unique_id=1933085307]
 position = Vector2(-389.37494, -239.99988)
@@ -930,6 +934,7 @@ tile_map_data = PackedByteArray("AAACAPb/AAABAAUAAAADAPb/AAABAAUAAAAEAPb/AAABAAU
 tile_set = SubResource("TileSet_htla3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Garden/Fences" unique_id=2032571722]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garden/Fences/StaticBody2D" unique_id=1645521771]
 position = Vector2(63, -140)
@@ -1039,6 +1044,7 @@ tile_map_data = PackedByteArray("AAD///r/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_ml317")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Pond" unique_id=866167981]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pond/StaticBody2D" unique_id=268564654]
 position = Vector2(-69, 21)
@@ -1063,6 +1069,7 @@ tile_map_data = PackedByteArray("AAAGAP3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_gadri")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House" unique_id=1062349972]
+visible = false
 position = Vector2(113, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=1207464055]
@@ -1082,6 +1089,10 @@ shape = SubResource("RectangleShape2D_t4n34")
 position = Vector2(-40, -34.5)
 scale = Vector2(0.9922516, 1)
 shape = SubResource("RectangleShape2D_62u1j")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=1647194547]
+position = Vector2(73.5, 55)
+shape = SubResource("RectangleShape2D_w2nq2")
 
 [node name="Tree_pixels" type="TileMapLayer" parent="House" unique_id=1189552172]
 z_index = 2
