@@ -136,7 +136,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nje0b"]
-size = Vector2(8.073164, 483.7152)
+size = Vector2(5.7805095, 486.31403)
 
 [node name="Skoalars" type="CharacterBody2D" unique_id=1875685537]
 scale = Vector2(0.015, 0.015)
@@ -144,13 +144,13 @@ script = ExtResource("1_nje0b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1165061691]
 sprite_frames = SubResource("SpriteFrames_dag5b")
-animation = &"walk_down"
-autoplay = "walk_down"
+animation = &"walk_right"
+autoplay = "walk_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1594692000]
-position = Vector2(-4.9264293e-13, 66.66667)
+position = Vector2(-33.333305, 66.66673)
 rotation = -3.1415925
-scale = Vector2(103.797104, -2.193371)
+scale = Vector2(103.79706, -2.1933696)
 shape = SubResource("RectangleShape2D_nje0b")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1361620101]
