@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvr2u4876lu3y"
-path="res://.godot/imported/furniture_dark.png-5608a1787229665ba27ccd69db02a6b2.ctex"
+path="res://.godot/imported/furniture_dark.png-094de59a4536b21b4d8f25b1173345e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/(CP) HxW Farmers Market Furniture - Wildflour Set-21767-1-0-2-1730730385/[CP] H&W Farmers Market - Wildflour Set/Assets/furniture_dark.png"
-dest_files=["res://.godot/imported/furniture_dark.png-5608a1787229665ba27ccd69db02a6b2.ctex"]
+source_file="res://Assets/Sprite/Objects/(CP) HxW Farmers Market Furniture - Wildflour Set-21767-1-0-2-1730730385/[CP] H&W Farmers Market - Wildflour Set/Assets/furniture_dark.png"
+dest_files=["res://.godot/imported/furniture_dark.png-094de59a4536b21b4d8f25b1173345e9.ctex"]
 
 [params]
 

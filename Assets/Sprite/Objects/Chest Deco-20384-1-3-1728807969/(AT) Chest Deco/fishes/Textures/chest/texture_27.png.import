@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0gkf7g8r468s"
-path="res://.godot/imported/texture_27.png-dbef23e58aa2797262caaa676f536f39.ctex"
+path="res://.godot/imported/texture_27.png-1b9592bfa5530389fcdb1dc166569afc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/Chest Deco-20384-1-3-1728807969/(AT) Chest Deco/fishes/Textures/chest/texture_27.png"
-dest_files=["res://.godot/imported/texture_27.png-dbef23e58aa2797262caaa676f536f39.ctex"]
+source_file="res://Assets/Sprite/Objects/Chest Deco-20384-1-3-1728807969/(AT) Chest Deco/fishes/Textures/chest/texture_27.png"
+dest_files=["res://.godot/imported/texture_27.png-1b9592bfa5530389fcdb1dc166569afc.ctex"]
 
 [params]
 
