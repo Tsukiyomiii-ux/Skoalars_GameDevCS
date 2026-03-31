@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g8qb4tk05rjh"
-path="res://.godot/imported/266c2ad7-5b88-4f05-8d26-77390cbace86.png-52d0ef58d9bceeb66977a9825e209eea.ctex"
+uid="uid://dkoklnsih8ipl"
+path="res://.godot/imported/TREE 3 - DAY.png-3cd20dfe00330f8b79a82e3a3f6c26ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/266c2ad7-5b88-4f05-8d26-77390cbace86.png"
-dest_files=["res://.godot/imported/266c2ad7-5b88-4f05-8d26-77390cbace86.png-52d0ef58d9bceeb66977a9825e209eea.ctex"]
+source_file="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/TREE 3 - DAY.png"
+dest_files=["res://.godot/imported/TREE 3 - DAY.png-3cd20dfe00330f8b79a82e3a3f6c26ef.ctex"]
 
 [params]
 

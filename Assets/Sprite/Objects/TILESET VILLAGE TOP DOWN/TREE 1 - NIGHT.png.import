@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b543buvd7fpch"
-path="res://.godot/imported/front & back.png-2ff4be4cca3b6bdd09c84988d68ebe31.ctex"
+uid="uid://b54isxdp1blnp"
+path="res://.godot/imported/TREE 1 - NIGHT.png-975d8cc83309eadb571113e4068a8c31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/front & back.png"
-dest_files=["res://.godot/imported/front & back.png-2ff4be4cca3b6bdd09c84988d68ebe31.ctex"]
+source_file="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/TREE 1 - NIGHT.png"
+dest_files=["res://.godot/imported/TREE 1 - NIGHT.png-975d8cc83309eadb571113e4068a8c31.ctex"]
 
 [params]
 

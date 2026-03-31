@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvdd7a7bifx7v"
-path="res://.godot/imported/flip left & right.png-1ee93b09a920fa84ce6738c7fb327b7a.ctex"
+uid="uid://chdey0vuxbwkb"
+path="res://.godot/imported/HOUSE 1 - DAY.png-ce4442ef99a361c018353fb18a6ca4df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/flip left & right.png"
-dest_files=["res://.godot/imported/flip left & right.png-1ee93b09a920fa84ce6738c7fb327b7a.ctex"]
+source_file="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png"
+dest_files=["res://.godot/imported/HOUSE 1 - DAY.png-ce4442ef99a361c018353fb18a6ca4df.ctex"]
 
 [params]
 
