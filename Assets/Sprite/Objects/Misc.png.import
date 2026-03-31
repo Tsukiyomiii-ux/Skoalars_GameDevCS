@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0t4udguchnt1"
-path="res://.godot/imported/SKOALARS ASSETS (GUI) (6).png-54a688ca314db182ce34b065a14ac9db.ctex"
+uid="uid://qr5d17o1bn0w"
+path="res://.godot/imported/Misc.png-a8a96a49ca643eb8b425274ef1df9a75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/SKOALARS ASSETS (GUI) (6).png"
-dest_files=["res://.godot/imported/SKOALARS ASSETS (GUI) (6).png-54a688ca314db182ce34b065a14ac9db.ctex"]
+source_file="res://Assets/Sprite/Objects/Misc.png"
+dest_files=["res://.godot/imported/Misc.png-a8a96a49ca643eb8b425274ef1df9a75.ctex"]
 
 [params]
 

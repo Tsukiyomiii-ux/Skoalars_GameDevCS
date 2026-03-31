@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvdd7a7bifx7v"
-path="res://.godot/imported/flip left & right.png-1ee93b09a920fa84ce6738c7fb327b7a.ctex"
+uid="uid://cqtmmw32kti0y"
+path="res://.godot/imported/SKOALARS ASSETS (GUI) (8).png-519285e0e0bc5d0b3880bc4187f1c74b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/flip left & right.png"
-dest_files=["res://.godot/imported/flip left & right.png-1ee93b09a920fa84ce6738c7fb327b7a.ctex"]
+source_file="res://Assets/Sprite/SKOALARS ASSETS (GUI) (8).png"
+dest_files=["res://.godot/imported/SKOALARS ASSETS (GUI) (8).png-519285e0e0bc5d0b3880bc4187f1c74b.ctex"]
 
 [params]
 
