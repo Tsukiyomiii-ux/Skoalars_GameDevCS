@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bp22cu0isr5q1"]
 
-[ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://skoalars.gd" id="1_nje0b"]
+[ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/skoalars.gd" id="1_nje0b"]
 [ext_resource type="Texture2D" uid="uid://cqtmmw32kti0y" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (8).png" id="2_iu7bt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
