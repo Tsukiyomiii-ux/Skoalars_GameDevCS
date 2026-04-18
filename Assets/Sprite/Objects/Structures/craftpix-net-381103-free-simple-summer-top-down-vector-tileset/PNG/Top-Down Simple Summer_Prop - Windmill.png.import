@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bncf2vpjvdmlh"
-path="res://.godot/imported/Top-Down Simple Summer_Prop - Windmill.png-e5fda9ee6a8d26df96eec2723ba7f41b.ctex"
+path="res://.godot/imported/Top-Down Simple Summer_Prop - Windmill.png-db25897897ace81f3a83903cac8fd70e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Windmill.png"
-dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Windmill.png-e5fda9ee6a8d26df96eec2723ba7f41b.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Windmill.png"
+dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Windmill.png-db25897897ace81f3a83903cac8fd70e.ctex"]
 
 [params]
 

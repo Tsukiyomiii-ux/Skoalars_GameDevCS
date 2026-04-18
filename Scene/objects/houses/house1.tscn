@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://4cj2y3lwho6s"]
+
+[ext_resource type="Texture2D" uid="uid://bspvvl0sgih57" path="res://Assets/Sprite/Objects/Structures/Village house.png" id="1_ya6wc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl3lw"]
+atlas = ExtResource("1_ya6wc")
+region = Rect2(248, 808, 496, 216)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2frrn"]
+size = Vector2(432, 86)
+
+[node name="house1" type="Sprite2D" unique_id=1807914430]
+scale = Vector2(0.25, 0.25)
+texture = SubResource("AtlasTexture_gl3lw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=176980173]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1507916626]
+position = Vector2(12, 47)
+shape = SubResource("RectangleShape2D_2frrn")

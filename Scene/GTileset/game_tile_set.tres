@@ -8,14 +8,18 @@
 [ext_resource type="PackedScene" uid="uid://tnqwltprcs01" path="res://Scene/objects/trees/trees2.tscn" id="5_lyocm"]
 [ext_resource type="PackedScene" uid="uid://b3bi14tvrg3sj" path="res://Scene/objects/market_stall/market_1.tscn" id="5_oggff"]
 [ext_resource type="Texture2D" uid="uid://yv4cp1psosuw" path="res://Assets/Sprite/Objects/Structures/Green Housing.png" id="5_yoxwk"]
+[ext_resource type="PackedScene" uid="uid://dj6gescknvfq" path="res://Scene/objects/market_stall/stall_1.tscn" id="6_7oqwu"]
 [ext_resource type="PackedScene" uid="uid://bpd05xpbdhw46" path="res://Scene/objects/trees/palmtrees.tscn" id="6_lyocm"]
 [ext_resource type="Texture2D" uid="uid://c14j7m7rlsrjh" path="res://Assets/Sprite/Tilesets/Hills2.png" id="6_oggff"]
 [ext_resource type="Texture2D" uid="uid://1sn3bt2h8s2g" path="res://Assets/Sprite/Tilesets/grasssand.png" id="7_l60li"]
+[ext_resource type="PackedScene" uid="uid://dwf8bf10shfde" path="res://Scene/objects/market_stall/stall_2.tscn" id="7_tr73q"]
 [ext_resource type="Texture2D" uid="uid://bspvvl0sgih57" path="res://Assets/Sprite/Objects/Structures/Village house.png" id="7_yoxwk"]
+[ext_resource type="PackedScene" uid="uid://dp8ejxucls46s" path="res://Scene/objects/market_stall/stall_3.tscn" id="8_hudxf"]
 [ext_resource type="Texture2D" uid="uid://dxo7ns6rudtc0" path="res://Assets/Sprite/Objects/Structures/Bridges.png" id="8_mhlxn"]
 [ext_resource type="PackedScene" uid="uid://b1osi862l4s34" path="res://Scene/objects/market_stall/market_2.tscn" id="8_oggff"]
 [ext_resource type="Texture2D" uid="uid://bpdlhalhpxyul" path="res://Assets/Sprite/Objects/Plants and Biome/Plants.png" id="9_ew4mt"]
 [ext_resource type="PackedScene" uid="uid://lsicge6lg5lc" path="res://Scene/objects/market_stall/market_3.tscn" id="9_l60li"]
+[ext_resource type="PackedScene" uid="uid://bdspby0du6yfp" path="res://Scene/objects/market_stall/stall_4.tscn" id="9_ykdga"]
 [ext_resource type="Texture2D" uid="uid://og6bv2rscrq1" path="res://Assets/Sprite/Tilesets/Tilled_Dirt_Wide_v2.png" id="10_7oqwu"]
 [ext_resource type="PackedScene" uid="uid://16atq68xo73d" path="res://Scene/objects/market_stall/market_4.tscn" id="10_mhlxn"]
 [ext_resource type="Texture2D" uid="uid://cyr7anruqv662" path="res://Assets/Sprite/Objects/Plants and Biome/Trees_shadow_countoria.png" id="11_tr73q"]
@@ -258,6 +262,13 @@ scenes/6/scene = ExtResource("8_oggff")
 scenes/7/scene = ExtResource("9_l60li")
 scenes/9/scene = ExtResource("10_mhlxn")
 scenes/10/scene = ExtResource("5_ew4mt")
+scenes/12/scene = ExtResource("6_7oqwu")
+scenes/13/scene = ExtResource("7_tr73q")
+scenes/14/scene = ExtResource("8_hudxf")
+scenes/15/scene = ExtResource("9_ykdga")
+scenes/17/scene = ExtResource("6_lyocm")
+scenes/18/scene = ExtResource("4_ypv7h")
+scenes/19/scene = ExtResource("5_lyocm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l60li"]
 texture = ExtResource("7_yoxwk")

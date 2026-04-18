@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bapypehbamdw"
-path="res://.godot/imported/Top-Down Simple Summer_Prop - Wooden Fence Vertical.png-58712677e1ce9776f9db0ecf617d93cd.ctex"
+path="res://.godot/imported/Top-Down Simple Summer_Prop - Wooden Fence Vertical.png-d44b95e5a8ed16b11b8cc9775b0b77bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Wooden Fence Vertical.png"
-dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Wooden Fence Vertical.png-58712677e1ce9776f9db0ecf617d93cd.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Wooden Fence Vertical.png"
+dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Wooden Fence Vertical.png-d44b95e5a8ed16b11b8cc9775b0b77bf.ctex"]
 
 [params]
 

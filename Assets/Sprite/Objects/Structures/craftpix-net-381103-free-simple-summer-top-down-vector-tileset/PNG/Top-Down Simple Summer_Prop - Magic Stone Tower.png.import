@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://whj53cugvakc"
-path="res://.godot/imported/Top-Down Simple Summer_Prop - Magic Stone Tower.png-47a2f7e4202774ce33998a447070853a.ctex"
+path="res://.godot/imported/Top-Down Simple Summer_Prop - Magic Stone Tower.png-7d2d2dddfb8ad53fb54de9a2817aebf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Magic Stone Tower.png"
-dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Magic Stone Tower.png-47a2f7e4202774ce33998a447070853a.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Magic Stone Tower.png"
+dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Magic Stone Tower.png-7d2d2dddfb8ad53fb54de9a2817aebf9.ctex"]
 
 [params]
 

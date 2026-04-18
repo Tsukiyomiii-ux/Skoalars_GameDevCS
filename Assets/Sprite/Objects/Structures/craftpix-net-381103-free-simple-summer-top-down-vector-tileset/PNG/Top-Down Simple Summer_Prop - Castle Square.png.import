@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5da2kh25q0nu"
-path="res://.godot/imported/Top-Down Simple Summer_Prop - Castle Square.png-3242c3233d071239b85f6668f5ff2a5d.ctex"
+path="res://.godot/imported/Top-Down Simple Summer_Prop - Castle Square.png-75d59ef68ef8b36b97dc15cd5198f788.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Castle Square.png"
-dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Castle Square.png-3242c3233d071239b85f6668f5ff2a5d.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Castle Square.png"
+dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Castle Square.png-75d59ef68ef8b36b97dc15cd5198f788.ctex"]
 
 [params]
 

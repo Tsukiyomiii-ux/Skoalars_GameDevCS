@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crjym44h8y20y"
-path="res://.godot/imported/Top-Down Simple Summer_Ground 12.png-ac0b9b5f84f12b8a491539a8c5daf4e5.ctex"
+path="res://.godot/imported/Top-Down Simple Summer_Ground 12.png-26001f9486e049384acbdb566a4c6853.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Ground 12.png"
-dest_files=["res://.godot/imported/Top-Down Simple Summer_Ground 12.png-ac0b9b5f84f12b8a491539a8c5daf4e5.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Ground 12.png"
+dest_files=["res://.godot/imported/Top-Down Simple Summer_Ground 12.png-26001f9486e049384acbdb566a4c6853.ctex"]
 
 [params]
 

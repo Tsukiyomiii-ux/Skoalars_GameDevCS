@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfrecin4hy46"
-path="res://.godot/imported/Top-Down Simple Summer_Prop - Tent.png-aac1a18a9279dde2358428a9cb029be7.ctex"
+path="res://.godot/imported/Top-Down Simple Summer_Prop - Tent.png-a65da2ce514a74ae4dc9ce3529d9db58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Tent.png"
-dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Tent.png-aac1a18a9279dde2358428a9cb029be7.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Tent.png"
+dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Tent.png-a65da2ce514a74ae4dc9ce3529d9db58.ctex"]
 
 [params]
 

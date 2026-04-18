@@ -10,7 +10,6 @@ region = Rect2(528, 80, 64, 64)
 radius = 9.0
 
 [node name="palmtrees" type="Sprite2D" unique_id=2059819591]
-position = Vector2(0, -42)
 scale = Vector2(1.42, 1.42)
 texture = SubResource("AtlasTexture_c5gt4")
 

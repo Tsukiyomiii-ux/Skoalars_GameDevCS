@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bdspby0du6yfp"]
+
+[ext_resource type="Texture2D" uid="uid://drafxbfexrx84" path="res://Assets/Sprite/Objects/Structures/food stalls.png" id="1_87qa2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkb3q"]
+atlas = ExtResource("1_87qa2")
+region = Rect2(1024, 64, 464, 304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74ukg"]
+size = Vector2(424, 140)
+
+[node name="stall4" type="Sprite2D" unique_id=2134886906]
+scale = Vector2(0.175, 0.175)
+texture = SubResource("AtlasTexture_wkb3q")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2055377753]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=613374482]
+position = Vector2(5, 60)
+shape = SubResource("RectangleShape2D_74ukg")

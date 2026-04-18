@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfhabrf7arg86"
-path="res://.godot/imported/Top-Down Simple Summer_Ground 13.png-21c80dfcf330035952733afe033cbc14.ctex"
+uid="uid://drafxbfexrx84"
+path="res://.godot/imported/food stalls.png-e43a271fe70f5ffbc020a857bac76c6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/Structures/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Ground 13.png"
-dest_files=["res://.godot/imported/Top-Down Simple Summer_Ground 13.png-21c80dfcf330035952733afe033cbc14.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/food stalls.png"
+dest_files=["res://.godot/imported/food stalls.png-e43a271fe70f5ffbc020a857bac76c6f.ctex"]
 
 [params]
 

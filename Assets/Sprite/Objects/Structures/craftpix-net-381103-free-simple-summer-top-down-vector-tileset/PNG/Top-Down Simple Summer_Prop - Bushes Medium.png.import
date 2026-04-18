@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csjorpm7uo6l7"
-path="res://.godot/imported/Top-Down Simple Summer_Prop - Bushes Medium.png-70037eb1b134542e424c1a1abb075c39.ctex"
+path="res://.godot/imported/Top-Down Simple Summer_Prop - Bushes Medium.png-635c4e83c126283c8333d55579a83d1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Bushes Medium.png"
-dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Bushes Medium.png-70037eb1b134542e424c1a1abb075c39.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/craftpix-net-381103-free-simple-summer-top-down-vector-tileset/PNG/Top-Down Simple Summer_Prop - Bushes Medium.png"
+dest_files=["res://.godot/imported/Top-Down Simple Summer_Prop - Bushes Medium.png-635c4e83c126283c8333d55579a83d1e.ctex"]
 
 [params]
 
