@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b1osi862l4s34"]
+
+[ext_resource type="Texture2D" uid="uid://csv000g143vv5" path="res://Assets/Sprite/Objects/Structures/Market stall Tileset.png" id="1_ix84n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvofo"]
+atlas = ExtResource("1_ix84n")
+region = Rect2(144, 536, 560, 336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ix84n"]
+size = Vector2(469, 129)
+
+[node name="market2" type="Sprite2D" unique_id=1330384974]
+position = Vector2(0, -13)
+scale = Vector2(0.245, 0.245)
+texture = SubResource("AtlasTexture_yvofo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=80866365]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2022634235]
+position = Vector2(11, 55)
+shape = SubResource("RectangleShape2D_ix84n")

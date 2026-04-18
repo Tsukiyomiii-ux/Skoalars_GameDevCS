@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bxomddvet7m5l"]
+
+[ext_resource type="Texture2D" uid="uid://d1jo46821r40g" path="res://Assets/Sprite/Objects/Structures/Special Market Stall.png" id="1_6h44e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0gp8"]
+atlas = ExtResource("1_6h44e")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7g7c8"]
+size = Vector2(1168, 240)
+
+[node name="level2" type="Sprite2D" unique_id=1176538854]
+scale = Vector2(0.135, 0.135)
+texture = SubResource("AtlasTexture_b0gp8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=57598882]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2043350281]
+position = Vector2(8, 144)
+shape = SubResource("RectangleShape2D_7g7c8")

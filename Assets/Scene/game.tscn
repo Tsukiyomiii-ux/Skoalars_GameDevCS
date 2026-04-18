@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cus0611rlcobu"]
 
-[ext_resource type="PackedScene" uid="uid://b6jiyrg2ell0u" path="res://Assets/Scene/lore.tscn" id="1_5oy4s"]
+[ext_resource type="PackedScene" uid="uid://b6jiyrg2ell0u" path="res://character/lore.tscn" id="1_5oy4s"]
 [ext_resource type="Script" uid="uid://d3j16s6ni2tjl" path="res://Assets/Scripts/lore.gd" id="2_7i6p2"]
-[ext_resource type="Texture2D" uid="uid://bhbgttsjkuflj" path="res://Assets/Scene/Bg/Background (2).png" id="3_7ttw8"]
+[ext_resource type="Texture2D" path="res://Assets/Scene/Bg/Background (2).png" id="3_7ttw8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5oy4s"]
 distance = -46.0
