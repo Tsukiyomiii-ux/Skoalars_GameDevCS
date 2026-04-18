@@ -3,19 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://cj274feyrapei" path="res://Assets/Sprite/Tilesets/Grass.png" id="1_lmjrh"]
 [ext_resource type="Texture2D" uid="uid://bw5spkx0fbrnt" path="res://Assets/Sprite/Tilesets/Hills.png" id="2_htla3"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
-[ext_resource type="Texture2D" uid="uid://tuc823dykhgc" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/STAIRS - DAY.png" id="4_t4n34"]
 [ext_resource type="Texture2D" uid="uid://c8us716ex6g4f" path="res://Assets/Sprite/Tilesets/Water.png" id="5_s1d72"]
 [ext_resource type="Texture2D" uid="uid://co38hy3810kc1" path="res://Assets/Sprite/Objects/Basic Grass Biom things 1.png" id="6_sygrn"]
-[ext_resource type="Texture2D" uid="uid://dlam8e53ngsj3" path="res://Assets/Sprite/Objects/Fences.png" id="7_w2o82"]
 [ext_resource type="Texture2D" uid="uid://bpdlhalhpxyul" path="res://Assets/Sprite/Objects/Plants.png" id="8_l2s30"]
-[ext_resource type="Texture2D" uid="uid://dns3bnp5tmcb" path="res://Assets/Sprite/Tilesets/Tilled_Dirt_v2.png" id="8_mqwxg"]
-[ext_resource type="Texture2D" uid="uid://pqk114xcyc6n" path="res://Assets/Sprite/Objects/Basic_Plants.png" id="9_o503u"]
 [ext_resource type="Texture2D" uid="uid://k76d24eu30cl" path="res://Assets/Sprite/Objects/MCHome/Trees_animation.png" id="10_1oq35"]
 [ext_resource type="Texture2D" uid="uid://c24xgug5ygxa2" path="res://Assets/Sprite/Objects/free_pixel_16_woods.png" id="10_4jkg4"]
 [ext_resource type="Texture2D" uid="uid://dhx54grnhu6vx" path="res://Assets/Sprite/Objects/Free_Chicken_House.png" id="10_tlbtc"]
-[ext_resource type="Texture2D" uid="uid://cqe4s1e3gfp8" path="res://Assets/Sprite/Objects/Basic_tools_and_meterials.png" id="11_4jkg4"]
 [ext_resource type="Texture2D" uid="uid://x3j0mft4yds7" path="res://Assets/Sprite/Objects/Basic Furniture.png" id="11_o4rl6"]
-[ext_resource type="Texture2D" uid="uid://b514u6414fhnk" path="res://Assets/Sprite/Objects/Egg item.png" id="11_xiulw"]
 [ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="12_1oq35"]
 [ext_resource type="Texture2D" uid="uid://0wcqcsuqxj38" path="res://Assets/Sprite/Objects/Supplies.png" id="12_ml317"]
 [ext_resource type="PackedScene" uid="uid://dpsjtepclb0h0" path="res://Assets/Scene/skoalars.tscn" id="13_f3pcw"]
@@ -625,8 +619,11 @@ texture = ExtResource("8_l2s30")
 [sub_resource type="TileSet" id="TileSet_w2nq2"]
 sources/0 = SubResource("TileSetAtlasSource_ym7b6")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxmp5"]
+load_path = "res://.godot/imported/STAIRS - DAY.png-236dcb31b8f758f656c8578fe25365df.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_76iti"]
-texture = ExtResource("4_t4n34")
+texture = SubResource("CompressedTexture2D_wxmp5")
 1:3/0 = 0
 1:2/0 = 0
 0:2/0 = 0
@@ -747,8 +744,11 @@ texture = ExtResource("2_s1d72")
 [sub_resource type="TileSet" id="TileSet_sygrn"]
 sources/0 = SubResource("TileSetAtlasSource_s1d72")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_884xs"]
+load_path = "res://.godot/imported/Fences.png-3af3536ee5d5aaf4f23553828916bce1.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3pcw"]
-texture = ExtResource("7_w2o82")
+texture = SubResource("CompressedTexture2D_884xs")
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
@@ -769,8 +769,11 @@ texture = ExtResource("7_w2o82")
 [sub_resource type="TileSet" id="TileSet_ktv0f"]
 sources/0 = SubResource("TileSetAtlasSource_f3pcw")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o4rl6"]
+load_path = "res://.godot/imported/Tilled_Dirt_v2.png-541ef0fadf4345ba4e99a34ba9199e0d.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l2s30"]
-texture = ExtResource("8_mqwxg")
+texture = SubResource("CompressedTexture2D_o4rl6")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -859,8 +862,11 @@ texture = ExtResource("10_tlbtc")
 [sub_resource type="TileSet" id="TileSet_cheli"]
 sources/0 = SubResource("TileSetAtlasSource_xo0ky")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ml317"]
+load_path = "res://.godot/imported/Egg item.png-b4c006e024f5064ec61b43b577c71ab5.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pg6jn"]
-texture = ExtResource("11_xiulw")
+texture = SubResource("CompressedTexture2D_ml317")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_o2cql"]
@@ -1532,8 +1538,11 @@ texture = ExtResource("12_1oq35")
 [sub_resource type="TileSet" id="TileSet_6lqna"]
 sources/0 = SubResource("TileSetAtlasSource_c6r3i")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gadri"]
+load_path = "res://.godot/imported/Basic_tools_and_meterials.png-cb9d8bc3c688f0a01a6ea8657905a47d.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o4rl6"]
-texture = ExtResource("11_4jkg4")
+texture = SubResource("CompressedTexture2D_gadri")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1580,8 +1589,11 @@ size = Vector2(7.5, 6.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjw6q"]
 size = Vector2(13, 37.5)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ym7b6"]
+load_path = "res://.godot/imported/Basic_Plants.png-2760c081ab75d3fa54c3dcddb89095c2.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62u1j"]
-texture = ExtResource("9_o503u")
+texture = SubResource("CompressedTexture2D_ym7b6")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
