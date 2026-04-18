@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by54h6gaf5646"
-path="res://.godot/imported/Wooden_House_Walls_Tilset.png-7b203e65d7414ed351d472a71075acfb.ctex"
+uid="uid://chdey0vuxbwkb"
+path="res://.godot/imported/HOUSE 1 - DAY.png-ce4442ef99a361c018353fb18a6ca4df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/Wooden_House_Walls_Tilset.png"
-dest_files=["res://.godot/imported/Wooden_House_Walls_Tilset.png-7b203e65d7414ed351d472a71075acfb.ctex"]
+source_file="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png"
+dest_files=["res://.godot/imported/HOUSE 1 - DAY.png-ce4442ef99a361c018353fb18a6ca4df.ctex"]
 
 [params]
 

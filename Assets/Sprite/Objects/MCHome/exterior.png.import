@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5wbbym37h0cr"
-path="res://.godot/imported/Bitmask references 2.png-34af458e0fa42851061c2c8db245707f.ctex"
+uid="uid://diwmc2kgl8f0j"
+path="res://.godot/imported/exterior.png-71b1b2fa1e367aa3a12b946d86a90da1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/Bitmask references 2.png"
-dest_files=["res://.godot/imported/Bitmask references 2.png-34af458e0fa42851061c2c8db245707f.ctex"]
+source_file="res://Assets/Sprite/Objects/MCHome/exterior.png"
+dest_files=["res://.godot/imported/exterior.png-71b1b2fa1e367aa3a12b946d86a90da1.ctex"]
 
 [params]
 

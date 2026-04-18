@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dns3bnp5tmcb"
-path="res://.godot/imported/Tilled_Dirt_v2.png-541ef0fadf4345ba4e99a34ba9199e0d.ctex"
+uid="uid://bsw8d10ehyyog"
+path="res://.godot/imported/HOUSE 2 - DAY.png-f0108c435ef8d699955f4d55b78caeb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/Tilled_Dirt_v2.png"
-dest_files=["res://.godot/imported/Tilled_Dirt_v2.png-541ef0fadf4345ba4e99a34ba9199e0d.ctex"]
+source_file="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 2 - DAY.png"
+dest_files=["res://.godot/imported/HOUSE 2 - DAY.png-f0108c435ef8d699955f4d55b78caeb2.ctex"]
 
 [params]
 

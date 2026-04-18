@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp55l617yo3wp"
-path="res://.godot/imported/Bitmask references 1.png-26c94d91e6e2b9c8fae435044cc5ee4b.ctex"
+uid="uid://dlolhqc643sxq"
+path="res://.godot/imported/ChatGPT Image Apr 7, 2026, 04_43_23 PM.png-d9af57ca73be4c86e49629442a42a175.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/Bitmask references 1.png"
-dest_files=["res://.godot/imported/Bitmask references 1.png-26c94d91e6e2b9c8fae435044cc5ee4b.ctex"]
+source_file="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_43_23 PM.png"
+dest_files=["res://.godot/imported/ChatGPT Image Apr 7, 2026, 04_43_23 PM.png-d9af57ca73be4c86e49629442a42a175.ctex"]
 
 [params]
 

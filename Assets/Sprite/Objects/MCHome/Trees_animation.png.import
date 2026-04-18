@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpns7gjfwitp3"
-path="res://.godot/imported/Tilled_Dirt_Wide.png-ffdde3c0c02667743b9f0c94cdf7a90e.ctex"
+uid="uid://k76d24eu30cl"
+path="res://.godot/imported/Trees_animation.png-20df680fd4c806cac5b8430bbfe9049f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/Tilled_Dirt_Wide.png"
-dest_files=["res://.godot/imported/Tilled_Dirt_Wide.png-ffdde3c0c02667743b9f0c94cdf7a90e.ctex"]
+source_file="res://Assets/Sprite/Objects/MCHome/Trees_animation.png"
+dest_files=["res://.godot/imported/Trees_animation.png-20df680fd4c806cac5b8430bbfe9049f.ctex"]
 
 [params]
 

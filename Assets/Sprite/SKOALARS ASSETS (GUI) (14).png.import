@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://og6bv2rscrq1"
-path="res://.godot/imported/Tilled_Dirt_Wide_v2.png-0d92c8e06730e8649fce467cd95a1121.ctex"
+uid="uid://b4bbahoe6qiet"
+path="res://.godot/imported/SKOALARS ASSETS (GUI) (14).png-7974ce60a746d40db574cc5fa319e656.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilesets/Tilled_Dirt_Wide_v2.png"
-dest_files=["res://.godot/imported/Tilled_Dirt_Wide_v2.png-0d92c8e06730e8649fce467cd95a1121.ctex"]
+source_file="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png"
+dest_files=["res://.godot/imported/SKOALARS ASSETS (GUI) (14).png-7974ce60a746d40db574cc5fa319e656.ctex"]
 
 [params]
 
