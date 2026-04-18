@@ -2799,7 +2799,7 @@ shape = SubResource("RectangleShape2D_w2nq2")
 
 [node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("13_f3pcw")]
 z_index = 7
-position = Vector2(143.99998, 40.999996)
+position = Vector2(129.00002, 61)
 
 [node name="FlowerGarden" type="TileMapLayer" parent="." unique_id=814707906]
 position = Vector2(0, -2)
