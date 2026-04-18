@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/skoalars.gd" id="1_nje0b"]
 [ext_resource type="Texture2D" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (8).png" id="2_iu7bt"]
-[ext_resource type="Texture2D" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_nje0b"]
+[ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_nje0b"]
 
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]

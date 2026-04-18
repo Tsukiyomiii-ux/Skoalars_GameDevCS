@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Assets/Sprite/FABLE ISLE/Bricks.png.import
-uid="uid://bm5inrv34smp"
-path="res://.godot/imported/Bricks.png-a66dad07241c55baba21940f2adcf832.ctex"
-========
 uid="uid://b4bbahoe6qiet"
 path="res://.godot/imported/SKOALARS ASSETS (GUI) (14).png-7974ce60a746d40db574cc5fa319e656.ctex"
->>>>>>>> main:Assets/Sprite/SKOALARS ASSETS (GUI) (14).png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Assets/Sprite/FABLE ISLE/Bricks.png.import
-source_file="res://Assets/Sprite/FABLE ISLE/Bricks.png"
-dest_files=["res://.godot/imported/Bricks.png-a66dad07241c55baba21940f2adcf832.ctex"]
-========
 source_file="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png"
 dest_files=["res://.godot/imported/SKOALARS ASSETS (GUI) (14).png-7974ce60a746d40db574cc5fa319e656.ctex"]
->>>>>>>> main:Assets/Sprite/SKOALARS ASSETS (GUI) (14).png.import
 
 [params]
 
