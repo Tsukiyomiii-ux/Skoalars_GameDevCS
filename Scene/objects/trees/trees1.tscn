@@ -10,8 +10,6 @@ region = Rect2(48, 80, 56, 64)
 radius = 8.246211
 
 [node name="tree1" type="Sprite2D" unique_id=504793101]
-position = Vector2(1, -34.95)
-scale = Vector2(1.058, 1.09)
 texture = SubResource("AtlasTexture_6pqxx")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1513296890]

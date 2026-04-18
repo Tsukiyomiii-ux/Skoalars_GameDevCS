@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cus0611rlcobu"]
+[gd_scene format=4 uid="uid://blgkmoxqujwqa"]
 
 [ext_resource type="PackedScene" uid="uid://b6jiyrg2ell0u" path="res://Scene/lore.tscn" id="1_5oy4s"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_0c6ry"]

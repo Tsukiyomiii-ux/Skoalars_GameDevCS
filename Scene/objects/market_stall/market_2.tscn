@@ -11,7 +11,7 @@ size = Vector2(469, 129)
 
 [node name="market2" type="Sprite2D" unique_id=1330384974]
 position = Vector2(0, -13)
-scale = Vector2(0.245, 0.245)
+scale = Vector2(0.175, 0.175)
 texture = SubResource("AtlasTexture_yvofo")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=80866365]

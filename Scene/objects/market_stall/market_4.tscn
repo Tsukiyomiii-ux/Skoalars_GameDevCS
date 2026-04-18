@@ -10,7 +10,7 @@ region = Rect2(832, 64, 568, 312)
 size = Vector2(510.20404, 102.040825)
 
 [node name="market4" type="Sprite2D" unique_id=37949284]
-scale = Vector2(0.245, 0.245)
+scale = Vector2(0.175, 0.175)
 texture = SubResource("AtlasTexture_jcacf")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=919739000]

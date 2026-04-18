@@ -9,7 +9,7 @@ atlas = ExtResource("1_6h44e")
 size = Vector2(1168, 240)
 
 [node name="level2" type="Sprite2D" unique_id=1176538854]
-scale = Vector2(0.135, 0.135)
+scale = Vector2(0.085, 0.085)
 texture = SubResource("AtlasTexture_b0gp8")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=57598882]
