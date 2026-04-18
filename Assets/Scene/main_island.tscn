@@ -2575,7 +2575,6 @@ tile_set = SubResource("TileSet_6lqna")
 
 [node name="Tools" type="TileMapLayer" parent="Pond" unique_id=1739444121]
 position = Vector2(-15, -4)
-tile_map_data = PackedByteArray("AAD///r/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_ml317")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Pond" unique_id=866167981]
