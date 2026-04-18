@@ -1581,6 +1581,44 @@ size = Vector2(15.492146, 41.79397)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2nq2"]
 size = Vector2(35, 100.09422)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf110"]
+texture = ExtResource("8_l2s30")
+20:5/size_in_atlas = Vector2i(4, 4)
+20:5/0 = 0
+28:24/size_in_atlas = Vector2i(2, 3)
+28:24/0 = 0
+26:25/size_in_atlas = Vector2i(2, 2)
+26:25/0 = 0
+44:5/size_in_atlas = Vector2i(4, 4)
+44:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_76iti"]
+sources/0 = SubResource("TileSetAtlasSource_uf110")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6egm"]
+texture = ExtResource("12_1oq35")
+8:48/size_in_atlas = Vector2i(1, 2)
+8:48/0 = 0
+9:48/size_in_atlas = Vector2i(1, 2)
+9:48/0 = 0
+10:48/0 = 0
+10:49/0 = 0
+14:49/0 = 0
+13:49/0 = 0
+9:47/0 = 0
+14:44/0 = 0
+14:43/0 = 0
+14:42/0 = 0
+8:41/0 = 0
+13:8/size_in_atlas = Vector2i(2, 3)
+13:8/0 = 0
+14:12/0 = 0
+14:13/0 = 0
+14:14/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ssasq"]
+sources/0 = SubResource("TileSetAtlasSource_c6egm")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oldau"]
 texture = ExtResource("8_l2s30")
 28:24/size_in_atlas = Vector2i(2, 3)
@@ -2666,7 +2704,7 @@ position = Vector2(-233, 45.25)
 shape = SubResource("RectangleShape2D_fjw6q")
 
 [node name="BasicPlants" type="TileMapLayer" parent="." unique_id=1340616226]
-tile_map_data = PackedByteArray("AAD3//b/AAABAAEAAAD5//b/AAABAAEAAAD7//j/AAABAAEAAAD7//f/AAABAAEAAAD4//b/AAABAAEAAAD6//f/AAABAAEAAAD5//f/AAABAAEAAADz//z/AAACAAAAAAD0//3/AAACAAAAAADy//v/AAACAAAAAADx//v/AAACAAAAAADw//v/AAACAAAAAADv//v/AAACAAAAAADu//v/AAACAAAAAAD6//v/AAACAAAAAAD7//v/AAACAAAAAAD5//z/AAACAAAAAAD4//z/AAACAAAAAAD4//3/AAACAAAAAAD4//7/AAACAAAAAAD2//7/AAACAAAAAAD3//7/AAACAAAAAAD1//3/AAACAAAAAADt//v/AAACAAAAAAD9//b/AAACAAAAAAD+//b/AAABAAEAAAD+//f/AAABAAEAAAD+//j/AAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAD3//b/AAABAAEAAAD5//b/AAABAAEAAAD7//j/AAABAAEAAAD7//f/AAABAAEAAAD4//b/AAABAAEAAAD6//f/AAABAAEAAAD5//f/AAABAAEAAADz//z/AAACAAAAAAD0//3/AAACAAAAAADy//v/AAACAAAAAADx//v/AAACAAAAAADw//v/AAACAAAAAADv//v/AAACAAAAAADu//v/AAACAAAAAAD6//v/AAACAAAAAAD7//v/AAACAAAAAAD5//z/AAACAAAAAAD4//z/AAACAAAAAAD4//3/AAACAAAAAAD4//7/AAACAAAAAAD2//7/AAACAAAAAAD3//7/AAACAAAAAAD1//3/AAACAAAAAADt//v/AAACAAAAAAD+//b/AAABAAEAAAD+//f/AAABAAEAAAD+//j/AAABAAEAAAA=")
 tile_set = SubResource("TileSet_wxmp5")
 
 [node name="House" type="TileMapLayer" parent="." unique_id=352649161]
@@ -2712,7 +2750,7 @@ shape = SubResource("RectangleShape2D_w2nq2")
 z_index = 2
 position = Vector2(80, 4)
 scale = Vector2(0.885, 0.885)
-tile_map_data = PackedByteArray("AAAHAP//AAARAAAAAAA=")
+tile_map_data = PackedByteArray("AAAGAAIAAAAOAAMAAAAHAAIAAAAOAAMAAAAIAAIAAAAOAAMAAAAGAAEAAAAQAAMAAAAIAAEAAAAQAAMAAAA=")
 tile_set = SubResource("TileSet_o4rl6")
 
 [node name="House2" type="TileMapLayer" parent="." unique_id=1662822278]
