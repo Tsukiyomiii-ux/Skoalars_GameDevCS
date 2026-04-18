@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://c4gtwkobq0h84"]
 
 [ext_resource type="Texture2D" uid="uid://c8us716ex6g4f" path="res://Assets/Sprite/Tilesets/Water.png" id="1_uo18i"]
-[ext_resource type="Texture2D" uid="uid://og6bv2rscrq1" path="res://Assets/Sprite/Tilesets/Tilled_Dirt_Wide_v2.png" id="2_osqvc"]
+[ext_resource type="Texture2D" uid="uid://cbksjk2ycdu04" path="res://Assets/Sprite/Tilesets/Tilled_Dirt.png" id="2_osqvc"]
 [ext_resource type="Texture2D" uid="uid://bw5spkx0fbrnt" path="res://Assets/Sprite/Tilesets/Hills.png" id="2_t1ae1"]
 [ext_resource type="Texture2D" uid="uid://df2anxcp3jguc" path="res://Assets/Sprite/FABLE ISLE/beachtools.png" id="3_nsjku"]
 [ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="3_t1ae1"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="9_y8j58"]
 [ext_resource type="Texture2D" uid="uid://blh80kli6imvp" path="res://Assets/Sprite/FABLE ISLE/more grasses.png" id="11_v1dss"]
 [ext_resource type="Texture2D" uid="uid://d1ki87gfrd17t" path="res://Assets/Sprite/FABLE ISLE/moreTrees.png" id="11_wu38t"]
-[ext_resource type="Texture2D" uid="uid://dlam8e53ngsj3" path="res://Assets/Sprite/Objects/Fences.png" id="12_euir5"]
+[ext_resource type="Texture2D" uid="uid://dcrblb6rl3r1b" path="res://Assets/Sprite/Objects/Fences.png" id="12_euir5"]
 [ext_resource type="Texture2D" uid="uid://ctqrytg3hya0y" path="res://Assets/Sprite/FABLE ISLE/benches.png" id="13_v72cm"]
 [ext_resource type="Texture2D" uid="uid://dn6rjhel0803j" path="res://Assets/Sprite/FABLE ISLE/garden.png" id="15_nkldo"]
 

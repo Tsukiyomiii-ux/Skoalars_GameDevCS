@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://x3j0mft4yds7" path="res://Assets/Sprite/Objects/Basic Furniture.png" id="11_o4rl6"]
 [ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="12_1oq35"]
 [ext_resource type="Texture2D" uid="uid://0wcqcsuqxj38" path="res://Assets/Sprite/Objects/Supplies.png" id="12_ml317"]
-[ext_resource type="PackedScene" uid="uid://dpsjtepclb0h0" path="res://Assets/Scene/skoalars.tscn" id="13_f3pcw"]
+[ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="13_f3pcw"]
 [ext_resource type="Texture2D" uid="uid://chdey0vuxbwkb" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png" id="17_62u1j"]
 [ext_resource type="Texture2D" uid="uid://bsw8d10ehyyog" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 2 - DAY.png" id="18_62u1j"]
 [ext_resource type="Texture2D" uid="uid://bkqoak0pbnatw" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/BRIDGE - DAY.png" id="19_wxmp5"]
