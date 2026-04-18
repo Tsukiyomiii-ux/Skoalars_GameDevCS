@@ -1930,6 +1930,7 @@ tile_map_data = PackedByteArray("AAD4/+j/AAACAAYAAAD5/+r/AAACAAYAAAD7/+f/AAACAAY
 tile_set = SubResource("TileSet_y6421")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Grass/2nd Grass Layer" unique_id=1203748739]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grass/2nd Grass Layer/StaticBody2D" unique_id=1812931221]
 position = Vector2(-100.255585, -218.65091)
@@ -2050,6 +2051,7 @@ tile_set = SubResource("TileSet_xudu4")
 tile_set = SubResource("TileSet_ll487")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Grass/3rd Grass Layer2" unique_id=304203608]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grass/3rd Grass Layer2/StaticBody2D" unique_id=256207780]
 position = Vector2(280.5, 21.375)
@@ -2185,6 +2187,7 @@ tile_map_data = PackedByteArray("AAACAPb/AAABAAUAAAADAPb/AAABAAUAAAAEAPb/AAABAAU
 tile_set = SubResource("TileSet_htla3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Garden/Fences" unique_id=2032571722]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garden/Fences/StaticBody2D" unique_id=1645521771]
 position = Vector2(63, -140)
@@ -2195,6 +2198,7 @@ position = Vector2(-152, -77)
 shape = SubResource("RectangleShape2D_htla3")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Garden/Fences" unique_id=135197481]
+visible = false
 position = Vector2(-33, 268)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garden/Fences/StaticBody2D2" unique_id=689482895]
@@ -2273,6 +2277,7 @@ tile_map_data = PackedByteArray("AAASABEAAAANAAgAAAASABIAAAANAAgAAAARABMAAAAMABQ
 tile_set = SubResource("TileSet_t4n34")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Garden/morePlanr" unique_id=1870337836]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garden/morePlanr/StaticBody2D" unique_id=379442088]
 position = Vector2(-227, -109)
@@ -2312,6 +2317,7 @@ tile_map_data = PackedByteArray("AAALAPH/AAAJAB0AAAAKAPP/AAAJABkAAAAJAPP/AAALABs
 tile_set = SubResource("TileSet_t4n34")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Garden/morePlanr/morePlanr4" unique_id=109769065]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garden/morePlanr/morePlanr4/StaticBody2D" unique_id=386432458]
 position = Vector2(166, -223.75)
@@ -2334,6 +2340,7 @@ tile_map_data = PackedByteArray("AADw//r/AAAKADAAAAD2/+z/AAAEABQAAAD0/+7/AAAMABE
 tile_set = SubResource("TileSet_t4n34")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Garden/morePlanr2" unique_id=783251078]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garden/morePlanr2/StaticBody2D" unique_id=1447962777]
 position = Vector2(-179, -220.25)
@@ -2587,6 +2594,7 @@ position = Vector2(-66, -1.75)
 shape = SubResource("RectangleShape2D_ym7b6")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Pond" unique_id=958969389]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pond/StaticBody2D2" unique_id=249232359]
 position = Vector2(-362, -39)
@@ -2647,6 +2655,7 @@ tile_map_data = PackedByteArray("AAAGAP3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_gadri")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House" unique_id=1062349972]
+visible = false
 position = Vector2(113, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=1207464055]
@@ -2694,6 +2703,7 @@ tile_map_data = PackedByteArray("AAAGAP3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_gadri")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House2" unique_id=281833958]
+visible = false
 position = Vector2(113, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House2/StaticBody2D" unique_id=969716241]
@@ -2734,6 +2744,7 @@ tile_map_data = PackedByteArray("AAAGAP3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_gadri")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House4" unique_id=1186143006]
+visible = false
 position = Vector2(113, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House4/StaticBody2D" unique_id=1978570701]
@@ -2785,6 +2796,7 @@ tile_map_data = PackedByteArray("AAAQAP7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_dlkjj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House 2" unique_id=114754893]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House 2/StaticBody2D" unique_id=693882791]
 position = Vector2(263.92065, -7.011078)
@@ -2835,6 +2847,7 @@ tile_map_data = PackedByteArray("AAAQAP7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_dlkjj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House 4" unique_id=471422029]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House 4/StaticBody2D" unique_id=1527088732]
 position = Vector2(263.92065, -7.011078)
@@ -2885,6 +2898,7 @@ tile_map_data = PackedByteArray("AAAHAPr/AQAjAAcAAAA=")
 tile_set = SubResource("TileSet_dlkjj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House 5" unique_id=2137825996]
+visible = false
 position = Vector2(113, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House 5/StaticBody2D" unique_id=1078130022]
@@ -2935,6 +2949,7 @@ tile_map_data = PackedByteArray("AAAQAP7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_dlkjj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House 7" unique_id=1756266296]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House 7/StaticBody2D" unique_id=543938505]
 position = Vector2(263.92065, -7.011078)
@@ -2985,6 +3000,7 @@ tile_map_data = PackedByteArray("AAAQAP7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_8yrxt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House 3" unique_id=45292003]
+visible = false
 position = Vector2(113, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House 3/StaticBody2D" unique_id=1067639010]
@@ -3027,6 +3043,7 @@ tile_map_data = PackedByteArray("AAAQAP3/AQADAAcAAAA=")
 tile_set = SubResource("TileSet_8yrxt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House 6" unique_id=37581949]
+visible = false
 position = Vector2(113, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House 6/StaticBody2D" unique_id=594073156]
@@ -3074,6 +3091,7 @@ tile_map_data = PackedByteArray("AAAPAP//AwAIAAgAAAA=")
 tile_set = SubResource("TileSet_8yrxt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House 8" unique_id=786728511]
+visible = false
 position = Vector2(113, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=180753438]
@@ -3158,6 +3176,7 @@ tile_map_data = PackedByteArray("AADu/w8AAAAAAAAAAAA3AAYAAAAAAAQAAAA=")
 tile_set = SubResource("TileSet_42cgt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Miscs" unique_id=1478568424]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Miscs/StaticBody2D" unique_id=1933337280]
 position = Vector2(131.19785, 154.72397)
@@ -3227,6 +3246,7 @@ tile_map_data = PackedByteArray("AABwAFMAAAA4AAQAAAB1AE8AAQA7AAQAAAC5AHUAAQAeAA4
 tile_set = SubResource("TileSet_8cldj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Windmill" unique_id=575207905]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Windmill/StaticBody2D" unique_id=1790626104]
 position = Vector2(1856, 1184)
