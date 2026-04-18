@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bw5spkx0fbrnt" path="res://Assets/Sprite/Tilesets/Hills.png" id="2_i18st"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="3_kst7u"]
 [ext_resource type="Texture2D" uid="uid://bpdlhalhpxyul" path="res://Assets/Sprite/Objects/Plants.png" id="4_1eggy"]
-[ext_resource type="Texture2D" uid="uid://bb2gscbw68lxx" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/STAIRS - DAY.png" id="5_8pra0"]
+[ext_resource type="Texture2D" uid="uid://tuc823dykhgc" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/STAIRS - DAY.png" id="5_8pra0"]
 [ext_resource type="Texture2D" uid="uid://co38hy3810kc1" path="res://Assets/Sprite/Objects/Basic Grass Biom things 1.png" id="6_7q320"]
 [ext_resource type="Texture2D" uid="uid://dlam8e53ngsj3" path="res://Assets/Sprite/Objects/Fences.png" id="7_6ibbo"]
 [ext_resource type="Texture2D" uid="uid://dns3bnp5tmcb" path="res://Assets/Sprite/Tilesets/Tilled_Dirt_v2.png" id="8_4hf83"]
@@ -14,10 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://k76d24eu30cl" path="res://Assets/Sprite/Objects/MCHome/Trees_animation.png" id="12_ir825"]
 [ext_resource type="Texture2D" uid="uid://cqe4s1e3gfp8" path="res://Assets/Sprite/Objects/Basic_tools_and_meterials.png" id="13_jdewu"]
 [ext_resource type="Texture2D" uid="uid://pqk114xcyc6n" path="res://Assets/Sprite/Objects/Basic_Plants.png" id="14_d8p1b"]
-[ext_resource type="Texture2D" path="res://Assets/Sprite/Objects/premade_buildings_demo.png" id="15_cxxsu"]
-[ext_resource type="Texture2D" uid="uid://bk0ox4vmk3oda" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png" id="16_8nncl"]
-[ext_resource type="Texture2D" uid="uid://b5lvy5lg7qaw1" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 2 - DAY.png" id="17_jn64h"]
-[ext_resource type="PackedScene" uid="uid://dpsjtepclb0h0" path="res://Assets/Scripts/skoalars.tscn" id="18_v6ivq"]
+[ext_resource type="Texture2D" uid="uid://dhqnpv05la8jt" path="res://Assets/Sprite/Objects/premade_buildings_demo.png" id="15_cxxsu"]
+[ext_resource type="Texture2D" uid="uid://chdey0vuxbwkb" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png" id="16_8nncl"]
+[ext_resource type="Texture2D" uid="uid://bsw8d10ehyyog" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 2 - DAY.png" id="17_jn64h"]
+[ext_resource type="PackedScene" uid="uid://dpsjtepclb0h0" path="res://Assets/skoalars.tscn" id="18_v6ivq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ktv0f"]
 distance = -18.0

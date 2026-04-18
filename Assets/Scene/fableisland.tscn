@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://og6bv2rscrq1" path="res://Assets/Sprite/Tilesets/Tilled_Dirt_Wide_v2.png" id="2_osqvc"]
 [ext_resource type="Texture2D" uid="uid://bw5spkx0fbrnt" path="res://Assets/Sprite/Tilesets/Hills.png" id="2_t1ae1"]
 [ext_resource type="Texture2D" uid="uid://df2anxcp3jguc" path="res://Assets/Sprite/FABLE ISLE/beachtools.png" id="3_nsjku"]
-[ext_resource type="PackedScene" path="res://Assets/Scene/skoalars.tscn" id="3_t1ae1"]
+[ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="3_t1ae1"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="3_wuwoc"]
 [ext_resource type="Texture2D" uid="uid://dwxmmw27q84og" path="res://Assets/Sprite/FABLE ISLE/grasses.png" id="4_y8j58"]
 [ext_resource type="Texture2D" uid="uid://1xn0yb5sww7y" path="res://Assets/Sprite/FABLE ISLE/library.png.png" id="5_72lw4"]
@@ -733,6 +733,7 @@ tile_set = SubResource("TileSet_auk3s")
 [node name="collision" type="StaticBody2D" parent="." unique_id=762543476]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collision" unique_id=1164847711]
+visible = false
 polygon = PackedVector2Array(501, 62, 494, 138, 525, 136, 525, 158, 319, 159, 322, 241, 321, 267, 446, 267, 447, 220, 468, 223, 475, 293, 339, 292, 336, 319, 237, 320, 235, 288, 112, 289, 107, 219, 131, 220, 132, 269, 174, 269, 175, 234, 175, 193, 140, 191, 141, 144, 58, 141, 57, 87, 77, 87, 83, 115, 142, 104, 99, 71, 72, 2, 140, 0, 143, -37, 159, -35, 160, -1, 221, -1, 220, -38, 243, -36, 242, 0, 286, -1, 311, 6, 308, 36, 242, 38, 242, 45, 291, 46, 292, 64, 292, 69, 422, 71, 446, 115, 472, 136, 467, 42, 608, 32, 597, -93, 412, -113, -20, -96, -15, 284, 174, 355, 454, 357, 590, 255, 608, 87)
 
 [node name="CollisionsForObjects" type="StaticBody2D" parent="." unique_id=406894756]
