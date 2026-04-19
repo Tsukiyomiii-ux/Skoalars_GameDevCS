@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://the2vr3vwojp"]
 
-[ext_resource type="TileSet" uid="uid://ca5mrl5gmsh4k" path="res://Scene/GTileset/game_tile_set.tres" id="1_q128q"]
+[ext_resource type="TileSet" uid="uid://ca5mrl5gmsh4k" path="res://Scene1/GTileset/game_tile_set.tres" id="1_q128q"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q128q"]
 a = Vector2(7, -11)
