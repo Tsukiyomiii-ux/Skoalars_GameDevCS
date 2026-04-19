@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Skoalar"
-run/main_scene="uid://c4gtwkobq0h84"
+run/main_scene="uid://b36wb2dwb7yp2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [input]
 

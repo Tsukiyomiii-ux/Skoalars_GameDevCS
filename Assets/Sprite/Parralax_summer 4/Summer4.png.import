@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2l2sxarc6fsj"
-uid="uid://cftp8urn2gjjc"
-path="res://.godot/imported/Bricks.png-a66dad07241c55baba21940f2adcf832.ctex"
+uid="uid://t2gdj60tr08c"
+path="res://.godot/imported/Summer4.png-85efa05a69ae4fa2bed350fc49b66642.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/FABLE ISLE/Bricks.png"
-dest_files=["res://.godot/imported/Bricks.png-a66dad07241c55baba21940f2adcf832.ctex"]
+source_file="res://Assets/Sprite/Parralax_summer 4/Summer4.png"
+dest_files=["res://.godot/imported/Summer4.png-85efa05a69ae4fa2bed350fc49b66642.ctex"]
 
 [params]
 

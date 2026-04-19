@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2l2sxarc6fsj"
-uid="uid://cftp8urn2gjjc"
-path="res://.godot/imported/Bricks.png-a66dad07241c55baba21940f2adcf832.ctex"
+uid="uid://c788dflens4il"
+path="res://.godot/imported/Buttons 1.png-4ebff299f2b7cf159714c068fcb14237.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/FABLE ISLE/Bricks.png"
-dest_files=["res://.godot/imported/Bricks.png-a66dad07241c55baba21940f2adcf832.ctex"]
+source_file="res://Assets/Sprite/Buttons/Buttons 1.png"
+dest_files=["res://.godot/imported/Buttons 1.png-4ebff299f2b7cf159714c068fcb14237.ctex"]
 
 [params]
 

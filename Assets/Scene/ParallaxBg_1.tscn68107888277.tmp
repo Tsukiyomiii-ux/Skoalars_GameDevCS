@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bpotorfg1xd7u"]
+
+[ext_resource type="Script" uid="uid://c7025dk7u21gi" path="res://Assets/Scripts/parallax_background.gd" id="1_2qe7p"]
+[ext_resource type="Texture2D" uid="uid://cp6se3ok6ru21" path="res://Assets/Sprite/Parralax_summer 4/1.png" id="2_jdb1x"]
+[ext_resource type="Texture2D" uid="uid://dcnau3gobua18" path="res://Assets/Sprite/Parralax_summer 4/2.png" id="3_au65r"]
+[ext_resource type="Texture2D" uid="uid://b35hn3he1dn6l" path="res://Assets/Sprite/Parralax_summer 4/3.png" id="4_mhams"]
+[ext_resource type="Texture2D" uid="uid://h5tekw64qcf3" path="res://Assets/Sprite/Buttons 1.png" id="5_2qe7p"]
+
+[node name="ParallaxBG" type="Node2D" unique_id=1195632635]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1719863775]
+script = ExtResource("1_2qe7p")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=577872496]
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1506625636]
+texture = ExtResource("2_jdb1x")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1058305016]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=1927494720]
+texture = ExtResource("3_au65r")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=357303533]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=27879680]
+texture = ExtResource("4_mhams")
+centered = false
+
+[node name="Menu_Buttons" type="ParallaxLayer" parent="ParallaxBackground" unique_id=865922202]
+position = Vector2(92.39, 117.755)
+scale = Vector2(0.375, 0.375)
+motion_scale = Vector2(0.5, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Menu_Buttons" unique_id=1307021970]
+texture = ExtResource("5_2qe7p")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1203545042]
