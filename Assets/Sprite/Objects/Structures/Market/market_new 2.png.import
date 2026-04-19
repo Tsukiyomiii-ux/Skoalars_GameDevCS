@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://irua10pge3j1"
-path="res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"
+uid="uid://cwijxfenlnrmq"
+path="res://.godot/imported/market_new 2.png-a5e1c9c624b6ce00becf81e46e9bbfb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/Structures/Fences.png"
-dest_files=["res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/Market/market_new 2.png"
+dest_files=["res://.godot/imported/market_new 2.png-a5e1c9c624b6ce00becf81e46e9bbfb0.ctex"]
 
 [params]
 

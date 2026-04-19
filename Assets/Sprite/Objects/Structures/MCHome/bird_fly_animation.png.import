@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://irua10pge3j1"
-path="res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"
+uid="uid://yoafnu4q46rl"
+path="res://.godot/imported/bird_fly_animation.png-2b61ccfe01d764c1b28a9f1b095d9de2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/Structures/Fences.png"
-dest_files=["res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/MCHome/bird_fly_animation.png"
+dest_files=["res://.godot/imported/bird_fly_animation.png-2b61ccfe01d764c1b28a9f1b095d9de2.ctex"]
 
 [params]
 

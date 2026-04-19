@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://irua10pge3j1"
-path="res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"
+uid="uid://boahlj6rxbk43"
+path="res://.godot/imported/countoria house 2.png-5d920ec7c234db14fea6357b13a2ac9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/Structures/Fences.png"
-dest_files=["res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/countoria house 2.png"
+dest_files=["res://.godot/imported/countoria house 2.png-5d920ec7c234db14fea6357b13a2ac9b.ctex"]
 
 [params]
 

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bipplyctjtp8t"]
+
+[ext_resource type="Texture2D" uid="uid://c3751wji42a5e" path="res://Assets/Sprite/Objects/Structures/lightouses.png" id="1_82rwq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmla4"]
+atlas = ExtResource("1_82rwq")
+region = Rect2(584, 104, 392, 504)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pbhjj"]
+radius = 152.0
+height = 304.0
+
+[node name="lighthouse" type="Sprite2D" unique_id=1773186927]
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_dmla4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1158027518]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=406337444]
+position = Vector2(0, 112)
+shape = SubResource("CapsuleShape2D_pbhjj")

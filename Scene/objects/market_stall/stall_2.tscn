@@ -10,6 +10,7 @@ region = Rect2(128, 64, 448, 312)
 size = Vector2(385, 120)
 
 [node name="stall2" type="Sprite2D" unique_id=1263397986]
+texture_filter = 1
 scale = Vector2(0.175, 0.175)
 texture = SubResource("AtlasTexture_v86eq")
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://irua10pge3j1"
-path="res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"
+uid="uid://ck0j723ltu6r3"
+path="res://.godot/imported/bakery_04.png-e493964ca0097cf017316509529b3070.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/Structures/Fences.png"
-dest_files=["res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/Market/bakery_04.png"
+dest_files=["res://.godot/imported/bakery_04.png-e493964ca0097cf017316509529b3070.ctex"]
 
 [params]
 

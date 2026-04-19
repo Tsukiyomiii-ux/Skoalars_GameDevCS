@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://irua10pge3j1"
-path="res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"
+uid="uid://dolosv5o44cr4"
+path="res://.godot/imported/bird_jump_animation.png-9f447a676cf2e79ae4cdb9947152ad39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/Structures/Fences.png"
-dest_files=["res://.godot/imported/Fences.png-7cacc716885a30f10053cedde47f2856.ctex"]
+source_file="res://Assets/Sprite/Objects/Structures/MCHome/bird_jump_animation.png"
+dest_files=["res://.godot/imported/bird_jump_animation.png-9f447a676cf2e79ae4cdb9947152ad39.ctex"]
 
 [params]
 

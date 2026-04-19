@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b3bi14tvrg3sj" path="res://Scene/objects/market_stall/market_1.tscn" id="5_oggff"]
 [ext_resource type="Texture2D" uid="uid://yv4cp1psosuw" path="res://Assets/Sprite/Objects/Structures/Green Housing.png" id="5_yoxwk"]
 [ext_resource type="PackedScene" uid="uid://dj6gescknvfq" path="res://Scene/objects/market_stall/stall_1.tscn" id="6_7oqwu"]
+[ext_resource type="PackedScene" uid="uid://b8c1b6ck85tuf" path="res://Scene/objects/trees/trunk.tscn" id="6_83ab3"]
 [ext_resource type="PackedScene" uid="uid://bpd05xpbdhw46" path="res://Scene/objects/trees/palmtrees.tscn" id="6_lyocm"]
 [ext_resource type="Texture2D" uid="uid://c14j7m7rlsrjh" path="res://Assets/Sprite/Tilesets/Hills2.png" id="6_oggff"]
 [ext_resource type="Texture2D" uid="uid://1sn3bt2h8s2g" path="res://Assets/Sprite/Tilesets/grasssand.png" id="7_l60li"]
@@ -22,7 +23,25 @@
 [ext_resource type="PackedScene" uid="uid://bdspby0du6yfp" path="res://Scene/objects/market_stall/stall_4.tscn" id="9_ykdga"]
 [ext_resource type="Texture2D" uid="uid://og6bv2rscrq1" path="res://Assets/Sprite/Tilesets/Tilled_Dirt_Wide_v2.png" id="10_7oqwu"]
 [ext_resource type="PackedScene" uid="uid://16atq68xo73d" path="res://Scene/objects/market_stall/market_4.tscn" id="10_mhlxn"]
+[ext_resource type="PackedScene" uid="uid://dfsbomqna81ir" path="res://Scene/objects/trees/choptree_1.tscn" id="11_pok44"]
 [ext_resource type="Texture2D" uid="uid://cyr7anruqv662" path="res://Assets/Sprite/Objects/Plants and Biome/Trees_shadow_countoria.png" id="11_tr73q"]
+[ext_resource type="PackedScene" uid="uid://cpekwvwqldvwc" path="res://Scene/objects/trees/leafless_tree_1.tscn" id="15_272lr"]
+[ext_resource type="PackedScene" uid="uid://u2wlbnmcmpj7" path="res://Scene/objects/houses/house_1.tscn" id="16_pok44"]
+[ext_resource type="PackedScene" uid="uid://cu3ptocl41fw7" path="res://Scene/objects/houses/house_2.tscn" id="17_272lr"]
+[ext_resource type="PackedScene" uid="uid://e08qt3er28c6" path="res://Scene/objects/houses/house_3.tscn" id="18_1eaun"]
+[ext_resource type="PackedScene" uid="uid://divpjvohqeu6g" path="res://Scene/objects/houses/house_4.tscn" id="19_x2s0s"]
+[ext_resource type="PackedScene" uid="uid://bipplyctjtp8t" path="res://Scene/objects/houses/lighthouse.tscn" id="20_x2s0s"]
+[ext_resource type="PackedScene" uid="uid://cpuuaxd36t0ak" path="res://Scene/objects/trees/trees_3.tscn" id="21_fv4mo"]
+[ext_resource type="PackedScene" uid="uid://wxv7xxyr54py" path="res://Scene/objects/market_stall/market_5.tscn" id="22_t60dw"]
+[ext_resource type="PackedScene" uid="uid://uoic266h6hi" path="res://Scene/objects/bushes_stone/bush_1.tscn" id="23_vugjd"]
+[ext_resource type="PackedScene" uid="uid://c1e8xyojifgmw" path="res://Scene/objects/bushes_stone/bush_2.tscn" id="24_uksmd"]
+[ext_resource type="PackedScene" uid="uid://d2hcfek7kuva5" path="res://Scene/objects/trees/tree_4.tscn" id="25_gw182"]
+[ext_resource type="PackedScene" uid="uid://cu1l3gksh0y2l" path="res://Scene/objects/misc/bulletin.tscn" id="26_evfgn"]
+[ext_resource type="PackedScene" uid="uid://byh3kto6mryr4" path="res://Scene/objects/bushes_stone/stone_1.tscn" id="27_drhb5"]
+[ext_resource type="PackedScene" uid="uid://l4umydhijo4l" path="res://Scene/objects/bushes_stone/stone_2.tscn" id="28_aq86a"]
+[ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/Structures/MCHome/exterior.png" id="28_jc53i"]
+[ext_resource type="PackedScene" uid="uid://dapjqigjv4q1v" path="res://Scene/objects/bushes_stone/bush.tscn" id="31_ictjx"]
+[ext_resource type="Texture2D" uid="uid://irua10pge3j1" path="res://Assets/Sprite/Objects/Structures/Fences.png" id="32_evfgn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhtoj"]
 texture = ExtResource("1_3rpvo")
@@ -260,20 +279,105 @@ scenes/3/scene = ExtResource("5_lyocm")
 scenes/4/scene = ExtResource("6_lyocm")
 scenes/6/scene = ExtResource("8_oggff")
 scenes/7/scene = ExtResource("9_l60li")
+scenes/8/scene = ExtResource("31_ictjx")
 scenes/9/scene = ExtResource("10_mhlxn")
 scenes/10/scene = ExtResource("5_ew4mt")
+scenes/11/scene = ExtResource("6_83ab3")
 scenes/12/scene = ExtResource("6_7oqwu")
 scenes/13/scene = ExtResource("7_tr73q")
 scenes/14/scene = ExtResource("8_hudxf")
 scenes/15/scene = ExtResource("9_ykdga")
+scenes/16/scene = ExtResource("11_pok44")
 scenes/17/scene = ExtResource("6_lyocm")
 scenes/18/scene = ExtResource("4_ypv7h")
 scenes/19/scene = ExtResource("5_lyocm")
+scenes/20/scene = ExtResource("15_272lr")
+scenes/21/scene = ExtResource("16_pok44")
+scenes/22/scene = ExtResource("17_272lr")
+scenes/23/scene = ExtResource("18_1eaun")
+scenes/24/scene = ExtResource("19_x2s0s")
+scenes/26/scene = ExtResource("20_x2s0s")
+scenes/27/scene = ExtResource("21_fv4mo")
+scenes/28/scene = ExtResource("22_t60dw")
+scenes/29/scene = ExtResource("23_vugjd")
+scenes/30/scene = ExtResource("24_uksmd")
+scenes/31/scene = ExtResource("25_gw182")
+scenes/32/scene = ExtResource("26_evfgn")
+scenes/33/scene = ExtResource("27_drhb5")
+scenes/34/scene = ExtResource("28_aq86a")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l60li"]
 texture = ExtResource("7_yoxwk")
 44:1/size_in_atlas = Vector2i(52, 25)
 44:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7ivd"]
+texture = ExtResource("28_jc53i")
+10:16/size_in_atlas = Vector2i(2, 2)
+10:16/0 = 0
+14:14/0 = 0
+14:12/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:13/0 = 0
+11:25/size_in_atlas = Vector2i(2, 2)
+11:25/0 = 0
+9:25/size_in_atlas = Vector2i(2, 2)
+9:25/0 = 0
+7:25/size_in_atlas = Vector2i(2, 2)
+7:25/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w47i2"]
+texture = ExtResource("32_evfgn")
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 5
+1:0/0/terrains_peering_bit/right_side = 5
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 5
+2:0/0/terrains_peering_bit/right_side = 5
+2:0/0/terrains_peering_bit/left_side = 5
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 5
+3:0/0/terrains_peering_bit/left_side = 5
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 5
+3:1/0/terrains_peering_bit/left_side = 5
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 5
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 5
+1:1/0/terrains_peering_bit/right_side = 5
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 5
+1:2/0/terrains_peering_bit/right_side = 5
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 5
+2:2/0/terrains_peering_bit/right_side = 5
+2:2/0/terrains_peering_bit/left_side = 5
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 5
+3:2/0/terrains_peering_bit/left_side = 5
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 5
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 5
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 5
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jcdu"]
 texture = ExtResource("5_yoxwk")
@@ -866,6 +970,8 @@ texture = ExtResource("8_mhlxn")
 15:26/0 = 0
 14:27/0 = 0
 15:27/0 = 0
+14:31/size_in_atlas = Vector2i(2, 8)
+14:31/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcy1k"]
 texture = ExtResource("9_ew4mt")
@@ -1212,6 +1318,8 @@ terrain_set_0/terrain_3/name = "Tilled Dirt Terrain 3"
 terrain_set_0/terrain_3/color = Color(0.6544551, 0.24484885, 0.72741497, 1)
 terrain_set_0/terrain_4/name = "bridges 4"
 terrain_set_0/terrain_4/color = Color(0.28125, 0.5, 0.25, 1)
+terrain_set_0/terrain_5/name = "fences"
+terrain_set_0/terrain_5/color = Color(0.972549, 0.5019608, 0.9490196, 1)
 sources/0 = SubResource("TileSetAtlasSource_nhtoj")
 sources/1 = SubResource("TileSetAtlasSource_hkp61")
 sources/5 = SubResource("TileSetAtlasSource_v3ifq")
@@ -1225,3 +1333,5 @@ sources/7 = SubResource("TileSetAtlasSource_tcy1k")
 sources/10 = SubResource("TileSetAtlasSource_ar3aa")
 sources/11 = SubResource("TileSetScenesCollectionSource_hudxf")
 sources/13 = SubResource("TileSetAtlasSource_l60li")
+sources/14 = SubResource("TileSetAtlasSource_f7ivd")
+sources/15 = SubResource("TileSetAtlasSource_w47i2")
