@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dcqb0m06gfcm8"]
+[gd_scene format=4 uid="uid://dg7u8bfesx23p"]
 
 [ext_resource type="Texture2D" uid="uid://c6svovpi7q7ws" path="res://Assets/Zypheria/Game Boy Advance - X-Bladez_ Inline Skater - Tracks - Heathrow Airport.png" id="1_i3two"]
 [ext_resource type="Texture2D" uid="uid://dy8tq7qa4ctx6" path="res://Assets/Zypheria/randomtiles.png" id="2_vbm80"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b3hs6ne6qe8v0" path="res://Assets/Zypheria/TileSet_V1.png" id="11_ipvqv"]
 [ext_resource type="Texture2D" uid="uid://cy0ajvi5xggy1" path="res://Assets/Zypheria/63ccc3a4-b373-447c-94b1-7ffec613b71e.png" id="12_aq85p"]
 [ext_resource type="Texture2D" uid="uid://casqqbjvkqxow" path="res://Assets/Zypheria/4f71f718-5ba5-46d5-b75f-b77105b8f978.png" id="13_o53n0"]
-[ext_resource type="PackedScene" uid="uid://b6jiyrg2ell0u" path="res://Assets/Scene/lore.tscn" id="15_ipvqv"]
+[ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="15_ijjnh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ipvqv"]
 texture = ExtResource("11_ipvqv")
@@ -518,9 +518,6 @@ scale = Vector2(0.3, 0.3)
 tile_map_data = PackedByteArray("AAAZAAUAAAAJAAQAAACEAAQAAAAJAAQAAACmAV4AAQAHAAUAAAAMAQQAAQAHAAUAAABmAGcAAQAHAAUAAACO/8z/AgAHABIAAAC5/8z/AgAHABIAAABX/8//AgAVABIAAADn/83/AgAVABIAAABU/xkAAgAVABIAAABz/5QAAgAVABIAAACQ/5QAAgAVABIAAAA=")
 tile_set = SubResource("TileSet_c3y87")
 
-[node name="Lore" parent="." unique_id=1659510779 instance=ExtResource("15_ipvqv")]
-position = Vector2(-31, 1)
-
 [node name="Collisions" type="StaticBody2D" parent="." unique_id=65706525]
 visible = false
 
@@ -607,3 +604,6 @@ polygon = PackedVector2Array(2250, 698, 2292, 697, 2273, 540)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/CollisionPolygon2D9/CollisionPolygon2D/CollisionPolygon2D/CollisionPolygon2D/CollisionPolygon2D/CollisionPolygon2D/CollisionPolygon2D" unique_id=1637998284]
 polygon = PackedVector2Array(1419, 804, 1482, 804, 1481, 769, 1455, 748, 1420, 751)
+
+[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("15_ijjnh")]
+position = Vector2(-45, -119)
