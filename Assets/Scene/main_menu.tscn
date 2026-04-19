@@ -1,13 +1,42 @@
-[gd_scene format=3 uid="uid://b36wb2dwb7yp2"]
+[gd_scene format=3 uid="uid://divs57517s5yc"]
 
 [ext_resource type="Script" uid="uid://cy21blyn57u26" path="res://Assets/Scripts/main_menu.gd" id="1_3dpqm"]
-[ext_resource type="Script" uid="uid://digtfx3apnk6f" path="res://Assets/Scripts/parallax_background.gd" id="1_202op"]
+[ext_resource type="Script" path="res://Assets/Scripts/parallax_background.gd" id="1_202op"]
 [ext_resource type="Texture2D" uid="uid://c788dflens4il" path="res://Assets/Sprite/Buttons/Buttons 1.png" id="1_dwgjd"]
 [ext_resource type="Texture2D" uid="uid://cp6se3ok6ru21" path="res://Assets/Sprite/Parralax_summer 4/1.png" id="1_qouvi"]
 [ext_resource type="Texture2D" uid="uid://dcnau3gobua18" path="res://Assets/Sprite/Parralax_summer 4/2.png" id="2_202op"]
 [ext_resource type="Texture2D" uid="uid://cgnlsx8yjinug" path="res://Assets/Sprite/Buttons/Buttons 2.png" id="2_a1aw0"]
 [ext_resource type="Texture2D" uid="uid://whdqbmd0hitk" path="res://Assets/Sprite/Buttons/Buttons 3.png" id="3_3dpqm"]
 [ext_resource type="Texture2D" uid="uid://b35hn3he1dn6l" path="res://Assets/Sprite/Parralax_summer 4/3.png" id="3_dwgjd"]
+[ext_resource type="AudioStream" uid="uid://ct02po61w47pf" path="res://Assets/Audio/Soft_Eng_LoFi.wav" id="9_wv4p4"]
+
+[sub_resource type="FontFile" id="FontFile_3dpqm"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/169/0/ascent = 0.0
+cache/0/169/0/descent = 0.0
+cache/0/169/0/underline_position = 0.0
+cache/0/169/0/underline_thickness = 0.0
+cache/0/169/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_wv4p4"]
+font = SubResource("FontFile_3dpqm")
+font_size = 169
+font_color = Color(0, 1, 1, 1)
+outline_size = 18
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Main_Menu" type="Control" unique_id=894167509]
 layout_mode = 3
@@ -49,33 +78,48 @@ centered = false
 
 [node name="play_btn" type="Button" parent="." unique_id=93450368]
 layout_mode = 0
-offset_left = -16.0
-offset_top = 47.999996
-offset_right = 676.0
-offset_bottom = 317.0
-scale = Vector2(1.0304885, 1.0011436)
+offset_left = 168.00002
+offset_top = 192.00002
+offset_right = 860.0
+offset_bottom = 461.0
+scale = Vector2(0.7316247, 0.79703647)
 action_mode = 0
 icon = ExtResource("1_dwgjd")
 flat = true
 
 [node name="Button2" type="Button" parent="." unique_id=521507729]
 layout_mode = 0
-offset_left = 656.0
-offset_top = 48.0
-offset_right = 1348.0
-offset_bottom = 317.0
-scale = Vector2(0.88567287, 0.99697316)
+offset_left = 663.99994
+offset_top = 192.0
+offset_right = 1355.9999
+offset_bottom = 461.0
+scale = Vector2(0.6360545, 0.82213855)
 icon = ExtResource("2_a1aw0")
 flat = true
 
 [node name="Button3" type="Button" parent="." unique_id=2096228127]
 layout_mode = 0
-offset_left = 328.0
-offset_top = 344.00003
-offset_right = 1020.0
-offset_bottom = 613.0
-scale = Vector2(0.9362594, 1.0459989)
+offset_left = 423.99997
+offset_top = 392.0
+offset_right = 1116.0
+offset_bottom = 660.99994
+scale = Vector2(0.6825947, 0.8683907)
 icon = ExtResource("3_3dpqm")
 flat = true
+
+[node name="Label" type="Label" parent="." unique_id=651742783]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 64.0
+offset_right = 2442.0
+offset_bottom = 295.0
+scale = Vector2(0.3010607, 0.5002196)
+text = "Skoalar's: The Questimals"
+label_settings = SubResource("LabelSettings_wv4p4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2112912611]
+stream = ExtResource("9_wv4p4")
+volume_db = 4.615
+autoplay = true
 
 [connection signal="pressed" from="play_btn" to="." method="_on_button_pressed"]
