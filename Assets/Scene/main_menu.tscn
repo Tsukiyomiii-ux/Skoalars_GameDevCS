@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://b36wb2dwb7yp2"]
+
+[ext_resource type="Script" uid="uid://cy21blyn57u26" path="res://Assets/Scripts/main_menu.gd" id="1_3dpqm"]
+[ext_resource type="Script" uid="uid://digtfx3apnk6f" path="res://Assets/Scripts/parallax_background.gd" id="1_202op"]
+[ext_resource type="Texture2D" uid="uid://c788dflens4il" path="res://Assets/Sprite/Buttons/Buttons 1.png" id="1_dwgjd"]
+[ext_resource type="Texture2D" uid="uid://cp6se3ok6ru21" path="res://Assets/Sprite/Parralax_summer 4/1.png" id="1_qouvi"]
+[ext_resource type="Texture2D" uid="uid://dcnau3gobua18" path="res://Assets/Sprite/Parralax_summer 4/2.png" id="2_202op"]
+[ext_resource type="Texture2D" uid="uid://cgnlsx8yjinug" path="res://Assets/Sprite/Buttons/Buttons 2.png" id="2_a1aw0"]
+[ext_resource type="Texture2D" uid="uid://whdqbmd0hitk" path="res://Assets/Sprite/Buttons/Buttons 3.png" id="3_3dpqm"]
+[ext_resource type="Texture2D" uid="uid://b35hn3he1dn6l" path="res://Assets/Sprite/Parralax_summer 4/3.png" id="3_dwgjd"]
+
+[node name="Main_Menu" type="Control" unique_id=894167509]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3dpqm")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1799686083]
+scale = Vector2(2.23, 2.23)
+transform = Transform2D(2.23, 0, 0, 2.23, 0, 0)
+script = ExtResource("1_202op")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=646202259]
+motion_scale = Vector2(0.05, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=49969411]
+texture = ExtResource("1_qouvi")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1201443097]
+motion_scale = Vector2(0.3, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=963958029]
+texture = ExtResource("2_202op")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=714946248]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=38647710]
+texture = ExtResource("3_dwgjd")
+centered = false
+
+[node name="play_btn" type="Button" parent="." unique_id=93450368]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 47.999996
+offset_right = 676.0
+offset_bottom = 317.0
+scale = Vector2(1.0304885, 1.0011436)
+action_mode = 0
+icon = ExtResource("1_dwgjd")
+flat = true
+
+[node name="Button2" type="Button" parent="." unique_id=521507729]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 48.0
+offset_right = 1348.0
+offset_bottom = 317.0
+scale = Vector2(0.88567287, 0.99697316)
+icon = ExtResource("2_a1aw0")
+flat = true
+
+[node name="Button3" type="Button" parent="." unique_id=2096228127]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 344.00003
+offset_right = 1020.0
+offset_bottom = 613.0
+scale = Vector2(0.9362594, 1.0459989)
+icon = ExtResource("3_3dpqm")
+flat = true
+
+[connection signal="pressed" from="play_btn" to="." method="_on_button_pressed"]
