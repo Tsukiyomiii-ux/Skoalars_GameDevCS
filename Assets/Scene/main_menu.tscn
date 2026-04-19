@@ -24,7 +24,7 @@ transform = Transform2D(2.23, 0, 0, 2.23, 0, 0)
 script = ExtResource("1_202op")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=646202259]
-motion_scale = Vector2(0.1, 0)
+motion_scale = Vector2(0.05, 0)
 motion_mirroring = Vector2(576, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=49969411]
@@ -32,7 +32,7 @@ texture = ExtResource("1_qouvi")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1201443097]
-motion_scale = Vector2(0.2, 0)
+motion_scale = Vector2(0.3, 0)
 motion_mirroring = Vector2(576, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=963958029]
@@ -40,7 +40,7 @@ texture = ExtResource("2_202op")
 centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=714946248]
-motion_scale = Vector2(0.3, 0)
+motion_scale = Vector2(0.5, 0)
 motion_mirroring = Vector2(576, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=38647710]
@@ -49,31 +49,31 @@ centered = false
 
 [node name="play_btn" type="Button" parent="." unique_id=93450368]
 layout_mode = 0
-offset_left = 78.000015
-offset_top = 54.0
-offset_right = 770.0
-offset_bottom = 323.0
-scale = Vector2(1.0173357, 0.9699625)
+offset_left = -16.0
+offset_top = 47.999996
+offset_right = 676.0
+offset_bottom = 317.0
+scale = Vector2(1.0304885, 1.0011436)
 action_mode = 0
 icon = ExtResource("1_dwgjd")
 flat = true
 
 [node name="Button2" type="Button" parent="." unique_id=521507729]
 layout_mode = 0
-offset_left = 686.0
-offset_top = 49.0
-offset_right = 1378.0
-offset_bottom = 318.0
+offset_left = 656.0
+offset_top = 48.0
+offset_right = 1348.0
+offset_bottom = 317.0
 scale = Vector2(0.88567287, 0.99697316)
 icon = ExtResource("2_a1aw0")
 flat = true
 
 [node name="Button3" type="Button" parent="." unique_id=2096228127]
 layout_mode = 0
-offset_left = 334.0
-offset_top = 357.0
-offset_right = 1026.0
-offset_bottom = 626.0
+offset_left = 328.0
+offset_top = 344.00003
+offset_right = 1020.0
+offset_bottom = 613.0
 scale = Vector2(0.9362594, 1.0459989)
 icon = ExtResource("3_3dpqm")
 flat = true
