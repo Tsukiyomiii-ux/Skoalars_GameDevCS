@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2l2sxarc6fsj"
-uid="uid://cftp8urn2gjjc"
-path="res://.godot/imported/Bricks.png-a66dad07241c55baba21940f2adcf832.ctex"
+uid="uid://bl6y8b1bsr68q"
+path="res://.godot/imported/waterfall2.png-e366ad661a4e55af253a9a90290c7cd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/FABLE ISLE/Bricks.png"
-dest_files=["res://.godot/imported/Bricks.png-a66dad07241c55baba21940f2adcf832.ctex"]
+source_file="res://Assets/Sprite/FABLE ISLE/fountain/waterfall2.png"
+dest_files=["res://.godot/imported/waterfall2.png-e366ad661a4e55af253a9a90290c7cd7.ctex"]
 
 [params]
 
