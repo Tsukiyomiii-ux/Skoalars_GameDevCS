@@ -1,8 +1,6 @@
-[gd_scene format=4 uid="uid://cbfqb3mg5xri4"]
+[gd_scene format=4 uid="uid://dc6u04gernfqr"]
 
-[ext_resource type="PackedScene" uid="uid://b6jiyrg2ell0u" path="res://Assets/Scene/lore.tscn" id="1_06fge"]
 [ext_resource type="Texture2D" uid="uid://dn5x1ma3wk3en" path="res://Assets/Fable Isle/Tiled_files/Walls_interior.png" id="2_0gute"]
-[ext_resource type="Script" uid="uid://d3j16s6ni2tjl" path="res://Assets/Scripts/lore.gd" id="2_c3ib8"]
 [ext_resource type="Texture2D" uid="uid://bja3uoet8mxu1" path="res://Assets/Fable Isle/Tiled_files/Walls_street.png" id="3_0gute"]
 [ext_resource type="Texture2D" uid="uid://dfk5vda35uvlw" path="res://Assets/Fable Isle/Tiled_files/Interior_objects.png" id="4_wyyd6"]
 
@@ -370,7 +368,3 @@ tile_set = SubResource("TileSet_2a24a")
 [node name="walls" type="TileMapLayer" parent="floor" unique_id=101419116]
 tile_map_data = PackedByteArray("AAAFAOn/AwAJAAUAAAAKAOn/AwAEAAUAAAANAO7/AwACAAUAAAAPAO7/AwACAAUAAAAAAO7/AwAEAAUAAAD7/+7/AwAEAAUAAAD4/+7/AwACAAUAAAASAO7/AwAEAAUAAAD2/+7/AwAAAAUAAAACAOn/AwAAAAUAAAANAOn/AwAAAAUAABANAOr/AwAQAAYAAAANAOv/AwAQAAYAAAANAOz/AwAQAAYAAAACAOr/AwAQAAYAABACAOv/AwAQAAYAABACAOz/AwAQAAYAABACAO7/AwACAAUAAAABAO7/AwACAAUAAAD//+7/AwACAAUAAAD+/+7/AwACAAUAAAAVAO7/AwACAAUAAAAXAO7/AwACAAUAAAAZAO7/AwAAAAUAABAMAOv/AwASAAIAAAAMAO3/AwASAAIAAAADAOv/AwASAAIAAAADAO3/AwASAAIAAAADAO//AwASAAIAAAAMAO//AwASAAIAAAA=")
 tile_set = SubResource("TileSet_3sug8")
-
-[node name="Lore" parent="floor" unique_id=1659510779 instance=ExtResource("1_06fge")]
-position = Vector2(152, -269)
-script = ExtResource("2_c3ib8")
