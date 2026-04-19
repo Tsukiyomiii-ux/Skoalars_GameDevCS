@@ -187,7 +187,7 @@ a = Vector2(233, 175)
 b = Vector2(200, 175)
 
 [node name="TestSceenTileMap" type="Node2D" unique_id=1226202048]
-position = Vector2(128, -117)
+position = Vector2(431, -117)
 
 [node name="GameTileMap" type="Node2D" parent="." unique_id=405277270]
 position = Vector2(0, 228)
@@ -477,6 +477,7 @@ shape = SubResource("SegmentShape2D_j7bem")
 shape = SubResource("SegmentShape2D_ot1vx")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="collisionshapes" unique_id=2134581188]
+position = Vector2(0, 1)
 shape = SubResource("SegmentShape2D_v55vw")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="collisionshapes" unique_id=691041345]
