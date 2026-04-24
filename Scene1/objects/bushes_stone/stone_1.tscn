@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://byh3kto6mryr4"]
+
+[ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="1_ulh2q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7614"]
+atlas = ExtResource("1_ulh2q")
+region = Rect2(0, 408, 48, 40)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1jgw"]
+
+[node name="stone1" type="Sprite2D" unique_id=1262364576]
+texture = SubResource("AtlasTexture_p7614")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=355636843]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1154978776]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_n1jgw")

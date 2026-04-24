@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cj274feyrapei" path="res://Assets/Sprite/Tilesets/Grass.png" id="1_lmjrh"]
 [ext_resource type="Texture2D" uid="uid://bw5spkx0fbrnt" path="res://Assets/Sprite/Tilesets/Hills.png" id="2_htla3"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
+[ext_resource type="Texture2D" uid="uid://tuc823dykhgc" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/STAIRS - DAY.png" id="4_t4n34"]
 [ext_resource type="Texture2D" uid="uid://c8us716ex6g4f" path="res://Assets/Sprite/Tilesets/Water.png" id="5_s1d72"]
 [ext_resource type="Texture2D" uid="uid://jbv5is6n13he" path="res://Assets/Sprite/Objects/Basic Grass Biom things 1.png" id="6_sygrn"]
 [ext_resource type="Texture2D" uid="uid://bpdlhalhpxyul" path="res://Assets/Sprite/Objects/Plants.png" id="8_l2s30"]
@@ -683,58 +684,23 @@ texture = ExtResource("2_s1d72")
 7:3/0 = 0
 0:3/size_in_atlas = Vector2i(1, 3)
 0:3/0 = 0
-4:4/0 = 0
-4:5/0 = 0
-5:4/0 = 0
-5:5/0 = 0
-6:4/0 = 0
-6:5/0 = 0
-7:4/0 = 0
-7:5/0 = 0
-6:6/0 = 0
-6:7/0 = 0
-7:6/0 = 0
-7:7/0 = 0
-4:6/0 = 0
-4:7/0 = 0
-5:6/0 = 0
-5:7/0 = 0
-1:6/size_in_atlas = Vector2i(3, 1)
-1:6/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-0:6/0 = 0
 1:3/0 = 0
-1:4/0 = 0
-1:5/0 = 0
 2:3/0 = 0
-2:4/0 = 0
-2:5/0 = 0
 3:3/0 = 0
-3:4/0 = 0
-3:5/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_1oq35"]
-sources/0 = SubResource("TileSetAtlasSource_4jkg4")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1d72"]
-texture = ExtResource("2_s1d72")
+3:2/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
 0:0/0 = 0
 0:1/0 = 0
-1:0/0 = 0
 1:1/0 = 0
+1:0/0 = 0
 2:0/0 = 0
 2:1/0 = 0
-3:0/0 = 0
-3:1/0 = 0
 4:0/0 = 0
 4:1/0 = 0
-5:0/size_in_atlas = Vector2i(2, 1)
-5:0/0 = 0
 5:1/0 = 0
 6:1/0 = 0
-7:0/0 = 0
 7:1/0 = 0
 0:2/size_in_atlas = Vector2i(3, 1)
 0:2/0 = 0
@@ -2734,7 +2700,7 @@ position = Vector2(-233, 45.25)
 shape = SubResource("RectangleShape2D_fjw6q")
 
 [node name="BasicPlants" type="TileMapLayer" parent="." unique_id=1340616226]
-tile_map_data = PackedByteArray("AAD3//b/AAABAAEAAAD5//b/AAABAAEAAAD7//j/AAABAAEAAAD7//f/AAABAAEAAAD4//b/AAABAAEAAAD6//f/AAABAAEAAAD5//f/AAABAAEAAADz//z/AAACAAAAAAD0//3/AAACAAAAAADy//v/AAACAAAAAADx//v/AAACAAAAAADw//v/AAACAAAAAADv//v/AAACAAAAAADu//v/AAACAAAAAAD6//v/AAACAAAAAAD7//v/AAACAAAAAAD5//z/AAACAAAAAAD4//z/AAACAAAAAAD4//3/AAACAAAAAAD4//7/AAACAAAAAAD2//7/AAACAAAAAAD3//7/AAACAAAAAAD1//3/AAACAAAAAADt//v/AAACAAAAAAD+//b/AAABAAEAAAD+//f/AAABAAEAAAD+//j/AAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAD3//b/AAABAAEAAAD5//b/AAABAAEAAAD7//j/AAABAAEAAAD7//f/AAABAAEAAAD4//b/AAABAAEAAAD6//f/AAABAAEAAAD5//f/AAABAAEAAADz//z/AAACAAAAAAD0//3/AAACAAAAAADy//v/AAACAAAAAADx//v/AAACAAAAAADw//v/AAACAAAAAADv//v/AAACAAAAAADu//v/AAACAAAAAAD6//v/AAACAAAAAAD7//v/AAACAAAAAAD5//z/AAACAAAAAAD4//z/AAACAAAAAAD4//3/AAACAAAAAAD4//7/AAACAAAAAAD2//7/AAACAAAAAAD3//7/AAACAAAAAAD1//3/AAACAAAAAADt//v/AAACAAAAAAD9//b/AAACAAAAAAD+//b/AAABAAEAAAD+//f/AAABAAEAAAD+//j/AAABAAEAAAA=")
 tile_set = SubResource("TileSet_wxmp5")
 
 [node name="House" type="TileMapLayer" parent="." unique_id=352649161]
