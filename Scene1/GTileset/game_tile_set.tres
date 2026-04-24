@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cu3ptocl41fw7" path="res://Scene1/objects/houses/house_2.tscn" id="17_272lr"]
 [ext_resource type="PackedScene" uid="uid://e08qt3er28c6" path="res://Scene1/objects/houses/house_3.tscn" id="18_1eaun"]
 [ext_resource type="PackedScene" uid="uid://divpjvohqeu6g" path="res://Scene1/objects/houses/house_4.tscn" id="19_x2s0s"]
+[ext_resource type="PackedScene" uid="uid://dyxovfp3blaxk" path="res://Scene1/objects/market_stall/market_7.tscn" id="20_64ah5"]
 [ext_resource type="PackedScene" uid="uid://bipplyctjtp8t" path="res://Scene1/objects/houses/lighthouse.tscn" id="20_x2s0s"]
 [ext_resource type="PackedScene" uid="uid://cpuuaxd36t0ak" path="res://Scene1/objects/trees/trees_3.tscn" id="21_fv4mo"]
 [ext_resource type="PackedScene" uid="uid://wxv7xxyr54py" path="res://Scene1/objects/market_stall/market_5.tscn" id="22_t60dw"]
@@ -40,8 +41,16 @@
 [ext_resource type="PackedScene" uid="uid://byh3kto6mryr4" path="res://Scene1/objects/bushes_stone/stone_1.tscn" id="27_drhb5"]
 [ext_resource type="PackedScene" uid="uid://l4umydhijo4l" path="res://Scene1/objects/bushes_stone/stone_2.tscn" id="28_aq86a"]
 [ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/Structures/MCHome/exterior.png" id="28_jc53i"]
+[ext_resource type="PackedScene" uid="uid://dups33iigsh7" path="res://Scene1/objects/market_stall/well.tscn" id="30_0wb4m"]
+[ext_resource type="PackedScene" uid="uid://bhsy6m0xiacw5" path="res://Scene1/objects/market_stall/market_6.tscn" id="30_dywqq"]
 [ext_resource type="PackedScene" uid="uid://dapjqigjv4q1v" path="res://Scene1/objects/bushes_stone/bush.tscn" id="31_ictjx"]
+[ext_resource type="PackedScene" uid="uid://bgsm6ww6a5e7d" path="res://Scene1/objects/misc/crate.tscn" id="31_pye1q"]
 [ext_resource type="Texture2D" uid="uid://irua10pge3j1" path="res://Assets/Sprite/Objects/Fences.png" id="32_evfgn"]
+[ext_resource type="PackedScene" uid="uid://c8u4d5adu3a3n" path="res://Scene1/objects/misc/crate_2.tscn" id="32_mb0xg"]
+[ext_resource type="PackedScene" uid="uid://36d3icn44m02" path="res://Scene1/objects/misc/crate_3.tscn" id="33_cfkxn"]
+[ext_resource type="PackedScene" uid="uid://dq8d1rcrq5cc7" path="res://Scene1/objects/market_stall/market.tscn" id="34_mb0xg"]
+[ext_resource type="PackedScene" uid="uid://ct7e0tso7gwja" path="res://Scene1/objects/market_stall/stalllast.tscn" id="35_cfkxn"]
+[ext_resource type="PackedScene" uid="uid://itaf2vv4003s" path="res://Scene1/objects/market_stall/bulletin_2.tscn" id="36_vhh0c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhtoj"]
 texture = ExtResource("1_3rpvo")
@@ -277,6 +286,7 @@ scenes/1/scene = ExtResource("4_ypv7h")
 scenes/2/scene = ExtResource("5_oggff")
 scenes/3/scene = ExtResource("5_lyocm")
 scenes/4/scene = ExtResource("6_lyocm")
+scenes/5/scene = ExtResource("30_dywqq")
 scenes/6/scene = ExtResource("8_oggff")
 scenes/7/scene = ExtResource("9_l60li")
 scenes/8/scene = ExtResource("31_ictjx")
@@ -296,6 +306,7 @@ scenes/21/scene = ExtResource("16_pok44")
 scenes/22/scene = ExtResource("17_272lr")
 scenes/23/scene = ExtResource("18_1eaun")
 scenes/24/scene = ExtResource("19_x2s0s")
+scenes/25/scene = ExtResource("20_64ah5")
 scenes/26/scene = ExtResource("20_x2s0s")
 scenes/27/scene = ExtResource("21_fv4mo")
 scenes/28/scene = ExtResource("22_t60dw")
@@ -305,6 +316,13 @@ scenes/31/scene = ExtResource("25_gw182")
 scenes/32/scene = ExtResource("26_evfgn")
 scenes/33/scene = ExtResource("27_drhb5")
 scenes/34/scene = ExtResource("28_aq86a")
+scenes/35/scene = ExtResource("30_0wb4m")
+scenes/36/scene = ExtResource("31_pye1q")
+scenes/37/scene = ExtResource("32_mb0xg")
+scenes/38/scene = ExtResource("33_cfkxn")
+scenes/39/scene = ExtResource("34_mb0xg")
+scenes/41/scene = ExtResource("35_cfkxn")
+scenes/42/scene = ExtResource("36_vhh0c")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l60li"]
 texture = ExtResource("7_yoxwk")
@@ -329,6 +347,8 @@ texture = ExtResource("28_jc53i")
 9:25/0 = 0
 7:25/size_in_atlas = Vector2i(2, 2)
 7:25/0 = 0
+13:25/size_in_atlas = Vector2i(2, 2)
+13:25/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w47i2"]
 texture = ExtResource("32_evfgn")
