@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://oa0fxi3ddrkg"]
+
+[ext_resource type="Script" uid="uid://bhmrpgcbnn2hy" path="res://node_2d.gd" id="1_xgoi3"]
+[ext_resource type="Texture2D" uid="uid://cck2lpmmrd50t" path="res://Assets/Bloom Game 1/Plant1_1.png" id="2_tyhjy"]
+
+[node name="Node2D" type="Node2D" unique_id=1755375336]
+script = ExtResource("1_xgoi3")
+stage_textures = [null, null, null]
+
+[node name="plant_stage0" type="Sprite2D" parent="." unique_id=10168681]
+position = Vector2(279, 331)
+texture = ExtResource("2_tyhjy")
