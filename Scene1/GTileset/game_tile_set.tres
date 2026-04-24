@@ -45,7 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://bhsy6m0xiacw5" path="res://Scene1/objects/market_stall/market_6.tscn" id="30_dywqq"]
 [ext_resource type="PackedScene" uid="uid://dapjqigjv4q1v" path="res://Scene1/objects/bushes_stone/bush.tscn" id="31_ictjx"]
 [ext_resource type="PackedScene" uid="uid://bgsm6ww6a5e7d" path="res://Scene1/objects/misc/crate.tscn" id="31_pye1q"]
-[ext_resource type="Texture2D" uid="uid://irua10pge3j1" path="res://Assets/Sprite/Objects/Fences.png" id="32_evfgn"]
+[ext_resource type="Texture2D" uid="uid://dcrblb6rl3r1b" path="res://Assets/Sprite/Objects/Fences.png" id="32_evfgn"]
 [ext_resource type="PackedScene" uid="uid://c8u4d5adu3a3n" path="res://Scene1/objects/misc/crate_2.tscn" id="32_mb0xg"]
 [ext_resource type="PackedScene" uid="uid://36d3icn44m02" path="res://Scene1/objects/misc/crate_3.tscn" id="33_cfkxn"]
 [ext_resource type="PackedScene" uid="uid://dq8d1rcrq5cc7" path="res://Scene1/objects/market_stall/market.tscn" id="34_mb0xg"]
