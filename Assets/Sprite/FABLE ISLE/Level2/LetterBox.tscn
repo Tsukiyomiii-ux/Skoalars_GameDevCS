@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cj85c2akwdofr"]
+
+[ext_resource type="Texture2D" uid="uid://dqya6my3ek4q7" path="res://Assets/Sprite/FABLE ISLE/Level2/letterBox.png" id="1_samag"]
+
+[node name="LetterBox" type="Control" unique_id=1366827714]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=378902069]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_samag")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=365714103]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
