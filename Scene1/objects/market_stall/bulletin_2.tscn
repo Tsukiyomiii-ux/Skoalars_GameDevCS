@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://itaf2vv4003s"]
+
+[ext_resource type="Texture2D" uid="uid://dvxaptk5uh1ln" path="res://Assets/Sprite/Objects/Structures/countoria market.png" id="1_no2e4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o88j5"]
+atlas = ExtResource("1_no2e4")
+region = Rect2(296, 176, 952, 616)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chma3"]
+size = Vector2(819, 587)
+
+[node name="bulletin2" type="Area2D" unique_id=1227726013]
+position = Vector2(-0.99999994, 4.999999)
+scale = Vector2(0.05, 0.05)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=456828432]
+texture = SubResource("AtlasTexture_o88j5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=100614882]
+position = Vector2(-1.5, -17.5)
+shape = SubResource("RectangleShape2D_chma3")

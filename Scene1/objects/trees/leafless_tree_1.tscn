@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cpekwvwqldvwc"]
+
+[ext_resource type="Texture2D" uid="uid://cyr7anruqv662" path="res://Assets/Sprite/Objects/Plants and Biome/Trees_shadow_countoria.png" id="1_ctmg0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asvdx"]
+atlas = ExtResource("1_ctmg0")
+region = Rect2(312, 80, 48, 64)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d3aov"]
+radius = 6.0
+
+[node name="leafless_tree1" type="Sprite2D" unique_id=795187172]
+position = Vector2(0, -18)
+texture = SubResource("AtlasTexture_asvdx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1591192241]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2075970970]
+position = Vector2(-1, 12)
+shape = SubResource("CapsuleShape2D_d3aov")

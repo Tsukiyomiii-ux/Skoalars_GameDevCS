@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://uoic266h6hi"]
+
+[ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/Structures/MCHome/exterior.png" id="1_8kf5m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54e7y"]
+atlas = ExtResource("1_8kf5m")
+region = Rect2(0, 448, 48, 48)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tal7g"]
+radius = 8.0
+
+[node name="bush1" type="Sprite2D" unique_id=351981649]
+scale = Vector2(0.68, 0.68)
+texture = SubResource("AtlasTexture_54e7y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=465707507]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1922553536]
+shape = SubResource("CircleShape2D_tal7g")
