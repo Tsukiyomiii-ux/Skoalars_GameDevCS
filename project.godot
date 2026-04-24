@@ -11,9 +11,7 @@ config_version=5
 [application]
 
 config/name="Skoalar"
-run/main_scene="uid://b4gf1x64vfk6h"
-run/main_scene="uid://dcqb0m06gfcm8"
-run/main_scene="uid://b36wb2dwb7yp2"
+run/main_scene="uid://oa0fxi3ddrkg"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

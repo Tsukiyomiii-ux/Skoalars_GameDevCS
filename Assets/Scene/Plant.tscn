@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://oa0fxi3ddrkg"]
+
+[ext_resource type="Script" uid="uid://bhmrpgcbnn2hy" path="res://node_2d.gd" id="1_xgoi3"]
+[ext_resource type="Texture2D" uid="uid://cck2lpmmrd50t" path="res://Assets/Bloom Game 1/Plant1_1.png" id="2_tyhjy"]
+[ext_resource type="Texture2D" uid="uid://d05n6i3d03f2u" path="res://Assets/Bloom Game 1/Plant1_2.png" id="3_1h43r"]
+[ext_resource type="Texture2D" uid="uid://bty7d34iorqe0" path="res://Assets/Bloom Game 1/Plant1_3.png" id="4_21wb5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3apm"]
+size = Vector2(488.5, 308.5)
+
+[node name="Node2D" type="Node2D" unique_id=1755375336]
+script = ExtResource("1_xgoi3")
+stage_textures = Array[Texture2D]([ExtResource("2_tyhjy"), ExtResource("3_1h43r"), ExtResource("4_21wb5")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=10168681]
+position = Vector2(279, 331)
+texture = ExtResource("2_tyhjy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1319980343]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=613960345]
+position = Vector2(284, 525)
+shape = SubResource("RectangleShape2D_g3apm")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
