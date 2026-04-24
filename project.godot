@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Skoalar"
 run/main_scene="uid://the2vr3vwojp"
+run/main_scene="uid://divs57517s5yc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -32,6 +33,8 @@ folder_colors={
 "res://Assets/Sprite/": "pink",
 "res://Scene1/": "orange"
 }
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [input]
 

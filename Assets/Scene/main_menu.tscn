@@ -1,0 +1,540 @@
+[gd_scene format=3 uid="uid://divs57517s5yc"]
+
+[ext_resource type="Script" uid="uid://cy21blyn57u26" path="res://Assets/Scripts/main_menu.gd" id="1_3dpqm"]
+[ext_resource type="Script" uid="uid://digtfx3apnk6f" path="res://Assets/Scripts/parallax_background.gd" id="1_202op"]
+[ext_resource type="Texture2D" uid="uid://c788dflens4il" path="res://Assets/Sprite/Buttons/Buttons 1.png" id="1_dwgjd"]
+[ext_resource type="Texture2D" uid="uid://cp6se3ok6ru21" path="res://Assets/Sprite/Parralax_summer 4/1.png" id="1_qouvi"]
+[ext_resource type="Texture2D" uid="uid://dcnau3gobua18" path="res://Assets/Sprite/Parralax_summer 4/2.png" id="2_202op"]
+[ext_resource type="Texture2D" uid="uid://cgnlsx8yjinug" path="res://Assets/Sprite/Buttons/Buttons 2.png" id="2_a1aw0"]
+[ext_resource type="Texture2D" uid="uid://whdqbmd0hitk" path="res://Assets/Sprite/Buttons/Buttons 3.png" id="3_3dpqm"]
+[ext_resource type="Texture2D" uid="uid://b35hn3he1dn6l" path="res://Assets/Sprite/Parralax_summer 4/3.png" id="3_dwgjd"]
+[ext_resource type="Script" uid="uid://bsj5qxy1qxf31" path="res://Assets/Scripts/popup.gd" id="7_up2sj"]
+[ext_resource type="AudioStream" uid="uid://ct02po61w47pf" path="res://Assets/Audio/Soft_Eng_LoFi.wav" id="9_wv4p4"]
+
+[sub_resource type="FontFile" id="FontFile_3dpqm"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/169/0/ascent = 0.0
+cache/0/169/0/descent = 0.0
+cache/0/169/0/underline_position = 0.0
+cache/0/169/0/underline_thickness = 0.0
+cache/0/169/0/scale = 1.0
+cache/0/166/0/ascent = 0.0
+cache/0/166/0/descent = 0.0
+cache/0/166/0/underline_position = 0.0
+cache/0/166/0/underline_thickness = 0.0
+cache/0/166/0/scale = 1.0
+cache/0/165/0/ascent = 0.0
+cache/0/165/0/descent = 0.0
+cache/0/165/0/underline_position = 0.0
+cache/0/165/0/underline_thickness = 0.0
+cache/0/165/0/scale = 1.0
+cache/0/163/0/ascent = 0.0
+cache/0/163/0/descent = 0.0
+cache/0/163/0/underline_position = 0.0
+cache/0/163/0/underline_thickness = 0.0
+cache/0/163/0/scale = 1.0
+cache/0/162/0/ascent = 0.0
+cache/0/162/0/descent = 0.0
+cache/0/162/0/underline_position = 0.0
+cache/0/162/0/underline_thickness = 0.0
+cache/0/162/0/scale = 1.0
+cache/0/161/0/ascent = 0.0
+cache/0/161/0/descent = 0.0
+cache/0/161/0/underline_position = 0.0
+cache/0/161/0/underline_thickness = 0.0
+cache/0/161/0/scale = 1.0
+cache/0/160/0/ascent = 0.0
+cache/0/160/0/descent = 0.0
+cache/0/160/0/underline_position = 0.0
+cache/0/160/0/underline_thickness = 0.0
+cache/0/160/0/scale = 1.0
+cache/0/159/0/ascent = 0.0
+cache/0/159/0/descent = 0.0
+cache/0/159/0/underline_position = 0.0
+cache/0/159/0/underline_thickness = 0.0
+cache/0/159/0/scale = 1.0
+cache/0/158/0/ascent = 0.0
+cache/0/158/0/descent = 0.0
+cache/0/158/0/underline_position = 0.0
+cache/0/158/0/underline_thickness = 0.0
+cache/0/158/0/scale = 1.0
+cache/0/157/0/ascent = 0.0
+cache/0/157/0/descent = 0.0
+cache/0/157/0/underline_position = 0.0
+cache/0/157/0/underline_thickness = 0.0
+cache/0/157/0/scale = 1.0
+cache/0/156/0/ascent = 0.0
+cache/0/156/0/descent = 0.0
+cache/0/156/0/underline_position = 0.0
+cache/0/156/0/underline_thickness = 0.0
+cache/0/156/0/scale = 1.0
+cache/0/154/0/ascent = 0.0
+cache/0/154/0/descent = 0.0
+cache/0/154/0/underline_position = 0.0
+cache/0/154/0/underline_thickness = 0.0
+cache/0/154/0/scale = 1.0
+cache/0/153/0/ascent = 0.0
+cache/0/153/0/descent = 0.0
+cache/0/153/0/underline_position = 0.0
+cache/0/153/0/underline_thickness = 0.0
+cache/0/153/0/scale = 1.0
+cache/0/151/0/ascent = 0.0
+cache/0/151/0/descent = 0.0
+cache/0/151/0/underline_position = 0.0
+cache/0/151/0/underline_thickness = 0.0
+cache/0/151/0/scale = 1.0
+cache/0/149/0/ascent = 0.0
+cache/0/149/0/descent = 0.0
+cache/0/149/0/underline_position = 0.0
+cache/0/149/0/underline_thickness = 0.0
+cache/0/149/0/scale = 1.0
+cache/0/147/0/ascent = 0.0
+cache/0/147/0/descent = 0.0
+cache/0/147/0/underline_position = 0.0
+cache/0/147/0/underline_thickness = 0.0
+cache/0/147/0/scale = 1.0
+cache/0/145/0/ascent = 0.0
+cache/0/145/0/descent = 0.0
+cache/0/145/0/underline_position = 0.0
+cache/0/145/0/underline_thickness = 0.0
+cache/0/145/0/scale = 1.0
+cache/0/143/0/ascent = 0.0
+cache/0/143/0/descent = 0.0
+cache/0/143/0/underline_position = 0.0
+cache/0/143/0/underline_thickness = 0.0
+cache/0/143/0/scale = 1.0
+cache/0/139/0/ascent = 0.0
+cache/0/139/0/descent = 0.0
+cache/0/139/0/underline_position = 0.0
+cache/0/139/0/underline_thickness = 0.0
+cache/0/139/0/scale = 1.0
+cache/0/135/0/ascent = 0.0
+cache/0/135/0/descent = 0.0
+cache/0/135/0/underline_position = 0.0
+cache/0/135/0/underline_thickness = 0.0
+cache/0/135/0/scale = 1.0
+cache/0/132/0/ascent = 0.0
+cache/0/132/0/descent = 0.0
+cache/0/132/0/underline_position = 0.0
+cache/0/132/0/underline_thickness = 0.0
+cache/0/132/0/scale = 1.0
+cache/0/128/0/ascent = 0.0
+cache/0/128/0/descent = 0.0
+cache/0/128/0/underline_position = 0.0
+cache/0/128/0/underline_thickness = 0.0
+cache/0/128/0/scale = 1.0
+cache/0/124/0/ascent = 0.0
+cache/0/124/0/descent = 0.0
+cache/0/124/0/underline_position = 0.0
+cache/0/124/0/underline_thickness = 0.0
+cache/0/124/0/scale = 1.0
+cache/0/118/0/ascent = 0.0
+cache/0/118/0/descent = 0.0
+cache/0/118/0/underline_position = 0.0
+cache/0/118/0/underline_thickness = 0.0
+cache/0/118/0/scale = 1.0
+cache/0/111/0/ascent = 0.0
+cache/0/111/0/descent = 0.0
+cache/0/111/0/underline_position = 0.0
+cache/0/111/0/underline_thickness = 0.0
+cache/0/111/0/scale = 1.0
+cache/0/108/0/ascent = 0.0
+cache/0/108/0/descent = 0.0
+cache/0/108/0/underline_position = 0.0
+cache/0/108/0/underline_thickness = 0.0
+cache/0/108/0/scale = 1.0
+cache/0/101/0/ascent = 0.0
+cache/0/101/0/descent = 0.0
+cache/0/101/0/underline_position = 0.0
+cache/0/101/0/underline_thickness = 0.0
+cache/0/101/0/scale = 1.0
+cache/0/98/0/ascent = 0.0
+cache/0/98/0/descent = 0.0
+cache/0/98/0/underline_position = 0.0
+cache/0/98/0/underline_thickness = 0.0
+cache/0/98/0/scale = 1.0
+cache/0/92/0/ascent = 0.0
+cache/0/92/0/descent = 0.0
+cache/0/92/0/underline_position = 0.0
+cache/0/92/0/underline_thickness = 0.0
+cache/0/92/0/scale = 1.0
+cache/0/89/0/ascent = 0.0
+cache/0/89/0/descent = 0.0
+cache/0/89/0/underline_position = 0.0
+cache/0/89/0/underline_thickness = 0.0
+cache/0/89/0/scale = 1.0
+cache/0/86/0/ascent = 0.0
+cache/0/86/0/descent = 0.0
+cache/0/86/0/underline_position = 0.0
+cache/0/86/0/underline_thickness = 0.0
+cache/0/86/0/scale = 1.0
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/76/0/ascent = 0.0
+cache/0/76/0/descent = 0.0
+cache/0/76/0/underline_position = 0.0
+cache/0/76/0/underline_thickness = 0.0
+cache/0/76/0/scale = 1.0
+cache/0/69/0/ascent = 0.0
+cache/0/69/0/descent = 0.0
+cache/0/69/0/underline_position = 0.0
+cache/0/69/0/underline_thickness = 0.0
+cache/0/69/0/scale = 1.0
+cache/0/66/0/ascent = 0.0
+cache/0/66/0/descent = 0.0
+cache/0/66/0/underline_position = 0.0
+cache/0/66/0/underline_thickness = 0.0
+cache/0/66/0/scale = 1.0
+cache/0/63/0/ascent = 0.0
+cache/0/63/0/descent = 0.0
+cache/0/63/0/underline_position = 0.0
+cache/0/63/0/underline_thickness = 0.0
+cache/0/63/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/54/0/ascent = 0.0
+cache/0/54/0/descent = 0.0
+cache/0/54/0/underline_position = 0.0
+cache/0/54/0/underline_thickness = 0.0
+cache/0/54/0/scale = 1.0
+cache/0/52/0/ascent = 0.0
+cache/0/52/0/descent = 0.0
+cache/0/52/0/underline_position = 0.0
+cache/0/52/0/underline_thickness = 0.0
+cache/0/52/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/46/0/ascent = 0.0
+cache/0/46/0/descent = 0.0
+cache/0/46/0/underline_position = 0.0
+cache/0/46/0/underline_thickness = 0.0
+cache/0/46/0/scale = 1.0
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
+cache/0/44/0/ascent = 0.0
+cache/0/44/0/descent = 0.0
+cache/0/44/0/underline_position = 0.0
+cache/0/44/0/underline_thickness = 0.0
+cache/0/44/0/scale = 1.0
+cache/0/43/0/ascent = 0.0
+cache/0/43/0/descent = 0.0
+cache/0/43/0/underline_position = 0.0
+cache/0/43/0/underline_thickness = 0.0
+cache/0/43/0/scale = 1.0
+cache/0/42/0/ascent = 0.0
+cache/0/42/0/descent = 0.0
+cache/0/42/0/underline_position = 0.0
+cache/0/42/0/underline_thickness = 0.0
+cache/0/42/0/scale = 1.0
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/49/0/ascent = 0.0
+cache/0/49/0/descent = 0.0
+cache/0/49/0/underline_position = 0.0
+cache/0/49/0/underline_thickness = 0.0
+cache/0/49/0/scale = 1.0
+cache/0/53/0/ascent = 0.0
+cache/0/53/0/descent = 0.0
+cache/0/53/0/underline_position = 0.0
+cache/0/53/0/underline_thickness = 0.0
+cache/0/53/0/scale = 1.0
+cache/0/55/0/ascent = 0.0
+cache/0/55/0/descent = 0.0
+cache/0/55/0/underline_position = 0.0
+cache/0/55/0/underline_thickness = 0.0
+cache/0/55/0/scale = 1.0
+cache/0/59/0/ascent = 0.0
+cache/0/59/0/descent = 0.0
+cache/0/59/0/underline_position = 0.0
+cache/0/59/0/underline_thickness = 0.0
+cache/0/59/0/scale = 1.0
+cache/0/61/0/ascent = 0.0
+cache/0/61/0/descent = 0.0
+cache/0/61/0/underline_position = 0.0
+cache/0/61/0/underline_thickness = 0.0
+cache/0/61/0/scale = 1.0
+cache/0/62/0/ascent = 0.0
+cache/0/62/0/descent = 0.0
+cache/0/62/0/underline_position = 0.0
+cache/0/62/0/underline_thickness = 0.0
+cache/0/62/0/scale = 1.0
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+cache/0/65/0/ascent = 0.0
+cache/0/65/0/descent = 0.0
+cache/0/65/0/underline_position = 0.0
+cache/0/65/0/underline_thickness = 0.0
+cache/0/65/0/scale = 1.0
+cache/0/67/0/ascent = 0.0
+cache/0/67/0/descent = 0.0
+cache/0/67/0/underline_position = 0.0
+cache/0/67/0/underline_thickness = 0.0
+cache/0/67/0/scale = 1.0
+cache/0/68/0/ascent = 0.0
+cache/0/68/0/descent = 0.0
+cache/0/68/0/underline_position = 0.0
+cache/0/68/0/underline_thickness = 0.0
+cache/0/68/0/scale = 1.0
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/71/0/ascent = 0.0
+cache/0/71/0/descent = 0.0
+cache/0/71/0/underline_position = 0.0
+cache/0/71/0/underline_thickness = 0.0
+cache/0/71/0/scale = 1.0
+cache/0/72/0/ascent = 0.0
+cache/0/72/0/descent = 0.0
+cache/0/72/0/underline_position = 0.0
+cache/0/72/0/underline_thickness = 0.0
+cache/0/72/0/scale = 1.0
+cache/0/74/0/ascent = 0.0
+cache/0/74/0/descent = 0.0
+cache/0/74/0/underline_position = 0.0
+cache/0/74/0/underline_thickness = 0.0
+cache/0/74/0/scale = 1.0
+cache/0/75/0/ascent = 0.0
+cache/0/75/0/descent = 0.0
+cache/0/75/0/underline_position = 0.0
+cache/0/75/0/underline_thickness = 0.0
+cache/0/75/0/scale = 1.0
+cache/0/77/0/ascent = 0.0
+cache/0/77/0/descent = 0.0
+cache/0/77/0/underline_position = 0.0
+cache/0/77/0/underline_thickness = 0.0
+cache/0/77/0/scale = 1.0
+cache/0/78/0/ascent = 0.0
+cache/0/78/0/descent = 0.0
+cache/0/78/0/underline_position = 0.0
+cache/0/78/0/underline_thickness = 0.0
+cache/0/78/0/scale = 1.0
+cache/0/79/0/ascent = 0.0
+cache/0/79/0/descent = 0.0
+cache/0/79/0/underline_position = 0.0
+cache/0/79/0/underline_thickness = 0.0
+cache/0/79/0/scale = 1.0
+cache/0/81/0/ascent = 0.0
+cache/0/81/0/descent = 0.0
+cache/0/81/0/underline_position = 0.0
+cache/0/81/0/underline_thickness = 0.0
+cache/0/81/0/scale = 1.0
+cache/0/82/0/ascent = 0.0
+cache/0/82/0/descent = 0.0
+cache/0/82/0/underline_position = 0.0
+cache/0/82/0/underline_thickness = 0.0
+cache/0/82/0/scale = 1.0
+cache/0/83/0/ascent = 0.0
+cache/0/83/0/descent = 0.0
+cache/0/83/0/underline_position = 0.0
+cache/0/83/0/underline_thickness = 0.0
+cache/0/83/0/scale = 1.0
+cache/0/84/0/ascent = 0.0
+cache/0/84/0/descent = 0.0
+cache/0/84/0/underline_position = 0.0
+cache/0/84/0/underline_thickness = 0.0
+cache/0/84/0/scale = 1.0
+cache/0/85/0/ascent = 0.0
+cache/0/85/0/descent = 0.0
+cache/0/85/0/underline_position = 0.0
+cache/0/85/0/underline_thickness = 0.0
+cache/0/85/0/scale = 1.0
+cache/0/87/0/ascent = 0.0
+cache/0/87/0/descent = 0.0
+cache/0/87/0/underline_position = 0.0
+cache/0/87/0/underline_thickness = 0.0
+cache/0/87/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_wv4p4"]
+font = SubResource("FontFile_3dpqm")
+font_size = 169
+font_color = Color(0, 1, 1, 1)
+outline_size = 18
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Main_Menu" type="Control" unique_id=894167509]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3dpqm")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1799686083]
+scale = Vector2(2.23, 2.23)
+transform = Transform2D(2.23, 0, 0, 2.23, 0, 0)
+script = ExtResource("1_202op")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=646202259]
+motion_scale = Vector2(0.05, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=49969411]
+texture = ExtResource("1_qouvi")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1201443097]
+motion_scale = Vector2(0.3, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=963958029]
+texture = ExtResource("2_202op")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=714946248]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=38647710]
+texture = ExtResource("3_dwgjd")
+centered = false
+
+[node name="Label" type="Label" parent="." unique_id=651742783]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 64.0
+offset_right = 2442.0
+offset_bottom = 295.0
+scale = Vector2(0.3010607, 0.5002196)
+text = "Skoalar's: The Questimals"
+label_settings = SubResource("LabelSettings_wv4p4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2112912611]
+stream = ExtResource("9_wv4p4")
+volume_db = 4.615
+autoplay = true
+
+[node name="Popup" type="MarginContainer" parent="." unique_id=2023761054 node_paths=PackedStringArray("Setting_Menu", "Exit")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_up2sj")
+Setting_Menu = NodePath("Setting_Menu")
+Exit = NodePath("Exit")
+
+[node name="Setting_Menu" type="MarginContainer" parent="Popup" unique_id=991117824]
+visible = false
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/Setting_Menu" unique_id=15578160]
+custom_minimum_size = Vector2(854.005, 303.55)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="Popup/Setting_Menu/MarginContainer" unique_id=1855627833]
+layout_mode = 2
+color = Color(0.24115604, 0.24115604, 0.24115604, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect" unique_id=2059468078]
+custom_minimum_size = Vector2(500, 796.6)
+layout_mode = 0
+offset_left = 171.0
+offset_top = 128.0
+offset_right = 671.0004
+offset_bottom = 828.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer" unique_id=403588634]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer" unique_id=1292179838]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1263069787]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="settings_btn" type="Button" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=513754995]
+layout_mode = 2
+icon = ExtResource("3_3dpqm")
+
+[node name="HSlider" type="HSlider" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer" unique_id=1543597984]
+layout_direction = 4
+layout_mode = 2
+min_value = -20.095
+max_value = 6.0
+step = 0.0
+value = -3.0
+
+[node name="Exit" type="MarginContainer" parent="Popup" unique_id=1770731761]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Popup/Exit" unique_id=205222924]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Exit/VBoxContainer2" unique_id=1817057560]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Exit/VBoxContainer2/VBoxContainer" unique_id=1983278758]
+layout_mode = 2
+
+[node name="play_btn" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=93450368]
+layout_mode = 2
+action_mode = 0
+icon = ExtResource("1_dwgjd")
+flat = true
+
+[node name="settings_btn" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=521507729]
+layout_mode = 2
+icon = ExtResource("2_a1aw0")
+flat = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Popup/Exit/VBoxContainer2/VBoxContainer" unique_id=646125404]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Quit" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2" unique_id=2096228127]
+layout_mode = 2
+icon = ExtResource("3_3dpqm")
+flat = true
+
+[connection signal="pressed" from="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
+[connection signal="value_changed" from="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/play_btn" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
+[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/Quit" to="." method="_on_quit_pressed"]
