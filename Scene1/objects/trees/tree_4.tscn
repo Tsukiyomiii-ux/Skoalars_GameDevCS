@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d2hcfek7kuva5"]
+
+[ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/Structures/MCHome/exterior.png" id="1_3sa4c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pa1x"]
+atlas = ExtResource("1_3sa4c")
+region = Rect2(128, 336, 64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3sa4c"]
+radius = 9.0
+
+[node name="tree4" type="Sprite2D" unique_id=1727701390]
+texture = SubResource("AtlasTexture_5pa1x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=791162401]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1206047384]
+position = Vector2(1, 19)
+shape = SubResource("CircleShape2D_3sa4c")

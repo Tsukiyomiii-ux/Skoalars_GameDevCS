@@ -4,18 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://bw5spkx0fbrnt" path="res://Assets/Sprite/Tilesets/Hills.png" id="2_htla3"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
 [ext_resource type="Texture2D" uid="uid://c8us716ex6g4f" path="res://Assets/Sprite/Tilesets/Water.png" id="5_s1d72"]
-[ext_resource type="Texture2D" uid="uid://co38hy3810kc1" path="res://Assets/Sprite/Objects/Basic Grass Biom things 1.png" id="6_sygrn"]
-[ext_resource type="Texture2D" uid="uid://bpdlhalhpxyul" path="res://Assets/Sprite/Objects/Plants.png" id="8_l2s30"]
-[ext_resource type="Texture2D" uid="uid://k76d24eu30cl" path="res://Assets/Sprite/Objects/MCHome/Trees_animation.png" id="10_1oq35"]
-[ext_resource type="Texture2D" uid="uid://c24xgug5ygxa2" path="res://Assets/Sprite/Objects/free_pixel_16_woods.png" id="10_4jkg4"]
-[ext_resource type="Texture2D" uid="uid://dhx54grnhu6vx" path="res://Assets/Sprite/Objects/Free_Chicken_House.png" id="10_tlbtc"]
+[ext_resource type="Texture2D" uid="uid://jbv5is6n13he" path="res://Assets/Sprite/Objects/Basic Grass Biom things 1.png" id="6_sygrn"]
+[ext_resource type="Texture2D" uid="uid://bpdlhalhpxyul" path="res://Assets/Sprite/Objects/Plants and Biome/Plants.png" id="8_l2s30"]
+[ext_resource type="Texture2D" uid="uid://k76d24eu30cl" path="res://Assets/Sprite/Objects/Structures/MCHome/Trees_animation.png" id="10_1oq35"]
+[ext_resource type="Texture2D" uid="uid://c24xgug5ygxa2" path="res://Assets/Sprite/Objects/Plants and Biome/free_pixel_16_woods.png" id="10_4jkg4"]
+[ext_resource type="Texture2D" uid="uid://6yw7lah8c45w" path="res://Assets/Sprite/Objects/Structures/Free_Chicken_House.png" id="10_tlbtc"]
 [ext_resource type="Texture2D" uid="uid://x3j0mft4yds7" path="res://Assets/Sprite/Objects/Basic Furniture.png" id="11_o4rl6"]
-[ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="12_1oq35"]
-[ext_resource type="Texture2D" uid="uid://0wcqcsuqxj38" path="res://Assets/Sprite/Objects/Supplies.png" id="12_ml317"]
+[ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/Structures/MCHome/exterior.png" id="12_1oq35"]
+[ext_resource type="Texture2D" uid="uid://0wcqcsuqxj38" path="res://Assets/Sprite/Objects/Goods/Supplies.png" id="12_ml317"]
 [ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="13_f3pcw"]
+[ext_resource type="Texture2D" uid="uid://blvlhxgxvoqc6" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 24, 2026, 02_56_06 PM.png" id="16_884xs"]
 [ext_resource type="Texture2D" uid="uid://chdey0vuxbwkb" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png" id="17_62u1j"]
 [ext_resource type="Texture2D" uid="uid://bsw8d10ehyyog" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 2 - DAY.png" id="18_62u1j"]
+[ext_resource type="Texture2D" uid="uid://dti7hfwlqcfo2" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 24, 2026, 03_16_01 PM.png" id="19_o4rl6"]
 [ext_resource type="Texture2D" uid="uid://bkqoak0pbnatw" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/BRIDGE - DAY.png" id="19_wxmp5"]
+[ext_resource type="AudioStream" uid="uid://cjcaxyy8d0o8b" path="res://Assets/Audio/SoftEng_BG1.wav" id="22_ml317"]
 [ext_resource type="Texture2D" uid="uid://dlolhqc643sxq" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_43_23 PM.png" id="22_oldau"]
 [ext_resource type="Texture2D" uid="uid://d1tpwflicj3es" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_35_45 PM.png" id="24_c6r3i"]
 [ext_resource type="Texture2D" uid="uid://bngyst88tej74" path="res://Assets/Sprite/Objects/objects_demo.png" id="26_6lqna"]
@@ -1677,9 +1680,15 @@ texture = ExtResource("22_oldau")
 35:7/size_in_atlas = Vector2i(26, 18)
 35:7/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cldj"]
+texture = ExtResource("16_884xs")
+1:2/size_in_atlas = Vector2i(35, 24)
+1:2/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_dlkjj"]
 sources/0 = SubResource("TileSetAtlasSource_ssasq")
 sources/1 = SubResource("TileSetAtlasSource_ps4r1")
+sources/2 = SubResource("TileSetAtlasSource_8cldj")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlbtc"]
 size = Vector2(59.612595, 39.114388)
@@ -1700,7 +1709,7 @@ size = Vector2(11.87743, 41.32841)
 size = Vector2(15.037382, 33.210255)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xo0ky"]
-size = Vector2(301.7652, 42.746315)
+size = Vector2(301.7652, 65.873764)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cheli"]
 size = Vector2(114.552704, 96.12634)
@@ -1712,10 +1721,10 @@ size = Vector2(152.29185, 93.34001)
 size = Vector2(156.61185, 46.56865)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ps4r1"]
-size = Vector2(58.888687, 82.022736)
+size = Vector2(58.888687, 136.42725)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xm278"]
-size = Vector2(28.128763, 33.203133)
+size = Vector2(39.61443, 33.203133)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cuuo7"]
 size = Vector2(35, 100.09422)
@@ -1735,10 +1744,16 @@ texture = ExtResource("22_oldau")
 8:8/size_in_atlas = Vector2i(25, 17)
 8:8/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpo1m"]
+texture = ExtResource("19_o4rl6")
+3:6/size_in_atlas = Vector2i(32, 25)
+3:6/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_8yrxt"]
 sources/0 = SubResource("TileSetAtlasSource_y6421")
 sources/1 = SubResource("TileSetAtlasSource_xm278")
 sources/3 = SubResource("TileSetAtlasSource_o2cql")
+sources/4 = SubResource("TileSetAtlasSource_hpo1m")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76iti"]
 size = Vector2(63.393677, 42.746315)
@@ -2965,54 +2980,54 @@ rotation = -0.0025512613
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_6lqna")
 
-[node name="House 5" type="TileMapLayer" parent="." unique_id=2082833102]
+[node name="Library" type="TileMapLayer" parent="." unique_id=2082833102]
 z_index = 4
-position = Vector2(377, 135.00002)
-scale = Vector2(0.445, 0.512)
-tile_map_data = PackedByteArray("AAAHAPr/AQAjAAcAAAA=")
+position = Vector2(380.99997, 127)
+scale = Vector2(0.355, 0.408)
+tile_map_data = PackedByteArray("AAADAPn/AgABAAIAAAA=")
 tile_set = SubResource("TileSet_dlkjj")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="House 5" unique_id=2137825996]
+[node name="StaticBody2D" type="StaticBody2D" parent="Library" unique_id=2137825996]
 visible = false
 position = Vector2(113, -47)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="House 5/StaticBody2D" unique_id=1078130022]
-position = Vector2(-7.3820004, 19.65622)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Library/StaticBody2D" unique_id=1078130022]
+position = Vector2(-7.38208, 31.21991)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_xo0ky")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="House 5/StaticBody2D" unique_id=2130465029]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Library/StaticBody2D" unique_id=2130465029]
 position = Vector2(91.49436, -29.171894)
 rotation = 0.008489491
 scale = Vector2(0.99999994, 0.9999999)
 shape = SubResource("RectangleShape2D_cheli")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="House 5/StaticBody2D" unique_id=1008961414]
-position = Vector2(57.786545, -64.32816)
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Library/StaticBody2D" unique_id=1008961414]
+position = Vector2(67.28181, -97.607864)
 rotation = 0.41547573
 scale = Vector2(0.9999999, 0.99999994)
 shape = SubResource("RectangleShape2D_pg6jn")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="House 5/StaticBody2D" unique_id=183711856]
-position = Vector2(-78.647156, -85.71539)
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Library/StaticBody2D" unique_id=183711856]
+position = Vector2(-90.46468, -134.37256)
 rotation = 2.6512892
 scale = Vector2(1.1792978, 0.9304226)
 shape = SubResource("RectangleShape2D_o2cql")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="House 5/StaticBody2D" unique_id=450112768]
-position = Vector2(-139.5998, -23.33966)
-rotation = 0.014417293
-scale = Vector2(1.0000001, 0.99999994)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Library/StaticBody2D" unique_id=450112768]
+position = Vector2(-144.37805, -23.839828)
+rotation = 0.014417294
+scale = Vector2(1, 0.9999999)
 shape = SubResource("RectangleShape2D_ps4r1")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="House 5/StaticBody2D" unique_id=773384338]
-position = Vector2(-129.20258, -83.859406)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Library/StaticBody2D" unique_id=773384338]
+position = Vector2(-107.30151, -158.88235)
 scale = Vector2(0.99225163, 1.0000002)
 shape = SubResource("RectangleShape2D_xm278")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="House 5/StaticBody2D" unique_id=762045340]
-position = Vector2(34.33368, -110.8392)
-rotation = -1.0999737
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Library/StaticBody2D" unique_id=762045340]
+position = Vector2(8.1269045, -171.13728)
+rotation = -0.89310205
 scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("RectangleShape2D_cuuo7")
 
@@ -3158,68 +3173,68 @@ position = Vector2(69.716, -79.82831)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_yebbp")
 
-[node name="House 8" type="TileMapLayer" parent="." unique_id=756866161]
+[node name="Market" type="TileMapLayer" parent="." unique_id=756866161]
 z_index = 4
-position = Vector2(-369, 157)
-scale = Vector2(0.49, 0.49)
-tile_map_data = PackedByteArray("AAAPAP//AwAIAAgAAAA=")
+position = Vector2(-330.99997, 171)
+scale = Vector2(0.36, 0.36)
+tile_map_data = PackedByteArray("AAAOAPz/BAADAAYAAAA=")
 tile_set = SubResource("TileSet_8yrxt")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="House 8" unique_id=786728511]
+[node name="StaticBody2D" type="StaticBody2D" parent="Market" unique_id=786728511]
 visible = false
 position = Vector2(113, -47)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=180753438]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=180753438]
 position = Vector2(99.24492, 79.653046)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_8yrxt")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=2082208616]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=2082208616]
 position = Vector2(215.57141, 15.431091)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_xudu4")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=1278731155]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=1278731155]
 position = Vector2(-17.08162, 16.387754)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_trp1f")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=1052017022]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=1052017022]
 position = Vector2(66.59187, -30.55103)
 rotation = -1.9409333
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_ku167")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=347085197]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=347085197]
 position = Vector2(162.51021, -28.510212)
 rotation = -1.2500485
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_ll487")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=1657590423]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=1657590423]
 position = Vector2(113.53061, -55.040813)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_fmn2n")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=1198382872]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=1198382872]
 position = Vector2(272.71426, 81.69388)
 rotation = -0.014260005
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_4cv54")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=1301893227]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=1301893227]
 position = Vector2(303.2738, 96.26785)
 rotation = -0.02127022
 scale = Vector2(0.992252, 1.0000002)
 shape = SubResource("RectangleShape2D_6s181")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=2135809475]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=2135809475]
 position = Vector2(211.14587, 153.28436)
 rotation = -0.021270227
 scale = Vector2(0.9922518, 1.0000002)
 shape = SubResource("RectangleShape2D_0o2b4")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="House 8/StaticBody2D" unique_id=1493405454]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Market/StaticBody2D" unique_id=1493405454]
 position = Vector2(195.2236, 134.62357)
 rotation = -0.021270232
 scale = Vector2(0.9922517, 1.0000002)
@@ -3386,3 +3401,7 @@ position = Vector2(1956.0696, 1439.105)
 rotation = 0.007814825
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_pvtps")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=90143739]
+stream = ExtResource("22_ml317")
+autoplay = true
