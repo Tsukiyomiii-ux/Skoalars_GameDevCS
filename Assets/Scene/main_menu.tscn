@@ -463,34 +463,41 @@ size_flags_vertical = 4
 layout_mode = 2
 color = Color(0.24115604, 0.24115604, 0.24115604, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect" unique_id=2059468078]
-custom_minimum_size = Vector2(500, 796.6)
+[node name="NinePatchRect" type="NinePatchRect" parent="Popup/Setting_Menu/MarginContainer/ColorRect" unique_id=1519973352]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect" unique_id=2059468078]
+custom_minimum_size = Vector2(502.385, 796.6)
 layout_mode = 0
-offset_left = 171.0
-offset_top = 128.0
-offset_right = 671.0004
-offset_bottom = 828.0
+offset_left = 100.0
+offset_right = 735.0
+offset_bottom = 796.6
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer" unique_id=403588634]
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer" unique_id=403588634]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer" unique_id=1292179838]
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer" unique_id=1292179838]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1263069787]
+[node name="MarginContainer" type="MarginContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1263069787]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="settings_btn" type="Button" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=513754995]
+[node name="settings_btn" type="Button" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=513754995]
 layout_mode = 2
 icon = ExtResource("3_3dpqm")
 
-[node name="HSlider" type="HSlider" parent="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer" unique_id=1543597984]
+[node name="HSlider" type="HSlider" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer" unique_id=1543597984]
 layout_direction = 4
 layout_mode = 2
 min_value = -20.095
@@ -533,8 +540,8 @@ layout_mode = 2
 icon = ExtResource("3_3dpqm")
 flat = true
 
-[connection signal="pressed" from="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
-[connection signal="value_changed" from="Popup/Setting_Menu/MarginContainer/ColorRect/VBoxContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
+[connection signal="value_changed" from="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/play_btn" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/Quit" to="." method="_on_quit_pressed"]

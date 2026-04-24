@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/skoalars.gd" id="1_nje0b"]
 [ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_nje0b"]
-[ext_resource type="Script" uid="uid://cawmixdenvlnx" path="res://Assets/Scene/MainIslandcontrol.gd" id="3_1tyq0"]
-[ext_resource type="Script" uid="uid://cbfrm07wwbpog" path="res://Assets/Scene/IngameGUIpopup.gd" id="3_ji2mt"]
+[ext_resource type="Script" uid="uid://cawmixdenvlnx" path="res://Assets/Scripts/MainIslandcontrol.gd" id="3_1tyq0"]
 [ext_resource type="Texture2D" uid="uid://b7cxddjy8hnbh" path="res://Assets/Sprite/Buttons/Buttons 1 COmp.png" id="4_1tyq0"]
+[ext_resource type="Script" uid="uid://cbfrm07wwbpog" path="res://Assets/Scripts/IngameGUIpopup.gd" id="4_htacr"]
 [ext_resource type="Texture2D" uid="uid://620irxbw035j" path="res://Assets/Sprite/Buttons/Buttons 2 comp.png" id="4_ji2mt"]
+[ext_resource type="Shader" uid="uid://c6qwegbuu8eg8" path="res://Assets/Shaders/skoalars.gdshader" id="7_mm1dr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
 atlas = ExtResource("2_nje0b")
@@ -252,6 +253,45 @@ texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 region_rect = Rect2(888, 376, 528, 184)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rm20y"]
+shader = ExtResource("7_mm1dr")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_03i5e"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_4wq3e"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0.84400004, -0.050000004, -0.14066668, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hwllq"]
+_data = {
+&"RESET": SubResource("Animation_03i5e"),
+&"blur": SubResource("Animation_4wq3e")
+}
+
 [node name="Skoalars" type="CharacterBody2D" unique_id=1875685537]
 scale = Vector2(0.015, 0.015)
 script = ExtResource("1_nje0b")
@@ -298,7 +338,7 @@ layout_mode = 2
 [node name="Popup" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=1957315153 node_paths=PackedStringArray("close_cont", "open_cont")]
 layout_mode = 2
 size_flags_vertical = 8
-script = ExtResource("3_ji2mt")
+script = ExtResource("4_htacr")
 close_cont = NodePath("close_cont")
 open_cont = NodePath("open_cont")
 
@@ -426,6 +466,24 @@ grow_vertical = 2
 scale = Vector2(4.435, 4.435)
 theme_override_styles/normal = SubResource("StyleBoxTexture_03i5e")
 theme_override_styles/hover = SubResource("StyleBoxTexture_4wq3e")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1189170291]
+visible = false
+material = SubResource("ShaderMaterial_rm20y")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11062.265
+offset_top = -6189.565
+offset_right = -11031.375
+offset_bottom = -6189.565
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(313.07, 313.07)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control" unique_id=1069872357]
+libraries/ = SubResource("AnimationLibrary_hwllq")
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control/MarginContainer/VBoxContainer/Popup" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/ColorRect/VBoxContainer/NinePatchRect/play_btn" to="Control/MarginContainer/VBoxContainer/Popup" method="_on_play_btn_pressed"]
