@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://divpjvohqeu6g"]
+
+[ext_resource type="Texture2D" uid="uid://1rr2v8xulmpb" path="res://Assets/Sprite/Objects/Structures/countoria houses.png" id="1_rokry"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nurvy"]
+atlas = ExtResource("1_rokry")
+region = Rect2(592, 448, 360, 232)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lsso"]
+size = Vector2(312, 176)
+
+[node name="house_4" type="Sprite2D" unique_id=1234859243]
+scale = Vector2(0.29, 0.29)
+texture = SubResource("AtlasTexture_nurvy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1333192666]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1402099308]
+position = Vector2(10, 2)
+shape = SubResource("RectangleShape2D_6lsso")

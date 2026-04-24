@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wxv7xxyr54py"]
+
+[ext_resource type="Texture2D" uid="uid://6428ia5ooqsl" path="res://Assets/Sprite/Objects/Structures/Market/market_02.6.png" id="1_3x1xw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjtfe"]
+atlas = ExtResource("1_3x1xw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tllti"]
+size = Vector2(160.00006, 177.14291)
+
+[node name="market5" type="Sprite2D" unique_id=1638788344]
+texture = SubResource("AtlasTexture_hjtfe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=4730210]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1693303302]
+position = Vector2(-1.0217938e-06, -2.8571322)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_tllti")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://36d3icn44m02"]
+
+[ext_resource type="Texture2D" uid="uid://uun10ax1cgq0" path="res://Assets/Sprite/Objects/Goods/resources/misc/texture_4.png" id="1_4j83d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pitsg"]
+atlas = ExtResource("1_4j83d")
+region = Rect2(0, 8, 16, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqef1"]
+size = Vector2(14, 22)
+
+[node name="crate3" type="Sprite2D" unique_id=423721403]
+texture = SubResource("AtlasTexture_pitsg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1000159048]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1270471574]
+shape = SubResource("RectangleShape2D_yqef1")
