@@ -11,15 +11,14 @@ config_version=5
 [application]
 
 config/name="Skoalar"
-run/main_scene="uid://the2vr3vwojp"
-run/main_scene="uid://divs57517s5yc"
+run/main_scene="uid://ccx3ruep77ljv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"

@@ -1,14 +1,14 @@
-[gd_scene format=3 uid="uid://divs57517s5yc"]
+[gd_scene format=3 uid="uid://ccx3ruep77ljv"]
 
-[ext_resource type="Script" uid="uid://cy21blyn57u26" path="res://Assets/Scripts/main_menu.gd" id="1_3dpqm"]
-[ext_resource type="Script" uid="uid://digtfx3apnk6f" path="res://Assets/Scripts/parallax_background.gd" id="1_202op"]
+[ext_resource type="Script" path="res://Assets/Scripts/main_menu.gd" id="1_3dpqm"]
+[ext_resource type="Script" path="res://Assets/Scripts/parallax_background.gd" id="1_202op"]
 [ext_resource type="Texture2D" uid="uid://c788dflens4il" path="res://Assets/Sprite/Buttons/Buttons 1.png" id="1_dwgjd"]
 [ext_resource type="Texture2D" uid="uid://cp6se3ok6ru21" path="res://Assets/Sprite/Parralax_summer 4/1.png" id="1_qouvi"]
 [ext_resource type="Texture2D" uid="uid://dcnau3gobua18" path="res://Assets/Sprite/Parralax_summer 4/2.png" id="2_202op"]
 [ext_resource type="Texture2D" uid="uid://cgnlsx8yjinug" path="res://Assets/Sprite/Buttons/Buttons 2.png" id="2_a1aw0"]
 [ext_resource type="Texture2D" uid="uid://whdqbmd0hitk" path="res://Assets/Sprite/Buttons/Buttons 3.png" id="3_3dpqm"]
 [ext_resource type="Texture2D" uid="uid://b35hn3he1dn6l" path="res://Assets/Sprite/Parralax_summer 4/3.png" id="3_dwgjd"]
-[ext_resource type="Script" uid="uid://bsj5qxy1qxf31" path="res://Assets/Scripts/popup.gd" id="7_up2sj"]
+[ext_resource type="Script" path="res://Assets/Scripts/popup.gd" id="7_up2sj"]
 [ext_resource type="AudioStream" uid="uid://ct02po61w47pf" path="res://Assets/Audio/Soft_Eng_LoFi.wav" id="9_wv4p4"]
 
 [sub_resource type="FontFile" id="FontFile_3dpqm"]
