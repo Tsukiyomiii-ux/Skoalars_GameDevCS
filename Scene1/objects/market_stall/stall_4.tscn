@@ -7,7 +7,7 @@ atlas = ExtResource("1_87qa2")
 region = Rect2(1024, 64, 464, 304)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74ukg"]
-size = Vector2(424, 140)
+size = Vector2(424, 107.14285)
 
 [node name="stall4" type="Sprite2D" unique_id=2134886906]
 texture_filter = 1
@@ -17,5 +17,6 @@ texture = SubResource("AtlasTexture_wkb3q")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2055377753]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=613374482]
-position = Vector2(5, 60)
+position = Vector2(4.999999, 43.571423)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_74ukg")
