@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://the2vr3vwojp"]
 
 [ext_resource type="TileSet" uid="uid://ca5mrl5gmsh4k" path="res://Scene1/GTileset/game_tile_set.tres" id="1_q128q"]
+[ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="2_3i5k8"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q128q"]
 a = Vector2(4, -10)
@@ -953,3 +954,7 @@ shape = SubResource("SegmentShape2D_do7y4")
 
 [node name="CollisionShape2D102" type="CollisionShape2D" parent="collisionshapes" unique_id=436123003]
 shape = SubResource("SegmentShape2D_tlssm")
+
+[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("2_3i5k8")]
+z_index = 4
+position = Vector2(271, 742)
