@@ -5,7 +5,7 @@ uniform float lod: hint_range(0.0, 5) = 0.0;
 
 void fragment() {
 	vec4 color = texture (SCREEN_TEXTURE, SCREEN_UV, lod);
-	color = color;
+	COLOR = color;
 }
 
 //void light() {

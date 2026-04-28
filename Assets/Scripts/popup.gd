@@ -13,3 +13,8 @@ func toggle_visibility(object):
 func _on_settings_btn_pressed():
 	toggle_visibility(Setting_Menu)
 	toggle_visibility(Exit)
+
+
+func _on_ext_btn_pressed():
+	toggle_visibility(Setting_Menu)
+	toggle_visibility(Exit)

@@ -11,10 +11,13 @@ config_version=5
 [application]
 
 config/name="Skoalar"
-run/main_scene="uid://oa0fxi3ddrkg"
 run/main_scene="uid://ccx3ruep77ljv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioManager="*uid://callrr6j7at3"
 
 [display]
 

@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://ccx3ruep77ljv"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/main_menu.gd" id="1_3dpqm"]
+[ext_resource type="Script" uid="uid://cy21blyn57u26" path="res://Assets/Scripts/main_menu.gd" id="1_3dpqm"]
 [ext_resource type="Script" path="res://Assets/Scripts/parallax_background.gd" id="1_202op"]
-[ext_resource type="Texture2D" uid="uid://c788dflens4il" path="res://Assets/Sprite/Buttons/Buttons 1.png" id="1_dwgjd"]
 [ext_resource type="Texture2D" uid="uid://cp6se3ok6ru21" path="res://Assets/Sprite/Parralax_summer 4/1.png" id="1_qouvi"]
 [ext_resource type="Texture2D" uid="uid://dcnau3gobua18" path="res://Assets/Sprite/Parralax_summer 4/2.png" id="2_202op"]
-[ext_resource type="Texture2D" uid="uid://cgnlsx8yjinug" path="res://Assets/Sprite/Buttons/Buttons 2.png" id="2_a1aw0"]
-[ext_resource type="Texture2D" uid="uid://whdqbmd0hitk" path="res://Assets/Sprite/Buttons/Buttons 3.png" id="3_3dpqm"]
 [ext_resource type="Texture2D" uid="uid://b35hn3he1dn6l" path="res://Assets/Sprite/Parralax_summer 4/3.png" id="3_dwgjd"]
-[ext_resource type="Script" path="res://Assets/Scripts/popup.gd" id="7_up2sj"]
-[ext_resource type="AudioStream" uid="uid://ct02po61w47pf" path="res://Assets/Audio/Soft_Eng_LoFi.wav" id="9_wv4p4"]
+[ext_resource type="Script" uid="uid://bsj5qxy1qxf31" path="res://Assets/Scripts/popup.gd" id="7_up2sj"]
+[ext_resource type="Texture2D" uid="uid://djo2qbnf5p85d" path="res://Assets/Sprite/Buttons/main menu buttons (1).png" id="8_3dpqm"]
+[ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="8_wv4p4"]
+[ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="9_up2sj"]
 
 [sub_resource type="FontFile" id="FontFile_3dpqm"]
 cache/0/variation_coordinates = {}
@@ -384,6 +383,85 @@ font_color = Color(0, 1, 1, 1)
 outline_size = 18
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_up2sj"]
+bg_color = Color(0.09375, 0.092285156, 0.092285156, 1)
+corner_radius_top_left = 37
+corner_radius_top_right = 37
+corner_radius_bottom_right = 37
+corner_radius_bottom_left = 37
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jjavy"]
+texture = ExtResource("8_wv4p4")
+region_rect = Rect2(424, 152, 688, 688)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4volf"]
+texture = ExtResource("8_wv4p4")
+texture_margin_left = 50.0
+texture_margin_top = 50.0
+texture_margin_right = 50.0
+texture_margin_bottom = 50.0
+region_rect = Rect2(424, 152, 688, 688)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vmb1t"]
+texture = ExtResource("8_wv4p4")
+region_rect = Rect2(432, 152, 672, 688)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y4yu8"]
+texture = ExtResource("9_up2sj")
+region_rect = Rect2(40, 360, 392, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tsd7w"]
+texture = ExtResource("9_up2sj")
+region_rect = Rect2(40, 360, 392, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30ni6"]
+texture = ExtResource("9_up2sj")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(40, 360, 392, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wv4p4"]
+texture = ExtResource("9_up2sj")
+region_rect = Rect2(40, 576, 392, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iugve"]
+texture = ExtResource("9_up2sj")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(40, 576, 400, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up2sj"]
+texture = ExtResource("9_up2sj")
+region_rect = Rect2(56, 680, 376, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qw33"]
+texture = ExtResource("9_up2sj")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(56, 680, 376, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oyswg"]
+texture = ExtResource("9_up2sj")
+region_rect = Rect2(48, 472, 384, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ai1w4"]
+texture = ExtResource("9_up2sj")
+region_rect = Rect2(48, 472, 384, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8wt5q"]
+texture = ExtResource("9_up2sj")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(48, 472, 384, 104)
+
 [node name="Main_Menu" type="Control" unique_id=894167509]
 layout_mode = 3
 anchors_preset = 15
@@ -432,11 +510,6 @@ scale = Vector2(0.3010607, 0.5002196)
 text = "Skoalar's: The Questimals"
 label_settings = SubResource("LabelSettings_wv4p4")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2112912611]
-stream = ExtResource("9_wv4p4")
-volume_db = 4.615
-autoplay = true
-
 [node name="Popup" type="MarginContainer" parent="." unique_id=2023761054 node_paths=PackedStringArray("Setting_Menu", "Exit")]
 layout_mode = 1
 anchors_preset = 15
@@ -453,63 +526,85 @@ visible = false
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="Popup/Setting_Menu" unique_id=15578160]
-custom_minimum_size = Vector2(854.005, 303.55)
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu" unique_id=1493884621]
+custom_minimum_size = Vector2(0, 313.75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/Setting_Menu/VBoxContainer" unique_id=15578160]
+custom_minimum_size = Vector2(502.075, 170.71)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="ColorRect" type="ColorRect" parent="Popup/Setting_Menu/MarginContainer" unique_id=1855627833]
+[node name="PanelContainer" type="PanelContainer" parent="Popup/Setting_Menu/VBoxContainer/MarginContainer" unique_id=1336353870]
 layout_mode = 2
-color = Color(0.24115604, 0.24115604, 0.24115604, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_up2sj")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Popup/Setting_Menu/MarginContainer/ColorRect" unique_id=1519973352]
+[node name="NinePatchRect" type="NinePatchRect" parent="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer" unique_id=1519973352]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer/NinePatchRect" unique_id=459807951]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect" unique_id=2059468078]
-custom_minimum_size = Vector2(502.385, 796.6)
-layout_mode = 0
-offset_left = 100.0
-offset_right = 735.0
-offset_bottom = 796.6
-size_flags_horizontal = 4
+[node name="NinePatchRect" type="NinePatchRect" parent="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer/NinePatchRect/MarginContainer" unique_id=2006340073]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 4
+texture = ExtResource("9_up2sj")
+region_rect = Rect2(56, 240, 136, 112)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer" unique_id=403588634]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer" unique_id=1292179838]
+[node name="NinePatchRect2" type="NinePatchRect" parent="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer/NinePatchRect/MarginContainer" unique_id=1620623786]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1263069787]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-
-[node name="settings_btn" type="Button" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=513754995]
-layout_mode = 2
-icon = ExtResource("3_3dpqm")
-
-[node name="HSlider" type="HSlider" parent="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer" unique_id=1543597984]
+[node name="HSlider" type="HSlider" parent="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer/NinePatchRect/MarginContainer/NinePatchRect2" unique_id=1923886422]
 layout_direction = 4
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -143.0
+offset_top = -201.0
+offset_right = 134.47998
+offset_bottom = 199.0
+grow_horizontal = 2
+scale = Vector2(1.185, 1.41)
 min_value = -20.095
 max_value = 6.0
 step = 0.0
 value = -3.0
 
+[node name="ext_btn" type="Button" parent="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer/NinePatchRect/MarginContainer/NinePatchRect2" unique_id=1949674616]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 12.0
+offset_right = 474.0
+offset_bottom = 52.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_jjavy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4volf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmb1t")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer/NinePatchRect/MarginContainer" unique_id=1825552064]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
 [node name="Exit" type="MarginContainer" parent="Popup" unique_id=1770731761]
 layout_mode = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Popup/Exit" unique_id=205222924]
+custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Popup/Exit/VBoxContainer2" unique_id=1817057560]
@@ -518,30 +613,100 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Popup/Exit/VBoxContainer2/VBoxContainer" unique_id=1983278758]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="play_btn" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=93450368]
+[node name="NinePatchRect" type="NinePatchRect" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=127020382]
+custom_minimum_size = Vector2(325, 100)
 layout_mode = 2
-action_mode = 0
-icon = ExtResource("1_dwgjd")
-flat = true
 
-[node name="settings_btn" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=521507729]
+[node name="play_btn" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/NinePatchRect" unique_id=876629708]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_y4yu8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tsd7w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_30ni6")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=101515852]
+custom_minimum_size = Vector2(325, 100)
 layout_mode = 2
-icon = ExtResource("2_a1aw0")
-flat = true
+
+[node name="settings_btn" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/NinePatchRect2" unique_id=788433143]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 103.71
+theme_override_styles/normal = SubResource("StyleBoxTexture_wv4p4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iugve")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Popup/Exit/VBoxContainer2/VBoxContainer" unique_id=646125404]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Quit" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2" unique_id=2096228127]
+[node name="NinePatchRect3" type="NinePatchRect" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2" unique_id=248167636]
+custom_minimum_size = Vector2(325, 100)
 layout_mode = 2
-icon = ExtResource("3_3dpqm")
-flat = true
 
-[connection signal="pressed" from="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
-[connection signal="value_changed" from="Popup/Setting_Menu/MarginContainer/ColorRect/NinePatchRect/VBoxContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
-[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/play_btn" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
-[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/Quit" to="." method="_on_quit_pressed"]
+[node name="quit_btn" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect3" unique_id=890330505]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_up2sj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0qw33")
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2" unique_id=49975039]
+custom_minimum_size = Vector2(325, 100)
+layout_mode = 2
+
+[node name="study_btn" type="Button" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4" unique_id=1721857294]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_oyswg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ai1w4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8wt5q")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=768247474]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -385.235
+offset_top = 45.94
+offset_right = 350.765
+offset_bottom = 317.94
+grow_horizontal = 2
+texture = ExtResource("9_up2sj")
+region_rect = Rect2(328, 48, 672, 184)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=365158715]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 267.0
+offset_right = 304.0
+offset_bottom = 617.0
+scale = Vector2(1.04, 1.04)
+texture = ExtResource("8_3dpqm")
+region_rect = Rect2(40, 32, 320, 312)
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="." unique_id=293274236]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 0
+offset_left = 957.0
+offset_top = 281.0
+offset_right = 1257.0
+offset_bottom = 631.0
+scale = Vector2(1.04, 1.04)
+texture = ExtResource("8_3dpqm")
+region_rect = Rect2(360, 32, 264, 304)
+
+[connection signal="value_changed" from="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer/NinePatchRect/MarginContainer/NinePatchRect2/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Popup/Setting_Menu/VBoxContainer/MarginContainer/PanelContainer/NinePatchRect/MarginContainer/NinePatchRect2/ext_btn" to="Popup" method="_on_ext_btn_pressed"]
+[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/NinePatchRect/play_btn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/NinePatchRect2/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
+[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect3/quit_btn" to="." method="_on_quit_btn_pressed"]
