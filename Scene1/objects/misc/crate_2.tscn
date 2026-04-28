@@ -15,5 +15,6 @@ texture = SubResource("AtlasTexture_w80eg")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1008954342]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1834188894]
+visible = false
 position = Vector2(0, 0.75)
 shape = SubResource("RectangleShape2D_23j7n")

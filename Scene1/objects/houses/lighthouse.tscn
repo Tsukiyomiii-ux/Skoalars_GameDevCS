@@ -22,16 +22,19 @@ texture = SubResource("AtlasTexture_dmla4")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1158027518]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=406337444]
+visible = false
 position = Vector2(17.499998, 148.74994)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_8frvt")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=671905380]
+visible = false
 position = Vector2(-34.999996, -21.875015)
 scale = Vector2(0.99999917, 0.99999917)
 shape = SubResource("RectangleShape2D_5yhtk")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1565815263]
+visible = false
 position = Vector2(-112.5, 172.49998)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_6dpji")

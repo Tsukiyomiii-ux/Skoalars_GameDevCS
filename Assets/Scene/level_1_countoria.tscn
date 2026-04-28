@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://b4puxp3ncyst7"]
+
+[ext_resource type="Texture2D" uid="uid://cr7kfhtw8x61n" path="res://Assets/Sprite/Objects/Market/level background..jpg" id="1_0w6ua"]
+[ext_resource type="Texture2D" uid="uid://cjdo1uestsqch" path="res://Assets/Sprite/Objects/Market/MarketplaceLevelGUi.png" id="3_cuxk0"]
+[ext_resource type="Texture2D" uid="uid://bogqecvwnfndd" path="res://Assets/Sprite/Objects/Market/Progress bar.png" id="3_m1nj2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnkax"]
+atlas = ExtResource("3_cuxk0")
+region = Rect2(64, 544, 344, 152)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cuxk0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuxk0"]
+atlas = ExtResource("3_cuxk0")
+region = Rect2(72, 24, 752, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1nj2"]
+atlas = ExtResource("3_m1nj2")
+region = Rect2(272, 232, 736, 144)
+
+[node name="level_1_countoria" type="Node2D" unique_id=154872191]
+
+[node name="background" type="TextureRect" parent="." unique_id=844045113]
+offset_left = -3.0
+offset_right = 1278.0
+offset_bottom = 740.0
+texture = ExtResource("1_0w6ua")
+expand_mode = 1
+
+[node name="objective_scroll" type="Sprite2D" parent="." unique_id=1297519404]
+position = Vector2(198, 363.625)
+scale = Vector2(0.9075254, 0.6936773)
+texture = ExtResource("3_cuxk0")
+region_enabled = true
+region_rect = Rect2(856, 16, 392, 688)
+
+[node name="itemcontainer" type="VBoxContainer" parent="objective_scroll" unique_id=2098886990]
+offset_left = -143.24667
+offset_top = -84.93828
+offset_right = 144.34854
+offset_bottom = 292.7104
+
+[node name="basket" type="Sprite2D" parent="." unique_id=1470817888]
+position = Vector2(196, 641)
+texture = SubResource("AtlasTexture_tnkax")
+
+[node name="basketlabel" type="Label" parent="basket" unique_id=375249917]
+offset_left = -60.0
+offset_top = -8.0
+offset_right = 62.0
+offset_bottom = 21.0
+label_settings = SubResource("LabelSettings_cuxk0")
+
+[node name="header" type="TextureRect" parent="." unique_id=1829266012]
+offset_left = 261.0
+offset_top = 15.0
+offset_right = 1013.0
+offset_bottom = 135.0
+texture = SubResource("AtlasTexture_cuxk0")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=251443648]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 430.0
+offset_top = 630.0
+offset_right = 1179.6296
+offset_bottom = 779.6296
+grow_horizontal = 2
+scale = Vector2(0.59, 0.59)
+texture_under = SubResource("AtlasTexture_m1nj2")

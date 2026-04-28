@@ -43,3 +43,4 @@ func update_animation(direction):
 		else:
 			sprite.play("walk_up")
 			last_direction = "up"
+			

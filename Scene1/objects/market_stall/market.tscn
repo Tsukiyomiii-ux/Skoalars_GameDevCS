@@ -16,5 +16,6 @@ scale = Vector2(0.4, 0.4)
 texture = SubResource("AtlasTexture_4tho4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438953745]
+visible = false
 position = Vector2(4.5, 67.5)
 shape = SubResource("RectangleShape2D_h33bi")
