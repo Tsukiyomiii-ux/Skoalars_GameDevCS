@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjdo1uestsqch"
-path="res://.godot/imported/MarketplaceLevelGUi.png-49ca080488f52ce3e9f80d0f8db502e8.ctex"
+uid="uid://15spdcgfmguk"
+path="res://.godot/imported/Quest Complete.png-63326a35339b76e1eedfe1279d912ce5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Objects/Market/MarketplaceLevelGUi.png"
-dest_files=["res://.godot/imported/MarketplaceLevelGUi.png-49ca080488f52ce3e9f80d0f8db502e8.ctex"]
+source_file="res://Assets/Sprite/Objects/Market/Quest Complete.png"
+dest_files=["res://.godot/imported/Quest Complete.png-63326a35339b76e1eedfe1279d912ce5.ctex"]
 
 [params]
 

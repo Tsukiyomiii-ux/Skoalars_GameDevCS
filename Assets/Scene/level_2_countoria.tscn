@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://3esb7voonea6"]
+
+[ext_resource type="Texture2D" uid="uid://cr7kfhtw8x61n" path="res://Assets/Sprite/Objects/Market/level background..jpg" id="1_30vo6"]
+[ext_resource type="Texture2D" uid="uid://dgcdfcrhd85ju" path="res://Assets/Sprite/Objects/Market/Mission.png" id="2_tgiui"]
+[ext_resource type="Texture2D" uid="uid://cgo8i5glk5o04" path="res://Assets/Sprite/Objects/Market/1.png" id="3_ome4u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2amko"]
+atlas = ExtResource("1_30vo6")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8aynm"]
+atlas = ExtResource("2_tgiui")
+region = Rect2(56, 8, 400, 696)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h05nd"]
+atlas = ExtResource("3_ome4u")
+region = Rect2(80, 160, 760, 120)
+
+[node name="level_2_countoria" type="Node2D" unique_id=1184914812]
+
+[node name="background" type="TextureRect" parent="." unique_id=1096260327]
+offset_right = 1282.0
+offset_bottom = 716.0
+texture = SubResource("AtlasTexture_2amko")
+
+[node name="mission_list" type="Sprite2D" parent="." unique_id=86386243]
+position = Vector2(198, 367.00003)
+scale = Vector2(0.81750005, 0.691092)
+texture = SubResource("AtlasTexture_8aynm")
+
+[node name="header" type="TextureRect" parent="." unique_id=255529887]
+offset_left = 251.0
+offset_top = 23.0
+offset_right = 1011.0
+offset_bottom = 143.0
+texture = SubResource("AtlasTexture_h05nd")
