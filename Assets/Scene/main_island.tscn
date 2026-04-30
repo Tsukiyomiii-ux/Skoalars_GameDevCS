@@ -12,12 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://x3j0mft4yds7" path="res://Assets/Sprite/Objects/Basic Furniture.png" id="11_o4rl6"]
 [ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/Structures/MCHome/exterior.png" id="12_1oq35"]
 [ext_resource type="Texture2D" uid="uid://0wcqcsuqxj38" path="res://Assets/Sprite/Objects/Goods/Supplies.png" id="12_ml317"]
-[ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="13_f3pcw"]
 [ext_resource type="Texture2D" uid="uid://blvlhxgxvoqc6" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 24, 2026, 02_56_06 PM.png" id="16_884xs"]
 [ext_resource type="Texture2D" uid="uid://chdey0vuxbwkb" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png" id="17_62u1j"]
 [ext_resource type="Texture2D" uid="uid://bsw8d10ehyyog" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 2 - DAY.png" id="18_62u1j"]
 [ext_resource type="Texture2D" uid="uid://dti7hfwlqcfo2" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 24, 2026, 03_16_01 PM.png" id="19_o4rl6"]
 [ext_resource type="Texture2D" uid="uid://bkqoak0pbnatw" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/BRIDGE - DAY.png" id="19_wxmp5"]
+[ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/skoalarsGUI.tscn" id="21_o4rl6"]
 [ext_resource type="Texture2D" uid="uid://dlolhqc643sxq" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_43_23 PM.png" id="22_oldau"]
 [ext_resource type="Texture2D" uid="uid://d1tpwflicj3es" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_35_45 PM.png" id="24_c6r3i"]
 [ext_resource type="Texture2D" uid="uid://bngyst88tej74" path="res://Assets/Sprite/Objects/objects_demo.png" id="26_6lqna"]
@@ -2865,10 +2865,6 @@ shape = SubResource("RectangleShape2D_62u1j")
 position = Vector2(-47, 13)
 shape = SubResource("RectangleShape2D_w2nq2")
 
-[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("13_f3pcw")]
-z_index = 7
-position = Vector2(133.00002, 60)
-
 [node name="FlowerGarden" type="TileMapLayer" parent="." unique_id=814707906]
 position = Vector2(0, -2)
 tile_set = SubResource("TileSet_c6r3i")
@@ -3400,3 +3396,6 @@ position = Vector2(1956.0696, 1439.105)
 rotation = 0.007814825
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_pvtps")
+
+[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("21_o4rl6")]
+position = Vector2(130.99998, 51.999996)

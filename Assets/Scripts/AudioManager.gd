@@ -26,3 +26,12 @@ func toggle_mute():
 func toggle_play():
 	is_muted = !is_muted
 	music_player.volume_db = 0 if is_muted else -80
+
+func stop_music():
+	var tween = create_tween()
+	tween.tween_property(music_player, "volume_db", -80, 1.0)
+	tween.tween_callback(_finish_stop_music)
+
+func _finish_stop_music():
+	music_player.stop()
+	music_player.volume_db = 0
