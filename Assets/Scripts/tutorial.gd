@@ -33,7 +33,7 @@ func show_current_step():
 			down_arrow.visible = true
 
 
-func _input(event):
+func _unhandled_input(event):
 	if busy:
 		return
 
@@ -61,7 +61,6 @@ func handle_step(tile: TileMapLayer):
 	step += 1
 
 	if step >= 4:
-		get_tree().change_scene_to_file("res://Assets/Scene/main_island.tscn")
 		return
 
 	show_current_step()

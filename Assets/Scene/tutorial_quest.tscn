@@ -1,0 +1,240 @@
+[gd_scene format=3 uid="uid://jl5ber54ymc0"]
+
+[ext_resource type="Script" uid="uid://v8tv8p21h2cg" path="res://Assets/Scripts/tutorial_quest.gd" id="1_0rbod"]
+[ext_resource type="Texture2D" uid="uid://ddno55m1eatqw" path="res://Assets/Sprite/FABLE ISLE/Level2/Word-Correct.png" id="2_e2shu"]
+[ext_resource type="Texture2D" uid="uid://b47ev3suqa5j8" path="res://Assets/Sprite/FABLE ISLE/Level2/Word-Wrong.png" id="3_ikyrr"]
+[ext_resource type="Texture2D" uid="uid://dx5oaaoixhfiu" path="res://Assets/Sprite/FABLE ISLE/Level2/VeryFinalBackground.png" id="4_vayxv"]
+[ext_resource type="Texture2D" uid="uid://dv1eqh7pdf43k" path="res://Assets/Sprite/FABLE ISLE/Level2/Objectives.png" id="5_yvda1"]
+[ext_resource type="FontFile" uid="uid://doxo607m4fj51" path="res://Assets/Sprite/FABLE ISLE/Level2/ARCADECLASSIC.TTF" id="6_iu8qj"]
+[ext_resource type="Texture2D" uid="uid://bqkfcoks68td8" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalAssets.png" id="7_kyyh0"]
+[ext_resource type="Texture2D" uid="uid://bjpbrwpjdn0v0" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalBook.png" id="8_kdvm3"]
+[ext_resource type="Texture2D" uid="uid://clmjj33mubbhi" path="res://Assets/Sprite/FABLE ISLE/Level2/TextHolder.png" id="9_rslx1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1eml"]
+texture = ExtResource("7_kyyh0")
+49:3/size_in_atlas = Vector2i(39, 10)
+49:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1rk13"]
+sources/0 = SubResource("TileSetAtlasSource_f1eml")
+
+[node name="Level2_SpellingQuest" type="Node2D" unique_id=76193208]
+process_mode = 3
+script = ExtResource("1_0rbod")
+
+[node name="GameTileMap" type="Node2D" parent="." unique_id=817097469]
+position = Vector2(-10, 16)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameTileMap" unique_id=1740016415]
+unique_name_in_owner = true
+layer = 100
+scale = Vector2(0.7, 0.7)
+transform = Transform2D(0.7, 0, 0, 0.7, 0, 0)
+
+[node name="Control" type="Control" parent="GameTileMap/CanvasLayer" unique_id=1112140543]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="CorrectBanner" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=663011663]
+unique_name_in_owner = true
+visible = false
+offset_left = 793.00006
+offset_top = 859.0
+offset_right = 2329.0
+offset_bottom = 1185.0
+scale = Vector2(0.3, 0.2)
+texture = ExtResource("2_e2shu")
+
+[node name="WrongBanner" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=337869643]
+unique_name_in_owner = true
+visible = false
+offset_left = 794.0
+offset_top = 848.00006
+offset_right = 2330.0
+offset_bottom = 1274.0
+scale = Vector2(0.3, 0.2)
+texture = ExtResource("3_ikyrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="GameTileMap/CanvasLayer" unique_id=1527577552]
+position = Vector2(1033, 522)
+texture = ExtResource("4_vayxv")
+
+[node name="ObjectivesScroll" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=851538473]
+offset_left = -547.0
+offset_top = -267.0
+offset_right = 2653.0
+offset_bottom = 1864.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_yvda1")
+
+[node name="ProgressLabel" type="Label" parent="GameTileMap/CanvasLayer/ObjectivesScroll" unique_id=1343234757]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47700003
+anchor_top = 0.725
+anchor_right = 0.47700003
+anchor_bottom = 0.725
+offset_left = -123.54297
+offset_top = 3.5964355
+offset_right = 226.45703
+offset_bottom = 78.596436
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("6_iu8qj")
+theme_override_font_sizes/font_size = 64
+
+[node name="Title" type="TileMapLayer" parent="GameTileMap/CanvasLayer" unique_id=1711954162]
+position = Vector2(-734.00006, -43.000004)
+scale = Vector2(1.3, 1.3)
+tile_map_data = PackedByteArray(0, 0, 98, 0, 9, 0, 0, 0, 49, 0, 3, 0, 0, 0)
+tile_set = SubResource("TileSet_1rk13")
+
+[node name="Book" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=983151257]
+offset_left = 843.0
+offset_top = 194.0
+offset_right = 2421.3333
+offset_bottom = 1229.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_kdvm3")
+
+[node name="ClueLabel" type="Label" parent="GameTileMap/CanvasLayer/Book" unique_id=607518941]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -452.49997
+offset_top = -300.83334
+offset_right = 518.2361
+offset_bottom = 86.95703
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.22769007, 0.10443834, 0.046414226, 1)
+theme_override_colors/font_shadow_color = Color(0.044557855, 0.044557847, 0.044557847, 0)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("6_iu8qj")
+theme_override_font_sizes/font_size = 160
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WoodPanel" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=436045976]
+offset_left = 856.00006
+offset_top = 629.0
+offset_right = 2392.0
+offset_bottom = 1653.0
+scale = Vector2(0.6, 0.5)
+texture = ExtResource("9_rslx1")
+
+[node name="WordContainer" type="GridContainer" parent="GameTileMap/CanvasLayer/WoodPanel" unique_id=223087045]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.6668
+offset_top = -90.0
+offset_right = 400.33325
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 8
+
+[node name="ChooseHereLabel" type="Label" parent="GameTileMap/CanvasLayer/WoodPanel" unique_id=1576785874]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.358
+anchor_right = 0.563
+anchor_bottom = 0.358
+offset_left = -308.0001
+offset_top = -80.59201
+offset_right = 495.2318
+offset_bottom = 81.40799
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_iu8qj")
+theme_override_font_sizes/font_size = 120
+text = "CHOOSE HERE"
+
+[node name="ClockIcon" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=1401156662]
+unique_name_in_owner = true
+process_mode = 3
+offset_left = 1733.0
+offset_top = 23.0
+offset_right = 2148.0
+offset_bottom = 432.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+
+[node name="TimeLabel" type="Label" parent="GameTileMap/CanvasLayer/ClockIcon" unique_id=2108183569]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 164.0
+offset_top = 380.0
+offset_right = 230.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0.85490197, 0.12156863, 0.21960784, 0.9647059)
+theme_override_colors/font_outline_color = Color(0.86898494, 0.8689849, 0.8689849, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("6_iu8qj")
+theme_override_font_sizes/font_size = 80
+text = "15"
+horizontal_alignment = 1
+
+[node name="QuestIncompleteUI" parent="GameTileMap/CanvasLayer" unique_id=1715885540]
+unique_name_in_owner = true
+visible = false
+offset_left = -101.0
+offset_top = -418.0
+offset_right = -101.0
+offset_bottom = -418.0
+
+[node name="SndCorrect" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=34122860]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndWrong" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=1735540810]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndVictory" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=93481341]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndGameOver" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=2057164309]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndLevelStart" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=114384009]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndTicking" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=1150036198]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+max_distance = 999999.0
+attenuation = 0.01

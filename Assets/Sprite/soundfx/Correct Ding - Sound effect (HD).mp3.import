@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beati7crr3xwq"
+path="res://.godot/imported/Correct Ding - Sound effect (HD).mp3-efe1fecedd5b8f18327035f99c2c7034.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sprite/soundfx/Correct Ding - Sound effect (HD).mp3"
+dest_files=["res://.godot/imported/Correct Ding - Sound effect (HD).mp3-efe1fecedd5b8f18327035f99c2c7034.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

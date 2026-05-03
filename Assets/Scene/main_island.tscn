@@ -3398,4 +3398,5 @@ scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_pvtps")
 
 [node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("21_o4rl6")]
+z_index = 4
 position = Vector2(130.99998, 51.999996)

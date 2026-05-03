@@ -2,13 +2,25 @@
 
 [ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/skoalars.gd" id="1_56m06"]
 [ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_a5ycg"]
-[ext_resource type="Script" uid="uid://cawmixdenvlnx" path="res://Assets/Scripts/MainIslandcontrol.gd" id="3_062ow"]
+[ext_resource type="Script" uid="uid://cmutbfygeayiy" path="res://Assets/Scripts/TutorialControl.gd" id="3_65uru"]
 [ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_ssc6x"]
-[ext_resource type="Script" uid="uid://cbfrm07wwbpog" path="res://Assets/Scripts/IngameGUIpopup.gd" id="5_3hcpa"]
 [ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="6_uikft"]
 [ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="7_l7egw"]
+[ext_resource type="Texture2D" uid="uid://ddno55m1eatqw" path="res://Assets/Sprite/FABLE ISLE/Level2/Word-Correct.png" id="8_44ofu"]
 [ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="8_obiky"]
+[ext_resource type="Texture2D" uid="uid://b47ev3suqa5j8" path="res://Assets/Sprite/FABLE ISLE/Level2/Word-Wrong.png" id="9_lt74q"]
 [ext_resource type="Texture2D" uid="uid://djo2qbnf5p85d" path="res://Assets/Sprite/Buttons/main menu buttons (1).png" id="9_wysqq"]
+[ext_resource type="Texture2D" uid="uid://dduouy17io8kp" path="res://Assets/Sprite/BG/42.png" id="10_a5ycg"]
+[ext_resource type="Texture2D" uid="uid://dv1eqh7pdf43k" path="res://Assets/Sprite/FABLE ISLE/Level2/Objectives.png" id="11_3333q"]
+[ext_resource type="Texture2D" uid="uid://bgq27qwk3rrxa" path="res://Assets/Sprite/Rewards/item rewards.png" id="11_ssc6x"]
+[ext_resource type="Texture2D" uid="uid://bpix6euc6knyt" path="res://Assets/Sprite/Rewards/REWARDS, SKILLS, TIME BUTTONS.png" id="12_3hcpa"]
+[ext_resource type="FontFile" uid="uid://doxo607m4fj51" path="res://Assets/Sprite/FABLE ISLE/Level2/ARCADECLASSIC.TTF" id="12_v5oq1"]
+[ext_resource type="Texture2D" uid="uid://p7smd3uo48y8" path="res://Assets/Sprite/Buttons/COLLECT & NAVIGATION BUTTONS.png" id="13_3hcpa"]
+[ext_resource type="AudioStream" uid="uid://beati7crr3xwq" path="res://Assets/Sprite/soundfx/Correct Ding - Sound effect (HD).mp3" id="13_44ofu"]
+[ext_resource type="Texture2D" uid="uid://bqkfcoks68td8" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalAssets.png" id="13_vpq5x"]
+[ext_resource type="Texture2D" uid="uid://bjpbrwpjdn0v0" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalBook.png" id="14_amurl"]
+[ext_resource type="AudioStream" uid="uid://b1dp43wx2uq20" path="res://Assets/Sprite/soundfx/WRONG SOUND EFFECT.mp3" id="14_lt74q"]
+[ext_resource type="Texture2D" uid="uid://clmjj33mubbhi" path="res://Assets/Sprite/FABLE ISLE/Level2/TextHolder.png" id="15_kkisq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
 atlas = ExtResource("2_a5ycg")
@@ -210,10 +222,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nje0b"]
 size = Vector2(5.7805095, 486.31403)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rm20y"]
-shader = ExtResource("4_ssc6x")
-shader_parameter/lod = 0.0
-
 [sub_resource type="Animation" id="Animation_mm1dr"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -248,6 +256,10 @@ _data = {
 &"RESET": SubResource("Animation_mm1dr"),
 &"blur": SubResource("Animation_htacr")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rm20y"]
+shader = ExtResource("4_ssc6x")
+shader_parameter/lod = 0.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mm1dr"]
 texture = ExtResource("6_uikft")
@@ -296,6 +308,14 @@ texture_margin_top = 8.0
 texture_margin_right = 5.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(232, 240, 128, 112)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl0db"]
+texture = ExtResource("13_vpq5x")
+50:8/size_in_atlas = Vector2i(36, 4)
+50:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6mmad"]
+sources/0 = SubResource("TileSetAtlasSource_cl0db")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htacr"]
 bg_color = Color(0.05490196, 0.050980393, 0.050980393, 0.8039216)
@@ -389,24 +409,24 @@ texture = ExtResource("8_obiky")
 region_rect = Rect2(432, 152, 672, 688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03i5e"]
-texture = ExtResource("6_uikft")
-region_rect = Rect2(40, 352, 392, 120)
+texture = ExtResource("7_l7egw")
+region_rect = Rect2(832, 368, 336, 168)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4wq3e"]
-texture = ExtResource("6_uikft")
+texture = ExtResource("7_l7egw")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
-region_rect = Rect2(40, 360, 392, 112)
+region_rect = Rect2(816, 368, 368, 168)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8miks"]
-texture = ExtResource("6_uikft")
+texture = ExtResource("7_l7egw")
 texture_margin_left = 15.0
 texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
-region_rect = Rect2(40, 352, 392, 120)
+region_rect = Rect2(824, 360, 344, 176)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbpqs"]
 texture = ExtResource("9_wysqq")
@@ -456,6 +476,26 @@ texture_margin_right = 4.0
 texture_margin_bottom = 2.0
 region_rect = Rect2(456, 544, 112, 104)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uikft"]
+texture = ExtResource("13_3hcpa")
+region_rect = Rect2(768, 624, 584, 288)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7egw"]
+texture = ExtResource("13_3hcpa")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(760, 624, 600, 288)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obiky"]
+texture = ExtResource("13_3hcpa")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(768, 616, 584, 296)
+
 [node name="Skoalars" type="CharacterBody2D" unique_id=1875685537]
 scale = Vector2(0.015, 0.015)
 script = ExtResource("1_56m06")
@@ -475,12 +515,22 @@ shape = SubResource("RectangleShape2D_nje0b")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1361620101]
 zoom = Vector2(6.115, 6.115)
 
-[node name="Control" type="Control" parent="." unique_id=427147755]
+[node name="Control" type="Control" parent="." unique_id=427147755 node_paths=PackedStringArray("open_cont", "volume_cont", "bottom_cont", "quest_Cont", "close_cont", "reward_btn_cont")]
+z_index = 40
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("3_062ow")
+script = ExtResource("3_65uru")
+open_cont = NodePath("MarginContainer/VBoxContainer/Popup/open_cont")
+volume_cont = NodePath("MarginContainer/VBoxContainer/volume_cont")
+bottom_cont = NodePath("MarginContainer/bottom_cont")
+quest_Cont = NodePath("MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont")
+close_cont = NodePath("MarginContainer/VBoxContainer/Popup/close_cont")
+reward_btn_cont = NodePath("MarginContainer/bottom_cont/MarginContainer/reward_btn_cont")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control" unique_id=701115630]
+libraries/ = SubResource("AnimationLibrary_mm1dr")
 
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=492392598]
 material = SubResource("ShaderMaterial_rm20y")
@@ -500,29 +550,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -11133.334
-offset_top = -6266.6665
-offset_right = 10990.955
-offset_bottom = 6018.024
+offset_left = -7000.0
+offset_top = -3866.667
+offset_right = 15124.289
+offset_bottom = 8418.023
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.0034908, 1.0150228)
+scale = Vector2(0.6288913, 0.63551724)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=1085444170]
 layout_mode = 2
 
-[node name="Popup" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=1957315153 node_paths=PackedStringArray("close_cont", "open_cont", "volume_cont", "bottom_cont")]
+[node name="Popup" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=1957315153]
 layout_mode = 2
 size_flags_vertical = 8
-script = ExtResource("5_3hcpa")
-close_cont = NodePath("close_cont")
-open_cont = NodePath("open_cont")
-volume_cont = NodePath("../volume_cont")
-bottom_cont = NodePath("../../bottom_cont")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/MarginContainer/VBoxContainer/Popup" unique_id=701115630]
-root_node = NodePath("../../../..")
-libraries/ = SubResource("AnimationLibrary_mm1dr")
 
 [node name="close_cont" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/Popup" unique_id=938001807]
 layout_mode = 2
@@ -571,12 +612,204 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_jjp2r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8g060")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lltph")
 
+[node name="Quest Container" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/Popup" unique_id=840334613]
+custom_minimum_size = Vector2(16000, 12000)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="quest_cont" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container" unique_id=53326166]
+visible = false
+custom_minimum_size = Vector2(1280, 11210.535)
+layout_mode = 2
+
+[node name="ObjectivesScroll" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=1077927111]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7700.338
+offset_top = -5120.0
+offset_right = 7700.338
+offset_bottom = 5380.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_3333q")
+
+[node name="ProgressLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont/ObjectivesScroll" unique_id=1264627321]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47700003
+anchor_top = 0.725
+anchor_right = 0.47700003
+anchor_bottom = 0.725
+offset_left = -123.54297
+offset_top = 3.5964355
+offset_right = 226.45703
+offset_bottom = 78.596436
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("12_v5oq1")
+theme_override_font_sizes/font_size = 64
+
+[node name="Title" type="TileMapLayer" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=1577696952]
+position = Vector2(-7428.2744, 209.8031)
+scale = Vector2(9.65, 9.65)
+tile_map_data = PackedByteArray(0, 0, 98, 0, 9, 0, 0, 0, 49, 0, 3, 0, 0, 0, 99, 0, 10, 0, 0, 0, 50, 0, 8, 0, 0, 0)
+tile_set = SubResource("TileSet_6mmad")
+
+[node name="WoodPanel" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=1438092272]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -5145.627
+offset_top = -5965.463
+offset_right = 5402.078
+offset_bottom = 558.5381
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("15_kkisq")
+
+[node name="WordContainer" type="GridContainer" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont/WoodPanel" unique_id=424248977]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4107.7793
+offset_top = -534.56323
+offset_right = -3307.7793
+offset_bottom = -334.56323
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6.645, 6.645)
+columns = 8
+
+[node name="ChooseHereLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont/WoodPanel" unique_id=2056254806]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.358
+anchor_right = 0.563
+anchor_bottom = 0.358
+offset_left = -3047.7124
+offset_top = -237.56396
+offset_right = -2244.4805
+offset_bottom = -75.563965
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.915, 3.915)
+theme_override_fonts/font = ExtResource("12_v5oq1")
+theme_override_font_sizes/font_size = 120
+text = "CHOOSE HERE"
+horizontal_alignment = 1
+
+[node name="Book" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=1466960723]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2707.4736
+offset_top = -1723.9141
+offset_right = 2828.5264
+offset_bottom = 2300.086
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_amurl")
+
+[node name="ClueLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont/Book" unique_id=355274165]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1813.94
+offset_top = -1067.8871
+offset_right = -843.20386
+offset_bottom = -680.0967
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.55, 3.55)
+size_flags_horizontal = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.22769007, 0.10443834, 0.046414226, 1)
+theme_override_colors/font_shadow_color = Color(0.044557855, 0.044557847, 0.044557847, 0)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("12_v5oq1")
+theme_override_font_sizes/font_size = 160
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockIcon" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=1068502678]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 2642.3594
+offset_top = 5245.0723
+offset_right = 4178.3594
+offset_bottom = 5245.0723
+mouse_filter = 2
+
+[node name="TimeLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont/ClockIcon" unique_id=850803]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 164.0
+offset_top = 380.0
+offset_right = 230.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0.85490197, 0.12156863, 0.21960784, 0.9647059)
+theme_override_colors/font_outline_color = Color(0.86898494, 0.8689849, 0.8689849, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("12_v5oq1")
+theme_override_font_sizes/font_size = 80
+text = "15"
+horizontal_alignment = 1
+
+[node name="CorrectBanner" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=1050089508]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 4656.4854
+offset_top = 3147.043
+offset_right = 26192.484
+offset_bottom = 9473.043
+scale = Vector2(0.3, 0.2)
+texture = ExtResource("8_44ofu")
+
+[node name="WrongBanner" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=226239474]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 4656.4863
+offset_top = 2937.2405
+offset_right = 26192.486
+offset_bottom = 11263.24
+scale = Vector2(0.3, 0.2)
+texture = ExtResource("9_lt74q")
+
 [node name="open_cont" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/Popup" unique_id=350482393]
 visible = false
 custom_minimum_size = Vector2(3000, 3993.6)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont" unique_id=893171431]
 layout_mode = 2
@@ -627,7 +860,7 @@ patch_margin_top = 1000
 patch_margin_bottom = 883
 
 [node name="play_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect" unique_id=2028530853]
-z_index = 40
+z_index = 41
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -801,8 +1034,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="start_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect" unique_id=1335675035]
-visible = false
+[node name="skip_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect" unique_id=1335675035]
 z_index = 40
 layout_mode = 1
 anchors_preset = 8
@@ -810,10 +1042,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -2848.746
-offset_top = -843.704
-offset_right = 1151.2539
-offset_bottom = 656.296
+offset_left = -2897.8672
+offset_top = -1438.4622
+offset_right = 1102.1328
+offset_bottom = 561.53784
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -821,19 +1053,18 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_03i5e")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4wq3e")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8miks")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer" unique_id=1194375763]
+[node name="reward_btn_cont" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer" unique_id=1194375763]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer" unique_id=1524363604]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer/reward_btn_cont" unique_id=1524363604]
 layout_mode = 2
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer" unique_id=695824530]
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/reward_btn_cont/HBoxContainer" unique_id=695824530]
 custom_minimum_size = Vector2(1200, 1000)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect2" unique_id=1950583861]
-z_index = 40
+[node name="Button2" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/reward_btn_cont/HBoxContainer/NinePatchRect2" unique_id=1950583861]
 custom_minimum_size = Vector2(800, 1000)
 layout_mode = 0
 offset_right = 1264.0
@@ -842,12 +1073,11 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_wbpqs")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_kvow6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8noq3")
 
-[node name="NinePatchRect3" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer" unique_id=577905937]
+[node name="NinePatchRect3" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/reward_btn_cont/HBoxContainer" unique_id=577905937]
 custom_minimum_size = Vector2(1200, 1000)
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect3" unique_id=645613480]
-z_index = 40
+[node name="Button3" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/reward_btn_cont/HBoxContainer/NinePatchRect3" unique_id=645613480]
 custom_minimum_size = Vector2(800, 1000)
 layout_mode = 0
 offset_right = 1264.0
@@ -856,12 +1086,11 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ob1j7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_tm8d8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_30ca2")
 
-[node name="NinePatchRect4" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer" unique_id=106536367]
+[node name="NinePatchRect4" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/reward_btn_cont/HBoxContainer" unique_id=106536367]
 custom_minimum_size = Vector2(1200, 1000)
 layout_mode = 2
 
-[node name="Button4" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect4" unique_id=695790405]
-z_index = 40
+[node name="Button4" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/reward_btn_cont/HBoxContainer/NinePatchRect4" unique_id=695790405]
 custom_minimum_size = Vector2(800, 1000)
 layout_mode = 0
 offset_right = 1264.0
@@ -870,11 +1099,89 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dv1mw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xwxkn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0skql")
 
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control/MarginContainer/VBoxContainer/Popup" method="_on_settings_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control/MarginContainer/VBoxContainer/Popup" method="_on_volume_btn_pressed"]
+[node name="reward_cont" type="MarginContainer" parent="Control" unique_id=1492597173]
+visible = false
+layout_mode = 0
+offset_left = -6999.9995
+offset_top = -3866.6667
+offset_right = 15164.0
+offset_bottom = 8457.333
+scale = Vector2(0.62975657, 0.6325603)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/reward_cont" unique_id=1185996242]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/reward_cont/VBoxContainer" unique_id=587240631]
+z_index = 50
+custom_minimum_size = Vector2(14200, 10000)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_a5ycg")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/reward_cont/VBoxContainer/NinePatchRect" unique_id=429697480]
+custom_minimum_size = Vector2(1500, 2000)
+layout_mode = 0
+offset_left = 5757.213
+offset_top = 2842.888
+offset_right = 8257.213
+offset_bottom = 4842.8877
+size_flags_horizontal = 4
+texture = ExtResource("11_ssc6x")
+region_rect = Rect2(768, 152, 280, 224)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control/reward_cont/VBoxContainer/NinePatchRect" unique_id=1476290693]
+custom_minimum_size = Vector2(4000, 1500)
+layout_mode = 0
+offset_left = 5016.186
+offset_top = 5056.1157
+offset_right = 9016.186
+offset_bottom = 6556.1157
+texture = ExtResource("12_3hcpa")
+region_rect = Rect2(768, 496, 448, 128)
+
+[node name="done_btn" type="Button" parent="Control/reward_cont/VBoxContainer/NinePatchRect/NinePatchRect2" unique_id=1450118496]
+z_index = 40
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1894.1394
+offset_top = 2200.9702
+offset_right = 2105.8604
+offset_bottom = 4200.9697
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_uikft")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_l7egw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_obiky")
+
+[node name="SndCorrect" type="AudioStreamPlayer2D" parent="Control" unique_id=328925200]
+unique_name_in_owner = true
+position = Vector2(-5068.046, -3856.4985)
+scale = Vector2(0.6288912, 0.6355172)
+stream = ExtResource("13_44ofu")
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndWrong" type="AudioStreamPlayer2D" parent="Control" unique_id=262265605]
+unique_name_in_owner = true
+position = Vector2(-5068.046, -3856.4985)
+scale = Vector2(0.6288912, 0.6355172)
+stream = ExtResource("14_lt74q")
+max_distance = 999999.0
+attenuation = 0.01
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/mute_btn" to="Control" method="_on_mute_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect/play_btn" to="Control/MarginContainer/VBoxContainer/Popup" method="_on_play_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control/MarginContainer/VBoxContainer/Popup" method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect/play_btn" to="Control" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control" method="_on_quit_btn_pressed"]
 [connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/HSlider" to="Control" method="_on_h_slider_value_changed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/ext_btn" to="Control/MarginContainer/VBoxContainer/Popup" method="_on_ext_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/start_btn" to="Control" method="_on_start_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/ext_btn" to="Control" method="_on_ext_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/skip_btn" to="Control" method="_on_skip_btn_pressed"]
+[connection signal="pressed" from="Control/reward_cont/VBoxContainer/NinePatchRect/NinePatchRect2/done_btn" to="Control" method="_on_done_btn_pressed"]
