@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://jd1quas8gkg0"]
+
+[ext_resource type="Texture2D" uid="uid://bcsgg5wbtbl5h" path="res://Assets/Sprite/BG/35.png" id="1_16qjn"]
+[ext_resource type="Script" uid="uid://xb55ncmgklv0" path="res://Assets/Scripts/MainIsland/map_selector.gd" id="1_77i5d"]
+[ext_resource type="Texture2D" uid="uid://br7bydaerdo4s" path="res://Assets/Sprite/BG/39.png" id="1_t101k"]
+[ext_resource type="Texture2D" uid="uid://caeslnx7dtfc1" path="res://Assets/Sprite/Buttons/38.png" id="3_qk3hw"]
+[ext_resource type="Texture2D" uid="uid://c1ku5caaen5wc" path="res://Assets/Sprite/Buttons/40.png" id="4_5rios"]
+[ext_resource type="Texture2D" uid="uid://es647ytq5k65" path="res://Assets/Sprite/Buttons/MAP, Mission, Lock & Unlock Buttons.png" id="5_f255l"]
+[ext_resource type="Texture2D" uid="uid://cqywuldjp2sk8" path="res://Assets/Sprite/Buttons/41.png" id="5_gr43v"]
+[ext_resource type="Texture2D" uid="uid://bkx0l7bxfdvds" path="res://Assets/Sprite/Buttons/39.png" id="6_6e484"]
+[ext_resource type="Texture2D" uid="uid://p7smd3uo48y8" path="res://Assets/Sprite/Buttons/COLLECT & NAVIGATION BUTTONS.png" id="9_s3iia"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rios"]
+texture = ExtResource("3_qk3hw")
+region_rect = Rect2(304, 144, 968, 784)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qk3hw"]
+texture = ExtResource("3_qk3hw")
+region_rect = Rect2(304, 144, 952, 784)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gr43v"]
+texture = ExtResource("3_qk3hw")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(304, 144, 952, 776)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6e484"]
+texture = ExtResource("4_5rios")
+region_rect = Rect2(304, 144, 968, 784)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f255l"]
+texture = ExtResource("4_5rios")
+region_rect = Rect2(304, 144, 952, 784)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77i5d"]
+texture = ExtResource("4_5rios")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(304, 144, 952, 776)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3iia"]
+texture = ExtResource("5_gr43v")
+region_rect = Rect2(304, 144, 968, 784)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a7cb2"]
+texture = ExtResource("5_gr43v")
+region_rect = Rect2(304, 144, 952, 784)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6vat"]
+texture = ExtResource("5_gr43v")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(304, 144, 952, 776)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qjrtf"]
+texture = ExtResource("6_6e484")
+region_rect = Rect2(304, 144, 968, 784)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kao2h"]
+texture = ExtResource("6_6e484")
+region_rect = Rect2(304, 144, 952, 784)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_agsof"]
+texture = ExtResource("6_6e484")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(304, 144, 952, 776)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kwi8"]
+texture = ExtResource("9_s3iia")
+region_rect = Rect2(192, 632, 592, 272)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cs23o"]
+texture = ExtResource("9_s3iia")
+region_rect = Rect2(200, 632, 576, 280)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fq18r"]
+texture = ExtResource("9_s3iia")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(200, 624, 576, 288)
+
+[node name="Control" type="Control" unique_id=1320082704 node_paths=PackedStringArray("count_lock")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_77i5d")
+count_lock = NodePath("MarginContainer/NinePatchRect/countoria_btn/countLock_btn")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=261934313]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_t101k")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=515367926]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 0
+offset_left = 109.0
+offset_top = 91.035
+offset_right = 1389.0
+offset_bottom = 941.03503
+scale = Vector2(0.8304601, 0.7318053)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=1946956465]
+custom_minimum_size = Vector2(1280, 850)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_16qjn")
+
+[node name="fableIsle_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=2041469663]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 227.5847
+offset_top = 131.13461
+offset_right = 591.6097
+offset_bottom = 421.7846
+theme_override_styles/normal = SubResource("StyleBoxTexture_5rios")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qk3hw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gr43v")
+
+[node name="countoria_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=904455745]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 709.2454
+offset_top = 140.69998
+offset_right = 1073.2704
+offset_bottom = 431.35
+theme_override_styles/normal = SubResource("StyleBoxTexture_6e484")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_f255l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_77i5d")
+
+[node name="countLock_btn" type="NinePatchRect" parent="MarginContainer/NinePatchRect/countoria_btn" unique_id=555674358]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 58.758797
+offset_right = 350.0
+offset_bottom = 178.75879
+texture = ExtResource("5_f255l")
+region_rect = Rect2(232, 696, 528, 160)
+
+[node name="bloomGrove_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=1218802699]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 278.698
+offset_top = 482.266
+offset_right = 554.629
+offset_bottom = 700.766
+theme_override_styles/normal = SubResource("StyleBoxTexture_s3iia")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a7cb2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n6vat")
+
+[node name="bloomLock_btn" type="NinePatchRect" parent="MarginContainer/NinePatchRect/bloomGrove_btn" unique_id=368365095]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -39.071804
+offset_top = 41.04939
+offset_right = 310.9282
+offset_bottom = 161.04938
+texture = ExtResource("5_f255l")
+region_rect = Rect2(232, 696, 528, 160)
+
+[node name="zypheria_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=620829086]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 738.145
+offset_top = 511.857
+offset_right = 1014.07605
+offset_bottom = 730.3573
+theme_override_styles/normal = SubResource("StyleBoxTexture_qjrtf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kao2h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_agsof")
+
+[node name="zyphLock_btn" type="NinePatchRect" parent="MarginContainer/NinePatchRect/zypheria_btn" unique_id=1287455428]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -13.245597
+offset_top = 33.322136
+offset_right = 336.7544
+offset_bottom = 153.32213
+texture = ExtResource("5_f255l")
+region_rect = Rect2(232, 696, 528, 160)
+
+[node name="cancel_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=2073218442]
+layout_mode = 0
+offset_left = 1057.2452
+offset_top = -105.26709
+offset_right = 2337.245
+offset_bottom = 744.7329
+scale = Vector2(0.19, 0.19)
+theme_override_styles/normal = SubResource("StyleBoxTexture_6kwi8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cs23o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fq18r")
+
+[connection signal="pressed" from="MarginContainer/NinePatchRect/fableIsle_btn" to="." method="_on_fable_isle_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/NinePatchRect/countoria_btn" to="." method="_on_countoria_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/NinePatchRect/bloomGrove_btn" to="." method="_on_bloom_grove_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/NinePatchRect/zypheria_btn" to="." method="_on_zypheria_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/NinePatchRect/cancel_btn" to="." method="_on_cancel_btn_pressed"]

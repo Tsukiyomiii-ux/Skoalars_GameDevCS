@@ -1,0 +1,464 @@
+[gd_scene format=3 uid="uid://dyg2ttg7gw6jt"]
+
+[ext_resource type="Script" uid="uid://d1cv2dco4ahr8" path="res://Assets/Scene/garden_mini_game.gd" id="1_7p4h4"]
+[ext_resource type="Texture2D" uid="uid://cff328c0yle8s" path="res://Assets/Bloom Game 1/New Assets/garden_bg.png" id="1_tf4pm"]
+[ext_resource type="Texture2D" uid="uid://b7dimjcpfxx5i" path="res://Assets/Bloom Game 1/New Assets/main_bg.png" id="1_uaud4"]
+[ext_resource type="Texture2D" uid="uid://b168jswm30eoi" path="res://Assets/Bloom Game 1/New Assets/Sprinkler 1.png" id="2_jn3hk"]
+[ext_resource type="Texture2D" uid="uid://b53i7tujkeg2o" path="res://Assets/Bloom Game 1/New Assets/Sprinkler 2.png" id="3_angyr"]
+[ext_resource type="Texture2D" uid="uid://clncxj0jf2orm" path="res://Assets/Bloom Game 1/New Assets/Sprinkler 3.png" id="4_73cds"]
+[ext_resource type="Texture2D" uid="uid://cn42x7edci70u" path="res://Assets/Bloom Game 1/New Assets/P1-S1.png" id="5_uaud4"]
+[ext_resource type="Texture2D" uid="uid://bnxitw1s7sbib" path="res://Assets/Bloom Game 1/New Assets/P1-S2.png" id="6_qru53"]
+[ext_resource type="Texture2D" uid="uid://dyqjiuv2877aq" path="res://Assets/Bloom Game 1/New Assets/P1-S3.png" id="7_uil8b"]
+[ext_resource type="Texture2D" uid="uid://cfeag33gg3ngp" path="res://Assets/Bloom Game 1/New Assets/P2-S1.png" id="8_73cds"]
+[ext_resource type="Texture2D" uid="uid://d18d1vcd3bm62" path="res://Assets/Bloom Game 1/New Assets/P2-S2.png" id="9_uaud4"]
+[ext_resource type="Texture2D" uid="uid://b340bqx3gx1x3" path="res://Assets/Bloom Game 1/New Assets/P2-S3.png" id="10_qru53"]
+[ext_resource type="Texture2D" uid="uid://lbqp0s5pmvxb" path="res://Assets/Bloom Game 1/New Assets/Frame.png" id="12_qru53"]
+[ext_resource type="Texture2D" uid="uid://ckvjss7bvhxlh" path="res://Assets/Bloom Game 1/New Assets/Question.png" id="13_xxco4"]
+[ext_resource type="Texture2D" uid="uid://bsjvjqmkx2ebf" path="res://Assets/Bloom Game 1/New Assets/0_progress.png" id="14_46x3l"]
+[ext_resource type="Texture2D" uid="uid://b2w0l6agxkb22" path="res://Assets/Bloom Game 1/New Assets/Choices.png" id="14_63lb7"]
+[ext_resource type="Texture2D" uid="uid://dyn71u03l7037" path="res://Assets/Bloom Game 1/New Assets/1 progress.png" id="15_7sn17"]
+[ext_resource type="Texture2D" uid="uid://duhcmmfeq851j" path="res://Assets/Bloom Game 1/New Assets/2 progress.png" id="16_hoghi"]
+[ext_resource type="Texture2D" uid="uid://duy8h1pt47ud5" path="res://Assets/Bloom Game 1/New Assets/3 progress.png" id="17_qufoh"]
+[ext_resource type="Texture2D" uid="uid://og1dsg2dnjl6" path="res://Assets/Bloom Game 1/New Assets/Mission.png" id="18_hoghi"]
+[ext_resource type="Texture2D" uid="uid://cs3e2a2n5ppk5" path="res://Assets/Bloom Game 1/New Assets/40.png" id="22_jf0x4"]
+[ext_resource type="Texture2D" uid="uid://ovtsct0jk8ob" path="res://Assets/Bloom Game 1/New Assets/gameOver.png" id="22_qufoh"]
+[ext_resource type="Texture2D" uid="uid://dg5bnxrwa3sx1" path="res://Assets/Bloom Game 1/New Assets/Next.png" id="23_7sn17"]
+[ext_resource type="Texture2D" uid="uid://bu04eqjie02t" path="res://Assets/Bloom Game 1/New Assets/hourglass.png" id="23_ry1dy"]
+[ext_resource type="Texture2D" uid="uid://dmtv1a7rubaye" path="res://Assets/Bloom Game 1/New Assets/TryAgain.png" id="24_5lpxf"]
+[ext_resource type="Texture2D" uid="uid://bndyao3ijdq5w" path="res://Assets/Bloom Game 1/New Assets/Collect.png" id="24_hoghi"]
+[ext_resource type="Texture2D" uid="uid://dip2mhesly8ie" path="res://Assets/Bloom Game 1/New Assets/QuitButton.png" id="25_ohy5y"]
+[ext_resource type="Texture2D" uid="uid://dixlfq5uf6qko" path="res://Assets/Bloom Game 1/New Assets/Diamond.png" id="25_qufoh"]
+[ext_resource type="Texture2D" uid="uid://b6qrq5h33vrej" path="res://Assets/Bloom Game 1/New Assets/Timer.png" id="27_7sn17"]
+[ext_resource type="AudioStream" uid="uid://bdq2pw80ycjt2" path="res://Assets/Audio/CorrectSFX.MP3" id="27_hoghi"]
+[ext_resource type="AudioStream" uid="uid://cymbakvr5w2w7" path="res://Assets/Audio/WrongSFX.MP3" id="28_qufoh"]
+[ext_resource type="Texture2D" uid="uid://cdyti31f5p6m2" path="res://Assets/Bloom Game 1/New Assets/Cancel.png" id="30_5lpxf"]
+[ext_resource type="Texture2D" uid="uid://cx0mcxsw7j8s8" path="res://Assets/Bloom Game 1/New Assets/Skip.png" id="31_ohy5y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxco4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jn3hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_angyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_73cds")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_46x3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_uaud4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qru53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uil8b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uil8b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_73cds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uaud4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qru53")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ry1dy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_46x3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7sn17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hoghi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qufoh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="FontFile" id="FontFile_7sn17"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a2nr"]
+atlas = ExtResource("23_ry1dy")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lpxf"]
+atlas = ExtResource("23_ry1dy")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohy5y"]
+atlas = ExtResource("23_ry1dy")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g0sg"]
+atlas = ExtResource("23_ry1dy")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ck85"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a2nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lpxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohy5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g0sg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=110744921]
+script = ExtResource("1_7p4h4")
+
+[node name="main_bg" type="Sprite2D" parent="." unique_id=397572661]
+position = Vector2(642.99994, 352)
+scale = Vector2(1, 0.9999999)
+texture = ExtResource("1_uaud4")
+
+[node name="garden_bg" type="Sprite2D" parent="." unique_id=718751472]
+position = Vector2(535.1462, 302.68753)
+scale = Vector2(1.2771345, 1.2858334)
+texture = ExtResource("1_tf4pm")
+
+[node name="Sprinkler" type="AnimatedSprite2D" parent="." unique_id=1346031052]
+position = Vector2(515, 444.00003)
+scale = Vector2(0.64375, 0.57174885)
+sprite_frames = SubResource("SpriteFrames_xxco4")
+
+[node name="Plant1" type="AnimatedSprite2D" parent="." unique_id=1285446383]
+position = Vector2(275, 327)
+sprite_frames = SubResource("SpriteFrames_46x3l")
+
+[node name="Plant2" type="AnimatedSprite2D" parent="." unique_id=1966755637]
+position = Vector2(782, 324)
+sprite_frames = SubResource("SpriteFrames_uil8b")
+
+[node name="UserInterface" type="CanvasLayer" parent="." unique_id=320982071]
+
+[node name="frame" type="Sprite2D" parent="UserInterface" unique_id=1519188481]
+position = Vector2(521.5, 318)
+scale = Vector2(1.0523437, 1)
+texture = ExtResource("12_qru53")
+
+[node name="Control" type="Control" parent="UserInterface" unique_id=1237178219]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="AnimatedSprite2D" parent="UserInterface/Control" unique_id=445784520]
+position = Vector2(228, 57)
+scale = Vector2(0.62142855, 0.68)
+sprite_frames = SubResource("SpriteFrames_ry1dy")
+
+[node name="ObjectiveHolder" type="TextureRect" parent="UserInterface/Control" unique_id=1243976233]
+layout_mode = 0
+offset_left = 974.0
+offset_top = -5.999997
+offset_right = 1405.4287
+offset_bottom = 746.8571
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("18_hoghi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/Control/ObjectiveHolder" unique_id=275626303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 65.71423
+offset_top = 122.85713
+offset_right = -42.857056
+offset_bottom = -52.857178
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MissionText" type="Label" parent="UserInterface/Control/ObjectiveHolder/VBoxContainer" unique_id=181332863]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+
+[node name="QuestionBox" type="TextureRect" parent="UserInterface/Control" unique_id=246840789]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 486.0
+offset_right = 1055.0
+offset_bottom = 686.0
+texture = ExtResource("13_xxco4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuestionText" type="Label" parent="UserInterface/Control/QuestionBox" unique_id=298391646]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -20.5
+offset_right = 0.5
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_7sn17")
+theme_override_font_sizes/font_size = 30
+
+[node name="Choice1" type="TextureButton" parent="UserInterface/Control" unique_id=1263436290]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 640.0
+offset_right = 360.0
+offset_bottom = 714.0
+texture_normal = ExtResource("14_63lb7")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UserInterface/Control/Choice1" unique_id=123937829]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="Choice2" type="TextureButton" parent="UserInterface/Control" unique_id=406615067]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 640.0
+offset_right = 724.0
+offset_bottom = 714.0
+texture_normal = ExtResource("14_63lb7")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UserInterface/Control/Choice2" unique_id=872418003]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="Choice3" type="TextureButton" parent="UserInterface/Control" unique_id=139622586]
+layout_mode = 0
+offset_left = 747.0
+offset_top = 644.0
+offset_right = 1085.0
+offset_bottom = 711.0
+texture_normal = ExtResource("14_63lb7")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UserInterface/Control/Choice3" unique_id=1413426132]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="TimerContainer" type="TextureRect" parent="UserInterface/Control" unique_id=562145953]
+layout_mode = 0
+offset_left = 1119.0
+offset_top = 498.0
+offset_right = 1258.0
+offset_bottom = 668.0
+texture = ExtResource("27_7sn17")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TimeLabel" type="Label" parent="UserInterface/Control/TimerContainer" unique_id=458321723]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -17.0
+offset_right = 0.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="ColorRect" type="ColorRect" parent="UserInterface" unique_id=1937469835]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8039216)
+
+[node name="Over" type="Sprite2D" parent="UserInterface/ColorRect" unique_id=221372763]
+position = Vector2(678, 427)
+scale = Vector2(0.83626306, 0.8486328)
+texture = ExtResource("22_qufoh")
+
+[node name="Hourglass" type="AnimatedSprite2D" parent="UserInterface/ColorRect/Over" unique_id=1581933651]
+position = Vector2(-6.637823, -15.180556)
+scale = Vector2(1.1434747, 0.9407007)
+sprite_frames = SubResource("SpriteFrames_6ck85")
+
+[node name="Try" type="TextureButton" parent="UserInterface/ColorRect/Over" unique_id=1394010420]
+offset_left = -3.9827142
+offset_top = 133.86526
+offset_right = 196.01729
+offset_bottom = 208.86526
+scale = Vector2(1.4, 1.9)
+texture_normal = ExtResource("24_5lpxf")
+
+[node name="TextureButton" type="TextureButton" parent="UserInterface/ColorRect/Over" unique_id=742203736]
+offset_left = -285.4279
+offset_top = 155.94614
+offset_right = 619.57214
+offset_bottom = 411.94614
+scale = Vector2(0.3, 0.4)
+texture_normal = ExtResource("25_ohy5y")
+
+[node name="BlackBG" type="ColorRect" parent="UserInterface" unique_id=2108814268]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4627451)
+
+[node name="PopupHolder" type="Sprite2D" parent="UserInterface/BlackBG" unique_id=2063467521]
+position = Vector2(651, 353.99997)
+scale = Vector2(0.46875, 0.48632813)
+texture = ExtResource("22_jf0x4")
+
+[node name="Next" type="TextureButton" parent="UserInterface/BlackBG/PopupHolder" unique_id=455995499]
+offset_left = 168.53331
+offset_top = 296.0964
+offset_right = 368.53333
+offset_bottom = 396.0964
+scale = Vector2(2.1000001, 2.1000001)
+texture_normal = ExtResource("23_7sn17")
+
+[node name="Collect" type="TextureButton" parent="UserInterface/BlackBG/PopupHolder" unique_id=353316980]
+offset_left = -234.66667
+offset_top = 69.91171
+offset_right = -34.66667
+offset_bottom = 169.91171
+scale = Vector2(2.2, 2.8)
+texture_normal = ExtResource("24_hoghi")
+
+[node name="Diamond" type="Sprite2D" parent="UserInterface/BlackBG/PopupHolder" unique_id=947622061]
+position = Vector2(-270.93335, -22.618382)
+scale = Vector2(1.8823335, 1.5811448)
+texture = ExtResource("25_qufoh")
+
+[node name="Back" type="TextureButton" parent="UserInterface/BlackBG/PopupHolder" unique_id=212352087]
+offset_left = -588.80005
+offset_top = 314.60245
+offset_right = -388.80005
+offset_bottom = 414.60245
+scale = Vector2(2.2, 2.1000001)
+texture_normal = ExtResource("30_5lpxf")
+
+[node name="Sprite2D" type="Sprite2D" parent="UserInterface/BlackBG/PopupHolder" unique_id=1839929318]
+position = Vector2(258.1333, -30.843306)
+scale = Vector2(2.3619998, 3.3343377)
+texture = ExtResource("31_ohy5y")
+
+[node name="SfxCorrect" type="AudioStreamPlayer2D" parent="." unique_id=1835489546]
+stream = ExtResource("27_hoghi")
+
+[node name="SfxWrong" type="AudioStreamPlayer2D" parent="." unique_id=243307250]
+position = Vector2(3, 7)
+stream = ExtResource("28_qufoh")
+
+[connection signal="pressed" from="UserInterface/Control/Choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="UserInterface/Control/Choice2" to="." method="_on_choice_2_pressed"]
+[connection signal="pressed" from="UserInterface/Control/Choice3" to="." method="_on_choice_3_pressed"]
+[connection signal="pressed" from="UserInterface/ColorRect/Over/Try" to="." method="_on_try_pressed"]
+[connection signal="pressed" from="UserInterface/ColorRect/Over/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="UserInterface/BlackBG/PopupHolder/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="UserInterface/BlackBG/PopupHolder/Back" to="." method="_on_back_pressed"]
