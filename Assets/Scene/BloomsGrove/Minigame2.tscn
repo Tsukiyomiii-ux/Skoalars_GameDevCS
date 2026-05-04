@@ -1,48 +1,48 @@
 [gd_scene format=3 uid="uid://c530aw71utqbs"]
 
-[ext_resource type="Texture2D" uid="uid://b7dimjcpfxx5i" path="res://Assets/Bloom Game 1/New Assets/main_bg.png" id="1_2n6ae"]
-[ext_resource type="Script" uid="uid://b6xn7e4fqbdfy" path="res://Assets/Scene/minigame_2.gd" id="1_dqg2o"]
-[ext_resource type="Texture2D" uid="uid://rfiaq4gwk2w0" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/garden_bg.png" id="2_dqg2o"]
-[ext_resource type="Texture2D" uid="uid://cmsq7g7h16o84" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Frame.png" id="3_ita0q"]
-[ext_resource type="Texture2D" uid="uid://dnnlcukb4w6yd" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Bio.png" id="4_o721d"]
-[ext_resource type="Texture2D" uid="uid://bd62neds3vmcu" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Non.png" id="5_3xy1d"]
-[ext_resource type="Texture2D" uid="uid://bniu83cx7wb5u" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Rec.png" id="6_u2s1r"]
-[ext_resource type="Texture2D" uid="uid://cfetitalqv4y" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Timer.png" id="8_3xy1d"]
-[ext_resource type="Texture2D" uid="uid://ecnpwe6uidky" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Progress.png" id="9_u2s1r"]
-[ext_resource type="Texture2D" uid="uid://og1dsg2dnjl6" path="res://Assets/Bloom Game 1/New Assets/Mission.png" id="10_akh7s"]
-[ext_resource type="Texture2D" uid="uid://t5nbi65f0uym" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Guessholder.png" id="11_u2s1r"]
-[ext_resource type="Texture2D" uid="uid://d1w1nmqe33h0p" path="res://Assets/Bloom Game 1/New Assets/41.png" id="12_eniax"]
-[ext_resource type="Texture2D" uid="uid://ovtsct0jk8ob" path="res://Assets/Bloom Game 1/New Assets/gameOver.png" id="12_fk73q"]
-[ext_resource type="Texture2D" uid="uid://bu04eqjie02t" path="res://Assets/Bloom Game 1/New Assets/hourglass.png" id="13_42bio"]
-[ext_resource type="Texture2D" uid="uid://dixlfq5uf6qko" path="res://Assets/Bloom Game 1/New Assets/Diamond.png" id="13_ji7te"]
-[ext_resource type="Texture2D" uid="uid://bjutkb8oumhrx" path="res://Assets/Bloom Game 1/New Assets/Key.png" id="14_akh7s"]
-[ext_resource type="Texture2D" uid="uid://dmtv1a7rubaye" path="res://Assets/Bloom Game 1/New Assets/TryAgain.png" id="14_cx3rn"]
-[ext_resource type="Texture2D" uid="uid://dip2mhesly8ie" path="res://Assets/Bloom Game 1/New Assets/QuitButton.png" id="15_mv4v1"]
-[ext_resource type="Texture2D" uid="uid://bndyao3ijdq5w" path="res://Assets/Bloom Game 1/New Assets/Collect.png" id="16_u5k5w"]
-[ext_resource type="AudioStream" uid="uid://bdq2pw80ycjt2" path="res://Assets/Audio/CorrectSFX.MP3" id="18_akh7s"]
-[ext_resource type="Texture2D" uid="uid://bndf2aegl3mjo" path="res://Assets/Bloom Game 1/New Assets/Map.png" id="19_42bio"]
-[ext_resource type="AudioStream" uid="uid://cymbakvr5w2w7" path="res://Assets/Audio/WrongSFX.MP3" id="19_tn6i5"]
-[ext_resource type="Texture2D" uid="uid://cdyti31f5p6m2" path="res://Assets/Bloom Game 1/New Assets/Cancel.png" id="21_cx3rn"]
-[ext_resource type="Texture2D" uid="uid://c8756q252qhmo" path="res://Assets/Bloom Game 1/New Assets/RESCUE.png" id="22_mv4v1"]
-[ext_resource type="VideoStream" uid="uid://dan10l5exrtvv" path="res://Assets/Bloom Game 1/New Assets/Shellby-Rescued.ogv" id="23_cx3rn"]
+[ext_resource type="Script" uid="uid://b6xn7e4fqbdfy" path="res://Assets/Scripts/BloomsGrove/minigame_2.gd" id="1_k0b3l"]
+[ext_resource type="Texture2D" uid="uid://b7dimjcpfxx5i" path="res://Assets/Bloom Game 1/New Assets/main_bg.png" id="2_u30w0"]
+[ext_resource type="Texture2D" uid="uid://rfiaq4gwk2w0" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/garden_bg.png" id="3_vbcun"]
+[ext_resource type="Texture2D" uid="uid://cmsq7g7h16o84" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Frame.png" id="4_wsd13"]
+[ext_resource type="Texture2D" uid="uid://dnnlcukb4w6yd" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Bio.png" id="5_gpnm6"]
+[ext_resource type="Texture2D" uid="uid://bd62neds3vmcu" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Non.png" id="6_tocp0"]
+[ext_resource type="Texture2D" uid="uid://bniu83cx7wb5u" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Rec.png" id="7_fpcej"]
+[ext_resource type="Texture2D" uid="uid://cfetitalqv4y" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Timer.png" id="8_6w0e6"]
+[ext_resource type="Texture2D" uid="uid://ecnpwe6uidky" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Progress.png" id="9_3akoo"]
+[ext_resource type="Texture2D" uid="uid://og1dsg2dnjl6" path="res://Assets/Bloom Game 1/New Assets/Mission.png" id="10_fjdae"]
+[ext_resource type="Texture2D" uid="uid://t5nbi65f0uym" path="res://Assets/Bloom Game 1/New Assets/Game 2 BG/Guessholder.png" id="11_lslpk"]
+[ext_resource type="Texture2D" uid="uid://ovtsct0jk8ob" path="res://Assets/Bloom Game 1/New Assets/gameOver.png" id="12_vnb0j"]
+[ext_resource type="Texture2D" uid="uid://bu04eqjie02t" path="res://Assets/Bloom Game 1/New Assets/hourglass.png" id="13_bsiqf"]
+[ext_resource type="Texture2D" uid="uid://dmtv1a7rubaye" path="res://Assets/Bloom Game 1/New Assets/TryAgain.png" id="14_7uhuj"]
+[ext_resource type="Texture2D" uid="uid://dip2mhesly8ie" path="res://Assets/Bloom Game 1/New Assets/QuitButton.png" id="15_kjbj0"]
+[ext_resource type="Texture2D" uid="uid://d1w1nmqe33h0p" path="res://Assets/Bloom Game 1/New Assets/41.png" id="16_7tx3u"]
+[ext_resource type="Texture2D" uid="uid://dixlfq5uf6qko" path="res://Assets/Bloom Game 1/New Assets/Diamond.png" id="17_0b3ij"]
+[ext_resource type="Texture2D" uid="uid://bjutkb8oumhrx" path="res://Assets/Bloom Game 1/New Assets/Key.png" id="18_qpcyu"]
+[ext_resource type="Texture2D" uid="uid://bndf2aegl3mjo" path="res://Assets/Bloom Game 1/New Assets/Map.png" id="19_arncp"]
+[ext_resource type="Texture2D" uid="uid://bndyao3ijdq5w" path="res://Assets/Bloom Game 1/New Assets/Collect.png" id="20_uqcaf"]
+[ext_resource type="Texture2D" uid="uid://cdyti31f5p6m2" path="res://Assets/Bloom Game 1/New Assets/Cancel.png" id="21_h1tbo"]
+[ext_resource type="Texture2D" uid="uid://c8756q252qhmo" path="res://Assets/Bloom Game 1/New Assets/RESCUE.png" id="22_jn7w3"]
+[ext_resource type="AudioStream" uid="uid://bdq2pw80ycjt2" path="res://Assets/Audio/CorrectSFX.MP3" id="23_8leg4"]
+[ext_resource type="AudioStream" uid="uid://cymbakvr5w2w7" path="res://Assets/Audio/WrongSFX.MP3" id="24_6l1sy"]
+[ext_resource type="VideoStream" uid="uid://dan10l5exrtvv" path="res://Assets/Bloom Game 1/New Assets/Shellby-Rescued.ogv" id="25_ijxta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnr2y"]
 size = Vector2(302, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_53dy6"]
-atlas = ExtResource("13_42bio")
+atlas = ExtResource("13_bsiqf")
 region = Rect2(768, 512, 768, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jlpoy"]
-atlas = ExtResource("13_42bio")
+atlas = ExtResource("13_bsiqf")
 region = Rect2(768, 0, 768, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4amd1"]
-atlas = ExtResource("13_42bio")
+atlas = ExtResource("13_bsiqf")
 region = Rect2(0, 512, 768, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lf0r7"]
-atlas = ExtResource("13_42bio")
+atlas = ExtResource("13_bsiqf")
 region = Rect2(0, 0, 768, 512)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1w0ls"]
@@ -66,27 +66,27 @@ animations = [{
 }]
 
 [node name="TrashMiniGame" type="Node2D" unique_id=966201221]
-script = ExtResource("1_dqg2o")
+script = ExtResource("1_k0b3l")
 
 [node name="main_bg" type="Sprite2D" parent="." unique_id=1617231171]
 position = Vector2(641, 363)
-texture = ExtResource("1_2n6ae")
+texture = ExtResource("2_u30w0")
 
 [node name="gardentrash_bg" type="Sprite2D" parent="." unique_id=1375860181]
 position = Vector2(580.5, 345.5)
 scale = Vector2(1.2277777, 1.2739999)
-texture = ExtResource("2_dqg2o")
+texture = ExtResource("3_vbcun")
 
 [node name="Frame" type="Sprite2D" parent="." unique_id=1187912056]
 position = Vector2(586.75, 334.75)
 scale = Vector2(1.5156251, 1.4850001)
-texture = ExtResource("3_ita0q")
+texture = ExtResource("4_wsd13")
 
 [node name="Bin_bio" type="Area2D" parent="." unique_id=1534728183 groups=["bio"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="Bin_bio" unique_id=47238061]
 position = Vector2(231, 628)
-texture = ExtResource("4_o721d")
+texture = ExtResource("5_gpnm6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bin_bio" unique_id=500758674]
 position = Vector2(236, 586.5)
@@ -96,7 +96,7 @@ shape = SubResource("RectangleShape2D_qnr2y")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bin_non" unique_id=268167811]
 position = Vector2(604, 627)
-texture = ExtResource("5_3xy1d")
+texture = ExtResource("6_tocp0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bin_non" unique_id=1632665954]
 position = Vector2(609, 585.5)
@@ -106,7 +106,7 @@ shape = SubResource("RectangleShape2D_qnr2y")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bin_rec" unique_id=1267839905]
 position = Vector2(958, 625)
-texture = ExtResource("6_u2s1r")
+texture = ExtResource("7_fpcej")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bin_rec" unique_id=498796373]
 position = Vector2(963, 583.5)
@@ -118,7 +118,7 @@ offset_top = -7.9999995
 offset_right = 1369.0
 offset_bottom = 292.0
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("8_3xy1d")
+texture = ExtResource("8_6w0e6")
 
 [node name="TimerText" type="Label" parent="Timer" unique_id=1401263802]
 layout_mode = 1
@@ -141,7 +141,7 @@ offset_left = 665.0
 offset_top = -4.0
 offset_right = 965.0
 offset_bottom = 96.0
-texture = ExtResource("9_u2s1r")
+texture = ExtResource("9_3akoo")
 
 [node name="ProgressText" type="Label" parent="Progress" unique_id=907858412]
 layout_mode = 1
@@ -164,7 +164,7 @@ offset_left = -11.0
 offset_top = -12.0
 offset_right = 289.0
 offset_bottom = 500.0
-texture = ExtResource("10_akh7s")
+texture = ExtResource("10_fjdae")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Mission" unique_id=73265461]
 layout_mode = 0
@@ -184,7 +184,7 @@ offset_left = 385.0
 offset_top = 111.0
 offset_right = 836.0
 offset_bottom = 515.0
-texture = ExtResource("11_u2s1r")
+texture = ExtResource("11_lslpk")
 
 [node name="Clue" type="Label" parent="Holder" unique_id=1666063691]
 layout_mode = 1
@@ -209,7 +209,7 @@ color = Color(0, 0, 0, 0.7294118)
 [node name="Over" type="Sprite2D" parent="ColorRect2" unique_id=806417274]
 position = Vector2(638, 417)
 scale = Vector2(0.7766927, 0.73742676)
-texture = ExtResource("12_fk73q")
+texture = ExtResource("12_vnb0j")
 
 [node name="Hourglass" type="AnimatedSprite2D" parent="ColorRect2/Over" unique_id=548251502]
 sprite_frames = SubResource("SpriteFrames_1w0ls")
@@ -220,7 +220,7 @@ offset_top = 120.76352
 offset_right = 219.47385
 offset_bottom = 195.76352
 scale = Vector2(1.4, 2)
-texture_normal = ExtResource("14_cx3rn")
+texture_normal = ExtResource("14_7uhuj")
 
 [node name="Quit" type="TextureButton" parent="ColorRect2/Over" unique_id=1029284115]
 offset_left = -316.45004
@@ -228,7 +228,7 @@ offset_top = 145.66321
 offset_right = 588.5499
 offset_bottom = 401.6632
 scale = Vector2(0.3, 0.4)
-texture_normal = ExtResource("15_mv4v1")
+texture_normal = ExtResource("15_kjbj0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=321570034]
 offset_right = 1279.0
@@ -238,22 +238,22 @@ color = Color(0, 0, 0, 0.50980395)
 [node name="Popup" type="Sprite2D" parent="ColorRect" unique_id=657988311]
 position = Vector2(659.00006, 339)
 scale = Vector2(0.49707034, 0.4731445)
-texture = ExtResource("12_eniax")
+texture = ExtResource("16_7tx3u")
 
 [node name="Diamond" type="Sprite2D" parent="ColorRect/Popup" unique_id=188735389]
 position = Vector2(-18.106293, -112.016525)
 scale = Vector2(1.3851862, 1.3982456)
-texture = ExtResource("13_ji7te")
+texture = ExtResource("17_0b3ij")
 
 [node name="Key" type="Sprite2D" parent="ColorRect/Popup" unique_id=122382323]
 position = Vector2(-297.74466, -31.702759)
 scale = Vector2(1.2644794, 1.0600827)
-texture = ExtResource("14_akh7s")
+texture = ExtResource("18_qpcyu")
 
 [node name="Skip" type="Sprite2D" parent="ColorRect/Popup" unique_id=907493543]
 position = Vector2(243.42622, -44.383904)
 scale = Vector2(1.1560417, 1.0919352)
-texture = ExtResource("19_42bio")
+texture = ExtResource("19_arncp")
 
 [node name="Collect" type="TextureButton" parent="ColorRect/Popup" unique_id=427394347]
 offset_left = -221.29675
@@ -261,7 +261,7 @@ offset_top = 61.29206
 offset_right = -21.296753
 offset_bottom = 161.29205
 scale = Vector2(2.4, 2.8)
-texture_normal = ExtResource("16_u5k5w")
+texture_normal = ExtResource("20_uqcaf")
 
 [node name="Back" type="TextureButton" parent="ColorRect/Popup" unique_id=28209576]
 offset_left = -609.57166
@@ -269,7 +269,7 @@ offset_top = 291.66568
 offset_right = -409.57166
 offset_bottom = 391.66568
 scale = Vector2(2.2, 2.5)
-texture_normal = ExtResource("21_cx3rn")
+texture_normal = ExtResource("21_h1tbo")
 
 [node name="Rescue" type="TextureButton" parent="ColorRect/Popup" unique_id=1332098019]
 offset_left = 46.271057
@@ -277,13 +277,13 @@ offset_top = 169.08154
 offset_right = 1310.271
 offset_bottom = 1011.08154
 scale = Vector2(0.5, 0.6)
-texture_normal = ExtResource("22_mv4v1")
+texture_normal = ExtResource("22_jn7w3")
 
 [node name="SfxCorrect" type="AudioStreamPlayer2D" parent="." unique_id=602475812]
-stream = ExtResource("18_akh7s")
+stream = ExtResource("23_8leg4")
 
 [node name="SfxWrong" type="AudioStreamPlayer2D" parent="." unique_id=461676775]
-stream = ExtResource("19_tn6i5")
+stream = ExtResource("24_6l1sy")
 
 [node name="RescueVideo" type="VideoStreamPlayer" parent="." unique_id=1449285210]
 offset_left = -25.999998
@@ -291,7 +291,7 @@ offset_top = -9.999999
 offset_right = 1894.0
 offset_bottom = 1070.0
 scale = Vector2(0.7, 0.7)
-stream = ExtResource("23_cx3rn")
+stream = ExtResource("25_ijxta")
 
 [connection signal="pressed" from="ColorRect2/Over/Try" to="." method="_on_try_pressed"]
 [connection signal="pressed" from="ColorRect2/Over/Quit" to="." method="_on_quit_pressed"]

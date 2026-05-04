@@ -2,6 +2,10 @@ extends Node
 
 # Currency
 var diamonds: int = 5
+var loading_screen_scene = preload("res://Assets/Scene/loading_screen.tscn")
+var loading_instance
+var target_path : String
+var progress = [] # This array will hold the loading percentage
 
 # Skills (false = not owned)
 var skills = {
@@ -46,6 +50,44 @@ var islands_unlocked = {
 signal diamonds_changed(new_amount)
 signal skill_purchased(skill_name)
 signal island_unlocked(island_name)
+
+func load_scene(path: String):
+	target_path = path
+	
+	# 1. Spawn the loading screen GUI
+	loading_instance = loading_screen_scene.instantiate()
+	get_tree().root.add_child(loading_instance)
+	
+	# 2. Start the background loading thread
+	ResourceLoader.load_threaded_request(path)
+	set_process(true)
+
+func _process(_delta):
+	if target_path == "":
+		set_process(false)
+		return
+		
+	# Check the current status of the background loading
+	var status = ResourceLoader.load_threaded_get_status(target_path, progress)
+	
+	# Pass the progress (0.0 to 1.0) to the bar's update function
+	if loading_instance:
+		loading_instance.update_bar(progress[0])
+	
+	if status == ResourceLoader.THREAD_LOAD_LOADED:
+		# When finished, get the loaded scene data
+		var new_scene = ResourceLoader.load_threaded_get(target_path)
+		
+		# Short delay so the user sees the full bar for a moment
+		await get_tree().create_timer(0.5).timeout
+		
+		get_tree().change_scene_to_packed(new_scene)
+		
+		# Clean up the loading overlay
+		loading_instance.queue_free()
+		target_path = ""
+		set_process(false)
+
 
 func _ready():
 	load_game()
