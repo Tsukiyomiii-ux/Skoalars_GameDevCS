@@ -3,6 +3,8 @@
 [ext_resource type="VideoStream" uid="uid://debnq8kib0g13" path="res://Assets/Cutscenes/hm/Storyboard Animation(intro3).ogv" id="1_tgyci"]
 [ext_resource type="Script" uid="uid://bs7lquggphtbp" path="res://Assets/Scripts/video_stream_player.gd" id="2_6wcqb"]
 [ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="3_sq2bc"]
+[ext_resource type="Texture2D" uid="uid://81d7vp6m7mkr" path="res://Assets/Sprite/Buttons/ChatGPT Image May 4, 2026, 04_36_10 PM.png" id="4_0rafb"]
+[ext_resource type="Texture2D" uid="uid://bfrrgmh0whtlh" path="res://Assets/Sprite/Buttons/ChatGPT Image May 4, 2026, 04_36_06 PM.png" id="5_g0dku"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rafb"]
 texture = ExtResource("3_sq2bc")
@@ -20,31 +22,50 @@ texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(840, 368, 328, 168)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sq2bc"]
-texture = ExtResource("3_sq2bc")
-region_rect = Rect2(64, 752, 256, 240)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsecu"]
+texture = ExtResource("4_0rafb")
+region_rect = Rect2(248, 48, 1048, 824)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_olfm8"]
-texture = ExtResource("3_sq2bc")
-region_rect = Rect2(72, 760, 240, 232)
+texture = ExtResource("4_0rafb")
+region_rect = Rect2(232, 48, 1064, 848)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h0yf5"]
-texture = ExtResource("3_sq2bc")
+texture = ExtResource("4_0rafb")
 texture_margin_left = 6.0
 texture_margin_top = 6.0
 texture_margin_right = 6.0
 texture_margin_bottom = 6.0
-region_rect = Rect2(64, 752, 248, 240)
+region_rect = Rect2(264, 64, 1008, 824)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6htyi"]
+texture = ExtResource("5_g0dku")
+region_rect = Rect2(248, 48, 1048, 824)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71lh0"]
+texture = ExtResource("5_g0dku")
+region_rect = Rect2(232, 48, 1064, 848)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_liv34"]
+texture = ExtResource("5_g0dku")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(264, 64, 1008, 824)
 
 [node name="opening_cutscene" type="Node2D" unique_id=637461611]
+metadata/_edit_horizontal_guides_ = [56.0]
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1180389091]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1180389091 node_paths=PackedStringArray("pasplay_btn", "paspause_btn")]
 offset_right = 1280.0
 offset_bottom = 720.0
 stream = ExtResource("1_tgyci")
 autoplay = true
 expand = true
 script = ExtResource("2_6wcqb")
+pasplay_btn = NodePath("HBoxContainer/MarginContainer/NinePatchRect2/pasplay_btn")
+paspause_btn = NodePath("HBoxContainer/MarginContainer/NinePatchRect2/paspause_btn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VideoStreamPlayer" unique_id=1977659521]
 custom_minimum_size = Vector2(1280, 60)
@@ -83,14 +104,26 @@ custom_minimum_size = Vector2(120, 60)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="pasplay_btn" type="Button" parent="VideoStreamPlayer/HBoxContainer/MarginContainer/NinePatchRect2" unique_id=996288216]
+[node name="paspause_btn" type="Button" parent="VideoStreamPlayer/HBoxContainer/MarginContainer/NinePatchRect2" unique_id=996288216]
 layout_mode = 0
-offset_right = 60.0
-offset_bottom = 60.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_sq2bc")
+offset_right = 250.0
+offset_bottom = 200.0
+scale = Vector2(0.26996696, 0.29304636)
+theme_override_styles/normal = SubResource("StyleBoxTexture_xsecu")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_olfm8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_h0yf5")
 
+[node name="pasplay_btn" type="Button" parent="VideoStreamPlayer/HBoxContainer/MarginContainer/NinePatchRect2" unique_id=750646204]
+visible = false
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 200.0
+scale = Vector2(0.26996696, 0.29304636)
+theme_override_styles/normal = SubResource("StyleBoxTexture_6htyi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_71lh0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_liv34")
+
 [connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
 [connection signal="pressed" from="VideoStreamPlayer/HBoxContainer/MarginContainer/NinePatchRect/skip_btn" to="VideoStreamPlayer" method="_on_skip_btn_pressed"]
+[connection signal="pressed" from="VideoStreamPlayer/HBoxContainer/MarginContainer/NinePatchRect2/paspause_btn" to="VideoStreamPlayer" method="_on_paspause_btn_pressed"]
 [connection signal="pressed" from="VideoStreamPlayer/HBoxContainer/MarginContainer/NinePatchRect2/pasplay_btn" to="VideoStreamPlayer" method="_on_pasplay_btn_pressed"]

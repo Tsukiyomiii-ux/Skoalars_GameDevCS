@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="6_wo1e8"]
 [ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="7_e6qhv"]
 [ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="8_3idep"]
+[ext_resource type="Texture2D" uid="uid://es647ytq5k65" path="res://Assets/Sprite/Buttons/MAP, Mission, Lock & Unlock Buttons.png" id="8_rw33h"]
 [ext_resource type="Texture2D" uid="uid://djo2qbnf5p85d" path="res://Assets/Sprite/Buttons/main menu buttons (1).png" id="9_yqgn5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
@@ -388,24 +389,24 @@ texture = ExtResource("8_3idep")
 region_rect = Rect2(432, 152, 672, 688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03i5e"]
-texture = ExtResource("6_wo1e8")
-region_rect = Rect2(40, 352, 392, 120)
+texture = ExtResource("8_rw33h")
+region_rect = Rect2(224, 168, 544, 160)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4wq3e"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("8_rw33h")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
-region_rect = Rect2(40, 360, 392, 112)
+region_rect = Rect2(224, 168, 544, 160)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8miks"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("8_rw33h")
 texture_margin_left = 15.0
 texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
-region_rect = Rect2(40, 352, 392, 120)
+region_rect = Rect2(224, 160, 544, 176)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbpqs"]
 texture = ExtResource("9_yqgn5")
@@ -798,7 +799,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="start_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect" unique_id=1335675035]
+[node name="mapStart_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect" unique_id=1335675035]
 z_index = 40
 layout_mode = 1
 anchors_preset = 8
@@ -842,7 +843,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_8noq3")
 custom_minimum_size = Vector2(1200, 1000)
 layout_mode = 2
 
-[node name="shop_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect3" unique_id=645613480]
+[node name="skills_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect3" unique_id=645613480]
 z_index = 40
 custom_minimum_size = Vector2(800, 1200)
 layout_mode = 0
@@ -873,6 +874,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_0skql")
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control" method="_on_quit_btn_pressed"]
 [connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/HSlider" to="Control" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/ext_btn" to="Control" method="_on_ext_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/start_btn" to="Control" method="_on_start_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn" to="Control" method="_on_map_start_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect2/diamond_btn" to="Control" method="_on_diamond_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect3/shop_btn" to="Control" method="_on_shop_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect3/skills_btn" to="Control" method="_on_skills_btn_pressed"]

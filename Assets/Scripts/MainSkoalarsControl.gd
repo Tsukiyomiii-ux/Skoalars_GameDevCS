@@ -38,8 +38,8 @@ func _on_mute_btn_pressed():
 func _on_h_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(0, value)
 
-func _on_shop_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://Assets/Scene/skillShop.tscn")
+func _on_skills_btn_pressed() -> void:
+	get_tree().change_scene_to_file("res://Assets/Scene/SkillEquip.tscn")
 
 func show_reward_popup():
 	if reward_cont and is_instance_valid(reward_cont):
@@ -89,4 +89,8 @@ func _on_done_btn_pressed():
 
 
 func _on_diamond_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://Assets/Scene/diamondShop.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/skillShop.tscn")
+
+
+func _on_map_start_btn_pressed() -> void:
+	get_tree().change_scene_to_file("res://Assets/Scene/mapSelector.tscn")

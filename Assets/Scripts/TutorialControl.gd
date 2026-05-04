@@ -8,10 +8,10 @@ extends Control
 @export var close_cont: VBoxContainer
 @export var reward_btn_cont: HBoxContainer
 @onready var reward_cont = $reward_cont
-@onready var skip_btn = $skip_btn
+@export var skip_btn: Button
 @onready var anim = $AnimationPlayer
-@onready var done_btn = $done_btn
-
+@onready var done_btn = $reward_cont/VBoxContainer/NinePatchRect/NinePatchRect2/done_btn
+@export var finished_btn: Button
 # --- QUEST UI (with null safety) ---
 @onready var word_container = %WordContainer
 @onready var clue_label = %ClueLabel
@@ -25,7 +25,6 @@ extends Control
 @onready var snd_level_start = %SndLevelStart
 @onready var snd_ticking = %SndTicking
 
-# Add these functions to your quest script
 func can_use_hint() -> bool:
 	return GameManager.has_skill("hint") and GameManager.spend_diamonds(5)
 
@@ -38,12 +37,9 @@ func can_add_time() -> bool:
 func can_skip_question() -> bool:
 	return GameManager.has_skill("skip") and GameManager.spend_diamonds(15)
 
-# Skill button handlers
 func _on_hint_skill_pressed():
 	if can_use_hint():
-		# Reveal random letter
 		print("💡 Hint used!")
-		# Your hint logic here
 
 func _on_freeze_pressed():
 	if can_freeze_time():
@@ -61,9 +57,8 @@ func _on_skip_question_pressed():
 		start_new_word()
 		print("⏭️ Skipped!")
 
-# Rewards
 func complete_level():
-	GameManager.add_diamonds(25)  # Level reward
+	GameManager.add_diamonds(25)
 
 # --- STATES ---
 var step := 0
@@ -96,14 +91,14 @@ func _ready() -> void:
 	AudioManager.play_music(preload("res://Assets/Audio/SoftEng_BG1.wav"))
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
-	# Skip button VISIBLE from start
-	safe_set_visible(skip_btn, true)
+	# Done visible, skip hidden at start
+	safe_set_visible(finished_btn, true)
+	safe_set_visible(skip_btn, false)
 	
 	if snd_level_start and is_instance_valid(snd_level_start):
 		snd_level_start.play()
 	
-	print("🎮 Tutorial mode started - Skip button visible")
-
+	print("🎮 Tutorial mode started - Done button visible")
 
 func safe_set_visible(node: Node, visible: bool):
 	if node and is_instance_valid(node):
@@ -123,40 +118,32 @@ func pause():
 func _unhandled_input(event):
 	if tutorial_done:
 		return
-
 	if event.is_action_pressed("ui_down"):
 		step += 1
 		print("Tutorial step:", step)
-		if step >= 3:  # Tutorial complete after 3 down presses
+		if step >= 3:
 			tutorial_done = true
 			print("✅ Tutorial complete!")
-			safe_set_visible(skip_btn, true)  # Show skip button
 
 # Show quest with blur + hide buttons
 func show_quest_with_blur():
 	is_quest_mode = true
 	
-	# Show quest UI
 	safe_set_visible(quest_Cont, true)
-	
-	# Show game elements
 	safe_set_visible(word_container, true)
 	safe_set_visible(clue_label, true)
 	safe_set_visible(progress_label, true)
 	safe_set_visible(time_label, true)
-	
-	# Hide ALL buttons except skip
 	safe_set_visible(open_cont, false)
 	safe_set_visible(volume_cont, false)
 	safe_set_visible(reward_btn_cont, false)
 	safe_set_visible(close_cont, false)
 	
-	# Keep ONLY skip button visible
-	safe_set_visible(skip_btn, true)
+	# Swap buttons
+	safe_set_visible(finished_btn, false)
+	safe_set_visible(skip_btn, false)
 	
 	$AnimationPlayer.play_backwards("blur")
-	
-	# START THE GAME
 	setup_word_pool()
 	start_new_word()
 
@@ -168,7 +155,6 @@ func show_reward():
 	if snd_ticking and is_instance_valid(snd_ticking):
 		snd_ticking.stop()
 
-	# Hide quest UI
 	safe_set_visible(quest_Cont, false)
 	safe_set_visible(close_cont, false)
 	safe_set_visible(bottom_cont, false)
@@ -176,16 +162,14 @@ func show_reward():
 	safe_set_visible(clue_label, false)
 	safe_set_visible(progress_label, false)
 	safe_set_visible(time_label, false)
-
-	# Show reward UI
 	safe_set_visible(reward_cont, true)
 	safe_set_visible(reward_btn_cont, false)
-	safe_set_visible(skip_btn, false)  # Hide skip
-	safe_set_visible(done_btn, true)   # Show done button
+	safe_set_visible(skip_btn, false)
+	safe_set_visible(done_btn, true)
+	safe_set_visible(finished_btn, true)
 	$AnimationPlayer.play_backwards("blur")
 
-
-# --- QUEST FUNCTIONS (UNCHANGED) ---
+# --- QUEST FUNCTIONS ---
 func _process(delta):
 	if is_timer_active and not is_game_finished and tutorial_done:
 		if time_left > 0:
@@ -210,15 +194,12 @@ func setup_word_pool():
 func start_new_word():
 	if progress_label and is_instance_valid(progress_label):
 		progress_label.text = str(correct_answers) + "/2"
-
 	if word_container and is_instance_valid(word_container):
 		for child in word_container.get_children():
 			child.queue_free()
-
 	if correct_answers >= 2:
 		show_reward()
 		return
-
 	target_word = current_session_words[current_word_index]
 	time_left = 15.0
 	setup_display_array()
@@ -362,21 +343,21 @@ func shake_text():
 
 # --- UI BUTTONS ---
 func _on_home_btn_pressed() -> void:
-	play()	
+	play()
 	get_tree().change_scene_to_file("res://Assets/Scene/main_menu.tscn")
 
+func _on_done_btn_pressed() -> void:
+	tutorial_done = true
+	get_tree().change_scene_to_file("res://Assets/Scene/main_island.tscn")
+
 func _on_skip_btn_pressed() -> void:
-	if tutorial_done and is_quest_mode:
-		# Quest active → Show reward
-		show_reward()
-	elif tutorial_done:
-		# Tutorial done → Start quest
-		show_quest_with_blur()
-	else:
-		# Skip tutorial → Start quest immediately
-		tutorial_done = true
-		show_quest_with_blur()
-		print("⏭️ Tutorial skipped!")
+	show_reward()
+	print("⏭️ Quest skipped - Showing reward!")
+
+func _on_finished_btn_pressed() -> void:
+	tutorial_done = true
+	show_quest_with_blur()
+	print("✅ Finished pressed - Quest starting!")
 
 func _on_mute_btn_pressed():
 	AudioManager.toggle_mute()
@@ -420,9 +401,6 @@ func _on_ext_btn_pressed() -> void:
 	safe_toggle_visibility(bottom_cont)
 	if anim and is_instance_valid(anim):
 		anim.play("blur")
-
-func _on_done_btn_pressed():
-	get_tree().change_scene_to_file("res://Assets/Scene/main_island.tscn")
 
 func _input(event):
 	if event.is_action_pressed("ui_text_backspace"):

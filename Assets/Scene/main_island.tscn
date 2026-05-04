@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://lecfwo7f72ia"]
 
 [ext_resource type="Texture2D" uid="uid://cj274feyrapei" path="res://Assets/Sprite/Tilesets/Grass.png" id="1_lmjrh"]
+[ext_resource type="Script" uid="uid://bptkjk4sp3o40" path="res://Assets/Scene/main_island.gd" id="1_ml317"]
 [ext_resource type="Texture2D" uid="uid://bw5spkx0fbrnt" path="res://Assets/Sprite/Tilesets/Hills.png" id="2_htla3"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
 [ext_resource type="Texture2D" uid="uid://c8us716ex6g4f" path="res://Assets/Sprite/Tilesets/Water.png" id="5_s1d72"]
@@ -19,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bkqoak0pbnatw" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/BRIDGE - DAY.png" id="19_wxmp5"]
 [ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/skoalarsGUI.tscn" id="21_o4rl6"]
 [ext_resource type="Texture2D" uid="uid://dlolhqc643sxq" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_43_23 PM.png" id="22_oldau"]
+[ext_resource type="Texture2D" uid="uid://cea6j1jejioju" path="res://Assets/Sprite/Objects/ChatGPT Image May 4, 2026, 05_27_16 PM.png" id="23_gadri"]
 [ext_resource type="Texture2D" uid="uid://d1tpwflicj3es" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_35_45 PM.png" id="24_c6r3i"]
 [ext_resource type="Texture2D" uid="uid://bngyst88tej74" path="res://Assets/Sprite/Objects/objects_demo.png" id="26_6lqna"]
 
@@ -1944,7 +1946,16 @@ size = Vector2(61.49489, 35.550373)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvtps"]
 size = Vector2(61.49489, 25.727924)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gdp1t"]
+texture = ExtResource("23_gadri")
+1:0/size_in_atlas = Vector2i(86, 61)
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yebbp"]
+sources/0 = SubResource("TileSetAtlasSource_gdp1t")
+
 [node name="MainIsland" type="Node2D" unique_id=859178235]
+script = ExtResource("1_ml317")
 
 [node name="Border_Up" type="StaticBody2D" parent="." unique_id=654556152]
 position = Vector2(111, -81)
@@ -3398,5 +3409,12 @@ scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_pvtps")
 
 [node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("21_o4rl6")]
-z_index = 4
+z_index = 5
 position = Vector2(130.99998, 51.999996)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=23858761]
+z_index = 4
+position = Vector2(366, 147)
+scale = Vector2(0.04, 0.04)
+tile_map_data = PackedByteArray("AAAPAAEAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_yebbp")
