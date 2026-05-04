@@ -6,6 +6,7 @@ var loading_screen_scene = preload("res://Assets/Scene/loading_screen.tscn")
 var loading_instance
 var target_path : String
 var progress = [] # This array will hold the loading percentage
+var wand_used = false
 
 # Skills (false = not owned)
 var skills = {
@@ -212,4 +213,6 @@ func reset_game():
 	skill_uses = {"hint": 1, "freeze_time": 0, "add_time": 0, "skip": 0}
 	skills_equipped = {"hint": false, "freeze_time": false, "add_time": false, "skip": false}
 	islands_unlocked = {"island_1": true, "island_2": false, "island_3": false, "island_4": false}
+	current_island = "island_1"  # ← reset current island tracker
+	diamonds_changed.emit(diamonds)  # ← notify UI of diamond reset
 	save_game()

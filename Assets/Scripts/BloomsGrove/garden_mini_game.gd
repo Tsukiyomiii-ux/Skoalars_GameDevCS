@@ -19,6 +19,7 @@ var game_started = false
 @onready var sfx_correct = $SfxCorrect
 @onready var sfx_wrong = $SfxWrong
 @onready var mission_label = $UserInterface/Control/ObjectiveHolder/VBoxContainer/MissionText
+@onready var wand_button = $UserInterface/Control/WandHolder/Wand
 
 var questions = [
 	{"q": "What part of the plant grows underground?", "options": ["Roots", "Leaves", "Flowers"], "answer": "Roots", "clue": "It anchors the plant!"},
@@ -48,6 +49,11 @@ func _ready():
 	$UserInterface/Control/TimerContainer.hide()
 	win_popup.hide() 
 	lose_popup.hide() 
+	
+	# Check if wand was already used in a previous game
+	if GameManager.wand_used:
+		wand_button.disabled = true
+		wand_button.modulate = Color(0.5, 0.5, 0.5, 1) # Gray out
 	
 	mission_label.text = "Become a Master Gardener! Answer questions correctly to help your seeds grow into beautiful plants.\n\nBe quick—you only have 1 minute and 20 seconds! Can you turn the Grove into a blooming paradise?"
 	
@@ -183,23 +189,38 @@ func game_over_lose():
 	var tween = create_tween()
 	tween.tween_property(lose_holder, "scale", Vector2(0.8, 0.8), 0.5).set_trans(Tween.TRANS_BACK)
 
-# --- Button Signals Integrated with GameManager ---
+# --- Wand Logic ---
+func _on_wand_pressed():
+	if GameManager.wand_used or not game_started: return
+	
+	GameManager.wand_used = true
+	wand_button.disabled = true
+	wand_button.modulate = Color(0.5, 0.5, 0.5, 1)
+	
+	# Logic: Automatically count as one correct answer
+	sfx_correct.play()
+	correct_answers += 1
+	grow_garden()
+	
+	if correct_answers >= 6:
+		show_win_popup()
+	else:
+		current_q += 1
+		check_list_bounds()
+		load_question()
 
+# --- Button Signals ---
 func _on_back_pressed(): 
-	# Return to map via loading screen
-	GameManager.load_scene("res://Assets/Scene/science.scn") 
+	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn") 
 
 func _on_next_pressed(): 
-	# Go to next minigame via loading screen
-	GameManager.load_scene("res://Assets/Scene/Minigame2.tscn") 
+	GameManager.load_scene("res://Assets/Scene/BloomsGrove/Minigame2.tscn") 
 
 func _on_try_pressed(): 
-	# Reload current level via loading screen
 	GameManager.load_scene(get_tree().current_scene.scene_file_path) 
 
 func _on_texture_button_pressed(): 
-	# Return to map via loading screen from lose popup
-	GameManager.load_scene("res://Assets/Scene/science.scn") 
+	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn") 
 
 func _on_choice_1_pressed(): check_answer(0)
 func _on_choice_2_pressed(): check_answer(1)

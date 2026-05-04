@@ -4,18 +4,6 @@
 [ext_resource type="TileSet" uid="uid://ca5mrl5gmsh4k" path="res://Scene1/GTileset/game_tile_set.tres" id="1_q128q"]
 [ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/MainIsland/skoalarsGUI.tscn" id="3_vwn2g"]
 
-[sub_resource type="GDScript" id="GDScript_j4k6b"]
-script/source = "extends Area2D
-
-# The name usually changes to match the node: _on_Entrance_body_entered
-func _on_entrance_body_entered(body: Node2D) -> void:
-	# Use the Group check we set up earlier
-	if body.is_in_group(\"player\") or body.name == \"Skoalars\":
-		# Double-check: Is it 'Asset' or 'Assets'? (Your folder was 'Asset')
-		var level_1_path = \"res://Asset/Scene/level_1_countoria.tscn\"
-		get_tree().change_scene_to_file(level_1_path)
-"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f30l2"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q128q"]
@@ -430,8 +418,7 @@ b = Vector2(100, 584)
 a = Vector2(144, 280)
 b = Vector2(124, 281)
 
-[node name="TestSceenTileMap" type="Node2D" unique_id=1226202048]
-script = ExtResource("1_f30l2")
+[node name="TestSceenTileMap" type="Node2D" unique_id=1226202048 groups=["player"]]
 
 [node name="GameTileMap" type="Node2D" parent="." unique_id=405277270]
 position = Vector2(0, 228)
@@ -647,9 +634,14 @@ scale = Vector2(0.65, 0.65)
 tile_map_data = PackedByteArray("AAAgAAUADgAKABAAAAAOAAYADgAKABAAAAD+/wUADgAKABAAAAAGAAMADgAKABAAAAAKAAEADgAKABAAAAAPAP3/DgAKABAAAAAXAP7/DgAKABAAAAAfAAAADgAKABAAAAAiAAIADgAKABAAAAAuAAAADgAKABAAAAAtAPz/DgAKABAAAAAOAB8ADgAKABAAAAA9ABYADgAOAAwAAABAABgADgAOAAwAAAA9ABkADgAOAAwAAABHABEADgAOAA4AAAA6ABMADgAOAA4AAAAWAB4ADgAKABAAAAAbAB8ADgAKABAAAAD//xcADgAKABAAAAD+/xgADgAKABAAAAAGABsADgAOAA0AAAACABsADgAOAA0AAAD8/x0ADgAOAA4AAAAGAAcADgAKABAAAAACAA4ADgAKABAAAAAuAA0ADgAKABAAAAA7AAsADgAKABAAAAAWABEADgAHABkAAAAfABEADgAOAA4AAAAcABQADgAKABAAAAAhABAADgANABkAAAAgABYADgAKABAAAAAeABMADgAKABAAAAAiABEADgALABkAAAAnABUADgAKABAAAAA=")
 tile_set = ExtResource("1_q128q")
 
-[node name="Entrance" type="Area2D" parent="GameTileMap" unique_id=1003032487]
+[node name="Skoalars" parent="GameTileMap" unique_id=1875685537 instance=ExtResource("3_vwn2g")]
+position = Vector2(283, 509)
 disable_mode = 2
-script = SubResource("GDScript_j4k6b")
+
+[node name="Entrance" type="Area2D" parent="GameTileMap" unique_id=1003032487 groups=["player"]]
+disable_mode = 2
+monitoring = false
+script = ExtResource("1_f30l2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameTileMap/Entrance" unique_id=1878787523]
 position = Vector2(96, -24)
@@ -988,8 +980,3 @@ shape = SubResource("SegmentShape2D_tlssm")
 
 [node name="CollisionShape2D103" type="CollisionShape2D" parent="collisionshapes" unique_id=1047963865]
 shape = SubResource("SegmentShape2D_buuar")
-
-[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("3_vwn2g")]
-position = Vector2(304.99997, 623.99994)
-
-[connection signal="body_entered" from="GameTileMap/Entrance" to="." method="_on_entrance_body_entered"]

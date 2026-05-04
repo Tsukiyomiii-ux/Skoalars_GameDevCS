@@ -33,7 +33,8 @@ var failed_items = []
 @onready var progress_label = $Progress/ProgressText
 @onready var trash_holder = $Holder 
 
-# Popup References
+@onready var wand_button = $Holderwand/Wand
+
 @onready var win_popup_bg = $ColorRect
 @onready var popup_sprite = $ColorRect/Popup
 @onready var lose_popup_bg = $ColorRect2 
@@ -45,7 +46,7 @@ var failed_items = []
 @onready var sfx_wrong = $SfxWrong
 @onready var bin_nodes = [$Bin_bio, $Bin_non, $Bin_rec]
 
-const ORIGINAL_MISSION = "Become a Recycling Hero! Drag the trash into the right bins to clean up the park.\n\nBe quick—you have 1 minute to sort everything! Can you turn the Grove into a blooming paradise?"
+const ORIGINAL_MISSION = "Become a Recycling Hero! Drag the trash into the right bins to clean up the park.\n\nBe quick—you have 1 minute to sort everything!"
 
 func _ready():
 	randomize()
@@ -59,27 +60,27 @@ func _ready():
 	win_popup_bg.hide()
 	lose_popup_bg.hide()
 	
-	# SETUP VIDEO SIZE AND POSITION VIA CODE
+	if GameManager and GameManager.wand_used:
+		wand_button.disabled = true
+		wand_button.modulate = Color(0.5, 0.5, 0.5, 1)
+	
 	setup_rescue_video()
 	rescue_video.hide()
 	
-	rescue_video.finished.connect(_on_rescue_video_finished)
+	if not rescue_video.finished.is_connected(_on_rescue_video_finished):
+		rescue_video.finished.connect(_on_rescue_video_finished)
+	
 	start_countdown()
 
 func setup_rescue_video():
-	# This overrides the locked Inspector values (1920x1080 and 0.7 scale)
-	rescue_video.expand = true # Ensures the video fills the node area
-	rescue_video.anchor_right = 1
-	rescue_video.anchor_bottom = 1
-	rescue_video.offset_right = 0
-	rescue_video.offset_bottom = 0
-	rescue_video.position = Vector2.ZERO
-	rescue_video.scale = Vector2(1, 1)
-	# Force size to your project resolution
-	rescue_video.size = get_viewport_rect().size 
+	# This ensures the video renders ON TOP of everything else in the scene
+	rescue_video.z_index = 100 
+	rescue_video.top_level = true 
+	rescue_video.expand = true 
+	rescue_video.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 
 func start_countdown():
-	var countdown = 10
+	var countdown = 5 
 	while countdown > 0:
 		mission_label.text = "Starting in... " + str(countdown)
 		await get_tree().create_timer(1.0).timeout
@@ -93,7 +94,7 @@ func start_countdown():
 func _process(delta):
 	if game_active and time_left > 0:
 		time_left -= delta
-		var mins = floor(time_left / 60)
+		var mins = int(floor(time_left / 60))
 		var secs = int(time_left) % 60
 		time_label.text = str(mins) + ":" + str(secs).pad_zeros(2)
 		
@@ -110,7 +111,7 @@ func spawn_trash():
 		if child is Area2D: 
 			child.queue_free()
 		
-	var trash_scene = preload("res://Assets/Scene/Trash.tscn")
+	var trash_scene = preload("res://Assets/Scene/BloomsGrove/Trash.tscn")
 	var new_trash = trash_scene.instantiate()
 	var data = trash_list[0]
 	
@@ -121,9 +122,9 @@ func spawn_trash():
 	
 	if data in failed_items:
 		match data["type"]:
-			"bio": clue_label.text = "Hint: I was once part of something living. I can rot and help plants grow!"
-			"recycle": clue_label.text = "Hint: I am tough and sturdy. If you send me away, I can become a brand new bottle or can!"
-			"nonbio": clue_label.text = "Hint: I don't rot and I can't be remade. I have to be stored away forever."
+			"bio": clue_label.text = "Hint: I was once part of something living. I can rot!"
+			"recycle": clue_label.text = "Hint: I can become a brand new bottle or can!"
+			"nonbio": clue_label.text = "Hint: I don't rot and I can't be remade."
 	else:
 		clue_label.text = "" 
 
@@ -177,25 +178,55 @@ func game_over_lose():
 	
 	lose_popup_holder.scale = Vector2(0.1, 0.1)
 	var tween = create_tween()
-	tween.tween_property(lose_popup_holder, "scale", Vector2(0.7, 0.7), 0.5).set_trans(Tween.TRANS_BACK)
+	tween.tween_property(lose_popup_holder, "scale", Vector2(0.8, 0.8), 0.5).set_trans(Tween.TRANS_BACK)
 
-# --- Integrated Button Signals ---
+func _on_wand_pressed():
+	if GameManager.wand_used or not game_active: return
+	
+	var current_trash = null
+	for child in trash_holder.get_children():
+		if child is Area2D:
+			current_trash = child
+			break
+			
+	if current_trash:
+		GameManager.wand_used = true
+		wand_button.disabled = true 
+		wand_button.modulate = Color(0.5, 0.5, 0.5, 1)
+		
+		var target_bin = null
+		match current_trash.type:
+			"bio": target_bin = $Bin_bio
+			"nonbio": target_bin = $Bin_non
+			"recycle": target_bin = $Bin_rec
+			
+		if target_bin:
+			var tween = create_tween()
+			tween.set_parallel(true)
+			tween.tween_property(current_trash, "global_position", target_bin.global_position, 0.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+			tween.tween_property(current_trash, "scale", Vector2(0.2, 0.2), 0.5)
+			tween.tween_property(current_trash, "modulate:a", 0.0, 0.5)
+			await tween.finished
+			update_score()
 
 func _on_rescue_pressed():
+	# Hide all UI popups so they don't block the video
 	win_popup_bg.hide()
-	# Ensure video is sized correctly again right before playing
-	setup_rescue_video()
+	lose_popup_bg.hide()
+	
+	# Make sure video is visible and playing
 	rescue_video.show()
 	rescue_video.play()
 
 func _on_rescue_video_finished():
-	GameManager.load_scene("res://Assets/Scene/science.scn")
+	GameManager.load_scene("res://Assets/Scene/MainIsland/mapSelector.tscn")
+	GameManager.unlock_island("island_4")
 
 func _on_try_pressed():
 	GameManager.load_scene(get_tree().current_scene.scene_file_path)
 
-func _on_texture_button_pressed():
-	GameManager.load_scene("res://Assets/Scene/science.scn")
-
 func _on_back_pressed():
-	GameManager.load_scene("res://Assets/Scene/science.scn")
+	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn")
+
+func _on_quit_pressed() -> void:
+	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn")

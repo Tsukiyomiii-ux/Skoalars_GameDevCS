@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c6vlmpoc2pemc"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_mf4mk"]
+
+[node name="Node2D" type="Node2D" unique_id=1806851952]
+
+[node name="RescueVideo" type="VideoStreamPlayer" parent="." unique_id=255417662]
+z_index = 72
+offset_left = -25.999998
+offset_top = -9.999999
+offset_right = 1894.0
+offset_bottom = 1070.0
+scale = Vector2(0.7, 0.7)
+stream = SubResource("VideoStreamTheora_mf4mk")

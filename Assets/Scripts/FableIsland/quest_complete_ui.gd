@@ -3,6 +3,10 @@ extends Control
 func _ready():
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	
+	# Gray out and disable Next button on start
+	$BoardImage/NextButton.disabled = true
+	$BoardImage/NextButton.modulate = Color(0.5, 0.5, 0.5)
 
 func _on_back_button_pressed():
 	print("Going back to Level 2...")
@@ -26,6 +30,9 @@ func _on_next_button_pressed():
 func _on_rewards_button_pressed():
 	print("Diamond Collected!")
 	var btn = $BoardImage/RewardsButton
-	btn.disabled = true 
+	btn.disabled = true
 	btn.modulate = Color(0.5, 0.5, 0.5)
-	# Logic for adding the diamond to your total score could go here!
+
+	# Unlock the Next button
+	$BoardImage/NextButton.disabled = false
+	$BoardImage/NextButton.modulate = Color(1, 1, 1)

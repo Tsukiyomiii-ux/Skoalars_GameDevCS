@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ccx3ruep77ljv"]
 
 [ext_resource type="Script" uid="uid://cy21blyn57u26" path="res://Assets/Scripts/MainIsland/main_menu.gd" id="1_v808d"]
-[ext_resource type="Script" uid="uid://digtfx3apnk6f" path="res://Assets/Scripts/MainIsland/parallax_background.gd" id="2_r4pc7"]
+[ext_resource type="Script" uid="uid://digtfx3apnk6f" path="res://Assets/Scripts/Zypheria/parallax_background.gd" id="2_r4pc7"]
 [ext_resource type="Texture2D" uid="uid://cp6se3ok6ru21" path="res://Assets/Sprite/Parralax_summer 4/1.png" id="3_x3ujn"]
 [ext_resource type="Texture2D" uid="uid://dcnau3gobua18" path="res://Assets/Sprite/Parralax_summer 4/2.png" id="4_j4emp"]
 [ext_resource type="Texture2D" uid="uid://b35hn3he1dn6l" path="res://Assets/Sprite/Parralax_summer 4/3.png" id="5_6yvt3"]

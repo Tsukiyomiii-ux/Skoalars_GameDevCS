@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dyg2ttg7gw6jt"]
 
-[ext_resource type="Script" uid="uid://d1cv2dco4ahr8" path="res://Assets/Scene/garden_mini_game.gd" id="1_7p4h4"]
+[ext_resource type="Script" uid="uid://d1cv2dco4ahr8" path="res://Assets/Scripts/BloomsGrove/garden_mini_game.gd" id="1_7p4h4"]
 [ext_resource type="Texture2D" uid="uid://cff328c0yle8s" path="res://Assets/Bloom Game 1/New Assets/garden_bg.png" id="1_tf4pm"]
 [ext_resource type="Texture2D" uid="uid://b7dimjcpfxx5i" path="res://Assets/Bloom Game 1/New Assets/main_bg.png" id="1_uaud4"]
 [ext_resource type="Texture2D" uid="uid://b168jswm30eoi" path="res://Assets/Bloom Game 1/New Assets/Sprinkler 1.png" id="2_jn3hk"]
@@ -33,6 +33,8 @@
 [ext_resource type="AudioStream" uid="uid://cymbakvr5w2w7" path="res://Assets/Audio/WrongSFX.MP3" id="28_qufoh"]
 [ext_resource type="Texture2D" uid="uid://cdyti31f5p6m2" path="res://Assets/Bloom Game 1/New Assets/Cancel.png" id="30_5lpxf"]
 [ext_resource type="Texture2D" uid="uid://cx0mcxsw7j8s8" path="res://Assets/Bloom Game 1/New Assets/Skip.png" id="31_ohy5y"]
+[ext_resource type="Texture2D" uid="uid://buhvfehyhrvs4" path="res://Assets/Bloom Game 1/New Assets/39.png" id="32_4wes8"]
+[ext_resource type="Texture2D" uid="uid://1bnip5kb12cf" path="res://Assets/Bloom Game 1/New Assets/Wand.png" id="33_32p6h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xxco4"]
 animations = [{
@@ -162,7 +164,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D" unique_id=110744921]
+[node name="Garden" type="Node2D" unique_id=110744921]
 script = ExtResource("1_7p4h4")
 
 [node name="main_bg" type="Sprite2D" parent="." unique_id=397572661]
@@ -206,6 +208,19 @@ offset_right = 2.0
 offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="WandHolder" type="Sprite2D" parent="UserInterface/Control" unique_id=211470313]
+position = Vector2(903.00006, 52)
+scale = Vector2(0.109700486, 0.10546874)
+texture = ExtResource("32_4wes8")
+
+[node name="Wand" type="TextureButton" parent="UserInterface/Control/WandHolder" unique_id=7426231]
+offset_left = -410.20837
+offset_top = -293.92596
+offset_right = -210.20837
+offset_bottom = -93.925964
+scale = Vector2(4, 3.2)
+texture_normal = ExtResource("33_32p6h")
 
 [node name="ProgressBar" type="AnimatedSprite2D" parent="UserInterface/Control" unique_id=445784520]
 position = Vector2(228, 57)
@@ -368,6 +383,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 
 [node name="ColorRect" type="ColorRect" parent="UserInterface" unique_id=1937469835]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -402,6 +418,7 @@ scale = Vector2(0.3, 0.4)
 texture_normal = ExtResource("25_ohy5y")
 
 [node name="BlackBG" type="ColorRect" parent="UserInterface" unique_id=2108814268]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -455,6 +472,7 @@ stream = ExtResource("27_hoghi")
 position = Vector2(3, 7)
 stream = ExtResource("28_qufoh")
 
+[connection signal="pressed" from="UserInterface/Control/WandHolder/Wand" to="." method="_on_wand_pressed"]
 [connection signal="pressed" from="UserInterface/Control/Choice1" to="." method="_on_choice_1_pressed"]
 [connection signal="pressed" from="UserInterface/Control/Choice2" to="." method="_on_choice_2_pressed"]
 [connection signal="pressed" from="UserInterface/Control/Choice3" to="." method="_on_choice_3_pressed"]

@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ctqrytg3hya0y" path="res://Assets/Sprite/FABLE ISLE/benches.png" id="13_v72cm"]
 [ext_resource type="Texture2D" uid="uid://dn6rjhel0803j" path="res://Assets/Sprite/FABLE ISLE/garden.png" id="15_nkldo"]
 [ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/MainIsland/skoalarsGUI.tscn" id="18_5ceng"]
+[ext_resource type="Texture2D" uid="uid://xrl7vfq4luud" path="res://Assets/Fable Isle/ASSETS 2/Signs.png" id="18_yta66"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q8jj8"]
 texture = ExtResource("1_uo18i")
@@ -586,6 +587,34 @@ texture = ExtResource("13_v72cm")
 [sub_resource type="TileSet" id="TileSet_auk3s"]
 sources/1 = SubResource("TileSetAtlasSource_dj604")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tldgm"]
+texture = ExtResource("18_yta66")
+60:35/size_in_atlas = Vector2i(24, 22)
+60:35/0 = 0
+32:34/size_in_atlas = Vector2i(27, 23)
+32:34/0 = 0
+3:34/size_in_atlas = Vector2i(29, 25)
+3:34/0 = 0
+5:3/size_in_atlas = Vector2i(26, 23)
+5:3/0 = 0
+34:3/size_in_atlas = Vector2i(22, 23)
+34:3/0 = 0
+59:3/size_in_atlas = Vector2i(24, 23)
+59:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pr7dl"]
+sources/0 = SubResource("TileSetAtlasSource_tldgm")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yta66"]
+texture = ExtResource("18_yta66")
+6:34/size_in_atlas = Vector2i(24, 24)
+6:34/0 = 0
+32:34/size_in_atlas = Vector2i(24, 24)
+32:34/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tldgm"]
+sources/0 = SubResource("TileSetAtlasSource_yta66")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wu38t"]
 size = Vector2(53, 19)
 
@@ -734,9 +763,21 @@ tile_map_data = PackedByteArray("AABoAPn/AQAbABMAAACbAPv/AQAFABcAAABTAPb/AQAhAAw
 tile_set = SubResource("TileSet_j6vyb")
 
 [node name="benches" type="TileMapLayer" parent="outdoorDesigns" unique_id=366811118]
+z_index = 1
 scale = Vector2(1.5, 1.5)
 tile_map_data = PackedByteArray("AACyACwAAQADAAIAAAB1ADMAAQABADIAAAAxABkAAQARADIAAABLAC0AAQAgAAIAAABSADEAAQAvAAEAAAB+ABsAAQBKAA4AAACJABsAAQBKAA4AAACUABsAAQBKAA4AAACfABsAAQBKAA4AAACqABsAAQBKAA4AAACnACwAAQAgAAIAAACuADEAAQBPACgAAABzAAkAAQA3ACgAAABvAGwAAQBHACgAAAB2AGwAAQBHACgAAAB+AP7/AQAoACgAAABaAG0AAQAKACgAAAAqAG0AAQACACgAAAAlAG0AAQBHACgAAACPAFcAAQARADIAAAB4ACwAAQAgAAIAAABsACwAAQADAAIAAABiAH4AAQBXABUAAACNAH4AAQBXABUAAABkAIIAAQBHACgAAACRAIUAAQAwAB4AAAAwADAAAQARAAIAAAA=")
 tile_set = SubResource("TileSet_auk3s")
+
+[node name="Signs" type="TileMapLayer" parent="outdoorDesigns" unique_id=865157355]
+z_index = 2
+scale = Vector2(0.6, 0.6)
+tile_map_data = PackedByteArray("AAA6ARMBAAA8ACMAAABRAZkAAAAFAAMAAADqAYoAAAA8ACMAAAA=")
+tile_set = SubResource("TileSet_pr7dl")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="outdoorDesigns" unique_id=561139446]
+position = Vector2(-19.999998, -49.999996)
+tile_map_data = PackedByteArray("AACaALYAAAAgACIAAADOALcAAAAGACIAAAA=")
+tile_set = SubResource("TileSet_tldgm")
 
 [node name="collision" type="StaticBody2D" parent="." unique_id=762543476]
 
@@ -796,5 +837,7 @@ position = Vector2(114, 111)
 shape = SubResource("RectangleShape2D_dj604")
 
 [node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("18_5ceng")]
+z_index = 11
+position = Vector2(300.00003, 318)
 
 [connection signal="body_entered" from="library/LibaryDoor" to="." method="_on_libaray_door_body_entered"]

@@ -1,7 +1,7 @@
 extends Node2D
 
 # Make sure to change this path to wherever your minigame scene is saved!
-var minigame_scene_path = "res://Assets/Scene/GardenMiniGame.tscn"
+var minigame_scene_path = "res://Assets/Scene/BloomsGrove/GardenMiniGame.tscn"
 
 func _on_mini_game_1_entrance_body_entered(body):
 	# Assuming your player character is in a group named "player"

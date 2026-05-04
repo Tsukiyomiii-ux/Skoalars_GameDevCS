@@ -47,7 +47,7 @@ var current_display_array = []
 var correct_answers = 0 
 
 # --- TIMER ---
-var time_left: float = 60.0 
+var time_left: float = 120.0 
 var is_timer_active: bool = false
 var is_game_finished: bool = false 
 
@@ -57,7 +57,7 @@ func _ready():
 	if definition_label: definition_label.hide()
 	
 	# --- RESET TIMER ONLY ONCE HERE ---
-	time_left = 60.0 
+	time_left = 120.0 
 	is_timer_active = true 
 	
 	setup_word_pool() 
@@ -67,7 +67,9 @@ func _process(delta):
 	if is_timer_active and not is_game_finished:
 		if time_left > 0:
 			time_left -= delta
-			if time_label: time_label.text = str(ceil(time_left))
+			var mins = int(time_left) / 60
+			var secs = int(time_left) %  60
+			if time_label: time_label.text = "%02d:%02d" % [mins, secs]
 			if time_left <= 10.0 and is_instance_valid(snd_ticking):
 				if not snd_ticking.playing: snd_ticking.play()
 		else:

@@ -534,7 +534,7 @@ layout_mode = 2
 patch_margin_left = 936
 
 [node name="Settings_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect" unique_id=1298399476]
-z_index = 40
+z_index = 46
 layout_mode = 0
 offset_left = 31.685
 offset_top = 163.16

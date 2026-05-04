@@ -153,7 +153,7 @@ func _on_next_pressed():
 # UPDATED: Directs to Countoria Island instead of quitting the app
 func _on_quit_pressed():
 	if is_inside_tree():
-		get_tree().change_scene_to_file("res://Assets/Scene/countoria_island_scene/countoria.tscn")
+		get_tree().change_scene_to_file("res://Assets/Scene/Countoria/countoria.tscn")
 
 func _on_collect_pressed(): 
 	var tween = create_tween().set_parallel(true)

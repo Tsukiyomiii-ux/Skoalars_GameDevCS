@@ -258,4 +258,4 @@ func _on_menu_pressed(): get_tree().change_scene_to_file("res://Assets/Scene/Cou
 func _on_dash_rescue_finished() -> void:
 	# This triggers automatically when the video stops
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/mapSelector.tscn")
-	GameManager.unlock_island("island_2")
+	GameManager.unlock_island("island_3")

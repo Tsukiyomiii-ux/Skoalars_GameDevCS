@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bp22cu0isr5q1"]
 
-[ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/skoalars.gd" id="1_nje0b"]
+[ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/MainIsland/skoalars.gd" id="1_nje0b"]
 [ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_nje0b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
@@ -204,10 +204,12 @@ animations = [{
 size = Vector2(5.7805095, 486.31403)
 
 [node name="Skoalars" type="CharacterBody2D" unique_id=1875685537]
+z_index = 4
 scale = Vector2(0.015, 0.015)
 script = ExtResource("1_nje0b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1165061691]
+z_index = 11
 scale = Vector2(3.37, 3.37)
 sprite_frames = SubResource("SpriteFrames_dag5b")
 animation = &"walk_up"

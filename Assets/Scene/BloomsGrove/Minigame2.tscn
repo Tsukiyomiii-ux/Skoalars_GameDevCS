@@ -25,6 +25,8 @@
 [ext_resource type="AudioStream" uid="uid://bdq2pw80ycjt2" path="res://Assets/Audio/CorrectSFX.MP3" id="23_8leg4"]
 [ext_resource type="AudioStream" uid="uid://cymbakvr5w2w7" path="res://Assets/Audio/WrongSFX.MP3" id="24_6l1sy"]
 [ext_resource type="VideoStream" uid="uid://dan10l5exrtvv" path="res://Assets/Bloom Game 1/New Assets/Shellby-Rescued.ogv" id="25_ijxta"]
+[ext_resource type="Texture2D" uid="uid://buhvfehyhrvs4" path="res://Assets/Bloom Game 1/New Assets/39.png" id="26_vbcun"]
+[ext_resource type="Texture2D" uid="uid://1bnip5kb12cf" path="res://Assets/Bloom Game 1/New Assets/Wand.png" id="27_wsd13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnr2y"]
 size = Vector2(302, 95)
@@ -67,6 +69,14 @@ animations = [{
 
 [node name="TrashMiniGame" type="Node2D" unique_id=966201221]
 script = ExtResource("1_k0b3l")
+
+[node name="RescueVideo" type="VideoStreamPlayer" parent="." unique_id=1449285210]
+z_index = 72
+offset_left = -25.999998
+offset_top = -9.999999
+offset_right = 1894.0
+offset_bottom = 1070.0
+stream = ExtResource("25_ijxta")
 
 [node name="main_bg" type="Sprite2D" parent="." unique_id=1617231171]
 position = Vector2(641, 363)
@@ -201,6 +211,7 @@ theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=443109014]
+visible = false
 offset_top = -2.0
 offset_right = 1285.0
 offset_bottom = 729.0
@@ -231,6 +242,7 @@ scale = Vector2(0.3, 0.4)
 texture_normal = ExtResource("15_kjbj0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=321570034]
+visible = false
 offset_right = 1279.0
 offset_bottom = 725.0
 color = Color(0, 0, 0, 0.50980395)
@@ -285,15 +297,22 @@ stream = ExtResource("23_8leg4")
 [node name="SfxWrong" type="AudioStreamPlayer2D" parent="." unique_id=461676775]
 stream = ExtResource("24_6l1sy")
 
-[node name="RescueVideo" type="VideoStreamPlayer" parent="." unique_id=1449285210]
-offset_left = -25.999998
-offset_top = -9.999999
-offset_right = 1894.0
-offset_bottom = 1070.0
-scale = Vector2(0.7, 0.7)
-stream = ExtResource("25_ijxta")
+[node name="Holderwand" type="Sprite2D" parent="." unique_id=1010716750]
+position = Vector2(1177, 261.99997)
+scale = Vector2(0.11686204, 0.12158203)
+texture = ExtResource("26_vbcun")
 
+[node name="Wand" type="TextureButton" parent="Holderwand" unique_id=1521402900]
+offset_left = -410.74075
+offset_top = -353.6704
+offset_right = -210.74075
+offset_bottom = -153.67041
+scale = Vector2(3.8, 3.6000001)
+texture_normal = ExtResource("27_wsd13")
+
+[connection signal="finished" from="RescueVideo" to="." method="_on_rescue_video_finished"]
 [connection signal="pressed" from="ColorRect2/Over/Try" to="." method="_on_try_pressed"]
 [connection signal="pressed" from="ColorRect2/Over/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="ColorRect/Popup/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="ColorRect/Popup/Rescue" to="." method="_on_rescue_pressed"]
+[connection signal="pressed" from="Holderwand/Wand" to="." method="_on_wand_pressed"]
