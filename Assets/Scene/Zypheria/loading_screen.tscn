@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cwltjajlnljbh"]
+
+[ext_resource type="Script" uid="uid://briyabetojlau" path="res://Assets/Scripts/Zypheria/loading_screen.gd" id="1_4lu4i"]
+[ext_resource type="Texture2D" uid="uid://bltoi1hmrh7pw" path="res://Assets/Zypheria/LEVEL 2/UI/loadingBox.png" id="2_t07qm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t07qm"]
+bg_color = Color(0, 0.49579746, 0.78045356, 1)
+border_color = Color(0.020636205, 0.08183191, 0.29589865, 1)
+
+[node name="loading_screen" type="Node2D" unique_id=834143915]
+texture_filter = 1
+script = ExtResource("1_4lu4i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1655479904]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=368676744]
+position = Vector2(640, 360)
+texture = ExtResource("2_t07qm")
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Sprite2D" unique_id=704965792]
+offset_left = -370.0
+offset_top = -14.0
+offset_right = 377.0
+offset_bottom = 22.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_t07qm")
+rounded = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Sprite2D/ProgressBar" unique_id=1539581136]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 72.0
+offset_right = 731.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0, 0.20530152, 0.20612898, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 30
+text = "LOADING..."
+horizontal_alignment = 1
+vertical_alignment = 1

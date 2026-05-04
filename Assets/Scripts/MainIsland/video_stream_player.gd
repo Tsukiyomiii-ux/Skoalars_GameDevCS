@@ -15,7 +15,7 @@ func _ready():
 # Skip button
 func _on_skip_btn_pressed():
 	stop()
-	get_tree().change_scene_to_file("res://Assets/Scene/Tutorial.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/Tutorial.tscn")
 
 # Pause button pressed — pause the video, show play button
 func _on_paspause_btn_pressed():

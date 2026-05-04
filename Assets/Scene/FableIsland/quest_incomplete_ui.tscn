@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://csndosj5m8rse"]
+
+[ext_resource type="Script" uid="uid://dxgipvfeeuwx5" path="res://Assets/Scripts/FableIsland/quest_incomplete_ui.gd" id="1_qlb1g"]
+[ext_resource type="Texture2D" uid="uid://hs6m8o3mubnf" path="res://Assets/Sprite/FABLE ISLE/Level2/QuestBackground.png" id="1_ss7l5"]
+[ext_resource type="Texture2D" uid="uid://s1fh5qx1l3tl" path="res://Assets/Sprite/FABLE ISLE/Level2/QuestIncomplete.png" id="2_wged0"]
+[ext_resource type="Texture2D" uid="uid://c85giv6rwdtid" path="res://Assets/Sprite/FABLE ISLE/Level2/QuitButton.png" id="3_usrnu"]
+[ext_resource type="Texture2D" uid="uid://u70vpl3nerxx" path="res://Assets/Sprite/FABLE ISLE/Level2/RetryButton.png" id="4_qlb1g"]
+[ext_resource type="Texture2D" uid="uid://b8qdrwugfpkey" path="res://Assets/Fable Isle/Level2/hourglass.png" id="6_fxnub"]
+[ext_resource type="AudioStream" uid="uid://djrv3yufst25w" path="res://Assets/Fable Isle/Audio/LevelFailed.mp3" id="7_asxrb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asxrb"]
+atlas = ExtResource("6_fxnub")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id2ba"]
+atlas = ExtResource("6_fxnub")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyji0"]
+atlas = ExtResource("6_fxnub")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irg3h"]
+atlas = ExtResource("6_fxnub")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2xj3a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asxrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id2ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyji0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irg3h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="QuestIncompleteUI" type="Control" unique_id=1715885540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_qlb1g")
+
+[node name="BlurBackground" type="TextureRect" parent="." unique_id=1806887277]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -390.0
+offset_right = 583.0
+offset_bottom = 341.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_ss7l5")
+
+[node name="BoardImage" type="TextureRect" parent="." unique_id=1838881581]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -656.0
+offset_top = -691.0
+offset_right = 992.5
+offset_bottom = 568.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(603.5, 629.5)
+mouse_filter = 2
+texture = ExtResource("2_wged0")
+
+[node name="QuitButton" type="TextureButton" parent="BoardImage" unique_id=1102251551]
+layout_mode = 0
+offset_left = 146.5
+offset_top = 1070.5
+offset_right = 1148.5
+offset_bottom = 1546.5
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_usrnu")
+
+[node name="RetryButton" type="TextureButton" parent="BoardImage" unique_id=1354029363]
+layout_mode = 0
+offset_left = 984.5
+offset_top = 1046.5
+offset_right = 1986.5
+offset_bottom = 1468.5
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_qlb1g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1871002881]
+position = Vector2(50, 100)
+scale = Vector2(0.47428378, 0.578125)
+sprite_frames = SubResource("SpriteFrames_2xj3a")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1899757756]
+stream = ExtResource("7_asxrb")
+autoplay = true
+
+[connection signal="pressed" from="BoardImage/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="BoardImage/RetryButton" to="." method="_on_retry_button_pressed"]

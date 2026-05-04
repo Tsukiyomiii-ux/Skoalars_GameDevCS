@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://c4lqo6vhjpmk5"]
+
+[ext_resource type="Script" uid="uid://ckm7q57ex2a7l" path="res://Assets/Scripts/reward_screen.gd" id="1_c5knp"]
+[ext_resource type="Texture2D" uid="uid://hjpaqlb33jdm" path="res://Assets/Sprite/FABLE ISLE/Level1/Background.png" id="2_2t0tq"]
+[ext_resource type="Texture2D" uid="uid://22g5k6243klm" path="res://Assets/Sprite/FABLE ISLE/Level1/CollectRewards.png" id="2_c5knp"]
+[ext_resource type="Texture2D" uid="uid://d3y04ocklndgc" path="res://Assets/Sprite/FABLE ISLE/Level1/Rewards.png" id="2_rdmef"]
+[ext_resource type="Texture2D" uid="uid://buj63bstrv4g6" path="res://Assets/Sprite/FABLE ISLE/Level1/NextButton.png" id="4_bpjvw"]
+[ext_resource type="Texture2D" uid="uid://0xl7kxxpeg4d" path="res://Assets/Sprite/FABLE ISLE/Level1/BackButton.png" id="5_2t0tq"]
+[ext_resource type="AudioStream" uid="uid://b7ebe0dhv1ec6" path="res://Assets/Sprite/FABLE ISLE/Audio/LevelSuccess.mp3" id="7_ijvxc"]
+
+[node name="RewardScreen" type="Control" unique_id=931813947]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c5knp")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1645182658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2t0tq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=819746398]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -369.0
+offset_right = 477.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_rdmef")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1016875886]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = 133.0
+offset_right = 72.0
+offset_bottom = 206.46942
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 1.715)
+pivot_offset = Vector2(108.5, 36.735)
+texture_normal = ExtResource("2_c5knp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="NextButton" type="TextureButton" parent="." unique_id=1866390467]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.00003
+offset_top = 132.00003
+offset_right = 392.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(288, 138)
+texture_normal = ExtResource("4_bpjvw")
+
+[node name="BackButton" type="TextureButton" parent="." unique_id=880637792]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -484.0
+offset_top = 136.99997
+offset_right = 93.0
+offset_bottom = 423.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(288.5, 132.5)
+texture_normal = ExtResource("5_2t0tq")
+
+[node name="RewardPopup" type="Label" parent="." unique_id=131329970]
+visible = false
+layout_mode = 0
+offset_left = 923.0
+offset_top = 514.0
+offset_right = 969.0
+offset_bottom = 569.0
+theme_override_colors/font_color = Color(0.56395274, 0.0002575958, 0.57254857, 1)
+theme_override_colors/font_outline_color = Color(0.80049086, 0.80049074, 0.80049074, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 50
+
+[node name="SndVictory" type="AudioStreamPlayer" parent="." unique_id=855896936]
+process_mode = 3
+stream = ExtResource("7_ijvxc")
+autoplay = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

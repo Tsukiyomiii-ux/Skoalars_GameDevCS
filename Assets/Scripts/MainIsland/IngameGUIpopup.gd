@@ -57,7 +57,7 @@ func _on_settings_btn_pressed() -> void:
 
 func _on_quit_btn_pressed() -> void:
 	play()
-	get_tree().change_scene_to_file("res://Assets/Scene/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_menu.tscn")
 
 func _on_play_btn_pressed() -> void:
 	play()
@@ -92,7 +92,7 @@ func _on_skip_btn_pressed() -> void:
 	return
 
 func _on_done_btn_pressed():
-	get_tree().change_scene_to_file("res://Assets/Scene/main_island.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")
 
 func show_reward():
 	reward_shown = true

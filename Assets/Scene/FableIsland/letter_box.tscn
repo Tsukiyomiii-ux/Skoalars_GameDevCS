@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dvnrq85e2pkn1"]
+
+[ext_resource type="Texture2D" uid="uid://c2b2nr7vi0jqk" path="res://Assets/Sprite/FABLE ISLE/Level2/ClueHolder.png" id="1_toug8"]
+[ext_resource type="FontFile" uid="uid://doxo607m4fj51" path="res://Assets/Sprite/FABLE ISLE/Level2/ARCADECLASSIC.TTF" id="2_s8n4l"]
+
+[node name="LetterBox" type="TextureRect" unique_id=1421449587]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_toug8")
+
+[node name="Label" type="Label" parent="." unique_id=752283041]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.21780264, 0.07457364, 0.0067289076, 1)
+theme_override_fonts/font = ExtResource("2_s8n4l")
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1867861753]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

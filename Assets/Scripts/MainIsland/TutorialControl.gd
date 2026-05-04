@@ -344,11 +344,11 @@ func shake_text():
 # --- UI BUTTONS ---
 func _on_home_btn_pressed() -> void:
 	play()
-	get_tree().change_scene_to_file("res://Assets/Scene/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_menu.tscn")
 
 func _on_done_btn_pressed() -> void:
 	tutorial_done = true
-	get_tree().change_scene_to_file("res://Assets/Scene/main_island.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")
 
 func _on_skip_btn_pressed() -> void:
 	show_reward()
@@ -366,7 +366,7 @@ func _on_h_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(0, value)
 
 func _on_shop_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://Assets/Scene/diamondShop.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/skillShop.tscn")
 
 func _on_settings_btn_pressed() -> void:
 	safe_toggle_visibility(open_cont)
@@ -378,7 +378,7 @@ func _on_settings_btn_pressed() -> void:
 
 func _on_quit_btn_pressed() -> void:
 	play()
-	get_tree().change_scene_to_file("res://Assets/Scene/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_menu.tscn")
 
 func _on_play_btn_pressed() -> void:
 	play()

@@ -1,0 +1,302 @@
+[gd_scene format=3 uid="uid://jl5ber54ymc0"]
+
+[ext_resource type="Script" uid="uid://dgimc2ku7etgq" path="res://Assets/Scripts/FableIsland/level_2_spelling_quest.gd" id="1_8mws1"]
+[ext_resource type="Texture2D" uid="uid://dx5oaaoixhfiu" path="res://Assets/Sprite/FABLE ISLE/Level2/VeryFinalBackground.png" id="4_xlkur"]
+[ext_resource type="Texture2D" uid="uid://d4esm1q3w1lih" path="res://Assets/Fable Isle/Level2/Objectives_scroll.png" id="5_ll42g"]
+[ext_resource type="Texture2D" uid="uid://bqkfcoks68td8" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalAssets.png" id="5_ux12e"]
+[ext_resource type="FontFile" uid="uid://doxo607m4fj51" path="res://Assets/Sprite/FABLE ISLE/Level2/ARCADECLASSIC.TTF" id="6_g0gfl"]
+[ext_resource type="Texture2D" uid="uid://bjpbrwpjdn0v0" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalBook.png" id="7_g0gfl"]
+[ext_resource type="Texture2D" uid="uid://clmjj33mubbhi" path="res://Assets/Sprite/FABLE ISLE/Level2/TextHolder.png" id="8_p53t4"]
+[ext_resource type="Texture2D" uid="uid://57ju4ckxs6r3" path="res://Assets/Fable Isle/Level1/Clock.png" id="10_p53t4"]
+[ext_resource type="Texture2D" uid="uid://u70vpl3nerxx" path="res://Assets/Sprite/FABLE ISLE/Level2/RetryButton.png" id="12_i7rfg"]
+[ext_resource type="AudioStream" uid="uid://d0q73xl71jw" path="res://Assets/Fable Isle/Audio/Correct Ding - Sound effect (HD).mp3" id="12_qnytp"]
+[ext_resource type="Texture2D" uid="uid://ddno55m1eatqw" path="res://Assets/Sprite/FABLE ISLE/Level2/Word-Correct.png" id="12_vdrr2"]
+[ext_resource type="PackedScene" uid="uid://csndosj5m8rse" path="res://Assets/Scene/FableIsland/quest_incomplete_ui.tscn" id="12_vdvst"]
+[ext_resource type="AudioStream" uid="uid://dj66pngo0bpfp" path="res://Assets/Fable Isle/Audio/WRONG SOUND EFFECT.mp3" id="13_i7rfg"]
+[ext_resource type="Texture2D" uid="uid://b47ev3suqa5j8" path="res://Assets/Sprite/FABLE ISLE/Level2/Word-Wrong.png" id="13_vdvst"]
+[ext_resource type="AudioStream" uid="uid://b7ebe0dhv1ec6" path="res://Assets/Fable Isle/Audio/LevelSuccess.mp3" id="14_8k26l"]
+[ext_resource type="AudioStream" uid="uid://djrv3yufst25w" path="res://Assets/Fable Isle/Audio/LevelFailed.mp3" id="15_1ibqk"]
+[ext_resource type="AudioStream" uid="uid://b3uyqro3wwa8a" path="res://Assets/Fable Isle/Audio/LevelUP(start of level2).mp3" id="16_d6amy"]
+[ext_resource type="AudioStream" uid="uid://cpf1ewd0q1vpd" path="res://Assets/Fable Isle/Audio/5minClockLevel2.mp3" id="17_n6cmk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oeuc3"]
+texture = ExtResource("5_ux12e")
+49:3/size_in_atlas = Vector2i(39, 10)
+49:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1rk13"]
+sources/0 = SubResource("TileSetAtlasSource_oeuc3")
+
+[node name="Level2_SpellingQuest" type="Node2D" unique_id=76193208]
+process_mode = 3
+script = ExtResource("1_8mws1")
+
+[node name="GameTileMap" type="Node2D" parent="." unique_id=817097469]
+position = Vector2(-10, 16)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameTileMap" unique_id=1740016415]
+unique_name_in_owner = true
+layer = 100
+
+[node name="Control" type="Control" parent="GameTileMap/CanvasLayer" unique_id=1112140543]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="CorrectBanner" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=663011663]
+unique_name_in_owner = true
+visible = false
+offset_left = 793.00006
+offset_top = 859.0
+offset_right = 2329.0
+offset_bottom = 1185.0
+scale = Vector2(0.3, 0.2)
+texture = ExtResource("12_vdrr2")
+
+[node name="WrongBanner" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=337869643]
+unique_name_in_owner = true
+visible = false
+offset_left = 794.0
+offset_top = 848.00006
+offset_right = 2330.0
+offset_bottom = 1274.0
+scale = Vector2(0.3, 0.2)
+texture = ExtResource("13_vdvst")
+
+[node name="Sprite2D" type="Sprite2D" parent="GameTileMap/CanvasLayer" unique_id=1527577552]
+position = Vector2(640, 392)
+scale = Vector2(0.6357422, 0.74902344)
+texture = ExtResource("4_xlkur")
+
+[node name="ObjectivesScroll" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=851538473]
+offset_left = -16.0
+offset_top = 135.0
+offset_right = 3184.0
+offset_bottom = 2266.0
+scale = Vector2(0.19645603, 0.27055848)
+texture = ExtResource("5_ll42g")
+
+[node name="ProgressLabel" type="Label" parent="GameTileMap/CanvasLayer/ObjectivesScroll" unique_id=1343234757]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47700003
+anchor_top = 0.725
+anchor_right = 0.47700003
+anchor_bottom = 0.725
+offset_left = -146.95667
+offset_top = 96.07495
+offset_right = 203.04333
+offset_bottom = 493.07507
+scale = Vector2(0.4043935, 0.28414965)
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("6_g0gfl")
+theme_override_font_sizes/font_size = 391
+
+[node name="Title" type="TileMapLayer" parent="GameTileMap/CanvasLayer" unique_id=1711954162]
+position = Vector2(-1248, -103.000015)
+scale = Vector2(1.3, 1.3)
+tile_map_data = PackedByteArray(0, 0, 98, 0, 9, 0, 0, 0, 49, 0, 3, 0, 0, 0)
+tile_set = SubResource("TileSet_1rk13")
+
+[node name="Book" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=983151257]
+offset_left = 490.0
+offset_top = 171.0
+offset_right = 2068.3333
+offset_bottom = 1206.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_g0gfl")
+
+[node name="DefinitionLabel" type="Label" parent="GameTileMap/CanvasLayer/Book" unique_id=1293021040]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 275.0
+offset_top = 187.49998
+offset_right = 1300.0
+offset_bottom = 414.16663
+theme_override_colors/font_color = Color(0.72216094, 0.38200507, 0.051810116, 1)
+theme_override_colors/font_shadow_color = Color(0.5023409, 0.41103512, 0.32810685, 0)
+theme_override_colors/font_outline_color = Color(0.91518915, 0.9151892, 0.9151892, 1)
+theme_override_constants/line_spacing = 7
+theme_override_constants/paragraph_spacing = 15
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("6_g0gfl")
+theme_override_font_sizes/font_size = 60
+
+[node name="WoodPanel" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=436045976]
+offset_left = 512.0
+offset_top = 457.99997
+offset_right = 2048.0
+offset_bottom = 1482.0
+scale = Vector2(0.4, 0.333)
+texture = ExtResource("8_p53t4")
+
+[node name="WordContainer" type="GridContainer" parent="GameTileMap/CanvasLayer/WoodPanel" unique_id=223087045]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.6668
+offset_top = -90.0
+offset_right = 400.33325
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 8
+
+[node name="ChooseHereLabel" type="Label" parent="GameTileMap/CanvasLayer/WoodPanel" unique_id=1576785874]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.358
+anchor_right = 0.563
+anchor_bottom = 0.358
+offset_left = -308.0001
+offset_top = -80.59201
+offset_right = 495.2318
+offset_bottom = 81.40799
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_g0gfl")
+theme_override_font_sizes/font_size = 120
+text = "CHOOSE HERE"
+
+[node name="ClueLabel" type="Label" parent="GameTileMap/CanvasLayer/WoodPanel" unique_id=607518941]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -498.0
+offset_top = -1034.5225
+offset_right = 472.73608
+offset_bottom = -646.73206
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.22769007, 0.10443834, 0.046414226, 1)
+theme_override_colors/font_shadow_color = Color(0.044557855, 0.044557847, 0.044557847, 0)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("6_g0gfl")
+theme_override_font_sizes/font_size = 160
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockIcon" type="TextureRect" parent="GameTileMap/CanvasLayer" unique_id=1401156662]
+unique_name_in_owner = true
+process_mode = 3
+offset_left = 1117.0
+offset_top = 175.00002
+offset_right = 1532.0
+offset_bottom = 584.0
+scale = Vector2(0.3, 0.3)
+mouse_filter = 2
+texture = ExtResource("10_p53t4")
+
+[node name="TimeLabel" type="Label" parent="GameTileMap/CanvasLayer/ClockIcon" unique_id=2108183569]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 164.0
+offset_top = 380.0
+offset_right = 230.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0.99607843, 0.94509804, 0.93333334, 0.9647059)
+theme_override_colors/font_outline_color = Color(0.86898494, 0.8689849, 0.8689849, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("6_g0gfl")
+theme_override_font_sizes/font_size = 80
+text = "15"
+horizontal_alignment = 1
+
+[node name="QuestIncompleteUI" parent="GameTileMap/CanvasLayer" unique_id=1715885540 instance=ExtResource("12_vdvst")]
+unique_name_in_owner = true
+visible = false
+offset_left = -101.0
+offset_top = -418.0
+offset_right = -101.0
+offset_bottom = -418.0
+
+[node name="QuitButton" parent="GameTileMap/CanvasLayer/QuestIncompleteUI/BoardImage" parent_id_path=PackedInt32Array(1715885540, 1838881581) index="0" unique_id=1102251551]
+offset_left = 88.5
+offset_top = 1014.5
+offset_right = 1090.5
+offset_bottom = 1490.5
+
+[node name="RetryButton" parent="GameTileMap/CanvasLayer/QuestIncompleteUI/BoardImage" parent_id_path=PackedInt32Array(1715885540, 1838881581) index="1" unique_id=1354029363]
+offset_left = 628.5
+offset_top = 986.5
+offset_right = 1630.5
+offset_bottom = 1408.5
+
+[node name="RetryButton2" type="TextureButton" parent="GameTileMap/CanvasLayer/QuestIncompleteUI/BoardImage" parent_id_path=PackedInt32Array(1715885540, 1838881581) index="2" unique_id=1098349504]
+layout_mode = 0
+offset_left = 628.5
+offset_top = 986.5
+offset_right = 1630.5
+offset_bottom = 1408.5
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("12_i7rfg")
+
+[node name="AudioStreamPlayer" parent="GameTileMap/CanvasLayer/QuestIncompleteUI" index="3" unique_id=1899757756]
+autoplay = false
+
+[node name="SndCorrect" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=34122860]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+stream = ExtResource("12_qnytp")
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndWrong" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=1735540810]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+stream = ExtResource("13_i7rfg")
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndVictory" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=93481341]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+stream = ExtResource("14_8k26l")
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndGameOver" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=2057164309]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+stream = ExtResource("15_1ibqk")
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndLevelStart" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=114384009]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+stream = ExtResource("16_d6amy")
+max_distance = 999999.0
+attenuation = 0.01
+
+[node name="SndTicking" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=1150036198]
+unique_name_in_owner = true
+position = Vector2(-10, 16)
+stream = ExtResource("17_n6cmk")
+max_distance = 999999.0
+attenuation = 0.01
+
+[connection signal="pressed" from="GameTileMap/CanvasLayer/QuestIncompleteUI/BoardImage/RetryButton2" to="GameTileMap/CanvasLayer/QuestIncompleteUI" method="_on_retry_button_pressed"]
+
+[editable path="GameTileMap/CanvasLayer/QuestIncompleteUI"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj66pngo0bpfp"
+path="res://.godot/imported/WRONG SOUND EFFECT.mp3-6054f4ac7064586ccc0aa8f31e10f376.mp3str"
+
+[deps]
+
+source_file="res://Assets/Fable Isle/Audio/WRONG SOUND EFFECT.mp3"
+dest_files=["res://.godot/imported/WRONG SOUND EFFECT.mp3-6054f4ac7064586ccc0aa8f31e10f376.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

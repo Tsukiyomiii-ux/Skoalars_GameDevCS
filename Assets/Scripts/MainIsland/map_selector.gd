@@ -30,20 +30,28 @@ func _on_island_unlocked(_island_name):
 
 # --- Button Pressed Functions ---
 func _on_fable_isle_btn_pressed():
-	get_tree().change_scene_to_file("res://Assets/Scene/fableisland.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/FableIsland/fableisland.tscn")
 
 func _on_countoria_btn_pressed():
 	if GameManager.is_island_unlocked("island_2"):
-		get_tree().change_scene_to_file("res://Assets/Scene/countoria.tscn")
+		get_tree().change_scene_to_file("res://Assets/Scene/Countoria/countoria.tscn")
 
 func _on_bloom_grove_btn_pressed():
 	if GameManager.is_island_unlocked("island_3"):
-		get_tree().change_scene_to_file("res://Assets/Scene/bloom_grove.tscn")
+		get_tree().change_scene_to_file("res://Assets/Scene/BloomsGrove/science.scn")
 
 func _on_zypheria_btn_pressed():
 	if GameManager.is_island_unlocked("island_4"):
-		get_tree().change_scene_to_file("res://Assets/Scene/zypheria.tscn")
+		get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/zypheria.tscn")
 
 
-func _on_cancel_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://Assets/Scene/main_island.tscn")
+func _on_cancel_btn_pressed():
+	var island_scenes = {
+		"island_1": "res://Assets/Scene/FableIsland/fableisland.tscn",
+		"island_2": "res://Assets/Scene/Countoria/countoria.tscn",
+		"island_3": "res://Assets/Scene/BloomsGrove/science.scn",
+		"island_4": "res://Assets/Scene/Zypheria/zypheria.tscn",
+		"island_5": "res://Assets/Scene/MainIsland/main_island.tscn",
+	}
+	var scene = island_scenes.get(GameManager.get_current_island(), "res://Assets/Scene/MainIsland/main_island.tscn")
+	get_tree().change_scene_to_file(scene)

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://jd1quas8gkg0"]
 
-[ext_resource type="Texture2D" uid="uid://bcsgg5wbtbl5h" path="res://Assets/Sprite/BG/35.png" id="1_16qjn"]
 [ext_resource type="Script" uid="uid://xb55ncmgklv0" path="res://Assets/Scripts/MainIsland/map_selector.gd" id="1_77i5d"]
 [ext_resource type="Texture2D" uid="uid://br7bydaerdo4s" path="res://Assets/Sprite/BG/39.png" id="1_t101k"]
 [ext_resource type="Texture2D" uid="uid://caeslnx7dtfc1" path="res://Assets/Sprite/Buttons/38.png" id="3_qk3hw"]
@@ -9,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cqywuldjp2sk8" path="res://Assets/Sprite/Buttons/41.png" id="5_gr43v"]
 [ext_resource type="Texture2D" uid="uid://bkx0l7bxfdvds" path="res://Assets/Sprite/Buttons/39.png" id="6_6e484"]
 [ext_resource type="Texture2D" uid="uid://p7smd3uo48y8" path="res://Assets/Sprite/Buttons/COLLECT & NAVIGATION BUTTONS.png" id="9_s3iia"]
+[ext_resource type="Texture2D" uid="uid://c7a3kq6tubfuu" path="res://Assets/Sprite/mapNames.png" id="9_xjlx5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rios"]
 texture = ExtResource("3_qk3hw")
@@ -28,7 +28,7 @@ region_rect = Rect2(304, 144, 952, 776)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6e484"]
 texture = ExtResource("4_5rios")
-region_rect = Rect2(304, 144, 968, 784)
+region_rect = Rect2(232, 80, 1112, 880)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f255l"]
 texture = ExtResource("4_5rios")
@@ -42,9 +42,13 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(304, 144, 952, 776)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjlx5"]
+texture = ExtResource("4_5rios")
+region_rect = Rect2(224, 88, 1120, 872)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3iia"]
 texture = ExtResource("5_gr43v")
-region_rect = Rect2(304, 144, 968, 784)
+region_rect = Rect2(104, 144, 1328, 784)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a7cb2"]
 texture = ExtResource("5_gr43v")
@@ -58,9 +62,13 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(304, 144, 952, 776)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsfuf"]
+texture = ExtResource("5_gr43v")
+region_rect = Rect2(128, 128, 1288, 776)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qjrtf"]
 texture = ExtResource("6_6e484")
-region_rect = Rect2(304, 144, 968, 784)
+region_rect = Rect2(16, 144, 1480, 784)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kao2h"]
 texture = ExtResource("6_6e484")
@@ -72,7 +80,10 @@ texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 4.0
-region_rect = Rect2(304, 144, 952, 776)
+region_rect = Rect2(32, 144, 1464, 776)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2eivl"]
+texture = ExtResource("6_6e484")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kwi8"]
 texture = ExtResource("9_s3iia")
@@ -90,6 +101,15 @@ texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(200, 624, 576, 288)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gsfuf"]
+load_path = "res://.godot/imported/mapNames.png-91f9529a785b5afc6a98e415d3a0c602.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2eivl"]
+load_path = "res://.godot/imported/mapNames.png-91f9529a785b5afc6a98e415d3a0c602.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x2uvu"]
+load_path = "res://.godot/imported/mapNames.png-91f9529a785b5afc6a98e415d3a0c602.ctex"
+
 [node name="Control" type="Control" unique_id=1320082704 node_paths=PackedStringArray("count_lock")]
 layout_mode = 3
 anchors_preset = 15
@@ -99,6 +119,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_77i5d")
 count_lock = NodePath("MarginContainer/NinePatchRect/countoria_btn/countLock_btn")
+metadata/_edit_horizontal_guides_ = [173.0]
+metadata/_edit_vertical_guides_ = [351.0, 699.0, 861.0]
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=261934313]
 layout_mode = 0
@@ -120,15 +142,14 @@ custom_minimum_size = Vector2(1280, 850)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_16qjn")
 
 [node name="fableIsle_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=2041469663]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 227.5847
-offset_top = 131.13461
-offset_right = 591.6097
-offset_bottom = 421.7846
+offset_left = 209.52243
+offset_top = 98.33899
+offset_right = 573.54736
+offset_bottom = 388.98898
 theme_override_styles/normal = SubResource("StyleBoxTexture_5rios")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_qk3hw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_gr43v")
@@ -136,13 +157,14 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_gr43v")
 [node name="countoria_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=904455745]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 709.2454
-offset_top = 140.69998
-offset_right = 1073.2704
-offset_bottom = 431.35
+offset_left = 728.51184
+offset_top = 103.804924
+offset_right = 1092.5367
+offset_bottom = 394.45496
 theme_override_styles/normal = SubResource("StyleBoxTexture_6e484")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_f255l")
 theme_override_styles/hover = SubResource("StyleBoxTexture_77i5d")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_xjlx5")
 
 [node name="countLock_btn" type="NinePatchRect" parent="MarginContainer/NinePatchRect/countoria_btn" unique_id=555674358]
 unique_name_in_owner = true
@@ -156,55 +178,110 @@ region_rect = Rect2(232, 696, 528, 160)
 [node name="bloomGrove_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=1218802699]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 278.698
-offset_top = 482.266
-offset_right = 554.629
-offset_bottom = 700.766
+offset_left = 209.5224
+offset_top = 411.2638
+offset_right = 485.45343
+offset_bottom = 629.7638
+scale = Vector2(1.3302951, 1.358567)
 theme_override_styles/normal = SubResource("StyleBoxTexture_s3iia")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_a7cb2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_n6vat")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_gsfuf")
 
 [node name="bloomLock_btn" type="NinePatchRect" parent="MarginContainer/NinePatchRect/bloomGrove_btn" unique_id=368365095]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = -39.071804
-offset_top = 41.04939
-offset_right = 310.9282
-offset_bottom = 161.04938
+offset_left = 6.336239
+offset_top = 60.349617
+offset_right = 356.33624
+offset_bottom = 180.34961
+scale = Vector2(0.75110734, 0.75598145)
 texture = ExtResource("5_f255l")
 region_rect = Rect2(232, 696, 528, 160)
 
 [node name="zypheria_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=620829086]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 738.145
-offset_top = 511.857
-offset_right = 1014.07605
-offset_bottom = 730.3573
+offset_left = 683.9582
+offset_top = 434.49396
+offset_right = 959.8892
+offset_bottom = 652.99426
+scale = Vector2(1.4164116, 1.4488478)
 theme_override_styles/normal = SubResource("StyleBoxTexture_qjrtf")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_kao2h")
 theme_override_styles/hover = SubResource("StyleBoxTexture_agsof")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2eivl")
 
 [node name="zyphLock_btn" type="NinePatchRect" parent="MarginContainer/NinePatchRect/zypheria_btn" unique_id=1287455428]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = -13.245597
-offset_top = 33.322136
-offset_right = 336.7544
-offset_bottom = 153.32213
+offset_left = 33.15558
+offset_top = 59.41856
+offset_right = 383.15558
+offset_bottom = 179.41855
+scale = Vector2(0.70112544, 0.7151954)
 texture = ExtResource("5_f255l")
 region_rect = Rect2(232, 696, 528, 160)
 
 [node name="cancel_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=2073218442]
 layout_mode = 0
-offset_left = 1057.2452
-offset_top = -105.26709
-offset_right = 2337.245
-offset_bottom = 744.7329
+offset_left = 526.21436
+offset_top = 710.52374
+offset_right = 1806.2142
+offset_bottom = 1560.5237
 scale = Vector2(0.19, 0.19)
 theme_override_styles/normal = SubResource("StyleBoxTexture_6kwi8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_cs23o")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fq18r")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=1470131777]
+layout_mode = 0
+offset_left = 447.9445
+offset_top = -138.06268
+offset_right = 847.94446
+offset_bottom = 11.937317
+texture = ExtResource("9_xjlx5")
+region_rect = Rect2(168, 624, 552, 176)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=910639147]
+layout_mode = 0
+offset_left = 287.79227
+offset_top = 42.31317
+offset_right = 687.79224
+offset_bottom = 192.31317
+scale = Vector2(0.50670224, 0.5891418)
+texture = SubResource("CompressedTexture2D_gsfuf")
+region_rect = Rect2(80, 184, 680, 200)
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=1499308913]
+layout_mode = 0
+offset_left = 804.3734
+offset_top = 45.046127
+offset_right = 1204.3733
+offset_bottom = 195.04613
+scale = Vector2(0.50670224, 0.5891418)
+texture = SubResource("CompressedTexture2D_2eivl")
+region_rect = Rect2(72, 408, 696, 192)
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=2102462602]
+layout_mode = 0
+offset_left = 286.5881
+offset_top = 378.46814
+offset_right = 686.58813
+offset_bottom = 528.4682
+scale = Vector2(0.50670224, 0.5891418)
+texture = SubResource("CompressedTexture2D_x2uvu")
+region_rect = Rect2(776, 624, 688, 224)
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=1635184814]
+layout_mode = 0
+offset_left = 804.3734
+offset_top = 435.86044
+offset_right = 1204.3733
+offset_bottom = 585.8606
+scale = Vector2(0.50670224, 0.5891418)
+texture = SubResource("CompressedTexture2D_2eivl")
+region_rect = Rect2(760, 176, 720, 224)
 
 [connection signal="pressed" from="MarginContainer/NinePatchRect/fableIsle_btn" to="." method="_on_fable_isle_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/NinePatchRect/countoria_btn" to="." method="_on_countoria_btn_pressed"]

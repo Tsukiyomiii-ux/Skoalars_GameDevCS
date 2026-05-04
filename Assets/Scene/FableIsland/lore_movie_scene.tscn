@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c3klqu03pej7c"]
+
+[ext_resource type="Script" uid="uid://bkun1f7735y3k" path="res://Assets/Scripts/FableIsland/lore_movie_scene.gd" id="1_hmvqt"]
+[ext_resource type="VideoStream" uid="uid://c734wyo7eie45" path="res://Assets/Sprite/FABLE ISLE/Level2/Lore Rescued.ogv" id="2_fjf71"]
+
+[node name="LoreMovieScene" type="Control" unique_id=2146297052]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hmvqt")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=654713003]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_fjf71")
+autoplay = true
+expand = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1133625359]
+wait_time = 8.0
+autostart = true

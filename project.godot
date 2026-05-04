@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Skoalar"
-run/main_scene="uid://ccx3ruep77ljv"
+run/main_scene="uid://jd1quas8gkg0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 AudioManager="*uid://callrr6j7at3"
 GUIVisibility="*uid://0hi2e04w7lns"
 GameManager="*uid://bexm65k5ncgyk"
+Global="*uid://b5g6r87dllume"
 
 [display]
 

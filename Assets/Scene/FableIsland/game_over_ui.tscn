@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dnbtfi6prigtt"]
+
+[ext_resource type="Script" uid="uid://cxw46sm6nqe4h" path="res://Assets/Scripts/game_over_ui.gd" id="1_4fpvo"]
+[ext_resource type="Texture2D" uid="uid://csfjk1415450o" path="res://Assets/Sprite/FABLE ISLE/Level1/GameOverScreen.png" id="2_t4yam"]
+[ext_resource type="Texture2D" uid="uid://71qci4ghb7d" path="res://Assets/Sprite/FABLE ISLE/Level1/RetryButton.png" id="3_f3aqa"]
+[ext_resource type="Texture2D" uid="uid://rp28ksts7lsf" path="res://Assets/Sprite/FABLE ISLE/Level1/QuitButton.png" id="4_rsdxf"]
+
+[node name="GameOverUI" type="CanvasLayer" unique_id=504405701]
+process_mode = 3
+script = ExtResource("1_4fpvo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1350366253]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0063009937, 0.002922341, 0.00018896865, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=634728346]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -386.0
+offset_top = -267.0
+offset_right = 1267.0
+offset_bottom = 684.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("2_t4yam")
+
+[node name="RetryButton" type="TextureButton" parent="." unique_id=236891854]
+process_mode = 3
+offset_left = 701.0
+offset_top = 470.00003
+offset_right = 1689.3333
+offset_bottom = 838.33325
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("3_f3aqa")
+
+[node name="QuitButton" type="TextureButton" parent="." unique_id=1836964209]
+process_mode = 3
+offset_left = 353.0
+offset_top = 465.0
+offset_right = 1299.6666
+offset_bottom = 746.66675
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_rsdxf")
+
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

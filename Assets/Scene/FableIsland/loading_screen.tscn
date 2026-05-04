@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://0a7uwtmvg2re"]
+
+[ext_resource type="Script" uid="uid://wufooo83ivgu" path="res://Assets/Scripts/loading_screen.gd" id="1_i4cqr"]
+[ext_resource type="Texture2D" uid="uid://s6vplbe61se5" path="res://Assets/Sprite/FABLE ISLE/Level2/39.png" id="2_gl65t"]
+[ext_resource type="Texture2D" uid="uid://nx5nf1e8nu5n" path="res://Assets/Sprite/FABLE ISLE/Level2/loading animations empty.png" id="3_i4cqr"]
+[ext_resource type="Texture2D" uid="uid://clqbjguctg0b0" path="res://Assets/Sprite/FABLE ISLE/Level2/loading animations full.png" id="4_etis6"]
+
+[node name="LoadingScreen" type="Control" unique_id=317096507]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i4cqr")
+
+[node name="Timer" type="Timer" parent="." unique_id=2046580450]
+wait_time = 3.0
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1728194320]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 91.0
+offset_right = 1775.0
+offset_bottom = 1115.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_gl65t")
+
+[node name="BarFrame" type="TextureRect" parent="." unique_id=1312028002]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 298.0
+offset_right = 1570.0
+offset_bottom = 452.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_i4cqr")
+
+[node name="BlueFilling" type="TextureProgressBar" parent="BarFrame" unique_id=218630696]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 1246.0
+offset_bottom = 150.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("4_etis6")
