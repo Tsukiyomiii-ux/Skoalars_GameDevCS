@@ -1,0 +1,495 @@
+[gd_scene format=3 uid="uid://cou8k65xq8efy"]
+
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/Gemini_Generated_Image_g8az57g8az57g8az.png" id="1_4gtin"]
+[ext_resource type="Script" path="res://Assets/Scene/zypheria_lvl_1.gd" id="1_plxvs"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/FLAGS/PHILIPPINES.png" id="3_6nmth"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/OTHERS/missionBox.png" id="4_jtq7k"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/BUTTONS/JAPAN.png" id="5_0fsue"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/OTHERS/CHOICES BOX.png" id="5_eh8io"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/BUTTONS/PHILIPPINES.png" id="6_baeg8"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/BUTTONS/ITALY.png" id="7_je7rt"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/BUTTONS/GUATEMALA.png" id="8_k4hrc"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/BUTTONS/ECUADOR.png" id="9_plxvs"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/OTHERS/clock animation.png" id="10_e6u53"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/PopUp Window/popUpLvl1.png" id="11_je7rt"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/OTHERS/progress bar.png" id="11_k4hrc"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/PopUp Window/collect.png" id="12_k4hrc"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/OTHERS/rewards.png" id="13_6nmth"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/PopUp Window/cancel.png" id="13_eh8io"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/PopUp Window/next.png" id="14_laeyp"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/OTHERS/skills.png" id="14_ty1f7"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/OTHERS/scroll.png" id="15_eot0i"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL1/OTHERS/magicMapSkills.png" id="16_4i8wf"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL 2/UI/gameOver.png" id="20_i7lbq"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL 2/UI/hourglass.png" id="21_6mwml"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL 2/UI/QuitButton.png" id="22_jtq7k"]
+[ext_resource type="Texture2D" path="res://Assets/Zypheria/LEVEL 2/UI/tryAgainButton.png" id="23_1ftwu"]
+[ext_resource type="AudioStream" path="res://Assets/Zypheria/SFX/CorrectSFX.MP3" id="25_jtq7k"]
+[ext_resource type="AudioStream" path="res://Assets/Zypheria/SFX/WrongSFX.MP3" id="26_1ftwu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ftwu"]
+texture = ExtResource("4_jtq7k")
+31:4/size_in_atlas = Vector2i(35, 41)
+31:4/0 = 0
+40:53/size_in_atlas = Vector2i(14, 5)
+40:53/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_laeyp"]
+sources/1 = SubResource("TileSetAtlasSource_1ftwu")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_laeyp"]
+texture = ExtResource("5_eh8io")
+33:2/size_in_atlas = Vector2i(31, 60)
+33:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ty1f7"]
+sources/0 = SubResource("TileSetAtlasSource_laeyp")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eot0i"]
+texture = ExtResource("11_k4hrc")
+38:23/size_in_atlas = Vector2i(17, 14)
+38:23/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4i8wf"]
+sources/0 = SubResource("TileSetAtlasSource_eot0i")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plxvs"]
+bg_color = Color(0.98163515, 0.23115095, 0.24094874, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qcln"]
+atlas = ExtResource("10_e6u53")
+region = Rect2(1024, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fsue"]
+atlas = ExtResource("10_e6u53")
+region = Rect2(512, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baeg8"]
+atlas = ExtResource("10_e6u53")
+region = Rect2(0, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je7rt"]
+atlas = ExtResource("10_e6u53")
+region = Rect2(1024, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4hrc"]
+atlas = ExtResource("10_e6u53")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh8io"]
+atlas = ExtResource("10_e6u53")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laeyp"]
+atlas = ExtResource("10_e6u53")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6nmth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qcln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fsue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baeg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je7rt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4hrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh8io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laeyp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eh8io"]
+texture = ExtResource("11_k4hrc")
+32:53/size_in_atlas = Vector2i(31, 6)
+32:53/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6nmth"]
+sources/0 = SubResource("TileSetAtlasSource_eh8io")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6u53"]
+bg_color = Color(0.27335528, 0.85117316, 0.3910883, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i8wf"]
+texture = ExtResource("13_6nmth")
+49:10/size_in_atlas = Vector2i(16, 13)
+49:10/0 = 0
+62:30/size_in_atlas = Vector2i(18, 22)
+62:30/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mb3po"]
+texture = ExtResource("14_ty1f7")
+62:32/size_in_atlas = Vector2i(28, 7)
+62:32/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wn1r5"]
+sources/0 = SubResource("TileSetAtlasSource_4i8wf")
+sources/1 = SubResource("TileSetAtlasSource_mb3po")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv3rl"]
+atlas = ExtResource("21_6mwml")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwkar"]
+atlas = ExtResource("21_6mwml")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dku5i"]
+atlas = ExtResource("21_6mwml")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbd13"]
+atlas = ExtResource("21_6mwml")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gdrrj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv3rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwkar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dku5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbd13")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ZYPHERIA LVL1" type="Node2D" unique_id=1791768692]
+script = ExtResource("1_plxvs")
+
+[node name="MAIN BACKGROUND" type="TextureRect" parent="." unique_id=213947880]
+offset_right = 1407.0
+offset_bottom = 768.0
+texture = ExtResource("1_4gtin")
+
+[node name="ClueLabel" type="Label" parent="." unique_id=1140017888]
+offset_left = 572.0
+offset_top = 142.0
+offset_right = 844.0
+offset_bottom = 217.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="FlagDisplay" type="TextureRect" parent="." unique_id=1508933256]
+texture_filter = 1
+offset_left = 573.0
+offset_top = 212.0
+offset_right = 841.0
+offset_bottom = 428.0
+texture = ExtResource("3_6nmth")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MISSION BOX" type="TileMapLayer" parent="." unique_id=912901849]
+scale = Vector2(0.8, 0.8)
+tile_map_data = PackedByteArray(0, 0, 19, 0, 30, 0, 0, 0, 28, 0, 3, 0, 0, 0, 19, 0, 31, 0, 1, 0, 32, 0, 6, 0, 0, 0, 21, 0, 25, 0, 1, 0, 31, 0, 4, 0, 0, 0, 19, 0, 3, 0, 1, 0, 40, 0, 53, 0, 0, 0)
+tile_set = SubResource("TileSet_laeyp")
+
+[node name="ChoicesBox" type="TileMapLayer" parent="." unique_id=1144753]
+scale = Vector2(0.6, 0.6)
+tile_map_data = PackedByteArray(0, 0, 112, 0, 33, 0, 0, 0, 33, 0, 2, 0, 0, 0)
+tile_set = SubResource("TileSet_ty1f7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=214182511]
+offset_left = 901.0
+offset_top = 88.0
+offset_right = 1238.0
+offset_bottom = 618.0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="JAPAN" type="TextureButton" parent="VBoxContainer" unique_id=928259946]
+custom_minimum_size = Vector2(192, 48)
+layout_mode = 2
+texture_normal = ExtResource("5_0fsue")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PHILLIPPINES" type="TextureButton" parent="VBoxContainer" unique_id=1618922010]
+custom_minimum_size = Vector2(192, 48)
+layout_mode = 2
+texture_normal = ExtResource("6_baeg8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ITALY" type="TextureButton" parent="VBoxContainer" unique_id=1850548116]
+custom_minimum_size = Vector2(192, 48)
+layout_mode = 2
+texture_normal = ExtResource("7_je7rt")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="GUATEMALA" type="TextureButton" parent="VBoxContainer" unique_id=827765073]
+custom_minimum_size = Vector2(192, 48)
+layout_mode = 2
+texture_normal = ExtResource("8_k4hrc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ECUADOR" type="TextureButton" parent="VBoxContainer" unique_id=1802406004]
+custom_minimum_size = Vector2(192, 48)
+layout_mode = 2
+texture_normal = ExtResource("9_plxvs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TimerBox" type="TileMapLayer" parent="." unique_id=2035435242]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray(0, 0, 137, 0, 82, 0, 0, 0, 38, 0, 23, 0, 0, 0)
+tile_set = SubResource("TileSet_4i8wf")
+
+[node name="FlagTimer" type="ProgressBar" parent="." unique_id=1100314569]
+offset_left = 1057.0
+offset_top = 624.0
+offset_right = 1140.0
+offset_bottom = 694.74994
+theme_override_styles/fill = SubResource("StyleBoxFlat_plxvs")
+max_value = 15.0
+value = 15.0
+rounded = true
+show_percentage = false
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1373016224]
+offset_left = 1044.0
+offset_top = 616.74994
+offset_right = 1150.0
+offset_bottom = 697.74994
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockSprite" type="AnimatedSprite2D" parent="." unique_id=1188664223]
+position = Vector2(990, 648.75)
+scale = Vector2(0.37499994, 0.38085955)
+sprite_frames = SubResource("SpriteFrames_6nmth")
+autoplay = "default"
+frame_progress = 0.6912975
+
+[node name="ProgressionBox" type="TileMapLayer" parent="." unique_id=2016234901]
+position = Vector2(-2, -59)
+tile_map_data = PackedByteArray(0, 0, 44, 0, 44, 0, 0, 0, 32, 0, 53, 0, 0, 0)
+tile_set = SubResource("TileSet_6nmth")
+
+[node name="ProgressionBar" type="ProgressBar" parent="." unique_id=1979810054]
+offset_left = 505.0
+offset_top = 646.0
+offset_right = 909.0
+offset_bottom = 667.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_e6u53")
+max_value = 10.0
+step = 1.0
+value = 10.0
+show_percentage = false
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=898003610]
+offset_left = 615.0
+offset_top = 630.0
+offset_right = 783.0
+offset_bottom = 687.0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rewards" type="TileMapLayer" parent="." unique_id=1177130134]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray(0, 0, 16, 0, 78, 0, 0, 0, 49, 0, 10, 0, 0, 0, 38, 0, 77, 0, 1, 0, 62, 0, 32, 0, 0, 0)
+tile_set = SubResource("TileSet_wn1r5")
+
+[node name="HintScroll" type="TextureButton" parent="." unique_id=589990054]
+offset_left = 577.0
+offset_top = 420.0
+offset_right = 845.0
+offset_bottom = 636.0
+texture_normal = ExtResource("15_eot0i")
+
+[node name="PopupLayer" type="CanvasLayer" parent="." unique_id=600453137]
+visible = false
+
+[node name="WinPopup" type="Control" parent="PopupLayer" unique_id=1396450077]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1468.0
+offset_bottom = 793.0
+
+[node name="ColorRect" type="ColorRect" parent="PopupLayer/WinPopup" unique_id=1343406329]
+layout_mode = 0
+offset_right = 1462.0
+offset_bottom = 791.0
+color = Color(0, 0, 0, 0.8352941)
+
+[node name="MainFrame" type="TextureRect" parent="PopupLayer/WinPopup" unique_id=1137960584]
+texture_filter = 1
+layout_mode = 0
+offset_left = 46.0
+offset_top = 170.0
+offset_right = 1345.0
+offset_bottom = 796.0
+texture = ExtResource("11_je7rt")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="CollectButton" type="TextureButton" parent="PopupLayer/WinPopup/MainFrame" unique_id=22686263]
+texture_filter = 1
+custom_minimum_size = Vector2(500, 49)
+layout_mode = 0
+offset_left = 313.0
+offset_top = 163.0
+offset_right = 914.0
+offset_bottom = 581.0
+texture_normal = ExtResource("12_k4hrc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BottomButtons" type="HBoxContainer" parent="PopupLayer/WinPopup" unique_id=361365732]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -768.0
+offset_top = -753.0
+offset_right = 615.0
+offset_bottom = 435.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="CancelButton" type="TextureButton" parent="PopupLayer/WinPopup/BottomButtons" unique_id=989874748]
+custom_minimum_size = Vector2(500, 49)
+layout_mode = 2
+texture_normal = ExtResource("13_eh8io")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="NextButton" type="TextureButton" parent="PopupLayer/WinPopup/BottomButtons" unique_id=619880410]
+custom_minimum_size = Vector2(500, 49)
+layout_mode = 2
+texture_normal = ExtResource("14_laeyp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="LosePopup" type="Control" parent="PopupLayer" unique_id=2098831397]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -768.0
+offset_top = 40.0
+offset_right = 700.0
+offset_bottom = 833.0
+
+[node name="ColorRect" type="ColorRect" parent="PopupLayer/LosePopup" unique_id=845249085]
+layout_mode = 0
+offset_left = 695.0
+offset_top = -130.0
+offset_right = 2538.0
+offset_bottom = 791.0
+color = Color(0, 0, 0, 0.8352941)
+
+[node name="GameOverFrame" type="TextureRect" parent="PopupLayer/LosePopup" unique_id=1124546937]
+texture_filter = 1
+layout_mode = 0
+offset_left = 551.0
+offset_top = 196.0
+offset_right = 2316.0
+offset_bottom = 606.0
+texture = ExtResource("20_i7lbq")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="hourGlassSprite" type="AnimatedSprite2D" parent="PopupLayer/LosePopup/GameOverFrame" unique_id=1857779208]
+position = Vector2(879, 200.5)
+scale = Vector2(0.87760425, 0.9667969)
+sprite_frames = SubResource("SpriteFrames_gdrrj")
+autoplay = "default"
+frame_progress = 0.005551835
+
+[node name="BottomButtons" type="HBoxContainer" parent="PopupLayer/LosePopup" unique_id=1454280552]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 133.0
+offset_top = -902.0
+offset_right = 1356.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="QuitButton" type="TextureButton" parent="PopupLayer/LosePopup/BottomButtons" unique_id=1178722540]
+custom_minimum_size = Vector2(300, 49)
+layout_mode = 2
+texture_normal = ExtResource("22_jtq7k")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TryAgainButton" type="TextureButton" parent="PopupLayer/LosePopup/BottomButtons" unique_id=922505845]
+custom_minimum_size = Vector2(550, 49)
+layout_mode = 2
+texture_normal = ExtResource("23_1ftwu")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=332107162]
+offset_left = -102.0
+offset_top = -22.0
+offset_right = 1476.0
+offset_bottom = 815.0
+color = Color(0, 0.012920001, 0.025840001, 0.83300006)
+
+[node name="WorldMapPopup" type="TextureRect" parent="." unique_id=64683691]
+z_index = 10
+offset_left = 150.0
+offset_top = 62.0
+offset_right = 1130.0
+offset_bottom = 720.0
+texture = ExtResource("16_4i8wf")
+expand_mode = 1
+
+[node name="MapTimerLabel" type="Label" parent="WorldMapPopup" unique_id=55339430]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 20.0
+offset_right = 639.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0.21612376, 0.0688414, 1.2032688e-08, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CorrectSound" type="AudioStreamPlayer" parent="." unique_id=80707702]
+stream = ExtResource("25_jtq7k")
+
+[node name="WrongSound" type="AudioStreamPlayer" parent="." unique_id=684651608]
+stream = ExtResource("26_1ftwu")
