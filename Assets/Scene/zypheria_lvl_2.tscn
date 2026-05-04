@@ -1,0 +1,634 @@
+[gd_scene format=3 uid="uid://bvt3aupbut1q5"]
+
+[ext_resource type="Script" uid="uid://c2jru3sp1b8lk" path="res://Assets/Scripts/zypheria_lvl_2.gd" id="1_msjiv"]
+[ext_resource type="Script" uid="uid://ceffavmcbp00a" path="res://parallax_background.gd" id="2_etapc"]
+[ext_resource type="Texture2D" uid="uid://bt38a0dkkh0jg" path="res://Assets/Zypheria/LEVEL 2/PARALLAX SKY/1.png" id="3_lk2ch"]
+[ext_resource type="Texture2D" uid="uid://c5tecmnjy8qyy" path="res://Assets/Zypheria/LEVEL 2/PARALLAX SKY/2.png" id="4_qoiyg"]
+[ext_resource type="Texture2D" uid="uid://djjv6dg5l6fwo" path="res://Assets/Zypheria/LEVEL 2/PARALLAX SKY/3.png" id="5_fovlj"]
+[ext_resource type="Texture2D" uid="uid://h1wnfubcaol1" path="res://Assets/Zypheria/LEVEL 2/PARALLAX SKY/4.png" id="6_85iql"]
+[ext_resource type="Texture2D" uid="uid://eb6dl7hw3prx" path="res://Assets/Zypheria/LEVEL1/OTHERS/scroll.png" id="7_ojacm"]
+[ext_resource type="Texture2D" uid="uid://cp5guenmwpi0d" path="res://Assets/Zypheria/LEVEL1/OTHERS/progress bar.png" id="8_qkpye"]
+[ext_resource type="Texture2D" uid="uid://ce5hrbg0usxjt" path="res://Assets/Zypheria/LEVEL 2/UI/lvl2UI.png" id="9_v7leq"]
+[ext_resource type="Texture2D" uid="uid://cmvx1qrm64fwf" path="res://Assets/Zypheria/LEVEL 2/UI/PLANE ANIMATION.png" id="10_r2ncl"]
+[ext_resource type="Texture2D" uid="uid://bi8ajc4faee5y" path="res://Assets/Zypheria/LEVEL1/OTHERS/magicMapSkills.png" id="11_5q3ar"]
+[ext_resource type="Texture2D" uid="uid://7esndk4bskpx" path="res://Assets/Zypheria/LEVEL1/OTHERS/clock animation.png" id="12_olxsx"]
+[ext_resource type="Texture2D" uid="uid://btvsa2mjqbay2" path="res://Assets/Zypheria/LEVEL1/OTHERS/rewards.png" id="13_sethy"]
+[ext_resource type="Texture2D" uid="uid://d1fegikjypo45" path="res://Assets/Zypheria/LEVEL 2/UI/scroll animated.png" id="14_hhwkf"]
+[ext_resource type="VideoStream" uid="uid://c1rn13uaioq8d" path="res://Assets/Zypheria/LEVEL 2/RescueAnimation/Aero Rescued.ogv" id="15_etapc"]
+[ext_resource type="Texture2D" uid="uid://bebiak7jxn0tw" path="res://Assets/Zypheria/LEVEL 2/UI/Popout lvl2 Quest Complete.png" id="15_fg10v"]
+[ext_resource type="Texture2D" uid="uid://id62386iubpe" path="res://Assets/Zypheria/LEVEL1/PopUp Window/collect.png" id="16_hwm2g"]
+[ext_resource type="Texture2D" uid="uid://doj0yg2njf1r" path="res://Assets/Zypheria/LEVEL1/PopUp Window/cancel.png" id="17_dn077"]
+[ext_resource type="Texture2D" uid="uid://b3barnxc1x08h" path="res://Assets/Zypheria/LEVEL 2/UI/RESCUE.png" id="18_msjiv"]
+[ext_resource type="Texture2D" uid="uid://6wkedb0hmxho" path="res://Assets/Zypheria/LEVEL 2/UI/gameOver.png" id="19_mv263"]
+[ext_resource type="Texture2D" uid="uid://dwrccdukxl1" path="res://Assets/Zypheria/LEVEL 2/UI/hourglass.png" id="20_jmgrt"]
+[ext_resource type="Texture2D" uid="uid://danwlg3e3a3m8" path="res://Assets/Zypheria/LEVEL 2/UI/QuitButton.png" id="21_mssw4"]
+[ext_resource type="Texture2D" uid="uid://dj3ib0ig87y3c" path="res://Assets/Zypheria/LEVEL 2/UI/tryAgainButton.png" id="22_iob5k"]
+[ext_resource type="AudioStream" uid="uid://dulsar2oks53a" path="res://Assets/Zypheria/SFX/CorrectSFX.MP3" id="23_wvkos"]
+[ext_resource type="AudioStream" uid="uid://wgf1b87rkjtu" path="res://Assets/Zypheria/SFX/WrongSFX.MP3" id="24_o8fq2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sm4ji"]
+texture = ExtResource("8_qkpye")
+31:53/size_in_atlas = Vector2i(32, 6)
+31:53/0 = 0
+37:4/size_in_atlas = Vector2i(18, 15)
+37:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ulcyy"]
+sources/0 = SubResource("TileSetAtlasSource_sm4ji")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvflm"]
+bg_color = Color(0.20267731, 0.78227127, 3.85046e-07, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u7yax"]
+texture = ExtResource("9_v7leq")
+1:1/size_in_atlas = Vector2i(81, 62)
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hvflm"]
+sources/0 = SubResource("TileSetAtlasSource_u7yax")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un0xu"]
+atlas = ExtResource("10_r2ncl")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttcfr"]
+atlas = ExtResource("10_r2ncl")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmo1q"]
+atlas = ExtResource("10_r2ncl")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pegh7"]
+atlas = ExtResource("10_r2ncl")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fpoqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un0xu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttcfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmo1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pegh7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hvflm"]
+texture = ExtResource("8_qkpye")
+37:4/size_in_atlas = Vector2i(18, 15)
+37:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_un0xu"]
+sources/0 = SubResource("TileSetAtlasSource_hvflm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ttcfr"]
+bg_color = Color(0.8915261, 0.14368221, 4.813075e-07, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpoqm"]
+atlas = ExtResource("12_olxsx")
+region = Rect2(1024, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3m68"]
+atlas = ExtResource("12_olxsx")
+region = Rect2(512, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvthh"]
+atlas = ExtResource("12_olxsx")
+region = Rect2(0, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul7b7"]
+atlas = ExtResource("12_olxsx")
+region = Rect2(1024, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsoxs"]
+atlas = ExtResource("12_olxsx")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqslv"]
+atlas = ExtResource("12_olxsx")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut5qh"]
+atlas = ExtResource("12_olxsx")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gc8nr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpoqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3m68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvthh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul7b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsoxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqslv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut5qh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j728g"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttcfr"]
+texture = SubResource("CompressedTexture2D_j728g")
+37:38/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xmo1q"]
+texture = ExtResource("13_sethy")
+29:8/size_in_atlas = Vector2i(15, 16)
+29:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pegh7"]
+sources/0 = SubResource("TileSetAtlasSource_ttcfr")
+sources/3 = SubResource("TileSetAtlasSource_xmo1q")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc8nr"]
+atlas = ExtResource("14_hhwkf")
+region = Rect2(0, 0, 384, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cl24"]
+atlas = ExtResource("14_hhwkf")
+region = Rect2(384, 0, 384, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7yax"]
+atlas = ExtResource("14_hhwkf")
+region = Rect2(768, 0, 384, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifq73"]
+atlas = ExtResource("14_hhwkf")
+region = Rect2(1152, 0, 384, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_37u62"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gc8nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cl24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7yax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifq73")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv3rl"]
+atlas = ExtResource("20_jmgrt")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwkar"]
+atlas = ExtResource("20_jmgrt")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dku5i"]
+atlas = ExtResource("20_jmgrt")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbd13"]
+atlas = ExtResource("20_jmgrt")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2cl24"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv3rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwkar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dku5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbd13")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="zypheria_lvl2" type="Node2D" unique_id=2125438506]
+script = ExtResource("1_msjiv")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=214989016]
+script = ExtResource("2_etapc")
+
+[node name="sky" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1998574806]
+motion_scale = Vector2(0.05, 0.05)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/sky" unique_id=1254258058]
+texture_filter = 1
+texture = ExtResource("3_lk2ch")
+centered = false
+
+[node name="clouds1" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2050753239]
+motion_scale = Vector2(0.15, 0.15)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds1" unique_id=414671916]
+texture_filter = 1
+texture = ExtResource("4_qoiyg")
+centered = false
+
+[node name="clouds2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1208708538]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds2" unique_id=748712366]
+texture_filter = 1
+texture = ExtResource("5_fovlj")
+centered = false
+
+[node name="clouds3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2053343994]
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds3" unique_id=620408610]
+texture_filter = 1
+texture = ExtResource("6_85iql")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=918646775]
+
+[node name="HintScroll" type="TextureButton" parent="CanvasLayer" unique_id=999869946]
+offset_left = 957.0
+offset_top = 518.0
+offset_right = 1225.0
+offset_bottom = 734.0
+texture_normal = ExtResource("7_ojacm")
+
+[node name="ProgressionBarHolder" type="TileMapLayer" parent="CanvasLayer" unique_id=34428734]
+position = Vector2(-6, 42)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray(0, 0, 42, 0, 35, 0, 0, 0, 31, 0, 53, 0, 0, 0)
+tile_set = SubResource("TileSet_ulcyy")
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1269197580]
+offset_left = 332.0
+offset_top = 435.0
+offset_right = 616.0
+offset_bottom = 449.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_hvflm")
+max_value = 10.0
+show_percentage = false
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=249486479]
+offset_left = 332.0
+offset_top = 429.0
+offset_right = 615.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SCROLL,CLOUDS, MISSION" type="TileMapLayer" parent="CanvasLayer" unique_id=610212365]
+position = Vector2(291.87497, 160.375)
+scale = Vector2(0.8, 0.7)
+tile_map_data = PackedByteArray(0, 0, 23, 0, 17, 0, 1, 0, 1, 0, 0, 0, 0, 0, 21, 0, 17, 0, 0, 0, 1, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_hvflm")
+
+[node name="QuestionLabel" type="Label" parent="CanvasLayer/SCROLL,CLOUDS, MISSION" unique_id=672903674]
+offset_left = -123.59372
+offset_top = 172.32144
+offset_right = 567.65625
+offset_bottom = 310.89288
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Choice1" type="TextureButton" parent="CanvasLayer/SCROLL,CLOUDS, MISSION" unique_id=2075635532]
+offset_left = -127.343704
+offset_top = -80.53569
+offset_right = 75.98961
+offset_bottom = 6.1309357
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/SCROLL,CLOUDS, MISSION/Choice1" unique_id=306369605]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.11680329
+anchor_top = 0.11538437
+anchor_right = 1.2233609
+anchor_bottom = 1.119231
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.00039445335, 0.00039445335, 0.00039445335, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Choice2" type="TextureButton" parent="CanvasLayer/SCROLL,CLOUDS, MISSION" unique_id=438851295]
+offset_left = 303.9063
+offset_top = -77.67854
+offset_right = 497.23962
+offset_bottom = 8.988083
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/SCROLL,CLOUDS, MISSION/Choice2" unique_id=1347434274]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.17456898
+anchor_top = 0.08241741
+anchor_right = 1.234914
+anchor_bottom = 1.0824174
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.9929301, 0.9929301, 0.99293, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Choice3" type="TextureButton" parent="CanvasLayer/SCROLL,CLOUDS, MISSION" unique_id=450129043]
+offset_left = 735.1563
+offset_top = -80.53569
+offset_right = 925.1563
+offset_bottom = 6.1309357
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/SCROLL,CLOUDS, MISSION/Choice3" unique_id=1937586326]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.16447367
+anchor_top = 0.065933846
+anchor_right = 1.2960526
+anchor_bottom = 1.0659338
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PlaneSprite" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=184636189]
+position = Vector2(967.99994, 347)
+scale = Vector2(0.51546234, 0.43237305)
+sprite_frames = SubResource("SpriteFrames_fpoqm")
+autoplay = "default"
+frame_progress = 0.35240212
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=773434482]
+offset_left = -94.0
+offset_top = -37.0
+offset_right = 1484.0
+offset_bottom = 800.0
+color = Color(0, 0.012920001, 0.025840001, 0.83300006)
+
+[node name="WorldMapPopup" type="TextureRect" parent="CanvasLayer" unique_id=1785558269]
+z_index = 10
+offset_left = 154.0
+offset_top = 32.0
+offset_right = 1134.0
+offset_bottom = 690.0
+texture = ExtResource("11_5q3ar")
+expand_mode = 1
+
+[node name="MapTimerLabel" type="Label" parent="CanvasLayer/WorldMapPopup" unique_id=1820068282]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 18.0
+offset_right = 656.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.21612376, 0.0688414, 1.2032688e-08, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RescueVideo" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=1300640716]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("15_etapc")
+expand = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1442622411]
+wait_time = 15.0
+one_shot = true
+
+[node name="TimerBox" type="TileMapLayer" parent="." unique_id=1779017756]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray(0, 0, 83, 0, 79, 0, 0, 0, 37, 0, 4, 0, 0, 0)
+tile_set = SubResource("TileSet_un0xu")
+
+[node name="TimerProgressBar" type="ProgressBar" parent="." unique_id=645466624]
+offset_left = 623.0
+offset_top = 596.0
+offset_right = 722.0
+offset_bottom = 682.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_ttcfr")
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[node name="TimerLabel" type="Label" parent="." unique_id=32250655]
+offset_left = 632.0
+offset_top = 595.0
+offset_right = 713.0
+offset_bottom = 677.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockSprite" type="AnimatedSprite2D" parent="." unique_id=1385777682]
+position = Vector2(669, 566.00006)
+scale = Vector2(0.3359375, 0.30859375)
+sprite_frames = SubResource("SpriteFrames_gc8nr")
+autoplay = "default"
+frame_progress = 0.22636446
+
+[node name="Rewards" type="TileMapLayer" parent="." unique_id=884159701]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray(0, 0, 109, 0, 69, 0, 0, 0, 37, 0, 38, 0, 0, 0, 101, 0, 79, 0, 3, 0, 29, 0, 8, 0, 0, 0)
+tile_set = SubResource("TileSet_pegh7")
+
+[node name="ScrollRewardSprite" type="AnimatedSprite2D" parent="." unique_id=184109980]
+position = Vector2(936, 648.25)
+scale = Vector2(0.35937485, 0.41455078)
+sprite_frames = SubResource("SpriteFrames_37u62")
+autoplay = "default"
+frame_progress = 0.9822084
+
+[node name="PopupLayer" type="CanvasLayer" parent="." unique_id=1643814174]
+layer = 10
+visible = false
+
+[node name="WinPopup" type="Control" parent="PopupLayer" unique_id=898830491]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1468.0
+offset_bottom = 793.0
+
+[node name="ColorRect" type="ColorRect" parent="PopupLayer/WinPopup" unique_id=171716800]
+layout_mode = 0
+offset_right = 1462.0
+offset_bottom = 791.0
+color = Color(0, 0, 0, 0.8352941)
+
+[node name="MainFrame" type="TextureRect" parent="PopupLayer/WinPopup" unique_id=1078093465]
+texture_filter = 1
+layout_mode = 0
+offset_left = 46.0
+offset_top = 31.0
+offset_right = 1345.0
+offset_bottom = 796.0
+texture = ExtResource("15_fg10v")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="CollectButton" type="TextureButton" parent="PopupLayer/WinPopup/MainFrame" unique_id=377894763]
+texture_filter = 1
+custom_minimum_size = Vector2(500, 49)
+layout_mode = 0
+offset_left = 313.0
+offset_top = 153.0
+offset_right = 914.0
+offset_bottom = 812.0
+texture_normal = ExtResource("16_hwm2g")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BottomButtons1" type="HBoxContainer" parent="PopupLayer/WinPopup" unique_id=122523608]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -768.0
+offset_top = -753.0
+offset_right = 525.0
+offset_bottom = 416.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="CancelButton" type="TextureButton" parent="PopupLayer/WinPopup/BottomButtons1" unique_id=751424162]
+custom_minimum_size = Vector2(500, 49)
+layout_mode = 2
+texture_normal = ExtResource("17_dn077")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="RescueButton" type="TextureButton" parent="PopupLayer/WinPopup/BottomButtons1" unique_id=1987820492]
+custom_minimum_size = Vector2(280, 49)
+layout_mode = 2
+texture_normal = ExtResource("18_msjiv")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="LosePopup" type="Control" parent="PopupLayer" unique_id=224935105]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 1469.0
+offset_bottom = 797.0
+
+[node name="ColorRect" type="ColorRect" parent="PopupLayer/LosePopup" unique_id=1919466959]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 1458.0
+offset_bottom = 783.0
+color = Color(0, 0, 0, 0.8352941)
+
+[node name="GameOverFrame" type="TextureRect" parent="PopupLayer/LosePopup" unique_id=780099437]
+texture_filter = 1
+layout_mode = 0
+offset_left = -876.0
+offset_top = 317.0
+offset_right = 2185.0
+offset_bottom = 579.0
+texture = ExtResource("19_mv263")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="hourGlassSprite" type="AnimatedSprite2D" parent="PopupLayer/LosePopup/GameOverFrame" unique_id=1127277974]
+position = Vector2(1522, 129.50002)
+scale = Vector2(1.0729169, 1.0644531)
+sprite_frames = SubResource("SpriteFrames_2cl24")
+autoplay = "default"
+
+[node name="BottomButtons2" type="HBoxContainer" parent="PopupLayer/LosePopup/GameOverFrame" unique_id=750645530]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2136.0
+offset_top = -745.0
+offset_right = 2242.0
+offset_bottom = 886.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="QuitButton" type="TextureButton" parent="PopupLayer/LosePopup/GameOverFrame/BottomButtons2" unique_id=576068220]
+custom_minimum_size = Vector2(300, 49)
+layout_mode = 2
+texture_normal = ExtResource("21_mssw4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TryAgainButton" type="TextureButton" parent="PopupLayer/LosePopup/GameOverFrame/BottomButtons2" unique_id=941853035]
+custom_minimum_size = Vector2(550, 49)
+layout_mode = 2
+texture_normal = ExtResource("22_iob5k")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CorrectSound" type="AudioStreamPlayer" parent="." unique_id=120491567]
+stream = ExtResource("23_wvkos")
+
+[node name="WrongSound" type="AudioStreamPlayer" parent="." unique_id=842251829]
+stream = ExtResource("24_o8fq2")
