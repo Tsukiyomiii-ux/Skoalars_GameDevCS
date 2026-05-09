@@ -34,11 +34,11 @@ extends Node2D
 @onready var wrong_sound = $WrongSound
 
 # 4. TIMER UI
-@onready var timer_progress_bar = $TimerProgressBar 
-@onready var timer_label = $TimerLabel
+@onready var timer_progress_bar = $CanvasLayer2/TimerProgressBar 
+@onready var timer_label = $CanvasLayer2/TimerLabel
 @onready var game_timer = $Timer
 
-# DATA
+# --- DATA ---
 var all_questions = [
 	{"q": "What is the capital of Argentina?", "a": "Buenos Aires"},
 	{"q": "What is the capital of Costa Rica?", "a": "San José"},
@@ -66,21 +66,25 @@ var session_questions = []
 var score = 0
 var target_score = 10
 var is_transitioning = false
+var is_frozen: bool = false
 var hint_timer_active = false
 var hint_time_left = 10.0
 
 func _ready():
 	randomize()
 	all_questions.shuffle()
-	session_questions = all_questions.slice(0, 10) 
+	session_questions = all_questions.slice(0, 10)
+	
+	$PopupLayer/WinPopup/BottomButtons1/RescueButton.disabled = true
+	$PopupLayer/WinPopup/BottomButtons1/RescueButton.modulate = Color(0.5, 0.5, 0.5)
 	
 	# Initial UI State
-	popup_layer.show() 
+	popup_layer.show()
 	win_popup.hide()
 	lose_popup.hide()
 	world_map_popup.hide()
-	hint_bg_dim.hide() 
-	rescue_video.hide() 
+	hint_bg_dim.hide()
+	rescue_video.hide()
 	
 	# Connect All Buttons to Hover Logic
 	var all_ui_buttons = []
@@ -107,74 +111,133 @@ func _ready():
 	# Connect Remaining Button Logic
 	hint_button.pressed.connect(_on_hint_pressed)
 	collect_button.pressed.connect(_on_collect_pressed)
-	rescue_button.pressed.connect(_on_rescue_pressed) 
-	win_cancel_button.pressed.connect(_on_try_again_pressed) 
+	rescue_button.pressed.connect(_on_rescue_pressed)
+	win_cancel_button.pressed.connect(_on_try_again_pressed)
 	
 	if quit_button: quit_button.pressed.connect(_on_quit_pressed)
 	if try_again_button: try_again_button.pressed.connect(_on_try_again_pressed)
 	
 	rescue_video.finished.connect(_on_video_finished)
 	game_timer.timeout.connect(_on_timer_timeout)
-	game_timer.start(90.0) 
+	game_timer.start(90.0)
+	
+	# --- SKILL CONNECTIONS ---
+	GameManager.set_current_island("island_4.5")
+	GameManager.set_allowed_skills(["hint", "freeze_time", "add_time", "skip"])
+	if not GameManager.hint_requested.is_connected(_on_hint_used):
+		GameManager.hint_requested.connect(_on_hint_used)
+	if not GameManager.freeze_requested.is_connected(_on_freeze_used):
+		GameManager.freeze_requested.connect(_on_freeze_used)
+	if not GameManager.add_time_requested.is_connected(_on_add_time_used):
+		GameManager.add_time_requested.connect(_on_add_time_used)
+	if not GameManager.skip_requested.is_connected(_on_skip_used):
+		GameManager.skip_requested.connect(_on_skip_used)
+	await get_tree().create_timer(0.1).timeout
+	GameManager.update_skill_button_states()
 	
 	update_ui_displays()
 	load_question()
 
-func _process(delta):
-	if game_timer and !game_timer.is_stopped():
-		var time_left = ceil(game_timer.time_left)
-		timer_label.text = "%01d:%02d" % [int(time_left / 60), int(time_left) % 60]
-		timer_progress_bar.value = game_timer.time_left
-	
-	if hint_timer_active:
-		hint_time_left -= delta
-		map_timer_label.text = "Closing in: " + str(ceil(hint_time_left))
-		if hint_time_left <= 0:
-			_hide_hint()
+# --- SKILL FUNCTIONS ---
+func _on_hint_used():
+	if is_transitioning: return
+	if session_questions.is_empty(): return
+	var correct = session_questions[0]["a"]
+	for btn in choice_btns:
+		var lbl = btn.get_node("Label")
+		if lbl.text == correct:
+			var tween = create_tween().set_loops(3)
+			tween.tween_property(btn, "modulate", Color(0.0, 0.0, 0.0, 1.0), 0.3)
+			tween.chain().tween_property(btn, "modulate", Color.WHITE, 1)
+			break
+
+func _on_freeze_used():
+	is_frozen = true
+	game_timer.paused = true
+	await get_tree().create_timer(10.0).timeout
+	game_timer.paused = false
+	is_frozen = false
+
+func _on_add_time_used():
+	var current = game_timer.time_left
+	game_timer.stop()
+	game_timer.start(current + 10.0)
+
+func _on_skip_used():
+	if is_transitioning: return
+	if session_questions.is_empty(): return
+	if correct_sound: correct_sound.play()
+	session_questions.pop_front()
+	score += 1
+	update_ui_displays()
+	if score >= target_score:
+		end_game(true)
+	else:
+		load_question()
+
+# --- PROCESS ---
+func _process(_delta):
+	if not is_frozen and game_timer:
+		var time_left = game_timer.time_left
+		var mins = int(time_left) / 60
+		var secs = int(time_left) % 60
+		if timer_label:
+			timer_label.text = str(mins) + ":" + str(secs).pad_zeros(2)
+		if timer_progress_bar:
+			timer_progress_bar.value = time_left
 
 # --- HOVER LOGIC ---
 func _on_button_hover(btn):
 	if btn and not btn.disabled:
-		# If it's a quiz button, block hover during transition animations
 		if btn in choice_btns and is_transitioning:
 			return
-		# All other buttons (Popup/Hint) should hover freely
-		btn.modulate = Color(0.112, 0.07, 0.48, 1.0) 
+		btn.modulate = Color(0.112, 0.07, 0.48, 1.0)
 
 func _on_button_exit(btn):
 	if btn and not btn.disabled:
-		# If it's a quiz button, block exit reset during transition animations
 		if btn in choice_btns and is_transitioning:
 			return
 		btn.modulate = Color.WHITE
 
 # --- HINT LOGIC ---
 func _on_hint_pressed():
-	if hint_timer_active or hint_button.disabled: 
-		return 
+	if hint_timer_active or hint_button.disabled:
+		return
 	
 	world_map_popup.show()
-	hint_bg_dim.show() 
+	hint_bg_dim.show()
 	hint_time_left = 10.0
 	hint_timer_active = true
+	hint_button.disabled = true
+	hint_button.modulate = Color(0.5, 0.5, 0.5, 0.5)
+	$CanvasLayer2.hide()
 	
-	hint_button.disabled = true 
-	hint_button.modulate = Color(0.5, 0.5, 0.5, 0.5) 
-
-func _hide_hint():
-	hint_timer_active = false
+	
+	# Countdown and auto-close
+	var map_time = 10
+	while map_time > 0:
+		if map_timer_label: map_timer_label.text = "Closing in: " + str(map_time) + "s"
+		await get_tree().create_timer(1.0).timeout
+		map_time -= 1
+	
+	$CanvasLayer2.show()
 	world_map_popup.hide()
-	hint_bg_dim.hide() 
+	hint_bg_dim.hide()
+	hint_timer_active = false
+	
 
 # --- QUIZ LOGIC ---
 func load_question():
 	if score >= target_score:
 		end_game(true)
 		return
+	if session_questions.is_empty():
+		end_game(false)
+		return
 
 	is_transitioning = false
 	var current_q = session_questions[0]
-	question_label.text = current_q["q"] 
+	question_label.text = current_q["q"]
 	
 	var choices = [current_q["a"]]
 	var pool = []
@@ -189,7 +252,7 @@ func load_question():
 		var btn = choice_btns[i]
 		var lbl = btn.get_node("Label")
 		lbl.text = choices[i]
-		btn.modulate = Color.WHITE 
+		btn.modulate = Color.WHITE
 		lbl.add_theme_color_override("font_color", Color.WHITE)
 		btn.disabled = false
 		btn.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -227,9 +290,7 @@ func end_game(is_win: bool):
 	game_timer.stop()
 	hint_timer_active = false
 	world_map_popup.hide()
-	hint_bg_dim.hide() 
-	
-	# Reset transitioning to false so popup buttons can hover immediately
+	hint_bg_dim.hide()
 	is_transitioning = false
 	popup_layer.show()
 	
@@ -237,7 +298,7 @@ func end_game(is_win: bool):
 		win_popup.show()
 		lose_popup.hide()
 	else:
-		timer_label.text = "0:00"
+		if timer_label: timer_label.text = "0:00"
 		lose_popup.show()
 		win_popup.hide()
 
@@ -249,6 +310,7 @@ func _on_rescue_pressed():
 	rescue_video.show()
 	rescue_video.play()
 	win_popup.hide()
+	$CanvasLayer2.hide()
 
 func _on_video_finished():
 	GameManager.next_scene_path = "res://Assets/Scene/MainIsland/mapSelector.tscn"
@@ -256,6 +318,13 @@ func _on_video_finished():
 	get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/loading_screen.tscn")
 
 func _on_timer_timeout(): end_game(false)
-func _on_collect_pressed(): print("Collected!")
 func _on_try_again_pressed(): get_tree().reload_current_scene()
 func _on_quit_pressed(): get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/zypheria.tscn")
+
+func _on_collect_pressed():
+	GameManager.receive_island_reward("island_4.5")
+	$PopupLayer/WinPopup/BottomButtons1/RescueButton.disabled = false
+	$PopupLayer/WinPopup/BottomButtons1/RescueButton.modulate = Color(1, 1, 1)
+
+func _on_collect_button_pressed() -> void:
+	_on_collect_pressed()

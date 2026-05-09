@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://cbbov6uf7tyxm" path="res://Assets/Zypheria/LEVEL1/PopUp Window/tryButton.png" id="23_lk2ch"]
 [ext_resource type="AudioStream" uid="uid://dulsar2oks53a" path="res://Assets/Zypheria/SFX/CorrectSFX.MP3" id="23_wvkos"]
 [ext_resource type="AudioStream" uid="uid://wgf1b87rkjtu" path="res://Assets/Zypheria/SFX/WrongSFX.MP3" id="24_o8fq2"]
+[ext_resource type="PackedScene" uid="uid://bmyc7fch0vcyx" path="res://Assets/Scene/GUI.tscn" id="26_dj0h1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sm4ji"]
 texture = ExtResource("8_qkpye")
@@ -77,6 +78,42 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pegh7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv3rl"]
+atlas = ExtResource("20_jmgrt")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwkar"]
+atlas = ExtResource("20_jmgrt")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dku5i"]
+atlas = ExtResource("20_jmgrt")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbd13"]
+atlas = ExtResource("20_jmgrt")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2cl24"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv3rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwkar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dku5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbd13")
 }],
 "loop": true,
 "name": &"default",
@@ -151,14 +188,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xmo1q"]
-texture = ExtResource("13_sethy")
-29:8/size_in_atlas = Vector2i(15, 16)
-29:8/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_pegh7"]
-sources/3 = SubResource("TileSetAtlasSource_xmo1q")
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_gc8nr"]
 atlas = ExtResource("14_hhwkf")
 region = Rect2(0, 0, 384, 1024)
@@ -195,41 +224,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rv3rl"]
-atlas = ExtResource("20_jmgrt")
-region = Rect2(768, 512, 768, 512)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xmo1q"]
+texture = ExtResource("13_sethy")
+29:8/size_in_atlas = Vector2i(15, 16)
+29:8/0 = 0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kwkar"]
-atlas = ExtResource("20_jmgrt")
-region = Rect2(768, 0, 768, 512)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dku5i"]
-atlas = ExtResource("20_jmgrt")
-region = Rect2(0, 512, 768, 512)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cbd13"]
-atlas = ExtResource("20_jmgrt")
-region = Rect2(0, 0, 768, 512)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_2cl24"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rv3rl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kwkar")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dku5i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cbd13")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="TileSet" id="TileSet_pegh7"]
+sources/3 = SubResource("TileSetAtlasSource_xmo1q")
 
 [node name="zypheria_lvl2" type="Node2D" unique_id=2125438506]
 script = ExtResource("1_msjiv")
@@ -275,10 +276,11 @@ centered = false
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=918646775]
 
 [node name="HintScroll" type="TextureButton" parent="CanvasLayer" unique_id=999869946]
-offset_left = 957.0
-offset_top = 518.0
-offset_right = 1225.0
-offset_bottom = 734.0
+offset_left = 967.28
+offset_top = 566.0
+offset_right = 1235.2803
+offset_bottom = 782.0
+scale = Vector2(0.745, 0.745)
 texture_normal = ExtResource("7_ojacm")
 
 [node name="ProgressionBarHolder" type="TileMapLayer" parent="CanvasLayer" unique_id=34428734]
@@ -401,6 +403,7 @@ autoplay = "default"
 frame_progress = 0.35240212
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=773434482]
+visible = false
 offset_left = -94.0
 offset_top = -37.0
 offset_right = 1484.0
@@ -408,6 +411,7 @@ offset_bottom = 800.0
 color = Color(0, 0.012920001, 0.025840001, 0.83300006)
 
 [node name="WorldMapPopup" type="TextureRect" parent="CanvasLayer" unique_id=1785558269]
+visible = false
 z_index = 10
 offset_left = 154.0
 offset_top = 32.0
@@ -445,52 +449,6 @@ expand = true
 [node name="Timer" type="Timer" parent="." unique_id=1442622411]
 wait_time = 15.0
 one_shot = true
-
-[node name="TimerBox" type="TileMapLayer" parent="." unique_id=1779017756]
-scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray(0, 0, 83, 0, 79, 0, 0, 0, 37, 0, 4, 0, 0, 0)
-tile_set = SubResource("TileSet_un0xu")
-
-[node name="TimerProgressBar" type="ProgressBar" parent="." unique_id=645466624]
-offset_left = 623.0
-offset_top = 596.0
-offset_right = 722.0
-offset_bottom = 682.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_ttcfr")
-max_value = 15.0
-value = 15.0
-show_percentage = false
-
-[node name="TimerLabel" type="Label" parent="." unique_id=32250655]
-offset_left = 632.0
-offset_top = 595.0
-offset_right = 713.0
-offset_bottom = 677.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 30
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ClockSprite" type="AnimatedSprite2D" parent="." unique_id=1385777682]
-position = Vector2(669, 566.00006)
-scale = Vector2(0.3359375, 0.30859375)
-sprite_frames = SubResource("SpriteFrames_gc8nr")
-autoplay = "default"
-frame_progress = 0.22636446
-
-[node name="Rewards" type="TileMapLayer" parent="." unique_id=884159701]
-scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray(0, 0, 109, 0, 69, 0, 0, 0, 37, 0, 38, 0, 0, 0, 101, 0, 79, 0, 3, 0, 29, 0, 8, 0, 0, 0)
-tile_set = SubResource("TileSet_pegh7")
-
-[node name="ScrollRewardSprite" type="AnimatedSprite2D" parent="." unique_id=184109980]
-position = Vector2(936, 648.25)
-scale = Vector2(0.35937485, 0.41455078)
-sprite_frames = SubResource("SpriteFrames_37u62")
-autoplay = "default"
-frame_progress = 0.9822084
 
 [node name="PopupLayer" type="CanvasLayer" parent="." unique_id=1643814174]
 layer = 10
@@ -626,3 +584,57 @@ stream = ExtResource("23_wvkos")
 
 [node name="WrongSound" type="AudioStreamPlayer" parent="." unique_id=842251829]
 stream = ExtResource("24_o8fq2")
+
+[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("26_dj0h1")]
+position = Vector2(0.99999994, 90.999985)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1837462382]
+
+[node name="TimerBox" type="TileMapLayer" parent="CanvasLayer2" unique_id=1779017756]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray(0, 0, 83, 0, 79, 0, 0, 0, 37, 0, 4, 0, 0, 0)
+tile_set = SubResource("TileSet_un0xu")
+
+[node name="TimerProgressBar" type="ProgressBar" parent="CanvasLayer2" unique_id=645466624]
+offset_left = 623.0
+offset_top = 596.0
+offset_right = 722.0
+offset_bottom = 682.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_ttcfr")
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer2" unique_id=32250655]
+z_index = 100
+offset_left = 632.0
+offset_top = 595.0
+offset_right = 713.0
+offset_bottom = 677.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockSprite" type="AnimatedSprite2D" parent="CanvasLayer2" unique_id=1385777682]
+position = Vector2(669, 636.00006)
+scale = Vector2(0.3359375, 0.30859375)
+sprite_frames = SubResource("SpriteFrames_gc8nr")
+autoplay = "default"
+frame_progress = 0.22636446
+
+[node name="ScrollRewardSprite" type="AnimatedSprite2D" parent="CanvasLayer2" unique_id=184109980]
+position = Vector2(936, 648.25)
+scale = Vector2(0.35937485, 0.41455078)
+sprite_frames = SubResource("SpriteFrames_37u62")
+autoplay = "default"
+frame_progress = 0.9822084
+
+[node name="Rewards" type="TileMapLayer" parent="CanvasLayer2" unique_id=884159701]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray(0, 0, 109, 0, 69, 0, 0, 0, 37, 0, 38, 0, 0, 0, 101, 0, 79, 0, 3, 0, 29, 0, 8, 0, 0, 0)
+tile_set = SubResource("TileSet_pegh7")
+
+[connection signal="pressed" from="PopupLayer/WinPopup/MainFrame/CollectButton" to="." method="_on_collect_button_pressed"]

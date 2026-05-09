@@ -1,101 +1,100 @@
-[gd_scene format=3 uid="uid://ddw4o1aufhyc0"]
+[gd_scene format=3 uid="uid://bmyc7fch0vcyx"]
 
-[ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/MainIsland/skoalars.gd" id="1_rw33h"]
-[ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_8bjxf"]
-[ext_resource type="Script" uid="uid://cawmixdenvlnx" path="res://Assets/Scripts/MainIsland/MainSkoalarsControl.gd" id="3_14q07"]
-[ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_k7dxl"]
-[ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="6_wo1e8"]
-[ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="7_e6qhv"]
-[ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="8_3idep"]
-[ext_resource type="Texture2D" uid="uid://es647ytq5k65" path="res://Assets/Sprite/Buttons/MAP, Mission, Lock & Unlock Buttons.png" id="8_rw33h"]
-[ext_resource type="Texture2D" uid="uid://djo2qbnf5p85d" path="res://Assets/Sprite/Buttons/main menu buttons (1).png" id="9_yqgn5"]
+[ext_resource type="Script" uid="uid://5fsr5sdhbio4" path="res://Assets/Scripts/MainIsland/skoalarsGui.gd" id="1_bfmbj"]
+[ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_n1vfu"]
+[ext_resource type="Script" uid="uid://cawmixdenvlnx" path="res://Assets/Scripts/MainIsland/MainSkoalarsControl.gd" id="3_xj6pc"]
+[ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_5fshh"]
+[ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="5_p705g"]
+[ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="6_w7auq"]
+[ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="7_bkhn2"]
+[ext_resource type="Texture2D" uid="uid://dxm3isa0kdsuf" path="res://Assets/Sprite/Buttons/REWARDS, SKILLS, TIME BUTTONS.png" id="9_jcv1r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(2048, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ue4k"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(2560, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i18st"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(1024, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kst7u"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(1536, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1eggy"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(2048, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8pra0"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(2560, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7q320"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(2048, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ibbo"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(2560, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iu7bt"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(0, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nje0b"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(512, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2fh8"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(0, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mo137"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(512, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7jsc"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(1536, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfeg3"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(1024, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbc36"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(1536, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uf2gp"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(1024, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1k38g"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(1024, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0x8e"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(1536, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bhoed"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(0, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_odprb"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(512, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e24c5"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(0, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_25lqc"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_n1vfu")
 region = Rect2(512, 1536, 512, 512)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dag5b"]
@@ -211,7 +210,7 @@ animations = [{
 size = Vector2(5.7805095, 486.31403)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rm20y"]
-shader = ExtResource("4_k7dxl")
+shader = ExtResource("4_5fshh")
 shader_parameter/lod = 0.0
 
 [sub_resource type="Animation" id="Animation_mm1dr"]
@@ -219,7 +218,7 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/path = NodePath("../Control/ColorRect:material:shader_parameter/lod")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -234,7 +233,7 @@ length = 0.3
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/path = NodePath("../Control/ColorRect:material:shader_parameter/lod")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -250,15 +249,15 @@ _data = {
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mm1dr"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(976, 488, 80, 72)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwllq"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(976, 488, 80, 72)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rm20y"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -266,15 +265,15 @@ texture_margin_bottom = 4.0
 region_rect = Rect2(976, 488, 80, 72)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eophj"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(976, 592, 88, 80)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i71qq"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(56, 240, 136, 112)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r1kqm"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 texture_margin_left = 5.0
 texture_margin_top = 8.0
 texture_margin_right = 5.0
@@ -282,15 +281,15 @@ texture_margin_bottom = 8.0
 region_rect = Rect2(56, 240, 136, 112)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jjp2r"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(1104, 600, 80, 64)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g060"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(232, 240, 128, 112)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lltph"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 texture_margin_left = 5.0
 texture_margin_top = 8.0
 texture_margin_right = 5.0
@@ -305,11 +304,11 @@ corner_radius_bottom_right = 95
 corner_radius_bottom_left = 95
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oec0s"]
-texture = ExtResource("7_e6qhv")
+texture = ExtResource("6_w7auq")
 region_rect = Rect2(776, 552, 720, 208)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1e1k5"]
-texture = ExtResource("7_e6qhv")
+texture = ExtResource("6_w7auq")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
@@ -317,7 +316,7 @@ texture_margin_bottom = 5.0
 region_rect = Rect2(776, 552, 720, 208)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htacr"]
-texture = ExtResource("7_e6qhv")
+texture = ExtResource("6_w7auq")
 texture_margin_left = 15.0
 texture_margin_top = 15.0
 texture_margin_right = 15.0
@@ -325,12 +324,12 @@ texture_margin_bottom = 15.0
 region_rect = Rect2(776, 552, 720, 208)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ji2mt"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 texture_margin_left = 8.0
 region_rect = Rect2(48, 472, 384, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0lte"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
@@ -338,7 +337,7 @@ texture_margin_bottom = 5.0
 region_rect = Rect2(40, 472, 392, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ppph"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
@@ -346,11 +345,11 @@ texture_margin_bottom = 8.0
 region_rect = Rect2(48, 472, 384, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1tyq0"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(56, 680, 376, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1lgs"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
@@ -358,7 +357,7 @@ texture_margin_bottom = 5.0
 region_rect = Rect2(56, 680, 376, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tj2be"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
@@ -373,11 +372,11 @@ corner_radius_bottom_right = 223
 corner_radius_bottom_left = 223
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mc1qo"]
-texture = ExtResource("8_3idep")
+texture = ExtResource("7_bkhn2")
 region_rect = Rect2(424, 152, 688, 688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03swh"]
-texture = ExtResource("8_3idep")
+texture = ExtResource("7_bkhn2")
 texture_margin_left = 50.0
 texture_margin_top = 50.0
 texture_margin_right = 50.0
@@ -385,82 +384,94 @@ texture_margin_bottom = 50.0
 region_rect = Rect2(424, 152, 688, 688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0887"]
-texture = ExtResource("8_3idep")
+texture = ExtResource("7_bkhn2")
 region_rect = Rect2(432, 152, 672, 688)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03i5e"]
-texture = ExtResource("8_rw33h")
-region_rect = Rect2(224, 168, 544, 160)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k1onv"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(776, 496, 440, 136)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4wq3e"]
-texture = ExtResource("8_rw33h")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
-region_rect = Rect2(224, 168, 544, 160)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bdihs"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(776, 488, 440, 144)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8miks"]
-texture = ExtResource("8_rw33h")
-texture_margin_left = 15.0
-texture_margin_top = 15.0
-texture_margin_right = 15.0
-texture_margin_bottom = 15.0
-region_rect = Rect2(224, 160, 544, 176)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbpqs"]
-texture = ExtResource("9_yqgn5")
-region_rect = Rect2(448, 336, 120, 104)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kvow6"]
-texture = ExtResource("9_yqgn5")
-region_rect = Rect2(448, 344, 120, 96)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8noq3"]
-texture = ExtResource("9_yqgn5")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_76yte"]
+texture = ExtResource("9_jcv1r")
 texture_margin_left = 4.0
-texture_margin_top = 2.0
-texture_margin_right = 4.0
-texture_margin_bottom = 2.0
-region_rect = Rect2(448, 344, 120, 96)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ob1j7"]
-texture = ExtResource("9_yqgn5")
-region_rect = Rect2(456, 440, 112, 104)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tm8d8"]
-texture = ExtResource("9_yqgn5")
-region_rect = Rect2(456, 440, 112, 104)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30ca2"]
-texture = ExtResource("9_yqgn5")
-texture_margin_left = 8.0
 texture_margin_top = 4.0
-texture_margin_right = 6.0
-texture_margin_bottom = 4.0
-region_rect = Rect2(448, 440, 120, 104)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dv1mw"]
-texture = ExtResource("9_yqgn5")
-region_rect = Rect2(456, 544, 112, 104)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xwxkn"]
-texture = ExtResource("9_yqgn5")
-region_rect = Rect2(448, 544, 120, 104)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0skql"]
-texture = ExtResource("9_yqgn5")
-texture_margin_left = 4.0
-texture_margin_top = 2.0
 texture_margin_right = 4.0
-texture_margin_bottom = 2.0
-region_rect = Rect2(456, 544, 112, 104)
+texture_margin_bottom = 4.0
+region_rect = Rect2(768, 496, 456, 136)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bexiq"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(760, 496, 464, 136)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfmbj"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(768, 632, 456, 144)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k85cw"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(768, 640, 448, 136)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6wdsa"]
+texture = ExtResource("9_jcv1r")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(768, 640, 456, 136)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f67ih"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(776, 640, 440, 136)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jcv1r"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(320, 784, 448, 136)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34pc5"]
+texture = ExtResource("9_jcv1r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wtl41"]
+texture = ExtResource("9_jcv1r")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(312, 792, 456, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0i0p"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(320, 784, 448, 144)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n28cw"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(312, 496, 456, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1phfi"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(320, 496, 448, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x14uf"]
+texture = ExtResource("9_jcv1r")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(320, 496, 448, 136)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_55a7n"]
+texture = ExtResource("9_jcv1r")
+region_rect = Rect2(320, 496, 448, 144)
 
 [node name="Skoalars" type="CharacterBody2D" unique_id=1875685537]
 scale = Vector2(0.015, 0.015)
-script = ExtResource("1_rw33h")
+script = ExtResource("1_bfmbj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1165061691]
+visible = false
 position = Vector2(1.5258789e-05, 1.5258789e-05)
 scale = Vector2(3.37, 3.37)
 sprite_frames = SubResource("SpriteFrames_dag5b")
@@ -480,7 +491,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("3_14q07")
+script = ExtResource("3_xj6pc")
 open_cont = NodePath("MarginContainer/VBoxContainer/Popup/open_cont")
 volume_cont = NodePath("MarginContainer/VBoxContainer/volume_cont")
 bottom_cont = NodePath("MarginContainer/bottom_cont")
@@ -615,7 +626,7 @@ offset_top = -525.92017
 offset_right = 4186.3887
 offset_bottom = 672.7698
 scale = Vector2(1.305, 1.305)
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(328, 48, 672, 184)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer" unique_id=1663532903]
@@ -740,7 +751,7 @@ size_flags_vertical = 4
 custom_minimum_size = Vector2(2000, 2000)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_p705g")
 region_rect = Rect2(56, 240, 136, 112)
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer" unique_id=55968632]
@@ -778,95 +789,81 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_mc1qo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_03swh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_v0887")
 
-[node name="bottom_cont" type="VBoxContainer" parent="Control/MarginContainer" unique_id=569296341]
-custom_minimum_size = Vector2(500, 1000)
+[node name="bottom_cont" type="VBoxContainer" parent="Control/MarginContainer" unique_id=1469207508]
+custom_minimum_size = Vector2(500, 2000)
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/bottom_cont" unique_id=1703094368]
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/bottom_cont" unique_id=1042782746]
 layout_mode = 2
 theme_override_constants/margin_left = 216
 theme_override_constants/margin_right = 145
 theme_override_constants/margin_bottom = 315
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer" unique_id=1908329345]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer" unique_id=1682249580]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer" unique_id=17316155]
+custom_minimum_size = Vector2(2500, 900)
 layout_mode = 2
 size_flags_horizontal = 8
-size_flags_vertical = 8
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2" unique_id=1865811724]
-custom_minimum_size = Vector2(2200, 1000)
-layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="mapStart_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect" unique_id=1335675035]
-z_index = 40
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -2848.746
-offset_top = -843.704
-offset_right = 1151.2539
-offset_bottom = 656.296
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_styles/normal = SubResource("StyleBoxTexture_03i5e")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_4wq3e")
-theme_override_styles/hover = SubResource("StyleBoxTexture_8miks")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer" unique_id=1194375763]
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer" unique_id=1524363604]
-layout_mode = 2
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer" unique_id=695824530]
-custom_minimum_size = Vector2(1200, 1000)
-layout_mode = 2
-
-[node name="diamond_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect2" unique_id=1950583861]
-z_index = 40
-custom_minimum_size = Vector2(800, 1200)
+[node name="hint_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect" unique_id=194838559]
 layout_mode = 0
-offset_right = 1264.0
+offset_right = 2500.0
 offset_bottom = 1000.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_wbpqs")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_kvow6")
-theme_override_styles/hover = SubResource("StyleBoxTexture_8noq3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_k1onv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bdihs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_76yte")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_bexiq")
 
-[node name="NinePatchRect3" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer" unique_id=577905937]
-custom_minimum_size = Vector2(1200, 1000)
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer" unique_id=1329268767]
+custom_minimum_size = Vector2(2500, 900)
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
 
-[node name="skills_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect3" unique_id=645613480]
-z_index = 40
-custom_minimum_size = Vector2(800, 1200)
+[node name="freeze_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect2" unique_id=2495239]
 layout_mode = 0
-offset_right = 1264.0
-offset_bottom = 1000.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_ob1j7")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_tm8d8")
-theme_override_styles/hover = SubResource("StyleBoxTexture_30ca2")
+offset_left = 12.8194275
+offset_top = 25.55602
+offset_right = 2512.8193
+offset_bottom = 1025.556
+theme_override_styles/normal = SubResource("StyleBoxTexture_bfmbj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k85cw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6wdsa")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_f67ih")
 
-[node name="NinePatchRect4" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer" unique_id=106536367]
-custom_minimum_size = Vector2(1200, 1000)
+[node name="NinePatchRect3" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer" unique_id=206657621]
+custom_minimum_size = Vector2(2500, 900)
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
 
-[node name="progress_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect4" unique_id=695790405]
-z_index = 40
-custom_minimum_size = Vector2(800, 1200)
+[node name="addTime_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect3" unique_id=1431284385]
 layout_mode = 0
-offset_right = 1264.0
+offset_right = 2500.0
 offset_bottom = 1000.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_dv1mw")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_xwxkn")
-theme_override_styles/hover = SubResource("StyleBoxTexture_0skql")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jcv1r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_34pc5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wtl41")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a0i0p")
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer" unique_id=1488498044]
+custom_minimum_size = Vector2(2500, 900)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="skip_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect4" unique_id=764651395]
+layout_mode = 0
+offset_right = 2500.0
+offset_bottom = 1000.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_n28cw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1phfi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x14uf")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_55a7n")
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]
@@ -875,6 +872,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_0skql")
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control" method="_on_quit_btn_pressed"]
 [connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/HSlider" to="Control" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/ext_btn" to="Control" method="_on_ext_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn" to="Control" method="_on_map_start_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect2/diamond_btn" to="Control" method="_on_diamond_btn_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect3/skills_btn" to="Control" method="_on_skills_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect/hint_btn" to="Control" method="_on_hint_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect2/freeze_btn" to="Control" method="_on_freeze_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect3/addTime_btn" to="Control" method="_on_add_time_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect4/skip_btn" to="Control" method="_on_skip_btn_pressed"]

@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://tjnaicf778ta" path="res://Assets/Sprite/Objects/Market/music/WrongSFX.MP3" id="18_p0wvw"]
 [ext_resource type="AudioStream" uid="uid://dsrmdfnwbdx2p" path="res://Assets/Sprite/Objects/Market/music/tapping sound.mp3" id="19_p0wvw"]
 [ext_resource type="VideoStream" uid="uid://c0g07ktguaydd" path="res://Assets/Sprite/Objects/Market/video/Dash-Rescued.ogv" id="20_hu0cv"]
+[ext_resource type="PackedScene" uid="uid://bmyc7fch0vcyx" path="res://Assets/Scene/GUI.tscn" id="24_2orde"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2amko"]
 atlas = ExtResource("1_30vo6")
@@ -34,6 +35,86 @@ region = Rect2(888, 496, 336, 200)
 [sub_resource type="AtlasTexture" id="AtlasTexture_8aynm"]
 atlas = ExtResource("2_tgiui")
 region = Rect2(56, 8, 400, 696)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv1tx"]
+atlas = ExtResource("6_bfj1u")
+region = Rect2(336, 264, 608, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywncm"]
+atlas = ExtResource("7_yqbti")
+region = Rect2(272, 240, 736, 136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xknlf"]
+atlas = ExtResource("8_n3rbk")
+region = Rect2(112, 96, 440, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h05nd"]
+atlas = ExtResource("3_ome4u")
+region = Rect2(80, 160, 760, 120)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ob13m"]
+shader = ExtResource("11_416hg")
+shader_parameter/lod = 2.0
+shader_parameter/dark_intensity = 0.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agflq"]
+atlas = ExtResource("15_5xitb")
+region = Rect2(336, 88, 824, 656)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1anah"]
+atlas = ExtResource("16_td7vt")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tseap"]
+atlas = ExtResource("16_td7vt")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujq25"]
+atlas = ExtResource("16_td7vt")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc4rd"]
+atlas = ExtResource("16_td7vt")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ej4r8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1anah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tseap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujq25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc4rd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlv7t"]
+atlas = ExtResource("15_p0wvw")
+region = Rect2(328, 168, 432, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n71w"]
+atlas = ExtResource("15_p0wvw")
+region = Rect2(328, 160, 432, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5dva"]
+atlas = ExtResource("18_hu0cv")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3862"]
+atlas = ExtResource("18_hu0cv")
+region = Rect2(0, 0, 896, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p4ve"]
+atlas = ExtResource("3_ome4u")
+region = Rect2(64, 544, 344, 152)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfj1u"]
 atlas = ExtResource("4_8aynm")
@@ -147,27 +228,6 @@ region = Rect2(440, 328, 328, 208)
 atlas = ExtResource("6_h05nd")
 region = Rect2(360, 248, 568, 160)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rv1tx"]
-atlas = ExtResource("6_bfj1u")
-region = Rect2(336, 264, 608, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ywncm"]
-atlas = ExtResource("7_yqbti")
-region = Rect2(272, 240, 736, 136)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xknlf"]
-atlas = ExtResource("8_n3rbk")
-region = Rect2(112, 96, 440, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h05nd"]
-atlas = ExtResource("3_ome4u")
-region = Rect2(80, 160, 760, 120)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ob13m"]
-shader = ExtResource("11_416hg")
-shader_parameter/lod = 2.0
-shader_parameter/dark_intensity = 0.5
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_1c44o"]
 atlas = ExtResource("12_5xitb")
 
@@ -199,71 +259,14 @@ region = Rect2(104, 240, 1064, 368)
 atlas = ExtResource("15_td7vt")
 region = Rect2(104, 240, 1048, 368)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_agflq"]
-atlas = ExtResource("15_5xitb")
-region = Rect2(336, 88, 824, 656)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1anah"]
-atlas = ExtResource("16_td7vt")
-region = Rect2(768, 512, 768, 512)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tseap"]
-atlas = ExtResource("16_td7vt")
-region = Rect2(768, 0, 768, 512)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ujq25"]
-atlas = ExtResource("16_td7vt")
-region = Rect2(0, 512, 768, 512)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bc4rd"]
-atlas = ExtResource("16_td7vt")
-region = Rect2(0, 0, 768, 512)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ej4r8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1anah")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tseap")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ujq25")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bc4rd")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mlv7t"]
-atlas = ExtResource("15_p0wvw")
-region = Rect2(328, 168, 432, 112)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1n71w"]
-atlas = ExtResource("15_p0wvw")
-region = Rect2(328, 160, 432, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f5dva"]
-atlas = ExtResource("18_hu0cv")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y3862"]
-atlas = ExtResource("18_hu0cv")
-region = Rect2(0, 0, 896, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3p4ve"]
-atlas = ExtResource("3_ome4u")
-region = Rect2(64, 544, 344, 152)
-
 [node name="level_2_countoria" type="Node2D" unique_id=1184914812]
+scale = Vector2(0.26, 0.26)
 script = ExtResource("1_n3rbk")
 
 [node name="background" type="TextureRect" parent="." unique_id=1096260327]
 offset_right = 1282.0
 offset_bottom = 716.0
+mouse_filter = 2
 texture = SubResource("AtlasTexture_2amko")
 
 [node name="questionboard" type="Sprite2D" parent="." unique_id=1210547780]
@@ -352,142 +355,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="numboard" type="Sprite2D" parent="." unique_id=1418812134]
-position = Vector2(1090.125, 406.75)
-scale = Vector2(0.82380325, 0.69311786)
-texture = SubResource("AtlasTexture_bfj1u")
-
-[node name="numpad_board" type="Sprite2D" parent="numboard" unique_id=158801716]
-position = Vector2(-5.921232, 63.844063)
-scale = Vector2(1.2569095, 1.1772286)
-texture = SubResource("AtlasTexture_07hxn")
-
-[node name="1" type="TextureButton" parent="numboard/numpad_board" unique_id=1548677844]
-offset_left = -136.4118
-offset_top = -64.9561
-offset_right = -91.02075
-offset_bottom = -18.385056
-texture_normal = SubResource("AtlasTexture_n3rbk")
-texture_pressed = SubResource("AtlasTexture_7pbh5")
-ignore_texture_size = true
-
-[node name="2" type="TextureButton" parent="numboard/numpad_board" unique_id=1216367195]
-offset_left = -93.91804
-offset_top = -64.9561
-offset_right = -45.918037
-offset_bottom = -16.9561
-texture_normal = SubResource("AtlasTexture_cdrur")
-texture_pressed = SubResource("AtlasTexture_o8mmy")
-ignore_texture_size = true
-
-[node name="3" type="TextureButton" parent="numboard/numpad_board" unique_id=98091821]
-offset_left = -52.390045
-offset_top = -64.95611
-offset_right = -4.390045
-offset_bottom = -16.956108
-texture_normal = SubResource("AtlasTexture_mfrb7")
-texture_pressed = SubResource("AtlasTexture_yf3sj")
-
-[node name="4" type="TextureButton" parent="numboard/numpad_board" unique_id=1506567499]
-offset_left = -136.41179
-offset_top = -14.708431
-offset_right = -88.41179
-offset_bottom = 25.291569
-texture_normal = SubResource("AtlasTexture_3ohwa")
-texture_pressed = SubResource("AtlasTexture_5bjka")
-
-[node name="5" type="TextureButton" parent="numboard/numpad_board" unique_id=2083143037]
-offset_left = -93.91804
-offset_top = -14.708431
-offset_right = -45.918037
-offset_bottom = 25.291569
-texture_normal = SubResource("AtlasTexture_i53et")
-texture_pressed = SubResource("AtlasTexture_t1glg")
-
-[node name="6" type="TextureButton" parent="numboard/numpad_board" unique_id=1618126618]
-offset_left = -51.42428
-offset_top = -15.933985
-offset_right = -3.4242783
-offset_bottom = 24.066015
-texture_normal = SubResource("AtlasTexture_1lg2v")
-texture_pressed = SubResource("AtlasTexture_s3vr6")
-
-[node name="7" type="TextureButton" parent="numboard/numpad_board" unique_id=1335488899]
-offset_left = -136.4118
-offset_top = 26.960371
-offset_right = -88.411804
-offset_bottom = 74.96037
-texture_normal = SubResource("AtlasTexture_416hg")
-texture_pressed = SubResource("AtlasTexture_7er6v")
-
-[node name="8" type="TextureButton" parent="numboard/numpad_board" unique_id=1257305357]
-offset_left = -93.91804
-offset_top = 28.185925
-offset_right = -45.918037
-offset_bottom = 76.18593
-texture_normal = SubResource("AtlasTexture_ob13m")
-texture_pressed = SubResource("AtlasTexture_r08st")
-
-[node name="9" type="TextureButton" parent="numboard/numpad_board" unique_id=1876277323]
-offset_left = -51.42428
-offset_top = 26.960373
-offset_right = -3.4242783
-offset_bottom = 74.96037
-texture_normal = SubResource("AtlasTexture_e1kf1")
-texture_pressed = SubResource("AtlasTexture_kht1b")
-
-[node name="0" type="TextureButton" parent="numboard/numpad_board" unique_id=39288229]
-offset_left = -9.896285
-offset_top = 30.637032
-offset_right = 46.103714
-offset_bottom = 78.63703
-texture_normal = SubResource("AtlasTexture_p0wvw")
-texture_pressed = SubResource("AtlasTexture_82yul")
-
-[node name="enter_button" type="TextureButton" parent="numboard/numpad_board" unique_id=1179387099]
-offset_left = -3.1359143
-offset_top = -67.40721
-offset_right = 129.17415
-offset_bottom = -18.385086
-mouse_filter = 2
-texture_normal = SubResource("AtlasTexture_urhm6")
-texture_pressed = SubResource("AtlasTexture_3tc6o")
-ignore_texture_size = true
-
-[node name="back_button" type="TextureButton" parent="numboard/numpad_board" unique_id=93838477]
-offset_left = 1.6929381
-offset_top = -15.933985
-offset_right = 126.276924
-offset_bottom = 24.509253
-texture_normal = SubResource("AtlasTexture_5xitb")
-texture_pressed = SubResource("AtlasTexture_3e01s")
-
-[node name="answer_board" type="Sprite2D" parent="numboard" unique_id=765952304]
-position = Vector2(-13.026778, -198.47176)
-scale = Vector2(1.1914732, 1.1672666)
-texture = SubResource("AtlasTexture_yqbti")
-
-[node name="answer_container" type="VBoxContainer" parent="numboard/answer_board" unique_id=1205465542]
-offset_left = -124.69549
-offset_top = -50.906
-offset_right = 131.0252
-offset_bottom = 56.627083
-
-[node name="answer_text" type="Label" parent="numboard/answer_board/answer_container" unique_id=1438504348]
-modulate = Color(0.306267, 0.18404359, 0.034036454, 1)
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 45
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="header" type="Sprite2D" parent="numboard" unique_id=833024077]
-position = Vector2(-17.146137, -356.00006)
-scale = Vector2(0.5564878, 0.56661785)
-texture = SubResource("AtlasTexture_td7vt")
-
 [node name="timer" type="Sprite2D" parent="." unique_id=637311456]
 position = Vector2(640, 183.99994)
 scale = Vector2(0.37479448, 0.43619806)
@@ -516,6 +383,7 @@ offset_left = 405.0
 offset_top = 595.0
 offset_right = 865.0
 offset_bottom = 680.0
+mouse_filter = 2
 texture = SubResource("AtlasTexture_ywncm")
 expand_mode = 1
 
@@ -525,6 +393,7 @@ offset_left = 45.0
 offset_top = 38.0
 offset_right = 416.0
 offset_bottom = 65.0
+mouse_filter = 2
 nine_patch_stretch = true
 texture_progress = SubResource("AtlasTexture_xknlf")
 
@@ -533,6 +402,7 @@ offset_left = 248.0
 offset_top = 16.0
 offset_right = 1008.0
 offset_bottom = 136.0
+mouse_filter = 2
 texture = SubResource("AtlasTexture_h05nd")
 
 [node name="lvl2_ui_layer" type="CanvasLayer" parent="." unique_id=55661178]
@@ -542,83 +412,7 @@ visible = false
 material = SubResource("ShaderMaterial_ob13m")
 offset_right = 1288.0
 offset_bottom = 736.0
-
-[node name="completion_board" type="Control" parent="lvl2_ui_layer" unique_id=836444915]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 392.0
-offset_top = 184.0
-offset_right = 944.0
-offset_bottom = 576.0
-
-[node name="completion_bg" type="TextureRect" parent="lvl2_ui_layer/completion_board" unique_id=2031237753]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -428.0
-offset_top = -324.0
-offset_right = 388.0
-offset_bottom = 252.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_1c44o")
-expand_mode = 1
-
-[node name="wand" type="TextureRect" parent="lvl2_ui_layer/completion_board/completion_bg" unique_id=359994871]
-layout_mode = 0
-offset_left = 424.0
-offset_top = 264.0
-offset_right = 496.0
-offset_bottom = 360.0
-texture = SubResource("AtlasTexture_ubnt6")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="gem" type="TextureRect" parent="lvl2_ui_layer/completion_board/completion_bg" unique_id=1264087836]
-layout_mode = 0
-offset_left = 288.0
-offset_top = 288.0
-offset_right = 400.0
-offset_bottom = 368.0
-texture = SubResource("AtlasTexture_m50dr")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="key" type="TextureRect" parent="lvl2_ui_layer/completion_board/completion_bg" unique_id=265209907]
-layout_mode = 0
-offset_left = 368.0
-offset_top = 176.0
-offset_right = 440.0
-offset_bottom = 264.0
-texture = SubResource("AtlasTexture_i7oc4")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="rewards_button" type="TextureButton" parent="lvl2_ui_layer/completion_board" unique_id=71648348]
-layout_mode = 0
-offset_left = 168.0
-offset_top = 256.0
-offset_right = 328.0
-offset_bottom = 336.0
-texture_normal = SubResource("AtlasTexture_s6jd4")
-texture_pressed = SubResource("AtlasTexture_cne8b")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="back_button" type="TextureButton" parent="lvl2_ui_layer/completion_board" unique_id=951811437]
-z_index = 4
-layout_mode = 0
-offset_left = 128.0
-offset_top = 336.0
-offset_right = 368.0
-offset_bottom = 416.0
-texture_normal = SubResource("AtlasTexture_83chx")
-texture_pressed = SubResource("AtlasTexture_3r0to")
-ignore_texture_size = true
-stretch_mode = 5
+mouse_filter = 2
 
 [node name="losing_board" type="Control" parent="lvl2_ui_layer" unique_id=2014351546]
 visible = false
@@ -626,6 +420,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 1
 
 [node name="bg" type="TextureRect" parent="lvl2_ui_layer/losing_board" unique_id=1281543671]
 layout_mode = 0
@@ -671,6 +466,7 @@ offset_top = -8.0
 offset_right = 1912.0
 offset_bottom = 1072.0
 size_flags_vertical = 3
+mouse_filter = 2
 stream = ExtResource("20_hu0cv")
 expand = true
 metadata/_edit_use_anchors_ = true
@@ -701,5 +497,237 @@ text = "0 / 20
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="lvl2_ui_layer/completion_board/back_button" to="." method="_on_back_button_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=46236233]
+layer = 200
+scale = Vector2(3.78, 3.78)
+transform = Transform2D(3.78, 0, 0, 3.78, 0, 0)
+
+[node name="Skoalars" parent="CanvasLayer" unique_id=1875685537 instance=ExtResource("24_2orde")]
+position = Vector2(170.00002, 96)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1753847837]
+layer = 100
+
+[node name="numboard" type="Sprite2D" parent="CanvasLayer2" unique_id=1418812134]
+position = Vector2(1064.307, 388.195)
+scale = Vector2(0.689, 0.58)
+texture = SubResource("AtlasTexture_bfj1u")
+
+[node name="numpad_board" type="Sprite2D" parent="CanvasLayer2/numboard" unique_id=158801716]
+position = Vector2(-5.921232, 63.844063)
+scale = Vector2(1.2569095, 1.1772286)
+texture = SubResource("AtlasTexture_07hxn")
+
+[node name="1" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=1548677844]
+offset_left = -136.4118
+offset_top = -64.9561
+offset_right = -91.02075
+offset_bottom = -18.385056
+texture_normal = SubResource("AtlasTexture_n3rbk")
+texture_pressed = SubResource("AtlasTexture_7pbh5")
+ignore_texture_size = true
+
+[node name="2" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=1216367195]
+offset_left = -93.91804
+offset_top = -64.9561
+offset_right = -45.918037
+offset_bottom = -16.9561
+texture_normal = SubResource("AtlasTexture_cdrur")
+texture_pressed = SubResource("AtlasTexture_o8mmy")
+ignore_texture_size = true
+
+[node name="3" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=98091821]
+offset_left = -52.390045
+offset_top = -64.95611
+offset_right = -4.390045
+offset_bottom = -16.956108
+texture_normal = SubResource("AtlasTexture_mfrb7")
+texture_pressed = SubResource("AtlasTexture_yf3sj")
+
+[node name="4" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=1506567499]
+offset_left = -136.41179
+offset_top = -14.708431
+offset_right = -88.41179
+offset_bottom = 25.291569
+texture_normal = SubResource("AtlasTexture_3ohwa")
+texture_pressed = SubResource("AtlasTexture_5bjka")
+
+[node name="5" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=2083143037]
+offset_left = -93.91804
+offset_top = -14.708431
+offset_right = -45.918037
+offset_bottom = 25.291569
+texture_normal = SubResource("AtlasTexture_i53et")
+texture_pressed = SubResource("AtlasTexture_t1glg")
+
+[node name="6" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=1618126618]
+offset_left = -51.42428
+offset_top = -15.933985
+offset_right = -3.4242783
+offset_bottom = 24.066015
+texture_normal = SubResource("AtlasTexture_1lg2v")
+texture_pressed = SubResource("AtlasTexture_s3vr6")
+
+[node name="7" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=1335488899]
+offset_left = -136.4118
+offset_top = 26.960371
+offset_right = -88.411804
+offset_bottom = 74.96037
+texture_normal = SubResource("AtlasTexture_416hg")
+texture_pressed = SubResource("AtlasTexture_7er6v")
+
+[node name="8" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=1257305357]
+offset_left = -93.91804
+offset_top = 28.185925
+offset_right = -45.918037
+offset_bottom = 76.18593
+texture_normal = SubResource("AtlasTexture_ob13m")
+texture_pressed = SubResource("AtlasTexture_r08st")
+
+[node name="9" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=1876277323]
+offset_left = -51.42428
+offset_top = 26.960373
+offset_right = -3.4242783
+offset_bottom = 74.96037
+texture_normal = SubResource("AtlasTexture_e1kf1")
+texture_pressed = SubResource("AtlasTexture_kht1b")
+
+[node name="0" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=39288229]
+offset_left = -9.896285
+offset_top = 30.637032
+offset_right = 46.103714
+offset_bottom = 78.63703
+texture_normal = SubResource("AtlasTexture_p0wvw")
+texture_pressed = SubResource("AtlasTexture_82yul")
+
+[node name="enter_button" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=1179387099]
+offset_left = -3.1359143
+offset_top = -67.40721
+offset_right = 129.17415
+offset_bottom = -18.385086
+mouse_filter = 2
+texture_normal = SubResource("AtlasTexture_urhm6")
+texture_pressed = SubResource("AtlasTexture_3tc6o")
+ignore_texture_size = true
+
+[node name="back_button" type="TextureButton" parent="CanvasLayer2/numboard/numpad_board" unique_id=93838477]
+offset_left = 1.6929381
+offset_top = -15.933985
+offset_right = 126.276924
+offset_bottom = 24.509253
+texture_normal = SubResource("AtlasTexture_5xitb")
+texture_pressed = SubResource("AtlasTexture_3e01s")
+
+[node name="answer_board" type="Sprite2D" parent="CanvasLayer2/numboard" unique_id=765952304]
+position = Vector2(-13.026778, -198.47176)
+scale = Vector2(1.1914732, 1.1672666)
+texture = SubResource("AtlasTexture_yqbti")
+
+[node name="answer_container" type="VBoxContainer" parent="CanvasLayer2/numboard/answer_board" unique_id=1205465542]
+offset_left = -124.69549
+offset_top = -50.906
+offset_right = 131.0252
+offset_bottom = 56.627083
+mouse_filter = 2
+
+[node name="answer_text" type="Label" parent="CanvasLayer2/numboard/answer_board/answer_container" unique_id=1438504348]
+modulate = Color(0.306267, 0.18404359, 0.034036454, 1)
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="header" type="Sprite2D" parent="CanvasLayer2/numboard" unique_id=833024077]
+position = Vector2(-17.146137, -356.00006)
+scale = Vector2(0.5564878, 0.56661785)
+texture = SubResource("AtlasTexture_td7vt")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=605687789]
+layer = 200
+
+[node name="completion_board" type="Control" parent="CanvasLayer3" unique_id=540771154]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 392.0
+offset_top = 184.0
+offset_right = 944.0
+offset_bottom = 576.0
+mouse_filter = 2
+
+[node name="completion_bg" type="TextureRect" parent="CanvasLayer3/completion_board" unique_id=2032420509]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -428.0
+offset_top = -324.0
+offset_right = 388.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_1c44o")
+expand_mode = 1
+
+[node name="wand" type="TextureRect" parent="CanvasLayer3/completion_board/completion_bg" unique_id=1457477582]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 264.0
+offset_right = 496.0
+offset_bottom = 360.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_ubnt6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="gem" type="TextureRect" parent="CanvasLayer3/completion_board/completion_bg" unique_id=885678074]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 288.0
+offset_right = 400.0
+offset_bottom = 368.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_m50dr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="key" type="TextureRect" parent="CanvasLayer3/completion_board/completion_bg" unique_id=2107210242]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 176.0
+offset_right = 440.0
+offset_bottom = 264.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_i7oc4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="rewards_button" type="TextureButton" parent="CanvasLayer3/completion_board" unique_id=269370413]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 256.0
+offset_right = 328.0
+offset_bottom = 336.0
+texture_normal = SubResource("AtlasTexture_s6jd4")
+texture_pressed = SubResource("AtlasTexture_cne8b")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="back_button" type="TextureButton" parent="CanvasLayer3/completion_board" unique_id=773569027]
+z_index = 4
+layout_mode = 0
+offset_left = 128.0
+offset_top = 336.0
+offset_right = 368.0
+offset_bottom = 416.0
+texture_normal = SubResource("AtlasTexture_83chx")
+texture_pressed = SubResource("AtlasTexture_3r0to")
+ignore_texture_size = true
+stretch_mode = 5
+
 [connection signal="finished" from="lvl2_ui_layer/dash_rescue" to="." method="_on_dash_rescue_finished"]

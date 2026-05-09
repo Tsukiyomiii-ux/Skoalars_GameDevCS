@@ -51,10 +51,35 @@ var time_left: float = 120.0
 var is_timer_active: bool = false
 var is_game_finished: bool = false 
 
+var letter_buttons = []
+
 func _ready():
 	self.process_mode = Node.PROCESS_MODE_ALWAYS 
 	if is_instance_valid(snd_level_start): snd_level_start.play()
 	if definition_label: definition_label.hide()
+	
+	GameManager.set_current_island("island_1.2")
+	
+	GameManager.hint_requested.connect(_on_hint_used)
+	GameManager.freeze_requested.connect(_on_freeze_used)
+	GameManager.add_time_requested.connect(_on_add_time_used)
+	GameManager.skip_requested.connect(_on_skip_used)
+	
+	GameManager.set_allowed_skills(["add_time", "freeze_time", "hint", "skip"])
+	GameManager.freeze_requested.connect(_on_freeze_used)
+	GameManager.add_time_requested.connect(_on_add_time_used)
+	await get_tree().create_timer(0.1).timeout
+	GameManager.update_skill_button_states()
+	
+	# Force all Control nodes above to not block input
+	for node in get_tree().get_nodes_in_group(""):
+		if node is Control and node != self:
+			if node.mouse_filter == Control.MOUSE_FILTER_STOP:
+				node.mouse_filter = Control.MOUSE_FILTER_PASS
+	
+	word_container.mouse_filter = Control.MOUSE_FILTER_STOP
+	# ... rest of your _ready()
+	# ... rest of your existing _ready() code
 	
 	# --- RESET TIMER ONLY ONCE HERE ---
 	time_left = 120.0 
@@ -62,6 +87,35 @@ func _ready():
 	
 	setup_word_pool() 
 	start_new_word()
+
+func _on_hint_used():
+	# Reveals one hidden letter
+	for i in range(current_display_array.size()):
+		if current_display_array[i] == "_":
+			current_display_array[i] = target_word[i]
+			update_clue_text()
+			# If no more blanks after hint, check the answer
+			if "_" not in current_display_array:
+				get_tree().create_timer(0.3).timeout.connect(check_answer)
+			break
+
+func _on_freeze_used():
+	# Pauses timer for 10 seconds
+	is_timer_active = false
+	await get_tree().create_timer(10.0).timeout
+	is_timer_active = true
+
+func _on_add_time_used():
+	# Adds 30 seconds to timer
+	time_left += 10.0
+
+func _on_skip_used():
+	# Count skip as a correct answer and move to next word
+	correct_answers += 1
+	current_list_pos += 1
+	if progress_label:
+		progress_label.text = str(correct_answers) + "/10"
+	start_new_word()	
 
 func _process(delta):
 	if is_timer_active and not is_game_finished:
@@ -117,6 +171,7 @@ func setup_display_array():
 			current_display_array.append("_")
 
 func create_letter_buttons():
+	letter_buttons.clear()
 	var pool = []
 	for i in range(target_word.length()):
 		if current_display_array[i] == "_":
@@ -128,9 +183,12 @@ func create_letter_buttons():
 	for letter_char in pool:
 		var btn = Button.new()
 		btn.flat = true
-		btn.custom_minimum_size = Vector2(160, 160) 
+		btn.custom_minimum_size = Vector2(160, 160)
+		btn.mouse_filter = Control.MOUSE_FILTER_STOP
+		btn.z_index = 10  # ← force it to be on top
 		btn.add_child(create_tile_visual(letter_char))
 		word_container.add_child(btn)
+		letter_buttons.append({"button": btn, "letter": letter_char})
 		btn.pressed.connect(_on_letter_selected.bind(letter_char))
 
 func create_tile_visual(letter_char):

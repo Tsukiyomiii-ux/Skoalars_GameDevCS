@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dnbtfi6prigtt"]
 
-[ext_resource type="Script" uid="uid://cxw46sm6nqe4h" path="res://Assets/Scripts/game_over_ui.gd" id="1_4fpvo"]
-[ext_resource type="Texture2D" uid="uid://csfjk1415450o" path="res://Assets/Sprite/FABLE ISLE/Level1/GameOverScreen.png" id="2_t4yam"]
-[ext_resource type="Texture2D" uid="uid://71qci4ghb7d" path="res://Assets/Sprite/FABLE ISLE/Level1/RetryButton.png" id="3_f3aqa"]
-[ext_resource type="Texture2D" uid="uid://rp28ksts7lsf" path="res://Assets/Sprite/FABLE ISLE/Level1/QuitButton.png" id="4_rsdxf"]
+[ext_resource type="Script" uid="uid://cxw46sm6nqe4h" path="res://Assets/Scripts/FableIsland/game_over_ui.gd" id="1_4fpvo"]
+[ext_resource type="Texture2D" uid="uid://csfjk1415450o" path="res://Assets/Fable Isle/Level1/GameOverScreen.png" id="2_t4yam"]
+[ext_resource type="Texture2D" uid="uid://71qci4ghb7d" path="res://Assets/Fable Isle/Level1/RetryButton.png" id="3_f3aqa"]
+[ext_resource type="Texture2D" uid="uid://rp28ksts7lsf" path="res://Assets/Fable Isle/Level1/QuitButton.png" id="4_rsdxf"]
 
 [node name="GameOverUI" type="CanvasLayer" unique_id=504405701]
 process_mode = 3

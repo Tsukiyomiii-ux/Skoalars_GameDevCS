@@ -14,8 +14,8 @@ extends Node2D
 @onready var message_label = $progressbar_frame/MessageLabel 
 
 # Magnet Nodes
-@onready var magnet_sprite = $magnet
-@onready var magnet_button = $magnet/magnet_button
+@onready var magnet_sprite = $CanvasLayer2/magnet
+@onready var magnet_button = $CanvasLayer2/magnet/magnet_button
 
 # REWARD NODES
 @onready var freeze_icon = $ui_layer/win_board/freeze_time
@@ -48,6 +48,7 @@ var total_needed = 0
 var game_over = false
 var magnet_used = false 
 var original_magnet_scale: Vector2
+var timer_ready: bool = false
 
 func _ready():
 	win_board.hide()
@@ -55,31 +56,128 @@ func _ready():
 	if blur_overlay: blur_overlay.hide() 
 	if message_label: message_label.text = ""
 	timer_label.add_theme_color_override("font_color", Color.RED)
-	
+
+	$ui_layer/win_board/next_button.disabled = true
+	$ui_layer/win_board/next_button.modulate = Color(0.5, 0.5, 0.5)
+
 	if freeze_icon: freeze_icon.pivot_offset = freeze_icon.size / 2
 	if gem_icon: gem_icon.pivot_offset = gem_icon.size / 2
-	
+
 	original_magnet_scale = magnet_sprite.scale
-	
+
 	item_container.clip_contents = true
 	item_container.custom_minimum_size = Vector2(250, 380)
 	item_container.size = Vector2(250, 380)
-	
+
 	setup_hover_animations()
 	connect_win_buttons()
 	connect_lose_buttons()
-	
+
 	magnet_used = false
 	magnet_button.disabled = false
 	magnet_sprite.self_modulate = Color.WHITE
+
+	GameManager.set_current_island("island_2")
+	GameManager.set_allowed_skills(["hint", "freeze_time", "add_time", "skip"])
+	GameManager.hint_requested.connect(_on_hint_used)
+	GameManager.freeze_requested.connect(_on_freeze_used)
+	GameManager.add_time_requested.connect(_on_add_time_used)
+	GameManager.skip_requested.connect(_on_skip_used)
+	await get_tree().create_timer(0.1).timeout
+	GameManager.update_skill_button_states()
 	
+	var market_stalls = [$CanvasLayer2/freshfruits_market, $CanvasLayer2/dairy_market, $CanvasLayer2/veggie_market, $CanvasLayer2/bread_market]
+	for stall in market_stalls:
+		if stall == null: continue
+		for button in stall.get_children():
+			if button is TextureButton:
+				button.z_index = 100
+				button.mouse_filter = Control.MOUSE_FILTER_STOP
+
 	if magnet_button:
 		if not magnet_button.pressed.is_connected(_on_magnet_pressed):
 			magnet_button.pressed.connect(_on_magnet_pressed)
-	
+
 	generate_shopping_list()
 	setup_market_buttons()
 	game_timer.start(60)
+
+	# Wait a bit before allowing lose check so timer initializes
+	await get_tree().create_timer(0.2).timeout
+	timer_ready = true
+
+# --- SKILL FUNCTIONS ---
+func _on_hint_used():
+	if game_over: return
+	
+	# Collect all buttons that still need to be collected
+	var needed_buttons = []
+	var market_stalls = [$CanvasLayer2/freshfruits_market, $CanvasLayer2/dairy_market, $CanvasLayer2/veggie_market, $CanvasLayer2/bread_market]
+	
+	for stall in market_stalls:
+		if stall == null: continue
+		for button in stall.get_children():
+			if button is TextureButton:
+				var fruit_key = button.name.split("_")[0].capitalize()
+				if shopping_list_data.has(fruit_key) and shopping_list_data[fruit_key] > 0:
+					needed_buttons.append(button)
+	
+	if needed_buttons.is_empty(): return
+	
+	# Pick a random needed button
+	var chosen = needed_buttons[randi() % needed_buttons.size()]
+	
+	# Enlarge it
+	var tween = create_tween().set_loops(4)
+	tween.tween_property(chosen, "scale", Vector2(1.4, 1.4), 0.3)
+	tween.tween_property(chosen, "scale", Vector2(1.0, 1.0), 0.3)
+	
+	# Add a circle indicator around it
+	var circle = ColorRect.new()
+	circle.color = Color(1, 1, 0, 0.4)  # yellow transparent
+	circle.size = Vector2(80, 80)
+	circle.position = chosen.position - Vector2(10, 10)
+	chosen.get_parent().add_child(circle)
+	
+	# Remove circle after animation
+	await get_tree().create_timer(2.5).timeout
+	if is_instance_valid(circle):
+		circle.queue_free()
+	if is_instance_valid(chosen):
+		chosen.scale = Vector2(1.0, 1.0)
+
+func _on_freeze_used():
+	game_timer.paused = true
+	await get_tree().create_timer(10.0).timeout
+	game_timer.paused = false
+
+func _on_add_time_used():
+	var current = game_timer.time_left
+	game_timer.stop()
+	game_timer.start(current + 10.0)
+
+func _on_skip_used():
+	if game_over: return
+	
+	# Find all items still needed
+	var needed_items = []
+	for item in shopping_list_data:
+		if shopping_list_data[item] > 0:
+			needed_items.append(item)
+	
+	if needed_items.is_empty(): return
+	
+	# Pick a random one and complete it
+	var chosen = needed_items[randi() % needed_items.size()]
+	if correct_sound: correct_sound.play()
+	shopping_list_data[chosen] = 0
+	current_basket_count += 1
+	update_list_visuals(chosen)
+	update_basket_ui()
+	create_tween().tween_property(progress_bar, "value", current_basket_count, 0.2)
+	show_message("Skipped! " + chosen + " collected!")
+	if current_basket_count == total_needed:
+		win_game()
 
 func _process(_delta):
 	if !game_over:
@@ -150,7 +248,6 @@ func _on_next_pressed():
 	if is_inside_tree():
 		get_tree().change_scene_to_file("res://Assets/Scene/Countoria/level_2_countoria.tscn")
 
-# UPDATED: Directs to Countoria Island instead of quitting the app
 func _on_quit_pressed():
 	if is_inside_tree():
 		get_tree().change_scene_to_file("res://Assets/Scene/Countoria/countoria.tscn")
@@ -215,7 +312,6 @@ func _on_item_tapped(item_name: String):
 		apply_time_penalty(2)
 		show_message(item_name + " is not on the list!")
 
-# --- ORIGINAL PENALTY FUNCTION (NO CHANGES) ---
 func apply_time_penalty(amount: float):
 	var current_time = game_timer.time_left
 	game_timer.stop()
@@ -260,13 +356,14 @@ func win_game():
 	win_board.pivot_offset = win_board.size / 2
 	win_board.scale = Vector2(0.5, 0.5)
 	create_tween().tween_property(win_board, "scale", Vector2(1.0, 1.0), 0.5).set_trans(Tween.TRANS_ELASTIC)
+	$CanvasLayer2.hide()
 
 func update_timer_display():
+	if not timer_ready: return
 	var time_left = game_timer.time_left
 	timer_label.text = "%02d:%02d" % [floor(time_left / 60.0), int(time_left) % 60]
 	if time_left <= 0: lose_game()
 
-# --- LOSE LOGIC WITH ANIMATION TRIGGER ---
 func lose_game(): 
 	if game_over: return
 	game_over = true
@@ -275,21 +372,19 @@ func lose_game():
 	if blur_overlay: blur_overlay.show()
 	if lose_board:
 		lose_board.show()
-		
-		# TRIGGER THE DESIGN ANIMATION HERE
 		if hourglass_anim:
 			hourglass_anim.play("default")
-			
 		ui_layer.move_child(lose_board, ui_layer.get_child_count() - 1)
 		lose_board.pivot_offset = lose_board.size / 2
 		lose_board.scale = Vector2(0.5, 0.5)
 		create_tween().tween_property(lose_board, "scale", Vector2(1.0, 1.0), 0.5).set_trans(Tween.TRANS_ELASTIC)
+		$CanvasLayer2.hide()
 
 func update_basket_ui():
 	basket_label.text = str(current_basket_count) + " / " + str(total_needed)
 
 func setup_market_buttons():
-	var market_stalls = [$freshfruits_market, $dairy_market, $veggie_market, $bread_market]
+	var market_stalls = [$CanvasLayer2/freshfruits_market, $CanvasLayer2/dairy_market, $CanvasLayer2/veggie_market, $CanvasLayer2/bread_market]
 	for stall in market_stalls:
 		if stall == null: continue
 		for button in stall.get_children():
@@ -304,6 +399,11 @@ func _on_back_button_pressed() -> void:
 func _on_next_button_pressed() -> void:
 	_on_next_pressed()
 
-# Signal handler from Inspector
 func _on_quit_button_pressed() -> void:
 	_on_quit_pressed()
+
+func _on_collect_rewards_pressed() -> void:
+	GameManager.receive_island_reward("island_2")
+	var btn = $ui_layer/win_board/next_button
+	btn.disabled = false
+	btn.modulate = Color(1, 1, 1)

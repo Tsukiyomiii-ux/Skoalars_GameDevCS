@@ -32,6 +32,7 @@ func _on_rewards_button_pressed():
 	var btn = $BoardImage/RewardsButton
 	btn.disabled = true
 	btn.modulate = Color(0.5, 0.5, 0.5)
+	GameManager.receive_island_reward("island_1.5")
 
 	# Unlock the Next button
 	$BoardImage/NextButton.disabled = false

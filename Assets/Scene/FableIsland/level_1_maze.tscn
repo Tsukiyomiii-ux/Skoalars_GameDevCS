@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dnxu007rv5srw"]
 
-[ext_resource type="Script" uid="uid://dbgr4t87orn7s" path="res://Assets/Scripts/level_1_maze.gd" id="1_ll0r8"]
-[ext_resource type="Texture2D" uid="uid://bdp2xaadammo0" path="res://Assets/Sprite/FABLE ISLE/Level1/Maze.png" id="2_ceclx"]
-[ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="3_go3qh"]
-[ext_resource type="PackedScene" uid="uid://l3c1tliqmsiy" path="res://Assets/Scene/MagicBook.tscn" id="4_22lru"]
-[ext_resource type="Texture2D" uid="uid://57ju4ckxs6r3" path="res://Assets/Sprite/FABLE ISLE/Level1/Clock.png" id="5_2ioqf"]
-[ext_resource type="Texture2D" uid="uid://848kmn22y7qg" path="res://Assets/Sprite/FABLE ISLE/Level1/BarEmpty.png" id="6_j4nql"]
-[ext_resource type="Texture2D" uid="uid://cpyughg4ktine" path="res://Assets/Sprite/FABLE ISLE/Level1/BarFull.png" id="7_8y5ve"]
-[ext_resource type="PackedScene" uid="uid://dnbtfi6prigtt" path="res://Assets/Scene/game_over_ui.tscn" id="8_h58w2"]
-[ext_resource type="PackedScene" uid="uid://c4lqo6vhjpmk5" path="res://Assets/Scene/reward_screen.tscn" id="9_ceclx"]
-[ext_resource type="Texture2D" uid="uid://dqma3pvlhayta" path="res://Assets/Sprite/FABLE ISLE/Level1/Mission.png" id="9_go3qh"]
-[ext_resource type="AudioStream" uid="uid://djrv3yufst25w" path="res://Assets/Sprite/FABLE ISLE/Audio/LevelFailed.mp3" id="12_8y5ve"]
-[ext_resource type="AudioStream" uid="uid://dxc77drr7wq2q" path="res://Assets/Sprite/FABLE ISLE/Audio/TickingSound.mp3" id="13_h58w2"]
+[ext_resource type="Script" uid="uid://dbgr4t87orn7s" path="res://Assets/Scripts/FableIsland/level_1_maze.gd" id="1_ll0r8"]
+[ext_resource type="Texture2D" uid="uid://bdp2xaadammo0" path="res://Assets/Fable Isle/Level1/Maze.png" id="2_ceclx"]
+[ext_resource type="PackedScene" uid="uid://l3c1tliqmsiy" path="res://Assets/Scene/FableIsland/MagicBook.tscn" id="4_22lru"]
+[ext_resource type="Texture2D" uid="uid://57ju4ckxs6r3" path="res://Assets/Fable Isle/Level1/Clock.png" id="5_2ioqf"]
+[ext_resource type="Texture2D" uid="uid://848kmn22y7qg" path="res://Assets/Fable Isle/Level1/BarEmpty.png" id="6_j4nql"]
+[ext_resource type="Texture2D" uid="uid://cpyughg4ktine" path="res://Assets/Fable Isle/Level1/BarFull.png" id="7_8y5ve"]
+[ext_resource type="PackedScene" uid="uid://dnbtfi6prigtt" path="res://Assets/Scene/FableIsland/game_over_ui.tscn" id="8_h58w2"]
+[ext_resource type="PackedScene" uid="uid://c4lqo6vhjpmk5" path="res://Assets/Scene/FableIsland/reward_screen.tscn" id="9_ceclx"]
+[ext_resource type="Texture2D" uid="uid://dqma3pvlhayta" path="res://Assets/Fable Isle/Level1/Mission.png" id="9_go3qh"]
+[ext_resource type="AudioStream" uid="uid://djrv3yufst25w" path="res://Assets/Fable Isle/Audio/LevelFailed.mp3" id="12_8y5ve"]
+[ext_resource type="PackedScene" uid="uid://bsrjxjml77nwd" path="res://Assets/Scene/MovingGameGUI.tscn" id="12_ijge1"]
+[ext_resource type="AudioStream" uid="uid://dxc77drr7wq2q" path="res://Assets/Fable Isle/Audio/TickingSound.mp3" id="13_h58w2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mobfr"]
 size = Vector2(458, 21)
@@ -95,9 +95,6 @@ script = ExtResource("1_ll0r8")
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ceclx")
 region_rect = Rect2(21.88739, 25.921036, 653.5953, 655.0858)
-
-[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("3_go3qh")]
-position = Vector2(-274, 242)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1133853601]
 visible = false
@@ -622,6 +619,10 @@ stream = ExtResource("12_8y5ve")
 
 [node name="SndTick" type="AudioStreamPlayer" parent="." unique_id=562957748]
 stream = ExtResource("13_h58w2")
+
+[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("12_ijge1")]
+z_index = 5
+position = Vector2(-235, 244)
 
 [connection signal="pressed" from="CanvasLayer/GameOverUI/RetryButton" to="." method="_on_retry_button_pressed"]
 

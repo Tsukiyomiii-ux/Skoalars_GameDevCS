@@ -133,10 +133,16 @@ func _on_skip_purchase_btn_pressed():
 func _on_cancel_btn_pressed():
 	var island_scenes = {
 		"island_1": "res://Assets/Scene/FableIsland/fableisland.tscn",
+		"island_1.1": "res://Assets/Scene/FableIsland/level_1_maze.tscn",
+		"island_1.2": "res://Assets/Scene/FableIsland/level_2_spelling_quest.tscn",
 		"island_2": "res://Assets/Scene/Countoria/countoria.tscn",
+		"island_2.1": "res://Assets/Scene/Countoria/level_1_countoria.tscn",
+		"island_2.2": "res://Assets/Scene/Countoria/level_2_countoria.tscn",
 		"island_3": "res://Assets/Scene/BloomsGrove/science.scn",
+		"island_3.1": "res://Assets/Scene/BloomsGrove/GardenMiniGame.tscn",
 		"island_4": "res://Assets/Scene/Zypheria/zypheria.tscn",
 		"island_5": "res://Assets/Scene/MainIsland/main_island.tscn",
+		
 	}
 	var scene = island_scenes.get(GameManager.get_current_island(), "res://Assets/Scene/MainIsland/main_island.tscn")
 	get_tree().change_scene_to_file(scene)

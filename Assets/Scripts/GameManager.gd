@@ -8,9 +8,29 @@ var target_path : String
 var progress = [] # This array will hold the loading percentage
 var wand_used = false
 
+# 🎁 ISLAND REWARDS
+const ISLAND_REWARDS = {
+	"island_1": {"diamonds": 5, "skill_uses": {"hint": 1, "freeze_time": 0, "add_time": 0, "skip": 0}},
+	"island_1.5": {"diamonds": 5, "skill_uses": {"hint": 0, "freeze_time": 0, "add_time": 0, "skip": 0}},
+	"island_2": {"diamonds": 5, "skill_uses": {"hint": 0, "freeze_time": 1, "add_time": 0, "skip": 0}},
+	"island_2.5": {"diamonds": 5, "skill_uses": {"hint": 0, "freeze_time": 0, "add_time": 0, "skip": 0}},
+	"island_3": {"diamonds": 5, "skill_uses": {"hint": 0, "freeze_time": 0, "add_time": 0, "skip": 1}},
+	"island_3.5": {"diamonds": 5, "skill_uses": {"hint": 0, "freeze_time": 0, "add_time": 0, "skip": 0}},
+	"island_4": {"diamonds": 5, "skill_uses": {"hint": 1, "freeze_time": 0, "add_time": 0, "skip": 0}},
+	"island_4.5": {"diamonds": 5, "skill_uses": {"hint": 0, "freeze_time": 0, "add_time": 0, "skip": 0}},
+}
+
+# 🏝️ Island Progress
+var island_progress = {
+	"island_1": {"minigames_completed": 0, "total_minigames": 2},
+	"island_2": {"minigames_completed": 0, "total_minigames": 2},
+	"island_3": {"minigames_completed": 0, "total_minigames": 2},
+	"island_4": {"minigames_completed": 0, "total_minigames": 2},
+}
+
 # Skills (false = not owned)
 var skills = {
-	"hint": false,
+	"hint": true,
 	"freeze_time": false,
 	"add_time": false,
 	"skip": false
@@ -56,19 +76,40 @@ var current_score: int = 0
 # Optional: If you want to track if the hint has already been used in previous levels
 var hint_already_used: bool = false
 
+var allowed_skills: Array = ["hint", "freeze_time", "add_time", "skip"]
+
 
 # Signals
 signal diamonds_changed(new_amount)
 signal skill_purchased(skill_name)
 signal island_unlocked(island_name)
+signal reward_received(island_name)	
+signal hint_requested
+signal freeze_requested
+signal add_time_requested
+signal skip_requested
+signal skill_used(skill_name)
+signal skill_button_state_changed(skill_name, is_disabled)
 
+
+func set_allowed_skills(skills_list: Array):
+	allowed_skills = skills_list
+	update_skill_button_states()
+
+func update_skill_button_states():
+	print("🔍 allowed_skills: ", allowed_skills)
+	for skill_name in skill_uses:
+		var not_allowed = skill_name not in allowed_skills
+		var should_disable = not_allowed or not is_skill_equipped(skill_name) or skill_uses[skill_name] <= 0
+		print("  ", skill_name, " | not_allowed: ", not_allowed, " | should_disable: ", should_disable)
+		skill_button_state_changed.emit(skill_name, should_disable)
 func load_scene(path: String):
 	target_path = path
-	
+
 	# 1. Spawn the loading screen GUI
 	loading_instance = loading_screen_scene.instantiate()
 	get_tree().root.add_child(loading_instance)
-	
+
 	# 2. Start the background loading thread
 	ResourceLoader.load_threaded_request(path)
 	set_process(true)
@@ -77,23 +118,23 @@ func _process(_delta):
 	if target_path == "":
 		set_process(false)
 		return
-		
+
 	# Check the current status of the background loading
 	var status = ResourceLoader.load_threaded_get_status(target_path, progress)
-	
+
 	# Pass the progress (0.0 to 1.0) to the bar's update function
 	if loading_instance:
 		loading_instance.update_bar(progress[0])
-	
+
 	if status == ResourceLoader.THREAD_LOAD_LOADED:
 		# When finished, get the loaded scene data
 		var new_scene = ResourceLoader.load_threaded_get(target_path)
-		
+
 		# Short delay so the user sees the full bar for a moment
 		await get_tree().create_timer(0.5).timeout
-		
+
 		get_tree().change_scene_to_packed(new_scene)
-		
+
 		# Clean up the loading overlay
 		loading_instance.queue_free()
 		target_path = ""
@@ -145,6 +186,31 @@ func get_skill_uses(skill_name: String) -> int:
 
 func get_skill_cost(skill_name: String) -> int:
 	return SKILL_COSTS.get(skill_name, 0)
+func use_skill(skill_name: String) -> bool:
+	if not is_skill_equipped(skill_name):
+		print("❌ ", skill_name, " is not equipped!")
+		return false
+	if skill_uses[skill_name] <= 0:
+		print("❌ ", skill_name, " has no uses left!")
+		return false
+
+	skill_uses[skill_name] -= 1
+	save_game()
+	print("✅ Used ", skill_name, " | Remaining: ", skill_uses[skill_name])
+
+	match skill_name:
+		"hint":
+			hint_requested.emit()
+		"freeze_time":
+			freeze_requested.emit()
+		"add_time":
+			add_time_requested.emit()
+		"skip":
+			skip_requested.emit()
+
+	skill_used.emit(skill_name)
+	update_skill_button_states()
+	return true
 
 # 🎒 EQUIP FUNCTIONS
 func equip_skill(skill_name: String):
@@ -169,12 +235,53 @@ func is_island_unlocked(island_name: String) -> bool:
 
 var current_island: String = "island_1"
 
-
 func set_current_island(island_name: String):
 	current_island = island_name
 
 func get_current_island() -> String:
 	return current_island
+
+# 📊 PROGRESS FUNCTIONS
+func complete_minigame(island_name: String):
+	if not island_progress.has(island_name):
+		return
+	var island = island_progress[island_name]
+	if island["minigames_completed"] >= island["total_minigames"]:
+		return
+	island["minigames_completed"] += 1
+	print("✅ ", island_name, " progress: ", island["minigames_completed"], "/", island["total_minigames"])
+	save_game()
+
+func get_island_progress(island_name: String) -> float:
+	if not island_progress.has(island_name):
+		return 0.0
+	var island = island_progress[island_name]
+	return float(island["minigames_completed"]) / float(island["total_minigames"])
+
+func is_island_complete(island_name: String) -> bool:
+	if not island_progress.has(island_name):
+		return false
+	var island = island_progress[island_name]
+	return island["minigames_completed"] >= island["total_minigames"]
+
+# 🎁 REWARD FUNCTIONS
+func receive_island_reward(island_name: String):
+	if not ISLAND_REWARDS.has(island_name):
+		return
+	var rewards = ISLAND_REWARDS[island_name]
+
+	add_diamonds(rewards["diamonds"])
+	print("💎 +", rewards["diamonds"], " diamonds!")
+
+	for skill in rewards["skill_uses"]:
+		var amount = rewards["skill_uses"][skill]
+		if amount > 0:
+			skill_uses[skill] += amount
+			skills[skill] = true
+			print("🎁 +", amount, " ", skill, " uses!")
+
+	reward_received.emit(island_name)
+	save_game()
 
 # 💾 SAVE/LOAD
 func save_game():
@@ -183,7 +290,8 @@ func save_game():
 		"skills": skills,
 		"skill_uses": skill_uses,
 		"skills_equipped": skills_equipped,
-		"islands_unlocked": islands_unlocked
+		"islands_unlocked": islands_unlocked,
+		"island_progress": island_progress
 	}
 	var file = FileAccess.open("user://game_save.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(save_data))
@@ -204,15 +312,22 @@ func load_game():
 			skill_uses = data.get("skill_uses", skill_uses)
 			skills_equipped = data.get("skills_equipped", skills_equipped)
 			islands_unlocked = data.get("islands_unlocked", islands_unlocked)
+			island_progress = data.get("island_progress", island_progress)
 			diamonds_changed.emit(diamonds)
 			print("💾 Loaded: ", diamonds, " diamonds, uses: ", skill_uses)
 
 func reset_game():
 	diamonds = 5
-	skills = {"hint": false, "freeze_time": false, "add_time": false, "skip": false}
+	skills = {"hint": true, "freeze_time":false, "add_time": false, "skip": false}
 	skill_uses = {"hint": 1, "freeze_time": 0, "add_time": 0, "skip": 0}
-	skills_equipped = {"hint": false, "freeze_time": false, "add_time": false, "skip": false}
+	skills_equipped = {"hint": false, "freeze_time": false, "add_time": false, "skip": false	}
 	islands_unlocked = {"island_1": true, "island_2": false, "island_3": false, "island_4": false}
-	current_island = "island_1"  # ← reset current island tracker
-	diamonds_changed.emit(diamonds)  # ← notify UI of diamond reset
+	island_progress = {
+		"island_1": {"minigames_completed": 0, "total_minigames": 2},
+		"island_2": {"minigames_completed": 0, "total_minigames": 2},
+		"island_3": {"minigames_completed": 0, "total_minigames": 2},
+		"island_4": {"minigames_completed": 0, "total_minigames": 2},
+	}
+	current_island = "island_1"
+	diamonds_changed.emit(diamonds)
 	save_game()

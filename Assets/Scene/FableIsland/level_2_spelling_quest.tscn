@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://djrv3yufst25w" path="res://Assets/Fable Isle/Audio/LevelFailed.mp3" id="15_1ibqk"]
 [ext_resource type="AudioStream" uid="uid://b3uyqro3wwa8a" path="res://Assets/Fable Isle/Audio/LevelUP(start of level2).mp3" id="16_d6amy"]
 [ext_resource type="AudioStream" uid="uid://cpf1ewd0q1vpd" path="res://Assets/Fable Isle/Audio/5minClockLevel2.mp3" id="17_n6cmk"]
+[ext_resource type="PackedScene" uid="uid://bmyc7fch0vcyx" path="res://Assets/Scene/GUI.tscn" id="19_fxxru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oeuc3"]
 texture = ExtResource("5_ux12e")
@@ -37,6 +38,8 @@ position = Vector2(-10, 16)
 [node name="CanvasLayer" type="CanvasLayer" parent="GameTileMap" unique_id=1740016415]
 unique_name_in_owner = true
 layer = 100
+offset = Vector2(0, -7.045)
+transform = Transform2D(1, 0, 0, 1, 0, -7.045)
 
 [node name="Control" type="Control" parent="GameTileMap/CanvasLayer" unique_id=1112140543]
 layout_mode = 3
@@ -134,22 +137,6 @@ offset_right = 2048.0
 offset_bottom = 1482.0
 scale = Vector2(0.4, 0.333)
 texture = ExtResource("8_p53t4")
-
-[node name="WordContainer" type="GridContainer" parent="GameTileMap/CanvasLayer/WoodPanel" unique_id=223087045]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -399.6668
-offset_top = -90.0
-offset_right = 400.33325
-offset_bottom = 110.0
-grow_horizontal = 2
-grow_vertical = 2
-columns = 8
 
 [node name="ChooseHereLabel" type="Label" parent="GameTileMap/CanvasLayer/WoodPanel" unique_id=1576785874]
 layout_mode = 1
@@ -296,6 +283,33 @@ position = Vector2(-10, 16)
 stream = ExtResource("17_n6cmk")
 max_distance = 999999.0
 attenuation = 0.01
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="GameTileMap" unique_id=761364739]
+layer = 200
+
+[node name="WordContainer" type="GridContainer" parent="GameTileMap/CanvasLayer2" unique_id=223087045]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 189.0
+offset_top = 250.0
+offset_right = 989.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.37, 0.37)
+mouse_filter = 0
+columns = 8
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=158200826]
+layer = 100
+
+[node name="Skoalars" parent="CanvasLayer" unique_id=1875685537 instance=ExtResource("19_fxxru")]
+position = Vector2(636, 368.00003)
+scale = Vector2(0.057, 0.056)
 
 [connection signal="pressed" from="GameTileMap/CanvasLayer/QuestIncompleteUI/BoardImage/RetryButton2" to="GameTileMap/CanvasLayer/QuestIncompleteUI" method="_on_retry_button_pressed"]
 

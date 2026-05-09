@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c4lqo6vhjpmk5"]
 
-[ext_resource type="Script" uid="uid://ckm7q57ex2a7l" path="res://Assets/Scripts/reward_screen.gd" id="1_c5knp"]
-[ext_resource type="Texture2D" uid="uid://hjpaqlb33jdm" path="res://Assets/Sprite/FABLE ISLE/Level1/Background.png" id="2_2t0tq"]
-[ext_resource type="Texture2D" uid="uid://22g5k6243klm" path="res://Assets/Sprite/FABLE ISLE/Level1/CollectRewards.png" id="2_c5knp"]
-[ext_resource type="Texture2D" uid="uid://d3y04ocklndgc" path="res://Assets/Sprite/FABLE ISLE/Level1/Rewards.png" id="2_rdmef"]
-[ext_resource type="Texture2D" uid="uid://buj63bstrv4g6" path="res://Assets/Sprite/FABLE ISLE/Level1/NextButton.png" id="4_bpjvw"]
-[ext_resource type="Texture2D" uid="uid://0xl7kxxpeg4d" path="res://Assets/Sprite/FABLE ISLE/Level1/BackButton.png" id="5_2t0tq"]
-[ext_resource type="AudioStream" uid="uid://b7ebe0dhv1ec6" path="res://Assets/Sprite/FABLE ISLE/Audio/LevelSuccess.mp3" id="7_ijvxc"]
+[ext_resource type="Script" uid="uid://ckm7q57ex2a7l" path="res://Assets/Scripts/FableIsland/reward_screen.gd" id="1_c5knp"]
+[ext_resource type="Texture2D" uid="uid://hjpaqlb33jdm" path="res://Assets/Fable Isle/Level1/Background.png" id="2_2t0tq"]
+[ext_resource type="Texture2D" uid="uid://22g5k6243klm" path="res://Assets/Fable Isle/Level1/CollectRewards.png" id="2_c5knp"]
+[ext_resource type="Texture2D" uid="uid://d3y04ocklndgc" path="res://Assets/Fable Isle/Level1/Rewards.png" id="2_rdmef"]
+[ext_resource type="Texture2D" uid="uid://buj63bstrv4g6" path="res://Assets/Fable Isle/Level1/NextButton.png" id="4_bpjvw"]
+[ext_resource type="Texture2D" uid="uid://0xl7kxxpeg4d" path="res://Assets/Fable Isle/Level1/BackButton.png" id="5_2t0tq"]
+[ext_resource type="AudioStream" uid="uid://b7ebe0dhv1ec6" path="res://Assets/Fable Isle/Audio/LevelSuccess.mp3" id="7_ijvxc"]
 
 [node name="RewardScreen" type="Control" unique_id=931813947]
 layout_mode = 3

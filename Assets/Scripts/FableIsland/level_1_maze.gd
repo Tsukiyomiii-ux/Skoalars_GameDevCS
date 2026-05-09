@@ -28,6 +28,23 @@ func _ready():
 		mission_scroll.show()
 	
 	is_timer_active = true
+	GameManager.set_current_island("island_1.1")
+	GameManager.set_allowed_skills(["add_time", "freeze_time"])
+	GameManager.freeze_requested.connect(_on_freeze_used)
+	GameManager.add_time_requested.connect(_on_add_time_used)
+	await get_tree().create_timer(0.1).timeout
+	GameManager.update_skill_button_states()
+
+func _on_freeze_used():
+	# Pauses timer for 10 seconds
+	is_timer_active = false
+	await get_tree().create_timer(10.0).timeout
+	is_timer_active = true
+
+func _on_add_time_used():
+	# Adds 30 seconds to timer
+	time_left += 10.0
+
 
 func _process(delta):
 	if is_game_over or not is_timer_active:

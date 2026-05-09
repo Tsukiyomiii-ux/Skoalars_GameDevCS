@@ -426,6 +426,10 @@ region_rect = Rect2(40, 360, 392, 104)
 texture = ExtResource("7_lcbd7")
 region_rect = Rect2(40, 576, 392, 104)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v808d"]
+texture = ExtResource("7_lcbd7")
+region_rect = Rect2(32, 576, 416, 104)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iugve"]
 texture = ExtResource("7_lcbd7")
 texture_margin_left = 8.0
@@ -437,6 +441,10 @@ region_rect = Rect2(40, 576, 400, 104)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up2sj"]
 texture = ExtResource("7_lcbd7")
 region_rect = Rect2(56, 680, 376, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r4pc7"]
+texture = ExtResource("7_lcbd7")
+region_rect = Rect2(48, 680, 392, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qw33"]
 texture = ExtResource("7_lcbd7")
@@ -639,6 +647,7 @@ layout_mode = 0
 offset_right = 300.0
 offset_bottom = 103.71
 theme_override_styles/normal = SubResource("StyleBoxTexture_wv4p4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v808d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_iugve")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Popup/Exit/VBoxContainer2/VBoxContainer" unique_id=646125404]
@@ -655,6 +664,7 @@ layout_mode = 0
 offset_right = 300.0
 offset_bottom = 100.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_up2sj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r4pc7")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0qw33")
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2" unique_id=49975039]

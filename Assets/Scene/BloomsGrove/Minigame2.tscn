@@ -27,6 +27,7 @@
 [ext_resource type="VideoStream" uid="uid://dan10l5exrtvv" path="res://Assets/Bloom Game 1/New Assets/Shellby-Rescued.ogv" id="25_ijxta"]
 [ext_resource type="Texture2D" uid="uid://buhvfehyhrvs4" path="res://Assets/Bloom Game 1/New Assets/39.png" id="26_vbcun"]
 [ext_resource type="Texture2D" uid="uid://1bnip5kb12cf" path="res://Assets/Bloom Game 1/New Assets/Wand.png" id="27_wsd13"]
+[ext_resource type="PackedScene" uid="uid://bmyc7fch0vcyx" path="res://Assets/Scene/GUI.tscn" id="28_wsd13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnr2y"]
 size = Vector2(302, 95)
@@ -68,6 +69,7 @@ animations = [{
 }]
 
 [node name="TrashMiniGame" type="Node2D" unique_id=966201221]
+scale = Vector2(0.265, 0.265)
 script = ExtResource("1_k0b3l")
 
 [node name="RescueVideo" type="VideoStreamPlayer" parent="." unique_id=1449285210]
@@ -76,6 +78,7 @@ offset_left = -25.999998
 offset_top = -9.999999
 offset_right = 1894.0
 offset_bottom = 1070.0
+scale = Vector2(0.264, 0.264)
 stream = ExtResource("25_ijxta")
 
 [node name="main_bg" type="Sprite2D" parent="." unique_id=1617231171]
@@ -170,9 +173,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 27
 
 [node name="Mission" type="TextureRect" parent="." unique_id=302427788]
-offset_left = -11.0
+offset_left = 35.415
 offset_top = -12.0
-offset_right = 289.0
+offset_right = 335.415
 offset_bottom = 500.0
 texture = ExtResource("10_fjdae")
 
@@ -202,94 +205,14 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -134.5
-offset_top = 74.0
+offset_top = 71.03
 offset_right = 159.5
-offset_bottom = 126.0
+offset_bottom = 123.03003
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=443109014]
-visible = false
-offset_top = -2.0
-offset_right = 1285.0
-offset_bottom = 729.0
-color = Color(0, 0, 0, 0.7294118)
-
-[node name="Over" type="Sprite2D" parent="ColorRect2" unique_id=806417274]
-position = Vector2(638, 417)
-scale = Vector2(0.7766927, 0.73742676)
-texture = ExtResource("12_vnb0j")
-
-[node name="Hourglass" type="AnimatedSprite2D" parent="ColorRect2/Over" unique_id=548251502]
-sprite_frames = SubResource("SpriteFrames_1w0ls")
-
-[node name="Try" type="TextureButton" parent="ColorRect2/Over" unique_id=134118893]
-offset_left = 19.473854
-offset_top = 120.76352
-offset_right = 219.47385
-offset_bottom = 195.76352
-scale = Vector2(1.4, 2)
-texture_normal = ExtResource("14_7uhuj")
-
-[node name="Quit" type="TextureButton" parent="ColorRect2/Over" unique_id=1029284115]
-offset_left = -316.45004
-offset_top = 145.66321
-offset_right = 588.5499
-offset_bottom = 401.6632
-scale = Vector2(0.3, 0.4)
-texture_normal = ExtResource("15_kjbj0")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=321570034]
-visible = false
-offset_right = 1279.0
-offset_bottom = 725.0
-color = Color(0, 0, 0, 0.50980395)
-
-[node name="Popup" type="Sprite2D" parent="ColorRect" unique_id=657988311]
-position = Vector2(659.00006, 339)
-scale = Vector2(0.49707034, 0.4731445)
-texture = ExtResource("16_7tx3u")
-
-[node name="Diamond" type="Sprite2D" parent="ColorRect/Popup" unique_id=188735389]
-position = Vector2(-18.106293, -112.016525)
-scale = Vector2(1.3851862, 1.3982456)
-texture = ExtResource("17_0b3ij")
-
-[node name="Key" type="Sprite2D" parent="ColorRect/Popup" unique_id=122382323]
-position = Vector2(-297.74466, -31.702759)
-scale = Vector2(1.2644794, 1.0600827)
-texture = ExtResource("18_qpcyu")
-
-[node name="Skip" type="Sprite2D" parent="ColorRect/Popup" unique_id=907493543]
-position = Vector2(243.42622, -44.383904)
-scale = Vector2(1.1560417, 1.0919352)
-texture = ExtResource("19_arncp")
-
-[node name="Collect" type="TextureButton" parent="ColorRect/Popup" unique_id=427394347]
-offset_left = -221.29675
-offset_top = 61.29206
-offset_right = -21.296753
-offset_bottom = 161.29205
-scale = Vector2(2.4, 2.8)
-texture_normal = ExtResource("20_uqcaf")
-
-[node name="Back" type="TextureButton" parent="ColorRect/Popup" unique_id=28209576]
-offset_left = -609.57166
-offset_top = 291.66568
-offset_right = -409.57166
-offset_bottom = 391.66568
-scale = Vector2(2.2, 2.5)
-texture_normal = ExtResource("21_h1tbo")
-
-[node name="Rescue" type="TextureButton" parent="ColorRect/Popup" unique_id=1332098019]
-offset_left = 46.271057
-offset_top = 169.08154
-offset_right = 1310.271
-offset_bottom = 1011.08154
-scale = Vector2(0.5, 0.6)
-texture_normal = ExtResource("22_jn7w3")
+autowrap_mode = 3
 
 [node name="SfxCorrect" type="AudioStreamPlayer2D" parent="." unique_id=602475812]
 stream = ExtResource("23_8leg4")
@@ -297,12 +220,119 @@ stream = ExtResource("23_8leg4")
 [node name="SfxWrong" type="AudioStreamPlayer2D" parent="." unique_id=461676775]
 stream = ExtResource("24_6l1sy")
 
-[node name="Holderwand" type="Sprite2D" parent="." unique_id=1010716750]
-position = Vector2(1177, 261.99997)
-scale = Vector2(0.11686204, 0.12158203)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1970355598]
+scale = Vector2(3.815, 3.815)
+transform = Transform2D(3.815, 0, 0, 3.815, 0, 0)
+
+[node name="Skoalars" parent="CanvasLayer" unique_id=1875685537 instance=ExtResource("28_wsd13")]
+position = Vector2(169.99998, 93.99999)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=582931687]
+layer = 200
+offset = Vector2(529.725, 251.29)
+scale = Vector2(0.055, 0.055)
+transform = Transform2D(0.055, 0, 0, 0.055, 529.725, 251.29)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer2" unique_id=443109014]
+visible = false
+offset_left = -9613.182
+offset_top = -4987.091
+offset_right = -8328.182
+offset_bottom = -4256.091
+scale = Vector2(19.045, 19.045)
+mouse_filter = 2
+color = Color(0, 0, 0, 0.7294118)
+
+[node name="Over" type="Sprite2D" parent="CanvasLayer2/ColorRect2" unique_id=806417274]
+position = Vector2(648.2255, 409.5563)
+scale = Vector2(0.627, 0.595)
+texture = ExtResource("12_vnb0j")
+
+[node name="Hourglass" type="AnimatedSprite2D" parent="CanvasLayer2/ColorRect2/Over" unique_id=548251502]
+sprite_frames = SubResource("SpriteFrames_1w0ls")
+
+[node name="Try" type="TextureButton" parent="CanvasLayer2/ColorRect2/Over" unique_id=134118893]
+offset_left = 19.473854
+offset_top = 120.76352
+offset_right = 219.47385
+offset_bottom = 195.76352
+scale = Vector2(1.4, 2)
+texture_normal = ExtResource("14_7uhuj")
+
+[node name="Quit" type="TextureButton" parent="CanvasLayer2/ColorRect2/Over" unique_id=1029284115]
+offset_left = -316.45004
+offset_top = 145.66321
+offset_right = 588.5499
+offset_bottom = 401.6632
+scale = Vector2(0.3, 0.4)
+texture_normal = ExtResource("15_kjbj0")
+
+[node name="Popup" type="Sprite2D" parent="CanvasLayer2" unique_id=657988311]
+z_index = 200
+position = Vector2(1968.6367, 1358.3638)
+scale = Vector2(9.988, 9.666)
+texture = ExtResource("16_7tx3u")
+
+[node name="Diamond" type="Sprite2D" parent="CanvasLayer2/Popup" unique_id=188735389]
+position = Vector2(-18.106293, -112.016525)
+scale = Vector2(1.3851862, 1.3982456)
+texture = ExtResource("17_0b3ij")
+
+[node name="Key" type="Sprite2D" parent="CanvasLayer2/Popup" unique_id=122382323]
+position = Vector2(-297.74466, -31.702759)
+scale = Vector2(1.2644794, 1.0600827)
+texture = ExtResource("18_qpcyu")
+
+[node name="Skip" type="Sprite2D" parent="CanvasLayer2/Popup" unique_id=907493543]
+position = Vector2(243.42622, -44.383904)
+scale = Vector2(1.1560417, 1.0919352)
+texture = ExtResource("19_arncp")
+
+[node name="Collect" type="TextureButton" parent="CanvasLayer2/Popup" unique_id=427394347]
+offset_left = -221.29675
+offset_top = 61.29206
+offset_right = -21.296753
+offset_bottom = 161.29205
+scale = Vector2(2.4, 2.8)
+texture_normal = ExtResource("20_uqcaf")
+
+[node name="Back" type="TextureButton" parent="CanvasLayer2/Popup" unique_id=28209576]
+offset_left = -609.57166
+offset_top = 291.66568
+offset_right = -409.57166
+offset_bottom = 391.66568
+scale = Vector2(2.2, 2.5)
+texture_normal = ExtResource("21_h1tbo")
+
+[node name="Rescue" type="TextureButton" parent="CanvasLayer2/Popup" unique_id=1332098019]
+offset_left = 46.271057
+offset_top = 169.08154
+offset_right = 1310.271
+offset_bottom = 1011.08154
+scale = Vector2(0.5, 0.6)
+texture_normal = ExtResource("22_jn7w3")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=321570034]
+offset_left = -11031.363
+offset_top = -6332.5454
+offset_right = -10696.541
+offset_bottom = -6147.2627
+scale = Vector2(83.979, 87.382)
+mouse_filter = 2
+color = Color(0, 0, 0, 0.50980395)
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1923168844]
+layer = 2
+scale = Vector2(6.28, 6.28)
+transform = Transform2D(6.28, 0, 0, 6.28, 0, 0)
+
+[node name="Holderwand" type="Sprite2D" parent="CanvasLayer3" unique_id=1010716750]
+z_index = 1
+position = Vector2(186.62418, 41.87898)
+scale = Vector2(0.021, 0.022)
 texture = ExtResource("26_vbcun")
 
-[node name="Wand" type="TextureButton" parent="Holderwand" unique_id=1521402900]
+[node name="Wand" type="TextureButton" parent="CanvasLayer3/Holderwand" unique_id=1521402900]
 offset_left = -410.74075
 offset_top = -353.6704
 offset_right = -210.74075
@@ -311,8 +341,9 @@ scale = Vector2(3.8, 3.6000001)
 texture_normal = ExtResource("27_wsd13")
 
 [connection signal="finished" from="RescueVideo" to="." method="_on_rescue_video_finished"]
-[connection signal="pressed" from="ColorRect2/Over/Try" to="." method="_on_try_pressed"]
-[connection signal="pressed" from="ColorRect2/Over/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="ColorRect/Popup/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="ColorRect/Popup/Rescue" to="." method="_on_rescue_pressed"]
-[connection signal="pressed" from="Holderwand/Wand" to="." method="_on_wand_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorRect2/Over/Try" to="." method="_on_try_pressed"]
+[connection signal="pressed" from="CanvasLayer2/ColorRect2/Over/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Popup/Collect" to="." method="_on_collect_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Popup/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Popup/Rescue" to="." method="_on_rescue_pressed"]
+[connection signal="pressed" from="CanvasLayer3/Holderwand/Wand" to="." method="_on_wand_pressed"]

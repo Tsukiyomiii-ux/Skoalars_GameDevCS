@@ -1,26 +1,25 @@
 [gd_scene format=4 uid="uid://lecfwo7f72ia"]
 
 [ext_resource type="Texture2D" uid="uid://cj274feyrapei" path="res://Assets/Sprite/Tilesets/Grass.png" id="1_lmjrh"]
-[ext_resource type="Script" uid="uid://bptkjk4sp3o40" path="res://Assets/Scripts/MainIsland/main_island.gd" id="1_ml317"]
 [ext_resource type="Texture2D" uid="uid://bw5spkx0fbrnt" path="res://Assets/Sprite/Tilesets/Hills.png" id="2_htla3"]
 [ext_resource type="Texture2D" uid="uid://kuw3i22btkrd" path="res://Assets/Sprite/Tilesets/Tilled Dirt.png" id="2_s1d72"]
+[ext_resource type="Texture2D" uid="uid://tuc823dykhgc" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/STAIRS - DAY.png" id="4_t4n34"]
 [ext_resource type="Texture2D" uid="uid://c8us716ex6g4f" path="res://Assets/Sprite/Tilesets/Water.png" id="5_s1d72"]
 [ext_resource type="Texture2D" uid="uid://jbv5is6n13he" path="res://Assets/Sprite/Objects/Basic Grass Biom things 1.png" id="6_sygrn"]
-[ext_resource type="Texture2D" uid="uid://bpdlhalhpxyul" path="res://Assets/Sprite/Objects/Plants and Biome/Plants.png" id="8_l2s30"]
-[ext_resource type="Texture2D" uid="uid://k76d24eu30cl" path="res://Assets/Sprite/Objects/Structures/MCHome/Trees_animation.png" id="10_1oq35"]
-[ext_resource type="Texture2D" uid="uid://c24xgug5ygxa2" path="res://Assets/Sprite/Objects/Plants and Biome/free_pixel_16_woods.png" id="10_4jkg4"]
-[ext_resource type="Texture2D" uid="uid://6yw7lah8c45w" path="res://Assets/Sprite/Objects/Structures/Free_Chicken_House.png" id="10_tlbtc"]
-[ext_resource type="Texture2D" uid="uid://x3j0mft4yds7" path="res://Assets/Sprite/Objects/Basic Furniture.png" id="11_o4rl6"]
-[ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/Structures/MCHome/exterior.png" id="12_1oq35"]
-[ext_resource type="Texture2D" uid="uid://0wcqcsuqxj38" path="res://Assets/Sprite/Objects/Goods/Supplies.png" id="12_ml317"]
+[ext_resource type="Texture2D" uid="uid://bpdlhalhpxyul" path="res://Assets/Sprite/Objects/Plants.png" id="8_l2s30"]
+[ext_resource type="Texture2D" uid="uid://k76d24eu30cl" path="res://Assets/Sprite/Objects/MCHome/Trees_animation.png" id="10_1oq35"]
+[ext_resource type="Texture2D" uid="uid://c24xgug5ygxa2" path="res://Assets/Sprite/Objects/free_pixel_16_woods.png" id="10_4jkg4"]
+[ext_resource type="Texture2D" uid="uid://b2lmggsxwvoj7" path="res://Assets/Sprite/Objects/Free_Chicken_House.png" id="10_tlbtc"]
+[ext_resource type="Texture2D" uid="uid://djwpgmty0tafp" path="res://Assets/Sprite/Objects/Basic Furniture.png" id="11_o4rl6"]
+[ext_resource type="Texture2D" uid="uid://diwmc2kgl8f0j" path="res://Assets/Sprite/Objects/MCHome/exterior.png" id="12_1oq35"]
+[ext_resource type="Texture2D" uid="uid://0wcqcsuqxj38" path="res://Assets/Sprite/Objects/Supplies.png" id="12_ml317"]
+[ext_resource type="PackedScene" uid="uid://bp22cu0isr5q1" path="res://Assets/Scene/skoalars.tscn" id="13_f3pcw"]
 [ext_resource type="Texture2D" uid="uid://blvlhxgxvoqc6" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 24, 2026, 02_56_06 PM.png" id="16_884xs"]
 [ext_resource type="Texture2D" uid="uid://chdey0vuxbwkb" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png" id="17_62u1j"]
 [ext_resource type="Texture2D" uid="uid://bsw8d10ehyyog" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 2 - DAY.png" id="18_62u1j"]
 [ext_resource type="Texture2D" uid="uid://dti7hfwlqcfo2" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 24, 2026, 03_16_01 PM.png" id="19_o4rl6"]
 [ext_resource type="Texture2D" uid="uid://bkqoak0pbnatw" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/BRIDGE - DAY.png" id="19_wxmp5"]
 [ext_resource type="Texture2D" uid="uid://dlolhqc643sxq" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_43_23 PM.png" id="22_oldau"]
-[ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/MainIsland/skoalarsGUI.tscn" id="22_qga78"]
-[ext_resource type="Texture2D" uid="uid://cea6j1jejioju" path="res://Assets/Sprite/Objects/ChatGPT Image May 4, 2026, 05_27_16 PM.png" id="23_gadri"]
 [ext_resource type="Texture2D" uid="uid://d1tpwflicj3es" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_35_45 PM.png" id="24_c6r3i"]
 [ext_resource type="Texture2D" uid="uid://bngyst88tej74" path="res://Assets/Sprite/Objects/objects_demo.png" id="26_6lqna"]
 
@@ -685,58 +684,23 @@ texture = ExtResource("2_s1d72")
 7:3/0 = 0
 0:3/size_in_atlas = Vector2i(1, 3)
 0:3/0 = 0
-4:4/0 = 0
-4:5/0 = 0
-5:4/0 = 0
-5:5/0 = 0
-6:4/0 = 0
-6:5/0 = 0
-7:4/0 = 0
-7:5/0 = 0
-6:6/0 = 0
-6:7/0 = 0
-7:6/0 = 0
-7:7/0 = 0
-4:6/0 = 0
-4:7/0 = 0
-5:6/0 = 0
-5:7/0 = 0
-1:6/size_in_atlas = Vector2i(3, 1)
-1:6/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-0:6/0 = 0
 1:3/0 = 0
-1:4/0 = 0
-1:5/0 = 0
 2:3/0 = 0
-2:4/0 = 0
-2:5/0 = 0
 3:3/0 = 0
-3:4/0 = 0
-3:5/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_1oq35"]
-sources/0 = SubResource("TileSetAtlasSource_4jkg4")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1d72"]
-texture = ExtResource("2_s1d72")
+3:2/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
 0:0/0 = 0
 0:1/0 = 0
-1:0/0 = 0
 1:1/0 = 0
+1:0/0 = 0
 2:0/0 = 0
 2:1/0 = 0
-3:0/0 = 0
-3:1/0 = 0
 4:0/0 = 0
 4:1/0 = 0
-5:0/size_in_atlas = Vector2i(2, 1)
-5:0/0 = 0
 5:1/0 = 0
 6:1/0 = 0
-7:0/0 = 0
 7:1/0 = 0
 0:2/size_in_atlas = Vector2i(3, 1)
 0:2/0 = 0
@@ -1946,16 +1910,7 @@ size = Vector2(61.49489, 35.550373)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvtps"]
 size = Vector2(61.49489, 25.727924)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gdp1t"]
-texture = ExtResource("23_gadri")
-1:0/size_in_atlas = Vector2i(86, 61)
-1:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_yebbp"]
-sources/0 = SubResource("TileSetAtlasSource_gdp1t")
-
 [node name="MainIsland" type="Node2D" unique_id=859178235]
-script = ExtResource("1_ml317")
 
 [node name="Border_Up" type="StaticBody2D" parent="." unique_id=654556152]
 position = Vector2(111, -81)
@@ -2745,7 +2700,7 @@ position = Vector2(-233, 45.25)
 shape = SubResource("RectangleShape2D_fjw6q")
 
 [node name="BasicPlants" type="TileMapLayer" parent="." unique_id=1340616226]
-tile_map_data = PackedByteArray("AAD3//b/AAABAAEAAAD5//b/AAABAAEAAAD7//j/AAABAAEAAAD7//f/AAABAAEAAAD4//b/AAABAAEAAAD6//f/AAABAAEAAAD5//f/AAABAAEAAADz//z/AAACAAAAAAD0//3/AAACAAAAAADy//v/AAACAAAAAADx//v/AAACAAAAAADw//v/AAACAAAAAADv//v/AAACAAAAAADu//v/AAACAAAAAAD6//v/AAACAAAAAAD7//v/AAACAAAAAAD5//z/AAACAAAAAAD4//z/AAACAAAAAAD4//3/AAACAAAAAAD4//7/AAACAAAAAAD2//7/AAACAAAAAAD3//7/AAACAAAAAAD1//3/AAACAAAAAADt//v/AAACAAAAAAD+//b/AAABAAEAAAD+//f/AAABAAEAAAD+//j/AAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAD3//b/AAABAAEAAAD5//b/AAABAAEAAAD7//j/AAABAAEAAAD7//f/AAABAAEAAAD4//b/AAABAAEAAAD6//f/AAABAAEAAAD5//f/AAABAAEAAADz//z/AAACAAAAAAD0//3/AAACAAAAAADy//v/AAACAAAAAADx//v/AAACAAAAAADw//v/AAACAAAAAADv//v/AAACAAAAAADu//v/AAACAAAAAAD6//v/AAACAAAAAAD7//v/AAACAAAAAAD5//z/AAACAAAAAAD4//z/AAACAAAAAAD4//3/AAACAAAAAAD4//7/AAACAAAAAAD2//7/AAACAAAAAAD3//7/AAACAAAAAAD1//3/AAACAAAAAADt//v/AAACAAAAAAD9//b/AAACAAAAAAD+//b/AAABAAEAAAD+//f/AAABAAEAAAD+//j/AAABAAEAAAA=")
 tile_set = SubResource("TileSet_wxmp5")
 
 [node name="House" type="TileMapLayer" parent="." unique_id=352649161]
@@ -2875,6 +2830,10 @@ shape = SubResource("RectangleShape2D_62u1j")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="House4/StaticBody2D" unique_id=370063111]
 position = Vector2(-47, 13)
 shape = SubResource("RectangleShape2D_w2nq2")
+
+[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("13_f3pcw")]
+z_index = 7
+position = Vector2(133.00002, 60)
 
 [node name="FlowerGarden" type="TileMapLayer" parent="." unique_id=814707906]
 position = Vector2(0, -2)
@@ -3403,18 +3362,3 @@ scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_7b8uv")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Windmill/StaticBody2D" unique_id=150836102]
-position = Vector2(1956.0696, 1439.105)
-rotation = 0.007814825
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_pvtps")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=23858761]
-z_index = 4
-position = Vector2(366, 147)
-scale = Vector2(0.04, 0.04)
-tile_map_data = PackedByteArray("AAAPAAEAAAABAAAAAAA=")
-tile_set = SubResource("TileSet_yebbp")
-
-[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("22_qga78")]
-z_index = 6
-position = Vector2(129.99998, 60.999996)

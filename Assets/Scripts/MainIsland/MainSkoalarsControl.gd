@@ -4,15 +4,49 @@ extends Control
 @export var open_cont: VBoxContainer
 @export var volume_cont: VBoxContainer
 @export var bottom_cont: VBoxContainer
-@onready var reward_cont = $reward_cont
-@onready var reward_btn_cont = $reward_btn_cont
-@onready var close_cont = $close_cont
-@onready var skip_btn = $skip_btn
-@onready var anim = $AnimationPlayer
+@export var close_cont = VBoxContainer
+@onready var anim = $MarginContainer/VBoxContainer/Popup/AnimationPlayer
+
 
 func _ready() -> void:
 	AudioManager.play_music(preload("res://Assets/Audio/SoftEng_BG1.wav"))
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	_set_mouse_filter_recursive(self)
+	GameManager.skill_button_state_changed.connect(_on_skill_button_state_changed)
+
+func _on_skill_button_state_changed(skill_name, is_disabled):
+	match skill_name:
+		"hint":
+			var patch = get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect")
+			var btn = get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect/hint_btn")
+			if patch and btn:
+				btn.disabled = is_disabled
+				patch.modulate = Color(1, 1, 1, 0.6) if is_disabled else Color(1, 1, 1, 1)
+		"freeze_time":
+			var patch = get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect2")
+			var btn = get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect2/freeze_btn")
+			if patch and btn:
+				btn.disabled = is_disabled
+				patch.modulate = Color(1, 1, 1, 0.6) if is_disabled else Color(1, 1, 1, 1)
+		"add_time":
+			var patch = get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect3")
+			var btn = get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect3/addTime_btn")
+			if patch and btn:
+				btn.disabled = is_disabled
+				patch.modulate = Color(1, 1, 1, 0.6) if is_disabled else Color(1, 1, 1, 1)
+		"skip":
+			var patch = get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect4")
+			var btn = get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect4/skip_btn")
+			if patch and btn:
+				btn.disabled = is_disabled
+				patch.modulate = Color(1, 1, 1, 0.6) if is_disabled else Color(1, 1, 1, 1)
+
+func _set_mouse_filter_recursive(node: Node):
+	if node is Control:
+		if not node is Button and not node is TextureButton and not node is HSlider:
+			node.mouse_filter = Control.MOUSE_FILTER_PASS
+	for child in node.get_children():
+		_set_mouse_filter_recursive(child)
 
 func safe_set_visible(node: Node, visible: bool):
 	if node and is_instance_valid(node):
@@ -27,9 +61,10 @@ func play():
 
 func pause():
 	get_tree().paused = true
+
 # --- UI BUTTONS ---
 func _on_home_btn_pressed() -> void:
-	play()	
+	play()
 	get_tree().change_scene_to_file("res://Assets/Scene/main_menu.tscn")
 
 func _on_mute_btn_pressed():
@@ -40,15 +75,6 @@ func _on_h_slider_value_changed(value: float) -> void:
 
 func _on_skills_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/SkillEquip.tscn")
-
-func show_reward_popup():
-	if reward_cont and is_instance_valid(reward_cont):
-		reward_cont.visible = true
-	else:
-		print("reward_cont not found!")
-
-func hide_reward():
-	safe_set_visible(reward_cont, false)
 
 func _on_settings_btn_pressed() -> void:
 	safe_toggle_visibility(open_cont)
@@ -87,10 +113,20 @@ func _on_ext_btn_pressed() -> void:
 func _on_done_btn_pressed():
 	get_tree().change_scene_to_file("res://Assets/Scene/main_island.tscn")
 
-
 func _on_diamond_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/skillShop.tscn")
 
-
 func _on_map_start_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/mapSelector.tscn")
+
+func _on_hint_btn_pressed():
+	GameManager.use_skill("hint")
+
+func _on_freeze_btn_pressed():
+	GameManager.use_skill("freeze_time")
+
+func _on_add_time_btn_pressed():
+	GameManager.use_skill("add_time")
+
+func _on_skip_btn_pressed():
+	GameManager.use_skill("skip")

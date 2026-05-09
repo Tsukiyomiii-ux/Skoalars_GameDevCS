@@ -47,12 +47,12 @@ func update_skill_row(equip_btn: Button, lock_btn: Button, disabled_img: Node, c
 	var uses = GameManager.get_skill_uses(skill_name)
 
 	if not owned:
-		# Not owned — hide everything
+		# Not owned — show disabled image, hide buttons
 		equip_btn.visible = false
 		lock_btn.visible = false
-		disabled_img.visible = false
+		disabled_img.visible = true
 	elif uses <= 0:
-		# No uses left — show disabled image, hide both buttons
+		# Owned but no uses left — show disabled image, hide buttons
 		equip_btn.visible = false
 		lock_btn.visible = false
 		disabled_img.visible = true
@@ -68,7 +68,7 @@ func update_skill_row(equip_btn: Button, lock_btn: Button, disabled_img: Node, c
 		disabled_img.visible = false
 
 	if count_lbl and is_instance_valid(count_lbl):
-		count_lbl.text = "×" + str(uses) if owned else "?"
+		count_lbl.text = "×" + str(uses) if owned else "0"
 
 # --- EQUIP HANDLERS ---
 func _on_hint_equip_pressed():

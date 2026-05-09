@@ -2,7 +2,7 @@ extends Node2D
 
 # --- 1. Node References ---
 @onready var question_label = $questionboard/question_text
-@onready var answer_label = $numboard/answer_board/answer_container/answer_text
+@onready var answer_label = $CanvasLayer2/numboard/answer_board/answer_container/answer_text
 @onready var timer_label = $timer/timerlabel
 @onready var game_timer = $timer/gametimer
 @onready var progress_bar = $progressbar_frame/textureprogressbar
@@ -22,16 +22,16 @@ extends Node2D
 # --- UI LAYER ---
 @onready var ui_layer = $lvl2_ui_layer
 @onready var blur_overlay = $lvl2_ui_layer/lvl2_bluroverlay
-@onready var win_board = $lvl2_ui_layer/completion_board
+@onready var win_board = $CanvasLayer3/completion_board
 @onready var lose_board = $lvl2_ui_layer/losing_board
 
 # --- HOURGLASS REFERENCE ---
 @onready var hourglass_anim = $lvl2_ui_layer/losing_board/hour_glass
 
-# --- REWARD NODES ---
-@onready var wand_icon = $lvl2_ui_layer/completion_board/completion_bg/wand
-@onready var gem_icon = $lvl2_ui_layer/completion_board/completion_bg/gem
-@onready var key_icon = $lvl2_ui_layer/completion_board/completion_bg/key
+# --- REWARD NODES --- fix these paths
+@onready var wand_icon = $CanvasLayer3/completion_board/completion_bg/wand
+@onready var gem_icon = $CanvasLayer3/completion_board/completion_bg/gem
+@onready var key_icon = $CanvasLayer3/completion_board/completion_bg/key
 
 # --- 2. Game Variables ---
 var current_answer_string = ""
@@ -40,77 +40,139 @@ var score = 0
 var total_to_win = 10 
 var fruit_options = ["Apples", "Oranges", "Bananas", "Bread", "Milk", "Carrots", "Potato"]
 var game_over = false
+var is_frozen: bool = false
+var numboard_ref: Node2D = null
 
 func _ready():
 	win_board.hide()
 	lose_board.hide()
 	blur_overlay.hide()
-	
+	$CanvasLayer3/completion_board/back_button.disabled = true
+	$CanvasLayer3/completion_board/completion_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 	# --- VIDEO SETUP ---
 	if video_player:
 		video_player.hide()
 		video_player.expand = true
 		video_player.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-		# Connect the finished signal via code to be 100% sure it works
 		if not video_player.finished.is_connected(_on_dash_rescue_finished):
 			video_player.finished.connect(_on_dash_rescue_finished)
-	
+
 	if progress_bar:
 		progress_bar.max_value = total_to_win
 		progress_bar.value = 0
-	
+
 	if wand_icon: wand_icon.pivot_offset = wand_icon.size / 2
 	if gem_icon: gem_icon.pivot_offset = gem_icon.size / 2
 	if key_icon: key_icon.pivot_offset = key_icon.size / 2
-	
+
 	setup_numpad_buttons()
 	setup_board_buttons()
-	update_basket_ui() 
-	
+	update_basket_ui()
+
 	if game_timer and not game_timer.timeout.is_connected(_on_timer_timeout):
 		game_timer.timeout.connect(_on_timer_timeout)
-	
-	game_timer.one_shot = true 
+
+	game_timer.one_shot = true
 	game_timer.start(90)
-	
+
 	generate_math_question()
+
+	GameManager.set_current_island("island_2.5")
+	GameManager.set_allowed_skills(["hint", "freeze_time", "add_time", "skip"])
+	GameManager.hint_requested.connect(_on_hint_used)
+	GameManager.freeze_requested.connect(_on_freeze_used)
+	GameManager.add_time_requested.connect(_on_add_time_used)
+	GameManager.skip_requested.connect(_on_skip_used)
+	await get_tree().create_timer(0.1).timeout
+	GameManager.update_skill_button_states()
+	
+	# Move numboard to high priority CanvasLayer
+	var cl = CanvasLayer.new()
+	cl.layer = 200
+	get_tree().root.add_child(cl)
+	var numboard = $CanvasLayer2/numboard
+	var original_pos = numboard.global_position
+	numboard.get_parent().remove_child(numboard)
+	cl.add_child(numboard)
+	numboard.global_position = original_pos
+	numboard_ref = numboard  # ← save the reference here
+
+
+# --- SKILL FUNCTIONS ---
+func _on_hint_used():
+	if game_over: return
+	current_answer_string = str(correct_result)
+	answer_label.text = current_answer_string
+
+func _on_freeze_used():
+	is_frozen = true
+	game_timer.paused = true
+	await get_tree().create_timer(10.0).timeout
+	game_timer.paused = false
+	is_frozen = false
+
+func _on_add_time_used():
+	var current = game_timer.time_left
+	game_timer.stop()
+	game_timer.start(current + 10.0)
+
+func _on_skip_used():
+	if game_over: return
+	if correct_audio: correct_audio.play()
+	score += 1
+	update_basket_ui()
+	if progress_bar: progress_bar.value = score
+	current_answer_string = ""
+	answer_label.text = ""
+	if score >= total_to_win:
+		win_level()
+	else:
+		generate_math_question()
 
 # --- 3. UI Logic ---
 func setup_board_buttons():
-	var win_back = win_board.get_node_or_null("back_button")
-	var rewards_btn = win_board.get_node_or_null("rewards_button")
-	
+	var win_back = $CanvasLayer3/completion_board/back_button
+	var rewards_btn = $CanvasLayer3/completion_board/rewards_button  # not in completion_bg
+
 	if win_back:
 		apply_hover_effect(win_back)
 		if not win_back.pressed.is_connected(_on_rescue_pressed):
 			win_back.pressed.connect(_on_rescue_pressed)
-			
+
 	if rewards_btn:
 		apply_hover_effect(rewards_btn)
 		if not rewards_btn.pressed.is_connected(_on_rewards_claimed):
 			rewards_btn.pressed.connect(_on_rewards_claimed)
-	
+
 	var try_again = lose_board.get_node_or_null("tryagain_btn")
-	var quit_btn = lose_board.get_node_or_null("quit_btn") 
-	
+	var quit_btn = lose_board.get_node_or_null("quit_btn")
+
 	if try_again:
 		apply_hover_effect(try_again)
 		if not try_again.pressed.is_connected(_on_reload_scene):
 			try_again.pressed.connect(_on_reload_scene)
-			
+
 	if quit_btn:
-		apply_hover_effect(quit_btn) 
+		apply_hover_effect(quit_btn)
 		if not quit_btn.pressed.is_connected(_on_menu_pressed):
 			quit_btn.pressed.connect(_on_menu_pressed)
 
 func _on_rewards_claimed():
 	if tapping_audio: tapping_audio.play()
+	GameManager.receive_island_reward("island_2.5")
+	
 	var tween = create_tween().set_parallel(true)
 	var icons = [wand_icon, gem_icon, key_icon]
 	for icon in icons:
 		if icon:
 			tween.tween_property(icon, "scale", Vector2(1.2, 1.2), 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 			tween.chain().tween_property(icon, "scale", Vector2.ONE, 0.2)
+
+	# Enable back button after reward is claimed
+	var btn = $CanvasLayer3/completion_board/back_button
+	btn.disabled = false
+	btn.modulate = Color(1, 1, 1)  # restore normal color
 
 func _on_rescue_pressed():
 	if video_player:
@@ -130,19 +192,24 @@ func _on_enter_pressed():
 		update_basket_ui()
 		if progress_bar: progress_bar.value = score
 		current_answer_string = ""; answer_label.text = ""
-		if score >= total_to_win: 
+		if score >= total_to_win:
 			win_level()
-		else: 
+		else:
 			generate_math_question()
 	else:
 		if wrong_audio: wrong_audio.play()
-		apply_time_penalty(2) 
-		shake_node($numboard/answer_board)
+		apply_time_penalty(2)
+		shake_node($CanvasLayer2/numboard/answer_board)
 		current_answer_string = ""; answer_label.text = ""
 
+# --- Replace _on_timer_timeout with this ---
 func _on_timer_timeout():
 	if !game_over:
 		lose_level()
+		if numboard_ref and is_instance_valid(numboard_ref):
+			numboard_ref.hide()
+		if ui_layer:
+			$CanvasLayer/Skoalars.hide()
 
 func generate_math_question():
 	if game_over: return
@@ -164,6 +231,11 @@ func win_level():
 	if win_board:
 		win_board.show()
 		animate_board(win_board)
+		$CanvasLayer3/completion_board/back_button.show()
+		$CanvasLayer3/completion_board/rewards_button.show()
+		$CanvasLayer/Skoalars.hide()
+		if numboard_ref and is_instance_valid(numboard_ref):
+			numboard_ref.hide()
 
 func lose_level():
 	game_over = true
@@ -178,7 +250,7 @@ func lose_level():
 func apply_hover_effect(btn: TextureButton):
 	if !btn: return
 	btn.pivot_offset = btn.size / 2
-	btn.mouse_filter = Control.MOUSE_FILTER_STOP 
+	btn.mouse_filter = Control.MOUSE_FILTER_STOP
 	if not btn.mouse_entered.is_connected(_on_btn_hover_start.bind(btn)):
 		btn.mouse_entered.connect(_on_btn_hover_start.bind(btn))
 	if not btn.mouse_exited.is_connected(_on_btn_hover_end.bind(btn)):
@@ -191,7 +263,7 @@ func _on_btn_hover_end(btn):
 	create_tween().tween_property(btn, "scale", Vector2.ONE, 0.1)
 
 func _process(_delta):
-	if !game_over and game_timer and timer_label:
+	if !game_over and game_timer and timer_label and not is_frozen:
 		var time_left = game_timer.time_left
 		var mins = int(time_left / 60)
 		var secs = int(time_left) % 60
@@ -215,7 +287,7 @@ func animate_board(board):
 	create_tween().tween_property(board, "scale", Vector2.ONE, 0.5).set_trans(Tween.TRANS_BACK)
 
 func setup_numpad_buttons():
-	var pad = $numboard/numpad_board
+	var pad = $CanvasLayer2/numboard/numpad_board
 	if not pad: return
 	for i in range(10):
 		var btn = pad.get_node_or_null(str(i))
@@ -256,6 +328,5 @@ func _on_menu_pressed(): get_tree().change_scene_to_file("res://Assets/Scene/Cou
 
 # --- 6. FINAL REDIRECTION ---
 func _on_dash_rescue_finished() -> void:
-	# This triggers automatically when the video stops
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/mapSelector.tscn")
 	GameManager.unlock_island("island_3")

@@ -23,6 +23,7 @@ func _ready():
 func _on_texture_button_pressed(): # This is your COLLECT button
 	# 1. Disable the button so they can't click it twice
 	collect_btn.disabled = true
+	GameManager.receive_island_reward("island_1")
 	
 	# 2. Show and Animate the +5 Popup
 	if reward_popup:

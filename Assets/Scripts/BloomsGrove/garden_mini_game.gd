@@ -5,21 +5,22 @@ var correct_answers = 0
 var growth_stage = 0 
 var current_mission = 1 
 
-var time_left = 120.0 
+var time_left = 80.0 
 var timer_active = false
 var game_started = false
+var is_frozen: bool = false
 
 # UI References
-@onready var win_popup = $UserInterface/BlackBG
-@onready var popup_holder = $UserInterface/BlackBG/PopupHolder
-@onready var lose_popup = $UserInterface/ColorRect 
-@onready var lose_holder = $UserInterface/ColorRect/Over
-@onready var hourglass_anim = $UserInterface/ColorRect/Over/Hourglass 
+@onready var win_popup = $btn/BlackBG
+@onready var popup_holder = $btn/BlackBG/PopupHolder
+@onready var lose_popup = $btn/ColorRect 
+@onready var lose_holder = $btn/ColorRect/Over
+@onready var hourglass_anim = $btn/ColorRect/Over/Hourglass 
 
 @onready var sfx_correct = $SfxCorrect
 @onready var sfx_wrong = $SfxWrong
 @onready var mission_label = $UserInterface/Control/ObjectiveHolder/VBoxContainer/MissionText
-@onready var wand_button = $UserInterface/Control/WandHolder/Wand
+@onready var wand_button = $btn/WandHolder/Wand
 
 var questions = [
 	{"q": "What part of the plant grows underground?", "options": ["Roots", "Leaves", "Flowers"], "answer": "Roots", "clue": "It anchors the plant!"},
@@ -44,25 +45,64 @@ var failed_questions = []
 func _ready():
 	randomize() 
 	questions.shuffle()
-	
+
 	$UserInterface/Control/QuestionBox.hide()
 	$UserInterface/Control/TimerContainer.hide()
 	win_popup.hide() 
 	lose_popup.hide() 
-	
-	# Check if wand was already used in a previous game
+
+	$btn/Choice1.show()
+	$btn/Choice2.show()
+	$btn/Choice3.show()
+
+	$btn/BlackBG/PopupHolder/Next.disabled = false
+	$btn/BlackBG/PopupHolder/Next.modulate = Color(0.5, 0.5, 0.5)
+
+	GameManager.set_current_island("island_3")
+	GameManager.set_allowed_skills(["hint", "add_time", "freeze_time", "skip"])
+	GameManager.hint_requested.connect(_on_hint_used)
+	GameManager.freeze_requested.connect(_on_freeze_used)
+	GameManager.add_time_requested.connect(_on_add_time_used)
+	GameManager.skip_requested.connect(_on_skip_used)
+	await get_tree().create_timer(0.1).timeout
+	GameManager.update_skill_button_states()
+
 	if GameManager.wand_used:
 		wand_button.disabled = true
-		wand_button.modulate = Color(0.5, 0.5, 0.5, 1) # Gray out
-	
+		wand_button.modulate = Color(0.5, 0.5, 0.5, 1)
+
 	mission_label.text = "Become a Master Gardener! Answer questions correctly to help your seeds grow into beautiful plants.\n\nBe quick—you only have 1 minute and 20 seconds! Can you turn the Grove into a blooming paradise?"
-	
+
 	$Sprinkler.frame = 0
 	$Plant1.frame = 0
 	$Plant2.frame = 0
 	$UserInterface/Control/ProgressBar.frame = 0
-	
+
 	start_entry_countdown()
+
+# --- SKILL FUNCTIONS ---
+func _on_hint_used():
+	var data = questions[current_q]
+	$UserInterface/Control/QuestionBox/QuestionText.text = data["q"] + "\n(Hint: " + data["clue"] + ")"
+
+func _on_freeze_used():
+	is_frozen = true
+	await get_tree().create_timer(10.0).timeout
+	is_frozen = false
+
+func _on_add_time_used():
+	time_left += 10.0
+
+func _on_skip_used():
+	sfx_correct.play()
+	correct_answers += 1
+	grow_garden()
+	if correct_answers >= 6:
+		show_win_popup()
+	else:
+		current_q += 1
+		check_list_bounds()
+		load_question()
 
 func start_entry_countdown():
 	var countdown = 5
@@ -77,7 +117,7 @@ func start_entry_countdown():
 	load_question()
 
 func _process(delta):
-	if timer_active and game_started:
+	if timer_active and game_started and not is_frozen:
 		time_left -= delta
 		var mins = int(time_left) / 60
 		var secs = int(time_left) % 60
@@ -91,26 +131,26 @@ func load_question():
 	var data = questions[current_q]
 	var choices = data["options"].duplicate()
 	choices.shuffle() 
-	
+
 	if data in failed_questions:
 		$UserInterface/Control/QuestionBox/QuestionText.text = data["q"] + "\n(Hint: " + data["clue"] + ")"
 	else:
 		$UserInterface/Control/QuestionBox/QuestionText.text = data["q"]
-		
-	$UserInterface/Control/Choice1/Label.text = choices[0]
-	$UserInterface/Control/Choice2/Label.text = choices[1]
-	$UserInterface/Control/Choice3/Label.text = choices[2]
+
+	$btn/Choice1/Label.text = choices[0]
+	$btn/Choice2/Label.text = choices[1]
+	$btn/Choice3/Label.text = choices[2]
 	$UserInterface/Control/QuestionBox.show()
 
 func check_answer(idx):
-	if not game_started or not timer_active: return 
-	var selected_answer = get_node("UserInterface/Control/Choice" + str(idx + 1) + "/Label").text
-	
+	if not game_started: return
+	var selected_answer = get_node("btn/Choice" + str(idx + 1) + "/Label").text
+
 	if selected_answer == questions[current_q]["answer"]:
 		sfx_correct.play()
 		correct_answers += 1
 		grow_garden()
-		
+
 		if correct_answers >= 6:
 			show_win_popup()
 		else:
@@ -124,19 +164,19 @@ func check_answer(idx):
 func handle_incorrect_flow():
 	sfx_wrong.play()
 	var wrong_q = questions[current_q]
-	
+
 	if not wrong_q in failed_questions:
 		failed_questions.append(wrong_q)
-	
+
 	var tween = create_tween()
 	tween.tween_property($UserInterface/Control/QuestionBox, "modulate", Color.RED, 0.1)
 	tween.chain().tween_property($UserInterface/Control/QuestionBox, "modulate", Color.WHITE, 0.1)
-	
+
 	await get_tree().create_timer(0.8).timeout
-	
+
 	questions.remove_at(current_q)
 	questions.push_back(wrong_q)
-	
+
 	check_list_bounds()
 	load_question()
 
@@ -148,18 +188,18 @@ func grow_garden():
 	growth_stage += 1
 	$Sprinkler.frame = 1 
 	$UserInterface/Control/ProgressBar.frame = correct_answers
-	
+
 	var target_plant = $Plant1 if current_mission == 1 else $Plant2
-	
+
 	var tween = create_tween()
 	target_plant.frame = growth_stage
 	target_plant.scale = Vector2(0.8, 0.8)
 	tween.tween_property(target_plant, "scale", Vector2(1.1, 1.1), 0.2).set_trans(Tween.TRANS_BOUNCE)
 	tween.tween_property(target_plant, "scale", Vector2(1.0, 1.0), 0.1)
-	
+
 	if growth_stage == 3 and current_mission == 1:
 		complete_mission(2)
-		
+
 	await get_tree().create_timer(1.0).timeout
 	$Sprinkler.frame = 0
 
@@ -181,10 +221,8 @@ func game_over_lose():
 	game_started = false
 	timer_active = false
 	$UserInterface/Control/QuestionBox.hide()
-	
 	lose_popup.show()
 	hourglass_anim.play("default") 
-	
 	lose_holder.scale = Vector2(0.1, 0.1)
 	var tween = create_tween()
 	tween.tween_property(lose_holder, "scale", Vector2(0.8, 0.8), 0.5).set_trans(Tween.TRANS_BACK)
@@ -192,16 +230,15 @@ func game_over_lose():
 # --- Wand Logic ---
 func _on_wand_pressed():
 	if GameManager.wand_used or not game_started: return
-	
+
 	GameManager.wand_used = true
 	wand_button.disabled = true
 	wand_button.modulate = Color(0.5, 0.5, 0.5, 1)
-	
-	# Logic: Automatically count as one correct answer
+
 	sfx_correct.play()
 	correct_answers += 1
 	grow_garden()
-	
+
 	if correct_answers >= 6:
 		show_win_popup()
 	else:
@@ -212,16 +249,32 @@ func _on_wand_pressed():
 # --- Button Signals ---
 func _on_back_pressed(): 
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn") 
+	$btn/BlackBG.hide()
 
 func _on_next_pressed(): 
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/Minigame2.tscn") 
+	win_popup.hide()
+	$btn/Choice1.hide()
+	$btn/Choice2.hide()
+	$btn/Choice3.hide()
+	$btn/WandHolder.hide()
 
 func _on_try_pressed(): 
 	GameManager.load_scene(get_tree().current_scene.scene_file_path) 
+	$btn/ColorRect.hide()
+	$btn.hide()
 
 func _on_texture_button_pressed(): 
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn") 
+	$btn/ColorRect.hide()
+	$btn/WandHolder.hide()
+	$btn.hide()
 
 func _on_choice_1_pressed(): check_answer(0)
 func _on_choice_2_pressed(): check_answer(1)
 func _on_choice_3_pressed(): check_answer(2)
+
+func _on_collect_pressed() -> void:
+	GameManager.receive_island_reward("island_3")
+	$btn/BlackBG/PopupHolder/Next.disabled = false
+	$btn/BlackBG/PopupHolder/Next.modulate = Color(1, 1, 1)	
