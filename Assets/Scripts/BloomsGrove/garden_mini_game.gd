@@ -250,6 +250,7 @@ func _on_wand_pressed():
 func _on_back_pressed(): 
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn") 
 	$btn/BlackBG.hide()
+	$btn.hidde()
 
 func _on_next_pressed(): 
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/Minigame2.tscn") 
@@ -276,5 +277,6 @@ func _on_choice_3_pressed(): check_answer(2)
 
 func _on_collect_pressed() -> void:
 	GameManager.receive_island_reward("island_3")
+	GameManager.complete_minigame("island_3")
 	$btn/BlackBG/PopupHolder/Next.disabled = false
 	$btn/BlackBG/PopupHolder/Next.modulate = Color(1, 1, 1)	

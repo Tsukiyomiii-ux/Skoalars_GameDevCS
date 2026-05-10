@@ -428,6 +428,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="ColorRect" type="ColorRect" parent="Node2D" unique_id=332107162]
+visible = false
 offset_left = -102.0
 offset_top = -22.0
 offset_right = 1476.0
@@ -436,6 +437,7 @@ mouse_filter = 1
 color = Color(0, 0.012920001, 0.025840001, 0.83300006)
 
 [node name="WorldMapPopup" type="TextureRect" parent="Node2D" unique_id=64683691]
+visible = false
 z_index = 10
 offset_left = 150.0
 offset_top = 62.0

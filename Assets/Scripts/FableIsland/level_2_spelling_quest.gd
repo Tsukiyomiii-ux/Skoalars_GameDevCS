@@ -59,7 +59,6 @@ func _ready():
 	if definition_label: definition_label.hide()
 	
 	GameManager.set_current_island("island_1.2")
-	
 	GameManager.hint_requested.connect(_on_hint_used)
 	GameManager.freeze_requested.connect(_on_freeze_used)
 	GameManager.add_time_requested.connect(_on_add_time_used)

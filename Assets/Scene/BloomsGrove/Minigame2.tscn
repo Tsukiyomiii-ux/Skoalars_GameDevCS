@@ -20,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://bjutkb8oumhrx" path="res://Assets/Bloom Game 1/New Assets/Key.png" id="18_qpcyu"]
 [ext_resource type="Texture2D" uid="uid://bndf2aegl3mjo" path="res://Assets/Bloom Game 1/New Assets/Map.png" id="19_arncp"]
 [ext_resource type="Texture2D" uid="uid://bndyao3ijdq5w" path="res://Assets/Bloom Game 1/New Assets/Collect.png" id="20_uqcaf"]
-[ext_resource type="Texture2D" uid="uid://cdyti31f5p6m2" path="res://Assets/Bloom Game 1/New Assets/Cancel.png" id="21_h1tbo"]
 [ext_resource type="Texture2D" uid="uid://c8756q252qhmo" path="res://Assets/Bloom Game 1/New Assets/RESCUE.png" id="22_jn7w3"]
 [ext_resource type="AudioStream" uid="uid://bdq2pw80ycjt2" path="res://Assets/Audio/CorrectSFX.MP3" id="23_8leg4"]
 [ext_resource type="AudioStream" uid="uid://cymbakvr5w2w7" path="res://Assets/Audio/WrongSFX.MP3" id="24_6l1sy"]
@@ -296,19 +295,11 @@ offset_bottom = 161.29205
 scale = Vector2(2.4, 2.8)
 texture_normal = ExtResource("20_uqcaf")
 
-[node name="Back" type="TextureButton" parent="CanvasLayer2/Popup" unique_id=28209576]
-offset_left = -609.57166
-offset_top = 291.66568
-offset_right = -409.57166
-offset_bottom = 391.66568
-scale = Vector2(2.2, 2.5)
-texture_normal = ExtResource("21_h1tbo")
-
 [node name="Rescue" type="TextureButton" parent="CanvasLayer2/Popup" unique_id=1332098019]
-offset_left = 46.271057
-offset_top = 169.08154
-offset_right = 1310.271
-offset_bottom = 1011.08154
+offset_left = -294.329
+offset_top = 169.082
+offset_right = 969.671
+offset_bottom = 1011.08203
 scale = Vector2(0.5, 0.6)
 texture_normal = ExtResource("22_jn7w3")
 
@@ -344,6 +335,5 @@ texture_normal = ExtResource("27_wsd13")
 [connection signal="pressed" from="CanvasLayer2/ColorRect2/Over/Try" to="." method="_on_try_pressed"]
 [connection signal="pressed" from="CanvasLayer2/ColorRect2/Over/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Popup/Collect" to="." method="_on_collect_pressed"]
-[connection signal="pressed" from="CanvasLayer2/Popup/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Popup/Rescue" to="." method="_on_rescue_pressed"]
 [connection signal="pressed" from="CanvasLayer3/Holderwand/Wand" to="." method="_on_wand_pressed"]

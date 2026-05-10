@@ -404,6 +404,7 @@ func _on_quit_button_pressed() -> void:
 
 func _on_collect_rewards_pressed() -> void:
 	GameManager.receive_island_reward("island_2")
+	GameManager.complete_minigame("island_2")
 	var btn = $ui_layer/win_board/next_button
 	btn.disabled = false
 	btn.modulate = Color(1, 1, 1)

@@ -323,6 +323,7 @@ func _on_quit_pressed(): get_tree().change_scene_to_file("res://Assets/Scene/Zyp
 
 func _on_collect_pressed():
 	GameManager.receive_island_reward("island_4.5")
+	GameManager.complete_minigame("island_4")
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.disabled = false
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.modulate = Color(1, 1, 1)
 

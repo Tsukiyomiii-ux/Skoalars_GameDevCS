@@ -19,7 +19,7 @@ extends Control
 # --- COOLDOWN APPEARANCE ---
 @export var cooldown_font_color: Color = Color(1, 1, 1, 1)
 
-const COOLDOWN_SECONDS = 10.0 #1800.0  # 30 minutes
+const COOLDOWN_SECONDS = 1800.0  # 30 minutes
 
 var last_bought = {
 	"hint": 0,
@@ -80,17 +80,10 @@ func update_cooldown_buttons():
 func update_shop():
 	diamond_label.text = "" + str(GameManager.get_diamonds())
 
-	var hint_uses = GameManager.get_skill_uses("hint")
-	hint_count_label.text = "×" + str(hint_uses) if GameManager.has_skill("hint") else str(GameManager.get_skill_cost("hint"))
-
-	var freeze_uses = GameManager.get_skill_uses("freeze_time")
-	freeze_count_label.text = "×" + str(freeze_uses) if GameManager.has_skill("freeze_time") else str(GameManager.get_skill_cost("freeze_time"))
-
-	var time_uses = GameManager.get_skill_uses("add_time")
-	time_count_label.text = "×" + str(time_uses) if GameManager.has_skill("add_time") else str(GameManager.get_skill_cost("add_time"))
-
-	var skip_uses = GameManager.get_skill_uses("skip")
-	skip_count_label.text = "×" + str(skip_uses) if GameManager.has_skill("skip") else str(GameManager.get_skill_cost("skip"))
+	hint_count_label.text = str(GameManager.get_skill_cost("hint")) + "💎"
+	freeze_count_label.text = str(GameManager.get_skill_cost("freeze_time")) + "💎"
+	time_count_label.text = str(GameManager.get_skill_cost("add_time")) + "💎"
+	skip_count_label.text = str(GameManager.get_skill_cost("skip")) + "💎"
 
 func _on_diamonds_changed(_amount):
 	update_shop()

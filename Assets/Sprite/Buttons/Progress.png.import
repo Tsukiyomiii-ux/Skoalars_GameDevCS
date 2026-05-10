@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqmxpftkpjcbr"
-path="res://.godot/imported/Cat_idle.png-9e154a16a995e8219263cfabb6ff5500.ctex"
+uid="uid://db1m7yfwjfqt3"
+path="res://.godot/imported/Progress.png-bfd4dbb51c4db345db605998342d2aac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Characters/Cat_idle.png"
-dest_files=["res://.godot/imported/Cat_idle.png-9e154a16a995e8219263cfabb6ff5500.ctex"]
+source_file="res://Assets/Sprite/Buttons/Progress.png"
+dest_files=["res://.godot/imported/Progress.png-bfd4dbb51c4db345db605998342d2aac.ctex"]
 
 [params]
 

@@ -3,21 +3,16 @@ extends Control
 func _ready():
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	GameManager.complete_minigame("island_1")
 	
 	# Gray out and disable Next button on start
 	$BoardImage/NextButton.disabled = true
 	$BoardImage/NextButton.modulate = Color(0.5, 0.5, 0.5)
 
 func _on_back_button_pressed():
-	print("Going back to Level 2...")
-	get_tree().paused = false # Essential so the loading bar can animate!
-	
-	# 1. Set the destination to restart Level 2
-	Global.target_level = "res://Assets/Scene/FableIsland/level_2_spelling_quest.tscn"
-	
-	# 2. Go to the loading screen
-	get_tree().change_scene_to_file("res://Assets/Scene/FableIsland/loading_screen.tscn")
-
+	get_tree().paused = false
+	GameManager.load_scene("res://Assets/Scene/FableIsland/fableisland.tscn")
+	# 👆 Replace with your actual island map path
 func _on_next_button_pressed():
 	print("Next button pressed! Starting Lore Animation...")
 	# 1. Unpause so the video scene can process!

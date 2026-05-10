@@ -343,11 +343,11 @@ func _on_next_button_pressed():
 	get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/loading_screen.tscn")
 
 func _on_cancel_button_pressed():
-	start_new_game()
-
+	GameManager.load_scene("res://Assets/Scene/Zypheria/zypheria.tscn")
 
 func _on_collect_button_pressed() -> void:
 	print("Collected!")
 	GameManager.receive_island_reward("island_4")
+	GameManager.complete_minigame("island_4")
 	$Node2D/PopupLayer/WinPopup/BottomButtons/NextButton.disabled = false
 	$Node2D/PopupLayer/WinPopup/BottomButtons/NextButton.modulate= Color(1,1,1)

@@ -1,16 +1,20 @@
 extends Area2D
 
 var level_1_path = "res://Assets/Scene/Zypheria/zypheria_lvl_1.tscn"
+var level_2_path = "res://Assets/Scene/Zypheria/zypheria_lvl_2.tscn"
 
 func _on_body_entered(body):
-	# Debugging prints
 	print("DEBBUG: Something entered the door!")
 	print("DEBBUG: It was named: ", body.name)
 	
-	# Check if the player entered
 	if body.is_in_group("Skoalars") or body.name == "Skoalars":
-		# 1. Store the next destination in the global GameManager
-		GameManager.next_scene_path = level_1_path
+		var completed = GameManager.island_progress["island_4"]["minigames_completed"]
 		
-		# 2. Change scene to the loading screen
-		get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/loading_screen.tscn")
+		if completed >= 2:
+			return  # Both done — do nothing
+		elif completed >= 1:
+			# Level 1 done — go to level 2
+			GameManager.load_scene(level_2_path)
+		else:
+			# First time — go to level 1
+			GameManager.load_scene(level_1_path)

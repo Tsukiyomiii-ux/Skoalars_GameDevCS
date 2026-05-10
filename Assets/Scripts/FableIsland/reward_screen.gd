@@ -8,6 +8,7 @@ extends Control
 @onready var collect_btn = $TextureButton 
 
 func _ready():
+	GameManager.complete_minigame("island_1")
 	# 1. Hide the +5 text at the start
 	if reward_popup:
 		reward_popup.modulate.a = 0
@@ -50,15 +51,11 @@ func _on_texture_button_pressed(): # This is your COLLECT button
 		next_btn.modulate.a = 1.0
 
 func _on_next_button_pressed():
-	# 1. Set the destination to Level 2
-	Global.target_level = "res://Assets/Scene/FableIsland/level_2_spelling_quest.tscn"
+	GameManager.load_scene("res://Assets/Scene/FableIsland/level_2_spelling_quest.tscn")
 	
 	# 2. Go to the LOADING SCREEN (The loading screen will then take us to Level 2)
 	get_tree().change_scene_to_file("res://Assets/Scene/FableIsland/loading_screen.tscn")
 
 func _on_back_button_pressed():
-	# 1. Set the destination back to Level 1
-	Global.target_level = "res://Assets/Scene/FableIsland/level_1_maze.tscn"
-	
-	# 2. Go to the LOADING SCREEN
-	get_tree().change_scene_to_file("res://Assets/Scene/FableIsland/loading_screen.tscn")
+	GameManager.load_scene("res://Assets/Scene/FableIsland/fableisland.tscn")
+	# 👆 Replace with your actual island map scene path

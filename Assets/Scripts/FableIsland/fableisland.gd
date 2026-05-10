@@ -14,8 +14,14 @@ func _process(delta: float) -> void:
 
 func _on_libaray_door_body_entered(body: Node2D) -> void:
 	if body.name == "Skoalars":
-		# 1. Set the destination in the Global script first
-		Global.target_level = "res://Assets/Scene/FableIsland/level_1_maze.tscn"
+		var completed = GameManager.island_progress["island_1"]["minigames_completed"]
 		
-		# 2. THEN change scene to the loading screen
-		get_tree().change_scene_to_file("res://Assets/Scene/FableIsland/loading_screen.tscn")
+		if completed >= 2:
+			# Both minigames done — do nothing
+			return
+		elif completed >= 1:
+			# Minigame 1 done — go to level 2
+			GameManager.load_scene("res://Assets/Scene/FableIsland/level_2_spelling_quest.tscn")
+		else:
+			# First time — start from level 1
+			GameManager.load_scene("res://Assets/Scene/FableIsland/level_1_maze.tscn")

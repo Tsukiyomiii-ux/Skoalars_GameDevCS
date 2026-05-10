@@ -17,7 +17,6 @@
 [ext_resource type="VideoStream" uid="uid://c1rn13uaioq8d" path="res://Assets/Zypheria/LEVEL 2/RescueAnimation/Aero Rescued.ogv" id="15_etapc"]
 [ext_resource type="Texture2D" uid="uid://bebiak7jxn0tw" path="res://Assets/Zypheria/LEVEL 2/UI/Popout lvl2 Quest Complete.png" id="15_fg10v"]
 [ext_resource type="Texture2D" uid="uid://d0qjbu7uycrj5" path="res://Assets/Zypheria/LEVEL1/PopUp Window/collectButton.png" id="17_hf7v7"]
-[ext_resource type="Texture2D" uid="uid://rx57uxaq2duk" path="res://Assets/Zypheria/LEVEL1/PopUp Window/cancelButton.png" id="18_msjiv"]
 [ext_resource type="Texture2D" uid="uid://bi6a5v1hifuem" path="res://Assets/Zypheria/LEVEL1/PopUp Window/rescue (1).png" id="19_etapc"]
 [ext_resource type="Texture2D" uid="uid://6wkedb0hmxho" path="res://Assets/Zypheria/LEVEL 2/UI/gameOver.png" id="19_mv263"]
 [ext_resource type="Texture2D" uid="uid://dwrccdukxl1" path="res://Assets/Zypheria/LEVEL 2/UI/hourglass.png" id="20_jmgrt"]
@@ -452,7 +451,6 @@ one_shot = true
 
 [node name="PopupLayer" type="CanvasLayer" parent="." unique_id=1643814174]
 layer = 10
-visible = false
 
 [node name="WinPopup" type="Control" parent="PopupLayer" unique_id=898830491]
 layout_mode = 3
@@ -504,13 +502,6 @@ grow_vertical = 0
 mouse_filter = 0
 alignment = 1
 
-[node name="CancelButton" type="TextureButton" parent="PopupLayer/WinPopup/BottomButtons1" unique_id=751424162]
-custom_minimum_size = Vector2(400, 49)
-layout_mode = 2
-texture_normal = ExtResource("18_msjiv")
-ignore_texture_size = true
-stretch_mode = 5
-
 [node name="RescueButton" type="TextureButton" parent="PopupLayer/WinPopup/BottomButtons1" unique_id=1987820492]
 custom_minimum_size = Vector2(400, 49)
 layout_mode = 2
@@ -519,6 +510,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="LosePopup" type="Control" parent="PopupLayer" unique_id=224935105]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1.0
@@ -608,9 +600,9 @@ show_percentage = false
 [node name="TimerLabel" type="Label" parent="CanvasLayer2" unique_id=32250655]
 z_index = 100
 offset_left = 632.0
-offset_top = 595.0
+offset_top = 524.0
 offset_right = 713.0
-offset_bottom = 677.0
+offset_bottom = 606.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2

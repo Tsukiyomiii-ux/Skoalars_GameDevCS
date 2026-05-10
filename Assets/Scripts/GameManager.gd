@@ -317,7 +317,7 @@ func load_game():
 			print("💾 Loaded: ", diamonds, " diamonds, uses: ", skill_uses)
 
 func reset_game():
-	diamonds = 5
+	diamonds = 500
 	skills = {"hint": true, "freeze_time":false, "add_time": false, "skip": false}
 	skill_uses = {"hint": 1, "freeze_time": 0, "add_time": 0, "skip": 0}
 	skills_equipped = {"hint": false, "freeze_time": false, "add_time": false, "skip": false	}
@@ -329,5 +329,6 @@ func reset_game():
 		"island_4": {"minigames_completed": 0, "total_minigames": 2},
 	}
 	current_island = "island_1"
+	wand_used= false
 	diamonds_changed.emit(diamonds)
 	save_game()

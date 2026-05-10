@@ -77,7 +77,8 @@ func _ready():
 	game_timer.start(90)
 
 	generate_math_question()
-
+	
+	GameManager.complete_minigame("island_2")
 	GameManager.set_current_island("island_2.5")
 	GameManager.set_allowed_skills(["hint", "freeze_time", "add_time", "skip"])
 	GameManager.hint_requested.connect(_on_hint_used)
@@ -86,6 +87,7 @@ func _ready():
 	GameManager.skip_requested.connect(_on_skip_used)
 	await get_tree().create_timer(0.1).timeout
 	GameManager.update_skill_button_states()
+	
 	
 	# Move numboard to high priority CanvasLayer
 	var cl = CanvasLayer.new()
