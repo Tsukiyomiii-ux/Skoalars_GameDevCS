@@ -76,7 +76,8 @@ func _ready():
 			btn.mouse_entered.connect(_on_button_hover.bind(btn))
 			btn.mouse_exited.connect(_on_button_exit.bind(btn))
 	
-	
+	GameManager.settings_opened.connect(_on_settings_opened)
+	GameManager.settings_closed.connect(_on_settings_closed)
 	
 	$Node2D/PopupLayer/WinPopup/BottomButtons/NextButton.disabled=true
 	$Node2D/PopupLayer/WinPopup/BottomButtons/NextButton.modulate = Color(0.5,0.5,0.5)
@@ -313,6 +314,14 @@ func _on_button_pressed(btn: TextureButton):
 		show_win_screen()
 	else:
 		load_level()
+
+func _on_settings_opened():
+	if hint_scroll: hint_scroll.hide()
+	if buttons_container: buttons_container.hide()
+
+func _on_settings_closed():
+	if hint_scroll and not hint_used: hint_scroll.show()
+	if buttons_container: buttons_container.show()
 
 func show_win_screen():
 	timer_active = false

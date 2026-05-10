@@ -298,6 +298,7 @@ tile_set = SubResource("TileSet_wn1r5")
 [node name="PopupLayer" type="CanvasLayer" parent="Node2D" unique_id=600453137]
 
 [node name="WinPopup" type="Control" parent="Node2D/PopupLayer" unique_id=1396450077]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1468.0

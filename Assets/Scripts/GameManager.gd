@@ -90,6 +90,8 @@ signal add_time_requested
 signal skip_requested
 signal skill_used(skill_name)
 signal skill_button_state_changed(skill_name, is_disabled)
+signal settings_opened
+signal settings_closed
 
 
 func set_allowed_skills(skills_list: Array):
@@ -283,6 +285,17 @@ func receive_island_reward(island_name: String):
 	reward_received.emit(island_name)
 	save_game()
 
+var persistent_cleanup_nodes: Array = []
+
+func register_cleanup_node(node: Node):
+	persistent_cleanup_nodes.append(node)
+
+func cleanup_persistent_nodes():
+	for node in persistent_cleanup_nodes:
+		if is_instance_valid(node):
+			node.queue_free()
+	persistent_cleanup_nodes.clear()
+
 # 💾 SAVE/LOAD
 func save_game():
 	var save_data = {
@@ -318,8 +331,8 @@ func load_game():
 
 func reset_game():
 	diamonds = 500
-	skills = {"hint": true, "freeze_time":false, "add_time": false, "skip": false}
-	skill_uses = {"hint": 1, "freeze_time": 0, "add_time": 0, "skip": 0}
+	skills = {"hint": true, "freeze_time":true, "add_time": true, "skip": true}
+	skill_uses = {"hint": 100, "freeze_time": 100, "add_time": 100, "skip":100}
 	skills_equipped = {"hint": false, "freeze_time": false, "add_time": false, "skip": false	}
 	islands_unlocked = {"island_1": true, "island_2": false, "island_3": false, "island_4": false}
 	island_progress = {

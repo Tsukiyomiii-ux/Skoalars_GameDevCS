@@ -70,6 +70,8 @@ func _ready():
 	GameManager.freeze_requested.connect(_on_freeze_used)
 	GameManager.add_time_requested.connect(_on_add_time_used)
 	GameManager.skip_requested.connect(_on_skip_used)
+	GameManager.settings_opened.connect(_on_settings_opened)
+	GameManager.settings_closed.connect(_on_settings_closed)
 	await get_tree().create_timer(0.1).timeout
 	GameManager.update_skill_button_states()
 
@@ -243,6 +245,12 @@ func _on_wand_pressed():
 			tween.tween_property(current_trash, "modulate:a", 0.0, 0.5)
 			await tween.finished
 			update_score()
+
+func _on_settings_opened():
+	$CanvasLayer3/Holderwand.hide()
+
+func _on_settings_closed():
+	$CanvasLayer3/Holderwand.show()
 
 func _on_rescue_pressed():
 	win_popup_bg.hide()

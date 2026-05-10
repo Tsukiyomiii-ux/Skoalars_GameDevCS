@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://hs6m8o3mubnf" path="res://Assets/Sprite/FABLE ISLE/Level2/QuestBackground.png" id="1_gufd3"]
 [ext_resource type="Script" uid="uid://dphxi861vncuq" path="res://Assets/Scripts/FableIsland/quest_complete_ui.gd" id="1_m7tkk"]
 [ext_resource type="Texture2D" uid="uid://boc7fx4pte61s" path="res://Assets/Sprite/FABLE ISLE/Level2/QuestComplete.png" id="2_qn8it"]
-[ext_resource type="Texture2D" uid="uid://ba6vmtvxe2lp7" path="res://Assets/Sprite/FABLE ISLE/Level2/BackButton.png" id="3_5e67i"]
 [ext_resource type="Texture2D" uid="uid://btn56hsx3dhnq" path="res://Assets/Sprite/FABLE ISLE/Level2/NextButton.png" id="4_m7tkk"]
 [ext_resource type="Texture2D" uid="uid://clfcdest1qcq1" path="res://Assets/Sprite/FABLE ISLE/Level2/CollectRewards.png" id="5_8qn5h"]
 [ext_resource type="AudioStream" uid="uid://b7ebe0dhv1ec6" path="res://Assets/Fable Isle/Audio/LevelSuccess.mp3" id="7_lysy6"]
@@ -49,21 +48,12 @@ pivot_offset = Vector2(652.5, 676.5)
 mouse_filter = 2
 texture = ExtResource("2_qn8it")
 
-[node name="BackButton" type="TextureButton" parent="BoardImage" unique_id=1432545232]
-layout_mode = 0
-offset_left = 167.5
-offset_top = 1213.5
-offset_right = 744.5
-offset_bottom = 1478.5
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("3_5e67i")
-
 [node name="NextButton" type="TextureButton" parent="BoardImage" unique_id=292440661]
 layout_mode = 0
-offset_left = 795.5
-offset_top = 1205.5
-offset_right = 1371.5
-offset_bottom = 1481.5
+offset_left = 483.23
+offset_top = 1250.01
+offset_right = 1059.23
+offset_bottom = 1526.01
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_m7tkk")
 
@@ -80,6 +70,5 @@ texture_normal = ExtResource("5_8qn5h")
 stream = ExtResource("7_lysy6")
 autoplay = true
 
-[connection signal="pressed" from="BoardImage/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="BoardImage/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="BoardImage/RewardsButton" to="." method="_on_rewards_button_pressed"]

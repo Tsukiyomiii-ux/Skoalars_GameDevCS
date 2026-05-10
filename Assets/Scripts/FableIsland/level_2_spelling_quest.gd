@@ -65,10 +65,10 @@ func _ready():
 	GameManager.skip_requested.connect(_on_skip_used)
 	
 	GameManager.set_allowed_skills(["add_time", "freeze_time", "hint", "skip"])
-	GameManager.freeze_requested.connect(_on_freeze_used)
-	GameManager.add_time_requested.connect(_on_add_time_used)
 	await get_tree().create_timer(0.1).timeout
 	GameManager.update_skill_button_states()
+	GameManager.settings_opened.connect(_on_settings_opened)
+	GameManager.settings_closed.connect(_on_settings_closed)
 	
 	# Force all Control nodes above to not block input
 	for node in get_tree().get_nodes_in_group(""):
@@ -129,6 +129,17 @@ func _process(delta):
 			is_timer_active = false
 			if is_instance_valid(snd_ticking): snd_ticking.stop()
 			on_time_out()
+
+func _on_settings_opened():
+	if has_node("CanvasLayer"):
+		$CanvasLayer.hide()
+	if word_container: word_container.hide()
+
+func _on_settings_closed():
+	if not is_game_finished:
+		if has_node("CanvasLayer"):
+			$CanvasLayer.show()
+		if word_container: word_container.show()
 
 func setup_word_pool():
 	randomize() 

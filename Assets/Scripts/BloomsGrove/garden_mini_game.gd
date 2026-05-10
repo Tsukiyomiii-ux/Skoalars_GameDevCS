@@ -64,6 +64,8 @@ func _ready():
 	GameManager.freeze_requested.connect(_on_freeze_used)
 	GameManager.add_time_requested.connect(_on_add_time_used)
 	GameManager.skip_requested.connect(_on_skip_used)
+	GameManager.settings_opened.connect(_on_settings_opened)
+	GameManager.settings_closed.connect(_on_settings_closed)
 	await get_tree().create_timer(0.1).timeout
 	GameManager.update_skill_button_states()
 
@@ -161,6 +163,12 @@ func check_answer(idx):
 	else:
 		handle_incorrect_flow()
 
+func _on_settings_opened():
+	$btn/WandHolder.hide()
+
+func _on_settings_closed():
+	$btn/WandHolder.show()
+
 func handle_incorrect_flow():
 	sfx_wrong.play()
 	var wrong_q = questions[current_q]
@@ -250,7 +258,10 @@ func _on_wand_pressed():
 func _on_back_pressed(): 
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn") 
 	$btn/BlackBG.hide()
-	$btn.hidde()
+	$btn/Choice1.hide()
+	$btn/Choice2.hide()
+	$btn/Choice3.hide()
+	$btn/WandHolder.hide()
 
 func _on_next_pressed(): 
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/Minigame2.tscn") 

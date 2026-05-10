@@ -13,6 +13,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_set_mouse_filter_recursive(self)
 	GameManager.skill_button_state_changed.connect(_on_skill_button_state_changed)
+	# ✅ Removed settings_opened/closed connections from here
 
 func _on_skill_button_state_changed(skill_name, is_disabled):
 	match skill_name:
@@ -64,6 +65,7 @@ func pause():
 
 # --- UI BUTTONS ---
 func _on_home_btn_pressed() -> void:
+	GameManager.cleanup_persistent_nodes()
 	play()
 	get_tree().change_scene_to_file("res://Assets/Scene/main_menu.tscn")
 
@@ -77,6 +79,7 @@ func _on_skills_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/SkillEquip.tscn")
 
 func _on_settings_btn_pressed() -> void:
+	GameManager.settings_opened.emit()  # ✅ Only emits
 	safe_toggle_visibility(open_cont)
 	safe_toggle_visibility(close_cont)
 	safe_toggle_visibility(bottom_cont)
@@ -85,10 +88,19 @@ func _on_settings_btn_pressed() -> void:
 		anim.play_backwards("blur")
 
 func _on_quit_btn_pressed() -> void:
-	play()
-	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")
+	GameManager.cleanup_persistent_nodes()
+	get_tree().paused = false
+	if anim and is_instance_valid(anim):
+		anim.play("blur")
+	await anim.animation_finished
+	var current_scene = get_tree().current_scene.scene_file_path
+	if current_scene == "res://Assets/Scene/MainIsland/main_island.tscn":
+		get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_menu.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")
 
 func _on_play_btn_pressed() -> void:
+	GameManager.settings_closed.emit()  # ✅ Only emits
 	play()
 	if anim and is_instance_valid(anim):
 		anim.play("blur")
@@ -97,6 +109,7 @@ func _on_play_btn_pressed() -> void:
 	safe_toggle_visibility(bottom_cont)
 
 func _on_volume_btn_pressed() -> void:
+	GameManager.settings_opened.emit()  # ✅ Only emits
 	safe_toggle_visibility(volume_cont)
 	safe_toggle_visibility(close_cont)
 	safe_toggle_visibility(bottom_cont)
@@ -104,6 +117,7 @@ func _on_volume_btn_pressed() -> void:
 		anim.play_backwards("blur")
 
 func _on_ext_btn_pressed() -> void:
+	GameManager.settings_closed.emit()  # ✅ Only emits
 	safe_toggle_visibility(volume_cont)
 	safe_toggle_visibility(close_cont)
 	safe_toggle_visibility(bottom_cont)

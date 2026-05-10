@@ -23,7 +23,6 @@ extends Node2D
 # Win Buttons
 @onready var collect_button = $PopupLayer/WinPopup/MainFrame/CollectButton
 @onready var rescue_button = $PopupLayer/WinPopup/BottomButtons1/RescueButton
-@onready var win_cancel_button = $PopupLayer/WinPopup/BottomButtons1/CancelButton
 
 # Lose Buttons
 @onready var quit_button = $PopupLayer/LosePopup/GameOverFrame/BottomButtons2/QuitButton
@@ -92,7 +91,6 @@ func _ready():
 	all_ui_buttons.append(hint_button)
 	all_ui_buttons.append(collect_button)
 	all_ui_buttons.append(rescue_button)
-	all_ui_buttons.append(win_cancel_button)
 	all_ui_buttons.append(quit_button)
 	all_ui_buttons.append(try_again_button)
 	
@@ -112,7 +110,6 @@ func _ready():
 	hint_button.pressed.connect(_on_hint_pressed)
 	collect_button.pressed.connect(_on_collect_pressed)
 	rescue_button.pressed.connect(_on_rescue_pressed)
-	win_cancel_button.pressed.connect(_on_try_again_pressed)
 	
 	if quit_button: quit_button.pressed.connect(_on_quit_pressed)
 	if try_again_button: try_again_button.pressed.connect(_on_try_again_pressed)
@@ -135,6 +132,9 @@ func _ready():
 	await get_tree().create_timer(0.1).timeout
 	GameManager.update_skill_button_states()
 	
+	GameManager.settings_opened.connect(_on_settings_opened)
+	GameManager.settings_closed.connect(_on_settings_closed)
+
 	update_ui_displays()
 	load_question()
 
@@ -304,6 +304,16 @@ func end_game(is_win: bool):
 
 	for btn in choice_btns:
 		btn.disabled = true
+
+func _on_settings_opened():
+	if hint_button: hint_button.hide()
+	if $CanvasLayer2: $CanvasLayer2.hide()
+	if $CanvasLayer: $CanvasLayer.hide()
+
+func _on_settings_closed():
+	if hint_button and not hint_button.disabled: hint_button.show()
+	if $CanvasLayer2: $CanvasLayer2.show()
+	if $CanvasLayer: $CanvasLayer.show()
 
 # --- RESCUE VIDEO LOGIC ---
 func _on_rescue_pressed():

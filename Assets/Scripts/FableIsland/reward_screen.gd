@@ -8,7 +8,6 @@ extends Control
 @onready var collect_btn = $TextureButton 
 
 func _ready():
-	GameManager.complete_minigame("island_1")
 	# 1. Hide the +5 text at the start
 	if reward_popup:
 		reward_popup.modulate.a = 0
@@ -25,6 +24,7 @@ func _on_texture_button_pressed(): # This is your COLLECT button
 	# 1. Disable the button so they can't click it twice
 	collect_btn.disabled = true
 	GameManager.receive_island_reward("island_1")
+	GameManager.complete_minigame("island_1")
 	
 	# 2. Show and Animate the +5 Popup
 	if reward_popup:

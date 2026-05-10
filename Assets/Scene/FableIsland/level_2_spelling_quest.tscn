@@ -304,10 +304,10 @@ scale = Vector2(0.37, 0.37)
 mouse_filter = 0
 columns = 8
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=158200826]
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=158200826]
 layer = 100
 
-[node name="Skoalars" parent="CanvasLayer" unique_id=1875685537 instance=ExtResource("19_fxxru")]
+[node name="Skoalars" parent="CanvasLayer2" unique_id=1875685537 instance=ExtResource("19_fxxru")]
 position = Vector2(636, 368.00003)
 scale = Vector2(0.057, 0.056)
 

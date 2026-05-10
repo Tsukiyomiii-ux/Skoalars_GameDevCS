@@ -78,7 +78,6 @@ func _ready():
 
 	generate_math_question()
 	
-	GameManager.complete_minigame("island_2")
 	GameManager.set_current_island("island_2.5")
 	GameManager.set_allowed_skills(["hint", "freeze_time", "add_time", "skip"])
 	GameManager.hint_requested.connect(_on_hint_used)
@@ -93,6 +92,7 @@ func _ready():
 	var cl = CanvasLayer.new()
 	cl.layer = 200
 	get_tree().root.add_child(cl)
+	GameManager.register_cleanup_node(cl)
 	var numboard = $CanvasLayer2/numboard
 	var original_pos = numboard.global_position
 	numboard.get_parent().remove_child(numboard)
@@ -104,8 +104,30 @@ func _ready():
 # --- SKILL FUNCTIONS ---
 func _on_hint_used():
 	if game_over: return
+	
+	# Fill in the answer
 	current_answer_string = str(correct_result)
 	answer_label.text = current_answer_string
+	
+	# Get answer_board via numboard_ref since it was moved dynamically
+	if not numboard_ref or not is_instance_valid(numboard_ref): return
+	var answer_board = numboard_ref.get_node_or_null("answer_board")
+	if not answer_board: return
+	
+	# Set pivot to center for scaling
+	answer_board.scale = Vector2(1.0, 1.0)
+	
+	# Pop + golden shine effect
+	var tween = create_tween()
+	tween.set_parallel(true)
+	
+	# Scale pop
+	tween.tween_property(answer_board, "scale", Vector2(1.4, 1.4), 0.15).set_trans(Tween.TRANS_BACK)
+	tween.chain().tween_property(answer_board, "scale", Vector2(1.0, 1.0), 0.2)
+	
+	# Flash golden
+	tween.tween_property(answer_board, "modulate", Color(2.0, 1.8, 0.2), 0.15)
+	tween.chain().tween_property(answer_board, "modulate", Color(1, 1, 1), 0.4)
 
 func _on_freeze_used():
 	is_frozen = true
@@ -163,6 +185,7 @@ func setup_board_buttons():
 func _on_rewards_claimed():
 	if tapping_audio: tapping_audio.play()
 	GameManager.receive_island_reward("island_2.5")
+	GameManager.complete_minigame("island_2")
 	
 	var tween = create_tween().set_parallel(true)
 	var icons = [wand_icon, gem_icon, key_icon]
@@ -208,6 +231,7 @@ func _on_enter_pressed():
 func _on_timer_timeout():
 	if !game_over:
 		lose_level()
+		cleanup_numboard()
 		if numboard_ref and is_instance_valid(numboard_ref):
 			numboard_ref.hide()
 		if ui_layer:
@@ -317,6 +341,12 @@ func _on_back_pressed():
 		current_answer_string = current_answer_string.left(-1)
 		answer_label.text = current_answer_string
 
+func cleanup_numboard():
+	if numboard_ref and is_instance_valid(numboard_ref):
+		var parent = numboard_ref.get_parent()
+		if parent and is_instance_valid(parent):
+			parent.queue_free()  # Frees the entire dynamic CanvasLayer
+
 func shake_node(target_node: Node):
 	if !target_node: return
 	var op = target_node.position
@@ -325,8 +355,12 @@ func shake_node(target_node: Node):
 	t.chain().tween_property(target_node, "position:x", op.x - 8, 0.05)
 	t.chain().tween_property(target_node, "position:x", op.x, 0.05)
 
-func _on_reload_scene(): get_tree().reload_current_scene()
-func _on_menu_pressed(): get_tree().change_scene_to_file("res://Assets/Scene/Countoria/countoria.tscn")
+func _on_reload_scene(): 
+	cleanup_numboard()
+	get_tree().reload_current_scene()
+func _on_menu_pressed(): 
+	cleanup_numboard()
+	get_tree().change_scene_to_file("res://Assets/Scene/Countoria/countoria.tscn")
 
 # --- 6. FINAL REDIRECTION ---
 func _on_dash_rescue_finished() -> void:
