@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cg8mkilwse5gt"]
 
-[ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/MainIsland/skoalars.gd" id="1_hdjqq"]
+[ext_resource type="Script" uid="uid://5fsr5sdhbio4" path="res://Assets/Scripts/MainIsland/skoalarsGui.gd" id="1_2wsoh"]
 [ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_4qtrs"]
 [ext_resource type="Script" uid="uid://cupg8v5q1n1gc" path="res://Assets/Scripts/MainIsland/StudySkoalarsGUI.gd" id="3_gqiou"]
 [ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_ogfwi"]
@@ -499,7 +499,7 @@ size = Vector2(15.037382, 33.210255)
 
 [node name="Skoalars" type="CharacterBody2D" unique_id=1875685537]
 scale = Vector2(0.015, 0.015)
-script = ExtResource("1_hdjqq")
+script = ExtResource("1_2wsoh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1165061691]
 visible = false
