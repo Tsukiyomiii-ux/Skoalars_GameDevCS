@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://lak7ptuokfjv" path="res://Assets/Scripts/Countoria/countoria.gd" id="1_f30l2"]
 [ext_resource type="TileSet" uid="uid://ca5mrl5gmsh4k" path="res://Scene1/GTileset/game_tile_set.tres" id="1_q128q"]
 [ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/skoalarsGUI.tscn" id="3_vwn2g"]
+[ext_resource type="Texture2D" uid="uid://bvfit0rh6unkv" path="res://Assets/Sprite/Signs.png" id="4_b51ic"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f30l2"]
 
@@ -421,6 +422,25 @@ b = Vector2(100, 584)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_buuar"]
 a = Vector2(144, 280)
 b = Vector2(124, 281)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo2q6"]
+atlas = ExtResource("4_b51ic")
+region = Rect2(544, 552, 360, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b51ic"]
+atlas = ExtResource("4_b51ic")
+region = Rect2(136, 552, 360, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uc3f"]
+atlas = ExtResource("4_b51ic")
+region = Rect2(960, 552, 376, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stusw"]
+atlas = ExtResource("4_b51ic")
+region = Rect2(552, 72, 352, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fclam"]
+size = Vector2(22.5, 17.75)
 
 [node name="TestSceenTileMap" type="Node2D" unique_id=1226202048 groups=["player"]]
 
@@ -988,3 +1008,68 @@ shape = SubResource("SegmentShape2D_tlssm")
 
 [node name="CollisionShape2D103" type="CollisionShape2D" parent="collisionshapes" unique_id=1047963865]
 shape = SubResource("SegmentShape2D_buuar")
+
+[node name="welcome_sign" type="Sprite2D" parent="." unique_id=3294751]
+position = Vector2(274.9375, 685)
+scale = Vector2(0.0725695, 0.08500002)
+texture = SubResource("AtlasTexture_bo2q6")
+
+[node name="note" type="Sprite2D" parent="." unique_id=1241652621]
+position = Vector2(336, 636.00006)
+scale = Vector2(0.069444455, 0.084999956)
+texture = SubResource("AtlasTexture_b51ic")
+
+[node name="sign1" type="Sprite2D" parent="." unique_id=1279595837]
+position = Vector2(275, 567)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_5uc3f")
+
+[node name="sign2" type="Sprite2D" parent="." unique_id=1485104085]
+position = Vector2(303, 461)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_stusw")
+
+[node name="sign3" type="Sprite2D" parent="." unique_id=613738800]
+position = Vector2(191, 475)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_5uc3f")
+
+[node name="sign4" type="Sprite2D" parent="." unique_id=1930377262]
+position = Vector2(123, 344)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_5uc3f")
+
+[node name="sign5" type="Sprite2D" parent="." unique_id=68592722]
+position = Vector2(112, 272)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_5uc3f")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=294768390]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=445884972]
+position = Vector2(275, 680)
+shape = SubResource("RectangleShape2D_fclam")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=2098495207]
+position = Vector2(336, 629)
+shape = SubResource("RectangleShape2D_fclam")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=640830821]
+position = Vector2(275, 561)
+shape = SubResource("RectangleShape2D_fclam")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=1389087082]
+position = Vector2(303, 456)
+shape = SubResource("RectangleShape2D_fclam")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D" unique_id=505358474]
+position = Vector2(191, 468)
+shape = SubResource("RectangleShape2D_fclam")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D" unique_id=592412253]
+position = Vector2(123, 339.125)
+shape = SubResource("RectangleShape2D_fclam")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D" unique_id=1419643169]
+position = Vector2(112, 268)
+shape = SubResource("RectangleShape2D_fclam")
