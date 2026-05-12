@@ -44,6 +44,7 @@ var word_requirement = 10
 @onready var done_button = $Bg/Done 
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# 1. LOAD: Pull saved text from GameManager immediately
 	answer1.text = GameManager.get_study_answer("ecosystem", "answer1")
 	answer2.text = GameManager.get_study_answer("ecosystem", "answer2")

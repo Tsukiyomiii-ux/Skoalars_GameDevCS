@@ -50,6 +50,7 @@ var word_requirement = 10
 @onready var answer_field_2 = $"Answer 2"
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# 1. LOAD: Restore text from GameManager immediately
 	answer_field_1.text = GameManager.get_study_answer("recyclable_waste", "answer1")
 	answer_field_2.text = GameManager.get_study_answer("recyclable_waste", "answer2")

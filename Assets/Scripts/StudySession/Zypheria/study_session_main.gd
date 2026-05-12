@@ -7,6 +7,7 @@ extends Node2D
 @onready var geography_btn = $CanvasLayer3/HBoxContainer/GridContainer/GeographyBtn
 var settings_open: bool = false
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# Store all buttons in a list for easier signal connecting
 	var buttons = [literacy_btn, math_btn, science_btn, geography_btn]
 	GameManager.set_current_island("study")

@@ -33,6 +33,7 @@ var flag_spreads = [
 ]
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# Connect Signals
 	next_btn.pressed.connect(_on_next_pressed)
 	back_btn.pressed.connect(_on_back_pressed)

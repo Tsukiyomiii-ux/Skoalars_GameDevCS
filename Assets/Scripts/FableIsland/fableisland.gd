@@ -4,6 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameManager.set_current_island("island_1")
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -59,6 +59,7 @@ var pages = [
 var current_page = 0
 
 func _ready() -> void:
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# LOAD: Fill the boards with previously saved text
 	board_1.text = GameManager.get_study_answer("division", "answer1")
 	board_2.text = GameManager.get_study_answer("division", "answer2")

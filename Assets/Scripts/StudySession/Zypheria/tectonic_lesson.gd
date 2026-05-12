@@ -45,6 +45,7 @@ var spreads = [
 ]
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# Connect Navigation signals
 	next_btn.pressed.connect(_on_next_pressed)
 	back_btn.pressed.connect(_on_back_pressed)

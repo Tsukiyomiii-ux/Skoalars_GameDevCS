@@ -1,6 +1,7 @@
 extends Area2D
 
 func _ready() -> void:
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	GameManager.set_current_island("island_2")
 	monitoring = true
 	monitorable = true

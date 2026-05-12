@@ -36,7 +36,7 @@ var is_frozen: bool = false
 
 @onready var wand_button = $CanvasLayer3/Holderwand/Wand
 
-@onready var win_popup_bg = $CanvasLayer2
+@onready var win_popup_bg = $CanvasLayer2/ColorRect
 @onready var popup_sprite = $CanvasLayer2/Popup
 @onready var lose_popup_bg = $CanvasLayer2/ColorRect2
 @onready var lose_popup_holder = $CanvasLayer2/ColorRect2/Over
@@ -50,6 +50,7 @@ var is_frozen: bool = false
 const ORIGINAL_MISSION = "Become a Recycling Hero! Drag the trash into the right bins to clean up the park.\n\nBe quick—you have 1 minute to sort everything!"
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	randomize()
 	trash_list.shuffle()
 	mission_label.text = ORIGINAL_MISSION
@@ -138,15 +139,22 @@ func start_countdown():
 	spawn_trash()
 
 func _process(delta):
-	if game_active and time_left > 0 and not is_frozen:
-		time_left -= delta
-		var mins = int(floor(time_left / 60))
-		var secs = int(time_left) % 60
-		time_label.text = str(mins) + ":" + str(secs).pad_zeros(2)
-
-		if time_left <= 0:
+	if game_active and not is_frozen:
+		if time_left > 0:
+			time_left -= delta
+			var mins = int(floor(time_left / 60))
+			var secs = int(time_left) % 60
+			time_label.text = str(mins) + ":" + str(secs).pad_zeros(2)
+		else:
 			time_left = 0
+			time_label.text = "0:00"
 			game_over_lose()
+			print("HAHAHA")
+	
+	# Update the UI
+	var mins = int(floor(time_left / 60))
+	var secs = int(time_left) % 60
+	time_label.text = str(mins) + ":" + str(secs).pad_zeros(2)
 
 func spawn_trash():
 	if score >= 10:
@@ -208,6 +216,7 @@ func handle_wrong_answer():
 func show_win_popup():
 	game_active = false
 	win_popup_bg.show()
+	popup_sprite.show()
 	clue_label.text = ""
 
 func game_over_lose():

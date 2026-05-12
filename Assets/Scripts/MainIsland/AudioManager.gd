@@ -8,6 +8,9 @@ func _ready():
 
 	# Optional: play default music on start
 	play_music(preload("res://Assets/Audio/SoftEng_BG1.wav"))
+	play_music(preload("res://Assets/Audio/GameBG.wav"))
+	play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
+	play_music(preload("res://Assets/Audio/SoftEng_FableIsle.wav"))
 
 # 🔥 THIS is what you're missing
 func play_music(stream: AudioStream):

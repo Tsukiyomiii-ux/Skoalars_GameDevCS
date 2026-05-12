@@ -58,6 +58,7 @@ var pages = [
 var current_page = 0
 
 func _ready() -> void:
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# Load previous answers
 	board_1.text = GameManager.get_study_answer("addition", "answer1")
 	board_2.text = GameManager.get_study_answer("addition", "answer2")

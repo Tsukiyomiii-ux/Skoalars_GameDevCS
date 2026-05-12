@@ -20,6 +20,7 @@ extends Control
 const COOLDOWN_SECONDS = 1800.0  # 30 minutes
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/SoftEng_FableIsle.wav"))
 	update_shop()
 	GameManager.diamonds_changed.connect(_on_diamonds_changed)
 	GameManager.skill_purchased.connect(_on_skill_bought)

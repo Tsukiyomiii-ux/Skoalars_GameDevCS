@@ -73,6 +73,7 @@ var hint_time_left = 10.0
 var settings_open: bool = false
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	randomize()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	all_questions.shuffle()

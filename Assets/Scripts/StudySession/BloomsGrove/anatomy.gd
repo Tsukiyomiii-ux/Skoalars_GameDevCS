@@ -41,6 +41,7 @@ var word_requirement = 10
 @onready var answer_field_2 = $"Bg/Answer 2"
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	answer_field_1.text = GameManager.get_study_answer("plant_lesson", "answer1")
 	answer_field_2.text = GameManager.get_study_answer("plant_lesson", "answer2")
 	answer_field_1.text_changed.connect(_on_answers_changed)

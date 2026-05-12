@@ -63,6 +63,7 @@ var topic_first_pages : Array = [1, 7, 13, 19, 25, 31]
 
 # --- 3. READY ---
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	_setup_recursive(self)
 	book_container.hide()
 	topic_screen.show()

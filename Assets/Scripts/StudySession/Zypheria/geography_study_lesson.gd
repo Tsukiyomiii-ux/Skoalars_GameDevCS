@@ -10,6 +10,7 @@ extends Node2D
 @onready var cancel_button = $CanvasLayer/CancelButton
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# Group lesson buttons for easy setup
 	var lesson_buttons = [flags_btn, capitals_btn, continents_btn, tectonic_btn]
 	

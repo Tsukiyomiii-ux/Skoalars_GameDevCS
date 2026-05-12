@@ -58,6 +58,7 @@ var word_requirement = 2
 @onready var done_button = $Bg/Done
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# 1. LOAD: Restore text from GameManager when the scene starts
 	answer1.text = GameManager.get_study_answer("bio_waste", "answer1")
 	answer2.text = GameManager.get_study_answer("bio_waste", "answer2")

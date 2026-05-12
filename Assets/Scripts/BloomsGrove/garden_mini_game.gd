@@ -46,6 +46,7 @@ var questions = [
 var failed_questions = []
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	randomize() 
 	questions.shuffle()
 

@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var owl_sprite = $Bg/Owl
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# Starts the owl animation automatically when the scene opens
 	owl_sprite.play("default")
 	

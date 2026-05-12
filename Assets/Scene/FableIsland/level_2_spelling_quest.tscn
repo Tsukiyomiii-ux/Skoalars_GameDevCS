@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dgimc2ku7etgq" path="res://Assets/Scripts/FableIsland/level_2_spelling_quest.gd" id="1_8mws1"]
 [ext_resource type="Texture2D" uid="uid://dx5oaaoixhfiu" path="res://Assets/Sprite/FABLE ISLE/Level2/VeryFinalBackground.png" id="4_xlkur"]
-[ext_resource type="Texture2D" uid="uid://dv1eqh7pdf43k" path="res://Assets/Fable Isle/Level2/Objectives.png" id="5_fxxru"]
+[ext_resource type="Texture2D" uid="uid://dv1eqh7pdf43k" path="res://Assets/Sprite/FABLE ISLE/Level2/Objectives.png" id="5_fxxru"]
 [ext_resource type="Texture2D" uid="uid://bqkfcoks68td8" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalAssets.png" id="5_ux12e"]
 [ext_resource type="FontFile" uid="uid://doxo607m4fj51" path="res://Assets/Sprite/FABLE ISLE/Level2/ARCADECLASSIC.TTF" id="6_g0gfl"]
 [ext_resource type="Texture2D" uid="uid://bjpbrwpjdn0v0" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalBook.png" id="7_g0gfl"]

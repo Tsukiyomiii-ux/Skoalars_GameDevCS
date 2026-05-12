@@ -61,6 +61,7 @@ var spreads = [
 ]
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# 1. Load saved answer text
 	load_answers()
 	

@@ -3,6 +3,7 @@ extends Node2D
 var minigame_scene_path = "res://Assets/Scene/BloomsGrove/GardenMiniGame.tscn"
 
 func _ready() -> void:
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	GameManager.set_current_island("island_3")
 
 func _on_mini_game_1_entrance_body_entered(body):

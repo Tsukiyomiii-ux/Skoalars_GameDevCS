@@ -47,6 +47,7 @@ var numboard_ref: Node2D = null
 var operations = ["addition", "subtraction", "multiplication", "division"]
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	win_board.hide()
 	lose_board.hide()
 	blur_overlay.hide()

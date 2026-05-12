@@ -53,6 +53,7 @@ var timer_ready: bool = false
 
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	win_board.hide()
 	if lose_board: lose_board.hide()
 	if blur_overlay: blur_overlay.hide() 

@@ -58,6 +58,7 @@ var pages = [
 var current_page = 0
 
 func _ready() -> void:
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# 1. LOAD: Immediately pull the text from the static memory
 	board_1.text = GameManager.get_study_answer("subtraction", "answer1")
 	board_2.text = GameManager.get_study_answer("subtraction", "answer2")

@@ -4,6 +4,7 @@ extends Node2D
 @onready var prof_hoot = $prof_hoot
 
 func _ready() -> void:
+	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	# Ensure the mouse is visible
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	

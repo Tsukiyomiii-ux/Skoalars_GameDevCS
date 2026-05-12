@@ -6,6 +6,7 @@ extends Control
 @onready var cancel_btn = $NinePatchRect/cancel_btn
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/SoftEng_FableIsle.wav"))
 	literacy_bar.max_value = 100
 	math_bar.max_value = 100
 	science_bar.max_value = 100

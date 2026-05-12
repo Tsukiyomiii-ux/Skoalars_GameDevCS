@@ -141,7 +141,7 @@ func _on_quit_btn_pressed() -> void:
 	var current_scene = get_tree().current_scene.scene_file_path
 
 	if current_scene == "res://Assets/Scene/MainIsland/main_island.tscn":
-		get_tree().change_scene_to_file("res://Assets/Scene/main_menu.tscn")
+		get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_menu.tscn")
 		return
 
 	var island = GameManager.get_current_island()

@@ -69,6 +69,7 @@ var timer_active = false
 var hint_used = false
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	# Connect Choice Buttons
 	for btn in buttons_container.get_children():
 		if btn is TextureButton:

@@ -25,6 +25,7 @@ extends Control
 @onready var skip_count_label = %skipCountlabel
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/SoftEng_FableIsle.wav"))
 	hint_equip_btn.pressed.connect(_on_hint_equip_pressed)
 	add_equip_btn.pressed.connect(_on_add_equip_pressed)
 	freeze_equip_btn.pressed.connect(_on_freeze_equip_pressed)

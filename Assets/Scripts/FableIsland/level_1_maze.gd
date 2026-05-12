@@ -21,6 +21,7 @@ var is_ticking_playing: bool = false
 var is_game_finished = false
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	if player and goal:
 		total_distance = player.global_position.distance_to(goal.global_position)
 	

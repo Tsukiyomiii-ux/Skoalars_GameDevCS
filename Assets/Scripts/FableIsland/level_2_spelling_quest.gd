@@ -54,6 +54,7 @@ var is_game_finished: bool = false
 var letter_buttons = []
 
 func _ready():
+	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	self.process_mode = Node.PROCESS_MODE_ALWAYS 
 	if is_instance_valid(snd_level_start): snd_level_start.play()
 	if definition_label: definition_label.hide()
