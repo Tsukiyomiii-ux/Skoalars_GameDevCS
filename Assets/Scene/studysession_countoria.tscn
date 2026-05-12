@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://bphnlfwywhv5p"]
+
+[ext_resource type="Texture2D" uid="uid://xqsellt3dfks" path="res://Assets/Sprite/Objects/study_session/98.png" id="1_2nudg"]
+[ext_resource type="Script" path="res://Assets/Scene/studysession_countoria.gd" id="1_7coxc"]
+[ext_resource type="Texture2D" uid="uid://bvjgop2pgpht8" path="res://Assets/Sprite/Objects/study_session/with lightbulb.png" id="2_ldcs6"]
+[ext_resource type="Texture2D" uid="uid://deooupg6m61o7" path="res://Assets/Sprite/Objects/study_session/99.png" id="3_7coxc"]
+[ext_resource type="Texture2D" uid="uid://gwf2mcqtm1gr" path="res://Assets/Sprite/Objects/study_session/ProfHoot Animation.png" id="5_mtnd4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtnd4"]
+atlas = ExtResource("2_ldcs6")
+region = Rect2(960, 56, 560, 528)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87roh"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(48, 664, 632, 136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1eww"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(1048, 720, 472, 136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qc7ei"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(40, 48, 400, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm7eb"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(392, 832, 304, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldcs6"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(392, 840, 304, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knv5w"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(520, 48, 424, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_da0so"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(48, 832, 304, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7coxc"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(56, 840, 296, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccch5"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(32, 336, 416, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ku8c"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(728, 840, 296, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avnhr"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(728, 840, 296, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_codsm"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(528, 336, 416, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqocl"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(728, 664, 296, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yrkb"]
+atlas = ExtResource("3_7coxc")
+region = Rect2(728, 664, 296, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84j6p"]
+atlas = ExtResource("5_mtnd4")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lkal"]
+atlas = ExtResource("5_mtnd4")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd5y1"]
+atlas = ExtResource("5_mtnd4")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbv08"]
+atlas = ExtResource("5_mtnd4")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hy5e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84j6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lkal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd5y1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbv08")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="studysession_countoria" type="Node2D" unique_id=1304193206]
+script = ExtResource("1_7coxc")
+
+[node name="studysesh_bg" type="TextureRect" parent="." unique_id=469817302]
+offset_right = 1281.0
+offset_bottom = 721.0
+texture = ExtResource("1_2nudg")
+expand_mode = 1
+
+[node name="instructions" type="TextureRect" parent="studysesh_bg" unique_id=866330194]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 43.0
+offset_right = 1270.0
+offset_bottom = 535.0
+texture = SubResource("AtlasTexture_mtnd4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="chooselesson" type="TextureRect" parent="studysesh_bg" unique_id=1578525751]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 600.0
+offset_right = 938.0
+offset_bottom = 706.0
+texture = SubResource("AtlasTexture_87roh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="mathematics" type="TextureRect" parent="studysesh_bg" unique_id=1028644376]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 10.0
+offset_right = 848.0
+offset_bottom = 117.0
+texture = SubResource("AtlasTexture_x1eww")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="lessons_ui" type="Control" parent="." unique_id=2105014919]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 51.0
+offset_right = 895.0
+offset_bottom = 594.0
+
+[node name="1" type="TextureRect" parent="lessons_ui" unique_id=251530475]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 77.0
+offset_right = 401.0
+offset_bottom = 257.0
+texture = SubResource("AtlasTexture_qc7ei")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="addition_button" type="TextureButton" parent="lessons_ui/1" unique_id=1229918011]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 125.0
+offset_right = 336.0
+offset_bottom = 221.0
+texture_normal = SubResource("AtlasTexture_cm7eb")
+texture_pressed = SubResource("AtlasTexture_ldcs6")
+
+[node name="2" type="TextureRect" parent="lessons_ui" unique_id=42204734]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 78.0
+offset_right = 793.0
+offset_bottom = 260.0
+texture = SubResource("AtlasTexture_knv5w")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="subtraction_button" type="TextureButton" parent="lessons_ui/2" unique_id=1726974917]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 123.0
+offset_right = 329.0
+offset_bottom = 219.0
+texture_normal = SubResource("AtlasTexture_da0so")
+texture_pressed = SubResource("AtlasTexture_7coxc")
+
+[node name="3" type="TextureRect" parent="lessons_ui" unique_id=1794480752]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 324.0
+offset_right = 380.0
+offset_bottom = 498.0
+texture = SubResource("AtlasTexture_ccch5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="multiplication_button" type="TextureButton" parent="lessons_ui/3" unique_id=83170121]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 123.0
+offset_right = 313.0
+offset_bottom = 211.0
+texture_normal = SubResource("AtlasTexture_1ku8c")
+texture_pressed = SubResource("AtlasTexture_avnhr")
+
+[node name="4" type="TextureRect" parent="lessons_ui" unique_id=1894737545]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 310.0
+offset_right = 784.0
+offset_bottom = 503.0
+texture = SubResource("AtlasTexture_codsm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="division_button" type="TextureButton" parent="lessons_ui/4" unique_id=1976915280]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 134.0
+offset_right = 327.0
+offset_bottom = 222.0
+texture_normal = SubResource("AtlasTexture_oqocl")
+texture_pressed = SubResource("AtlasTexture_7yrkb")
+
+[node name="prof_hoot" type="AnimatedSprite2D" parent="." unique_id=161202492]
+position = Vector2(1077, 538)
+sprite_frames = SubResource("SpriteFrames_3hy5e")
+frame = 1
+frame_progress = 0.750054
+
+[connection signal="pressed" from="lessons_ui/1/addition_button" to="." method="_on_addition_button_pressed"]
+[connection signal="pressed" from="lessons_ui/2/subtraction_button" to="." method="_on_subtraction_button_pressed"]
+[connection signal="pressed" from="lessons_ui/3/multiplication_button" to="." method="_on_multiplication_button_pressed"]
+[connection signal="pressed" from="lessons_ui/4/division_button" to="." method="_on_division_button_pressed"]

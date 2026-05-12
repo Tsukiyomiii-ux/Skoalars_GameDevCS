@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://0a7uwtmvg2re"]
+
+[ext_resource type="Texture2D" uid="uid://bkykwu3y2uh7m" path="res://Assets/Sprite/Objects/Market/39.png" id="1_mggpi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htrc2"]
+atlas = ExtResource("1_mggpi")
+region = Rect2(32, 32, 1472, 968)
+
+[node name="loading_screen" type="Control" unique_id=107589152]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=739917548]
+
+[node name="loading_container" type="TextureRect" parent="CanvasLayer" unique_id=1735440251]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="load_bg" type="TextureRect" parent="CanvasLayer" unique_id=1902865726]
+offset_left = -8.0
+offset_right = 1288.0
+offset_bottom = 728.0
+texture = SubResource("AtlasTexture_htrc2")
+expand_mode = 1

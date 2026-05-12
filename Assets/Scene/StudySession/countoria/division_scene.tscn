@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://xlgoynp80qht"]
+
+[ext_resource type="Script" uid="uid://di53pfvpgiq2" path="res://Assets/Scene/division_scene.gd" id="1_wcsfv"]
+[ext_resource type="Texture2D" uid="uid://buhjeiy00e7uw" path="res://Assets/Sprite/Objects/study_session/book.png" id="2_5d3fl"]
+[ext_resource type="Texture2D" uid="uid://dge0bj71h042h" path="res://Assets/Sprite/Objects/Market/COLLECT & NAVIGATION BUTTONS.png" id="3_jptxm"]
+[ext_resource type="Texture2D" uid="uid://c3y2ob1qkqy8e" path="res://Assets/Sprite/Objects/Market/try again,done, purchase, etc. buttons.png" id="4_5d3fl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0uw0"]
+atlas = ExtResource("3_jptxm")
+region = Rect2(208, 632, 552, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxrkg"]
+atlas = ExtResource("3_jptxm")
+region = Rect2(216, 640, 544, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpdyh"]
+atlas = ExtResource("3_jptxm")
+region = Rect2(792, 152, 544, 248)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oote"]
+atlas = ExtResource("3_jptxm")
+region = Rect2(792, 152, 544, 248)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwjav"]
+atlas = ExtResource("3_jptxm")
+region = Rect2(776, 632, 560, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77cdl"]
+atlas = ExtResource("3_jptxm")
+region = Rect2(776, 632, 560, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jptxm"]
+atlas = ExtResource("4_5d3fl")
+region = Rect2(776, 160, 432, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6h0e"]
+atlas = ExtResource("4_5d3fl")
+region = Rect2(776, 160, 432, 120)
+
+[node name="division_scene" type="Node2D" unique_id=1868744305]
+script = ExtResource("1_wcsfv")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1641387675]
+offset_right = 1282.0
+offset_bottom = 718.0
+texture = ExtResource("2_5d3fl")
+expand_mode = 1
+
+[node name="cancel_btn" type="TextureButton" parent="." unique_id=805838488]
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 196.0
+offset_bottom = 103.0
+texture_normal = SubResource("AtlasTexture_w0uw0")
+texture_pressed = SubResource("AtlasTexture_bxrkg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="back_btn" type="TextureButton" parent="." unique_id=1366218668]
+offset_left = -17.0
+offset_top = 613.0
+offset_right = 231.0
+offset_bottom = 691.0
+texture_normal = SubResource("AtlasTexture_rpdyh")
+texture_pressed = SubResource("AtlasTexture_3oote")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="next_btn" type="TextureButton" parent="." unique_id=1894462023]
+offset_left = 1069.0
+offset_top = 599.0
+offset_right = 1253.0
+offset_bottom = 708.0
+texture_normal = SubResource("AtlasTexture_hwjav")
+texture_pressed = SubResource("AtlasTexture_77cdl")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="lesson_content" type="RichTextLabel" parent="." unique_id=1850063535]
+offset_left = 164.0
+offset_top = 160.0
+offset_right = 621.0
+offset_bottom = 591.0
+bbcode_enabled = true
+
+[node name="lessonImage4" type="TextureRect" parent="." unique_id=2133634379]
+offset_left = 669.0
+offset_top = 152.0
+offset_right = 1115.0
+offset_bottom = 568.0
+
+[node name="answer_board1" type="TextEdit" parent="." unique_id=405571080]
+offset_left = 158.0
+offset_top = 267.0
+offset_right = 616.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.14509805, 0.14509805, 0.14117648, 0.6)
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+placeholder_text = "Type your answers here (Minimum of 10 words)"
+wrap_mode = 1
+
+[node name="answer_board2" type="TextEdit" parent="." unique_id=2003374713]
+offset_left = 660.0
+offset_top = 266.0
+offset_right = 1121.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.14509805, 0.14509805, 0.14117648, 0.6)
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+placeholder_text = "Type your answers here (Minimum of 10 words)"
+wrap_mode = 1
+
+[node name="header_container1" type="VBoxContainer" parent="." unique_id=1809709819]
+offset_left = 161.0
+offset_top = 151.0
+offset_right = 611.0
+offset_bottom = 282.0
+
+[node name="learned_label" type="RichTextLabel" parent="header_container1" unique_id=1600183667]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 37
+text = "New things you have learned:
+"
+fit_content = true
+
+[node name="header_container2" type="VBoxContainer" parent="." unique_id=1718969872]
+offset_left = 663.0
+offset_top = 161.0
+offset_right = 1116.0
+offset_bottom = 265.0
+
+[node name="interesting_label" type="RichTextLabel" parent="header_container2" unique_id=589051096]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+text = "Things you find interesting and surprising:
+"
+fit_content = true
+
+[node name="done_btn" type="TextureButton" parent="." unique_id=1586229028]
+offset_left = 1062.0
+offset_top = 606.0
+offset_right = 1257.0
+offset_bottom = 675.0
+texture_normal = SubResource("AtlasTexture_jptxm")
+texture_pressed = SubResource("AtlasTexture_h6h0e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="cancel_btn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="back_btn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="next_btn" to="." method="_on_next_btn_pressed"]
+[connection signal="text_changed" from="answer_board1" to="." method="_on_answer_board_1_text_changed"]
+[connection signal="text_changed" from="answer_board2" to="." method="_on_answer_board_2_text_changed"]
+[connection signal="pressed" from="done_btn" to="." method="_on_done_btn_pressed"]
