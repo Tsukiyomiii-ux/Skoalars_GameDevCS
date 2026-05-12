@@ -116,7 +116,7 @@ func _on_answer_text_changed():
 func _on_done_pressed():
 	save_answers()
 	GameManager.add_diamonds(1)
-	GameManager.complete_study_topic("geography")
+	GameManager.complete_study_topic("geography","capitals")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():

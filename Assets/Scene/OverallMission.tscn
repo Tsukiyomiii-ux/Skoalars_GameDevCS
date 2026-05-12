@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cwfc2avucov1d"]
+
+[ext_resource type="Texture2D" uid="uid://b10xy1kmgyibx" path="res://Assets/Sprite/origbig.png" id="1_00isx"]
+[ext_resource type="Script" uid="uid://cjymp4nvf1b3x" path="res://Assets/Scene/overall_mission.gd" id="1_dm6qp"]
+[ext_resource type="Texture2D" uid="uid://4mudnq1x8ex3" path="res://Assets/Sprite/OverallMissions.png" id="1_nypwc"]
+[ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="2_g1q6k"]
+[ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="3_00isx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dm6qp"]
+texture = ExtResource("2_g1q6k")
+region_rect = Rect2(32, 352, 408, 120)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47edc"]
+texture = ExtResource("2_g1q6k")
+region_rect = Rect2(40, 360, 392, 112)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbocx"]
+texture = ExtResource("2_g1q6k")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(24, 352, 416, 120)
+
+[node name="Control" type="Control" unique_id=313272124]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dm6qp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2044926350]
+position = Vector2(666, 372)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("1_00isx")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1168869863]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -400.0
+offset_right = 500.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nypwc")
+
+[node name="Button" type="Button" parent="NinePatchRect" unique_id=434822670]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 154.60498
+offset_right = 200.0
+offset_bottom = 274.60498
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_dm6qp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_47edc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qbocx")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect" unique_id=1447811665]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -296.0
+offset_right = 200.0
+offset_bottom = -176.00009
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00isx")
+region_rect = Rect2(40, 544, 728, 216)
+
+[connection signal="pressed" from="NinePatchRect/Button" to="." method="_on_button_pressed"]

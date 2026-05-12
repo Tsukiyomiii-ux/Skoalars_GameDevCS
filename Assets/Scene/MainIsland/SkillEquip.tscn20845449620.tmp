@@ -1,14 +1,13 @@
-[gd_scene format=3 uid="uid://qb0m0lud1f08"]
+[gd_scene format=3 uid="uid://bxssdaei6of11"]
 
-[ext_resource type="Script" uid="uid://cftiiyurwfo78" path="res://Assets/Scripts/MainIsland/skills_shop.gd" id="1_s4q4p"]
-[ext_resource type="Texture2D" uid="uid://br7bydaerdo4s" path="res://Assets/Sprite/BG/39.png" id="2_77hec"]
-[ext_resource type="Texture2D" uid="uid://b10xy1kmgyibx" path="res://Assets/Sprite/origbig.png" id="2_dqp8t"]
-[ext_resource type="Texture2D" uid="uid://dxm3isa0kdsuf" path="res://Assets/Sprite/Buttons/REWARDS, SKILLS, TIME BUTTONS.png" id="3_dqp8t"]
-[ext_resource type="FontFile" uid="uid://dv455unisnjo4" path="res://Assets/Sprite/font/PressStart2P-Regular.ttf" id="4_ive4b"]
-[ext_resource type="Texture2D" uid="uid://brmkb0v8t1qhp" path="res://Assets/Sprite/Buttons/try again,done, purchase, etc. buttons.png" id="5_pmkfs"]
-[ext_resource type="FontFile" uid="uid://yi78scq3kpk3" path="res://Assets/Sprite/font/Montserrat-Black.ttf" id="6_b53m5"]
-[ext_resource type="Texture2D" uid="uid://p7smd3uo48y8" path="res://Assets/Sprite/Buttons/COLLECT & NAVIGATION BUTTONS.png" id="7_vmln8"]
-[ext_resource type="Texture2D" uid="uid://dwun5up8bohpb" path="res://Assets/Sprite/Buttons/GEMS (ANIMATION).PNG" id="8_6owbw"]
+[ext_resource type="Script" uid="uid://d3n3rtnia3825" path="res://Assets/Scripts/MainIsland/skill_equip.gd" id="1_bvd17"]
+[ext_resource type="Texture2D" uid="uid://br7bydaerdo4s" path="res://Assets/Sprite/BG/39.png" id="2_c40ji"]
+[ext_resource type="Texture2D" uid="uid://dxm3isa0kdsuf" path="res://Assets/Sprite/Buttons/REWARDS, SKILLS, TIME BUTTONS.png" id="3_almbi"]
+[ext_resource type="FontFile" uid="uid://dv455unisnjo4" path="res://Assets/Sprite/font/PressStart2P-Regular.ttf" id="4_2wwim"]
+[ext_resource type="Texture2D" uid="uid://brmkb0v8t1qhp" path="res://Assets/Sprite/Buttons/try again,done, purchase, etc. buttons.png" id="5_7nq2h"]
+[ext_resource type="Texture2D" uid="uid://es647ytq5k65" path="res://Assets/Sprite/Buttons/MAP, Mission, Lock & Unlock Buttons.png" id="6_ip1vq"]
+[ext_resource type="FontFile" uid="uid://yi78scq3kpk3" path="res://Assets/Sprite/font/Montserrat-Black.ttf" id="7_gup7l"]
+[ext_resource type="Texture2D" uid="uid://p7smd3uo48y8" path="res://Assets/Sprite/Buttons/COLLECT & NAVIGATION BUTTONS.png" id="8_n58rg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0n0hm"]
 bg_color = Color(0.25490198, 0.14117648, 0.047058824, 0.47843137)
@@ -19,15 +18,15 @@ corner_radius_bottom_left = 27
 corner_detail = 20
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3yr1g"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 region_rect = Rect2(768, 488, 456, 144)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0fkxk"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 region_rect = Rect2(760, 488, 464, 144)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7lvu1"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
@@ -37,29 +36,45 @@ region_rect = Rect2(768, 496, 448, 136)
 [sub_resource type="LabelSettings" id="LabelSettings_njvuc"]
 line_spacing = 5.15
 paragraph_spacing = 2.13
-font = ExtResource("4_ive4b")
+font = ExtResource("4_2wwim")
 font_size = 17
 font_color = Color(0.22500002, 0.13607068, 0.03867188, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yh6u3"]
-texture = ExtResource("5_pmkfs")
-region_rect = Rect2(768, 592, 456, 136)
+texture = ExtResource("5_7nq2h")
+region_rect = Rect2(320, 600, 448, 128)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q1dhx"]
-texture = ExtResource("5_pmkfs")
-region_rect = Rect2(768, 448, 448, 128)
+texture = ExtResource("5_7nq2h")
+region_rect = Rect2(320, 592, 448, 136)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3lgxa"]
-texture = ExtResource("5_pmkfs")
+texture = ExtResource("5_7nq2h")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
-region_rect = Rect2(760, 592, 464, 136)
+region_rect = Rect2(320, 592, 448, 136)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ierud"]
-texture = ExtResource("5_pmkfs")
-region_rect = Rect2(320, 448, 440, 136)
+texture = ExtResource("6_ip1vq")
+region_rect = Rect2(224, 696, 544, 168)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_056qk"]
+texture = ExtResource("5_7nq2h")
+region_rect = Rect2(528, 768, 456, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mjnlo"]
+texture = ExtResource("5_7nq2h")
+region_rect = Rect2(536, 768, 440, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_duasp"]
+texture = ExtResource("5_7nq2h")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(528, 760, 456, 136)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ierud"]
 bg_color = Color(0.25490198, 0.14117648, 0.047058824, 0.47843137)
@@ -69,117 +84,70 @@ corner_radius_bottom_right = 9
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tixn7"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 region_rect = Rect2(320, 792, 448, 128)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g2y43"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 region_rect = Rect2(312, 784, 456, 144)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n0hm"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(320, 784, 448, 144)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4q4p"]
-texture = ExtResource("5_pmkfs")
-region_rect = Rect2(320, 448, 448, 128)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_effoh"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 region_rect = Rect2(768, 640, 456, 136)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_njvuc"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 region_rect = Rect2(768, 632, 448, 144)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8xsxa"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(760, 640, 464, 136)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77hec"]
-texture = ExtResource("5_pmkfs")
-region_rect = Rect2(312, 448, 464, 136)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vrk1s"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 region_rect = Rect2(320, 496, 448, 136)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35cyg"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 region_rect = Rect2(320, 496, 448, 136)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vugk3"]
-texture = ExtResource("3_dqp8t")
+texture = ExtResource("3_almbi")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(312, 488, 456, 152)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dqp8t"]
-texture = ExtResource("5_pmkfs")
-region_rect = Rect2(320, 448, 448, 136)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_056qk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dstj4"]
-texture = ExtResource("7_vmln8")
+texture = ExtResource("8_n58rg")
 region_rect = Rect2(192, 632, 592, 272)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgeke"]
-texture = ExtResource("7_vmln8")
+texture = ExtResource("8_n58rg")
 region_rect = Rect2(200, 632, 576, 280)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mouvt"]
-texture = ExtResource("7_vmln8")
+texture = ExtResource("8_n58rg")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(200, 624, 576, 288)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3yr1g"]
-bg_color = Color(0.25490198, 0.14117648, 0.047058824, 0.47843137)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ierud"]
-atlas = ExtResource("8_6owbw")
-region = Rect2(0, 0, 1984, 1984)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k1pdg"]
-atlas = ExtResource("8_6owbw")
-region = Rect2(1984, 0, 1984, 1984)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gy7fo"]
-atlas = ExtResource("8_6owbw")
-region = Rect2(0, 1984, 1984, 1984)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kg7jw"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ierud")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k1pdg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gy7fo")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
 
 [node name="Control" type="Control" unique_id=44343785]
 layout_mode = 3
@@ -188,19 +156,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_s4q4p")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=612658370]
-position = Vector2(666, 372)
-scale = Vector2(0.555, 0.555)
-texture = ExtResource("2_dqp8t")
+script = ExtResource("1_bvd17")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=468067049]
 custom_minimum_size = Vector2(1280, 720)
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
-texture = ExtResource("2_77hec")
+texture = ExtResource("2_c40ji")
 
 [node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=1590925288]
 layout_mode = 1
@@ -258,13 +221,12 @@ offset_top = 35.171
 offset_right = 738.0851
 offset_bottom = 100.171005
 scale = Vector2(1.16, 1.16)
-text = "Need help?
-Get a tiny clue to
+text = "A tiny clue to
 find the answer!"
 label_settings = SubResource("LabelSettings_njvuc")
 horizontal_alignment = 1
 
-[node name="hint_purchase_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=1550425224]
+[node name="hint_equip_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=1550425224]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 824.3447
@@ -274,6 +236,33 @@ offset_bottom = 134.12836
 theme_override_styles/normal = SubResource("StyleBoxTexture_yh6u3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_q1dhx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_3lgxa")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ierud")
+
+[node name="cooldown_label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect/hint_equip_btn" unique_id=1268859136]
+layout_mode = 0
+offset_left = 100.044525
+offset_top = 102.40825
+offset_right = 2921.0444
+offset_bottom = 834.40826
+scale = Vector2(0.035, 0.035)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_gup7l")
+theme_override_font_sizes/font_size = 600
+text = "12312312"
+horizontal_alignment = 1
+
+[node name="hint_unequip_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=1182992790]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 824.3447
+offset_top = 14.128365
+offset_right = 1124.3447
+offset_bottom = 134.12836
+theme_override_styles/normal = SubResource("StyleBoxTexture_056qk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mjnlo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_duasp")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_ierud")
 
 [node name="hintCountlabel" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=1595898212]
@@ -286,7 +275,7 @@ offset_right = 380.7961
 offset_bottom = 44.696983
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_b53m5")
+theme_override_fonts/font = ExtResource("7_gup7l")
 theme_override_font_sizes/font_size = 37
 
 [node name="PanelContainer" type="PanelContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect/hintCountlabel" unique_id=1705985833]
@@ -298,17 +287,16 @@ offset_right = 50.471947
 offset_bottom = 55.791443
 theme_override_styles/panel = SubResource("StyleBoxFlat_ierud")
 
-[node name="hintTimer_lbl" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=805360428]
+[node name="hint_disabled" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=1880305797]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
-offset_left = 943.4453
-offset_top = 110.9252
-offset_right = 1476.4453
-offset_bottom = 394.9252
-scale = Vector2(0.13197912, 0.14854391)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 208
-text = "23:06"
+offset_left = 824.345
+offset_top = 8.8
+offset_right = 1124.345
+offset_bottom = 128.79999
+texture = ExtResource("6_ip1vq")
+region_rect = Rect2(224, 696, 544, 160)
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=219871308]
 custom_minimum_size = Vector2(100, 160)
@@ -335,18 +323,17 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_0n0hm")
 
 [node name="Label2" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=127368559]
 layout_mode = 0
-offset_left = 456.324
-offset_top = 30.396
-offset_right = 762.52405
-offset_bottom = 95.395996
+offset_left = 457.5148
+offset_top = 31.0964
+offset_right = 763.71484
+offset_bottom = 96.0964
 scale = Vector2(1.16, 1.16)
 text = "Extra Time!
-put 10 more seconds
-back on your clock."
+on your clock."
 label_settings = SubResource("LabelSettings_njvuc")
 horizontal_alignment = 1
 
-[node name="addTime_purchase_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=33940769]
+[node name="add_equip_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=33940769]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 824.3447
@@ -356,9 +343,8 @@ offset_bottom = 134.12836
 theme_override_styles/normal = SubResource("StyleBoxTexture_yh6u3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_q1dhx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_3lgxa")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_s4q4p")
 
-[node name="timeCountlabel" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=1574586738]
+[node name="addCountlabel" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=1574586738]
 unique_name_in_owner = true
 z_index = 2
 layout_mode = 0
@@ -368,10 +354,10 @@ offset_right = 380.7961
 offset_bottom = 44.696983
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_b53m5")
+theme_override_fonts/font = ExtResource("7_gup7l")
 theme_override_font_sizes/font_size = 37
 
-[node name="PanelContainer" type="PanelContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2/timeCountlabel" unique_id=1176411223]
+[node name="PanelContainer" type="PanelContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2/addCountlabel" unique_id=1176411223]
 z_index = -1
 layout_mode = 0
 offset_left = -9.528051
@@ -380,17 +366,28 @@ offset_right = 50.471947
 offset_bottom = 55.791443
 theme_override_styles/panel = SubResource("StyleBoxFlat_ierud")
 
-[node name="addTimer_lbl" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=594897366]
+[node name="add_unequip_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=1363167263]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 943.4454
-offset_top = 112.32806
-offset_right = 1476.4453
-offset_bottom = 396.32806
-scale = Vector2(0.13197912, 0.14854391)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 208
-text = "23:06"
+offset_left = 824.3447
+offset_top = 14.128365
+offset_right = 1124.3447
+offset_bottom = 134.12836
+theme_override_styles/normal = SubResource("StyleBoxTexture_056qk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mjnlo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_duasp")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ierud")
+
+[node name="add_disabled" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=480531776]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 824.345
+offset_top = 8.8
+offset_right = 1124.345
+offset_bottom = 128.79999
+texture = ExtResource("6_ip1vq")
+region_rect = Rect2(224, 696, 544, 160)
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=190798127]
 custom_minimum_size = Vector2(100, 160)
@@ -423,13 +420,12 @@ offset_right = 783.594
 offset_bottom = 112.831
 scale = Vector2(1.16, 1.16)
 text = "Time Out!
-Stop the clock for
-10 seconds to think.
+to think.
 "
 label_settings = SubResource("LabelSettings_njvuc")
 horizontal_alignment = 1
 
-[node name="freezeTime_purchase_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=2006920673]
+[node name="freeze_equip_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=2006920673]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 824.3447
@@ -439,7 +435,6 @@ offset_bottom = 134.12836
 theme_override_styles/normal = SubResource("StyleBoxTexture_yh6u3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_q1dhx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_3lgxa")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_77hec")
 
 [node name="freezeCountlabel" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=175501003]
 unique_name_in_owner = true
@@ -451,7 +446,7 @@ offset_right = 380.7961
 offset_bottom = 44.696983
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_b53m5")
+theme_override_fonts/font = ExtResource("7_gup7l")
 theme_override_font_sizes/font_size = 37
 
 [node name="PanelContainer" type="PanelContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3/freezeCountlabel" unique_id=2035636766]
@@ -463,17 +458,28 @@ offset_right = 50.471947
 offset_bottom = 55.791443
 theme_override_styles/panel = SubResource("StyleBoxFlat_ierud")
 
-[node name="freezeTimer_lbl" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=1845773284]
+[node name="freeze_unequip_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=1633605593]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 943.4454
-offset_top = 112.32806
-offset_right = 1476.4453
-offset_bottom = 396.32806
-scale = Vector2(0.13197912, 0.14854391)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 208
-text = "23:06"
+offset_left = 824.3447
+offset_top = 14.128365
+offset_right = 1124.3447
+offset_bottom = 134.12836
+theme_override_styles/normal = SubResource("StyleBoxTexture_056qk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mjnlo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_duasp")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ierud")
+
+[node name="freeze_disabled" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=199112054]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 824.345
+offset_top = 8.8
+offset_right = 1124.345
+offset_bottom = 128.79999
+texture = ExtResource("6_ip1vq")
+region_rect = Rect2(224, 696, 544, 160)
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1643195806]
 custom_minimum_size = Vector2(100, 160)
@@ -507,12 +513,11 @@ offset_bottom = 91.741
 scale = Vector2(1.16, 1.16)
 text = "Next One!
 jump past this 
-question and keep
-going."
+question."
 label_settings = SubResource("LabelSettings_njvuc")
 horizontal_alignment = 1
 
-[node name="skip_purchase_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1782489068]
+[node name="skip_equip_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1782489068]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 824.3447
@@ -522,7 +527,6 @@ offset_bottom = 134.12836
 theme_override_styles/normal = SubResource("StyleBoxTexture_yh6u3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_q1dhx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_3lgxa")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_dqp8t")
 
 [node name="skipCountlabel" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1700664983]
 unique_name_in_owner = true
@@ -534,7 +538,7 @@ offset_right = 380.7961
 offset_bottom = 44.696983
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_b53m5")
+theme_override_fonts/font = ExtResource("7_gup7l")
 theme_override_font_sizes/font_size = 37
 
 [node name="PanelContainer" type="PanelContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4/skipCountlabel" unique_id=2016891637]
@@ -546,17 +550,28 @@ offset_right = 50.471947
 offset_bottom = 55.791443
 theme_override_styles/panel = SubResource("StyleBoxFlat_ierud")
 
-[node name="skipTimer_lbl" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1763606585]
+[node name="skip_unequip_btn" type="Button" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=563947451]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 943.4454
-offset_top = 112.32806
-offset_right = 1476.4453
-offset_bottom = 396.32806
-scale = Vector2(0.13197912, 0.14854391)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 208
-text = "23:06"
+offset_left = 824.3447
+offset_top = 14.128365
+offset_right = 1124.3447
+offset_bottom = 134.12836
+theme_override_styles/normal = SubResource("StyleBoxTexture_056qk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mjnlo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_duasp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_056qk")
+
+[node name="skip_disabled" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1800261477]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 824.345
+offset_top = 8.8
+offset_right = 1124.345
+offset_bottom = 128.79999
+texture = ExtResource("6_ip1vq")
+region_rect = Rect2(224, 696, 544, 160)
 
 [node name="cancel_btn" type="Button" parent="NinePatchRect" unique_id=959431826]
 layout_mode = 0
@@ -568,56 +583,12 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dstj4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xgeke")
 theme_override_styles/hover = SubResource("StyleBoxTexture_mouvt")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect" unique_id=697355937]
-z_index = 2
-layout_mode = 0
-offset_left = 145.0
-offset_top = 73.0
-offset_right = 185.0
-offset_bottom = 113.0
-scale = Vector2(2.0669186, 1.6738461)
-region_rect = Rect2(40, 2352, 1888, 1312)
-
-[node name="PanelContainer" type="PanelContainer" parent="NinePatchRect/NinePatchRect" unique_id=2028046643]
-z_index = -1
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 40.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_3yr1g")
-
-[node name="diamond_label" type="Label" parent="NinePatchRect/NinePatchRect" unique_id=80850907]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 50.316444
-offset_top = 1.7922795
-offset_right = 265.31644
-offset_bottom = 217.79228
-scale = Vector2(0.13919312, 0.14768007)
-theme_override_colors/font_color = Color(0, 0.99969536, 0.99969536, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_b53m5")
-theme_override_font_sizes/font_size = 176
-text = "23"
-horizontal_alignment = 1
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect/NinePatchRect" unique_id=2135986235]
-z_index = 2
-layout_mode = 0
-offset_right = 200.0
-offset_bottom = 200.0
-scale = Vector2(0.19809204, 0.19563709)
-region_rect = Rect2(40, 2352, 1888, 1312)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NinePatchRect/NinePatchRect" unique_id=2090756367]
-position = Vector2(19.83629, 18.52022)
-scale = Vector2(0.02208171, 0.028967457)
-sprite_frames = SubResource("SpriteFrames_kg7jw")
-animation = &"new_animation"
-autoplay = "new_animation"
-frame_progress = 0.7394114
-
-[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect/hint_purchase_btn" to="." method="_on_hint_purchase_btn_pressed"]
-[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2/addTime_purchase_btn" to="." method="_on_add_time_purchase_btn_pressed"]
-[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3/freezeTime_purchase_btn" to="." method="_on_freeze_time_purchase_btn_pressed"]
-[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4/skip_purchase_btn" to="." method="_on_skip_purchase_btn_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect/hint_equip_btn" to="." method="_on_hint_purchase_btn_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect/hint_unequip_btn" to="." method="_on_hint_lock_btn_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2/add_equip_btn" to="." method="_on_add_time_purchase_btn_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2/add_unequip_btn" to="." method="_on_add_lock_btn_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3/freeze_equip_btn" to="." method="_on_freeze_time_purchase_btn_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3/freeze_unequip_btn" to="." method="_on_freeze_lock_btn_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4/skip_equip_btn" to="." method="_on_skip_purchase_btn_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4/skip_unequip_btn" to="." method="_on_skip_lock_btn_pressed"]
 [connection signal="pressed" from="NinePatchRect/cancel_btn" to="." method="_on_cancel_btn_pressed"]

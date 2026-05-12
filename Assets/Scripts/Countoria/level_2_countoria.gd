@@ -51,6 +51,7 @@ func _ready():
 	lose_board.hide()
 	blur_overlay.hide()
 	$CanvasLayer3/completion_board/back_button.disabled = true
+	$CanvasLayer3/completion_board/back_button.modulate = Color(0.5,0.5,0.5)
 	$CanvasLayer3/completion_board/completion_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 	# --- VIDEO SETUP ---
@@ -187,7 +188,7 @@ func setup_board_buttons():
 
 func _on_rewards_claimed():
 	if tapping_audio: tapping_audio.play()
-	GameManager.receive_island_reward("island_2.5")
+	GameManager.collect_island_reward("island_2.5")
 	GameManager.complete_minigame("island_2")
 	
 	var tween = create_tween().set_parallel(true)
@@ -395,3 +396,4 @@ func _on_menu_pressed():
 func _on_dash_rescue_finished() -> void:
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/mapSelector.tscn")
 	GameManager.unlock_island("island_3")
+	

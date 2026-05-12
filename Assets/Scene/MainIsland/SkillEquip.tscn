@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxssdaei6of11"]
 
 [ext_resource type="Script" uid="uid://d3n3rtnia3825" path="res://Assets/Scripts/MainIsland/skill_equip.gd" id="1_bvd17"]
+[ext_resource type="Texture2D" uid="uid://b10xy1kmgyibx" path="res://Assets/Sprite/origbig.png" id="2_almbi"]
 [ext_resource type="Texture2D" uid="uid://br7bydaerdo4s" path="res://Assets/Sprite/BG/39.png" id="2_c40ji"]
 [ext_resource type="Texture2D" uid="uid://dxm3isa0kdsuf" path="res://Assets/Sprite/Buttons/REWARDS, SKILLS, TIME BUTTONS.png" id="3_almbi"]
 [ext_resource type="FontFile" uid="uid://dv455unisnjo4" path="res://Assets/Sprite/font/PressStart2P-Regular.ttf" id="4_2wwim"]
@@ -157,6 +158,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bvd17")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=669701119]
+position = Vector2(666, 372)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("2_almbi")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=468067049]
 custom_minimum_size = Vector2(1280, 720)

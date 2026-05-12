@@ -135,7 +135,7 @@ func _on_back_pressed():
 		update_page()
 
 func _on_done_pressed():
-	GameManager.complete_study_topic("science")
+	GameManager.complete_study_topic("science","plant_functions")
 	GameManager.load_scene("res://Assets/Scene/StudySession/BloomsGroove/science_study.tscn")
 
 func _on_cancel_pressed():

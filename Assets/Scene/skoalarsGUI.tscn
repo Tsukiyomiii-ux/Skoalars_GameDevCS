@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_8bjxf"]
 [ext_resource type="Script" uid="uid://cawmixdenvlnx" path="res://Assets/Scripts/MainIsland/MainSkoalarsControl.gd" id="3_14q07"]
 [ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_k7dxl"]
+[ext_resource type="Texture2D" uid="uid://c2bwy13rwip1k" path="res://Assets/Sprite/Buttons/muteBtn.png" id="6_8bjxf"]
 [ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="6_wo1e8"]
 [ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="7_e6qhv"]
 [ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="8_3idep"]
@@ -285,9 +286,7 @@ region_rect = Rect2(56, 240, 136, 112)
 texture = ExtResource("6_wo1e8")
 region_rect = Rect2(1104, 600, 80, 64)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g060"]
-texture = ExtResource("6_wo1e8")
-region_rect = Rect2(232, 240, 128, 112)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_14q07"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lltph"]
 texture = ExtResource("6_wo1e8")
@@ -296,6 +295,22 @@ texture_margin_top = 8.0
 texture_margin_right = 5.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(232, 240, 128, 112)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7dxl"]
+texture = ExtResource("6_8bjxf")
+region_rect = Rect2(464, 16, 272, 224)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8bjxf"]
+texture = ExtResource("6_8bjxf")
+region_rect = Rect2(464, 16, 272, 216)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1xuy"]
+texture = ExtResource("6_8bjxf")
+texture_margin_left = 5.0
+texture_margin_top = 8.0
+texture_margin_right = 5.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(464, 8, 264, 232)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htacr"]
 bg_color = Color(0.05490196, 0.050980393, 0.050980393, 0.8039216)
@@ -559,6 +574,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_i71qq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_r1kqm")
 
 [node name="mute_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect" unique_id=1622286815]
+unique_name_in_owner = true
 z_index = 40
 layout_mode = 0
 offset_left = 132.8695
@@ -567,8 +583,22 @@ offset_right = 332.8698
 offset_bottom = 1660.639
 scale = Vector2(4.425, 4.425)
 theme_override_styles/normal = SubResource("StyleBoxTexture_jjp2r")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_8g060")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_14q07")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lltph")
+
+[node name="unmute_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect" unique_id=645082213]
+unique_name_in_owner = true
+visible = false
+z_index = 40
+layout_mode = 0
+offset_left = 132.8695
+offset_top = 1510.639
+offset_right = 332.8698
+offset_bottom = 1660.639
+scale = Vector2(4.425, 4.425)
+theme_override_styles/normal = SubResource("StyleBoxTexture_k7dxl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8bjxf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_o1xuy")
 
 [node name="open_cont" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/Popup" unique_id=350482393]
 visible = false
@@ -736,12 +766,22 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer" unique_id=913284930]
+[node name="mute_btn1" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer" unique_id=913284930]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(2000, 2000)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("6_wo1e8")
 region_rect = Rect2(56, 240, 136, 112)
+
+[node name="unmute_btn1" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer" unique_id=1017390923]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(2000, 2000)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_8bjxf")
+region_rect = Rect2(128, 16, 272, 224)
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer" unique_id=55968632]
 layout_mode = 2
@@ -765,7 +805,6 @@ scale = Vector2(24.965, 36.255)
 min_value = -20.095
 max_value = 6.0
 step = 0.0
-value = -3.0
 
 [node name="ext_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2" unique_id=887132736]
 custom_minimum_size = Vector2(600, 600)
@@ -871,6 +910,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_0skql")
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/mute_btn" to="Control" method="_on_mute_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/unmute_btn" to="Control" method="_on_unmute_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect/play_btn" to="Control" method="_on_play_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect2/study_btn" to="Control" method="_on_study_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control" method="_on_quit_btn_pressed"]

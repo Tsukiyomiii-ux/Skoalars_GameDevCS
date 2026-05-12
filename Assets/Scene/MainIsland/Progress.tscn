@@ -9,6 +9,15 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnuu8"]
 bg_color = Color(0.09946289, 0.909375, 0.894189, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pthr"]
+bg_color = Color(0.09803922, 0.9098039, 0.89411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qewpa"]
+bg_color = Color(0.09803922, 0.9098039, 0.89411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtusn"]
+bg_color = Color(0.09803922, 0.9098039, 0.89411765, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnuu8"]
 atlas = ExtResource("4_lnuu8")
 region = Rect2(0, 0, 768, 512)
@@ -156,6 +165,7 @@ offset_left = 30.966166
 offset_top = 18.370861
 offset_right = 319.84012
 offset_bottom = 45.37086
+theme_override_styles/fill = SubResource("StyleBoxFlat_7pthr")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=414340389]
 layout_mode = 0
@@ -187,6 +197,7 @@ offset_left = 32.157173
 offset_top = 18.370876
 offset_right = 320.15717
 offset_bottom = 45.370876
+theme_override_styles/fill = SubResource("StyleBoxFlat_qewpa")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=661040726]
 layout_mode = 0
@@ -218,6 +229,7 @@ offset_left = 32.157166
 offset_top = 18.504578
 offset_right = 320.15717
 offset_bottom = 45.504578
+theme_override_styles/fill = SubResource("StyleBoxFlat_dtusn")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=498632782]
 layout_mode = 0

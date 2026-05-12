@@ -61,6 +61,8 @@ func _ready():
 
 	$ui_layer/win_board/next_button.disabled = true
 	$ui_layer/win_board/next_button.modulate = Color(0.5, 0.5, 0.5)
+	$ui_layer/win_board/back_button.disabled = true
+	$ui_layer/win_board/back_button.modulate = Color(0.5, 0.5, 0.5)
 
 	if freeze_icon: freeze_icon.pivot_offset = freeze_icon.size / 2
 	if gem_icon: gem_icon.pivot_offset = gem_icon.size / 2
@@ -416,5 +418,8 @@ func _on_collect_rewards_pressed() -> void:
 	GameManager.receive_island_reward("island_2")
 	GameManager.complete_minigame("island_2")
 	var btn = $ui_layer/win_board/next_button
+	var qbtn = $ui_layer/win_board/back_button
 	btn.disabled = false
 	btn.modulate = Color(1, 1, 1)
+	qbtn.disabled = false
+	qbtn.modulate = Color(1, 1, 1)

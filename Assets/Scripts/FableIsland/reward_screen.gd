@@ -17,13 +17,16 @@ func _ready():
 	if next_btn:
 		next_btn.disabled = true
 		next_btn.modulate.a = 0.5
+		back_btn.disabled = true
+		back_btn.modulate.a = 0.5
 
 # --- SIGNALS ---
 
 func _on_texture_button_pressed(): # This is your COLLECT button
 	# 1. Disable the button so they can't click it twice
 	collect_btn.disabled = true
-	GameManager.receive_island_reward("island_1")
+	collect_btn.modulate = Color(0.5,.5,.5)
+	GameManager.collect_island_reward("island_1")
 	GameManager.complete_minigame("island_1")
 	
 	# 2. Show and Animate the +5 Popup
@@ -49,6 +52,8 @@ func _on_texture_button_pressed(): # This is your COLLECT button
 	if next_btn:
 		next_btn.disabled = false
 		next_btn.modulate.a = 1.0
+		back_btn.disabled = false
+		back_btn.modulate.a = 1.0
 
 func _on_next_button_pressed():
 	GameManager.load_scene("res://Assets/Scene/FableIsland/level_2_spelling_quest.tscn")

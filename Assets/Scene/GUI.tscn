@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="6_w7auq"]
 [ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="7_bkhn2"]
 [ext_resource type="Texture2D" uid="uid://dxm3isa0kdsuf" path="res://Assets/Sprite/Buttons/REWARDS, SKILLS, TIME BUTTONS.png" id="9_jcv1r"]
+[ext_resource type="FontFile" uid="uid://yi78scq3kpk3" path="res://Assets/Sprite/font/Montserrat-Black.ttf" id="9_wtl41"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
 atlas = ExtResource("2_n1vfu")
@@ -818,6 +819,17 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_bdihs")
 theme_override_styles/hover = SubResource("StyleBoxTexture_76yte")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_bexiq")
 
+[node name="HCooldownLabel" type="Label" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect" unique_id=773336935]
+visible = false
+layout_mode = 0
+offset_left = 1075.776
+offset_top = 338.436
+offset_right = 61075.777
+offset_bottom = 6338.436
+scale = Vector2(0.675, 0.675)
+theme_override_fonts/font = ExtResource("9_wtl41")
+theme_override_font_sizes/font_size = 400
+
 [node name="NinePatchRect2" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer" unique_id=1329268767]
 custom_minimum_size = Vector2(2500, 900)
 layout_mode = 2
@@ -835,6 +847,17 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_k85cw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6wdsa")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_f67ih")
 
+[node name="FCooldownLabel" type="Label" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect2" unique_id=1954370985]
+visible = false
+layout_mode = 0
+offset_left = 1075.776
+offset_top = 338.436
+offset_right = 61075.777
+offset_bottom = 6338.436
+scale = Vector2(0.675, 0.675)
+theme_override_fonts/font = ExtResource("9_wtl41")
+theme_override_font_sizes/font_size = 400
+
 [node name="NinePatchRect3" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer" unique_id=206657621]
 custom_minimum_size = Vector2(2500, 900)
 layout_mode = 2
@@ -850,6 +873,17 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_34pc5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wtl41")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_a0i0p")
 
+[node name="ACooldownLabel" type="Label" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect3" unique_id=680943237]
+visible = false
+layout_mode = 0
+offset_left = 1075.776
+offset_top = 338.436
+offset_right = 61075.777
+offset_bottom = 6338.436
+scale = Vector2(0.675, 0.675)
+theme_override_fonts/font = ExtResource("9_wtl41")
+theme_override_font_sizes/font_size = 400
+
 [node name="NinePatchRect4" type="NinePatchRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer" unique_id=1488498044]
 custom_minimum_size = Vector2(2500, 900)
 layout_mode = 2
@@ -864,6 +898,16 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_n28cw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_1phfi")
 theme_override_styles/hover = SubResource("StyleBoxTexture_x14uf")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_55a7n")
+
+[node name="SCooldownLabel" type="Label" parent="Control/MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect4" unique_id=830869085]
+layout_mode = 0
+offset_left = 1075.7756
+offset_top = 319.31558
+offset_right = 61075.777
+offset_bottom = 6319.3154
+scale = Vector2(0.675, 0.675)
+theme_override_fonts/font = ExtResource("9_wtl41")
+theme_override_font_sizes/font_size = 400
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]

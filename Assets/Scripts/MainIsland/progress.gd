@@ -10,11 +10,16 @@ func _ready():
 	math_bar.max_value = 100
 	science_bar.max_value = 100
 	geography_bar.max_value = 100
-	
 	literacy_bar.value = GameManager.get_study_progress("literacy") * 100
 	math_bar.value = GameManager.get_study_progress("math") * 100
 	science_bar.value = GameManager.get_study_progress("science") * 100
 	geography_bar.value = GameManager.get_study_progress("geography") * 100
+	
+	# Debug - check what values are coming in
+	print("📊 Literacy: ", GameManager.get_study_progress("literacy"))
+	print("📊 Science: ", GameManager.get_study_progress("science"))
+	print("📊 Math: ", GameManager.get_study_progress("math"))
+	print("📊 Geography: ", GameManager.get_study_progress("geography"))
 
 func _on_cancel_btn_pressed():
 	var island_scenes = {

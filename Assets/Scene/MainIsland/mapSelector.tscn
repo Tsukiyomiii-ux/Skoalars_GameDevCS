@@ -26,6 +26,10 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(304, 144, 952, 776)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x2uvu"]
+texture = ExtResource("3_qk3hw")
+region_rect = Rect2(296, 144, 976, 816)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6e484"]
 texture = ExtResource("4_5rios")
 region_rect = Rect2(232, 80, 1112, 880)
@@ -153,6 +157,18 @@ offset_bottom = 388.98898
 theme_override_styles/normal = SubResource("StyleBoxTexture_5rios")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_qk3hw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_gr43v")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_x2uvu")
+
+[node name="fableLock_btn" type="NinePatchRect" parent="MarginContainer/NinePatchRect/fableIsle_btn" unique_id=798214175]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -31.307941
+offset_top = 62.858257
+offset_right = 318.69205
+offset_bottom = 182.85826
+scale = Vector2(1.201, 1.209)
+texture = ExtResource("5_f255l")
+region_rect = Rect2(232, 696, 528, 160)
 
 [node name="countoria_btn" type="Button" parent="MarginContainer/NinePatchRect" unique_id=904455745]
 unique_name_in_owner = true

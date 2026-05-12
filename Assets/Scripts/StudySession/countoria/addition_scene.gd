@@ -59,8 +59,8 @@ var current_page = 0
 
 func _ready() -> void:
 	# Load previous answers
-	board_1.text = saved_addition_answers["board1"]
-	board_2.text = saved_addition_answers["board2"]
+	board_1.text = GameManager.get_study_answer("addition", "answer1")
+	board_2.text = GameManager.get_study_answer("addition", "answer2")
 	
 	done_button.visible = false
 	_toggle_reflection_ui(false)
@@ -97,8 +97,8 @@ func _toggle_reflection_ui(show: bool):
 
 func check_word_count_requirement():
 	# Update saved memory as they type
-	saved_addition_answers["board1"] = board_1.text
-	saved_addition_answers["board2"] = board_2.text
+	GameManager.save_study_answer("addition", "answer1", board_1.text)
+	GameManager.save_study_answer("addition", "answer2", board_2.text)
 	
 	var words1 = board_1.text.strip_edges().split(" ", false).size()
 	var words2 = board_2.text.strip_edges().split(" ", false).size()
@@ -131,5 +131,5 @@ func _on_back_btn_pressed():
 
 func _on_done_btn_pressed():
 	GameManager.add_diamonds(1)
-	GameManager.complete_study_topic("math")
+	GameManager.complete_study_topic("math","addition")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/countoria/studysession_countoria.tscn")

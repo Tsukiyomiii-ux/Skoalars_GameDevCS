@@ -84,6 +84,8 @@ func _ready():
 			grandchild.process_mode = Node.PROCESS_MODE_ALWAYS
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.disabled = true
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.modulate = Color(0.5, 0.5, 0.5)
+	$PopupLayer/WinPopup/MainFrame/CollectButton.disabled = false
+	$PopupLayer/WinPopup/MainFrame/CollectButton.modulate = Color(1, 1, 1)
 	
 	# Initial UI State
 	popup_layer.show()
@@ -351,10 +353,12 @@ func _on_try_again_pressed(): get_tree().reload_current_scene()
 func _on_quit_pressed(): get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/zypheria.tscn")
 
 func _on_collect_pressed():
-	GameManager.receive_island_reward("island_4.5")
+	GameManager.collect_island_reward("island_4.5")
 	GameManager.complete_minigame("island_4")
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.disabled = false
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.modulate = Color(1, 1, 1)
+	$PopupLayer/WinPopup/MainFrame/CollectButton.disabled = true
+	$PopupLayer/WinPopup/MainFrame/CollectButton.modulate = Color(0.5, 0.5, 0.5)
 
 func _on_collect_button_pressed() -> void:
 	_on_collect_pressed()

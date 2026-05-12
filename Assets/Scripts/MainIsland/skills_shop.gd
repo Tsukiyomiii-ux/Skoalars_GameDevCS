@@ -10,23 +10,14 @@ extends Control
 @onready var skip_btn = %skip_purchase_btn
 @onready var skip_count_label = %skipCountlabel
 
-# Timer Labels
 @onready var hint_timer_lbl = %hintTimer_lbl
 @onready var freeze_timer_lbl = %freezeTimer_lbl
 @onready var time_timer_lbl = %addTimer_lbl
 @onready var skip_timer_lbl = %skipTimer_lbl
 
-# --- COOLDOWN APPEARANCE ---
 @export var cooldown_font_color: Color = Color(1, 1, 1, 1)
 
 const COOLDOWN_SECONDS = 1800.0  # 30 minutes
-
-var last_bought = {
-	"hint": 0,
-	"freeze_time": 0,
-	"add_time": 0,
-	"skip": 0
-}
 
 func _ready():
 	update_shop()
@@ -36,8 +27,7 @@ func _ready():
 	freeze_btn.pressed.connect(_on_freeze_time_purchase_btn_pressed)
 	time_btn.pressed.connect(_on_add_time_purchase_btn_pressed)
 	skip_btn.pressed.connect(_on_skip_purchase_btn_pressed)
-	
-	# Hide all timer labels at start
+
 	hint_timer_lbl.visible = false
 	freeze_timer_lbl.visible = false
 	time_timer_lbl.visible = false
@@ -47,7 +37,7 @@ func _process(_delta):
 	update_cooldown_buttons()
 
 func get_cooldown_remaining(skill_name: String) -> float:
-	var elapsed = Time.get_unix_time_from_system() - last_bought[skill_name]
+	var elapsed = Time.get_unix_time_from_system() - GameManager.shop_last_bought[skill_name]
 	return max(0.0, COOLDOWN_SECONDS - elapsed)
 
 func is_on_cooldown(skill_name: String) -> bool:
@@ -79,7 +69,6 @@ func update_cooldown_buttons():
 
 func update_shop():
 	diamond_label.text = "" + str(GameManager.get_diamonds())
-
 	hint_count_label.text = str(GameManager.get_skill_cost("hint")) + "💎"
 	freeze_count_label.text = str(GameManager.get_skill_cost("freeze_time")) + "💎"
 	time_count_label.text = str(GameManager.get_skill_cost("add_time")) + "💎"
@@ -99,28 +88,32 @@ func _on_hint_purchase_btn_pressed():
 	if is_on_cooldown("hint"):
 		return
 	if GameManager.buy_skill("hint"):
-		last_bought["hint"] = Time.get_unix_time_from_system()
+		GameManager.shop_last_bought["hint"] = Time.get_unix_time_from_system()
+		GameManager.save_game()
 		print("✅ Hint +1 use! Total: ", GameManager.get_skill_uses("hint"))
 
 func _on_freeze_time_purchase_btn_pressed():
 	if is_on_cooldown("freeze_time"):
 		return
 	if GameManager.buy_skill("freeze_time"):
-		last_bought["freeze_time"] = Time.get_unix_time_from_system()
+		GameManager.shop_last_bought["freeze_time"] = Time.get_unix_time_from_system()
+		GameManager.save_game()
 		print("✅ Freeze +1 use! Total: ", GameManager.get_skill_uses("freeze_time"))
 
 func _on_add_time_purchase_btn_pressed():
 	if is_on_cooldown("add_time"):
 		return
 	if GameManager.buy_skill("add_time"):
-		last_bought["add_time"] = Time.get_unix_time_from_system()
+		GameManager.shop_last_bought["add_time"] = Time.get_unix_time_from_system()
+		GameManager.save_game()
 		print("✅ Add Time +1 use! Total: ", GameManager.get_skill_uses("add_time"))
 
 func _on_skip_purchase_btn_pressed():
 	if is_on_cooldown("skip"):
 		return
 	if GameManager.buy_skill("skip"):
-		last_bought["skip"] = Time.get_unix_time_from_system()
+		GameManager.shop_last_bought["skip"] = Time.get_unix_time_from_system()
+		GameManager.save_game()
 		print("✅ Skip +1 use! Total: ", GameManager.get_skill_uses("skip"))
 
 func _on_cancel_btn_pressed():
@@ -133,13 +126,12 @@ func _on_cancel_btn_pressed():
 		"island_2.2": "res://Assets/Scene/Countoria/level_2_countoria.tscn",
 		"island_3": "res://Assets/Scene/BloomsGrove/science.scn",
 		"island_3.1": "res://Assets/Scene/BloomsGrove/GardenMiniGame.tscn",
-		"island_3.2":"res://Assets/Scene/BloomsGrove/Minigame2.tscn",
+		"island_3.2": "res://Assets/Scene/BloomsGrove/Minigame2.tscn",
 		"island_4": "res://Assets/Scene/Zypheria/zypheria.tscn",
-		"island_4.1":"res://Assets/Scene/Zypheria/zypheria_lvl_1.tscn",
+		"island_4.1": "res://Assets/Scene/Zypheria/zypheria_lvl_1.tscn",
 		"island_4.2": "res://Assets/Scene/Zypheria/zypheria_lvl_2.tscn",
 		"island_5": "res://Assets/Scene/MainIsland/main_island.tscn",
 		"study": "res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn"
-		
 	}
 	var scene = island_scenes.get(GameManager.get_current_island(), "res://Assets/Scene/MainIsland/main_island.tscn")
 	get_tree().change_scene_to_file(scene)

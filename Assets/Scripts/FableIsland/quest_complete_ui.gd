@@ -8,6 +8,7 @@ func _ready():
 	# Gray out and disable Next button on start
 	$BoardImage/NextButton.disabled = true
 	$BoardImage/NextButton.modulate = Color(0.5, 0.5, 0.5)
+	
 
 func _on_back_button_pressed():
 	get_tree().paused = false

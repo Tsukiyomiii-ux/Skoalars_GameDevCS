@@ -24,7 +24,7 @@ func _ready() -> void:
 	if not GameManager.cutscene_played:
 		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.disabled = true       # grays it out and blocks clicks
 		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.modulate.a = 0.4      # optional: make it look faded
-	
+	GameManager.reset_game()
 
 
 

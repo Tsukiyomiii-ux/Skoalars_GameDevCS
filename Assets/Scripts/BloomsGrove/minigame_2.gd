@@ -273,7 +273,9 @@ func _on_quit_pressed() -> void:
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn")
 
 func _on_collect_pressed() -> void:
-	GameManager.receive_island_reward("island_3.5")
+	GameManager.collect_island_reward("island_3.5")
 	GameManager.complete_minigame("island_3")
 	$CanvasLayer2/Popup/Rescue.disabled = false
 	$CanvasLayer2/Popup/Rescue.modulate = Color(1, 1, 1)
+	$CanvasLayer2/Popup/Collect.disabled = true
+	$CanvasLayer2/Popup/Collect.modulate = Color(.5, .5, .5)

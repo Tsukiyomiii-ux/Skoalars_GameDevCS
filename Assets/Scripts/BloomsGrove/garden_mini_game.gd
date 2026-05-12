@@ -27,7 +27,7 @@ var questions = [
 	{"q": "What part of the plant anchors it firmly to the soil?", "options": ["Trunk", "Roots", "Fruits"], "answer": "Roots", "clue": "They hold the plant in place like feet"},
 	{"q": "What part of the plant produces growth hormones?", "options": ["Leaves", "Stem", "Roots"], "answer": "Roots", "clue": "The hidden part below the dirt."},
 	{"q": "What part of the plant supports the leaves and conducts water and minerals?", "options": ["Stem", "Branch", "Log"], "answer": "Stem", "clue": "The plant's backbone or main pillar."},
-	{"q": "What part of the plant transports food, water, and minerals to all parts of the plant body?", "options": ["Bramch", "Roots", "Stem"], "answer": "Stem", "clue": "It acts like a straw or elevator for nutrients."},
+	{"q": "What part of the plant transports food, water, and minerals to all parts of the plant body?", "options": ["Branch", "Roots", "Stem"], "answer": "Stem", "clue": "It acts like a straw or elevator for nutrients."},
 	{"q": "What part of the plant stores food mainly in the form of starch?", "options": ["Leaves", "Stem", "Flowers"], "answer": "Stem", "clue": "The long, central part that grows upward."},
 	{"q": "The primary site of photosynthesis in most plants.", "options": ["Flowers", "Leaves", "Roots"], "answer": "Leaves", "clue": "The plant's kitchen or solar panels"},
 	{"q": "What part of the plant is attached to the stem that makes food for the plant?", "options": ["Trunk", "Branch", "Leaves"], "answer": "Leaves", "clue": "The flat, green parts."},
@@ -58,8 +58,10 @@ func _ready():
 	$btn/Choice2.show()
 	$btn/Choice3.show()
 
-	$btn/BlackBG/PopupHolder/Next.disabled = false
+	$btn/BlackBG/PopupHolder/Next.disabled = true
 	$btn/BlackBG/PopupHolder/Next.modulate = Color(0.5, 0.5, 0.5)
+	$btn/BlackBG/PopupHolder/Back.disabled = true
+	$btn/BlackBG/PopupHolder/Back.modulate = Color(.5, .5, .5)	
 
 	GameManager.set_current_island("island_3")
 	GameManager.set_allowed_skills(["hint", "add_time", "freeze_time", "skip"])
@@ -295,3 +297,8 @@ func _on_collect_pressed() -> void:
 	GameManager.complete_minigame("island_3")
 	$btn/BlackBG/PopupHolder/Next.disabled = false
 	$btn/BlackBG/PopupHolder/Next.modulate = Color(1, 1, 1)	
+	$btn/BlackBG/PopupHolder/Back.disabled = false
+	$btn/BlackBG/PopupHolder/Back.modulate = Color(1, 1, 1)	
+	$btn/BlackBG/PopupHolder/Collect.disabled = true
+	$btn/BlackBG/PopupHolder/Collect.modulate = Color(.5, .5, .5)	
+	

@@ -152,27 +152,27 @@ func _on_next_btn_pressed():
 		match current_page_index:
 			6:
 				completed_topics["noun"] = true
-				GameManager.complete_study_topic("literacy")
+				GameManager.complete_study_topic("literacy","noun")
 				GameManager.add_diamonds(1)
 			12:
 				completed_topics["adjective"] = true
-				GameManager.complete_study_topic("literacy")
+				GameManager.complete_study_topic("literacy","adjective")
 				GameManager.add_diamonds(1)
 			18:
 				completed_topics["pronouns"] = true
-				GameManager.complete_study_topic("literacy")
+				GameManager.complete_study_topic("literacy","pronouns")
 				GameManager.add_diamonds(1)
 			24:
 				completed_topics["verb"] = true
-				GameManager.complete_study_topic("literacy")
+				GameManager.complete_study_topic("literacy","verb")
 				GameManager.add_diamonds(1)
 			30:
 				completed_topics["adverb"] = true
-				GameManager.complete_study_topic("literacy")
+				GameManager.complete_study_topic("literacy","adverb")
 				GameManager.add_diamonds(1)
 			36:
 				completed_topics["conjunction"] = true
-				GameManager.complete_study_topic("literacy")
+				GameManager.complete_study_topic("literacy","adjective")
 				GameManager.add_diamonds(1)
 		_go_to_topic_buttons()
 	elif current_page_index < page_list.size() - 1:

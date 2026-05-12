@@ -122,7 +122,7 @@ func _on_back_pressed():
 
 func _on_done_pressed():
 	GameManager.add_diamonds(1)
-	GameManager.complete_study_topic("science")
+	GameManager.complete_study_topic("science","recyclable")
 	GameManager.load_scene("res://Assets/Scene/StudySession/BloomsGroove/science_study.tscn")
 
 func _on_cancel_pressed():

@@ -81,6 +81,10 @@ func _ready():
 	
 	$Node2D/PopupLayer/WinPopup/BottomButtons/NextButton.disabled=true
 	$Node2D/PopupLayer/WinPopup/BottomButtons/NextButton.modulate = Color(0.5,0.5,0.5)
+	$Node2D/PopupLayer/WinPopup/BottomButtons/CancelButton.disabled = true
+	$Node2D/PopupLayer/WinPopup/BottomButtons/CancelButton.modulate= Color(.5,.5,.5)
+	$Node2D/PopupLayer/WinPopup/MainFrame/CollectButton.disabled = false
+	$Node2D/PopupLayer/WinPopup/MainFrame/CollectButton.modulate= Color(1,1,1)
 	
 	GameManager.hint_requested.connect(_on_hint_used)
 	GameManager.freeze_requested.connect(_on_freeze_used)
@@ -360,3 +364,7 @@ func _on_collect_button_pressed() -> void:
 	GameManager.complete_minigame("island_4")
 	$Node2D/PopupLayer/WinPopup/BottomButtons/NextButton.disabled = false
 	$Node2D/PopupLayer/WinPopup/BottomButtons/NextButton.modulate= Color(1,1,1)
+	$Node2D/PopupLayer/WinPopup/BottomButtons/CancelButton.disabled = false
+	$Node2D/PopupLayer/WinPopup/BottomButtons/CancelButton.modulate= Color(1,1,1)
+	$Node2D/PopupLayer/WinPopup/MainFrame/CollectButton.disabled = true
+	$Node2D/PopupLayer/WinPopup/MainFrame/CollectButton.modulate= Color(.5,.5,.5)

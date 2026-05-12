@@ -35,6 +35,9 @@ func _ready():
 	skip_lock_btn.pressed.connect(_on_skip_unequip_pressed)
 	update_all()
 
+func _process(_delta):
+	update_all()
+
 func update_all():
 	update_skill_row(hint_equip_btn, hint_lock_btn, hint_disabled, hint_count_label, "hint")
 	update_skill_row(add_equip_btn, add_lock_btn, add_disabled, add_count_label, "add_time")
@@ -45,30 +48,29 @@ func update_skill_row(equip_btn: Button, lock_btn: Button, disabled_img: Node, c
 	var owned = GameManager.has_skill(skill_name)
 	var equipped = GameManager.is_skill_equipped(skill_name)
 	var uses = GameManager.get_skill_uses(skill_name)
+	var on_cooldown = GameManager.is_skill_on_cooldown(skill_name)
 
-	if not owned:
-		# Not owned — show disabled image, hide buttons
+	if not owned or uses <= 0:
 		equip_btn.visible = false
 		lock_btn.visible = false
 		disabled_img.visible = true
-	elif uses <= 0:
-		# Owned but no uses left — show disabled image, hide buttons
-		equip_btn.visible = false
-		lock_btn.visible = false
-		disabled_img.visible = true
-	elif equipped:
-		# Equipped — show unequip button only
+	elif on_cooldown:
 		equip_btn.visible = false
 		lock_btn.visible = true
+		lock_btn.disabled = true
+		disabled_img.visible = false
+	elif equipped:
+		equip_btn.visible = false
+		lock_btn.visible = true
+		lock_btn.disabled = false
 		disabled_img.visible = false
 	else:
-		# Owned, has uses, not equipped — show equip button
 		equip_btn.visible = true
 		lock_btn.visible = false
 		disabled_img.visible = false
 
 	if count_lbl and is_instance_valid(count_lbl):
-		count_lbl.text = "×" + str(uses) if owned else "0"
+		count_lbl.text = "x" + str(uses) if owned else "0"
 
 # --- EQUIP HANDLERS ---
 func _on_hint_equip_pressed():
@@ -114,9 +116,9 @@ func _on_cancel_btn_pressed():
 		"island_2.2": "res://Assets/Scene/Countoria/level_2_countoria.tscn",
 		"island_3": "res://Assets/Scene/BloomsGrove/science.scn",
 		"island_3.1": "res://Assets/Scene/BloomsGrove/GardenMiniGame.tscn",
-		"island_3.2":"res://Assets/Scene/BloomsGrove/Minigame2.tscn",
+		"island_3.2": "res://Assets/Scene/BloomsGrove/Minigame2.tscn",
 		"island_4": "res://Assets/Scene/Zypheria/zypheria.tscn",
-		"island_4.1":"res://Assets/Scene/Zypheria/zypheria_lvl_1.tscn",
+		"island_4.1": "res://Assets/Scene/Zypheria/zypheria_lvl_1.tscn",
 		"island_4.2": "res://Assets/Scene/Zypheria/zypheria_lvl_2.tscn",
 		"island_5": "res://Assets/Scene/MainIsland/main_island.tscn",
 		"study": "res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn"

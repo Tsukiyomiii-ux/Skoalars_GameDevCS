@@ -5,10 +5,11 @@ var diamonds: int = 5
 var loading_screen_scene = preload("res://Assets/Scene/loading_screen.tscn")
 var loading_instance
 var target_path : String
-var progress = [] # This array will hold the loading percentage
+var progress = []
 var wand_used = false
 var cutscene_played: bool = false
 var tutorial_completed: bool = false
+var completed_topics: Array = []
 
 # 📚 STUDY SESSION PROGRESS
 var study_progress = {
@@ -20,24 +21,20 @@ var study_progress = {
 
 # 📝 STUDY SESSION ANSWERS (Centralized)
 var study_answers = {
-	# Science
 	"plant_lesson":     {"answer1": "", "answer2": ""},
 	"plant_functions":  {"answer1": "", "answer2": ""},
 	"ecosystem":        {"answer1": "", "answer2": ""},
 	"bio_waste":        {"answer1": "", "answer2": ""},
 	"non_bio_waste":    {"answer1": "", "answer2": ""},
 	"recyclable_waste": {"answer1": "", "answer2": ""},
-	# Math
 	"addition":         {"answer1": "", "answer2": ""},
 	"subtraction":      {"answer1": "", "answer2": ""},
 	"multiplication":   {"answer1": "", "answer2": ""},
 	"division":         {"answer1": "", "answer2": ""},
-	# Geography
 	"flags":            {"answer1": "", "answer2": ""},
 	"capitals":         {"answer1": "", "answer2": ""},
 	"continents":       {"answer1": "", "answer2": ""},
 	"tectonic":         {"answer1": "", "answer2": ""},
-	# Literacy
 	"literacy_noun":        {"answer1": "", "answer2": ""},
 	"literacy_adjective":   {"answer1": "", "answer2": ""},
 	"literacy_pronouns":    {"answer1": "", "answer2": ""},
@@ -66,7 +63,20 @@ var island_progress = {
 	"island_4": {"minigames_completed": 0, "total_minigames": 2},
 }
 
-# Skills (false = not owned)
+const SKILL_COOLDOWNS = {
+	"hint": 60.0,
+	"freeze_time": 60.0,
+	"add_time": 60.0,
+	"skip": 60.0
+}
+var skill_cooldowns = {
+	"hint": 0.0,
+	"freeze_time": 0.0,
+	"add_time": 0.0,
+	"skip": 0.0
+}
+
+# Skills
 var skills = {
 	"hint": true,
 	"freeze_time": false,
@@ -74,7 +84,6 @@ var skills = {
 	"skip": false
 }
 
-# Skill costs
 const SKILL_COSTS = {
 	"hint": 10,
 	"freeze_time": 18,
@@ -89,12 +98,19 @@ var skill_uses = {
 	"skip": 0
 }
 
-# Skills equipped
 var skills_equipped = {
 	"hint": false,
 	"freeze_time": false,
 	"add_time": false,
 	"skip": false
+}
+
+# 🛒 SHOP COOLDOWN (persisted so it survives scene changes)
+var shop_last_bought = {
+	"hint": 0,
+	"freeze_time": 0,
+	"add_time": 0,
+	"skip": 0
 }
 
 # Island unlocks
@@ -105,22 +121,16 @@ var islands_unlocked = {
 	"island_4": false,
 }
 
-# This variable will store the path to the next level (e.g., Level 1, Level 2, or Level 3)
 var next_scene_path: String = ""
-
-# Optional: If you want to carry the player's score between islands
 var current_score: int = 0
-
-# Optional: If you want to track if the hint has already been used in previous levels
 var hint_already_used: bool = false
-
 var allowed_skills: Array = ["hint", "freeze_time", "add_time", "skip"]
 
 # Signals
 signal diamonds_changed(new_amount)
 signal skill_purchased(skill_name)
 signal island_unlocked(island_name)
-signal reward_received(island_name)	
+signal reward_received(island_name)
 signal hint_requested
 signal freeze_requested
 signal add_time_requested
@@ -130,6 +140,27 @@ signal skill_button_state_changed(skill_name, is_disabled)
 signal settings_opened
 signal settings_closed
 
+var island_rewards_collected = {
+	"island_1": false,
+	"island_1.5": false,
+	"island_2": false,
+	"island_2.5": false,
+	"island_3": false,
+	"island_3.5": false,
+	"island_4": false,
+	"island_4.5": false,
+}
+
+func collect_island_reward(island_name: String):
+	receive_island_reward(island_name)
+	island_rewards_collected[island_name] = true
+	save_game()
+	print("🏆 Reward collected and island locked: ", island_name)
+
+func is_island_done(island_name: String) -> bool:
+	var minigames_done = is_island_complete(island_name)
+	var reward_done = island_rewards_collected.get(island_name, false)
+	return minigames_done and reward_done
 
 func set_allowed_skills(skills_list: Array):
 	allowed_skills = skills_list
@@ -139,49 +170,47 @@ func update_skill_button_states():
 	print("🔍 allowed_skills: ", allowed_skills)
 	for skill_name in skill_uses:
 		var not_allowed = skill_name not in allowed_skills
+		var on_cooldown = is_skill_on_cooldown(skill_name)
 		var should_disable = not_allowed or not is_skill_equipped(skill_name) or skill_uses[skill_name] <= 0
 		print("  ", skill_name, " | not_allowed: ", not_allowed, " | should_disable: ", should_disable)
 		skill_button_state_changed.emit(skill_name, should_disable)
 
 func load_scene(path: String):
 	target_path = path
-
-	# 1. Spawn the loading screen GUI
 	loading_instance = loading_screen_scene.instantiate()
 	get_tree().root.add_child(loading_instance)
-
-	# 2. Start the background loading thread
 	ResourceLoader.load_threaded_request(path)
-	set_process(true)
 
-func _process(_delta):
-	if target_path == "":
-		set_process(false)
-		return
+func _process(delta):
+	if target_path != "":
+		var status = ResourceLoader.load_threaded_get_status(target_path, progress)
+		if loading_instance:
+			loading_instance.update_bar(progress[0])
+		if status == ResourceLoader.THREAD_LOAD_LOADED:
+			var new_scene = ResourceLoader.load_threaded_get(target_path)
+			await get_tree().create_timer(0.5).timeout
+			get_tree().change_scene_to_packed(new_scene)
+			loading_instance.queue_free()
+			target_path = ""
 
-	# Check the current status of the background loading
-	var status = ResourceLoader.load_threaded_get_status(target_path, progress)
+	var any_changed = false
+	for skill in skill_cooldowns:
+		if skill_cooldowns[skill] > 0.0:
+			skill_cooldowns[skill] -= delta
+			if skill_cooldowns[skill] <= 0.0:
+				skill_cooldowns[skill] = 0.0
+				any_changed = true
+	if any_changed:
+		update_skill_button_states()
 
-	# Pass the progress (0.0 to 1.0) to the bar's update function
-	if loading_instance:
-		loading_instance.update_bar(progress[0])
+func is_skill_on_cooldown(skill_name: String) -> bool:
+	return skill_cooldowns.get(skill_name, 0.0) > 0.0
 
-	if status == ResourceLoader.THREAD_LOAD_LOADED:
-		# When finished, get the loaded scene data
-		var new_scene = ResourceLoader.load_threaded_get(target_path)
-
-		# Short delay so the user sees the full bar for a moment
-		await get_tree().create_timer(0.5).timeout
-
-		get_tree().change_scene_to_packed(new_scene)
-
-		# Clean up the loading overlay
-		loading_instance.queue_free()
-		target_path = ""
-		set_process(false)
-
+func get_skill_cooldown_remaining(skill_name: String) -> float:
+	return skill_cooldowns.get(skill_name, 0.0)
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	load_game()
 
 # 💎 DIAMOND FUNCTIONS
@@ -236,6 +265,7 @@ func use_skill(skill_name: String) -> bool:
 		return false
 
 	skill_uses[skill_name] -= 1
+	skill_cooldowns[skill_name] = SKILL_COOLDOWNS[skill_name]
 	save_game()
 	print("✅ Used ", skill_name, " | Remaining: ", skill_uses[skill_name])
 
@@ -283,20 +313,22 @@ func get_current_island() -> String:
 	return current_island
 
 # 📚 STUDY PROGRESS FUNCTIONS
-func complete_study_topic(subject: String):
+func complete_study_topic(subject: String, topic_key: String):
+	if topic_key in completed_topics:
+		return
+	completed_topics.append(topic_key)
 	if not study_progress.has(subject): return
 	var s = study_progress[subject]
 	if s["completed"] < s["total"]:
 		s["completed"] += 1
 		save_game()
-		print("📚 ", subject, " progress: ", s["completed"], "/", s["total"])
+		print("📚 ", subject, " - ", topic_key, " completed: ", s["completed"], "/", s["total"])
 
 func get_study_progress(subject: String) -> float:
 	if not study_progress.has(subject): return 0.0
 	var s = study_progress[subject]
 	return float(s["completed"]) / float(s["total"])
 
-# 📝 STUDY ANSWER FUNCTIONS (Centralized)
 func save_study_answer(topic: String, field: String, value: String):
 	if study_answers.has(topic):
 		study_answers[topic][field] = value
@@ -342,17 +374,14 @@ func receive_island_reward(island_name: String):
 	if not ISLAND_REWARDS.has(island_name):
 		return
 	var rewards = ISLAND_REWARDS[island_name]
-
 	add_diamonds(rewards["diamonds"])
 	print("💎 +", rewards["diamonds"], " diamonds!")
-
 	for skill in rewards["skill_uses"]:
 		var amount = rewards["skill_uses"][skill]
 		if amount > 0:
 			skill_uses[skill] += amount
 			skills[skill] = true
 			print("🎁 +", amount, " ", skill, " uses!")
-
 	reward_received.emit(island_name)
 	save_game()
 
@@ -379,9 +408,11 @@ func save_game():
 		"study_progress": study_progress,
 		"study_answers": study_answers,
 		"cutscene_played": cutscene_played,
-		"tutorial_completed": tutorial_completed
+		"tutorial_completed": tutorial_completed,
+		"island_rewards_collected": island_rewards_collected,
+		"completed_topics": completed_topics,
+		"shop_last_bought": shop_last_bought,  # ← persisted shop cooldown
 	}
-	
 	var file = FileAccess.open("user://game_save.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(save_data))
 	file.close()
@@ -404,7 +435,9 @@ func load_game():
 			island_progress = data.get("island_progress", island_progress)
 			tutorial_completed = data.get("tutorial_completed", false)
 			study_progress = data.get("study_progress", study_progress)
-			# ✅ Merge instead of replace so new keys are never lost
+			island_rewards_collected = data.get("island_rewards_collected", island_rewards_collected)
+			completed_topics = data.get("completed_topics", [])
+			shop_last_bought = data.get("shop_last_bought", shop_last_bought)  # ← load shop cooldown
 			var loaded_answers = data.get("study_answers", {})
 			for key in loaded_answers:
 				if study_answers.has(key):
@@ -414,6 +447,7 @@ func load_game():
 			print("💾 Loaded: ", diamonds, " diamonds, uses: ", skill_uses)
 
 func reset_game():
+	completed_topics = []
 	diamonds = 500
 	skills = {"hint": true, "freeze_time": true, "add_time": true, "skip": true}
 	skill_uses = {"hint": 100, "freeze_time": 100, "add_time": 100, "skip": 100}
@@ -425,6 +459,13 @@ func reset_game():
 		"island_3": {"minigames_completed": 0, "total_minigames": 2},
 		"island_4": {"minigames_completed": 0, "total_minigames": 2},
 	}
+	island_rewards_collected = {
+		"island_1": false, "island_1.5": false,
+		"island_2": false, "island_2.5": false,
+		"island_3": false, "island_3.5": false,
+		"island_4": false, "island_4.5": false,
+	}
+	shop_last_bought = {"hint": 0, "freeze_time": 0, "add_time": 0, "skip": 0}  # ← reset shop cooldown
 	study_progress = {
 		"literacy": {"completed": 0, "total": 6},
 		"math": {"completed": 0, "total": 4},

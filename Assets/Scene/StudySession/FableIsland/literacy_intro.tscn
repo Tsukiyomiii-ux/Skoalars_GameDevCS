@@ -234,21 +234,12 @@ texture_normal = ExtResource("4_nffe1")
 
 [node name="NextBtn" type="TextureButton" parent="Control/NounPage" unique_id=944639693]
 layout_mode = 0
-offset_left = 1063.0
-offset_top = 609.0
-offset_right = 1639.0
-offset_bottom = 885.0
+offset_left = 60.0
+offset_top = 616.0
+offset_right = 636.0
+offset_bottom = 892.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("15_vld6f")
-
-[node name="BackBtn" type="TextureButton" parent="Control/NounPage" unique_id=1114526707]
-layout_mode = 0
-offset_left = 65.0
-offset_top = 623.0
-offset_right = 610.0
-offset_bottom = 886.0
-scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("16_e0kox")
 
 [node name="NounPage2" type="Control" parent="Control" unique_id=919362570]
 visible = false
@@ -773,23 +764,12 @@ What kind? How many? Which one?
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
 
-[node name="BackBtn" type="TextureButton" parent="Control/AdjectivePage" unique_id=1426146124]
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.35500002
-offset_left = 64.0
-offset_top = 609.0
-offset_right = 609.0
-offset_bottom = 621.015
-scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("16_e0kox")
-
 [node name="NextBtn" type="TextureButton" parent="Control/AdjectivePage" unique_id=1425140191]
 layout_mode = 0
-offset_left = 1060.0
-offset_top = 605.0
-offset_right = 1636.0
-offset_bottom = 881.0
+offset_left = 58.000008
+offset_top = 621.0
+offset_right = 634.0
+offset_bottom = 897.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("15_vld6f")
 
@@ -1336,21 +1316,12 @@ so we don't repeat the same word  over and over.
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
 
-[node name="BackBtn" type="TextureButton" parent="Control/PronounsPage" unique_id=1137555395]
-layout_mode = 0
-offset_left = 66.0
-offset_top = 621.0
-offset_right = 611.0
-offset_bottom = 884.0
-scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("16_e0kox")
-
 [node name="NextBtn" type="TextureButton" parent="Control/PronounsPage" unique_id=426317395]
 layout_mode = 0
-offset_left = 1060.0
-offset_top = 618.0
-offset_right = 1636.0
-offset_bottom = 894.0
+offset_left = 58.0
+offset_top = 615.0
+offset_right = 634.0
+offset_bottom = 891.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("15_vld6f")
 
@@ -1836,21 +1807,12 @@ text = "•A verb is an action word — it tells us what someone or something DO
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
 
-[node name="BackBtn" type="TextureButton" parent="Control/VerbPage" unique_id=1726677342]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 620.0
-offset_right = 607.0
-offset_bottom = 883.0
-scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("16_e0kox")
-
 [node name="NextBtn" type="TextureButton" parent="Control/VerbPage" unique_id=1581491138]
 layout_mode = 0
-offset_left = 1064.0
-offset_top = 616.0
-offset_right = 1640.0
-offset_bottom = 892.0
+offset_left = 61.0
+offset_top = 619.0
+offset_right = 637.0
+offset_bottom = 895.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("15_vld6f")
 
@@ -2324,21 +2286,12 @@ text = "•An adverb describes a verb, adjective, or another adverb.
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
 
-[node name="BackBtn" type="TextureButton" parent="Control/AdverbPage" unique_id=1090531643]
-layout_mode = 0
-offset_left = 66.0
-offset_top = 624.0
-offset_right = 611.0
-offset_bottom = 887.0
-scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("16_e0kox")
-
 [node name="NextBtn" type="TextureButton" parent="Control/AdverbPage" unique_id=1051240010]
 layout_mode = 0
-offset_left = 1060.0
-offset_top = 617.0
-offset_right = 1636.0
-offset_bottom = 893.0
+offset_left = 57.0
+offset_top = 618.0
+offset_right = 633.0
+offset_bottom = 894.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("15_vld6f")
 
@@ -2773,7 +2726,6 @@ theme_override_font_sizes/font_size = 22
 text = "Type your answers here (Minimum: 10 words)"
 
 [node name="ConjunctionPage" type="Control" parent="Control" unique_id=1267428924]
-visible = false
 anchors_preset = 0
 offset_right = 1260.0
 offset_bottom = 707.0
@@ -2818,21 +2770,12 @@ or sentences together.
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
 
-[node name="BackBtn" type="TextureButton" parent="Control/ConjunctionPage" unique_id=1920750441]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 624.0
-offset_right = 608.0
-offset_bottom = 887.0
-scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("16_e0kox")
-
 [node name="NextBtn" type="TextureButton" parent="Control/ConjunctionPage" unique_id=1355298664]
 layout_mode = 0
-offset_left = 1061.0
-offset_top = 623.0
-offset_right = 1637.0
-offset_bottom = 899.0
+offset_left = 58.0
+offset_top = 618.0
+offset_right = 634.0
+offset_bottom = 894.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("15_vld6f")
 
@@ -3174,6 +3117,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("34_imtxc")
 
 [node name="ConjunctionPage6" type="Control" parent="Control" unique_id=1194091068]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -3294,7 +3238,6 @@ offset_bottom = 40.0
 [connection signal="gui_input" from="Control/NounPage/Content" to="." method="_on_content_gui_input"]
 [connection signal="pressed" from="Control/NounPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
 [connection signal="pressed" from="Control/NounPage/NextBtn" to="." method="_on_next_btn_pressed"]
-[connection signal="pressed" from="Control/NounPage/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="gui_input" from="Control/NounPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
 [connection signal="pressed" from="Control/NounPage2/CancelBtn" to="." method="_on_cancel_btn_pressed"]
 [connection signal="mouse_entered" from="Control/NounPage2/NextBtn" to="." method="_on_next_btn_mouse_entered"]
@@ -3324,7 +3267,6 @@ offset_bottom = 40.0
 [connection signal="text_changed" from="Control/NounPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
 [connection signal="text_changed" from="Control/NounPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
 [connection signal="gui_input" from="Control/AdjectivePage/Content" to="." method="_on_content_gui_input"]
-[connection signal="pressed" from="Control/AdjectivePage/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="Control/AdjectivePage/NextBtn" to="." method="_on_next_btn_pressed"]
 [connection signal="pressed" from="Control/AdjectivePage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
 [connection signal="gui_input" from="Control/AdjectivePage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
@@ -3354,7 +3296,6 @@ offset_bottom = 40.0
 [connection signal="text_changed" from="Control/AdjectivePage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
 [connection signal="text_changed" from="Control/AdjectivePage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
 [connection signal="gui_input" from="Control/PronounsPage/Content" to="." method="_on_content_gui_input"]
-[connection signal="pressed" from="Control/PronounsPage/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="Control/PronounsPage/NextBtn" to="." method="_on_next_btn_pressed"]
 [connection signal="pressed" from="Control/PronounsPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
 [connection signal="gui_input" from="Control/PronounsPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
@@ -3380,7 +3321,6 @@ offset_bottom = 40.0
 [connection signal="text_changed" from="Control/PronounsPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
 [connection signal="text_changed" from="Control/PronounsPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
 [connection signal="gui_input" from="Control/VerbPage/Content" to="." method="_on_content_gui_input"]
-[connection signal="pressed" from="Control/VerbPage/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="Control/VerbPage/NextBtn" to="." method="_on_next_btn_pressed"]
 [connection signal="pressed" from="Control/VerbPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
 [connection signal="gui_input" from="Control/VerbPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
@@ -3408,7 +3348,6 @@ offset_bottom = 40.0
 [connection signal="text_changed" from="Control/VerbPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
 [connection signal="text_changed" from="Control/VerbPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
 [connection signal="gui_input" from="Control/AdverbPage/Content" to="." method="_on_content_gui_input"]
-[connection signal="pressed" from="Control/AdverbPage/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="Control/AdverbPage/NextBtn" to="." method="_on_next_btn_pressed"]
 [connection signal="pressed" from="Control/AdverbPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
 [connection signal="gui_input" from="Control/AdverbPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
@@ -3437,7 +3376,6 @@ offset_bottom = 40.0
 [connection signal="text_changed" from="Control/AdverbPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
 [connection signal="text_changed" from="Control/AdverbPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
 [connection signal="gui_input" from="Control/ConjunctionPage/Content" to="." method="_on_content_gui_input"]
-[connection signal="pressed" from="Control/ConjunctionPage/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="Control/ConjunctionPage/NextBtn" to="." method="_on_next_btn_pressed"]
 [connection signal="pressed" from="Control/ConjunctionPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
 [connection signal="gui_input" from="Control/ConjunctionPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
