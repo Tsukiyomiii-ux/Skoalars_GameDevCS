@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dcrblb6rl3r1b" path="res://Assets/Sprite/Objects/Fences.png" id="12_euir5"]
 [ext_resource type="Texture2D" uid="uid://ctqrytg3hya0y" path="res://Assets/Sprite/FABLE ISLE/benches.png" id="13_v72cm"]
 [ext_resource type="Texture2D" uid="uid://dn6rjhel0803j" path="res://Assets/Sprite/FABLE ISLE/garden.png" id="15_nkldo"]
-[ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/MainIsland/skoalarsGUI.tscn" id="18_5ceng"]
+[ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/skoalarsGUI.tscn" id="18_5ceng"]
 [ext_resource type="Texture2D" uid="uid://xrl7vfq4luud" path="res://Assets/Fable Isle/ASSETS 2/Signs.png" id="18_yta66"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q8jj8"]

@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://bc8m7h3adfm7f"]
+
+[ext_resource type="Script" uid="uid://ct6rrytqp4j87" path="res://Assets/Scripts/StudySession/BloomsGrove/anatomy.gd" id="1_l734r"]
+[ext_resource type="Texture2D" uid="uid://dxlplxs455ilb" path="res://Assets/Bloom Game 1/Study Session/98.png" id="2_d5xq3"]
+[ext_resource type="Texture2D" uid="uid://dg5bnxrwa3sx1" path="res://Assets/Bloom Game 1/New Assets/Next.png" id="2_f2saw"]
+[ext_resource type="Texture2D" uid="uid://cfnt11lk75em0" path="res://Assets/Bloom Game 1/New Assets/Back.png" id="3_4cvro"]
+[ext_resource type="Texture2D" uid="uid://cdyti31f5p6m2" path="res://Assets/Bloom Game 1/New Assets/Cancel.png" id="5_7813p"]
+[ext_resource type="Texture2D" uid="uid://brmkb0v8t1qhp" path="res://Assets/Sprite/Buttons/try again,done, purchase, etc. buttons.png" id="7_jj0gl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuss8"]
+atlas = ExtResource("7_jj0gl")
+region = Rect2(766.64026, 146.27005, 451.3302, 142.78006)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jj0gl"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuss8"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="UI" type="CanvasLayer" unique_id=645071722]
+script = ExtResource("1_l734r")
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=1310841588]
+position = Vector2(638.74994, 360.49997)
+scale = Vector2(0.82845056, 0.70800775)
+texture = ExtResource("2_d5xq3")
+
+[node name="Instruction" type="RichTextLabel" parent="Bg" unique_id=349577444]
+offset_left = -576.6789
+offset_top = -331.21106
+offset_right = -25.046692
+offset_bottom = 325.56146
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/bold_font_size = 60
+bbcode_enabled = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Bg" unique_id=556675797]
+offset_left = -556.1586
+offset_top = -331.21103
+offset_right = -34.70331
+offset_bottom = 336.86075
+
+[node name="Lesson" type="RichTextLabel" parent="Bg/VBoxContainer" unique_id=1606833917]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0.49803922, 0.5176471, 0.02745098, 0.8117647)
+theme_override_font_sizes/normal_font_size = 71
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 2
+
+[node name="Next" type="TextureButton" parent="Bg" unique_id=1547613023]
+offset_left = 481.92383
+offset_top = 324.14905
+offset_right = 681.9238
+offset_bottom = 424.14905
+texture_normal = ExtResource("2_f2saw")
+
+[node name="Back" type="TextureButton" parent="Bg" unique_id=900728019]
+offset_left = -697.38617
+offset_top = 350.98492
+offset_right = -497.38617
+offset_bottom = 450.98492
+texture_normal = ExtResource("3_4cvro")
+
+[node name="Cancel" type="TextureButton" parent="Bg" unique_id=71836986]
+offset_left = -739.63367
+offset_top = -487.98898
+offset_right = -539.63367
+offset_bottom = -387.98898
+texture_normal = ExtResource("5_7813p")
+
+[node name="LessonImage" type="TextureRect" parent="Bg" unique_id=1051558428]
+offset_left = 28.064512
+offset_top = -328.3862
+offset_right = 565.2118
+offset_bottom = 315.67453
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Done" type="TextureButton" parent="Bg" unique_id=1519833274]
+offset_left = 456.57532
+offset_top = 318.4994
+offset_right = 907.5753
+offset_bottom = 460.4994
+scale = Vector2(0.6, 0.8)
+texture_normal = SubResource("AtlasTexture_tuss8")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Bg" unique_id=940398525]
+offset_left = -567.0223
+offset_top = -335.44827
+offset_right = -37.11737
+offset_bottom = -130.64822
+
+[node name="Label" type="RichTextLabel" parent="Bg/VBoxContainer2" unique_id=1772302106]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "New things you learned:"
+fit_content = true
+
+[node name="Answer 1" type="TextEdit" parent="Bg" unique_id=1212091118]
+offset_left = -575.4718
+offset_top = -253.52823
+offset_right = -26.253662
+offset_bottom = 326.9739
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.26779, 0.26779047, 0.26779008, 0.6)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_jj0gl")
+placeholder_text = "Type your answer here (Minimum 10 words)"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Bg" unique_id=956140244]
+offset_left = 44.963528
+offset_top = -324.14896
+offset_right = 554.34814
+offset_bottom = -149.00963
+
+[node name="Label 2" type="RichTextLabel" parent="Bg/VBoxContainer3" unique_id=902741948]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "Things you found interesting or surprising"
+fit_content = true
+
+[node name="Answer 2" type="TextEdit" parent="Bg" unique_id=1803107547]
+offset_left = 32.892803
+offset_top = -204.09375
+offset_right = 568.83307
+offset_bottom = 322.0304
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.22670713, 0.22670767, 0.22670725, 0.6)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_tuss8")
+placeholder_text = "Type your answer here (Minimum 10 words)"
+
+[connection signal="pressed" from="Bg/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Bg/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Bg/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Bg/Done" to="." method="_on_done_pressed"]

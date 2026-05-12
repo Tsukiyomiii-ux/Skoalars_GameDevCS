@@ -1,101 +1,104 @@
-[gd_scene format=3 uid="uid://ddw4o1aufhyc0"]
+[gd_scene format=3 uid="uid://cg8mkilwse5gt"]
 
-[ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/MainIsland/skoalars.gd" id="1_rw33h"]
-[ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_8bjxf"]
-[ext_resource type="Script" uid="uid://cawmixdenvlnx" path="res://Assets/Scripts/MainIsland/MainSkoalarsControl.gd" id="3_14q07"]
-[ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_k7dxl"]
-[ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="6_wo1e8"]
-[ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="7_e6qhv"]
-[ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="8_3idep"]
-[ext_resource type="Texture2D" uid="uid://es647ytq5k65" path="res://Assets/Sprite/Buttons/MAP, Mission, Lock & Unlock Buttons.png" id="8_rw33h"]
-[ext_resource type="Texture2D" uid="uid://djo2qbnf5p85d" path="res://Assets/Sprite/Buttons/main menu buttons (1).png" id="9_yqgn5"]
+[ext_resource type="Script" uid="uid://7r6c5ksuynfd" path="res://Assets/Scripts/MainIsland/skoalars.gd" id="1_hdjqq"]
+[ext_resource type="Texture2D" uid="uid://b4bbahoe6qiet" path="res://Assets/Sprite/SKOALARS ASSETS (GUI) (14).png" id="2_4qtrs"]
+[ext_resource type="Script" uid="uid://cupg8v5q1n1gc" path="res://Assets/Scripts/MainIsland/StudySkoalarsGUI.gd" id="3_gqiou"]
+[ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_ogfwi"]
+[ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="5_sleun"]
+[ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="6_fg8vx"]
+[ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="7_8bedo"]
+[ext_resource type="Texture2D" uid="uid://es647ytq5k65" path="res://Assets/Sprite/Buttons/MAP, Mission, Lock & Unlock Buttons.png" id="8_yfmjc"]
+[ext_resource type="Texture2D" uid="uid://djo2qbnf5p85d" path="res://Assets/Sprite/Buttons/main menu buttons (1).png" id="9_ijaqv"]
+[ext_resource type="Texture2D" uid="uid://chdey0vuxbwkb" path="res://Assets/Sprite/Objects/TILESET VILLAGE TOP DOWN/HOUSE 1 - DAY.png" id="10_2wsoh"]
+[ext_resource type="Texture2D" uid="uid://dlolhqc643sxq" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 7, 2026, 04_43_23 PM.png" id="11_bn0li"]
+[ext_resource type="Texture2D" uid="uid://blvlhxgxvoqc6" path="res://Assets/Sprite/Objects/ChatGPT Image Apr 24, 2026, 02_56_06 PM.png" id="12_ffu5o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(2048, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ue4k"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(2560, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i18st"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(1024, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kst7u"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(1536, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1eggy"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(2048, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8pra0"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(2560, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7q320"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(2048, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ibbo"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(2560, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iu7bt"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(0, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nje0b"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(512, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2fh8"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(0, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mo137"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(512, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7jsc"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(1536, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfeg3"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(1024, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbc36"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(1536, 1024, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uf2gp"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(1024, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1k38g"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(1024, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0x8e"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(1536, 0, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bhoed"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(0, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_odprb"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(512, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e24c5"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(0, 1536, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_25lqc"]
-atlas = ExtResource("2_8bjxf")
+atlas = ExtResource("2_4qtrs")
 region = Rect2(512, 1536, 512, 512)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dag5b"]
@@ -211,7 +214,7 @@ animations = [{
 size = Vector2(5.7805095, 486.31403)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rm20y"]
-shader = ExtResource("4_k7dxl")
+shader = ExtResource("4_ogfwi")
 shader_parameter/lod = 0.0
 
 [sub_resource type="Animation" id="Animation_mm1dr"]
@@ -250,15 +253,15 @@ _data = {
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mm1dr"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(976, 488, 80, 72)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwllq"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(976, 488, 80, 72)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rm20y"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -266,15 +269,15 @@ texture_margin_bottom = 4.0
 region_rect = Rect2(976, 488, 80, 72)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eophj"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(976, 592, 88, 80)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i71qq"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(56, 240, 136, 112)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r1kqm"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 texture_margin_left = 5.0
 texture_margin_top = 8.0
 texture_margin_right = 5.0
@@ -282,15 +285,15 @@ texture_margin_bottom = 8.0
 region_rect = Rect2(56, 240, 136, 112)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jjp2r"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(1104, 600, 80, 64)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g060"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(232, 240, 128, 112)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lltph"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 texture_margin_left = 5.0
 texture_margin_top = 8.0
 texture_margin_right = 5.0
@@ -305,11 +308,11 @@ corner_radius_bottom_right = 95
 corner_radius_bottom_left = 95
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oec0s"]
-texture = ExtResource("7_e6qhv")
+texture = ExtResource("6_fg8vx")
 region_rect = Rect2(776, 552, 720, 208)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1e1k5"]
-texture = ExtResource("7_e6qhv")
+texture = ExtResource("6_fg8vx")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
@@ -317,7 +320,7 @@ texture_margin_bottom = 5.0
 region_rect = Rect2(776, 552, 720, 208)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htacr"]
-texture = ExtResource("7_e6qhv")
+texture = ExtResource("6_fg8vx")
 texture_margin_left = 15.0
 texture_margin_top = 15.0
 texture_margin_right = 15.0
@@ -325,12 +328,12 @@ texture_margin_bottom = 15.0
 region_rect = Rect2(776, 552, 720, 208)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ji2mt"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 texture_margin_left = 8.0
 region_rect = Rect2(48, 472, 384, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0lte"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
@@ -338,7 +341,7 @@ texture_margin_bottom = 5.0
 region_rect = Rect2(40, 472, 392, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ppph"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
@@ -346,11 +349,11 @@ texture_margin_bottom = 8.0
 region_rect = Rect2(48, 472, 384, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1tyq0"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(56, 680, 376, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1lgs"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
@@ -358,7 +361,7 @@ texture_margin_bottom = 5.0
 region_rect = Rect2(56, 680, 376, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tj2be"]
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
@@ -373,11 +376,11 @@ corner_radius_bottom_right = 223
 corner_radius_bottom_left = 223
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mc1qo"]
-texture = ExtResource("8_3idep")
+texture = ExtResource("7_8bedo")
 region_rect = Rect2(424, 152, 688, 688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03swh"]
-texture = ExtResource("8_3idep")
+texture = ExtResource("7_8bedo")
 texture_margin_left = 50.0
 texture_margin_top = 50.0
 texture_margin_right = 50.0
@@ -385,15 +388,15 @@ texture_margin_bottom = 50.0
 region_rect = Rect2(424, 152, 688, 688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0887"]
-texture = ExtResource("8_3idep")
+texture = ExtResource("7_8bedo")
 region_rect = Rect2(432, 152, 672, 688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03i5e"]
-texture = ExtResource("8_rw33h")
+texture = ExtResource("8_yfmjc")
 region_rect = Rect2(224, 168, 544, 160)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4wq3e"]
-texture = ExtResource("8_rw33h")
+texture = ExtResource("8_yfmjc")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
@@ -401,7 +404,7 @@ texture_margin_bottom = 5.0
 region_rect = Rect2(224, 168, 544, 160)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8miks"]
-texture = ExtResource("8_rw33h")
+texture = ExtResource("8_yfmjc")
 texture_margin_left = 15.0
 texture_margin_top = 15.0
 texture_margin_right = 15.0
@@ -409,15 +412,15 @@ texture_margin_bottom = 15.0
 region_rect = Rect2(224, 160, 544, 176)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbpqs"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 region_rect = Rect2(448, 336, 120, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kvow6"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 region_rect = Rect2(448, 344, 120, 96)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8noq3"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 texture_margin_left = 4.0
 texture_margin_top = 2.0
 texture_margin_right = 4.0
@@ -425,15 +428,15 @@ texture_margin_bottom = 2.0
 region_rect = Rect2(448, 344, 120, 96)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ob1j7"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 region_rect = Rect2(456, 440, 112, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tm8d8"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 region_rect = Rect2(456, 440, 112, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30ca2"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 texture_margin_left = 8.0
 texture_margin_top = 4.0
 texture_margin_right = 6.0
@@ -441,26 +444,65 @@ texture_margin_bottom = 4.0
 region_rect = Rect2(448, 440, 120, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dv1mw"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 region_rect = Rect2(456, 544, 112, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xwxkn"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 region_rect = Rect2(448, 544, 120, 104)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0skql"]
-texture = ExtResource("9_yqgn5")
+texture = ExtResource("9_ijaqv")
 texture_margin_left = 4.0
 texture_margin_top = 2.0
 texture_margin_right = 4.0
 texture_margin_bottom = 2.0
 region_rect = Rect2(456, 544, 112, 104)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3265"]
+texture = ExtResource("10_2wsoh")
+0:0/size_in_atlas = Vector2i(5, 7)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cxsrd"]
+texture = ExtResource("11_bn0li")
+35:7/size_in_atlas = Vector2i(26, 18)
+35:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3ilc"]
+texture = ExtResource("12_ffu5o")
+1:2/size_in_atlas = Vector2i(35, 24)
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mam2k"]
+sources/0 = SubResource("TileSetAtlasSource_s3265")
+sources/1 = SubResource("TileSetAtlasSource_cxsrd")
+sources/2 = SubResource("TileSetAtlasSource_d3ilc")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6c30k"]
+size = Vector2(59.612595, 39.114388)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8788"]
+size = Vector2(44.85011, 41.32841)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rsqo"]
+size = Vector2(44.85011, 41.32841)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc21q"]
+size = Vector2(15.037382, 41.32841)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mc12t"]
+size = Vector2(11.87743, 41.32841)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lne4a"]
+size = Vector2(15.037382, 33.210255)
+
 [node name="Skoalars" type="CharacterBody2D" unique_id=1875685537]
 scale = Vector2(0.015, 0.015)
-script = ExtResource("1_rw33h")
+script = ExtResource("1_hdjqq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1165061691]
+visible = false
 position = Vector2(1.5258789e-05, 1.5258789e-05)
 scale = Vector2(3.37, 3.37)
 sprite_frames = SubResource("SpriteFrames_dag5b")
@@ -480,7 +522,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("3_14q07")
+script = ExtResource("3_gqiou")
 open_cont = NodePath("MarginContainer/VBoxContainer/Popup/open_cont")
 volume_cont = NodePath("MarginContainer/VBoxContainer/volume_cont")
 bottom_cont = NodePath("MarginContainer/bottom_cont")
@@ -615,7 +657,7 @@ offset_top = -525.92017
 offset_right = 4186.3887
 offset_bottom = 672.7698
 scale = Vector2(1.305, 1.305)
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(328, 48, 672, 184)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer" unique_id=1663532903]
@@ -676,7 +718,7 @@ patch_margin_top = 1000
 patch_margin_bottom = 883
 
 [node name="quit_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3" unique_id=1650196446]
-z_index = 40
+z_index = 41
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -740,7 +782,7 @@ size_flags_vertical = 4
 custom_minimum_size = Vector2(2000, 2000)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("6_wo1e8")
+texture = ExtResource("5_sleun")
 region_rect = Rect2(56, 240, 136, 112)
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer" unique_id=55968632]
@@ -801,6 +843,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="mapStart_btn" type="Button" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect" unique_id=1335675035]
+visible = false
 z_index = 40
 layout_mode = 1
 anchors_preset = 8
@@ -868,13 +911,66 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dv1mw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xwxkn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0skql")
 
+[node name="House 7" type="TileMapLayer" parent="Control/MarginContainer/bottom_cont" unique_id=329597856]
+z_index = 4
+position = Vector2(-409.99997, 295)
+scale = Vector2(1.355, 1.355)
+tile_map_data = PackedByteArray(0, 0, 16, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_mam2k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control/MarginContainer/bottom_cont/House 7" unique_id=2071320901]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/MarginContainer/bottom_cont/House 7/StaticBody2D" unique_id=1845027848]
+position = Vector2(263.92065, -7.011078)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_6c30k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control/MarginContainer/bottom_cont/House 7/StaticBody2D" unique_id=2063088555]
+position = Vector2(256.82654, -36.90037)
+rotation = -0.79855675
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_q8788")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Control/MarginContainer/bottom_cont/House 7/StaticBody2D" unique_id=1444897238]
+position = Vector2(270.1107, -35.424366)
+rotation = -0.79855675
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_6rsqo")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Control/MarginContainer/bottom_cont/House 7/StaticBody2D" unique_id=1470466012]
+position = Vector2(245.75648, -46.49447)
+rotation = -0.0025512613
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_cc21q")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Control/MarginContainer/bottom_cont/House 7/StaticBody2D" unique_id=1073747029]
+position = Vector2(264.20667, -50.922523)
+rotation = -0.0025512613
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_mc12t")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Control/MarginContainer/bottom_cont/House 7/StaticBody2D" unique_id=2124213864]
+position = Vector2(233.95494, -19.557236)
+rotation = -0.0025512613
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_lne4a")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Control/MarginContainer/bottom_cont/House 7/StaticBody2D" unique_id=2090967807]
+position = Vector2(294.46497, -19.926205)
+rotation = -0.0025512613
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_lne4a")
+
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/mute_btn" to="Control" method="_on_mute_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect/play_btn" to="Control" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect2/study_btn" to="Control" method="_on_study_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control" method="_on_quit_btn_pressed"]
 [connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/HSlider" to="Control" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/ext_btn" to="Control" method="_on_ext_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn" to="Control" method="_on_map_start_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect2/diamond_btn" to="Control" method="_on_diamond_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect3/skills_btn" to="Control" method="_on_skills_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer/HBoxContainer/NinePatchRect4/progress_btn" to="Control" method="_on_progress_btn_pressed"]

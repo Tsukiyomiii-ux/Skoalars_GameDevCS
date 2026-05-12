@@ -1,0 +1,3466 @@
+[gd_scene format=3 uid="uid://bb2lmuum8fn4r"]
+
+[ext_resource type="Script" uid="uid://dlhurye3ul4bh" path="res://Assets/Scripts/StudySession/FableIsland/literacy_intro.gd" id="1_pxixk"]
+[ext_resource type="Texture2D" uid="uid://c4spj2yqntbhs" path="res://Assets/StudySession/Sprite/literacy.png" id="2_eao17"]
+[ext_resource type="Texture2D" uid="uid://es6y0cbirr06" path="res://Assets/StudySession/Sprite/ProfHoot Animation.png" id="3_ojrey"]
+[ext_resource type="Texture2D" uid="uid://orqj0ehohukd" path="res://Assets/StudySession/Sprite/BackButton.png" id="4_nffe1"]
+[ext_resource type="Texture2D" uid="uid://yfddgclk2xrm" path="res://Assets/StudySession/Sprite/Nouns.png" id="5_k55co"]
+[ext_resource type="Texture2D" uid="uid://dw2e4o64f3qe0" path="res://Assets/StudySession/Sprite/Pronouns.png" id="6_8qc2j"]
+[ext_resource type="Texture2D" uid="uid://ba7ksu0wf1cua" path="res://Assets/StudySession/Sprite/Conjunctions.png" id="7_gupwo"]
+[ext_resource type="Texture2D" uid="uid://cn2w3vl62hfkb" path="res://Assets/StudySession/Sprite/Verb.png" id="8_o52ny"]
+[ext_resource type="Texture2D" uid="uid://bq66ouwd6ofpm" path="res://Assets/StudySession/Sprite/AdVerbs.png" id="9_0s6cv"]
+[ext_resource type="Texture2D" uid="uid://me2xks1tuvfh" path="res://Assets/StudySession/Sprite/Adjectives.png" id="10_7i573"]
+[ext_resource type="Texture2D" uid="uid://bd4d85ntg3c3w" path="res://Assets/StudySession/Sprite/97.png" id="11_vkqec"]
+[ext_resource type="FontFile" uid="uid://bjtl1wpsattic" path="res://Assets/StudySession/Sprite/Cause-Bold.ttf" id="12_7nqti"]
+[ext_resource type="FontFile" uid="uid://bc3f2w0mt2aya" path="res://Assets/StudySession/Sprite/Roboto-Regular.ttf" id="13_gf3mm"]
+[ext_resource type="Texture2D" uid="uid://buj63bstrv4g6" path="res://Assets/Fable Isle/Level1/NextButton.png" id="15_vld6f"]
+[ext_resource type="Texture2D" uid="uid://dsqiu7wqrtr28" path="res://Assets/StudySession/Sprite/BackBtn.png" id="16_e0kox"]
+[ext_resource type="FontFile" uid="uid://bl12t3n81xahq" path="res://Assets/StudySession/Sprite/Roboto-Bold.ttf" id="17_mu2x3"]
+[ext_resource type="Texture2D" uid="uid://dsskr2dll7wpb" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 09_32_21 PM.png" id="18_axku2"]
+[ext_resource type="Texture2D" uid="uid://rm51puclr8lu" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 09_35_43 PM.png" id="19_5b4if"]
+[ext_resource type="Texture2D" uid="uid://c3gcro8dbxw08" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 09_42_53 PM.png" id="20_igd7i"]
+[ext_resource type="Texture2D" uid="uid://dx6xrbo8vco5e" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 09_56_27 PM.png" id="21_ne6ew"]
+[ext_resource type="Texture2D" uid="uid://c5yeci5m8grld" path="res://Assets/StudySession/Sprite/DoneBtn.png" id="22_h4tdw"]
+[ext_resource type="Texture2D" uid="uid://cnxfln0x00out" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 10_19_30 PM.png" id="23_x1ejo"]
+[ext_resource type="Texture2D" uid="uid://d4a5bwmage18n" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 10_23_35 PM.png" id="24_1ouqq"]
+[ext_resource type="Texture2D" uid="uid://dp4qxtuoml7el" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 10_30_54 PM.png" id="25_echkx"]
+[ext_resource type="Texture2D" uid="uid://crf4b741iv2ir" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 10_39_01 PM.png" id="26_bijkv"]
+[ext_resource type="Texture2D" uid="uid://bov5fnhb7mbyb" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 11_06_24 PM.png" id="27_yrby4"]
+[ext_resource type="Texture2D" uid="uid://cnomgfnit3wwp" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 11_12_20 PM.png" id="28_tcjdr"]
+[ext_resource type="Texture2D" uid="uid://phmamfc0the4" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 11_27_39 PM.png" id="29_0qy8x"]
+[ext_resource type="Texture2D" uid="uid://dxvi2s0qdwm8w" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 11_30_35 PM.png" id="30_6k1ny"]
+[ext_resource type="Texture2D" uid="uid://cotvttmdv2s6g" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 11_46_39 PM.png" id="31_uk6ud"]
+[ext_resource type="Texture2D" uid="uid://sdx5t45xiune" path="res://Assets/StudySession/Sprite/ChatGPT Image May 9, 2026, 11_51_55 PM.png" id="32_cbqnf"]
+[ext_resource type="Texture2D" uid="uid://c5yp6uo0d4008" path="res://Assets/StudySession/Sprite/ChatGPT Image May 10, 2026, 12_05_59 AM.png" id="33_v3xam"]
+[ext_resource type="Texture2D" uid="uid://dqcuye1uyk4w0" path="res://Assets/StudySession/Sprite/ChatGPT Image May 10, 2026, 12_08_20 AM.png" id="34_imtxc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgs2n"]
+atlas = ExtResource("3_ojrey")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fa77s"]
+atlas = ExtResource("3_ojrey")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shxgc"]
+atlas = ExtResource("3_ojrey")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fbqn"]
+atlas = ExtResource("3_ojrey")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dlwqg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgs2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fa77s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shxgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fbqn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="LiteracyIntro" type="Control" unique_id=972281023]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pxixk")
+
+[node name="Control2" type="Control" parent="." unique_id=317392260]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopicButtons" type="TextureRect" parent="Control2" unique_id=239991521]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -6.0
+offset_right = 2411.0
+offset_bottom = 1382.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_eao17")
+
+[node name="ProofHoot" type="AnimatedSprite2D" parent="Control2/TopicButtons" unique_id=800988867]
+position = Vector2(2134, 1013.5)
+scale = Vector2(1.6927084, 1.6230468)
+sprite_frames = SubResource("SpriteFrames_dlwqg")
+autoplay = "default"
+
+[node name="TextureButton" type="TextureButton" parent="Control2/TopicButtons" unique_id=2071862245]
+layout_mode = 0
+offset_left = 732.0
+offset_top = 1320.0
+offset_right = 1309.0
+offset_bottom = 1606.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NounBtn" type="TextureButton" parent="Control2/TopicButtons" unique_id=1814818067]
+layout_mode = 0
+offset_left = 417.99994
+offset_top = 414.0
+offset_right = 863.99994
+offset_bottom = 590.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("5_k55co")
+texture_pressed = ExtResource("5_k55co")
+
+[node name="PronounsBtn" type="TextureButton" parent="Control2/TopicButtons" unique_id=1025320392]
+layout_mode = 0
+offset_left = 419.99994
+offset_top = 728.00024
+offset_right = 881.99994
+offset_bottom = 907.00024
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("6_8qc2j")
+
+[node name="ConjunctionBtn" type="TextureButton" parent="Control2/TopicButtons" unique_id=132130362]
+layout_mode = 0
+offset_left = 1130.0
+offset_top = 1048.0
+offset_right = 1589.0
+offset_bottom = 1198.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("7_gupwo")
+
+[node name="VerbBtn" type="TextureButton" parent="Control2/TopicButtons" unique_id=395859533]
+layout_mode = 0
+offset_left = 1114.0
+offset_top = 732.00073
+offset_right = 1588.0001
+offset_bottom = 903.00073
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("8_o52ny")
+
+[node name="AdverbBtn" type="TextureButton" parent="Control2/TopicButtons" unique_id=1597506591]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 1044.0
+offset_right = 882.9999
+offset_bottom = 1196.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("9_0s6cv")
+
+[node name="AdjectivesBtn" type="TextureButton" parent="Control2/TopicButtons" unique_id=796687038]
+layout_mode = 0
+offset_left = 1136.0
+offset_top = 428.0
+offset_right = 1585.0001
+offset_bottom = 576.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("10_7i573")
+
+[node name="Control" type="Control" parent="." unique_id=1503442465]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1400613247]
+layout_mode = 0
+offset_right = 1844.2856
+offset_bottom = 1024.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("11_vkqec")
+
+[node name="NounPage" type="Control" parent="Control" unique_id=315921413]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="Control/NounPage" unique_id=2044961737]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 448.00003
+offset_top = 101.0
+offset_right = 666.0
+offset_bottom = 256.0
+scale = Vector2(1.9296663, 1.3799409)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 80
+text = "Noun
+"
+
+[node name="Content" type="RichTextLabel" parent="Control/NounPage" unique_id=1688968441]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 244.0
+offset_right = 1142.0
+offset_bottom = 600.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "What is a Nouns?
+•A noun is a word that names a person, place, thing, or idea.  
+
+•Think of nouns as the  \"name tags\" of language!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="CancelBtn" type="TextureButton" parent="Control/NounPage" unique_id=717744697]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/NounPage" unique_id=944639693]
+layout_mode = 0
+offset_left = 1063.0
+offset_top = 609.0
+offset_right = 1639.0
+offset_bottom = 885.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="BackBtn" type="TextureButton" parent="Control/NounPage" unique_id=1114526707]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NounPage2" type="Control" parent="Control" unique_id=919362570]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="Control/NounPage2" unique_id=1946463111]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 452.00003
+offset_top = 84.0
+offset_right = 670.0
+offset_bottom = 239.0
+scale = Vector2(1.9296663, 1.3799409)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 80
+text = "Noun
+"
+
+[node name="Content(personetc_)" type="RichTextLabel" parent="Control/NounPage2" unique_id=1338734176]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 266.0
+offset_right = 1174.0
+offset_bottom = 638.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "👤 Person → friends,  farmer, children
+🏡 Place → forest, river, village
+📦 Thing → roots, mortar, stakes, tree
+💡 Idea → conflict, theme, revenge"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="CancelBtn" type="TextureButton" parent="Control/NounPage2" unique_id=22139518]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/NounPage2" unique_id=1177328984]
+layout_mode = 0
+offset_left = 1063.0
+offset_top = 609.0
+offset_right = 1639.0
+offset_bottom = 885.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="BackBtn" type="TextureButton" parent="Control/NounPage2" unique_id=2023548333]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NounPage3" type="Control" parent="Control" unique_id=1672176639]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="Control/NounPage3" unique_id=277713579]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 456.00003
+offset_top = 88.0
+offset_right = 674.0
+offset_bottom = 243.0
+scale = Vector2(1.9296663, 1.3799409)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 80
+text = "Noun
+"
+
+[node name="Content2" type="RichTextLabel" parent="Control/NounPage3" unique_id=814433692]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 218.0
+offset_right = 899.0
+offset_bottom = 304.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("17_mu2x3")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "Vocabulary words:
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)2" type="RichTextLabel" parent="Control/NounPage3" unique_id=1799569660]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 313.0
+offset_right = 1155.0
+offset_bottom = 600.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "🫂FRIENDS   	  		  🌱ROOTS                 
+🥣MORTAR          	  💰STAKES      
+⚔️CONFLICT      		  💡THEME
+😈REVENGE"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="CancelBtn" type="TextureButton" parent="Control/NounPage3" unique_id=824117595]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/NounPage3" unique_id=659321215]
+layout_mode = 0
+offset_left = 1063.0
+offset_top = 609.0
+offset_right = 1639.0
+offset_bottom = 885.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="BackBtn" type="TextureButton" parent="Control/NounPage3" unique_id=1500039270]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NounPage4" type="Control" parent="Control" unique_id=218206797]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="Control/NounPage4" unique_id=80387708]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 454.00003
+offset_top = 88.0
+offset_right = 672.0
+offset_bottom = 243.0
+scale = Vector2(1.9296663, 1.3799409)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 80
+text = "Noun
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/NounPage4" unique_id=1046497955]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 205.0
+offset_right = 654.0
+offset_bottom = 393.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The friends played near 
+       the tree with deep roots.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)4" type="RichTextLabel" parent="Control/NounPage4" unique_id=192876089]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 197.0
+offset_right = 1161.0
+offset_bottom = 366.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "
+▸ The farmer pounded grain 
+      with a mortar.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="CancelBtn" type="TextureButton" parent="Control/NounPage4" unique_id=2076571104]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/NounPage4" unique_id=2108903623]
+layout_mode = 0
+offset_left = 1063.0
+offset_top = 609.0
+offset_right = 1639.0
+offset_bottom = 885.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="BackBtn" type="TextureButton" parent="Control/NounPage4" unique_id=882747412]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="Picture" type="TextureRect" parent="Control/NounPage4" unique_id=503800759]
+layout_mode = 0
+offset_left = 175.99998
+offset_top = 348.00003
+offset_right = 2161.0
+offset_bottom = 1641.9998
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_axku2")
+
+[node name="Picture2" type="TextureRect" parent="Control/NounPage4" unique_id=685687917]
+layout_mode = 0
+offset_left = 681.99994
+offset_top = 338.0
+offset_right = 2867.0002
+offset_bottom = 1801.9998
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("19_5b4if")
+
+[node name="NounPage5" type="Control" parent="Control" unique_id=1588047116]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="Control/NounPage5" unique_id=483990052]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 454.0
+offset_top = 89.0
+offset_right = 672.0
+offset_bottom = 244.0
+scale = Vector2(1.9296663, 1.3799409)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 80
+text = "Noun
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/NounPage5" unique_id=341319810]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 205.0
+offset_right = 654.0
+offset_bottom = 393.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "Example Sentences:
+▸ Revenge made the boy 
+    break his friend’s toy
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)4" type="RichTextLabel" parent="Control/NounPage5" unique_id=1139526787]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 195.0
+offset_right = 1161.0
+offset_bottom = 364.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "
+▸ The conflict started over a 
+     missing ball.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="CancelBtn" type="TextureButton" parent="Control/NounPage5" unique_id=25342182]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/NounPage5" unique_id=2080187645]
+layout_mode = 0
+offset_left = 1063.0
+offset_top = 609.0
+offset_right = 1639.0
+offset_bottom = 885.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="BackBtn" type="TextureButton" parent="Control/NounPage5" unique_id=847732790]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="Picture" type="TextureRect" parent="Control/NounPage5" unique_id=1247954294]
+layout_mode = 0
+offset_left = 175.99998
+offset_top = 348.00003
+offset_right = 2291.0
+offset_bottom = 1677.9998
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_igd7i")
+
+[node name="Picture2" type="TextureRect" parent="Control/NounPage5" unique_id=718152975]
+layout_mode = 0
+offset_left = 666.9999
+offset_top = 338.00003
+offset_right = 2817.0005
+offset_bottom = 1817.9998
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("21_ne6ew")
+
+[node name="NounPage6" type="Control" parent="Control" unique_id=1749847089]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LEARNED" type="Label" parent="Control/NounPage6" unique_id=614523744]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 149.0
+offset_top = 138.0
+offset_right = 550.0
+offset_bottom = 206.34024
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 39
+text = "New things you learned:
+"
+
+[node name="Surprises2" type="Label" parent="Control/NounPage6" unique_id=1153154429]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 655.99994
+offset_top = 130.0
+offset_right = 1069.0
+offset_bottom = 237.0
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 37
+text = "Things you found 
+interesting or surprising:
+"
+
+[node name="CancelBtn" type="TextureButton" parent="Control/NounPage6" unique_id=1158479261]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/NounPage6" unique_id=1700919357]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 616.0
+offset_right = 1591.0
+offset_bottom = 892.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("22_h4tdw")
+
+[node name="BackBtn" type="TextureButton" parent="Control/NounPage6" unique_id=1239279716]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="LearnedInput" type="TextEdit" parent="Control/NounPage6" unique_id=1415996884]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 183.0
+offset_right = 632.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 24
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="SurprisedInput" type="TextEdit" parent="Control/NounPage6" unique_id=1976205214]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 234.0
+offset_right = 1128.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 22
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="AdjectivePage" type="Control" parent="Control" unique_id=784683906]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdjectivePage" unique_id=266779441]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 414.0
+offset_top = 112.0
+offset_right = 216.0
+offset_bottom = -262.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 90
+text = "Adjectives
+
+"
+
+[node name="Content" type="RichTextLabel" parent="Control/AdjectivePage" unique_id=73520989]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 241.0
+offset_right = 1162.0
+offset_bottom = 631.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "An adjective describes a noun.  
+•It answers: 
+What kind? How many? Which one? 
+
+•Adjectives make sentences more colorful and fun!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdjectivePage" unique_id=1426146124]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.35500002
+offset_left = 64.0
+offset_top = 609.0
+offset_right = 609.0
+offset_bottom = 621.015
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdjectivePage" unique_id=1425140191]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 605.0
+offset_right = 1636.0
+offset_bottom = 881.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdjectivePage" unique_id=1426466543]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="AdjectivePage2" type="Control" parent="Control" unique_id=590964496]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdjectivePage2" unique_id=1714662837]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 414.0
+offset_top = 105.0
+offset_right = 216.0
+offset_bottom = -269.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 90
+text = "Adjectives
+
+"
+
+[node name="Content(personetc_)" type="RichTextLabel" parent="Control/AdjectivePage2" unique_id=1497485370]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 233.0
+offset_right = 1223.0
+offset_bottom = 675.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "🎨 Describes what kind→ greedy, lush, ripe, 
+        withered, angry, clever, floating
+📍 Usually comes BEFORE the noun it    
+        describes
+💡Ask: \"What kind of ___?\" 
+				— the answer is an adjective!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdjectivePage2" unique_id=959333484]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.35500002
+offset_left = 64.0
+offset_top = 609.0
+offset_right = 609.0
+offset_bottom = 621.015
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdjectivePage2" unique_id=867272553]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 605.0
+offset_right = 1636.0
+offset_bottom = 881.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdjectivePage2" unique_id=96096113]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="AdjectivePage3" type="Control" parent="Control" unique_id=949139136]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdjectivePage3" unique_id=109345135]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 426.0
+offset_top = 112.0
+offset_right = 210.0
+offset_bottom = -280.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Adjectives
+
+"
+
+[node name="Content2" type="RichTextLabel" parent="Control/AdjectivePage3" unique_id=380265448]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 240.0
+offset_right = 1019.0
+offset_bottom = 313.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("17_mu2x3")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "Vocabulary words:
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)2" type="RichTextLabel" parent="Control/AdjectivePage3" unique_id=492835487]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 336.0
+offset_right = 1103.0
+offset_bottom = 596.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "🤑GREEDY                   🍃LUSH            
+🥭RIPE 							🥀WITHERED         
+😡ANGRY          			 🤓CLEVER
+𓂃 ོ𓂃FLOATING"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdjectivePage3" unique_id=2105587716]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.35500002
+offset_left = 64.0
+offset_top = 609.0
+offset_right = 609.0
+offset_bottom = 621.015
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdjectivePage3" unique_id=935763592]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 605.0
+offset_right = 1636.0
+offset_bottom = 881.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdjectivePage3" unique_id=1798536065]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="AdjectivePage4" type="Control" parent="Control" unique_id=1751599127]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdjectivePage4" unique_id=1040628130]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 428.0
+offset_top = 112.0
+offset_right = 212.0
+offset_bottom = -280.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Adjectives
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/AdjectivePage4" unique_id=399152267]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 195.0
+offset_right = 665.0
+offset_bottom = 392.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The floating balloon 
+     drifted across the sky.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)4" type="RichTextLabel" parent="Control/AdjectivePage4" unique_id=539444205]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 152.0
+offset_right = 1165.0
+offset_bottom = 366.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "
+▸ The lush forest had a 
+     withered old  tree near 
+     the river bank.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdjectivePage4" unique_id=2025181401]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.35500002
+offset_left = 64.0
+offset_top = 609.0
+offset_right = 609.0
+offset_bottom = 621.015
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdjectivePage4" unique_id=1188106215]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 605.0
+offset_right = 1636.0
+offset_bottom = 881.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdjectivePage4" unique_id=719465310]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="Picture" type="TextureRect" parent="Control/AdjectivePage4" unique_id=423119880]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 323.0
+offset_right = 1699.0
+offset_bottom = 1347.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("23_x1ejo")
+
+[node name="Picture2" type="TextureRect" parent="Control/AdjectivePage4" unique_id=1280633514]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 324.0
+offset_right = 2201.0
+offset_bottom = 1348.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("24_1ouqq")
+
+[node name="AdjectivePage5" type="Control" parent="Control" unique_id=1255208372]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdjectivePage5" unique_id=1859982425]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 428.0
+offset_top = 112.0
+offset_right = 212.0
+offset_bottom = -280.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Adjectives
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/AdjectivePage5" unique_id=344043565]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 195.0
+offset_right = 665.0
+offset_bottom = 392.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The angry man shouted at the clever boy in the village.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)4" type="RichTextLabel" parent="Control/AdjectivePage5" unique_id=1569586575]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 147.0
+offset_right = 1165.0
+offset_bottom = 361.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "
+▸ The lush forest had a 
+     withered old  tree near 
+     the river bank.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdjectivePage5" unique_id=537126904]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.35500002
+offset_left = 64.0
+offset_top = 609.0
+offset_right = 609.0
+offset_bottom = 621.015
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdjectivePage5" unique_id=907121884]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 605.0
+offset_right = 1636.0
+offset_bottom = 881.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdjectivePage5" unique_id=1064777454]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="Picture" type="TextureRect" parent="Control/AdjectivePage5" unique_id=453201508]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 323.0
+offset_right = 1699.0
+offset_bottom = 1347.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("25_echkx")
+
+[node name="Picture2" type="TextureRect" parent="Control/AdjectivePage5" unique_id=583226929]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 329.0
+offset_right = 2183.0
+offset_bottom = 1353.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("26_bijkv")
+
+[node name="AdjectivePage6" type="Control" parent="Control" unique_id=374760865]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LEARNED" type="Label" parent="Control/AdjectivePage6" unique_id=1912581063]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 149.0
+offset_top = 138.0
+offset_right = 550.0
+offset_bottom = 206.34024
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 39
+text = "New things you learned:
+"
+
+[node name="Surprises2" type="Label" parent="Control/AdjectivePage6" unique_id=798947270]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 655.99994
+offset_top = 130.0
+offset_right = 1069.0
+offset_bottom = 237.0
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 37
+text = "Things you found 
+interesting or surprising:
+"
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdjectivePage6" unique_id=968550068]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdjectivePage6" unique_id=635286136]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 616.0
+offset_right = 1591.0
+offset_bottom = 892.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("22_h4tdw")
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdjectivePage6" unique_id=1256093976]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="LearnedInput" type="TextEdit" parent="Control/AdjectivePage6" unique_id=844956856]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 183.0
+offset_right = 632.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 24
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="SurprisedInput" type="TextEdit" parent="Control/AdjectivePage6" unique_id=983094589]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 234.0
+offset_right = 1128.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 22
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="PronounsPage" type="Control" parent="Control" unique_id=118916060]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/PronounsPage" unique_id=2133985500]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 463.0
+offset_top = 101.0
+offset_right = 326.0
+offset_bottom = -185.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Pronouns
+
+
+"
+
+[node name="Content" type="RichTextLabel" parent="Control/PronounsPage" unique_id=1275542724]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 258.0
+offset_right = 1108.0
+offset_bottom = 628.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "•A pronoun takes the place of a noun 
+so we don't repeat the same word  over and over. 
+
+•Think of pronouns as noun \"substitutes\"!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/PronounsPage" unique_id=1137555395]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 621.0
+offset_right = 611.0
+offset_bottom = 884.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/PronounsPage" unique_id=426317395]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 618.0
+offset_right = 1636.0
+offset_bottom = 894.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/PronounsPage" unique_id=1180691670]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="PronounsPage2" type="Control" parent="Control" unique_id=1479322316]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/PronounsPage2" unique_id=1014602025]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 463.0
+offset_top = 94.0
+offset_right = 326.0
+offset_bottom = -192.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Pronouns
+
+
+"
+
+[node name="Content(personetc_)" type="RichTextLabel" parent="Control/PronounsPage2" unique_id=2004802404]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 228.0
+offset_right = 1152.0
+offset_bottom = 636.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "👤 Personal → I, you, he, she, it, we, they
+🔁 Replaces a noun: 
+        Instead of  \"The friends ran\" 
+       → \"They ran\"
+💡 Find the noun first, then replace it 
+       with a pronoun!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/PronounsPage2" unique_id=379354144]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 621.0
+offset_right = 611.0
+offset_bottom = 884.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/PronounsPage2" unique_id=1738507722]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 618.0
+offset_right = 1636.0
+offset_bottom = 894.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/PronounsPage2" unique_id=1316022076]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="PronounsPage3" type="Control" parent="Control" unique_id=1507211123]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/PronounsPage3" unique_id=292541083]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 464.0
+offset_top = 96.0
+offset_right = 201.0
+offset_bottom = -190.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Pronouns
+
+
+"
+
+[node name="Content2" type="RichTextLabel" parent="Control/PronounsPage3" unique_id=1963557181]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 215.0
+offset_right = 872.0
+offset_bottom = 302.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("17_mu2x3")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "Vocabulary words:
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)2" type="RichTextLabel" parent="Control/PronounsPage3" unique_id=1053064993]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 308.0
+offset_right = 1178.0
+offset_bottom = 628.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "he/she/they/it 
+•replaces nouns like:
+
+🫂FRIENDS 						👩🏻‍🏫TEACHER
+🏠HOUSE"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/PronounsPage3" unique_id=213264481]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 621.0
+offset_right = 611.0
+offset_bottom = 884.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/PronounsPage3" unique_id=195505358]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 618.0
+offset_right = 1636.0
+offset_bottom = 894.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/PronounsPage3" unique_id=1245350045]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="PronounsPage4" type="Control" parent="Control" unique_id=831312919]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/PronounsPage4" unique_id=518670499]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 468.0
+offset_top = 96.0
+offset_right = 205.0
+offset_bottom = -190.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Pronouns
+
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/PronounsPage4" unique_id=630123195]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 204.0
+offset_right = 670.0
+offset_bottom = 570.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The friends found 
+     the tree. They  
+      climbed its lush 
+      branches  together.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/PronounsPage4" unique_id=1079076893]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 621.0
+offset_right = 611.0
+offset_bottom = 884.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/PronounsPage4" unique_id=1387921214]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 618.0
+offset_right = 1636.0
+offset_bottom = 894.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/PronounsPage4" unique_id=1310695070]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="Picture" type="TextureRect" parent="Control/PronounsPage4" unique_id=1914825126]
+layout_mode = 0
+offset_left = 613.00006
+offset_top = 224.0
+offset_right = 2149.0
+offset_bottom = 1248.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("27_yrby4")
+
+[node name="PronounsPage5" type="Control" parent="Control" unique_id=59366118]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/PronounsPage5" unique_id=1849919964]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 468.0
+offset_top = 96.0
+offset_right = 205.0
+offset_bottom = -190.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Pronouns
+
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/PronounsPage5" unique_id=1100454695]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 220.0
+offset_right = 654.0
+offset_bottom = 548.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The teacher was 
+     kind.  He helped his 
+     students learn and 
+     succeed.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/PronounsPage5" unique_id=2018125497]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 621.0
+offset_right = 611.0
+offset_bottom = 884.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/PronounsPage5" unique_id=750253686]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 618.0
+offset_right = 1636.0
+offset_bottom = 894.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/PronounsPage5" unique_id=265887596]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="Picture" type="TextureRect" parent="Control/PronounsPage5" unique_id=111466084]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 222.0
+offset_right = 2118.0
+offset_bottom = 1246.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("28_tcjdr")
+
+[node name="PronounsPage6" type="Control" parent="Control" unique_id=910741191]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LEARNED" type="Label" parent="Control/PronounsPage6" unique_id=728592536]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 149.0
+offset_top = 138.0
+offset_right = 550.0
+offset_bottom = 206.34024
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 39
+text = "New things you learned:
+"
+
+[node name="Surprises2" type="Label" parent="Control/PronounsPage6" unique_id=17535826]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 655.99994
+offset_top = 130.0
+offset_right = 1069.0
+offset_bottom = 237.0
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 37
+text = "Things you found 
+interesting or surprising:
+"
+
+[node name="CancelBtn" type="TextureButton" parent="Control/PronounsPage6" unique_id=2013049606]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/PronounsPage6" unique_id=655867616]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 616.0
+offset_right = 1591.0
+offset_bottom = 892.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("22_h4tdw")
+
+[node name="BackBtn" type="TextureButton" parent="Control/PronounsPage6" unique_id=2030422610]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="LearnedInput" type="TextEdit" parent="Control/PronounsPage6" unique_id=807676131]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 183.0
+offset_right = 632.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 24
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="SurprisedInput" type="TextEdit" parent="Control/PronounsPage6" unique_id=1869554295]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 234.0
+offset_right = 1128.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 22
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="VerbPage" type="Control" parent="Control" unique_id=416294965]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/VerbPage" unique_id=324613170]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 517.0
+offset_top = 113.0
+offset_right = 264.0
+offset_bottom = -173.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Verbs
+
+
+"
+
+[node name="Content" type="RichTextLabel" parent="Control/VerbPage" unique_id=338706520]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 250.0
+offset_right = 1082.0
+offset_bottom = 626.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "•A verb is an action word — it tells us what someone or something DOES. 
+
+•Every sentence needs a verb!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/VerbPage" unique_id=1726677342]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 620.0
+offset_right = 607.0
+offset_bottom = 883.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/VerbPage" unique_id=1581491138]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 616.0
+offset_right = 1640.0
+offset_bottom = 892.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/VerbPage" unique_id=1757076682]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="VerbPage2" type="Control" parent="Control" unique_id=405571557]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/VerbPage2" unique_id=1089420035]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 510.0
+offset_top = 109.0
+offset_right = 257.0
+offset_bottom = -177.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Verbs
+
+
+"
+
+[node name="Content(personetc_)" type="RichTextLabel" parent="Control/VerbPage2" unique_id=1850752504]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 272.0
+offset_right = 1116.0
+offset_bottom = 599.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "🏃 Action → climb, split, drown, escape
+🌱 Past action → planted, defeated
+💡 Tip: Ask \"What does the subject DO?\"    
+       — the answer is the verb!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/VerbPage2" unique_id=1488699639]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 620.0
+offset_right = 607.0
+offset_bottom = 883.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/VerbPage2" unique_id=953819829]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 616.0
+offset_right = 1640.0
+offset_bottom = 892.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/VerbPage2" unique_id=552150020]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="VerbPage3" type="Control" parent="Control" unique_id=2133315889]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 576.0
+
+[node name="Title" type="Label" parent="Control/VerbPage3" unique_id=176933125]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 516.0
+offset_top = 110.0
+offset_right = 263.0
+offset_bottom = -176.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Verbs
+
+
+"
+
+[node name="Content2" type="RichTextLabel" parent="Control/VerbPage3" unique_id=415482404]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 255.0
+offset_right = 1035.0
+offset_bottom = 330.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("17_mu2x3")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "Vocabulary words:
+"
+selection_enabled = true
+
+[node name="Content(personetc_)2" type="RichTextLabel" parent="Control/VerbPage3" unique_id=1138185803]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 348.0
+offset_right = 1147.0
+offset_bottom = 662.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "🧗CLIMB                    ✂️SPLIT              
+🏊🏼‍♂️DROWN			      🏃🚪ESCAPE               🪴PLANTED		          🤕DEFEATED"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/VerbPage3" unique_id=773027583]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 620.0
+offset_right = 607.0
+offset_bottom = 883.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/VerbPage3" unique_id=1097105665]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 616.0
+offset_right = 1640.0
+offset_bottom = 892.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/VerbPage3" unique_id=1814315700]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="VerbPage4" type="Control" parent="Control" unique_id=504179785]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/VerbPage4" unique_id=1849028306]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 516.0
+offset_top = 96.0
+offset_right = 253.0
+offset_bottom = -190.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Verbs
+
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/VerbPage4" unique_id=1086379154]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 220.0
+offset_right = 674.0
+offset_bottom = 568.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The boy nearly drowned in the river but was pulled to safety just in time.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/VerbPage4" unique_id=1763066515]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 621.0
+offset_right = 611.0
+offset_bottom = 884.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/VerbPage4" unique_id=1834265020]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 618.0
+offset_right = 1636.0
+offset_bottom = 894.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/VerbPage4" unique_id=921923578]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="Picture" type="TextureRect" parent="Control/VerbPage4" unique_id=2010102683]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 222.0
+offset_right = 2078.0
+offset_bottom = 1246.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("29_0qy8x")
+
+[node name="VerbPage5" type="Control" parent="Control" unique_id=82550372]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/VerbPage5" unique_id=650612772]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 516.0
+offset_top = 96.0
+offset_right = 253.0
+offset_bottom = -190.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Verbs
+
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/VerbPage5" unique_id=71343484]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 185.0
+offset_right = 663.0
+offset_bottom = 618.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Example Sentences:
+▸ He escaped from danger, planted a small tree by the shore, and later defeated his fear of water.
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/VerbPage5" unique_id=60091448]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 621.0
+offset_right = 611.0
+offset_bottom = 884.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/VerbPage5" unique_id=1079972992]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 618.0
+offset_right = 1636.0
+offset_bottom = 894.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/VerbPage5" unique_id=564085139]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="Picture" type="TextureRect" parent="Control/VerbPage5" unique_id=793622559]
+layout_mode = 0
+offset_left = 530.00006
+offset_top = 193.00002
+offset_right = 2066.0
+offset_bottom = 1217.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("30_6k1ny")
+
+[node name="VerbPage6" type="Control" parent="Control" unique_id=1554046151]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LEARNED" type="Label" parent="Control/VerbPage6" unique_id=1418902653]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 149.0
+offset_top = 138.0
+offset_right = 550.0
+offset_bottom = 206.34024
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 39
+text = "New things you learned:
+"
+
+[node name="Surprises2" type="Label" parent="Control/VerbPage6" unique_id=2020073833]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 655.99994
+offset_top = 130.0
+offset_right = 1069.0
+offset_bottom = 237.0
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 37
+text = "Things you found 
+interesting or surprising:
+"
+
+[node name="CancelBtn" type="TextureButton" parent="Control/VerbPage6" unique_id=309461633]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/VerbPage6" unique_id=1680606774]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 616.0
+offset_right = 1591.0
+offset_bottom = 892.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("22_h4tdw")
+
+[node name="BackBtn" type="TextureButton" parent="Control/VerbPage6" unique_id=622572630]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="LearnedInput" type="TextEdit" parent="Control/VerbPage6" unique_id=1671232508]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 183.0
+offset_right = 632.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 24
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="SurprisedInput" type="TextEdit" parent="Control/VerbPage6" unique_id=473137033]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 234.0
+offset_right = 1128.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 22
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="AdverbPage" type="Control" parent="Control" unique_id=1997039470]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdverbPage" unique_id=1427455263]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 472.0
+offset_top = 106.0
+offset_right = 219.0
+offset_bottom = -180.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Adverbs
+
+
+"
+
+[node name="Content" type="RichTextLabel" parent="Control/AdverbPage" unique_id=817887900]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 239.0
+offset_right = 1160.0
+offset_bottom = 617.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "•An adverb describes a verb, adjective, or another adverb. 
+
+•It answers: How? When? Where? How much? Many adverbs end in -LY!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdverbPage" unique_id=1090531643]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 624.0
+offset_right = 611.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdverbPage" unique_id=1051240010]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 617.0
+offset_right = 1636.0
+offset_bottom = 893.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdverbPage" unique_id=1141562348]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="AdverbPage2" type="Control" parent="Control" unique_id=1153283298]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdverbPage2" unique_id=2097243332]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 474.0
+offset_top = 120.0
+offset_right = 221.0
+offset_bottom = -166.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Adverbs
+
+
+"
+
+[node name="Content(personetc_)" type="RichTextLabel" parent="Control/AdverbPage2" unique_id=173901173]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 273.0
+offset_right = 1228.0
+offset_bottom = 588.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "⚡ How? → quickly, slowly, cleverly
+📅 When? → soon,  yesterday, finally
+📍 Where? → here,  there, away
+💡 Many adverbs end in  \"-ly\" — but not all!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdverbPage2" unique_id=693604947]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 624.0
+offset_right = 611.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdverbPage2" unique_id=1740574467]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 617.0
+offset_right = 1636.0
+offset_bottom = 893.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdverbPage2" unique_id=1610101372]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="AdverbPage3" type="Control" parent="Control" unique_id=1317454047]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdverbPage3" unique_id=775088155]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 469.0
+offset_top = 112.0
+offset_right = 216.0
+offset_bottom = -174.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Adverbs
+
+
+"
+
+[node name="Content2" type="RichTextLabel" parent="Control/AdverbPage3" unique_id=1687103003]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 254.0
+offset_right = 1003.0
+offset_bottom = 360.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("17_mu2x3")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "Vocabulary words:
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)2" type="RichTextLabel" parent="Control/AdverbPage3" unique_id=1488707358]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 338.0
+offset_right = 1114.0
+offset_bottom = 624.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "used to describe: 
+
+📅YESTERDAY               🏃ESCAPE            
+📢LOUDLY					 💨QUICKLY"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdverbPage3" unique_id=1316402676]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 624.0
+offset_right = 611.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdverbPage3" unique_id=893511013]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 617.0
+offset_right = 1636.0
+offset_bottom = 893.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdverbPage3" unique_id=753590727]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="AdverbPage4" type="Control" parent="Control" unique_id=298435857]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdverbPage4" unique_id=996081326]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 476.0
+offset_top = 108.0
+offset_right = 223.0
+offset_bottom = -178.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Adverbs
+
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/AdverbPage4" unique_id=608373436]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 205.0
+offset_right = 658.0
+offset_bottom = 601.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Example Sentences:
+▸He sneezed so loudly that everyone in the room stopped and stared at him in surprise.
+
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdverbPage4" unique_id=1006586126]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 624.0
+offset_right = 611.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdverbPage4" unique_id=305938874]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 617.0
+offset_right = 1636.0
+offset_bottom = 893.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdverbPage4" unique_id=1306253367]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="TextureRect" type="TextureRect" parent="Control/AdverbPage4" unique_id=1255279474]
+layout_mode = 0
+offset_left = 646.99994
+offset_top = 264.0
+offset_right = 2246.3335
+offset_bottom = 1314.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("31_uk6ud")
+
+[node name="AdverbPage5" type="Control" parent="Control" unique_id=186888963]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/AdverbPage5" unique_id=1539305623]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 476.0
+offset_top = 108.0
+offset_right = 223.0
+offset_bottom = -178.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Adverbs
+
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/AdverbPage5" unique_id=154962269]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 205.0
+offset_right = 651.0
+offset_bottom = 566.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The clever child safely floated away and finally defeated the conflict.
+
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdverbPage5" unique_id=55786581]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 624.0
+offset_right = 611.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdverbPage5" unique_id=542000382]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 617.0
+offset_right = 1636.0
+offset_bottom = 893.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdverbPage5" unique_id=1959868952]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="TextureRect" type="TextureRect" parent="Control/AdverbPage5" unique_id=1695598760]
+layout_mode = 0
+offset_left = 556.00006
+offset_top = 225.00002
+offset_right = 2092.0
+offset_bottom = 1249.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("32_cbqnf")
+
+[node name="AdverbPage6" type="Control" parent="Control" unique_id=865955105]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LEARNED" type="Label" parent="Control/AdverbPage6" unique_id=225021237]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 149.0
+offset_top = 138.0
+offset_right = 550.0
+offset_bottom = 206.34024
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 39
+text = "New things you learned:
+"
+
+[node name="Surprises2" type="Label" parent="Control/AdverbPage6" unique_id=383478058]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 655.99994
+offset_top = 130.0
+offset_right = 1069.0
+offset_bottom = 237.0
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 37
+text = "Things you found 
+interesting or surprising:
+"
+
+[node name="CancelBtn" type="TextureButton" parent="Control/AdverbPage6" unique_id=431602747]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/AdverbPage6" unique_id=1286244711]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 616.0
+offset_right = 1591.0
+offset_bottom = 892.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("22_h4tdw")
+
+[node name="BackBtn" type="TextureButton" parent="Control/AdverbPage6" unique_id=1176647501]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="LearnedInput" type="TextEdit" parent="Control/AdverbPage6" unique_id=1210975586]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 183.0
+offset_right = 632.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 24
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="SurprisedInput" type="TextEdit" parent="Control/AdverbPage6" unique_id=71784185]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 234.0
+offset_right = 1128.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 22
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="ConjunctionPage" type="Control" parent="Control" unique_id=1267428924]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/ConjunctionPage" unique_id=175854022]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 395.0
+offset_top = 117.0
+offset_right = 274.0
+offset_bottom = -169.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Conjunctions
+
+
+"
+
+[node name="Content" type="RichTextLabel" parent="Control/ConjunctionPage" unique_id=590958072]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 274.0
+offset_right = 1146.0
+offset_bottom = 639.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "•A conjunction joins words, phrases, 
+or sentences together. 
+
+•Think of them as bridges between ideas!"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/ConjunctionPage" unique_id=1920750441]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 624.0
+offset_right = 608.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/ConjunctionPage" unique_id=1355298664]
+layout_mode = 0
+offset_left = 1061.0
+offset_top = 623.0
+offset_right = 1637.0
+offset_bottom = 899.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/ConjunctionPage" unique_id=1049582327]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="ConjunctionPage2" type="Control" parent="Control" unique_id=1863991506]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/ConjunctionPage2" unique_id=219547473]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 374.0
+offset_top = 114.0
+offset_right = 253.0
+offset_bottom = -172.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Conjunctions
+
+
+"
+
+[node name="Content(personetc_)" type="RichTextLabel" parent="Control/ConjunctionPage2" unique_id=1620507356]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 274.0
+offset_right = 1149.0
+offset_bottom = 627.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "🔗 Coordinating → and, but, or, so, for, yet
+⛓ Subordinating → because, although, 
+        when, since, while
+💡 Common trick: 
+         FANBOYS = For, And, Nor, But, Or, Yet, So"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/ConjunctionPage2" unique_id=1594996559]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 624.0
+offset_right = 608.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/ConjunctionPage2" unique_id=742013565]
+layout_mode = 0
+offset_left = 1061.0
+offset_top = 623.0
+offset_right = 1637.0
+offset_bottom = 899.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/ConjunctionPage2" unique_id=1243307829]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="ConjunctionPage3" type="Control" parent="Control" unique_id=1317829346]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/ConjunctionPage3" unique_id=594724451]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 377.0
+offset_top = 106.0
+offset_right = 256.0
+offset_bottom = -180.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Conjunctions
+
+
+"
+
+[node name="Content2" type="RichTextLabel" parent="Control/ConjunctionPage3" unique_id=1679112195]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 242.0
+offset_right = 1119.0
+offset_bottom = 327.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("17_mu2x3")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "Vocabulary words:
+"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="Content(personetc_)2" type="RichTextLabel" parent="Control/ConjunctionPage3" unique_id=2147209651]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 345.0
+offset_right = 1069.0
+offset_bottom = 622.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 52
+bbcode_enabled = true
+text = "🔹and           				  🔹but          
+🔹or             				  🔹so 
+🔹because                  🔹although        
+🔹when"
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/ConjunctionPage3" unique_id=1588896888]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 624.0
+offset_right = 608.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/ConjunctionPage3" unique_id=1404496563]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 626.0
+offset_right = 1634.0
+offset_bottom = 902.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/ConjunctionPage3" unique_id=634182400]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="ConjunctionPage4" type="Control" parent="Control" unique_id=1001881925]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/ConjunctionPage4" unique_id=1981729985]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 371.0
+offset_top = 108.0
+offset_right = 250.0
+offset_bottom = -178.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Conjunctions
+
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/ConjunctionPage4" unique_id=707524330]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 267.0
+offset_right = 640.0
+offset_bottom = 613.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The farmer was 
+     greedy, but the 
+      child was kind."
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/ConjunctionPage4" unique_id=757158648]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 624.0
+offset_right = 608.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/ConjunctionPage4" unique_id=1109946798]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 626.0
+offset_right = 1634.0
+offset_bottom = 902.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/ConjunctionPage4" unique_id=1019927738]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="TextureRect" type="TextureRect" parent="Control/ConjunctionPage4" unique_id=1672837]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 266.0
+offset_right = 2277.6665
+offset_bottom = 1339.3333
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("33_v3xam")
+
+[node name="ConjunctionPage5" type="Control" parent="Control" unique_id=443128885]
+visible = false
+anchors_preset = 0
+offset_right = 1260.0
+offset_bottom = 707.0
+
+[node name="Title" type="Label" parent="Control/ConjunctionPage5" unique_id=2001559907]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 371.0
+offset_top = 108.0
+offset_right = 250.0
+offset_bottom = -178.0
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_7nqti")
+theme_override_font_sizes/font_size = 85
+text = "Conjunctions
+
+
+"
+
+[node name="Content(personetc_)3" type="RichTextLabel" parent="Control/ConjunctionPage5" unique_id=217545244]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 267.0
+offset_right = 648.0
+offset_bottom = 613.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9490196, 0.96862745, 0.98039216, 0.9019608)
+theme_override_fonts/normal_font = ExtResource("13_gf3mm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Example Sentences:
+▸ The withered roots split because the greedy man planted too many stakes."
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="BackBtn" type="TextureButton" parent="Control/ConjunctionPage5" unique_id=1740921311]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 624.0
+offset_right = 608.0
+offset_bottom = 887.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="NextBtn" type="TextureButton" parent="Control/ConjunctionPage5" unique_id=533228282]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 626.0
+offset_right = 1634.0
+offset_bottom = 902.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("15_vld6f")
+
+[node name="CancelBtn" type="TextureButton" parent="Control/ConjunctionPage5" unique_id=629407314]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="TextureRect" type="TextureRect" parent="Control/ConjunctionPage5" unique_id=1425864672]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 268.0
+offset_right = 2277.6665
+offset_bottom = 1341.3333
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("34_imtxc")
+
+[node name="ConjunctionPage6" type="Control" parent="Control" unique_id=1194091068]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LEARNED" type="Label" parent="Control/ConjunctionPage6" unique_id=47521646]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 149.0
+offset_top = 138.0
+offset_right = 550.0
+offset_bottom = 206.34024
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 39
+text = "New things you learned:
+"
+
+[node name="Surprises2" type="Label" parent="Control/ConjunctionPage6" unique_id=1945262549]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 655.99994
+offset_top = 130.0
+offset_right = 1069.0
+offset_bottom = 237.0
+scale = Vector2(1.1650871, 0.7199541)
+theme_override_colors/font_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_colors/font_shadow_color = Color(0.97060233, 0.97060245, 0.97060233, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_mu2x3")
+theme_override_font_sizes/font_size = 37
+text = "Things you found 
+interesting or surprising:
+"
+
+[node name="CancelBtn" type="TextureButton" parent="Control/ConjunctionPage6" unique_id=1351021990]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 625.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_nffe1")
+
+[node name="NextBtn" type="TextureButton" parent="Control/ConjunctionPage6" unique_id=1097809907]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 616.0
+offset_right = 1591.0
+offset_bottom = 892.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("22_h4tdw")
+
+[node name="BackBtn" type="TextureButton" parent="Control/ConjunctionPage6" unique_id=1107806829]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 623.0
+offset_right = 610.0
+offset_bottom = 886.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("16_e0kox")
+
+[node name="LearnedInput" type="TextEdit" parent="Control/ConjunctionPage6" unique_id=1733046251]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 183.0
+offset_right = 632.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 24
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="SurprisedInput" type="TextEdit" parent="Control/ConjunctionPage6" unique_id=1661326333]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 234.0
+offset_right = 1128.0
+offset_bottom = 617.0
+theme_override_colors/search_result_color = Color(0.028927702, 0.023948707, 0.011286812, 0.9882353)
+theme_override_fonts/font = ExtResource("13_gf3mm")
+theme_override_font_sizes/font_size = 22
+text = "Type your answers here (Minimum: 10 words)"
+
+[node name="RulePage" type="Control" parent="Control" unique_id=1904156970]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Control2/TopicButtons/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="mouse_entered" from="Control2/TopicButtons/NounBtn" to="." method="_on_noun_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control2/TopicButtons/NounBtn" to="." method="_on_noun_btn_mouse_exited"]
+[connection signal="pressed" from="Control2/TopicButtons/NounBtn" to="." method="_on_noun_btn_pressed"]
+[connection signal="mouse_entered" from="Control2/TopicButtons/PronounsBtn" to="." method="_on_pronouns_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control2/TopicButtons/PronounsBtn" to="." method="_on_pronouns_btn_mouse_exited"]
+[connection signal="pressed" from="Control2/TopicButtons/PronounsBtn" to="." method="_on_pronouns_btn_pressed"]
+[connection signal="mouse_entered" from="Control2/TopicButtons/ConjunctionBtn" to="." method="_on_conjunction_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control2/TopicButtons/ConjunctionBtn" to="." method="_on_conjunction_btn_mouse_exited"]
+[connection signal="pressed" from="Control2/TopicButtons/ConjunctionBtn" to="." method="_on_conjunction_btn_pressed"]
+[connection signal="mouse_entered" from="Control2/TopicButtons/VerbBtn" to="." method="_on_verb_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control2/TopicButtons/VerbBtn" to="." method="_on_verb_btn_mouse_exited"]
+[connection signal="pressed" from="Control2/TopicButtons/VerbBtn" to="." method="_on_verb_btn_pressed"]
+[connection signal="mouse_entered" from="Control2/TopicButtons/AdverbBtn" to="." method="_on_adverb_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control2/TopicButtons/AdverbBtn" to="." method="_on_adverb_btn_mouse_exited"]
+[connection signal="pressed" from="Control2/TopicButtons/AdverbBtn" to="." method="_on_adverb_btn_pressed"]
+[connection signal="mouse_entered" from="Control2/TopicButtons/AdjectivesBtn" to="." method="_on_adjectives_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control2/TopicButtons/AdjectivesBtn" to="." method="_on_adjectives_btn_mouse_exited"]
+[connection signal="pressed" from="Control2/TopicButtons/AdjectivesBtn" to="." method="_on_adjectives_btn_pressed"]
+[connection signal="gui_input" from="Control/NounPage/Content" to="." method="_on_content_gui_input"]
+[connection signal="pressed" from="Control/NounPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="gui_input" from="Control/NounPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
+[connection signal="pressed" from="Control/NounPage2/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="mouse_entered" from="Control/NounPage2/NextBtn" to="." method="_on_next_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control/NounPage2/NextBtn" to="." method="_on_next_btn_mouse_exited"]
+[connection signal="pressed" from="Control/NounPage2/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="mouse_entered" from="Control/NounPage2/BackBtn" to="." method="_on_back_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control/NounPage2/BackBtn" to="." method="_on_back_btn_mouse_exited"]
+[connection signal="pressed" from="Control/NounPage2/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="gui_input" from="Control/NounPage3/Content2" to="." method="_on_content_2_gui_input"]
+[connection signal="gui_input" from="Control/NounPage3/Content(personetc_)2" to="." method="_on_contentpersonetc_2_gui_input"]
+[connection signal="pressed" from="Control/NounPage3/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage3/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage3/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="gui_input" from="Control/NounPage4/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="gui_input" from="Control/NounPage4/Content(personetc_)4" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/NounPage4/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage4/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage4/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="gui_input" from="Control/NounPage5/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="gui_input" from="Control/NounPage5/Content(personetc_)4" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/NounPage5/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage5/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage5/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage6/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage6/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/NounPage6/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="text_changed" from="Control/NounPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
+[connection signal="text_changed" from="Control/NounPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
+[connection signal="gui_input" from="Control/AdjectivePage/Content" to="." method="_on_content_gui_input"]
+[connection signal="pressed" from="Control/AdjectivePage/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/AdjectivePage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
+[connection signal="pressed" from="Control/AdjectivePage2/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage2/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="mouse_entered" from="Control/AdjectivePage2/CancelBtn" to="." method="_on_cancel_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control/AdjectivePage2/CancelBtn" to="." method="_on_cancel_btn_mouse_exited"]
+[connection signal="pressed" from="Control/AdjectivePage2/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/AdjectivePage3/Content2" to="." method="_on_content_2_gui_input"]
+[connection signal="gui_input" from="Control/AdjectivePage3/Content(personetc_)2" to="." method="_on_contentpersonetc_2_gui_input"]
+[connection signal="pressed" from="Control/AdjectivePage3/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage3/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage3/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/AdjectivePage4/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="gui_input" from="Control/AdjectivePage4/Content(personetc_)4" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/AdjectivePage4/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage4/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage4/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/AdjectivePage5/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="gui_input" from="Control/AdjectivePage5/Content(personetc_)4" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/AdjectivePage5/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage5/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage5/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage6/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage6/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdjectivePage6/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="text_changed" from="Control/AdjectivePage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
+[connection signal="text_changed" from="Control/AdjectivePage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
+[connection signal="gui_input" from="Control/PronounsPage/Content" to="." method="_on_content_gui_input"]
+[connection signal="pressed" from="Control/PronounsPage/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/PronounsPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
+[connection signal="pressed" from="Control/PronounsPage2/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage2/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage2/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/PronounsPage3/Content2" to="." method="_on_content_2_gui_input"]
+[connection signal="gui_input" from="Control/PronounsPage3/Content(personetc_)2" to="." method="_on_contentpersonetc_2_gui_input"]
+[connection signal="pressed" from="Control/PronounsPage3/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage3/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage3/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/PronounsPage4/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/PronounsPage4/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage4/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage4/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/PronounsPage5/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/PronounsPage5/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage5/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage5/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage6/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage6/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/PronounsPage6/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="text_changed" from="Control/PronounsPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
+[connection signal="text_changed" from="Control/PronounsPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
+[connection signal="gui_input" from="Control/VerbPage/Content" to="." method="_on_content_gui_input"]
+[connection signal="pressed" from="Control/VerbPage/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/VerbPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
+[connection signal="pressed" from="Control/VerbPage2/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage2/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage2/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/VerbPage3/Content2" to="." method="_on_content_2_gui_input"]
+[connection signal="gui_input" from="Control/VerbPage3/Content(personetc_)2" to="." method="_on_contentpersonetc_2_gui_input"]
+[connection signal="pressed" from="Control/VerbPage3/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage3/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage3/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/VerbPage4/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/VerbPage4/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage4/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage4/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/VerbPage5/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/VerbPage5/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage5/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="mouse_entered" from="Control/VerbPage5/CancelBtn" to="." method="_on_cancel_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VerbPage5/CancelBtn" to="." method="_on_cancel_btn_mouse_exited"]
+[connection signal="pressed" from="Control/VerbPage5/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage6/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage6/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/VerbPage6/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="text_changed" from="Control/VerbPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
+[connection signal="text_changed" from="Control/VerbPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
+[connection signal="gui_input" from="Control/AdverbPage/Content" to="." method="_on_content_gui_input"]
+[connection signal="pressed" from="Control/AdverbPage/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/AdverbPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
+[connection signal="pressed" from="Control/AdverbPage2/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage2/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="mouse_entered" from="Control/AdverbPage2/CancelBtn" to="." method="_on_cancel_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control/AdverbPage2/CancelBtn" to="." method="_on_cancel_btn_mouse_exited"]
+[connection signal="pressed" from="Control/AdverbPage2/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/AdverbPage3/Content2" to="." method="_on_content_2_gui_input"]
+[connection signal="gui_input" from="Control/AdverbPage3/Content(personetc_)2" to="." method="_on_contentpersonetc_2_gui_input"]
+[connection signal="pressed" from="Control/AdverbPage3/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage3/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage3/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/AdverbPage4/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/AdverbPage4/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage4/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage4/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/AdverbPage5/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/AdverbPage5/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage5/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage5/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage6/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="mouse_exited" from="Control/AdverbPage6/NextBtn" to="." method="_on_next_btn_mouse_exited"]
+[connection signal="pressed" from="Control/AdverbPage6/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/AdverbPage6/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="text_changed" from="Control/AdverbPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
+[connection signal="text_changed" from="Control/AdverbPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]
+[connection signal="gui_input" from="Control/ConjunctionPage/Content" to="." method="_on_content_gui_input"]
+[connection signal="pressed" from="Control/ConjunctionPage/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/ConjunctionPage2/Content(personetc_)" to="." method="_on_contentpersonetc__gui_input"]
+[connection signal="pressed" from="Control/ConjunctionPage2/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage2/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="mouse_entered" from="Control/ConjunctionPage2/CancelBtn" to="." method="_on_cancel_btn_mouse_entered"]
+[connection signal="mouse_exited" from="Control/ConjunctionPage2/CancelBtn" to="." method="_on_cancel_btn_mouse_exited"]
+[connection signal="pressed" from="Control/ConjunctionPage2/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/ConjunctionPage3/Content2" to="." method="_on_content_2_gui_input"]
+[connection signal="gui_input" from="Control/ConjunctionPage3/Content(personetc_)2" to="." method="_on_contentpersonetc_2_gui_input"]
+[connection signal="pressed" from="Control/ConjunctionPage3/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage3/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage3/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/ConjunctionPage4/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/ConjunctionPage4/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage4/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage4/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="gui_input" from="Control/ConjunctionPage5/Content(personetc_)3" to="." method="_on_contentpersonetc_3_gui_input"]
+[connection signal="pressed" from="Control/ConjunctionPage5/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage5/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage5/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage6/CancelBtn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage6/NextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="Control/ConjunctionPage6/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="text_changed" from="Control/ConjunctionPage6/LearnedInput" to="." method="_on_learned_input_text_changed"]
+[connection signal="text_changed" from="Control/ConjunctionPage6/SurprisedInput" to="." method="_on_surprised_input_text_changed"]

@@ -869,6 +869,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_55a7n")
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/mute_btn" to="Control" method="_on_mute_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect/play_btn" to="Control" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect2/study_btn" to="Control" method="_on_study_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control" method="_on_quit_btn_pressed"]
 [connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/HSlider" to="Control" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/ext_btn" to="Control" method="_on_ext_btn_pressed"]

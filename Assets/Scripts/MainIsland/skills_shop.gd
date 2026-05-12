@@ -133,8 +133,12 @@ func _on_cancel_btn_pressed():
 		"island_2.2": "res://Assets/Scene/Countoria/level_2_countoria.tscn",
 		"island_3": "res://Assets/Scene/BloomsGrove/science.scn",
 		"island_3.1": "res://Assets/Scene/BloomsGrove/GardenMiniGame.tscn",
+		"island_3.2":"res://Assets/Scene/BloomsGrove/Minigame2.tscn",
 		"island_4": "res://Assets/Scene/Zypheria/zypheria.tscn",
+		"island_4.1":"res://Assets/Scene/Zypheria/zypheria_lvl_1.tscn",
+		"island_4.2": "res://Assets/Scene/Zypheria/zypheria_lvl_2.tscn",
 		"island_5": "res://Assets/Scene/MainIsland/main_island.tscn",
+		"study": "res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn"
 		
 	}
 	var scene = island_scenes.get(GameManager.get_current_island(), "res://Assets/Scene/MainIsland/main_island.tscn")

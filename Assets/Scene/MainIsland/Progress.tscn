@@ -110,7 +110,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="ProgressBar" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=332802171]
+[node name="LiteracyPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=332802171]
 layout_mode = 0
 offset_left = 114.50491
 offset_top = 66.03393
@@ -133,7 +133,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="ProgressBar" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=440289805]
+[node name="MathPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=440289805]
 layout_mode = 0
 offset_left = 114.50491
 offset_top = 66.03393
@@ -148,7 +148,7 @@ offset_top = 8.516937
 offset_right = 234.72975
 offset_bottom = 158.51694
 texture = ExtResource("4_f0xs7")
-region_rect = Rect2(440, 88, 336, 296)
+region_rect = Rect2(72, 104, 352, 288)
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=190798127]
 custom_minimum_size = Vector2(100, 160)
@@ -156,7 +156,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="ProgressBar" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=1925116802]
+[node name="SciencePB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=1925116802]
 layout_mode = 0
 offset_left = 114.50491
 offset_top = 66.03393
@@ -171,7 +171,7 @@ offset_top = 8.516968
 offset_right = 234.72975
 offset_bottom = 158.51697
 texture = ExtResource("4_f0xs7")
-region_rect = Rect2(440, 88, 336, 296)
+region_rect = Rect2(456, 408, 328, 296)
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1643195806]
 custom_minimum_size = Vector2(100, 160)
@@ -179,7 +179,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="ProgressBar" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1328676492]
+[node name="GeographyPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1328676492]
 layout_mode = 0
 offset_left = 114.50491
 offset_top = 66.03393
@@ -194,7 +194,7 @@ offset_top = 8.516968
 offset_right = 234.72975
 offset_bottom = 158.51697
 texture = ExtResource("4_f0xs7")
-region_rect = Rect2(440, 88, 336, 296)
+region_rect = Rect2(96, 400, 328, 296)
 
 [node name="NinePatchRect5" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=99947560]
 layout_mode = 2

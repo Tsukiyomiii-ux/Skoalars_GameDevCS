@@ -720,3 +720,4 @@ region_rect = Rect2(360, 32, 264, 304)
 [connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/NinePatchRect/play_btn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer/NinePatchRect2/settings_btn" to="Popup" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect3/quit_btn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn" to="." method="_on_study_btn_pressed"]

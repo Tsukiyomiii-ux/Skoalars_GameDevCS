@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b3hs6ne6qe8v0" path="res://Assets/Zypheria/TileSet_V1.png" id="11_ipvqv"]
 [ext_resource type="Texture2D" uid="uid://cy0ajvi5xggy1" path="res://Assets/Zypheria/63ccc3a4-b373-447c-94b1-7ffec613b71e.png" id="12_aq85p"]
 [ext_resource type="Texture2D" uid="uid://casqqbjvkqxow" path="res://Assets/Zypheria/4f71f718-5ba5-46d5-b75f-b77105b8f978.png" id="13_o53n0"]
-[ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/MainIsland/skoalarsGUI.tscn" id="15_pqgkl"]
+[ext_resource type="PackedScene" uid="uid://ddw4o1aufhyc0" path="res://Assets/Scene/skoalarsGUI.tscn" id="15_pqgkl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ipvqv"]
 texture = ExtResource("11_ipvqv")

@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://bfrcsc1uawrmf"]
+
+[ext_resource type="Script" uid="uid://b75lxpaxx1tc6" path="res://Assets/Scripts/StudySession/BloomsGrove/science_study.gd" id="1_7qb56"]
+[ext_resource type="Texture2D" uid="uid://ty0mowl02scw" path="res://Assets/Bloom Game 1/Study Session/science.png" id="1_skwrs"]
+[ext_resource type="Texture2D" uid="uid://d3qj4457ok8ws" path="res://Assets/Bloom Game 1/Study Session/scienceButtons.png" id="2_iaibb"]
+[ext_resource type="Texture2D" uid="uid://ci1te7ffei07o" path="res://Assets/Bloom Game 1/Study Session/ProfHoot Animation.png" id="3_fnej4"]
+[ext_resource type="Texture2D" uid="uid://cdyti31f5p6m2" path="res://Assets/Bloom Game 1/New Assets/Cancel.png" id="5_e2n68"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iaibb"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(217.5, 89, 459, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnej4"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(203.25, 436.625, 461.25, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qb56"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(196.5, 780.875, 454.5, 150.75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2n68"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(878.3154, 89.34699, 446.49414, 144.99548)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vi38"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(855.50354, 426.38443, 463.79492, 152.00003)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_381wo"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(861.5385, 776.7051, 456.00018, 144.20508)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbvhw"]
+atlas = ExtResource("3_fnej4")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wur67"]
+atlas = ExtResource("3_fnej4")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wciey"]
+atlas = ExtResource("3_fnej4")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18fys"]
+atlas = ExtResource("3_fnej4")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crwv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbvhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wur67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wciey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18fys")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="UI" type="CanvasLayer" unique_id=745750621]
+script = ExtResource("1_7qb56")
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=973465109]
+position = Vector2(641.75, 359)
+scale = Vector2(0.82845056, 0.70703125)
+texture = ExtResource("1_skwrs")
+
+[node name="Anatomy" type="TextureButton" parent="Bg" unique_id=127177832]
+offset_left = -669.62366
+offset_top = -207.91162
+offset_right = -210.62366
+offset_bottom = -63.91162
+scale = Vector2(0.7, 0.6)
+texture_normal = SubResource("AtlasTexture_iaibb")
+
+[node name="Physiology" type="TextureButton" parent="Bg" unique_id=491132422]
+offset_left = -188.00153
+offset_top = -207.9116
+offset_right = 272.99847
+offset_bottom = -63.911606
+scale = Vector2(0.7, 0.6)
+texture_normal = SubResource("AtlasTexture_fnej4")
+
+[node name="Ecology" type="TextureButton" parent="Bg" unique_id=947207285]
+offset_left = -659.967
+offset_top = 22.629822
+offset_right = -205.96698
+offset_bottom = 172.62982
+scale = Vector2(0.7, 0.6)
+texture_normal = SubResource("AtlasTexture_7qb56")
+
+[node name="Biodegradable" type="TextureButton" parent="Bg" unique_id=16053987]
+offset_left = -197.65808
+offset_top = 29.70169
+offset_right = 248.34192
+offset_bottom = 173.70169
+scale = Vector2(0.7, 0.6)
+texture_normal = SubResource("AtlasTexture_e2n68")
+
+[node name="NonBiodegradable" type="TextureButton" parent="Bg" unique_id=303126199]
+offset_left = -656.3457
+offset_top = 254.58563
+offset_right = -193.3457
+offset_bottom = 406.58563
+scale = Vector2(0.7, 0.6)
+texture_normal = SubResource("AtlasTexture_8vi38")
+
+[node name="Recyclable" type="TextureButton" parent="Bg" unique_id=27067084]
+offset_left = -203.6936
+offset_top = 257.4143
+offset_right = 252.3064
+offset_bottom = 401.4143
+scale = Vector2(0.7, 0.6)
+texture_normal = SubResource("AtlasTexture_381wo")
+
+[node name="Owl" type="AnimatedSprite2D" parent="Bg" unique_id=94618645]
+position = Vector2(445.71155, 213.56903)
+scale = Vector2(0.83074653, 1.0469612)
+sprite_frames = SubResource("SpriteFrames_crwv5")
+
+[node name="Cancel" type="TextureButton" parent="Bg" unique_id=2082163400]
+offset_left = -338.663
+offset_top = 437.537
+offset_right = -138.663
+offset_bottom = 537.53796
+scale = Vector2(0.73, 0.74)
+texture_normal = ExtResource("5_e2n68")
+
+[connection signal="pressed" from="Bg/Cancel" to="." method="_on_cancel_pressed"]

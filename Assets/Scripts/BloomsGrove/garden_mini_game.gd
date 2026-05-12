@@ -23,23 +23,26 @@ var is_frozen: bool = false
 @onready var wand_button = $btn/WandHolder/Wand
 
 var questions = [
-	{"q": "What part of the plant grows underground?", "options": ["Roots", "Leaves", "Flowers"], "answer": "Roots", "clue": "It anchors the plant!"},
-	{"q": "What do plants release for us to breathe?", "options": ["Oxygen", "Carbon", "Methane"], "answer": "Oxygen", "clue": "We need this 'O' gas!"},
-	{"q": "What do plants need from the sun?", "options": ["Light", "Heat", "Shadows"], "answer": "Light", "clue": "It helps them grow!"},
-	{"q": "Which part of the plant makes food?", "options": ["Leaves", "Stem", "Petals"], "answer": "Leaves", "clue": "They are usually flat and green!"},
-	{"q": "What do plants soak up from the soil?", "options": ["Water", "Air", "Sunlight"], "answer": "Water", "clue": "It falls from the rain!"},
-	{"q": "What is the green stuff in leaves called?", "options": ["Chlorophyll", "Sap", "Sugar"], "answer": "Chlorophyll", "clue": "Starts with 'Chlo'!"},
-	{"q": "What do plants grow from?", "options": ["Seeds", "Rocks", "Sand"], "answer": "Seeds", "clue": "You plant these in the dirt!"},
-	{"q": "Which part attracts bees and butterflies?", "options": ["Flowers", "Thorns", "Roots"], "answer": "Flowers", "clue": "They have colorful petals!"},
-	{"q": "What is the main stem of a tree called?", "options": ["Trunk", "Branch", "Twig"], "answer": "Trunk", "clue": "Like an elephant's nose!"},
-	{"q": "Plants need this space to grow their roots:", "options": ["Soil", "Plastic", "Glass"], "answer": "Soil", "clue": "Another word for dirt!"},
-	{"q": "What do we call a scientist who studies plants?", "options": ["Botanist", "Pilot", "Chef"], "answer": "Botanist", "clue": "Named after 'Botany'!"},
-	{"q": "Which of these is a vegetable?", "options": ["Carrot", "Apple", "Grape"], "answer": "Carrot", "clue": "It's orange and crunchy!"},
-	{"q": "What do plants need to drink?", "options": ["Water", "Soda", "Milk"], "answer": "Water", "clue": "H2O!"},
-	{"q": "What part of the plant holds it up?", "options": ["Stem", "Petals", "Fruit"], "answer": "Stem", "clue": "It's like the plant's backbone!"},
-	{"q": "What do we call the colorful part of a plant?", "options": ["Flower", "Root", "Dirt"], "answer": "Flower", "clue": "Red, blue, or yellow petals!"}
+	{"q": "What part of the plant lies below the soil that absorbs water and mineral from it?", "options": ["Trunk", "Roots", "Flowers"], "answer": "Flowers", "clue": "The underground anchor"},
+	{"q": "What part of the plant anchors it firmly to the soil?", "options": ["Trunk", "Roots", "Fruits"], "answer": "Roots", "clue": "They hold the plant in place like feet"},
+	{"q": "What part of the plant produces growth hormones?", "options": ["Leaves", "Stem", "Roots"], "answer": "Roots", "clue": "The hidden part below the dirt."},
+	{"q": "What part of the plant supports the leaves and conducts water and minerals?", "options": ["Stem", "Branch", "Log"], "answer": "Stem", "clue": "The plant's backbone or main pillar."},
+	{"q": "What part of the plant transports food, water, and minerals to all parts of the plant body?", "options": ["Bramch", "Roots", "Stem"], "answer": "Stem", "clue": "It acts like a straw or elevator for nutrients."},
+	{"q": "What part of the plant stores food mainly in the form of starch?", "options": ["Leaves", "Stem", "Flowers"], "answer": "Stem", "clue": "The long, central part that grows upward."},
+	{"q": "The primary site of photosynthesis in most plants.", "options": ["Flowers", "Leaves", "Roots"], "answer": "Leaves", "clue": "The plant's kitchen or solar panels"},
+	{"q": "What part of the plant is attached to the stem that makes food for the plant?", "options": ["Trunk", "Branch", "Leaves"], "answer": "Leaves", "clue": "The flat, green parts."},
+	{"q": "What part of the plant helps in evaporation from the aerial parts of the plant by transpiration?", "options": ["Flowers", "Trunk", "Leaves"], "answer": "Leaves", "clue": "They breathe out water vapor."},
+	{"q": "The reproductive part of the flowering plant", "options": ["Fruits", "Roots", "Flower"], "answer": "Flower", "clue": "The prettiest part that smells nice"},
+	{"q": "What part of the plant is the most colorful and attractive?", "options": ["Leaves", "Flower", "Roots"], "answer": "Flower", "clue": "Where the seeds begin to form.!"},
+	{"q": "What part of the plant stimulates pollination?", "options": ["Flower", "Leaves", "Trunk"], "answer": "Flower", "clue": "What bees and butterflies visit most."},
+	{"q": "The seed-bearing structure in flowering plants.", "options": ["Stem", "Petals", "Fruit"], "answer": "Fruits", "clue": "The fleshy part we often like to eat."},
+	{"q": "What part of the plant protects the growing seeds?", "options": ["Fruits", "Roots", "Leaves"], "answer": "Fruits", "clue": "Something animals eat and carry away."},
+	{"q": "They are organisms that creates their own food.", "options": ["Primary", "Secondary", "Producers"], "answer": "Producers", "clue": "Like plants; they produce energy."},
+	{"q": "They are organisms that feed directly on producers.", "options": ["Primary", "Secondary", "Producers"], "answer": "Primary", "clue": "The first ones to eat; usually herbivores."},
+	{"q": "They are organisms that eat primary consumers for energy.", "options": ["Tertiary", "Secondary", "Decomposer"], "answer": "Secondary", "clue": "The second level of eaters; meat-eaters."},
+	{"q": "They are organisms that are carnivores or omnivores that occupy the fourth trophic level.", "options": ["Producers", "Tertiary", "Primary"], "answer": "Tertiary", "clue": "Top-level hunters; the third type of consumer."},
+	{"q": "They are organisms that breaks down dead organic matter.", "options": ["Primary", "Secondary", "Decomposer"], "answer": "Decomposer", "clue": "Nature’s clean-up crew or recyclers."}
 ]
-
 var failed_questions = []
 
 func _ready():

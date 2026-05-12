@@ -7,6 +7,15 @@ var loading_instance
 var target_path : String
 var progress = [] # This array will hold the loading percentage
 var wand_used = false
+var cutscene_played: bool = false
+
+# 📚 STUDY SESSION PROGRESS
+var study_progress = {
+	"literacy": {"completed": 0, "total": 6},
+	"math": {"completed": 0, "total": 4},
+	"science": {"completed": 0, "total": 6},
+	"geography": {"completed": 0, "total": 5},
+}
 
 # 🎁 ISLAND REWARDS
 const ISLAND_REWARDS = {
@@ -78,6 +87,23 @@ var hint_already_used: bool = false
 
 var allowed_skills: Array = ["hint", "freeze_time", "add_time", "skip"]
 
+var plant_lesson_answer1 = ""
+var plant_lesson_answer2 = ""
+
+var plant_functions_answer1 = ""
+var plant_functions_answer2 = ""
+
+var ecosystem_answer1 = ""
+var ecosystem_answer2 = ""
+
+var bio_waste_answer1 = ""
+var bio_waste_answer2 = ""
+
+var non_bio_waste_answer1 = ""
+var non_bio_waste_answer2 = ""
+
+var recyclable_waste_answer1 = ""
+var recyclable_waste_answer2 = ""
 
 # Signals
 signal diamonds_changed(new_amount)
@@ -243,6 +269,20 @@ func set_current_island(island_name: String):
 func get_current_island() -> String:
 	return current_island
 
+#Progress Scene
+func complete_study_topic(subject: String):
+	if not study_progress.has(subject): return
+	var s = study_progress[subject]
+	if s["completed"] < s["total"]:
+		s["completed"] += 1
+		save_game()
+		print("📚 ", subject, " progress: ", s["completed"], "/", s["total"])
+
+func get_study_progress(subject: String) -> float:
+	if not study_progress.has(subject): return 0.0
+	var s = study_progress[subject]
+	return float(s["completed"]) / float(s["total"])
+
 # 📊 PROGRESS FUNCTIONS
 func complete_minigame(island_name: String):
 	if not island_progress.has(island_name):
@@ -304,8 +344,11 @@ func save_game():
 		"skill_uses": skill_uses,
 		"skills_equipped": skills_equipped,
 		"islands_unlocked": islands_unlocked,
-		"island_progress": island_progress
+		"island_progress": island_progress,
+		"study_progress": study_progress,
+		"cutscene_played": cutscene_played
 	}
+	
 	var file = FileAccess.open("user://game_save.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(save_data))
 	file.close()
@@ -326,6 +369,8 @@ func load_game():
 			skills_equipped = data.get("skills_equipped", skills_equipped)
 			islands_unlocked = data.get("islands_unlocked", islands_unlocked)
 			island_progress = data.get("island_progress", island_progress)
+			study_progress = data.get("study_progress", study_progress)
+			cutscene_played = data.get("cutscene_played", false)
 			diamonds_changed.emit(diamonds)
 			print("💾 Loaded: ", diamonds, " diamonds, uses: ", skill_uses)
 
@@ -341,7 +386,14 @@ func reset_game():
 		"island_3": {"minigames_completed": 0, "total_minigames": 2},
 		"island_4": {"minigames_completed": 0, "total_minigames": 2},
 	}
+	study_progress = {
+	"literacy": {"completed": 0, "total": 6},
+	"math": {"completed": 0, "total": 4},
+	"science": {"completed": 0, "total": 6},
+	"geography": {"completed": 0, "total": 5},
+	}
 	current_island = "island_1"
 	wand_used= false
+	cutscene_played = false
 	diamonds_changed.emit(diamonds)
 	save_game()

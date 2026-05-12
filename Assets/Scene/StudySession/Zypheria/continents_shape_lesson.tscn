@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://c48r157ovt34a"]
+
+[ext_resource type="Script" uid="uid://b22uxasnhbe67" path="res://Assets/Scripts/StudySession/Zypheria/continents_shape_lesson.gd" id="1_pdiw8"]
+[ext_resource type="Texture2D" uid="uid://b55jdke2yb1yo" path="res://Assets/StudySession/mainBgStudy.png" id="2_diju2"]
+[ext_resource type="Texture2D" uid="uid://bq3j7by81t7uc" path="res://Assets/StudySession/bookOpen.png" id="3_isue5"]
+[ext_resource type="Texture2D" uid="uid://eyks1e6x8gag" path="res://Assets/StudySession/Continents.png" id="4_t2si6"]
+[ext_resource type="Texture2D" uid="uid://bu3bqgi23qm25" path="res://Assets/StudySession/backBtn.png" id="5_gw7jy"]
+[ext_resource type="Texture2D" uid="uid://cjvln35x5d2es" path="res://Assets/Zypheria/LEVEL1/PopUp Window/nextButton.png" id="6_wf7qi"]
+[ext_resource type="Texture2D" uid="uid://xdlnu8wfeh68" path="res://Assets/StudySession/doneBtn.png" id="7_isue5"]
+[ext_resource type="Texture2D" uid="uid://rx57uxaq2duk" path="res://Assets/Zypheria/LEVEL1/PopUp Window/cancelButton.png" id="8_t2si6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isue5"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2si6"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="ContinentsShape_Lesson" type="Node2D" unique_id=357008492]
+script = ExtResource("1_pdiw8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2045781345]
+
+[node name="MainBackground" type="Sprite2D" parent="CanvasLayer" unique_id=1288650923]
+position = Vector2(640, 360)
+texture = ExtResource("2_diju2")
+
+[node name="Notebooks" type="Sprite2D" parent="CanvasLayer" unique_id=2087483034]
+position = Vector2(644, 360)
+scale = Vector2(0.8385417, 0.7011719)
+texture = ExtResource("3_isue5")
+
+[node name="FirstPopUp" type="Sprite2D" parent="CanvasLayer" unique_id=814210237]
+texture_filter = 1
+position = Vector2(633, 367.5)
+scale = Vector2(0.5950521, 0.60839844)
+texture = ExtResource("4_t2si6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1133089453]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -654.0
+offset_top = 226.0
+offset_right = 682.0
+offset_bottom = 451.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/HBoxContainer" unique_id=784577207]
+layout_mode = 2
+theme_override_constants/h_separation = 700
+columns = 2
+
+[node name="BackBtn" type="TextureButton" parent="CanvasLayer/HBoxContainer/GridContainer" unique_id=932064801]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = ExtResource("5_gw7jy")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="NextBtn" type="TextureButton" parent="CanvasLayer/HBoxContainer/GridContainer" unique_id=1550842624]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_wf7qi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer" unique_id=1238430400]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -462.0
+offset_top = -227.0
+offset_right = 482.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="LeftPage" type="RichTextLabel" parent="CanvasLayer/HBoxContainer2" unique_id=1633735569]
+auto_translate_mode = 2
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0.6893704, 0.6437342, 0.07016479, 0.47200003)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+
+[node name="RightPage-IMAGE" type="TextureRect" parent="CanvasLayer/HBoxContainer2" unique_id=398278676]
+auto_translate_mode = 2
+texture_filter = 1
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+stretch_mode = 5
+
+[node name="DoneBtn" type="TextureButton" parent="CanvasLayer" unique_id=1008773393]
+offset_left = 934.0
+offset_top = 592.0
+offset_right = 1253.0
+offset_bottom = 683.0
+texture_normal = ExtResource("7_isue5")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CancelBtn" type="TextureButton" parent="CanvasLayer" unique_id=1890347518]
+offset_left = -57.0
+offset_top = 8.0
+offset_right = 340.0
+offset_bottom = 87.0
+texture_normal = ExtResource("8_t2si6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer" unique_id=818920887]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -462.0
+offset_top = -202.0
+offset_right = 482.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Question1_LeftPage" type="RichTextLabel" parent="CanvasLayer/HBoxContainer3" unique_id=2062639120]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "New things you learned:"
+
+[node name="Answer1" type="TextEdit" parent="CanvasLayer/HBoxContainer3/Question1_LeftPage" unique_id=536009140]
+layout_mode = 0
+offset_top = 62.0
+offset_right = 434.0
+offset_bottom = 422.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_isue5")
+placeholder_text = "	Type your answers here (Minimum: 10 words)"
+
+[node name="Question2_RightPage" type="RichTextLabel" parent="CanvasLayer/HBoxContainer3" unique_id=2134739037]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "Things you found interesting or surprising:"
+
+[node name="Answer2" type="TextEdit" parent="CanvasLayer/HBoxContainer3/Question2_RightPage" unique_id=466421550]
+layout_mode = 0
+offset_top = 93.0
+offset_right = 420.0
+offset_bottom = 422.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2si6")
+placeholder_text = "	Type your answers here (Minimum: 10 words)"

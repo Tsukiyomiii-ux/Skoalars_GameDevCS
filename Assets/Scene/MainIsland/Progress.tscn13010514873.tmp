@@ -1,0 +1,234 @@
+[gd_scene format=3 uid="uid://i5f26i45h3yj"]
+
+[ext_resource type="Script" uid="uid://eb22dr3avme" path="res://Assets/Scripts/MainIsland/progress.gd" id="1_lnuu8"]
+[ext_resource type="Texture2D" uid="uid://br7bydaerdo4s" path="res://Assets/Sprite/BG/39.png" id="2_f0xs7"]
+[ext_resource type="Texture2D" uid="uid://db1m7yfwjfqt3" path="res://Assets/Sprite/Buttons/Progress.png" id="4_f0xs7"]
+[ext_resource type="Texture2D" uid="uid://ctoo17b6pdytr" path="res://Assets/Sprite/Characters/ProfHoot Animation.png" id="4_lnuu8"]
+[ext_resource type="Texture2D" uid="uid://p7smd3uo48y8" path="res://Assets/Sprite/Buttons/COLLECT & NAVIGATION BUTTONS.png" id="8_yh0rt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0xs7"]
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(104, 752, 736, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnuu8"]
+atlas = ExtResource("4_lnuu8")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pthr"]
+atlas = ExtResource("4_lnuu8")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qewpa"]
+atlas = ExtResource("4_lnuu8")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtusn"]
+atlas = ExtResource("4_lnuu8")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6kywd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnuu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pthr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qewpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtusn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dstj4"]
+texture = ExtResource("8_yh0rt")
+region_rect = Rect2(192, 632, 592, 272)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgeke"]
+texture = ExtResource("8_yh0rt")
+region_rect = Rect2(200, 632, 576, 280)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mouvt"]
+texture = ExtResource("8_yh0rt")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(200, 624, 576, 288)
+
+[node name="Control" type="Control" unique_id=44343785]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lnuu8")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=468067049]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_f0xs7")
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=1590925288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 103.0
+offset_top = 111.0
+offset_right = 103.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.839626, 0.71283317)
+theme_override_constants/margin_left = 57
+theme_override_constants/margin_top = 49
+theme_override_constants/margin_bottom = 31
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer" unique_id=1913667183]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer" unique_id=336568886]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1434156933]
+custom_minimum_size = Vector2(100, 160)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=332802171]
+layout_mode = 0
+offset_left = 114.50491
+offset_top = 66.03393
+offset_right = 464.5049
+offset_bottom = 156.03394
+theme_override_styles/background = SubResource("StyleBoxTexture_f0xs7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=1547055710]
+layout_mode = 0
+offset_left = 84.72976
+offset_top = 8.516953
+offset_right = 234.72977
+offset_bottom = 158.51695
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(440, 88, 336, 296)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=219871308]
+custom_minimum_size = Vector2(100, 160)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=440289805]
+layout_mode = 0
+offset_left = 114.50491
+offset_top = 66.03393
+offset_right = 464.5049
+offset_bottom = 156.03394
+theme_override_styles/background = SubResource("StyleBoxTexture_f0xs7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=414340389]
+layout_mode = 0
+offset_left = 84.72975
+offset_top = 8.516937
+offset_right = 234.72975
+offset_bottom = 158.51694
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(72, 104, 352, 288)
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=190798127]
+custom_minimum_size = Vector2(100, 160)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=1925116802]
+layout_mode = 0
+offset_left = 114.50491
+offset_top = 66.03393
+offset_right = 464.5049
+offset_bottom = 156.03394
+theme_override_styles/background = SubResource("StyleBoxTexture_f0xs7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=661040726]
+layout_mode = 0
+offset_left = 84.72975
+offset_top = 8.516968
+offset_right = 234.72975
+offset_bottom = 158.51697
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(456, 408, 328, 296)
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1643195806]
+custom_minimum_size = Vector2(100, 160)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1328676492]
+layout_mode = 0
+offset_left = 114.50491
+offset_top = 66.03393
+offset_right = 464.5049
+offset_bottom = 156.03394
+theme_override_styles/background = SubResource("StyleBoxTexture_f0xs7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=498632782]
+layout_mode = 0
+offset_left = 84.72975
+offset_top = 8.516968
+offset_right = 234.72975
+offset_bottom = 158.51697
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(96, 400, 328, 296)
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=99947560]
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect5" unique_id=1279425596]
+position = Vector2(1037.5349, -223.82146)
+sprite_frames = SubResource("SpriteFrames_6kywd")
+autoplay = "default"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect5" unique_id=1323490814]
+layout_mode = 0
+offset_left = 494.43594
+offset_top = -678.34576
+offset_right = 1094.4359
+offset_bottom = -278.34576
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(848, 80, 592, 400)
+
+[node name="cancel_btn" type="Button" parent="NinePatchRect" unique_id=959431826]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 602.0
+offset_right = 758.0
+offset_bottom = 722.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_dstj4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xgeke")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mouvt")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=560219126]
+layout_mode = 0
+offset_left = 391.0
+offset_right = 891.0
+offset_bottom = 150.0
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(816, 496, 680, 224)
+
+[connection signal="pressed" from="NinePatchRect/cancel_btn" to="." method="_on_cancel_btn_pressed"]

@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://coifh2t6votc0"]
+
+[ext_resource type="Texture2D" uid="uid://b55jdke2yb1yo" path="res://Assets/StudySession/mainBgStudy.png" id="1_itmds"]
+[ext_resource type="Script" uid="uid://p6v8x7pejevl" path="res://Assets/Scripts/StudySession/Zypheria/study_session_main.gd" id="1_tfm2k"]
+[ext_resource type="Texture2D" uid="uid://def5v0jpgev4m" path="res://Assets/StudySession/booksElementMain.png" id="3_tsmgk"]
+[ext_resource type="Texture2D" uid="uid://cya6aw3c1xopr" path="res://Assets/StudySession/ProfHoot Animation.png" id="3_yi7gs"]
+[ext_resource type="Texture2D" uid="uid://bc3mthqrsnqfs" path="res://Assets/StudySession/8.png" id="5_crmcn"]
+[ext_resource type="Texture2D" uid="uid://clf11lmlrau3p" path="res://Assets/StudySession/9.png" id="6_wdx5u"]
+[ext_resource type="Texture2D" uid="uid://dltp3cmrbi1r8" path="res://Assets/StudySession/10.png" id="7_36845"]
+[ext_resource type="Texture2D" uid="uid://jije8kpd2uqc" path="res://Assets/StudySession/11.png" id="8_xiaxl"]
+[ext_resource type="PackedScene" uid="uid://cg8mkilwse5gt" path="res://Assets/Scene/StudySession_GUI.tscn" id="9_tsmgk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8i1p"]
+atlas = ExtResource("3_yi7gs")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4p0r"]
+atlas = ExtResource("3_yi7gs")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfm2k"]
+atlas = ExtResource("3_yi7gs")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crmcn"]
+atlas = ExtResource("3_yi7gs")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdx5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8i1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4p0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfm2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crmcn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StudySession_Main" type="Node2D" unique_id=2108545182]
+script = ExtResource("1_tfm2k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1313705952]
+
+[node name="MainBackground" type="Sprite2D" parent="CanvasLayer" unique_id=1506162078]
+position = Vector2(640, 360)
+texture = ExtResource("1_itmds")
+
+[node name="Books" type="Sprite2D" parent="CanvasLayer" unique_id=1268628395]
+position = Vector2(640, 360)
+scale = Vector2(0.73281246, 0.7011719)
+texture = ExtResource("3_tsmgk")
+
+[node name="ProfHoot" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=53354856]
+position = Vector2(1051, 561)
+scale = Vector2(1.2135416, 1.1650391)
+sprite_frames = SubResource("SpriteFrames_wdx5u")
+autoplay = "default"
+frame_progress = 0.47817212
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=284935066]
+layer = 250
+
+[node name="Skoalars" parent="CanvasLayer2" unique_id=1875685537 instance=ExtResource("9_tsmgk")]
+position = Vector2(633, 351.00003)
+scale = Vector2(0.056, 0.056)
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=659940824]
+layer = 200
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer3" unique_id=879376320]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -514.0
+offset_top = -105.0
+offset_right = 146.0
+offset_bottom = 259.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer3/HBoxContainer" unique_id=1042991126]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 140
+columns = 2
+
+[node name="LiteracyBtn" type="TextureButton" parent="CanvasLayer3/HBoxContainer/GridContainer" unique_id=1106131247]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = ExtResource("5_crmcn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MathBtn" type="TextureButton" parent="CanvasLayer3/HBoxContainer/GridContainer" unique_id=813632599]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_wdx5u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ScienceBtn" type="TextureButton" parent="CanvasLayer3/HBoxContainer/GridContainer" unique_id=1908749874]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_36845")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="GeographyBtn" type="TextureButton" parent="CanvasLayer3/HBoxContainer/GridContainer" unique_id=965696055]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = ExtResource("8_xiaxl")
+ignore_texture_size = true
+stretch_mode = 5

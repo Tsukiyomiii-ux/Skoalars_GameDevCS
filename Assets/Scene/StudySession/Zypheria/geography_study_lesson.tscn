@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://djhnm4vodp086"]
+
+[ext_resource type="Texture2D" uid="uid://b55jdke2yb1yo" path="res://Assets/StudySession/mainBgStudy.png" id="1_sgfsd"]
+[ext_resource type="Script" uid="uid://croa30cm5w4gq" path="res://Assets/Scripts/StudySession/Zypheria/geography_study_lesson.gd" id="1_yplt1"]
+[ext_resource type="Texture2D" uid="uid://btuy4euc64g4g" path="res://Assets/StudySession/lessonObjects.png" id="2_yplt1"]
+[ext_resource type="Texture2D" uid="uid://cya6aw3c1xopr" path="res://Assets/StudySession/ProfHoot Animation.png" id="3_awecx"]
+[ext_resource type="Texture2D" uid="uid://bv8v46qkxmmlo" path="res://Assets/StudySession/15.png" id="4_idog2"]
+[ext_resource type="Texture2D" uid="uid://bbaj2p2lwgseg" path="res://Assets/StudySession/12.png" id="5_6h6nq"]
+[ext_resource type="Texture2D" uid="uid://bmtxltq17dbx4" path="res://Assets/StudySession/13.png" id="6_eoulq"]
+[ext_resource type="Texture2D" uid="uid://coehv8ckj62px" path="res://Assets/StudySession/tectonicBtn.png" id="8_h32hw"]
+[ext_resource type="Texture2D" uid="uid://rx57uxaq2duk" path="res://Assets/Zypheria/LEVEL1/PopUp Window/cancelButton.png" id="9_pdrur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8i1p"]
+atlas = ExtResource("3_awecx")
+region = Rect2(768, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4p0r"]
+atlas = ExtResource("3_awecx")
+region = Rect2(0, 0, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfm2k"]
+atlas = ExtResource("3_awecx")
+region = Rect2(768, 512, 768, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crmcn"]
+atlas = ExtResource("3_awecx")
+region = Rect2(0, 512, 768, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7k3c6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8i1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4p0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfm2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crmcn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Geography_StudyLesson" type="Node2D" unique_id=533673381]
+script = ExtResource("1_yplt1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1324796527]
+
+[node name="MainBackground" type="Sprite2D" parent="CanvasLayer" unique_id=2022377877]
+position = Vector2(640, 360)
+texture = ExtResource("1_sgfsd")
+
+[node name="Notebooks" type="Sprite2D" parent="CanvasLayer" unique_id=790975105]
+position = Vector2(601.3999, 360)
+scale = Vector2(0.7830728, 0.7011719)
+texture = ExtResource("2_yplt1")
+
+[node name="ProfHoot" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1324096720]
+position = Vector2(993, 544)
+scale = Vector2(0.9401042, 0.9965821)
+sprite_frames = SubResource("SpriteFrames_7k3c6")
+autoplay = "default"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=266840792]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.0
+offset_top = -78.0
+offset_right = 194.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/HBoxContainer" unique_id=866849337]
+layout_mode = 2
+theme_override_constants/h_separation = 150
+theme_override_constants/v_separation = 60
+columns = 2
+
+[node name="FlagsBtn" type="TextureButton" parent="CanvasLayer/HBoxContainer/GridContainer" unique_id=623900900]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("4_idog2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CapitalsBtn" type="TextureButton" parent="CanvasLayer/HBoxContainer/GridContainer" unique_id=512396140]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("5_6h6nq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ContinentsBtn" type="TextureButton" parent="CanvasLayer/HBoxContainer/GridContainer" unique_id=597266472]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_eoulq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TectonicBtn" type="TextureButton" parent="CanvasLayer/HBoxContainer/GridContainer" unique_id=2139475722]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture_normal = ExtResource("8_h32hw")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CancelButton" type="TextureButton" parent="CanvasLayer" unique_id=732945618]
+offset_left = 270.0
+offset_top = 609.0
+offset_right = 541.0
+offset_bottom = 703.0
+texture_normal = ExtResource("9_pdrur")
+ignore_texture_size = true
+stretch_mode = 5

@@ -76,6 +76,7 @@ func _on_h_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(0, value)
 
 func _on_skills_btn_pressed() -> void:
+	play()
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/SkillEquip.tscn")
 
 func _on_settings_btn_pressed() -> void:
@@ -128,9 +129,11 @@ func _on_done_btn_pressed():
 	get_tree().change_scene_to_file("res://Assets/Scene/main_island.tscn")
 
 func _on_diamond_btn_pressed() -> void:
+	play()
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/skillShop.tscn")
 
 func _on_map_start_btn_pressed() -> void:
+	play()
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/mapSelector.tscn")
 
 func _on_hint_btn_pressed():
@@ -144,3 +147,24 @@ func _on_add_time_btn_pressed():
 
 func _on_skip_btn_pressed():
 	GameManager.use_skill("skip")
+
+
+func _on_study_btn_pressed() -> void:
+	var current = get_tree().current_scene.scene_file_path
+	if "study_session" in current:
+		play()
+		if anim and is_instance_valid(anim):
+			anim.play("blur")
+		safe_set_visible(open_cont, false)
+		safe_set_visible(close_cont, true)
+		safe_set_visible(bottom_cont, true)
+		return
+	play()
+	if anim and is_instance_valid(anim):
+		anim.play("blur")
+	await anim.animation_finished
+	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn")
+
+func _on_progress_btn_pressed() -> void:
+	play()  # ✅ Unpause first
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/Progress.tscn")

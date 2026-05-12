@@ -21,7 +21,7 @@ func _physics_process(delta):
 	velocity = direction * walk_speed
 	move_and_slide()
 	
-	## ANIMATION
+	# ANIMATION
 	update_animation(direction)
 
 func update_animation(direction):

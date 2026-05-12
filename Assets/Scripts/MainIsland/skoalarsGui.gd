@@ -43,3 +43,7 @@ func _physics_process(delta):
 		#else:
 			#sprite.play("walk_up")
 			#last_direction = "up"
+
+
+func _on_study_btn_pressed() -> void:
+	pass # Replace with function body.

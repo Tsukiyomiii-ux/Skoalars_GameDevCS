@@ -37,6 +37,8 @@ extends Node2D
 @onready var timer_label = $CanvasLayer2/TimerLabel
 @onready var game_timer = $Timer
 
+
+@onready var parallax = $ParallaxBackground
 # --- DATA ---
 var all_questions = [
 	{"q": "What is the capital of Argentina?", "a": "Buenos Aires"},
@@ -68,12 +70,18 @@ var is_transitioning = false
 var is_frozen: bool = false
 var hint_timer_active = false
 var hint_time_left = 10.0
+var settings_open: bool = false
 
 func _ready():
 	randomize()
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	all_questions.shuffle()
 	session_questions = all_questions.slice(0, 10)
-	
+	$ParallaxBackground.process_mode = Node.PROCESS_MODE_ALWAYS
+	for child in $ParallaxBackground.get_children():
+		child.process_mode = Node.PROCESS_MODE_ALWAYS
+		for grandchild in child.get_children():
+			grandchild.process_mode = Node.PROCESS_MODE_ALWAYS
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.disabled = true
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.modulate = Color(0.5, 0.5, 0.5)
 	
@@ -177,7 +185,16 @@ func _on_skip_used():
 
 # --- PROCESS ---
 func _process(_delta):
+	for child in $ParallaxBackground.get_children():
+		var sprite = child.get_node_or_null("Sprite2D")
+		if sprite:
+			sprite.position.x -= 30.0 * _delta
+			# Reset position when it goes too far left
+			if sprite.position.x < -1280:
+				sprite.position.x = 1280
+	
 	if not is_frozen and game_timer:
+		if settings_open: return
 		var time_left = game_timer.time_left
 		var mins = int(time_left) / 60
 		var secs = int(time_left) % 60
@@ -306,11 +323,16 @@ func end_game(is_win: bool):
 		btn.disabled = true
 
 func _on_settings_opened():
+	settings_open = true
+	get_tree().paused = false
+	game_timer.paused = true  # ✅ Pause just the timer
 	if hint_button: hint_button.hide()
 	if $CanvasLayer2: $CanvasLayer2.hide()
 	if $CanvasLayer: $CanvasLayer.hide()
 
 func _on_settings_closed():
+	settings_open = false
+	game_timer.paused = false  # ✅ Resume timer
 	if hint_button and not hint_button.disabled: hint_button.show()
 	if $CanvasLayer2: $CanvasLayer2.show()
 	if $CanvasLayer: $CanvasLayer.show()

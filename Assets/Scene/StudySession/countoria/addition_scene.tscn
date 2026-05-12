@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://ul14mxihj1w"]
+
+[ext_resource type="Script" uid="uid://c8dy7hdurfgft" path="res://Assets/Scripts/StudySession/countoria/addition_scene.gd" id="1_0lfdp"]
+[ext_resource type="Texture2D" uid="uid://buhjeiy00e7uw" path="res://Assets/Sprite/Objects/study_session/book.png" id="1_03b4x"]
+[ext_resource type="Texture2D" uid="uid://dge0bj71h042h" path="res://Assets/Sprite/Objects/Market/COLLECT & NAVIGATION BUTTONS.png" id="2_644uf"]
+[ext_resource type="Texture2D" uid="uid://c3y2ob1qkqy8e" path="res://Assets/Sprite/Objects/Market/try again,done, purchase, etc. buttons.png" id="4_fsix5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lfdp"]
+atlas = ExtResource("2_644uf")
+region = Rect2(208, 632, 552, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsix5"]
+atlas = ExtResource("2_644uf")
+region = Rect2(216, 640, 536, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy2fj"]
+atlas = ExtResource("2_644uf")
+region = Rect2(792, 152, 544, 248)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3rxn"]
+atlas = ExtResource("2_644uf")
+region = Rect2(792, 160, 544, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gkwg"]
+atlas = ExtResource("2_644uf")
+region = Rect2(784, 624, 552, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hesya"]
+atlas = ExtResource("2_644uf")
+region = Rect2(776, 632, 560, 264)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsix5"]
+bg_color = Color(0.99646384, 0.99646395, 0.99646395, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hy2fj"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rakmu"]
+atlas = ExtResource("4_fsix5")
+region = Rect2(776, 160, 440, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enr3a"]
+atlas = ExtResource("4_fsix5")
+region = Rect2(776, 160, 440, 120)
+
+[node name="addition_scene" type="Node2D" unique_id=1831943936]
+script = ExtResource("1_0lfdp")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1534766559]
+offset_right = 1284.0
+offset_bottom = 726.0
+texture = ExtResource("1_03b4x")
+expand_mode = 1
+
+[node name="cancel_btn" type="TextureButton" parent="." unique_id=1341255286]
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 221.0
+offset_bottom = 92.0
+texture_normal = SubResource("AtlasTexture_0lfdp")
+texture_pressed = SubResource("AtlasTexture_fsix5")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="back_btn" type="TextureButton" parent="." unique_id=1496899813]
+offset_left = 19.0
+offset_top = 622.0
+offset_right = 199.0
+offset_bottom = 699.0
+texture_normal = SubResource("AtlasTexture_hy2fj")
+texture_pressed = SubResource("AtlasTexture_m3rxn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="next_btn" type="TextureButton" parent="." unique_id=869686471]
+offset_left = 1081.0
+offset_top = 616.0
+offset_right = 1262.0
+offset_bottom = 704.0
+texture_normal = SubResource("AtlasTexture_6gkwg")
+texture_pressed = SubResource("AtlasTexture_hesya")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="lesson_content" type="RichTextLabel" parent="." unique_id=1307103015]
+offset_left = 159.0
+offset_top = 162.0
+offset_right = 618.0
+offset_bottom = 620.0
+bbcode_enabled = true
+
+[node name="lessonImage" type="TextureRect" parent="." unique_id=1357868892]
+offset_left = 679.0
+offset_top = 126.0
+offset_right = 1121.0
+offset_bottom = 622.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="answer_board1" type="TextEdit" parent="." unique_id=154329398]
+offset_left = 166.0
+offset_top = 254.0
+offset_right = 621.0
+offset_bottom = 597.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.14509805, 0.14509805, 0.14117648, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fsix5")
+placeholder_text = "Type your answers here (Minimum of 10 words)"
+
+[node name="answer_board2" type="TextEdit" parent="." unique_id=1946204330]
+offset_left = 668.0
+offset_top = 251.0
+offset_right = 1123.0
+offset_bottom = 594.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.14509805, 0.14509805, 0.14117648, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_hy2fj")
+placeholder_text = "Type your answers here (Minimum of 10 words)"
+wrap_mode = 1
+
+[node name="header_container1" type="VBoxContainer" parent="." unique_id=1989874718]
+offset_left = 165.0
+offset_top = 148.0
+offset_right = 615.0
+offset_bottom = 242.0
+
+[node name="learned_label" type="RichTextLabel" parent="header_container1" unique_id=613699921]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "New things you have learned:
+"
+fit_content = true
+
+[node name="header_container2" type="VBoxContainer" parent="." unique_id=1071409743]
+offset_left = 671.0
+offset_top = 141.0
+offset_right = 1124.0
+offset_bottom = 234.0
+
+[node name="interesing_label" type="RichTextLabel" parent="header_container2" unique_id=1123751189]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Things you find interesting and surprising: "
+fit_content = true
+
+[node name="done_btn" type="TextureButton" parent="." unique_id=375450257]
+offset_left = 1073.0
+offset_top = 614.0
+offset_right = 1276.0
+offset_bottom = 695.0
+texture_normal = SubResource("AtlasTexture_rakmu")
+texture_pressed = SubResource("AtlasTexture_enr3a")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="cancel_btn" to="." method="_on_cancel_btn_pressed"]
+[connection signal="pressed" from="back_btn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="next_btn" to="." method="_on_next_btn_pressed"]
+[connection signal="text_changed" from="answer_board1" to="." method="_on_answer_board_1_text_changed"]
+[connection signal="text_changed" from="answer_board2" to="." method="_on_answer_board_2_text_changed"]
+[connection signal="pressed" from="done_btn" to="." method="_on_done_btn_pressed"]
