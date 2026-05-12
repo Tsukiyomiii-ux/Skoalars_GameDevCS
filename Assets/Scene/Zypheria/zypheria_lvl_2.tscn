@@ -235,11 +235,12 @@ script = ExtResource("1_msjiv")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=214989016]
 offset = Vector2(0, -0.04)
-scale = Vector2(0.26, 0.26)
-transform = Transform2D(0.26, 0, 0, 0.26, 0, -0.04)
+scale = Vector2(0.265, 0.265)
+transform = Transform2D(0.265, 0, 0, 0.265, 0, -0.04)
 
 [node name="sky" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1998574806]
-motion_scale = Vector2(0.1, 0.05)
+process_mode = 3
+motion_scale = Vector2(0.1, 0)
 motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/sky" unique_id=1254258058]
@@ -248,25 +249,30 @@ texture = ExtResource("3_lk2ch")
 centered = false
 
 [node name="clouds1" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2050753239]
-motion_scale = Vector2(1, 0.15)
+process_mode = 3
+motion_scale = Vector2(0.3, 0)
 motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds1" unique_id=414671916]
+visible = false
 texture_filter = 1
 texture = ExtResource("4_qoiyg")
 centered = false
 
 [node name="clouds2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1208708538]
-motion_scale = Vector2(5, 0.4)
+process_mode = 3
+motion_scale = Vector2(0.5, 0)
 motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds2" unique_id=748712366]
 texture_filter = 1
+position = Vector2(-78, -110.95999)
 texture = ExtResource("5_fovlj")
 centered = false
 
 [node name="clouds3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2053343994]
-motion_scale = Vector2(10, 1)
+process_mode = 3
+motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds3" unique_id=620408610]

@@ -54,9 +54,9 @@ func _ready():
 	cancel_btn.pressed.connect(_on_cancel_pressed)
 	
 	# Connect Answer signals to check word count live
-	answer_1.text_changed.connect(_on_answer_text_changed)
-	answer_2.text_changed.connect(_on_answer_text_changed)
-	
+	answer_1.text = GameManager.get_study_answer("tectonic", "answer1")
+	answer_2.text = GameManager.get_study_answer("tectonic", "answer2")
+
 	# Setup all buttons for hover effects
 	var all_btns = [next_btn, back_btn, done_btn, cancel_btn]
 	for btn in all_btns:
@@ -86,8 +86,9 @@ func _on_back_pressed():
 
 # --- Validation Logic ---
 func _on_answer_text_changed():
+	GameManager.save_study_answer("tectonic", "answer1", answer_1.text)
+	GameManager.save_study_answer("tectonic", "answer2", answer_2.text)
 	_check_word_count()
-	save_answers() # Save as they type
 
 func _check_word_count():
 	var words1 = answer_1.text.split(" ", false)
@@ -141,8 +142,9 @@ func load_answers():
 # --- Exit Logic ---
 func _on_done_pressed():
 	save_answers()
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("geography")
-	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():
 	save_answers()

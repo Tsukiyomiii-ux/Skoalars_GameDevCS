@@ -66,8 +66,8 @@ var word_requirement = 10
 
 func _ready():
 	# 1. LOAD: Pull existing text from GameManager immediately
-	answer1_field.text = GameManager.plant_functions_answer1
-	answer2_field.text = GameManager.plant_functions_answer2
+	answer1_field.text = GameManager.get_study_answer("plant_functions", "answer1")
+	answer2_field.text = GameManager.get_study_answer("plant_functions", "answer2")
 	
 	# Connect signals
 	answer1_field.text_changed.connect(_on_answers_changed)
@@ -101,6 +101,7 @@ func update_page():
 		topic_functions_label.text = formatted_text
 	else:
 		# --- ASSESSMENT MODE ---
+		$Bg.visible = true
 		answer1_field.visible = true
 		answer2_field.visible = true
 		question1_container.visible = true
@@ -112,16 +113,17 @@ func update_page():
 	back_button.visible = current_index > 0
 
 func _on_answers_changed():
-	# 2. SAVE: Push current text to GameManager every time it changes
-	GameManager.plant_functions_answer1 = answer1_field.text
-	GameManager.plant_functions_answer2 = answer2_field.text
+	GameManager.save_study_answer("plant_functions", "answer1", answer1_field.text)
+	GameManager.save_study_answer("plant_functions", "answer2", answer2_field.text)
 	
 	if current_index >= lessons.size():
 		var words1 = answer1_field.text.split(" ", false).size()
 		var words2 = answer2_field.text.split(" ", false).size()
 		
 		done_button.visible = (words1 >= word_requirement and words2 >= word_requirement)
-
+		print("✅ done_button.visible = ", done_button.visible, " | words: ", words1, ", ", words2)
+	else:
+		done_button.visible = false
 func _on_next_pressed():
 	if current_index < lessons.size():
 		current_index += 1

@@ -90,9 +90,12 @@ var is_game_finished: bool = false
 func _ready() -> void:
 	AudioManager.play_music(preload("res://Assets/Audio/SoftEng_BG1.wav"))
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	if not GameManager.cutscene_played:
+		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.disabled = true       # grays it out and blocks clicks
+		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.modulate.a = 0.4      # optional: make it look faded
 	
 	# Done visible, skip hidden at start
-	safe_set_visible(finished_btn, true)
+	safe_set_visible(finished_btn, GameManager.tutorial_completed)
 	safe_set_visible(skip_btn, false)
 	
 	if snd_level_start and is_instance_valid(snd_level_start):
@@ -115,6 +118,13 @@ func pause():
 	get_tree().paused = true
 
 # TUTORIAL INPUT
+func on_tutorial_finished():
+	print("✅ on_tutorial_finished called")
+	tutorial_done = true
+	GameManager.tutorial_completed = true
+	GameManager.save_game()
+	safe_set_visible(finished_btn, true)
+
 func _unhandled_input(event):
 	if tutorial_done:
 		return
@@ -171,6 +181,12 @@ func show_reward():
 
 # --- QUEST FUNCTIONS ---
 func _process(delta):
+		# ✅ Check if tutorial just completed
+	if not tutorial_done and GameManager.tutorial_completed:
+		tutorial_done = true
+		safe_set_visible(finished_btn, true)
+		print("✅ Done button shown via GameManager")
+	
 	if is_timer_active and not is_game_finished and tutorial_done:
 		if time_left > 0:
 			time_left -= delta

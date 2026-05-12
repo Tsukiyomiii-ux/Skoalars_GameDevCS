@@ -7,6 +7,8 @@ func _on_play_btn_pressed() -> void:
 	else:
 		# First time — play cutscene
 		get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/opening_cutscene.tscn")
+		
+		
 
 
 func _on_h_slider_value_changed(value: float) -> void:
@@ -19,6 +21,10 @@ func _on_quit_btn_pressed() -> void:
 
 func _ready() -> void:
 	AudioManager.play_music(preload("res://Assets/Audio/Soft_Eng_LoFi.wav"))
+	if not GameManager.cutscene_played:
+		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.disabled = true       # grays it out and blocks clicks
+		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.modulate.a = 0.4      # optional: make it look faded
+	
 
 
 

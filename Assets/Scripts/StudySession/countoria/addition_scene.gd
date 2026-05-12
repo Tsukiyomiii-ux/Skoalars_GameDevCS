@@ -130,5 +130,6 @@ func _on_back_btn_pressed():
 		update_page_display()
 
 func _on_done_btn_pressed():
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("math")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/countoria/studysession_countoria.tscn")

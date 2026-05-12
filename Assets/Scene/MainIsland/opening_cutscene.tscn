@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://gb53b862061d"]
 
-[ext_resource type="VideoStream" uid="uid://debnq8kib0g13" path="res://Assets/Cutscenes/hm/Storyboard Animation(intro3).ogv" id="1_ycmmy"]
+[ext_resource type="VideoStream" uid="uid://mcpc8d6whxd3" path="res://Assets/Cutscenes/STORYBOARD ANIMATION.ogv" id="1_ycmmy"]
 [ext_resource type="Script" uid="uid://bs7lquggphtbp" path="res://Assets/Scripts/MainIsland/video_stream_player.gd" id="2_jgril"]
 [ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="3_s2f3t"]
 [ext_resource type="Texture2D" uid="uid://81d7vp6m7mkr" path="res://Assets/Sprite/Buttons/ChatGPT Image May 4, 2026, 04_36_10 PM.png" id="4_367rm"]

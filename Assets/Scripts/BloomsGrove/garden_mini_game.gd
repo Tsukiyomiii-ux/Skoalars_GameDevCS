@@ -167,10 +167,11 @@ func check_answer(idx):
 		handle_incorrect_flow()
 
 func _on_settings_opened():
-	$btn/WandHolder.hide()
+	$btn.hide()
+	
 
 func _on_settings_closed():
-	$btn/WandHolder.show()
+	$btn.show()
 
 func handle_incorrect_flow():
 	sfx_wrong.play()

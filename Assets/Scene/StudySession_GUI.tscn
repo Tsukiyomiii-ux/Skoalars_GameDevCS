@@ -348,6 +348,10 @@ texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(48, 472, 384, 104)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2wsoh"]
+texture = ExtResource("5_sleun")
+region_rect = Rect2(40, 472, 400, 104)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1tyq0"]
 texture = ExtResource("5_sleun")
 region_rect = Rect2(56, 680, 376, 104)
@@ -710,6 +714,7 @@ size_flags_horizontal = 4
 theme_override_styles/normal = SubResource("StyleBoxTexture_ji2mt")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_w0lte")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6ppph")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2wsoh")
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer" unique_id=194987182]
 custom_minimum_size = Vector2(0, 1009.73)

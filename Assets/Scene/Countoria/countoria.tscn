@@ -82,6 +82,10 @@ b = Vector2(81, 199)
 a = Vector2(125, 186)
 b = Vector2(125, 200)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vwn2g"]
+a = Vector2(125, 186)
+b = Vector2(219, 185)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_w1atu"]
 a = Vector2(260, 89)
 b = Vector2(260, 38)
@@ -724,6 +728,10 @@ shape = SubResource("SegmentShape2D_avgbb")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="collisionshapes" unique_id=347623615]
 shape = SubResource("SegmentShape2D_84lou")
+
+[node name="CollisionShape2D104" type="CollisionShape2D" parent="collisionshapes" unique_id=1195996183]
+position = Vector2(116, 592)
+shape = SubResource("SegmentShape2D_vwn2g")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="collisionshapes" unique_id=1081049119]
 shape = SubResource("SegmentShape2D_w1atu")

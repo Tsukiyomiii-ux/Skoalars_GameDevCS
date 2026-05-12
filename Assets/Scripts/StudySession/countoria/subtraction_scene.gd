@@ -59,8 +59,8 @@ var current_page = 0
 
 func _ready() -> void:
 	# 1. LOAD: Immediately pull the text from the static memory
-	board_1.text = saved_sub_data["board1"]
-	board_2.text = saved_sub_data["board2"]
+	board_1.text = GameManager.get_study_answer("subtraction", "answer1")
+	board_2.text = GameManager.get_study_answer("subtraction", "answer2")
 	
 	done_button.visible = false
 	_toggle_reflection_ui(false)
@@ -95,8 +95,8 @@ func _toggle_reflection_ui(show: bool):
 
 func check_word_count_requirement():
 	# 2. CONTINUOUS SAVE: Store text in static var every time user types
-	saved_sub_data["board1"] = board_1.text
-	saved_sub_data["board2"] = board_2.text
+	GameManager.save_study_answer("subtraction", "answer1", board_1.text)
+	GameManager.save_study_answer("subtraction", "answer2", board_2.text)
 	
 	var words1 = board_1.text.strip_edges().split(" ", false).size()
 	var words2 = board_2.text.strip_edges().split(" ", false).size()
@@ -135,5 +135,6 @@ func _on_done_btn_pressed():
 	# FINAL SAVE: Commit to static memory
 	saved_sub_data["board1"] = board_1.text
 	saved_sub_data["board2"] = board_2.text
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("math")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/countoria/studysession_countoria.tscn")

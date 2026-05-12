@@ -1,5 +1,4 @@
 extends CanvasLayer
-
 var lessons = [
 	{
 		"title": "Roots", 
@@ -27,17 +26,14 @@ var lessons = [
 		"image": preload("res://Assets/Bloom Game 1/Study Session/Fruits.png") 
 	}
 ]
-
 var current_index = 0
 var word_requirement = 10
-
 # Lesson UI Nodes
 @onready var lesson_label = $Bg/VBoxContainer/Lesson
 @onready var lesson_image = $Bg/LessonImage 
 @onready var next_button = $Bg/Next
 @onready var back_button = $Bg/Back
 @onready var done_button = $Bg/Done
-
 # Question UI Nodes
 @onready var question_container_1 = $Bg/VBoxContainer2
 @onready var answer_field_1 = $"Bg/Answer 1"
@@ -45,13 +41,10 @@ var word_requirement = 10
 @onready var answer_field_2 = $"Bg/Answer 2"
 
 func _ready():
+	answer_field_1.text = GameManager.get_study_answer("plant_lesson", "answer1")
+	answer_field_2.text = GameManager.get_study_answer("plant_lesson", "answer2")
 	answer_field_1.text_changed.connect(_on_answers_changed)
 	answer_field_2.text_changed.connect(_on_answers_changed)
-	
-	# Load the globally saved text into the fields immediately
-	answer_field_1.text = GameManager.plant_lesson_answer1
-	answer_field_2.text = GameManager.plant_lesson_answer2
-	
 	update_page()
 
 func update_page():
@@ -81,17 +74,17 @@ func update_page():
 		answer_field_2.visible = true
 		
 		_on_answers_changed()
-
 	back_button.visible = current_index > 0
 
 func _on_answers_changed():
 	# Always update the Global GameManager so text is never lost
-	GameManager.plant_lesson_answer1 = answer_field_1.text
-	GameManager.plant_lesson_answer2 = answer_field_2.text
+	GameManager.save_study_answer("plant_lesson", "answer1", answer_field_1.text)
+	GameManager.save_study_answer("plant_lesson", "answer2", answer_field_2.text)
 	
 	if current_index >= lessons.size():
-		var words_1 = GameManager.plant_lesson_answer1.split(" ", false).size()
-		var words_2 = GameManager.plant_lesson_answer2.split(" ", false).size()
+		# ✅ FIXED: use get_study_answer() instead of direct property access
+		var words_1 = GameManager.get_study_answer("plant_lesson", "answer1").split(" ", false).size()
+		var words_2 = GameManager.get_study_answer("plant_lesson", "answer2").split(" ", false).size()
 		
 		done_button.visible = (words_1 >= word_requirement and words_2 >= word_requirement)
 	else:

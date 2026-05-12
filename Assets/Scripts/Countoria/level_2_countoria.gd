@@ -43,6 +43,9 @@ var game_over = false
 var is_frozen: bool = false
 var numboard_ref: Node2D = null
 
+# ✅ NEW: Operation pool — all 4 operations included
+var operations = ["addition", "subtraction", "multiplication", "division"]
+
 func _ready():
 	win_board.hide()
 	lose_board.hide()
@@ -227,7 +230,6 @@ func _on_enter_pressed():
 		shake_node($CanvasLayer2/numboard/answer_board)
 		current_answer_string = ""; answer_label.text = ""
 
-# --- Replace _on_timer_timeout with this ---
 func _on_timer_timeout():
 	if !game_over:
 		lose_level()
@@ -237,18 +239,45 @@ func _on_timer_timeout():
 		if ui_layer:
 			$CanvasLayer/Skoalars.hide()
 
+# ✅ UPDATED: generate_math_question now includes all 4 operations
 func generate_math_question():
 	if game_over: return
-	current_answer_string = ""; answer_label.text = ""
-	var v1 = randi_range(1, 10); var v2 = randi_range(1, 10)
+	current_answer_string = ""
+	answer_label.text = ""
 	var fruit = fruit_options.pick_random()
-	if randi() % 2 == 0:
-		correct_result = v1 + v2
-		question_label.text = str(v1) + " " + fruit + " + " + str(v2) + " " + fruit + " = ?"
-	else:
-		if v1 < v2: var t = v1; v1 = v2; v2 = t
-		correct_result = v1 - v2
-		question_label.text = str(v1) + " " + fruit + " - " + str(v2) + " " + fruit + " = ?"
+	var op = operations.pick_random()
+
+	match op:
+		"addition":
+			var v1 = randi_range(1, 10)
+			var v2 = randi_range(1, 10)
+			correct_result = v1 + v2
+			question_label.text = "%d %s + %d %s = ?" % [v1, fruit, v2, fruit]
+
+		"subtraction":
+			var v1 = randi_range(1, 10)
+			var v2 = randi_range(1, 10)
+			# Always subtract smaller from larger so result is never negative
+			if v1 < v2:
+				var t = v1; v1 = v2; v2 = t
+			correct_result = v1 - v2
+			question_label.text = "%d %s - %d %s = ?" % [v1, fruit, v2, fruit]
+
+		"multiplication":
+			# Keep numbers small so result stays manageable (max 5x5=25)
+			var v1 = randi_range(1, 5)
+			var v2 = randi_range(1, 5)
+			correct_result = v1 * v2
+			question_label.text = "%d %s × %d %s = ?" % [v1, fruit, v2, fruit]
+
+		"division":
+			# Generate a clean division: pick divisor and result first,
+			# so the dividend always divides evenly (no remainders)
+			var divisor = randi_range(1, 5)
+			var result = randi_range(1, 5)
+			var dividend = divisor * result
+			correct_result = result
+			question_label.text = "%d %s ÷ %d %s = ?" % [dividend, fruit, divisor, fruit]
 
 func win_level():
 	game_over = true

@@ -45,8 +45,8 @@ var word_requirement = 10
 
 func _ready():
 	# 1. LOAD: Pull saved text from GameManager immediately
-	answer1.text = GameManager.ecosystem_answer1
-	answer2.text = GameManager.ecosystem_answer2
+	answer1.text = GameManager.get_study_answer("ecosystem", "answer1")
+	answer2.text = GameManager.get_study_answer("ecosystem", "answer2")
 	
 	# Connect text changes to check for the 10-word requirement
 	answer1.text_changed.connect(_on_answers_changed)
@@ -88,8 +88,8 @@ func update_page():
 
 func _on_answers_changed():
 	# 2. SAVE: Push current text to GameManager every time it changes
-	GameManager.ecosystem_answer1 = answer1.text
-	GameManager.ecosystem_answer2 = answer2.text
+	GameManager.save_study_answer("ecosystem", "answer1", answer1.text)
+	GameManager.save_study_answer("ecosystem", "answer2", answer2.text)
 	
 	if current_index >= lessons.size():
 		var count1 = answer1.text.split(" ", false).size()
@@ -109,6 +109,7 @@ func _on_back_pressed():
 		update_page()
 
 func _on_done_pressed(): 
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("science")
 	GameManager.load_scene("res://Assets/Scene/StudySession/BloomsGroove/science_study.tscn")
 

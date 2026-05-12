@@ -39,8 +39,8 @@ func _ready():
 	done_btn.pressed.connect(_on_done_pressed)
 	cancel_btn.pressed.connect(_on_cancel_pressed)
 	
-	answer_1.text_changed.connect(_on_answer_text_changed)
-	answer_2.text_changed.connect(_on_answer_text_changed)
+	answer_1.text = GameManager.get_study_answer("flags", "answer1")
+	answer_2.text = GameManager.get_study_answer("flags", "answer2")
 	
 	var all_btns = [next_btn, back_btn, done_btn, cancel_btn]
 	for btn in all_btns:
@@ -69,8 +69,9 @@ func _on_back_pressed():
 
 func _on_done_pressed():
 	save_answers()
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("geography")
-	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():
 	save_answers()
@@ -94,8 +95,8 @@ func update_flag_pages():
 	validate_done_button()
 
 func _on_answer_text_changed():
-	validate_done_button()
-	save_answers()
+		GameManager.save_study_answer("flags", "answer1", answer_1.text)
+		GameManager.save_study_answer("flags", "answer2", answer_2.text)
 
 func validate_done_button():
 	var is_last_page = (current_spread == flag_spreads.size() - 1)

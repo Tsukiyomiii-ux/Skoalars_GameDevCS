@@ -60,8 +60,8 @@ var current_page = 0
 
 func _ready() -> void:
 	# LOAD: Fill the boards with previously saved text
-	board_1.text = saved_div_data["board1"]
-	board_2.text = saved_div_data["board2"]
+	board_1.text = GameManager.get_study_answer("division", "answer1")
+	board_2.text = GameManager.get_study_answer("division", "answer2")
 	
 	done_button.visible = false
 	_toggle_reflection_ui(false)
@@ -98,8 +98,8 @@ func _toggle_reflection_ui(show: bool):
 
 func check_word_count_requirement():
 	# SAVE: Store text in static var as the player types
-	saved_div_data["board1"] = board_1.text
-	saved_div_data["board2"] = board_2.text
+	GameManager.save_study_answer("division", "answer1", board_1.text)
+	GameManager.save_study_answer("division", "answer2", board_2.text)
 	
 	var words1 = board_1.text.strip_edges().split(" ", false).size()
 	var words2 = board_2.text.strip_edges().split(" ", false).size()
@@ -137,5 +137,6 @@ func _on_done_btn_pressed() -> void:
 	# Final Save before returning to the main menu
 	saved_div_data["board1"] = board_1.text
 	saved_div_data["board2"] = board_2.text
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("math")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/countoria/studysession_countoria.tscn")

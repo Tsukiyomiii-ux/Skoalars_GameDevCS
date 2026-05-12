@@ -470,6 +470,10 @@ texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(48, 472, 384, 104)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3ujn"]
+texture = ExtResource("7_lcbd7")
+region_rect = Rect2(24, 464, 416, 112)
+
 [node name="Main_Menu" type="Control" unique_id=894167509]
 layout_mode = 3
 anchors_preset = 15
@@ -679,6 +683,7 @@ offset_bottom = 100.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_oyswg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ai1w4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8wt5q")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_x3ujn")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=768247474]
 layout_mode = 1

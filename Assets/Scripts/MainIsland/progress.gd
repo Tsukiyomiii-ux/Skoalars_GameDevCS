@@ -1,14 +1,11 @@
 extends Control
-
-@onready var literacy_bar = $NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect/LiteracyPB
-@onready var math_bar = $NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2/MathPB
-@onready var science_bar = $NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3/SciencePB
-@onready var geography_bar = $NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4/GeographyPB
+@onready var literacy_bar = $"NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect/Progress Bar"/LiteracyPB
+@onready var math_bar = $"NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2/Progress Bar"/MathPB
+@onready var science_bar = $"NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3/Progress Bar"/SciencePB
+@onready var geography_bar = $"NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4/Progress Bar"/GeographyPB
 @onready var cancel_btn = $NinePatchRect/cancel_btn
 
-func _ready():  # ✅ Fixed from _on_ready()
-
-	
+func _ready():
 	literacy_bar.max_value = 100
 	math_bar.max_value = 100
 	science_bar.max_value = 100
@@ -37,4 +34,4 @@ func _on_cancel_btn_pressed():
 		"study": "res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn"
 	}
 	var scene = island_scenes.get(GameManager.get_current_island(), "res://Assets/Scene/MainIsland/main_island.tscn")
-	get_tree().change_scene_to_file(scene)  # ✅ Already correct here
+	get_tree().change_scene_to_file(scene)

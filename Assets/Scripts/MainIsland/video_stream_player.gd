@@ -37,4 +37,4 @@ func _on_pasplay_btn_pressed():
 func _on_finished():
 	GameManager.cutscene_played = true  # ✅ Already there
 	GameManager.save_game()  # ✅ Add this so it persists
-	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")  # ✅ Fix path
+	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/Tutorial.tscn")  # ✅ Fix path

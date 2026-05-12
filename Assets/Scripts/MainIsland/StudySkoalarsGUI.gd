@@ -86,7 +86,16 @@ func _on_h_slider_value_changed(value: float) -> void:
 func _on_skills_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/SkillEquip.tscn")
 
+func _update_study_btn_visibility():
+	var study_btn = get_node_or_null("MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect2/study_btn")
+	if study_btn:
+		var current = get_tree().current_scene.scene_file_path
+		var is_study = "study_session" in current or "StudySession" in current
+		study_btn.disabled = is_study
+		study_btn.modulate.a = 0.4 if is_study else 1.0
+
 func _on_settings_btn_pressed() -> void:
+	_update_study_btn_visibility()
 	GameManager.settings_opened.emit()  # ✅ Only emits
 	safe_toggle_visibility(open_cont)
 	safe_toggle_visibility(close_cont)
@@ -117,6 +126,7 @@ func _on_play_btn_pressed() -> void:
 	safe_toggle_visibility(bottom_cont)
 
 func _on_volume_btn_pressed() -> void:
+	_update_study_btn_visibility()
 	GameManager.settings_opened.emit()  # ✅ Only emits
 	safe_toggle_visibility(volume_cont)
 	safe_toggle_visibility(close_cont)

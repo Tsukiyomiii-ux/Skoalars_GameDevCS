@@ -39,7 +39,7 @@ var lessons = [
 ]
 
 var current_index = 0
-var word_requirement = 10
+var word_requirement = 2
 
 # Lesson Content Nodes
 @onready var trash_image = $Bg/Trash
@@ -59,8 +59,8 @@ var word_requirement = 10
 
 func _ready():
 	# 1. LOAD: Restore text from GameManager when the scene starts
-	answer1.text = GameManager.bio_waste_answer1
-	answer2.text = GameManager.bio_waste_answer2
+	answer1.text = GameManager.get_study_answer("bio_waste", "answer1")
+	answer2.text = GameManager.get_study_answer("bio_waste", "answer2")
 	
 	# Connect text changed signals
 	answer1.text_changed.connect(_on_answers_changed)
@@ -100,8 +100,8 @@ func update_page():
 
 func _on_answers_changed():
 	# 2. SAVE: Sync current text to GameManager every time it changes
-	GameManager.bio_waste_answer1 = answer1.text
-	GameManager.bio_waste_answer2 = answer2.text
+	GameManager.save_study_answer("bio_waste", "answer1", answer1.text)
+	GameManager.save_study_answer("bio_waste", "answer2", answer2.text)
 	
 	if current_index >= lessons.size():
 		var count1 = answer1.text.split(" ", false).size()
@@ -120,6 +120,7 @@ func _on_back_pressed():
 		update_page()
 
 func _on_done_pressed():
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("science")
 	GameManager.load_scene("res://Assets/Scene/StudySession/BloomsGroove/science_study.tscn")
 

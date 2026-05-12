@@ -8,6 +8,7 @@ var target_path : String
 var progress = [] # This array will hold the loading percentage
 var wand_used = false
 var cutscene_played: bool = false
+var tutorial_completed: bool = false
 
 # 📚 STUDY SESSION PROGRESS
 var study_progress = {
@@ -15,6 +16,34 @@ var study_progress = {
 	"math": {"completed": 0, "total": 4},
 	"science": {"completed": 0, "total": 6},
 	"geography": {"completed": 0, "total": 5},
+}
+
+# 📝 STUDY SESSION ANSWERS (Centralized)
+var study_answers = {
+	# Science
+	"plant_lesson":     {"answer1": "", "answer2": ""},
+	"plant_functions":  {"answer1": "", "answer2": ""},
+	"ecosystem":        {"answer1": "", "answer2": ""},
+	"bio_waste":        {"answer1": "", "answer2": ""},
+	"non_bio_waste":    {"answer1": "", "answer2": ""},
+	"recyclable_waste": {"answer1": "", "answer2": ""},
+	# Math
+	"addition":         {"answer1": "", "answer2": ""},
+	"subtraction":      {"answer1": "", "answer2": ""},
+	"multiplication":   {"answer1": "", "answer2": ""},
+	"division":         {"answer1": "", "answer2": ""},
+	# Geography
+	"flags":            {"answer1": "", "answer2": ""},
+	"capitals":         {"answer1": "", "answer2": ""},
+	"continents":       {"answer1": "", "answer2": ""},
+	"tectonic":         {"answer1": "", "answer2": ""},
+	# Literacy
+	"literacy_noun":        {"answer1": "", "answer2": ""},
+	"literacy_adjective":   {"answer1": "", "answer2": ""},
+	"literacy_pronouns":    {"answer1": "", "answer2": ""},
+	"literacy_verb":        {"answer1": "", "answer2": ""},
+	"literacy_adverb":      {"answer1": "", "answer2": ""},
+	"literacy_conjunction": {"answer1": "", "answer2": ""},
 }
 
 # 🎁 ISLAND REWARDS
@@ -87,24 +116,6 @@ var hint_already_used: bool = false
 
 var allowed_skills: Array = ["hint", "freeze_time", "add_time", "skip"]
 
-var plant_lesson_answer1 = ""
-var plant_lesson_answer2 = ""
-
-var plant_functions_answer1 = ""
-var plant_functions_answer2 = ""
-
-var ecosystem_answer1 = ""
-var ecosystem_answer2 = ""
-
-var bio_waste_answer1 = ""
-var bio_waste_answer2 = ""
-
-var non_bio_waste_answer1 = ""
-var non_bio_waste_answer2 = ""
-
-var recyclable_waste_answer1 = ""
-var recyclable_waste_answer2 = ""
-
 # Signals
 signal diamonds_changed(new_amount)
 signal skill_purchased(skill_name)
@@ -131,6 +142,7 @@ func update_skill_button_states():
 		var should_disable = not_allowed or not is_skill_equipped(skill_name) or skill_uses[skill_name] <= 0
 		print("  ", skill_name, " | not_allowed: ", not_allowed, " | should_disable: ", should_disable)
 		skill_button_state_changed.emit(skill_name, should_disable)
+
 func load_scene(path: String):
 	target_path = path
 
@@ -214,6 +226,7 @@ func get_skill_uses(skill_name: String) -> int:
 
 func get_skill_cost(skill_name: String) -> int:
 	return SKILL_COSTS.get(skill_name, 0)
+
 func use_skill(skill_name: String) -> bool:
 	if not is_skill_equipped(skill_name):
 		print("❌ ", skill_name, " is not equipped!")
@@ -269,7 +282,7 @@ func set_current_island(island_name: String):
 func get_current_island() -> String:
 	return current_island
 
-#Progress Scene
+# 📚 STUDY PROGRESS FUNCTIONS
 func complete_study_topic(subject: String):
 	if not study_progress.has(subject): return
 	var s = study_progress[subject]
@@ -283,7 +296,25 @@ func get_study_progress(subject: String) -> float:
 	var s = study_progress[subject]
 	return float(s["completed"]) / float(s["total"])
 
-# 📊 PROGRESS FUNCTIONS
+# 📝 STUDY ANSWER FUNCTIONS (Centralized)
+func save_study_answer(topic: String, field: String, value: String):
+	if study_answers.has(topic):
+		study_answers[topic][field] = value
+		save_game()
+
+func get_study_answer(topic: String, field: String) -> String:
+	if study_answers.has(topic):
+		return study_answers[topic].get(field, "")
+	return ""
+
+func reset_study_answers():
+	for topic in study_answers:
+		study_answers[topic]["answer1"] = ""
+		study_answers[topic]["answer2"] = ""
+	save_game()
+	print("🗑️ Cleared all study answers")
+
+# 📊 ISLAND PROGRESS FUNCTIONS
 func complete_minigame(island_name: String):
 	if not island_progress.has(island_name):
 		return
@@ -346,7 +377,9 @@ func save_game():
 		"islands_unlocked": islands_unlocked,
 		"island_progress": island_progress,
 		"study_progress": study_progress,
-		"cutscene_played": cutscene_played
+		"study_answers": study_answers,
+		"cutscene_played": cutscene_played,
+		"tutorial_completed": tutorial_completed
 	}
 	
 	var file = FileAccess.open("user://game_save.json", FileAccess.WRITE)
@@ -369,16 +402,22 @@ func load_game():
 			skills_equipped = data.get("skills_equipped", skills_equipped)
 			islands_unlocked = data.get("islands_unlocked", islands_unlocked)
 			island_progress = data.get("island_progress", island_progress)
+			tutorial_completed = data.get("tutorial_completed", false)
 			study_progress = data.get("study_progress", study_progress)
+			# ✅ Merge instead of replace so new keys are never lost
+			var loaded_answers = data.get("study_answers", {})
+			for key in loaded_answers:
+				if study_answers.has(key):
+					study_answers[key] = loaded_answers[key]
 			cutscene_played = data.get("cutscene_played", false)
 			diamonds_changed.emit(diamonds)
 			print("💾 Loaded: ", diamonds, " diamonds, uses: ", skill_uses)
 
 func reset_game():
 	diamonds = 500
-	skills = {"hint": true, "freeze_time":true, "add_time": true, "skip": true}
-	skill_uses = {"hint": 100, "freeze_time": 100, "add_time": 100, "skip":100}
-	skills_equipped = {"hint": false, "freeze_time": false, "add_time": false, "skip": false	}
+	skills = {"hint": true, "freeze_time": true, "add_time": true, "skip": true}
+	skill_uses = {"hint": 100, "freeze_time": 100, "add_time": 100, "skip": 100}
+	skills_equipped = {"hint": false, "freeze_time": false, "add_time": false, "skip": false}
 	islands_unlocked = {"island_1": true, "island_2": false, "island_3": false, "island_4": false}
 	island_progress = {
 		"island_1": {"minigames_completed": 0, "total_minigames": 2},
@@ -387,13 +426,15 @@ func reset_game():
 		"island_4": {"minigames_completed": 0, "total_minigames": 2},
 	}
 	study_progress = {
-	"literacy": {"completed": 0, "total": 6},
-	"math": {"completed": 0, "total": 4},
-	"science": {"completed": 0, "total": 6},
-	"geography": {"completed": 0, "total": 5},
+		"literacy": {"completed": 0, "total": 6},
+		"math": {"completed": 0, "total": 4},
+		"science": {"completed": 0, "total": 6},
+		"geography": {"completed": 0, "total": 5},
 	}
 	current_island = "island_1"
-	wand_used= false
+	wand_used = false
 	cutscene_played = false
+	tutorial_completed = false
+	reset_study_answers()
 	diamonds_changed.emit(diamonds)
 	save_game()

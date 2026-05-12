@@ -7,10 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cdyti31f5p6m2" path="res://Assets/Bloom Game 1/New Assets/Cancel.png" id="4_cxjlv"]
 [ext_resource type="Texture2D" uid="uid://c5yeci5m8grld" path="res://Assets/StudySession/Sprite/DoneBtn.png" id="6_5mbxe"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e3q0r"]
-atlas = ExtResource("6_5mbxe")
-region = Rect2(773.8286, 147.29916, 439.58936, 142.69394)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5mbxe"]
 bg_color = Color(1, 1, 1, 1)
 
@@ -72,12 +68,13 @@ offset_bottom = -387.98895
 texture_normal = ExtResource("4_cxjlv")
 
 [node name="Done" type="TextureButton" parent="Bg" unique_id=1299096293]
+z_index = 100
 offset_left = 469.97025
 offset_top = 311.43726
 offset_right = 908.9702
 offset_bottom = 453.43726
 scale = Vector2(0.5, 0.8)
-texture_normal = SubResource("AtlasTexture_e3q0r")
+texture_normal = ExtResource("6_5mbxe")
 
 [node name="Answer1" type="TextEdit" parent="." unique_id=1211972390]
 offset_left = 152.0

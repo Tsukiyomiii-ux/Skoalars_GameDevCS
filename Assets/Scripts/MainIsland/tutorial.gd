@@ -4,6 +4,7 @@ extends Node2D
 @export var up_arrow: TileMapLayer
 @export var right_arrow: TileMapLayer
 @export var down_arrow: TileMapLayer
+@export var popup_node: Node 
 
 var step := 0
 var busy := false
@@ -54,14 +55,13 @@ func _unhandled_input(event):
 
 func handle_step(tile: TileMapLayer):
 	busy = true
-
 	await get_tree().create_timer(1.0).timeout
 	tile.visible = false
-
 	step += 1
-
 	if step >= 4:
+		print("✅ Arrow tutorial done")
+		GameManager.tutorial_completed = true
+		GameManager.save_game()
 		return
-
 	show_current_step()
 	busy = false

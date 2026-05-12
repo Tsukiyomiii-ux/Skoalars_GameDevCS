@@ -70,7 +70,6 @@ func _ready():
 func _setup_recursive(node: Node):
 	for child in node.get_children():
 
-		# 👇 ADD THESE TWO BLOCKS
 		if child is RichTextLabel:
 			child.selection_enabled = false
 
@@ -78,7 +77,7 @@ func _setup_recursive(node: Node):
 			child.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 		if child.name == "LearnedInput":
-			child.text = ""
+			# ✅ REMOVED: child.text = "" (we now restore saved text instead)
 			child.placeholder_text = "Type your answers here (Minimum: 10 words)"
 			child.selecting_enabled = false
 			child.add_theme_color_override("background_color", Color(1, 1, 1, 1))
@@ -89,7 +88,7 @@ func _setup_recursive(node: Node):
 				child.text_changed.connect(_on_learned_input_text_changed)
 
 		if child.name == "SurprisedInput":
-			child.text = ""
+			# ✅ REMOVED: child.text = "" (we now restore saved text instead)
 			child.placeholder_text = "Type your answers here (Minimum: 10 words)"
 			child.selecting_enabled = false
 			child.add_theme_color_override("background_color", Color(1, 1, 1, 1))
@@ -145,28 +144,36 @@ func _go_to_book():
 	topic_screen.hide()
 	book_container.show()
 	update_page_navigation()
+	# ✅ NEW: Restore saved answers when opening a topic
+	_load_answers_for_current_topic()
 
 func _on_next_btn_pressed():
 	if current_page_index in page6_indices:
 		match current_page_index:
-			6:  
+			6:
 				completed_topics["noun"] = true
-				GameManager.complete_study_topic("literacy")  # ✅
-			12: 
+				GameManager.complete_study_topic("literacy")
+				GameManager.add_diamonds(1)
+			12:
 				completed_topics["adjective"] = true
-				GameManager.complete_study_topic("literacy")  # ✅
-			18: 
+				GameManager.complete_study_topic("literacy")
+				GameManager.add_diamonds(1)
+			18:
 				completed_topics["pronouns"] = true
-				GameManager.complete_study_topic("literacy")  # ✅
-			24: 
+				GameManager.complete_study_topic("literacy")
+				GameManager.add_diamonds(1)
+			24:
 				completed_topics["verb"] = true
-				GameManager.complete_study_topic("literacy")  # ✅
-			30: 
+				GameManager.complete_study_topic("literacy")
+				GameManager.add_diamonds(1)
+			30:
 				completed_topics["adverb"] = true
-				GameManager.complete_study_topic("literacy")  # ✅
-			36: 
+				GameManager.complete_study_topic("literacy")
+				GameManager.add_diamonds(1)
+			36:
 				completed_topics["conjunction"] = true
-				GameManager.complete_study_topic("literacy")  # ✅
+				GameManager.complete_study_topic("literacy")
+				GameManager.add_diamonds(1)
 		_go_to_topic_buttons()
 	elif current_page_index < page_list.size() - 1:
 		current_page_index += 1
@@ -210,11 +217,55 @@ func _check_reflection_inputs() -> void:
 
 func _on_learned_input_text_changed() -> void:
 	if current_page_index in page6_indices:
+		# ✅ NEW: Save the answer as the player types
+		var page = page_list[current_page_index]
+		var learned = page.get_node_or_null("LearnedInput")
+		if learned:
+			GameManager.save_study_answer(_get_topic_key(current_page_index), "answer1", learned.text)
 		_check_reflection_inputs()
 
 func _on_surprised_input_text_changed() -> void:
 	if current_page_index in page6_indices:
+		# ✅ NEW: Save the answer as the player types
+		var page = page_list[current_page_index]
+		var surprised = page.get_node_or_null("SurprisedInput")
+		if surprised:
+			GameManager.save_study_answer(_get_topic_key(current_page_index), "answer2", surprised.text)
 		_check_reflection_inputs()
+
+# --- ✅ NEW: SAVE/LOAD HELPERS ---
+
+# Returns the GameManager key for a given reflection page index
+func _get_topic_key(index: int) -> String:
+	match index:
+		6:  return "literacy_noun"
+		12: return "literacy_adjective"
+		18: return "literacy_pronouns"
+		24: return "literacy_verb"
+		30: return "literacy_adverb"
+		36: return "literacy_conjunction"
+	return ""
+
+# Finds the reflection page for the current topic and restores saved text
+func _load_answers_for_current_topic():
+	# Find the reflection page (page6) that belongs to the current topic
+	var reflection_index = -1
+	for i in page6_indices:
+		if current_page_index <= i:
+			reflection_index = i
+			break
+	if reflection_index == -1:
+		return
+	var page = page_list[reflection_index]
+	if page == null:
+		return
+	var topic = _get_topic_key(reflection_index)
+	var learned = page.get_node_or_null("LearnedInput")
+	var surprised = page.get_node_or_null("SurprisedInput")
+	if learned:
+		learned.text = GameManager.get_study_answer(topic, "answer1")
+	if surprised:
+		surprised.text = GameManager.get_study_answer(topic, "answer2")
 
 # --- 6. HOVER EFFECTS ---
 func _on_any_btn_mouse_entered(btn: Control) -> void:
@@ -283,7 +334,6 @@ func _on_conjunction_btn_pressed() -> void:
 	_pending_topic_index = 31
 	current_page_index = 31
 	_go_to_book()
-
 
 func _on_texture_button_pressed() -> void:
 	GameManager.load_scene("res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn")

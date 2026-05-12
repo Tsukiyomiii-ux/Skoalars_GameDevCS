@@ -48,8 +48,8 @@ func _ready():
 	cancel_btn.pressed.connect(_on_cancel_pressed)
 	
 	# Connect Input Signals
-	answer_1.text_changed.connect(_on_answer_text_changed)
-	answer_2.text_changed.connect(_on_answer_text_changed)
+	answer_1.text = GameManager.get_study_answer("capitals", "answer1")
+	answer_2.text = GameManager.get_study_answer("capitals", "answer2")
 	
 	# Setup Button Hovers
 	var all_btns = [next_btn, back_btn, done_btn, cancel_btn]
@@ -110,13 +110,14 @@ func get_word_count(input_text: String) -> int:
 	return words.size()
 
 func _on_answer_text_changed():
-	validate_done_button()
-	save_answers() # Auto-save text whenever they type
+	GameManager.save_study_answer("capitals", "answer1", answer_1.text)
+	GameManager.save_study_answer("capitals", "answer2", answer_2.text)
 
 func _on_done_pressed():
 	save_answers()
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("geography")
-	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():
 	save_answers()

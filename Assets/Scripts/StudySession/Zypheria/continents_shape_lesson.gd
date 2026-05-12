@@ -81,6 +81,8 @@ func _ready():
 		btn.pivot_offset = btn.size / 2 
 	
 	# Word count and auto-save
+	answer_1.text = GameManager.get_study_answer("continents", "answer1")
+	answer_2.text = GameManager.get_study_answer("continents", "answer2")
 	answer_1.text_changed.connect(_on_answer_changed)
 	answer_2.text_changed.connect(_on_answer_changed)
 
@@ -132,8 +134,9 @@ func _on_back_pressed():
 # --- Saving & Persistence ---
 
 func _on_answer_changed():
+	GameManager.save_study_answer("continents", "answer1", answer_1.text)
+	GameManager.save_study_answer("continents", "answer2", answer_2.text)
 	_check_reflection()
-	save_answers()
 
 func save_answers():
 	var config = ConfigFile.new()
@@ -160,8 +163,9 @@ func _check_reflection():
 
 func _on_done_pressed():
 	save_answers()
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("geography")
-	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():
 	save_answers()

@@ -51,8 +51,8 @@ var word_requirement = 10
 
 func _ready():
 	# 1. LOAD: Restore text from GameManager immediately
-	answer_field_1.text = GameManager.recyclable_waste_answer1
-	answer_field_2.text = GameManager.recyclable_waste_answer2
+	answer_field_1.text = GameManager.get_study_answer("recyclable_waste", "answer1")
+	answer_field_2.text = GameManager.get_study_answer("recyclable_waste", "answer2")
 	
 	# Connect text changed signals
 	answer_field_1.text_changed.connect(_on_answers_changed)
@@ -98,8 +98,8 @@ func update_page():
 
 func _on_answers_changed():
 	# 2. SAVE: Sync current text to GameManager variables instantly
-	GameManager.recyclable_waste_answer1 = answer_field_1.text
-	GameManager.recyclable_waste_answer2 = answer_field_2.text
+	GameManager.save_study_answer("recyclable_waste", "answer1", answer_field_1.text)
+	GameManager.save_study_answer("recyclable_waste", "answer2", answer_field_2.text)
 	
 	if current_index >= lessons.size():
 		var words_1 = answer_field_1.text.split(" ", false).size()
@@ -121,6 +121,7 @@ func _on_back_pressed():
 		update_page()
 
 func _on_done_pressed():
+	GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("science")
 	GameManager.load_scene("res://Assets/Scene/StudySession/BloomsGroove/science_study.tscn")
 

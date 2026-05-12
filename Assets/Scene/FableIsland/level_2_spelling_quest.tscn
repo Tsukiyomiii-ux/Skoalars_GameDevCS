@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dgimc2ku7etgq" path="res://Assets/Scripts/FableIsland/level_2_spelling_quest.gd" id="1_8mws1"]
 [ext_resource type="Texture2D" uid="uid://dx5oaaoixhfiu" path="res://Assets/Sprite/FABLE ISLE/Level2/VeryFinalBackground.png" id="4_xlkur"]
-[ext_resource type="Texture2D" uid="uid://d4esm1q3w1lih" path="res://Assets/Fable Isle/Level2/Objectives_scroll.png" id="5_ll42g"]
+[ext_resource type="Texture2D" uid="uid://dv1eqh7pdf43k" path="res://Assets/Fable Isle/Level2/Objectives.png" id="5_fxxru"]
 [ext_resource type="Texture2D" uid="uid://bqkfcoks68td8" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalAssets.png" id="5_ux12e"]
 [ext_resource type="FontFile" uid="uid://doxo607m4fj51" path="res://Assets/Sprite/FABLE ISLE/Level2/ARCADECLASSIC.TTF" id="6_g0gfl"]
 [ext_resource type="Texture2D" uid="uid://bjpbrwpjdn0v0" path="res://Assets/Sprite/FABLE ISLE/Level2/FinalBook.png" id="7_g0gfl"]
@@ -79,7 +79,7 @@ offset_top = 135.0
 offset_right = 3184.0
 offset_bottom = 2266.0
 scale = Vector2(0.19645603, 0.27055848)
-texture = ExtResource("5_ll42g")
+texture = ExtResource("5_fxxru")
 
 [node name="ProgressLabel" type="Label" parent="GameTileMap/CanvasLayer/ObjectivesScroll" unique_id=1343234757]
 unique_name_in_owner = true

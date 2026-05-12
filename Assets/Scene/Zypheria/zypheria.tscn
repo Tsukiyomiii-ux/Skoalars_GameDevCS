@@ -584,7 +584,7 @@ tile_map_data = PackedByteArray("AABHAP0AAABBABcAAABIAP0AAABBABcAAABIAP4AAABBABc
 tile_set = SubResource("TileSet_06a5f")
 
 [node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("15_pqgkl")]
-position = Vector2(1798.9999, 444.99997)
+position = Vector2(-1585, 231)
 
 [node name="trash&bins" type="TileMapLayer" parent="." unique_id=237775250]
 scale = Vector2(0.1, 0.1)

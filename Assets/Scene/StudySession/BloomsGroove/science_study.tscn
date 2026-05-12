@@ -10,25 +10,49 @@
 atlas = ExtResource("2_iaibb")
 region = Rect2(217.5, 89, 459, 144)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vy4c"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(224, 88, 448, 144)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_fnej4"]
 atlas = ExtResource("2_iaibb")
 region = Rect2(203.25, 436.625, 461.25, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2f1h"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(216, 440, 440, 136)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qb56"]
 atlas = ExtResource("2_iaibb")
 region = Rect2(196.5, 780.875, 454.5, 150.75)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_auy21"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(200, 792, 448, 136)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2n68"]
 atlas = ExtResource("2_iaibb")
 region = Rect2(878.3154, 89.34699, 446.49414, 144.99548)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y1pg"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(880, 104, 440, 120)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vi38"]
 atlas = ExtResource("2_iaibb")
 region = Rect2(855.50354, 426.38443, 463.79492, 152.00003)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r8mf"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(864, 432, 440, 144)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_381wo"]
 atlas = ExtResource("2_iaibb")
 region = Rect2(861.5385, 776.7051, 456.00018, 144.20508)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqg8n"]
+atlas = ExtResource("2_iaibb")
+region = Rect2(864, 776, 448, 136)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbvhw"]
 atlas = ExtResource("3_fnej4")
@@ -81,6 +105,7 @@ offset_right = -210.62366
 offset_bottom = -63.91162
 scale = Vector2(0.7, 0.6)
 texture_normal = SubResource("AtlasTexture_iaibb")
+texture_hover = SubResource("AtlasTexture_8vy4c")
 
 [node name="Physiology" type="TextureButton" parent="Bg" unique_id=491132422]
 offset_left = -188.00153
@@ -89,6 +114,7 @@ offset_right = 272.99847
 offset_bottom = -63.911606
 scale = Vector2(0.7, 0.6)
 texture_normal = SubResource("AtlasTexture_fnej4")
+texture_hover = SubResource("AtlasTexture_h2f1h")
 
 [node name="Ecology" type="TextureButton" parent="Bg" unique_id=947207285]
 offset_left = -659.967
@@ -97,6 +123,7 @@ offset_right = -205.96698
 offset_bottom = 172.62982
 scale = Vector2(0.7, 0.6)
 texture_normal = SubResource("AtlasTexture_7qb56")
+texture_hover = SubResource("AtlasTexture_auy21")
 
 [node name="Biodegradable" type="TextureButton" parent="Bg" unique_id=16053987]
 offset_left = -197.65808
@@ -105,6 +132,7 @@ offset_right = 248.34192
 offset_bottom = 173.70169
 scale = Vector2(0.7, 0.6)
 texture_normal = SubResource("AtlasTexture_e2n68")
+texture_hover = SubResource("AtlasTexture_8y1pg")
 
 [node name="NonBiodegradable" type="TextureButton" parent="Bg" unique_id=303126199]
 offset_left = -656.3457
@@ -113,6 +141,7 @@ offset_right = -193.3457
 offset_bottom = 406.58563
 scale = Vector2(0.7, 0.6)
 texture_normal = SubResource("AtlasTexture_8vi38")
+texture_hover = SubResource("AtlasTexture_2r8mf")
 
 [node name="Recyclable" type="TextureButton" parent="Bg" unique_id=27067084]
 offset_left = -203.6936
@@ -121,10 +150,11 @@ offset_right = 252.3064
 offset_bottom = 401.4143
 scale = Vector2(0.7, 0.6)
 texture_normal = SubResource("AtlasTexture_381wo")
+texture_hover = SubResource("AtlasTexture_mqg8n")
 
 [node name="Owl" type="AnimatedSprite2D" parent="Bg" unique_id=94618645]
-position = Vector2(445.71155, 213.56903)
-scale = Vector2(0.83074653, 1.0469612)
+position = Vector2(461.4035, 281.45853)
+scale = Vector2(1.1478333, 1.54564)
 sprite_frames = SubResource("SpriteFrames_crwv5")
 
 [node name="Cancel" type="TextureButton" parent="Bg" unique_id=2082163400]
@@ -134,5 +164,6 @@ offset_right = -138.663
 offset_bottom = 537.53796
 scale = Vector2(0.73, 0.74)
 texture_normal = ExtResource("5_e2n68")
+texture_hover = ExtResource("5_e2n68")
 
 [connection signal="pressed" from="Bg/Cancel" to="." method="_on_cancel_pressed"]

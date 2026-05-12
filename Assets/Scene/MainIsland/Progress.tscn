@@ -6,9 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ctoo17b6pdytr" path="res://Assets/Sprite/Characters/ProfHoot Animation.png" id="4_lnuu8"]
 [ext_resource type="Texture2D" uid="uid://p7smd3uo48y8" path="res://Assets/Sprite/Buttons/COLLECT & NAVIGATION BUTTONS.png" id="8_yh0rt"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0xs7"]
-texture = ExtResource("4_f0xs7")
-region_rect = Rect2(104, 752, 736, 160)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnuu8"]
+bg_color = Color(0.09946289, 0.909375, 0.894189, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnuu8"]
 atlas = ExtResource("4_lnuu8")
@@ -110,19 +109,28 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="LiteracyPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=332802171]
+[node name="Progress Bar" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=1399732245]
 layout_mode = 0
-offset_left = 114.50491
-offset_top = 66.03393
-offset_right = 464.5049
-offset_bottom = 156.03394
-theme_override_styles/background = SubResource("StyleBoxTexture_f0xs7")
+offset_left = 152.61711
+offset_top = 85.67387
+offset_right = 502.61713
+offset_bottom = 155.67386
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(96, 776, 744, 112)
+
+[node name="LiteracyPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect/Progress Bar" unique_id=332802171]
+layout_mode = 0
+offset_left = 29.775171
+offset_top = 18.23708
+offset_right = 318.64914
+offset_bottom = 45.237083
+theme_override_styles/fill = SubResource("StyleBoxFlat_lnuu8")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect" unique_id=1547055710]
 layout_mode = 0
-offset_left = 84.72976
-offset_top = 8.516953
-offset_right = 234.72977
+offset_left = 87.11171
+offset_top = 8.5169525
+offset_right = 237.11171
 offset_bottom = 158.51695
 texture = ExtResource("4_f0xs7")
 region_rect = Rect2(440, 88, 336, 296)
@@ -133,13 +141,21 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="MathPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=440289805]
+[node name="Progress Bar" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=63553066]
 layout_mode = 0
-offset_left = 114.50491
-offset_top = 66.03393
-offset_right = 464.5049
-offset_bottom = 156.03394
-theme_override_styles/background = SubResource("StyleBoxTexture_f0xs7")
+offset_left = 149.0441
+offset_top = 80.19624
+offset_right = 499.0441
+offset_bottom = 150.19623
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(96, 776, 744, 112)
+
+[node name="MathPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2/Progress Bar" unique_id=440289805]
+layout_mode = 0
+offset_left = 30.966166
+offset_top = 18.370861
+offset_right = 319.84012
+offset_bottom = 45.37086
 
 [node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect2" unique_id=414340389]
 layout_mode = 0
@@ -156,13 +172,21 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="SciencePB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=1925116802]
+[node name="Progress Bar" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=893532075]
 layout_mode = 0
-offset_left = 114.50491
-offset_top = 66.03393
-offset_right = 464.5049
-offset_bottom = 156.03394
-theme_override_styles/background = SubResource("StyleBoxTexture_f0xs7")
+offset_left = 149.044
+offset_top = 82.666
+offset_right = 499.044
+offset_bottom = 152.66595
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(96, 776, 744, 112)
+
+[node name="SciencePB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3/Progress Bar" unique_id=1925116802]
+layout_mode = 0
+offset_left = 32.157173
+offset_top = 18.370876
+offset_right = 320.15717
+offset_bottom = 45.370876
 
 [node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect3" unique_id=661040726]
 layout_mode = 0
@@ -174,18 +198,26 @@ texture = ExtResource("4_f0xs7")
 region_rect = Rect2(456, 408, 328, 296)
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1643195806]
-custom_minimum_size = Vector2(100, 160)
+custom_minimum_size = Vector2(100, 180)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="GeographyPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=1328676492]
+[node name="Progress Bar" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=382589194]
 layout_mode = 0
-offset_left = 114.50491
-offset_top = 66.03393
-offset_right = 464.5049
-offset_bottom = 156.03394
-theme_override_styles/background = SubResource("StyleBoxTexture_f0xs7")
+offset_left = 149.044
+offset_top = 82.911
+offset_right = 499.044
+offset_bottom = 152.91139
+texture = ExtResource("4_f0xs7")
+region_rect = Rect2(96, 776, 744, 112)
+
+[node name="GeographyPB" type="ProgressBar" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4/Progress Bar" unique_id=1328676492]
+layout_mode = 0
+offset_left = 32.157166
+offset_top = 18.504578
+offset_right = 320.15717
+offset_bottom = 45.504578
 
 [node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/NinePatchRect4" unique_id=498632782]
 layout_mode = 0

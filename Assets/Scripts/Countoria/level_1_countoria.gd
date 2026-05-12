@@ -50,6 +50,8 @@ var magnet_used = false
 var original_magnet_scale: Vector2
 var timer_ready: bool = false
 
+
+
 func _ready():
 	win_board.hide()
 	if lose_board: lose_board.hide()
@@ -85,6 +87,8 @@ func _ready():
 	GameManager.skip_requested.connect(_on_skip_used)
 	await get_tree().create_timer(0.1).timeout
 	GameManager.update_skill_button_states()
+	GameManager.settings_opened.connect(_on_settings_opened)
+	GameManager.settings_closed.connect(_on_settings_closed)
 	
 	var market_stalls = [$CanvasLayer2/freshfruits_market, $CanvasLayer2/dairy_market, $CanvasLayer2/veggie_market, $CanvasLayer2/bread_market]
 	for stall in market_stalls:
@@ -347,6 +351,12 @@ func show_message(text: String):
 		var tween = create_tween()
 		tween.tween_interval(1.5)
 		tween.tween_property(message_label, "modulate:a", 0.0, 0.5)
+
+func _on_settings_opened():
+	$CanvasLayer2.hide()
+
+func _on_settings_closed():
+	$CanvasLayer2.show()
 
 func win_game():
 	game_over = true

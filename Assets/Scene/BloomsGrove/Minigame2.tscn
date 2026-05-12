@@ -67,6 +67,10 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbcun"]
+atlas = ExtResource("22_jn7w3")
+region = Rect2(48, 240, 1144, 376)
+
 [node name="TrashMiniGame" type="Node2D" unique_id=966201221]
 scale = Vector2(0.265, 0.265)
 script = ExtResource("1_k0b3l")
@@ -296,12 +300,12 @@ scale = Vector2(2.4, 2.8)
 texture_normal = ExtResource("20_uqcaf")
 
 [node name="Rescue" type="TextureButton" parent="CanvasLayer2/Popup" unique_id=1332098019]
-offset_left = -294.329
-offset_top = 169.082
-offset_right = 969.671
-offset_bottom = 1011.08203
+offset_left = -271.23456
+offset_top = 314.12823
+offset_right = 992.76544
+offset_bottom = 1156.1282
 scale = Vector2(0.5, 0.6)
-texture_normal = ExtResource("22_jn7w3")
+texture_normal = SubResource("AtlasTexture_vbcun")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=321570034]
 offset_left = -11031.363

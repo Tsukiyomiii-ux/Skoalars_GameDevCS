@@ -38,7 +38,7 @@ extends Node2D
 @onready var game_timer = $Timer
 
 
-@onready var parallax = $ParallaxBackground
+@onready var parallax := $ParallaxBackground as ParallaxBackground
 # --- DATA ---
 var all_questions = [
 	{"q": "What is the capital of Argentina?", "a": "Buenos Aires"},
@@ -185,14 +185,11 @@ func _on_skip_used():
 
 # --- PROCESS ---
 func _process(_delta):
-	for child in $ParallaxBackground.get_children():
-		var sprite = child.get_node_or_null("Sprite2D")
-		if sprite:
-			sprite.position.x -= 30.0 * _delta
-			# Reset position when it goes too far left
-			if sprite.position.x < -1280:
-				sprite.position.x = 1280
-	
+	for layer in parallax.get_children():
+		if layer is ParallaxLayer:
+			layer.motion_offset.x -= 30.0 * _delta * layer.motion_scale.x
+	parallax.scroll_offset.x -= 30.0 * _delta
+
 	if not is_frozen and game_timer:
 		if settings_open: return
 		var time_left = game_timer.time_left
