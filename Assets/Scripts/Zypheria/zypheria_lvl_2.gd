@@ -341,6 +341,7 @@ func _on_settings_closed():
 
 # --- RESCUE VIDEO LOGIC ---
 func _on_rescue_pressed():
+	AudioManager.stop_music()
 	rescue_video.show()
 	rescue_video.play()
 	win_popup.hide()

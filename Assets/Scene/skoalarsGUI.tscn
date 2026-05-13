@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://es647ytq5k65" path="res://Assets/Sprite/Buttons/MAP, Mission, Lock & Unlock Buttons.png" id="8_rw33h"]
 [ext_resource type="Texture2D" uid="uid://djo2qbnf5p85d" path="res://Assets/Sprite/Buttons/main menu buttons (1).png" id="9_yqgn5"]
 [ext_resource type="Texture2D" uid="uid://cv23kb0k0q58g" path="res://Assets/Sprite/MiniMaps/34.png" id="11_14q07"]
+[ext_resource type="Texture2D" uid="uid://3csdbya1dwef" path="res://Assets/Sprite/MiniMaps/35.png" id="11_wo1e8"]
 [ext_resource type="Texture2D" uid="uid://dler06ppu1sdd" path="res://Assets/Sprite/MiniMaps/32.png" id="12_o1xuy"]
-[ext_resource type="Texture2D" uid="uid://bvvju8mxh4b3i" path="res://Assets/Sprite/MiniMaps/31.png" id="13_wo1e8"]
 [ext_resource type="Texture2D" uid="uid://e0v4de0lp7mc" path="res://Assets/Sprite/MiniMaps/33.png" id="14_wo1e8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
@@ -977,27 +977,28 @@ visible = false
 layout_mode = 0
 offset_right = 6000.0
 offset_bottom = 5000.0
-texture = ExtResource("11_14q07")
+texture = ExtResource("11_wo1e8")
 
 [node name="count" type="NinePatchRect" parent="Control/Minimaps" unique_id=1634564447 groups=["minimap_count"]]
+visible = false
 layout_mode = 0
 offset_right = 6000.0
 offset_bottom = 5000.0
-texture = ExtResource("14_wo1e8")
+texture = ExtResource("11_14q07")
 
 [node name="blooms" type="NinePatchRect" parent="Control/Minimaps" unique_id=453268230 groups=["minimap_blooms"]]
 visible = false
 layout_mode = 0
 offset_right = 6000.0
 offset_bottom = 5000.0
-texture = ExtResource("12_o1xuy")
+texture = ExtResource("14_wo1e8")
 
 [node name="zyph" type="NinePatchRect" parent="Control/Minimaps" unique_id=1234903062 groups=["minimap_zyph"]]
 visible = false
 layout_mode = 0
 offset_right = 6000.0
 offset_bottom = 5000.0
-texture = ExtResource("13_wo1e8")
+texture = ExtResource("12_o1xuy")
 
 [node name="Large_Fable" type="NinePatchRect" parent="Control/Minimaps" unique_id=336194088 groups=["lar_min_fable"]]
 visible = false
@@ -1013,7 +1014,7 @@ offset_right = 2179.999
 offset_bottom = 12513.334
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("11_14q07")
+texture = ExtResource("11_wo1e8")
 
 [node name="Large_Count" type="NinePatchRect" parent="Control/Minimaps" unique_id=302802074 groups=["lar_min_count"]]
 visible = false
@@ -1029,7 +1030,7 @@ offset_right = 2179.999
 offset_bottom = 12513.334
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("14_wo1e8")
+texture = ExtResource("11_14q07")
 
 [node name="Large_Blooms" type="NinePatchRect" parent="Control/Minimaps" unique_id=1610169092 groups=["lar_min_blooms"]]
 visible = false
@@ -1045,7 +1046,7 @@ offset_right = 2179.999
 offset_bottom = 12513.334
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("12_o1xuy")
+texture = ExtResource("14_wo1e8")
 
 [node name="Large_Zyph" type="NinePatchRect" parent="Control/Minimaps" unique_id=820365113 groups=["lar_min_zyph"]]
 visible = false
@@ -1061,7 +1062,7 @@ offset_right = 2179.999
 offset_bottom = 12513.334
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("13_wo1e8")
+texture = ExtResource("12_o1xuy")
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]

@@ -476,9 +476,9 @@ one_shot = true
 
 [node name="PopupLayer" type="CanvasLayer" parent="." unique_id=1643814174]
 layer = 10
-visible = false
 
 [node name="WinPopup" type="Control" parent="PopupLayer" unique_id=898830491]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1468.0
