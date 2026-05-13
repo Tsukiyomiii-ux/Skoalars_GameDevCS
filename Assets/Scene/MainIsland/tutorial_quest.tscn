@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://jl5ber54ymc0"]
+[gd_scene format=3 uid="uid://bsdkxy2bls1ow"]
 
 [ext_resource type="Script" uid="uid://v8tv8p21h2cg" path="res://Assets/Scripts/MainIsland/tutorial_quest.gd" id="1_0rbod"]
 [ext_resource type="Texture2D" uid="uid://ddno55m1eatqw" path="res://Assets/Sprite/FABLE ISLE/Level2/Word-Correct.png" id="2_e2shu"]

@@ -454,9 +454,9 @@ func load_game():
 
 func reset_game():
 	completed_topics = []
-	diamonds = 500
-	skills = {"hint": true, "freeze_time": true, "add_time": true, "skip": true}
-	skill_uses = {"hint": 100, "freeze_time": 100, "add_time": 100, "skip": 100}
+	diamonds = 5
+	skills = {"hint": true, "freeze_time": false, "add_time": false, "skip": false}
+	skill_uses = {"hint": 1, "freeze_time": 0, "add_time": 0, "skip": 0}
 	skills_equipped = {"hint": false, "freeze_time": false, "add_time": false, "skip": false}
 	islands_unlocked = {"island_1": true, "island_2": false, "island_3": false, "island_4": false}
 	island_progress = {

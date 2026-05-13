@@ -21,8 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://clmjj33mubbhi" path="res://Assets/Sprite/FABLE ISLE/Level2/TextHolder.png" id="15_kkisq"]
 [ext_resource type="Texture2D" uid="uid://plueqexlb111" path="res://Assets/Sprite/Buttons/ChatGPT Image May 1, 2026, 10_55_13 PM.png" id="15_lt74q"]
 [ext_resource type="Texture2D" uid="uid://dqlaukldo6ia6" path="res://Assets/Sprite/BG/Tutorial.png" id="17_lt74q"]
-[ext_resource type="AudioStream" uid="uid://cunov2fnyxv1k" path="res://Assets/Sprite/soundfx/CorrectSFX.MP3" id="21_lt74q"]
-[ext_resource type="AudioStream" uid="uid://co5bt4jtddx66" path="res://Assets/Sprite/soundfx/WrongSFX.MP3" id="22_hq4cy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dag5b"]
 atlas = ExtResource("2_a5ycg")
@@ -467,6 +465,9 @@ texture_margin_bottom = 15.0
 region_rect = Rect2(120, 160, 1296, 608)
 
 [sub_resource type="FontFile" id="FontFile_yo7sv"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -1313,22 +1314,6 @@ size_flags_horizontal = 4
 theme_override_styles/normal = SubResource("StyleBoxTexture_uikft")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_l7egw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_obiky")
-
-[node name="SndCorrect" type="AudioStreamPlayer2D" parent="Control" unique_id=328925200]
-unique_name_in_owner = true
-position = Vector2(-5068.046, -3856.4985)
-scale = Vector2(0.6288912, 0.6355172)
-stream = ExtResource("21_lt74q")
-max_distance = 999999.0
-attenuation = 0.01
-
-[node name="SndWrong" type="AudioStreamPlayer2D" parent="Control" unique_id=262265605]
-unique_name_in_owner = true
-position = Vector2(-5068.046, -3856.4985)
-scale = Vector2(0.6288912, 0.6355172)
-stream = ExtResource("22_hq4cy")
-max_distance = 999999.0
-attenuation = 0.01
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]

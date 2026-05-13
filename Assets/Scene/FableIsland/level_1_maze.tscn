@@ -602,7 +602,7 @@ offset_top = 475.0
 offset_right = 1290.0
 offset_bottom = 748.3332
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=286483046]
+[node name="MissionScroll" type="TextureRect" parent="CanvasLayer" unique_id=286483046]
 unique_name_in_owner = true
 offset_left = -38.000008
 offset_top = 159.00002

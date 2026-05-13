@@ -8,8 +8,6 @@ extends Node2D
 @onready var progress_bar = $CanvasLayer/TextureProgressBar
 
 # --- AUDIO NODES ---
-@onready var snd_victory = $SndVictory
-@onready var snd_game_over = $SndGameOver
 @onready var snd_tick = $SndTick
 
 # --- VARIABLES ---

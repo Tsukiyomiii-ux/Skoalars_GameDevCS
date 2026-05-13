@@ -283,17 +283,16 @@ func _on_quit_btn_pressed() -> void:
 	# In a minigame → go back to that island's overworld
 	var island = GameManager.get_current_island()
 	match island:
-		"island_1", "island_1.5":
+		"island_1", "island_1.5", "island_1.1", "island_1.2":  # ✅ add missing ones
 			get_tree().change_scene_to_file("res://Assets/Scene/FableIsland/fableisland.tscn")
-		"island_2", "island_2.5":
+		"island_2", "island_2.5", "island_2.1", "island_2.2":
 			get_tree().change_scene_to_file("res://Assets/Scene/Countoria/countoria.tscn")
-		"island_3", "island_3.5":
+		"island_3", "island_3.5", "island_3.1", "island_3.2":
 			get_tree().change_scene_to_file("res://Assets/Scene/BloomsGrove/science.scn")
-		"island_4", "island_4.5":
+		"island_4", "island_4.5", "island_4.1", "island_4.2":
 			get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/zypheria.tscn")
 		_:
 			get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")
-
 func _on_play_btn_pressed() -> void:
 	_settings_open = false
 	GameManager.settings_closed.emit()
