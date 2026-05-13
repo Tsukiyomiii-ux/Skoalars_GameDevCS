@@ -7,6 +7,10 @@ extends Control
 @export var close_cont = VBoxContainer
 @onready var anim = $MarginContainer/VBoxContainer/Popup/AnimationPlayer
 
+@export var hint_label: Node
+@export var start_hint_btn: Node
+const MAIN_ISLAND_SCENE = "res://Assets/Scene/MainIsland/main_island.tscn"
+
 var minimap_fable: Node
 var minimap_count: Node
 var minimap_blooms: Node
@@ -47,7 +51,10 @@ func _ready() -> void:
 			continue
 		_cooldown_labels[skill_name].visible = false
 		_cooldown_labels[skill_name].text = ""
+		
+	get_tree().root.child_order_changed.connect(_on_scene_changed)
 	call_deferred("_update_minimap_visibility")
+	_update_hint_visibility()
 	set_process(true)
 
 func _process(_delta: float) -> void:
@@ -114,6 +121,32 @@ func _toggle_large_minimap() -> void:
 	var showing_large = large_map.visible
 	large_map.visible = not showing_large
 	small_map.visible = showing_large
+
+func _on_scene_changed() -> void:
+	if not is_inside_tree():
+		return
+	call_deferred("_update_hint_visibility")
+
+func _update_hint_visibility() -> void:
+	if not is_inside_tree():
+		return
+	var tree = get_tree()
+	if not tree or not is_instance_valid(tree):
+		return
+	var current_scene = tree.current_scene
+	if not current_scene or not is_instance_valid(current_scene):
+		return
+
+	var current_path = current_scene.scene_file_path
+	var should_show = (
+		GameManager.tutorial_completed and
+		not GameManager.main_hint_shown and
+		current_path == MAIN_ISLAND_SCENE
+	)
+
+	var lbl = get_tree().get_first_node_in_group("hint_label")
+	print("🔍 lbl: ", lbl, " | should_show: ", should_show)
+	safe_set_visible(lbl, should_show)
 
 func _update_minimap_visibility() -> void:
 	var island = GameManager.get_current_island()
@@ -339,8 +372,13 @@ func _on_diamond_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/skillShop.tscn")
 
 func _on_map_start_btn_pressed() -> void:
+	GameManager.main_hint_shown = true
+	GameManager.save_game()
+	var lbl = get_tree().get_first_node_in_group("hint_label")
+	safe_set_visible(lbl, false)
 	play()
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/mapSelector.tscn")
+
 
 func _on_hint_btn_pressed():
 	GameManager.use_skill("hint")

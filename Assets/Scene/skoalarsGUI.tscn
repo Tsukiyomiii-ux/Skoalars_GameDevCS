@@ -895,7 +895,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_03i5e")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4wq3e")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8miks")
 
-[node name="ColorRect" type="ColorRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn" unique_id=57633370]
+[node name="hint_label" type="ColorRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn" unique_id=57633370 groups=["hint_label"]]
 layout_mode = 0
 offset_left = -954.055
 offset_top = -915.482
@@ -903,7 +903,7 @@ offset_right = 4057.28
 offset_bottom = 99.69299
 color = Color(0, 0, 0, 0.6509804)
 
-[node name="Label" type="Label" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn/ColorRect" unique_id=1232934629]
+[node name="Label" type="Label" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn/hint_label" unique_id=1232934629]
 layout_mode = 0
 offset_left = 90.403
 offset_top = -49.343

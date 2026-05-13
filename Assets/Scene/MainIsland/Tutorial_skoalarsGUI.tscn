@@ -325,6 +325,11 @@ texture_margin_right = 5.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(464, 8, 264, 232)
 
+[sub_resource type="LabelSettings" id="LabelSettings_6ked7"]
+font_size = 200
+shadow_size = 27
+shadow_color = Color(0, 0, 0, 0.30980393)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl0db"]
 texture = ExtResource("13_vpq5x")
 50:8/size_in_atlas = Vector2i(36, 4)
@@ -745,16 +750,17 @@ anchor_left = 0.5
 anchor_top = 0.358
 anchor_right = 0.563
 anchor_bottom = 0.358
-offset_left = -3555.5273
-offset_top = -992.3225
-offset_right = -2752.2954
-offset_bottom = -830.3225
+offset_left = -4191.5674
+offset_top = -1097.2239
+offset_right = -2993.8105
+offset_bottom = -894.2239
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3.915, 3.915)
 theme_override_fonts/font = ExtResource("12_v5oq1")
 theme_override_font_sizes/font_size = 120
-text = "tap the correct letter"
+text = "tap  the  correct  letter"
+label_settings = SubResource("LabelSettings_6ked7")
 horizontal_alignment = 1
 
 [node name="Title" type="TileMapLayer" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=1577696952]
@@ -988,6 +994,7 @@ patch_margin_top = 1000
 patch_margin_bottom = 883
 
 [node name="study_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect2" unique_id=726707208]
+unique_name_in_owner = true
 visible = false
 z_index = 40
 layout_mode = 1

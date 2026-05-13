@@ -15,8 +15,6 @@ func _ready():
 # Skip button
 func _on_skip_btn_pressed():
 	stop()
-	GameManager.cutscene_played = true  # ✅ Mark as played when skipped
-	GameManager.save_game()
 	get_tree().change_scene_to_file("res://Assets/Scene/OverallMission.tscn")
 
 # Pause button pressed — pause the video, show play button
@@ -35,6 +33,4 @@ func _on_pasplay_btn_pressed():
 
 # When video finishes normally
 func _on_finished():
-	GameManager.cutscene_played = true  # ✅ Already there
-	GameManager.save_game()  # ✅ Add this so it persists
 	get_tree().change_scene_to_file("res://Assets/Scene/OverallMission.tscn")  # ✅ Fix path

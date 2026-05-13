@@ -125,6 +125,7 @@ var next_scene_path: String = ""
 var current_score: int = 0
 var hint_already_used: bool = false
 var allowed_skills: Array = ["hint", "freeze_time", "add_time", "skip"]
+var main_hint_shown: bool = false
 
 # Signals
 signal diamonds_changed(new_amount)
@@ -412,6 +413,7 @@ func save_game():
 		"island_rewards_collected": island_rewards_collected,
 		"completed_topics": completed_topics,
 		"shop_last_bought": shop_last_bought,
+		"main_hint_shown": main_hint_shown,
 	}
 	var file = FileAccess.open("user://game_save.json", FileAccess.WRITE)
 	if file == null:
@@ -444,6 +446,7 @@ func load_game():
 		island_rewards_collected = data.get("island_rewards_collected", island_rewards_collected)
 		completed_topics = data.get("completed_topics", [])
 		shop_last_bought = data.get("shop_last_bought", shop_last_bought)
+		main_hint_shown = data.get("main_hint_shown", false)
 		var loaded_answers = data.get("study_answers", {})
 		for key in loaded_answers:
 			if study_answers.has(key):
@@ -482,6 +485,7 @@ func reset_game():
 	wand_used = false
 	cutscene_played = false
 	tutorial_completed = false
+	main_hint_shown = false
 	reset_study_answers()
 	diamonds_changed.emit(diamonds)
 	save_game()

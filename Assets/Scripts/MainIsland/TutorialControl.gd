@@ -56,8 +56,8 @@ func _ready() -> void:
 	AudioManager.play_music(preload("res://Assets/Audio/SoftEng_BG1.wav"))
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	if not GameManager.cutscene_played:
-		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.disabled = true
-		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.modulate.a = 0.4
+		%study_btn.disabled = true
+		%study_btn.modulate.a = 0.4
  
 	GameManager.tutorial_completed = false
 	tutorial_done = false
@@ -65,10 +65,6 @@ func _ready() -> void:
 	safe_set_visible(skip_btn, false)
 	print("🎮 Tutorial mode started - Done button visible")
 	
-	var arrow_tutorial = get_node("YourArrowTutorialNodePath")  # adjust path
-	if arrow_tutorial:
-		arrow_tutorial.tutorial_finished.connect(on_tutorial_finished)
-
 func _process(delta):
 	if not tutorial_done and GameManager.tutorial_completed:
 		tutorial_done = true
@@ -307,7 +303,10 @@ func _on_home_btn_pressed() -> void:
 
 func _on_done_btn_pressed() -> void:
 	tutorial_done = true
+	GameManager.cutscene_played = true
+	GameManager.save_game()
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")
+
 
 func _on_skip_btn_pressed() -> void:
 	show_reward()
