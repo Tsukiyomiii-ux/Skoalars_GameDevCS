@@ -44,6 +44,8 @@ func _ready():
 	AudioManager.play_music(preload("res://Assets/Audio/StudySessionBG.wav"))
 	answer_field_1.text = GameManager.get_study_answer("plant_lesson", "answer1")
 	answer_field_2.text = GameManager.get_study_answer("plant_lesson", "answer2")
+	answer_field_1.selecting_enabled = false  # ← add this
+	answer_field_2.selecting_enabled = false  # ← add this
 	answer_field_1.text_changed.connect(_on_answers_changed)
 	answer_field_2.text_changed.connect(_on_answers_changed)
 	update_page()

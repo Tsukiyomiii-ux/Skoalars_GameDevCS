@@ -63,7 +63,8 @@ func _ready() -> void:
 	# LOAD: Fill the boards with previously saved text
 	board_1.text = GameManager.get_study_answer("division", "answer1")
 	board_2.text = GameManager.get_study_answer("division", "answer2")
-	
+	board_1.selecting_enabled = false  # ← add this
+	board_2.selecting_enabled = false  # ← add this
 	done_button.visible = false
 	_toggle_reflection_ui(false)
 	update_page_display()

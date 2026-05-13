@@ -62,7 +62,8 @@ func _ready() -> void:
 	# 1. LOAD: Immediately pull the text from the static memory
 	board_1.text = GameManager.get_study_answer("subtraction", "answer1")
 	board_2.text = GameManager.get_study_answer("subtraction", "answer2")
-	
+	board_1.selecting_enabled = false  # ← add this
+	board_2.selecting_enabled = false  # ← add this
 	done_button.visible = false
 	_toggle_reflection_ui(false)
 	update_page_display()

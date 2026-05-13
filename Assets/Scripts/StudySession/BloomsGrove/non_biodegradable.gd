@@ -51,7 +51,8 @@ func _ready():
 	# 1. LOAD: Restore text from GameManager when the scene starts
 	answer1.text = GameManager.get_study_answer("non_bio_waste", "answer1")
 	answer2.text = GameManager.get_study_answer("non_bio_waste", "answer2")
-	
+	answer1.selecting_enabled = false  # ← add this
+	answer2.selecting_enabled = false  # ← add this
 	# Connect text changed signals
 	answer1.text_changed.connect(_on_answers_changed)
 	answer2.text_changed.connect(_on_answers_changed)

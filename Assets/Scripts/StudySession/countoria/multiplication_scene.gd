@@ -62,7 +62,8 @@ func _ready() -> void:
 	# LOAD PREVIOUS ANSWERS
 	board_1.text = GameManager.get_study_answer("multiplication", "answer1")
 	board_2.text = GameManager.get_study_answer("multiplication", "answer2")
-	
+	board_1.selecting_enabled = false  # ← add this
+	board_2.selecting_enabled = false  # ← add this
 	done_button.visible = false
 	_toggle_reflection_ui(false)
 	update_page_display()

@@ -54,7 +54,8 @@ func _ready():
 	# 1. LOAD: Restore text from GameManager immediately
 	answer_field_1.text = GameManager.get_study_answer("recyclable_waste", "answer1")
 	answer_field_2.text = GameManager.get_study_answer("recyclable_waste", "answer2")
-	
+	answer_field_1.selecting_enabled = false  # ← add this
+	answer_field_2.selecting_enabled = false  # ← add this
 	# Connect text changed signals
 	answer_field_1.text_changed.connect(_on_answers_changed)
 	answer_field_2.text_changed.connect(_on_answers_changed)

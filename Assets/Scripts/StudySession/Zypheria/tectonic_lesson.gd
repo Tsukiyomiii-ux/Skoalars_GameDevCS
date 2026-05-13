@@ -65,6 +65,8 @@ func _ready():
 	
 	answer_1.text = GameManager.get_study_answer("tectonic", "answer1")
 	answer_2.text = GameManager.get_study_answer("tectonic", "answer2")
+	answer_1.selecting_enabled = false  # ← add this
+	answer_2.selecting_enabled = false  # ← add this
 	answer_1.text_changed.connect(_on_answer_changed)
 	answer_2.text_changed.connect(_on_answer_changed)
 	

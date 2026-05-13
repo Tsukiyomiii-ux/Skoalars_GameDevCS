@@ -48,7 +48,8 @@ func _ready():
 	# 1. LOAD: Pull saved text from GameManager immediately
 	answer1.text = GameManager.get_study_answer("ecosystem", "answer1")
 	answer2.text = GameManager.get_study_answer("ecosystem", "answer2")
-	
+	answer1.selecting_enabled = false  # ← add this
+	answer2.selecting_enabled = false  # ← add this
 	# Connect text changes to check for the 10-word requirement
 	answer1.text_changed.connect(_on_answers_changed)
 	answer2.text_changed.connect(_on_answers_changed)

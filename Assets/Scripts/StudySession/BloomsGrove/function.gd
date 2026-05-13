@@ -69,7 +69,8 @@ func _ready():
 	# 1. LOAD: Pull existing text from GameManager immediately
 	answer1_field.text = GameManager.get_study_answer("plant_functions", "answer1")
 	answer2_field.text = GameManager.get_study_answer("plant_functions", "answer2")
-	
+	answer1_field.selecting_enabled = false  # ← add this
+	answer2_field.selecting_enabled = false  # ← add this
 	# Connect signals
 	answer1_field.text_changed.connect(_on_answers_changed)
 	answer2_field.text_changed.connect(_on_answers_changed)
