@@ -136,6 +136,7 @@ func _on_done_btn_pressed():
 	# FINAL SAVE: Commit to static memory
 	saved_sub_data["board1"] = board_1.text
 	saved_sub_data["board2"] = board_2.text
-	GameManager.add_diamonds(1)
+	if not GameManager.completed_topics.has("subtraction"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("math","subtraction")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/countoria/studysession_countoria.tscn")

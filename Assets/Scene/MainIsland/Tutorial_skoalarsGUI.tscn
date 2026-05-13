@@ -6,6 +6,7 @@
 [ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_ssc6x"]
 [ext_resource type="Texture2D" uid="uid://ris1ure083vf" path="res://Assets/Fable Isle/Level2/Objectives1.png" id="6_nhdss"]
 [ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="6_uikft"]
+[ext_resource type="Texture2D" uid="uid://c2bwy13rwip1k" path="res://Assets/Sprite/Buttons/muteBtn.png" id="6_yo7sv"]
 [ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="7_l7egw"]
 [ext_resource type="Texture2D" uid="uid://ddno55m1eatqw" path="res://Assets/Sprite/FABLE ISLE/Level2/Word-Correct.png" id="8_44ofu"]
 [ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="8_obiky"]
@@ -310,6 +311,22 @@ texture_margin_right = 5.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(232, 240, 128, 112)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kthuy"]
+texture = ExtResource("6_yo7sv")
+region_rect = Rect2(464, 16, 272, 224)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t6av8"]
+texture = ExtResource("6_yo7sv")
+region_rect = Rect2(464, 16, 272, 216)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udntb"]
+texture = ExtResource("6_yo7sv")
+texture_margin_left = 5.0
+texture_margin_top = 8.0
+texture_margin_right = 5.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(464, 8, 264, 232)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl0db"]
 texture = ExtResource("13_vpq5x")
 50:8/size_in_atlas = Vector2i(36, 4)
@@ -448,6 +465,32 @@ texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
 region_rect = Rect2(120, 160, 1296, 608)
+
+[sub_resource type="FontFile" id="FontFile_yo7sv"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/200/0/ascent = 0.0
+cache/0/200/0/descent = 0.0
+cache/0/200/0/underline_position = 0.0
+cache/0/200/0/underline_thickness = 0.0
+cache/0/200/0/scale = 1.0
+cache/0/600/0/ascent = 0.0
+cache/0/600/0/descent = 0.0
+cache/0/600/0/underline_position = 0.0
+cache/0/600/0/underline_thickness = 0.0
+cache/0/600/0/scale = 1.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbpqs"]
 texture = ExtResource("9_wysqq")
@@ -626,6 +669,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_i71qq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_r1kqm")
 
 [node name="mute_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect" unique_id=1622286815]
+unique_name_in_owner = true
 z_index = 40
 layout_mode = 0
 offset_left = 132.8695
@@ -636,6 +680,20 @@ scale = Vector2(4.425, 4.425)
 theme_override_styles/normal = SubResource("StyleBoxTexture_jjp2r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8g060")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lltph")
+
+[node name="unmute_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect" unique_id=275281716]
+unique_name_in_owner = true
+visible = false
+z_index = 40
+layout_mode = 0
+offset_left = 132.8695
+offset_top = 1510.639
+offset_right = 332.8698
+offset_bottom = 1660.639
+scale = Vector2(4.425, 4.425)
+theme_override_styles/normal = SubResource("StyleBoxTexture_kthuy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_t6av8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_udntb")
 
 [node name="Quest Container" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/Popup" unique_id=840334613]
 custom_minimum_size = Vector2(16000, 12000)
@@ -678,6 +736,25 @@ offset_bottom = 78.596436
 mouse_filter = 1
 theme_override_fonts/font = ExtResource("12_v5oq1")
 theme_override_font_sizes/font_size = 64
+
+[node name="ChooseHereLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont/ObjectivesScroll" unique_id=733766988]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.358
+anchor_right = 0.563
+anchor_bottom = 0.358
+offset_left = -3555.5273
+offset_top = -992.3225
+offset_right = -2752.2954
+offset_bottom = -830.3225
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.915, 3.915)
+theme_override_fonts/font = ExtResource("12_v5oq1")
+theme_override_font_sizes/font_size = 120
+text = "tap the correct letter"
+horizontal_alignment = 1
 
 [node name="Title" type="TileMapLayer" parent="Control/MarginContainer/VBoxContainer/Popup/Quest Container/quest_cont" unique_id=1577696952]
 position = Vector2(-7428.2744, 209.8031)
@@ -910,6 +987,7 @@ patch_margin_top = 1000
 patch_margin_bottom = 883
 
 [node name="study_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect2" unique_id=726707208]
+visible = false
 z_index = 40
 layout_mode = 1
 anchors_preset = 8
@@ -935,6 +1013,7 @@ patch_margin_top = 1000
 patch_margin_bottom = 883
 
 [node name="quit_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3" unique_id=1650196446]
+visible = false
 z_index = 40
 layout_mode = 1
 anchors_preset = 8
@@ -1098,6 +1177,25 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_hq4cy")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_3333q")
 theme_override_styles/hover = SubResource("StyleBoxTexture_v5oq1")
 
+[node name="ColorRect" type="ColorRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/finished_btn" unique_id=430398478]
+layout_mode = 0
+offset_left = -954.0547
+offset_top = -629.4219
+offset_right = 4057.2803
+offset_bottom = 70.578125
+color = Color(0, 0, 0, 0.6509804)
+
+[node name="Label" type="Label" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/finished_btn" unique_id=92556376]
+layout_mode = 0
+offset_left = -848.05334
+offset_top = -629.40857
+offset_right = 1678.9467
+offset_bottom = -362.40857
+scale = Vector2(1.85, 1.85)
+theme_override_fonts/font = SubResource("FontFile_yo7sv")
+theme_override_font_sizes/font_size = 200
+text = "Press Button if Done Tutorial"
+
 [node name="reward_btn_cont" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer" unique_id=1194375763]
 visible = false
 layout_mode = 2
@@ -1235,6 +1333,7 @@ attenuation = 0.01
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/mute_btn" to="Control" method="_on_mute_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/unmute_btn" to="Control" method="_on_unmute_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect/play_btn" to="Control" method="_on_play_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control" method="_on_quit_btn_pressed"]
 [connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/volume_cont/NinePatchRect/PanelContainer/MarginContainer/HBoxContainer/NinePatchRect2/HSlider" to="Control" method="_on_h_slider_value_changed"]

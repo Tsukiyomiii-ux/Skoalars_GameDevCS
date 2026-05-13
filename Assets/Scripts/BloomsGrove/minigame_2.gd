@@ -280,9 +280,12 @@ func _on_try_pressed():
 
 func _on_quit_pressed() -> void:
 	GameManager.load_scene("res://Assets/Scene/BloomsGrove/science.scn")
+	lose_popup_bg.hide()
+	
 
 func _on_collect_pressed() -> void:
 	GameManager.collect_island_reward("island_3.5")
+	GameManager.collect_island_reward("island_3")
 	GameManager.complete_minigame("island_3")
 	$CanvasLayer2/Popup/Rescue.disabled = false
 	$CanvasLayer2/Popup/Rescue.modulate = Color(1, 1, 1)

@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://djjv6dg5l6fwo" path="res://Assets/Zypheria/LEVEL 2/PARALLAX SKY/3.png" id="5_fovlj"]
 [ext_resource type="Texture2D" uid="uid://h1wnfubcaol1" path="res://Assets/Zypheria/LEVEL 2/PARALLAX SKY/4.png" id="6_85iql"]
 [ext_resource type="Texture2D" uid="uid://eb6dl7hw3prx" path="res://Assets/Zypheria/LEVEL1/OTHERS/scroll.png" id="7_ojacm"]
+[ext_resource type="Texture2D" uid="uid://caik3bxr8hxj0" path="res://Assets/Sprite/zypheria_lvl2_backUI.png" id="8_ndjoa"]
 [ext_resource type="Texture2D" uid="uid://cp5guenmwpi0d" path="res://Assets/Zypheria/LEVEL1/OTHERS/progress bar.png" id="8_qkpye"]
-[ext_resource type="Texture2D" uid="uid://ce5hrbg0usxjt" path="res://Assets/Zypheria/LEVEL 2/UI/lvl2UI.png" id="9_v7leq"]
 [ext_resource type="Texture2D" uid="uid://cmvx1qrm64fwf" path="res://Assets/Zypheria/LEVEL 2/UI/PLANE ANIMATION.png" id="10_r2ncl"]
 [ext_resource type="Texture2D" uid="uid://bi8ajc4faee5y" path="res://Assets/Zypheria/LEVEL1/OTHERS/magicMapSkills.png" id="11_5q3ar"]
+[ext_resource type="VideoStream" uid="uid://di1ll5cch0i2k" path="res://Assets/Cutscenes/SKOALARS ENDING.ogv" id="12_ndjoa"]
 [ext_resource type="Texture2D" uid="uid://7esndk4bskpx" path="res://Assets/Zypheria/LEVEL1/OTHERS/clock animation.png" id="12_olxsx"]
 [ext_resource type="Texture2D" uid="uid://btvsa2mjqbay2" path="res://Assets/Zypheria/LEVEL1/OTHERS/rewards.png" id="13_sethy"]
 [ext_resource type="Texture2D" uid="uid://d1fegikjypo45" path="res://Assets/Zypheria/LEVEL 2/UI/scroll animated.png" id="14_hhwkf"]
@@ -38,13 +39,13 @@ sources/0 = SubResource("TileSetAtlasSource_sm4ji")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvflm"]
 bg_color = Color(0.20267731, 0.78227127, 3.85046e-07, 1)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u7yax"]
-texture = ExtResource("9_v7leq")
-1:1/size_in_atlas = Vector2i(81, 62)
-1:1/0 = 0
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dj0h1"]
+texture = ExtResource("8_ndjoa")
+2:1/size_in_atlas = Vector2i(81, 63)
+2:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_hvflm"]
-sources/0 = SubResource("TileSetAtlasSource_u7yax")
+sources/1 = SubResource("TileSetAtlasSource_dj0h1")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_un0xu"]
 atlas = ExtResource("10_r2ncl")
@@ -291,25 +292,25 @@ scale = Vector2(0.745, 0.745)
 texture_normal = ExtResource("7_ojacm")
 
 [node name="ProgressionBarHolder" type="TileMapLayer" parent="CanvasLayer" unique_id=34428734]
-position = Vector2(-6, 42)
+position = Vector2(-108.99999, 40)
 scale = Vector2(0.7, 0.7)
 tile_map_data = PackedByteArray(0, 0, 42, 0, 35, 0, 0, 0, 31, 0, 53, 0, 0, 0)
 tile_set = SubResource("TileSet_ulcyy")
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1269197580]
-offset_left = 332.0
-offset_top = 435.0
-offset_right = 616.0
-offset_bottom = 449.0
+offset_left = 229.0
+offset_top = 433.0
+offset_right = 513.0
+offset_bottom = 447.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_hvflm")
 max_value = 10.0
 show_percentage = false
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=249486479]
-offset_left = 332.0
-offset_top = 429.0
-offset_right = 615.0
-offset_bottom = 452.0
+offset_left = 229.0
+offset_top = 427.0
+offset_right = 512.0
+offset_bottom = 450.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -319,7 +320,7 @@ vertical_alignment = 1
 [node name="SCROLL,CLOUDS, MISSION" type="TileMapLayer" parent="CanvasLayer" unique_id=610212365]
 position = Vector2(291.87497, 160.375)
 scale = Vector2(0.8, 0.7)
-tile_map_data = PackedByteArray(0, 0, 23, 0, 17, 0, 1, 0, 1, 0, 0, 0, 0, 0, 21, 0, 17, 0, 0, 0, 1, 0, 1, 0, 0, 0)
+tile_map_data = PackedByteArray(0, 0, 23, 0, 17, 0, 1, 0, 1, 0, 0, 0, 0, 0, 21, 0, 17, 0, 0, 0, 1, 0, 1, 0, 0, 0, 20, 0, 17, 0, 1, 0, 2, 0, 1, 0, 0, 0)
 tile_set = SubResource("TileSet_hvflm")
 
 [node name="QuestionLabel" type="Label" parent="CanvasLayer/SCROLL,CLOUDS, MISSION" unique_id=672903674]
@@ -334,10 +335,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Choice1" type="TextureButton" parent="CanvasLayer/SCROLL,CLOUDS, MISSION" unique_id=2075635532]
-offset_left = -127.343704
-offset_top = -80.53569
-offset_right = 75.98961
-offset_bottom = 6.1309357
+offset_left = -166.0937
+offset_top = -91.96429
+offset_right = 37.23961
+offset_bottom = -5.297661
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/SCROLL,CLOUDS, MISSION/Choice1" unique_id=306369605]
@@ -357,10 +358,10 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Choice2" type="TextureButton" parent="CanvasLayer/SCROLL,CLOUDS, MISSION" unique_id=438851295]
-offset_left = 303.9063
-offset_top = -77.67854
-offset_right = 497.23962
-offset_bottom = 8.988083
+offset_left = 275.1563
+offset_top = -93.39285
+offset_right = 468.48962
+offset_bottom = -6.726227
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/SCROLL,CLOUDS, MISSION/Choice2" unique_id=1347434274]
@@ -380,10 +381,10 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Choice3" type="TextureButton" parent="CanvasLayer/SCROLL,CLOUDS, MISSION" unique_id=450129043]
-offset_left = 735.1563
-offset_top = -80.53569
-offset_right = 925.1563
-offset_bottom = 6.1309357
+offset_left = 698.9063
+offset_top = -90.53571
+offset_right = 888.9063
+offset_bottom = -3.8690872
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/SCROLL,CLOUDS, MISSION/Choice3" unique_id=1937586326]
@@ -403,7 +404,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="PlaneSprite" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=184636189]
-position = Vector2(967.99994, 347)
+position = Vector2(966.99994, 342.99997)
 scale = Vector2(0.51546234, 0.43237305)
 sprite_frames = SubResource("SpriteFrames_fpoqm")
 autoplay = "default"
@@ -440,6 +441,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RescueVideo" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=1300640716]
+visible = false
 z_index = 10
 anchors_preset = 15
 anchor_right = 1.0
@@ -451,6 +453,21 @@ offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("15_etapc")
+expand = true
+
+[node name="EndingVideo" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=154051942]
+visible = false
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("12_ndjoa")
 expand = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1442622411]

@@ -163,9 +163,12 @@ func _check_reflection():
 		done_btn.visible = false
 
 func _on_done_pressed():
-	save_answers()
-	GameManager.add_diamonds(1)
+	print("🔍 capitals in completed_topics: ", GameManager.completed_topics.has("capitals"))
+	print("🔍 diamonds before: ", GameManager.diamonds)
+	if not GameManager.completed_topics.has("continents"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("geography",'continents')
+	print("🔍 diamonds after: ", GameManager.diamonds)
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():

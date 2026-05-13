@@ -190,6 +190,7 @@ func setup_board_buttons():
 func _on_rewards_claimed():
 	if tapping_audio: tapping_audio.play()
 	GameManager.collect_island_reward("island_2.5")
+	GameManager.collect_island_reward("island_2")
 	GameManager.complete_minigame("island_2")
 	
 	var tween = create_tween().set_parallel(true)
@@ -229,7 +230,8 @@ func _on_enter_pressed():
 	else:
 		if wrong_audio: wrong_audio.play()
 		apply_time_penalty(2)
-		shake_node($CanvasLayer2/numboard/answer_board)
+		if numboard_ref and is_instance_valid(numboard_ref):
+			shake_node(numboard_ref.get_node_or_null("answer_board"))
 		current_answer_string = ""; answer_label.text = ""
 
 func _on_timer_timeout():
@@ -387,10 +389,10 @@ func shake_node(target_node: Node):
 	t.chain().tween_property(target_node, "position:x", op.x, 0.05)
 
 func _on_reload_scene(): 
-	cleanup_numboard()
 	get_tree().reload_current_scene()
+	GameManager.cleanup_persistent_nodes()
 func _on_menu_pressed(): 
-	cleanup_numboard()
+	GameManager.cleanup_persistent_nodes()
 	get_tree().change_scene_to_file("res://Assets/Scene/Countoria/countoria.tscn")
 
 # --- 6. FINAL REDIRECTION ---

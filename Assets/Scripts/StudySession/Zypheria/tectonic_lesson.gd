@@ -55,8 +55,6 @@ func _ready():
 	cancel_btn.pressed.connect(_on_cancel_pressed)
 	
 	# Connect Answer signals to check word count live
-	answer_1.text = GameManager.get_study_answer("tectonic", "answer1")
-	answer_2.text = GameManager.get_study_answer("tectonic", "answer2")
 
 	# Setup all buttons for hover effects
 	var all_btns = [next_btn, back_btn, done_btn, cancel_btn]
@@ -65,8 +63,10 @@ func _ready():
 		btn.mouse_exited.connect(_on_button_unhover.bind(btn))
 		btn.pivot_offset = btn.size / 2
 	
-	# 1. Load saved answers
-	load_answers()
+	answer_1.text = GameManager.get_study_answer("tectonic", "answer1")
+	answer_2.text = GameManager.get_study_answer("tectonic", "answer2")
+	answer_1.text_changed.connect(_on_answer_changed)
+	answer_2.text_changed.connect(_on_answer_changed)
 	
 	# 2. Reset page to the beginning
 	current_spread = 0
@@ -86,7 +86,7 @@ func _on_back_pressed():
 		update_pages()
 
 # --- Validation Logic ---
-func _on_answer_text_changed():
+func _on_answer_changed():
 	GameManager.save_study_answer("tectonic", "answer1", answer_1.text)
 	GameManager.save_study_answer("tectonic", "answer2", answer_2.text)
 	_check_word_count()
@@ -142,9 +142,12 @@ func load_answers():
 
 # --- Exit Logic ---
 func _on_done_pressed():
-	save_answers()
-	GameManager.add_diamonds(1)
+	print("🔍 capitals in completed_topics: ", GameManager.completed_topics.has("capitals"))
+	print("🔍 diamonds before: ", GameManager.diamonds)
+	if not GameManager.completed_topics.has("tectonic"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("geography","tectonic")
+	print("🔍 diamonds after: ", GameManager.diamonds)
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():

@@ -29,7 +29,7 @@ func _ready():
 
 # Logic to return to the main study hub
 func _on_cancel_pressed():
-	GameManager.add_diamonds(1)
+
 	GameManager.load_scene("res://Assets/Scene/StudySession/Zypheria/study_session_main.tscn")
 
 # Handles switching to specific geography lessons

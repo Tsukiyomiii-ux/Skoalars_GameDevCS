@@ -121,7 +121,8 @@ func _on_back_pressed():
 		update_page()
 
 func _on_done_pressed():
-	GameManager.add_diamonds(1)
+	if not GameManager.completed_topics.has("bio_waste"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("science","bio_waste")
 	GameManager.load_scene("res://Assets/Scene/StudySession/BloomsGroove/science_study.tscn")
 

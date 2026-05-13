@@ -7,6 +7,22 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f30l2"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo2q6"]
+atlas = ExtResource("4_b51ic")
+region = Rect2(544, 552, 360, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b51ic"]
+atlas = ExtResource("4_b51ic")
+region = Rect2(136, 552, 360, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uc3f"]
+atlas = ExtResource("4_b51ic")
+region = Rect2(960, 552, 376, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stusw"]
+atlas = ExtResource("4_b51ic")
+region = Rect2(552, 72, 352, 400)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q128q"]
 a = Vector2(4, -10)
 b = Vector2(430, -12)
@@ -423,22 +439,6 @@ b = Vector2(100, 584)
 a = Vector2(144, 280)
 b = Vector2(124, 281)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bo2q6"]
-atlas = ExtResource("4_b51ic")
-region = Rect2(544, 552, 360, 400)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b51ic"]
-atlas = ExtResource("4_b51ic")
-region = Rect2(136, 552, 360, 400)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5uc3f"]
-atlas = ExtResource("4_b51ic")
-region = Rect2(960, 552, 376, 400)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_stusw"]
-atlas = ExtResource("4_b51ic")
-region = Rect2(552, 72, 352, 400)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fclam"]
 size = Vector2(22.5, 17.75)
 
@@ -658,10 +658,6 @@ scale = Vector2(0.65, 0.65)
 tile_map_data = PackedByteArray("AAAgAAUADgAKABAAAAAOAAYADgAKABAAAAD+/wUADgAKABAAAAAGAAMADgAKABAAAAAKAAEADgAKABAAAAAPAP3/DgAKABAAAAAXAP7/DgAKABAAAAAfAAAADgAKABAAAAAiAAIADgAKABAAAAAuAAAADgAKABAAAAAtAPz/DgAKABAAAAAOAB8ADgAKABAAAAA9ABYADgAOAAwAAABAABgADgAOAAwAAAA9ABkADgAOAAwAAABHABEADgAOAA4AAAA6ABMADgAOAA4AAAAWAB4ADgAKABAAAAAbAB8ADgAKABAAAAD//xcADgAKABAAAAD+/xgADgAKABAAAAAGABsADgAOAA0AAAACABsADgAOAA0AAAD8/x0ADgAOAA4AAAAGAAcADgAKABAAAAACAA4ADgAKABAAAAAuAA0ADgAKABAAAAA7AAsADgAKABAAAAAWABEADgAHABkAAAAfABEADgAOAA4AAAAcABQADgAKABAAAAAhABAADgANABkAAAAgABYADgAKABAAAAAeABMADgAKABAAAAAiABEADgALABkAAAAnABUADgAKABAAAAA=")
 tile_set = ExtResource("1_q128q")
 
-[node name="Skoalars" parent="GameTileMap" unique_id=1875685537 instance=ExtResource("3_vwn2g")]
-position = Vector2(283, 509)
-disable_mode = 2
-
 [node name="Entrance" type="Area2D" parent="GameTileMap" unique_id=1003032487 groups=["player"]]
 disable_mode = 2
 monitoring = false
@@ -670,6 +666,41 @@ script = ExtResource("1_f30l2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameTileMap/Entrance" unique_id=1878787523]
 position = Vector2(96, -24)
 shape = SubResource("RectangleShape2D_f30l2")
+
+[node name="welcome_sign" type="Sprite2D" parent="GameTileMap" unique_id=1608734618]
+position = Vector2(274.9375, 457)
+scale = Vector2(0.0725695, 0.08500002)
+texture = SubResource("AtlasTexture_bo2q6")
+
+[node name="note" type="Sprite2D" parent="GameTileMap" unique_id=1500207013]
+position = Vector2(336, 408.00006)
+scale = Vector2(0.069444455, 0.084999956)
+texture = SubResource("AtlasTexture_b51ic")
+
+[node name="sign1" type="Sprite2D" parent="GameTileMap" unique_id=877831603]
+position = Vector2(275, 339)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_5uc3f")
+
+[node name="sign2" type="Sprite2D" parent="GameTileMap" unique_id=996182917]
+position = Vector2(303, 233)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_stusw")
+
+[node name="sign3" type="Sprite2D" parent="GameTileMap" unique_id=208588886]
+position = Vector2(191, 247)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_5uc3f")
+
+[node name="sign4" type="Sprite2D" parent="GameTileMap" unique_id=1178501461]
+position = Vector2(123, 116)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_5uc3f")
+
+[node name="sign5" type="Sprite2D" parent="GameTileMap" unique_id=1277752206]
+position = Vector2(112, 44)
+scale = Vector2(0.07039543, 0.08250004)
+texture = SubResource("AtlasTexture_5uc3f")
 
 [node name="fences" type="TileMapLayer" parent="." unique_id=1821676330]
 tile_set = ExtResource("1_q128q")
@@ -1009,41 +1040,6 @@ shape = SubResource("SegmentShape2D_tlssm")
 [node name="CollisionShape2D103" type="CollisionShape2D" parent="collisionshapes" unique_id=1047963865]
 shape = SubResource("SegmentShape2D_buuar")
 
-[node name="welcome_sign" type="Sprite2D" parent="." unique_id=3294751]
-position = Vector2(274.9375, 685)
-scale = Vector2(0.0725695, 0.08500002)
-texture = SubResource("AtlasTexture_bo2q6")
-
-[node name="note" type="Sprite2D" parent="." unique_id=1241652621]
-position = Vector2(336, 636.00006)
-scale = Vector2(0.069444455, 0.084999956)
-texture = SubResource("AtlasTexture_b51ic")
-
-[node name="sign1" type="Sprite2D" parent="." unique_id=1279595837]
-position = Vector2(275, 567)
-scale = Vector2(0.07039543, 0.08250004)
-texture = SubResource("AtlasTexture_5uc3f")
-
-[node name="sign2" type="Sprite2D" parent="." unique_id=1485104085]
-position = Vector2(303, 461)
-scale = Vector2(0.07039543, 0.08250004)
-texture = SubResource("AtlasTexture_stusw")
-
-[node name="sign3" type="Sprite2D" parent="." unique_id=613738800]
-position = Vector2(191, 475)
-scale = Vector2(0.07039543, 0.08250004)
-texture = SubResource("AtlasTexture_5uc3f")
-
-[node name="sign4" type="Sprite2D" parent="." unique_id=1930377262]
-position = Vector2(123, 344)
-scale = Vector2(0.07039543, 0.08250004)
-texture = SubResource("AtlasTexture_5uc3f")
-
-[node name="sign5" type="Sprite2D" parent="." unique_id=68592722]
-position = Vector2(112, 272)
-scale = Vector2(0.07039543, 0.08250004)
-texture = SubResource("AtlasTexture_5uc3f")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=294768390]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=445884972]
@@ -1073,3 +1069,7 @@ shape = SubResource("RectangleShape2D_fclam")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D" unique_id=1419643169]
 position = Vector2(112, 268)
 shape = SubResource("RectangleShape2D_fclam")
+
+[node name="Skoalars" parent="." unique_id=1875685537 instance=ExtResource("3_vwn2g")]
+position = Vector2(283, 737)
+disable_mode = 2

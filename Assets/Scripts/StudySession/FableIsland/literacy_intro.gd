@@ -152,29 +152,41 @@ func _on_next_btn_pressed():
 	if current_page_index in page6_indices:
 		match current_page_index:
 			6:
+				if not GameManager.completed_topics.has("noun"):
+					GameManager.add_diamonds(1)
 				completed_topics["noun"] = true
 				GameManager.complete_study_topic("literacy","noun")
-				GameManager.add_diamonds(1)
+
 			12:
+				if not GameManager.completed_topics.has("adjective"):
+					GameManager.add_diamonds(1)
 				completed_topics["adjective"] = true
 				GameManager.complete_study_topic("literacy","adjective")
-				GameManager.add_diamonds(1)
+
 			18:
+				if not GameManager.completed_topics.has("pronouns"):
+					GameManager.add_diamonds(1)
 				completed_topics["pronouns"] = true
 				GameManager.complete_study_topic("literacy","pronouns")
-				GameManager.add_diamonds(1)
+				
 			24:
+				if not GameManager.completed_topics.has("verb"):
+					GameManager.add_diamonds(1)
 				completed_topics["verb"] = true
 				GameManager.complete_study_topic("literacy","verb")
-				GameManager.add_diamonds(1)
+				
 			30:
+				if not GameManager.completed_topics.has("adverb"):
+					GameManager.add_diamonds(1)
 				completed_topics["adverb"] = true
 				GameManager.complete_study_topic("literacy","adverb")
-				GameManager.add_diamonds(1)
+			
 			36:
+				if not GameManager.completed_topics.has("conjuction"):
+					GameManager.add_diamonds(1)
 				completed_topics["conjunction"] = true
-				GameManager.complete_study_topic("literacy","adjective")
-				GameManager.add_diamonds(1)
+				GameManager.complete_study_topic("literacy","conjuction")
+				
 		_go_to_topic_buttons()
 	elif current_page_index < page_list.size() - 1:
 		current_page_index += 1

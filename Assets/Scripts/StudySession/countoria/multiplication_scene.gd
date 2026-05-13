@@ -137,6 +137,7 @@ func _on_done_btn_pressed() -> void:
 	# Force final save
 	saved_multi_data["board1"] = board_1.text
 	saved_multi_data["board2"] = board_2.text
-	GameManager.add_diamonds(1)
+	if not GameManager.completed_topics.has("multiplication"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("math","multiplication")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/countoria/studysession_countoria.tscn")

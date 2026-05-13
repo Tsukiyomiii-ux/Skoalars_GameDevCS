@@ -202,7 +202,7 @@ func check_list_bounds():
 func grow_garden():
 	growth_stage += 1
 	$Sprinkler.frame = 1 
-	$UserInterface/Control/ProgressBar.frame = correct_answers
+	$UserInterface/Control/ProgressBar.frame = growth_stage
 
 	var target_plant = $Plant1 if current_mission == 1 else $Plant2
 

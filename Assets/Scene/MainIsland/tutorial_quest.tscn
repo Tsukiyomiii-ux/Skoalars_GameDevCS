@@ -195,14 +195,6 @@ theme_override_font_sizes/font_size = 80
 text = "15"
 horizontal_alignment = 1
 
-[node name="QuestIncompleteUI" parent="GameTileMap/CanvasLayer" unique_id=1715885540]
-unique_name_in_owner = true
-visible = false
-offset_left = -101.0
-offset_top = -418.0
-offset_right = -101.0
-offset_bottom = -418.0
-
 [node name="SndCorrect" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=34122860]
 unique_name_in_owner = true
 position = Vector2(-10, 16)
@@ -228,12 +220,6 @@ max_distance = 999999.0
 attenuation = 0.01
 
 [node name="SndLevelStart" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=114384009]
-unique_name_in_owner = true
-position = Vector2(-10, 16)
-max_distance = 999999.0
-attenuation = 0.01
-
-[node name="SndTicking" type="AudioStreamPlayer2D" parent="GameTileMap/CanvasLayer" unique_id=1150036198]
 unique_name_in_owner = true
 position = Vector2(-10, 16)
 max_distance = 999999.0

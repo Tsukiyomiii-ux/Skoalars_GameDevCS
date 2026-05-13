@@ -408,14 +408,12 @@ texture = SubResource("AtlasTexture_h05nd")
 [node name="lvl2_ui_layer" type="CanvasLayer" parent="." unique_id=55661178]
 
 [node name="lvl2_bluroverlay" type="ColorRect" parent="lvl2_ui_layer" unique_id=420670753]
-visible = false
 material = SubResource("ShaderMaterial_ob13m")
 offset_right = 1288.0
 offset_bottom = 736.0
 mouse_filter = 2
 
 [node name="losing_board" type="Control" parent="lvl2_ui_layer" unique_id=2014351546]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -441,9 +439,9 @@ frame_progress = 0.0013114413
 [node name="tryagain_btn" type="TextureButton" parent="lvl2_ui_layer/losing_board" unique_id=195722952]
 layout_mode = 0
 offset_left = 504.0
-offset_top = 432.0
+offset_top = 455.0
 offset_right = 792.0
-offset_bottom = 552.0
+offset_bottom = 534.0
 texture_normal = SubResource("AtlasTexture_mlv7t")
 texture_pressed = SubResource("AtlasTexture_1n71w")
 ignore_texture_size = true
@@ -452,9 +450,9 @@ stretch_mode = 5
 [node name="quit_btn" type="TextureButton" parent="lvl2_ui_layer/losing_board" unique_id=218860529]
 layout_mode = 0
 offset_left = 520.0
-offset_top = 488.0
+offset_top = 541.0
 offset_right = 784.0
-offset_bottom = 624.0
+offset_bottom = 620.0
 texture_normal = SubResource("AtlasTexture_f5dva")
 texture_pressed = SubResource("AtlasTexture_y3862")
 ignore_texture_size = true
@@ -649,6 +647,7 @@ texture = SubResource("AtlasTexture_td7vt")
 layer = 200
 
 [node name="completion_board" type="Control" parent="CanvasLayer3" unique_id=540771154]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 392.0

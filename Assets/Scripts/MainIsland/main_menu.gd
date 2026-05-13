@@ -1,5 +1,13 @@
 extends Control
 
+
+func _ready() -> void:
+	#GameManager.reset_game()
+	AudioManager.play_music(preload("res://Assets/Audio/Soft_Eng_LoFi.wav"))
+	if not GameManager.cutscene_played:
+		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.disabled = true       # grays it out and blocks clicks
+		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.modulate.a = 0.4      # optional: make it look faded
+
 func _on_play_btn_pressed() -> void:
 	if GameManager.cutscene_played:
 		# Skip cutscene — go straight to main island
@@ -19,12 +27,7 @@ func _on_quit_btn_pressed() -> void:
 	get_tree().quit()
 	
 
-func _ready() -> void:
-	AudioManager.play_music(preload("res://Assets/Audio/Soft_Eng_LoFi.wav"))
-	if not GameManager.cutscene_played:
-		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.disabled = true       # grays it out and blocks clicks
-		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.modulate.a = 0.4      # optional: make it look faded
-	GameManager.reset_game()
+
 
 
 

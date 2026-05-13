@@ -6,6 +6,7 @@
 [ext_resource type="Shader" uid="uid://bfetrjq76fsf6" path="res://Assets/Shaders/skoalars.gdshader" id="4_5fshh"]
 [ext_resource type="Texture2D" uid="uid://dvulr8ptumye" path="res://Assets/Sprite/Buttons/main menu buttons.png" id="5_p705g"]
 [ext_resource type="Texture2D" uid="uid://dv6l4pyq5ph7f" path="res://Assets/Sprite/Buttons/NEW BUTTONS.png" id="6_w7auq"]
+[ext_resource type="Texture2D" uid="uid://c2bwy13rwip1k" path="res://Assets/Sprite/Buttons/muteBtn.png" id="6_wtl41"]
 [ext_resource type="Texture2D" uid="uid://lfdkkpccecnb" path="res://Assets/Sprite/Buttons/ChatGPT Image Apr 28, 2026, 07_01_13 PM.png" id="7_bkhn2"]
 [ext_resource type="Texture2D" uid="uid://dxm3isa0kdsuf" path="res://Assets/Sprite/Buttons/REWARDS, SKILLS, TIME BUTTONS.png" id="9_jcv1r"]
 [ext_resource type="FontFile" uid="uid://yi78scq3kpk3" path="res://Assets/Sprite/font/Montserrat-Black.ttf" id="9_wtl41"]
@@ -297,6 +298,22 @@ texture_margin_right = 5.0
 texture_margin_bottom = 8.0
 region_rect = Rect2(232, 240, 128, 112)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2nhm"]
+texture = ExtResource("6_wtl41")
+region_rect = Rect2(464, 16, 272, 224)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikinh"]
+texture = ExtResource("6_wtl41")
+region_rect = Rect2(464, 16, 272, 216)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r2c0h"]
+texture = ExtResource("6_wtl41")
+texture_margin_left = 5.0
+texture_margin_top = 8.0
+texture_margin_right = 5.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(464, 8, 264, 232)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htacr"]
 bg_color = Color(0.05490196, 0.050980393, 0.050980393, 0.8039216)
 corner_radius_top_left = 95
@@ -571,6 +588,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_i71qq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_r1kqm")
 
 [node name="mute_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect" unique_id=1622286815]
+unique_name_in_owner = true
 z_index = 40
 layout_mode = 0
 offset_left = 132.8695
@@ -581,6 +599,20 @@ scale = Vector2(4.425, 4.425)
 theme_override_styles/normal = SubResource("StyleBoxTexture_jjp2r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8g060")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lltph")
+
+[node name="unmute_btn" type="Button" parent="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect" unique_id=432234699]
+unique_name_in_owner = true
+visible = false
+z_index = 40
+layout_mode = 0
+offset_left = 132.8695
+offset_top = 1510.639
+offset_right = 332.8698
+offset_bottom = 1660.639
+scale = Vector2(4.425, 4.425)
+theme_override_styles/normal = SubResource("StyleBoxTexture_w2nhm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ikinh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r2c0h")
 
 [node name="open_cont" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/Popup" unique_id=350482393]
 visible = false
@@ -912,6 +944,7 @@ theme_override_font_sizes/font_size = 400
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/Settings_btn" to="Control" method="_on_settings_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/volume_btn" to="Control" method="_on_volume_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/mute_btn" to="Control" method="_on_mute_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/close_cont/hContainer/NinePatchRect/unmute_btn" to="Control" method="_on_unmute_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect/play_btn" to="Control" method="_on_play_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect2/study_btn" to="Control" method="_on_study_btn_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Popup/open_cont/HBoxContainer/NinePatchRect/PanelContainer/MarginContainer/VBoxContainer/NinePatchRect3/quit_btn" to="Control" method="_on_quit_btn_pressed"]

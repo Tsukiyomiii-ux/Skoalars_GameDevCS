@@ -126,6 +126,8 @@ func _ready():
 	if try_again_button: try_again_button.pressed.connect(_on_try_again_pressed)
 	
 	rescue_video.finished.connect(_on_video_finished)
+	$CanvasLayer/EndingVideo.finished.connect(_on_video_finished)
+	$CanvasLayer/EndingVideo.hide()
 	game_timer.timeout.connect(_on_timer_timeout)
 	game_timer.start(90.0)
 	
@@ -345,9 +347,17 @@ func _on_rescue_pressed():
 	$CanvasLayer2.hide()
 
 func _on_video_finished():
-	GameManager.next_scene_path = "res://Assets/Scene/MainIsland/mapSelector.tscn"
-	GameManager.unlock_island("island_4")
-	get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/loading_screen.tscn")
+	# If rescue video just finished, play ending video
+	if rescue_video.visible:
+		rescue_video.hide()
+		$CanvasLayer/EndingVideo.show()
+		$CanvasLayer/EndingVideo.play()
+	# If ending video just finished, go to main island
+	else:
+		GameManager.next_scene_path = "res://Assets/Scene/MainIsland/main_menu.tscn"
+		GameManager.unlock_island("island_4")
+		get_tree().change_scene_to_file("res://Assets/Scene/Zypheria/loading_screen.tscn")
+		GameManager.reset_game()
 
 func _on_timer_timeout(): end_game(false)
 func _on_try_again_pressed(): get_tree().reload_current_scene()
@@ -355,6 +365,7 @@ func _on_quit_pressed(): get_tree().change_scene_to_file("res://Assets/Scene/Zyp
 
 func _on_collect_pressed():
 	GameManager.collect_island_reward("island_4.5")
+	GameManager.collect_island_reward("island_4")
 	GameManager.complete_minigame("island_4")
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.disabled = false
 	$PopupLayer/WinPopup/BottomButtons1/RescueButton.modulate = Color(1, 1, 1)

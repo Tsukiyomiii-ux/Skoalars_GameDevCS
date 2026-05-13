@@ -7,6 +7,18 @@ extends Control
 @export var close_cont = VBoxContainer
 @onready var anim = $MarginContainer/VBoxContainer/Popup/AnimationPlayer
 
+var minimap_fable: Node
+var minimap_count: Node
+var minimap_blooms: Node
+var minimap_zyph: Node	
+
+var lar_min_fable: Node
+var lar_min_count: Node
+var lar_min_blooms: Node
+var lar_min_zyph: Node
+
+var _settings_open: bool = false
+
 var _cooldown_labels = {}
 
 func _ready() -> void:
@@ -14,6 +26,15 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_set_mouse_filter_recursive(self)
 	GameManager.skill_button_state_changed.connect(_on_skill_button_state_changed)
+	minimap_fable  = get_tree().get_first_node_in_group("minimap_fable")
+	minimap_count  = get_tree().get_first_node_in_group("minimap_count")
+	minimap_blooms = get_tree().get_first_node_in_group("minimap_blooms")
+	minimap_zyph   = get_tree().get_first_node_in_group("minimap_zyph")
+	lar_min_fable  = get_tree().get_first_node_in_group("lar_min_fable")
+	lar_min_count  = get_tree().get_first_node_in_group("lar_min_count")
+	lar_min_blooms = get_tree().get_first_node_in_group("lar_min_blooms")
+	lar_min_zyph   = get_tree().get_first_node_in_group("lar_min_zyph")
+
 	_cooldown_labels = {
 		"hint":        get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect/HCooldownLabel"),
 		"freeze_time": get_node_or_null("MarginContainer/bottom_cont/MarginContainer/VBoxContainer/NinePatchRect2/FCooldownLabel"),
@@ -26,6 +47,7 @@ func _ready() -> void:
 			continue
 		_cooldown_labels[skill_name].visible = false
 		_cooldown_labels[skill_name].text = ""
+	call_deferred("_update_minimap_visibility")
 	set_process(true)
 
 func _process(_delta: float) -> void:
@@ -40,6 +62,103 @@ func _process(_delta: float) -> void:
 		else:
 			label.visible = false
 			label.text = ""
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_ESCAPE:
+			if _settings_open:
+				_on_play_btn_pressed()
+			else:
+				_on_settings_btn_pressed()
+		elif event.keycode == KEY_M:
+			if not _settings_open:
+				_toggle_large_minimap()
+
+func _toggle_large_minimap() -> void:
+	var island = GameManager.get_current_island()
+	var current_scene = get_tree().current_scene.scene_file_path
+	var island_overworlds = [
+		"res://Assets/Scene/FableIsland/fableisland.tscn",
+		"res://Assets/Scene/Countoria/countoria.tscn",
+		"res://Assets/Scene/BloomsGrove/science.scn",
+		"res://Assets/Scene/Zypheria/zypheria.tscn",
+	]
+
+	# Only works on overworld scenes
+	if current_scene not in island_overworlds:
+		return
+
+	# Determine which large/small pair to toggle
+	var small_map: Node
+	var large_map: Node
+	match island:
+		"island_1", "island_1.5":
+			small_map = minimap_fable
+			large_map = lar_min_fable
+		"island_2", "island_2.5":
+			small_map = minimap_count
+			large_map = lar_min_count
+		"island_3", "island_3.5":
+			small_map = minimap_blooms
+			large_map = lar_min_blooms
+		"island_4", "island_4.5":
+			small_map = minimap_zyph
+			large_map = lar_min_zyph
+		_:
+			return
+
+	if not small_map or not large_map:
+		return
+
+	# Toggle: if large is showing, hide it and show small; vice versa
+	var showing_large = large_map.visible
+	large_map.visible = not showing_large
+	small_map.visible = showing_large
+
+func _update_minimap_visibility() -> void:
+	var island = GameManager.get_current_island()
+	var current_scene = get_tree().current_scene.scene_file_path
+	print("🗺️ current_scene: ", get_tree().current_scene.scene_file_path)
+	print("🏝️ island: ", GameManager.get_current_island())
+	print("🗺️ minimap_fable: ", minimap_fable)
+	print("🗺️ minimap_zyph: ", minimap_zyph)
+
+	# Only show minimap on island overworld scenes
+	var island_overworlds = [
+		"res://Assets/Scene/FableIsland/fableisland.tscn",
+		"res://Assets/Scene/Countoria/countoria.tscn",
+		"res://Assets/Scene/BloomsGrove/science.scn",
+		"res://Assets/Scene/Zypheria/zypheria.tscn",
+	]
+
+	# Hide all first
+	if minimap_fable and is_instance_valid(minimap_fable):
+		minimap_fable.visible = false
+	if minimap_count and is_instance_valid(minimap_count):
+		minimap_count.visible = false
+	if minimap_blooms and is_instance_valid(minimap_blooms):
+		minimap_blooms.visible = false
+	if minimap_zyph and is_instance_valid(minimap_zyph):
+		minimap_zyph.visible = false
+
+	# If not on an overworld, stop here
+	if current_scene not in island_overworlds:
+		return
+
+	# Show only the matching island's map
+	match island:
+		"island_1", "island_1.5":
+			if minimap_fable and is_instance_valid(minimap_fable):
+				minimap_fable.visible = true
+		"island_2", "island_2.5":
+			if minimap_count and is_instance_valid(minimap_count):
+				minimap_count.visible = true
+		"island_3", "island_3.5":
+			if minimap_blooms and is_instance_valid(minimap_blooms):
+				minimap_blooms.visible = true
+		"island_4", "island_4.5":
+			if minimap_zyph and is_instance_valid(minimap_zyph):
+				minimap_zyph.visible = true
 
 func _on_skill_button_state_changed(skill_name, is_disabled):
 	var on_cooldown = GameManager.is_skill_on_cooldown(skill_name)
@@ -123,6 +242,7 @@ func _on_skills_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/SkillEquip.tscn")
 
 func _on_settings_btn_pressed() -> void:
+	_settings_open = true
 	GameManager.settings_opened.emit()
 	safe_toggle_visibility(open_cont)
 	safe_toggle_visibility(close_cont)
@@ -130,24 +250,41 @@ func _on_settings_btn_pressed() -> void:
 	pause()
 	if anim and is_instance_valid(anim):
 		anim.play_backwards("blur")
+	# Hide minimaps when settings open
+	_hide_all_minimaps()
 
 func _on_quit_btn_pressed() -> void:
 	GameManager.cleanup_persistent_nodes()
 	get_tree().paused = false
+	
+	# Store current scene BEFORE the await
+	var current_scene = get_tree().current_scene.scene_file_path
+	
 	if anim and is_instance_valid(anim):
 		anim.play("blur")
 	await anim.animation_finished
 
-	var current_scene = get_tree().current_scene.scene_file_path
-
+	# On main island → go to main menu
 	if current_scene == "res://Assets/Scene/MainIsland/main_island.tscn":
 		get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_menu.tscn")
 		return
 
+	# On an island overworld → go to main island
+	var island_overworlds = [
+		"res://Assets/Scene/FableIsland/fableisland.tscn",
+		"res://Assets/Scene/Countoria/countoria.tscn",
+		"res://Assets/Scene/BloomsGrove/science.scn",
+		"res://Assets/Scene/Zypheria/zypheria.tscn",
+	]
+	if current_scene in island_overworlds:
+		get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")
+		return
+
+	# In a minigame → go back to that island's overworld
 	var island = GameManager.get_current_island()
 	match island:
 		"island_1", "island_1.5":
-			get_tree().change_scene_to_file("res://Assets/Scene/FableIsland/fable_island.tscn")
+			get_tree().change_scene_to_file("res://Assets/Scene/FableIsland/fableisland.tscn")
 		"island_2", "island_2.5":
 			get_tree().change_scene_to_file("res://Assets/Scene/Countoria/countoria.tscn")
 		"island_3", "island_3.5":
@@ -158,6 +295,7 @@ func _on_quit_btn_pressed() -> void:
 			get_tree().change_scene_to_file("res://Assets/Scene/MainIsland/main_island.tscn")
 
 func _on_play_btn_pressed() -> void:
+	_settings_open = false
 	GameManager.settings_closed.emit()
 	play()
 	if anim and is_instance_valid(anim):
@@ -165,6 +303,18 @@ func _on_play_btn_pressed() -> void:
 	safe_toggle_visibility(open_cont)
 	safe_toggle_visibility(close_cont)
 	safe_toggle_visibility(bottom_cont)
+	# Restore minimap when settings close
+	_update_minimap_visibility()
+
+func _hide_all_minimaps() -> void:
+	if minimap_fable and is_instance_valid(minimap_fable): minimap_fable.visible = false
+	if minimap_count and is_instance_valid(minimap_count): minimap_count.visible = false
+	if minimap_blooms and is_instance_valid(minimap_blooms): minimap_blooms.visible = false
+	if minimap_zyph and is_instance_valid(minimap_zyph): minimap_zyph.visible = false
+	if lar_min_fable and is_instance_valid(lar_min_fable): lar_min_fable.visible = false
+	if lar_min_count and is_instance_valid(lar_min_count): lar_min_count.visible = false
+	if lar_min_blooms and is_instance_valid(lar_min_blooms): lar_min_blooms.visible = false
+	if lar_min_zyph and is_instance_valid(lar_min_zyph): lar_min_zyph.visible = false
 
 func _on_volume_btn_pressed() -> void:
 	GameManager.settings_opened.emit()

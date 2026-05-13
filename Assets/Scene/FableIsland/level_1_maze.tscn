@@ -608,8 +608,17 @@ offset_left = -38.000008
 offset_top = 159.00002
 offset_right = 986.0
 offset_bottom = 1695.0
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.445, 0.445)
 texture = ExtResource("9_go3qh")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=1382208654]
+offset_left = 39.0
+offset_top = 316.0
+offset_right = 839.0
+offset_bottom = 1116.0
+scale = Vector2(0.376, 0.376)
+texture = ExtResource("9_go3qh")
+region_rect = Rect2(184, 376, 640, 616)
 
 [node name="RewardScreen" parent="." unique_id=931813947 instance=ExtResource("9_ceclx")]
 visible = false

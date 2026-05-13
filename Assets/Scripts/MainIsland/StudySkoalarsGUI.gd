@@ -79,6 +79,13 @@ func _on_home_btn_pressed() -> void:
 
 func _on_mute_btn_pressed():
 	AudioManager.toggle_mute()
+	%mute_btn.visible = false
+	%unmute_btn.visible = true
+
+func _on_unmute_btn_pressed():
+	AudioManager.toggle_mute()
+	%mute_btn.visible = true
+	%unmute_btn.visible = false
 
 func _on_h_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(0, value)

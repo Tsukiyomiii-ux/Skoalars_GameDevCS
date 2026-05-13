@@ -19,10 +19,11 @@ func _ready():
 
 func update_all_locks():
 	# --- ISLAND 1 (Fable Isle) ---
+	# Locked if: NOT unlocked OR already fully done
 	var fable_unlocked = GameManager.is_island_unlocked("island_1")
 	var fable_done = GameManager.is_island_done("island_1")
-	count_lock.visible = not fable_unlocked or fable_done
-	countoria_btn.disabled = not fable_unlocked or fable_done
+	fable_lock.visible = not fable_unlocked or fable_done   # ✅ FIXED: was using count_lock
+	fable_isle_btn.disabled = not fable_unlocked or fable_done  # ✅ FIXED: was using countoria_btn
 
 	# --- ISLAND 2 (Countoria) ---
 	var count_unlocked = GameManager.is_island_unlocked("island_2")

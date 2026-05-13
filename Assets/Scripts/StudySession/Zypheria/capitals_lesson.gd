@@ -1,7 +1,6 @@
 extends Node2D
 
-# Save File Path
-const SAVE_PATH = "user://geography_study_progress.cfg"
+
 
 # Navigation and Page References
 @onready var next_btn = $CanvasLayer/HBoxContainer/GridContainer/NextBtn
@@ -51,6 +50,9 @@ func _ready():
 	# Connect Input Signals
 	answer_1.text = GameManager.get_study_answer("capitals", "answer1")
 	answer_2.text = GameManager.get_study_answer("capitals", "answer2")
+	answer_1.text_changed.connect(_on_answer_changed)
+	answer_2.text_changed.connect(_on_answer_changed)
+
 	
 	# Setup Button Hovers
 	var all_btns = [next_btn, back_btn, done_btn, cancel_btn]
@@ -60,7 +62,7 @@ func _ready():
 		btn.pivot_offset = btn.size / 2
 	
 	# 1. Load the answers from the previous session
-	load_answers()
+	
 	
 	# 2. Ensure we start on the first page
 	current_spread = 0
@@ -110,36 +112,28 @@ func get_word_count(input_text: String) -> int:
 	var words = input_text.split(" ", false)
 	return words.size()
 
-func _on_answer_text_changed():
+func _on_answer_changed():
 	GameManager.save_study_answer("capitals", "answer1", answer_1.text)
 	GameManager.save_study_answer("capitals", "answer2", answer_2.text)
+	validate_done_button() 
 
 func _on_done_pressed():
-	save_answers()
-	GameManager.add_diamonds(1)
+
+	if not GameManager.completed_topics.has("capitals"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("geography","capitals")
+
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():
-	save_answers()
+
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 # --- SAVE/LOAD SYSTEM ---
 
-func save_answers():
-	var config = ConfigFile.new()
-	# Save only the text data
-	config.set_value("StudyData", "answer_1", answer_1.text)
-	config.set_value("StudyData", "answer_2", answer_2.text)
-	config.save(SAVE_PATH)
 
-func load_answers():
-	var config = ConfigFile.new()
-	var err = config.load(SAVE_PATH)
-	
-	if err == OK:
-		answer_1.text = config.get_value("StudyData", "answer_1", "")
-		answer_2.text = config.get_value("StudyData", "answer_2", "")
+
+
 
 # --- Visual Effects ---
 func _on_button_hover(btn):

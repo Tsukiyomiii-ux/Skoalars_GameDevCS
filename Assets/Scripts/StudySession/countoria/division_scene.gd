@@ -138,6 +138,7 @@ func _on_done_btn_pressed() -> void:
 	# Final Save before returning to the main menu
 	saved_div_data["board1"] = board_1.text
 	saved_div_data["board2"] = board_2.text
-	GameManager.add_diamonds(1)
+	if not GameManager.completed_topics.has("division"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("math","division")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/countoria/studysession_countoria.tscn")

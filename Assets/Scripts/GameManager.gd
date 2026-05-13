@@ -16,7 +16,7 @@ var study_progress = {
 	"literacy": {"completed": 0, "total": 6},
 	"math": {"completed": 0, "total": 4},
 	"science": {"completed": 0, "total": 6},
-	"geography": {"completed": 0, "total": 5},
+	"geography": {"completed": 0, "total": 4},
 }
 
 # 📝 STUDY SESSION ANSWERS (Centralized)
@@ -411,40 +411,46 @@ func save_game():
 		"tutorial_completed": tutorial_completed,
 		"island_rewards_collected": island_rewards_collected,
 		"completed_topics": completed_topics,
-		"shop_last_bought": shop_last_bought,  # ← persisted shop cooldown
+		"shop_last_bought": shop_last_bought,
 	}
 	var file = FileAccess.open("user://game_save.json", FileAccess.WRITE)
+	if file == null:
+		print("❌ SAVE FAILED! Error: ", FileAccess.get_open_error())
+		return
 	file.store_string(JSON.stringify(save_data))
 	file.close()
-	print("💾 Saved!")
+	print("💾 Saved to: ", ProjectSettings.globalize_path("user://game_save.json"))
 
 func load_game():
-	if FileAccess.file_exists("user://game_save.json"):
-		var file = FileAccess.open("user://game_save.json", FileAccess.READ)
-		var json_text = file.get_as_text()
-		file.close()
-		var json = JSON.new()
-		var error = json.parse(json_text)
-		if error == OK:
-			var data = json.data
-			diamonds = data.get("diamonds", 5)
-			skills = data.get("skills", skills)
-			skill_uses = data.get("skill_uses", skill_uses)
-			skills_equipped = data.get("skills_equipped", skills_equipped)
-			islands_unlocked = data.get("islands_unlocked", islands_unlocked)
-			island_progress = data.get("island_progress", island_progress)
-			tutorial_completed = data.get("tutorial_completed", false)
-			study_progress = data.get("study_progress", study_progress)
-			island_rewards_collected = data.get("island_rewards_collected", island_rewards_collected)
-			completed_topics = data.get("completed_topics", [])
-			shop_last_bought = data.get("shop_last_bought", shop_last_bought)  # ← load shop cooldown
-			var loaded_answers = data.get("study_answers", {})
-			for key in loaded_answers:
-				if study_answers.has(key):
-					study_answers[key] = loaded_answers[key]
-			cutscene_played = data.get("cutscene_played", false)
-			diamonds_changed.emit(diamonds)
-			print("💾 Loaded: ", diamonds, " diamonds, uses: ", skill_uses)
+	if not FileAccess.file_exists("user://game_save.json"):
+		print("❌ NO SAVE FILE FOUND — starting fresh")
+		return
+	print("✅ Save file found, loading...")
+	var file = FileAccess.open("user://game_save.json", FileAccess.READ)
+	var json_text = file.get_as_text()
+	file.close()
+	var json = JSON.new()
+	var error = json.parse(json_text)
+	if error == OK:
+		var data = json.data
+		diamonds = data.get("diamonds", 5)
+		skills = data.get("skills", skills)
+		skill_uses = data.get("skill_uses", skill_uses)
+		skills_equipped = data.get("skills_equipped", skills_equipped)
+		islands_unlocked = data.get("islands_unlocked", islands_unlocked)
+		island_progress = data.get("island_progress", island_progress)
+		tutorial_completed = data.get("tutorial_completed", false)
+		study_progress = data.get("study_progress", study_progress)
+		island_rewards_collected = data.get("island_rewards_collected", island_rewards_collected)
+		completed_topics = data.get("completed_topics", [])
+		shop_last_bought = data.get("shop_last_bought", shop_last_bought)
+		var loaded_answers = data.get("study_answers", {})
+		for key in loaded_answers:
+			if study_answers.has(key):
+				study_answers[key] = loaded_answers[key]
+		cutscene_played = data.get("cutscene_played", false)
+		diamonds_changed.emit(diamonds)
+		print("💾 Loaded: ", diamonds, " diamonds, uses: ", skill_uses)
 
 func reset_game():
 	completed_topics = []

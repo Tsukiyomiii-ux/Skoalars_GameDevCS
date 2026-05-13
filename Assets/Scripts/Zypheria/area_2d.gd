@@ -6,6 +6,7 @@ var level_2_path = "res://Assets/Scene/Zypheria/zypheria_lvl_2.tscn"
 func _on_ready():
 	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 
+
 func _on_body_entered(body):
 	print("DEBBUG: Something entered the door!")
 	print("DEBBUG: It was named: ", body.name)

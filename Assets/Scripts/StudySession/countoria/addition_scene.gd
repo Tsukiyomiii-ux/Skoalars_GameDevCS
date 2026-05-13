@@ -131,6 +131,7 @@ func _on_back_btn_pressed():
 		update_page_display()
 
 func _on_done_btn_pressed():
-	GameManager.add_diamonds(1)
+	if not GameManager.completed_topics.has("addition"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("math","addition")
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/countoria/studysession_countoria.tscn")

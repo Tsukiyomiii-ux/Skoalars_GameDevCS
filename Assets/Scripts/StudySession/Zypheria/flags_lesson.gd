@@ -39,18 +39,19 @@ func _ready():
 	back_btn.pressed.connect(_on_back_pressed)
 	done_btn.pressed.connect(_on_done_pressed)
 	cancel_btn.pressed.connect(_on_cancel_pressed)
-	
-	answer_1.text = GameManager.get_study_answer("flags", "answer1")
-	answer_2.text = GameManager.get_study_answer("flags", "answer2")
+
 	
 	var all_btns = [next_btn, back_btn, done_btn, cancel_btn]
 	for btn in all_btns:
 		btn.mouse_entered.connect(_on_button_hover.bind(btn))
 		btn.mouse_exited.connect(_on_button_unhover.bind(btn))
 		btn.pivot_offset = btn.size / 2
-	
-	# 1. LOAD THE ANSWERS ONLY
-	load_answers()
+		
+	answer_1.text = GameManager.get_study_answer("flags", "answer1")
+	answer_2.text = GameManager.get_study_answer("flags", "answer2")
+	answer_1.text_changed.connect(_on_answer_changed)
+	answer_2.text_changed.connect(_on_answer_changed)
+
 	
 	# 2. RESET PAGE TO 0
 	current_spread = 0
@@ -69,9 +70,12 @@ func _on_back_pressed():
 		update_flag_pages()
 
 func _on_done_pressed():
-	save_answers()
-	GameManager.add_diamonds(1)
+	print("🔍 capitals in completed_topics: ", GameManager.completed_topics.has("capitals"))
+	print("🔍 diamonds before: ", GameManager.diamonds)
+	if not GameManager.completed_topics.has("flags"):
+		GameManager.add_diamonds(1)
 	GameManager.complete_study_topic("geography","flags")
+	print("🔍 diamonds after: ", GameManager.diamonds)
 	get_tree().change_scene_to_file("res://Assets/Scene/StudySession/Zypheria/geography_study_lesson.tscn")
 
 func _on_cancel_pressed():
@@ -95,9 +99,10 @@ func update_flag_pages():
 	
 	validate_done_button()
 
-func _on_answer_text_changed():
+func _on_answer_changed():
 		GameManager.save_study_answer("flags", "answer1", answer_1.text)
 		GameManager.save_study_answer("flags", "answer2", answer_2.text)
+		validate_done_button() 
 
 func validate_done_button():
 	var is_last_page = (current_spread == flag_spreads.size() - 1)

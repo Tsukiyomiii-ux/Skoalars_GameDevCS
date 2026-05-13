@@ -72,8 +72,8 @@ const TILE_IMAGE = preload("res://Assets/Sprite/FABLE ISLE/Level2/LetterTile.png
 
 var next_scene = "res://Assets/Scene/main_island.tscn"
 var all_story_words = [
-	"BOY", "APPLE", "MAMA MO", "DOG", "CAT",
-	"BLUE", "PINK", "SUN", "PIG", "PLAY"
+	"BOY", "APPLE", "RED", "DOG", "CAT",
+	"BLUE", "PINK", "SUN", "MOON", "PLAY"
 ]
 
 var current_session_words = []
@@ -216,6 +216,12 @@ func start_new_word():
 	if correct_answers >= 2:
 		show_reward()
 		return
+	
+	# ← Add this check
+	if current_word_index >= current_session_words.size():
+		current_word_index = 0
+		setup_word_pool()
+	
 	target_word = current_session_words[current_word_index]
 	time_left = 15.0
 	setup_display_array()
@@ -377,6 +383,13 @@ func _on_finished_btn_pressed() -> void:
 
 func _on_mute_btn_pressed():
 	AudioManager.toggle_mute()
+	%mute_btn.visible = false
+	%unmute_btn.visible = true
+
+func _on_unmute_btn_pressed():
+	AudioManager.toggle_mute()
+	%mute_btn.visible = true
+	%unmute_btn.visible = false
 
 func _on_h_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(0, value)
