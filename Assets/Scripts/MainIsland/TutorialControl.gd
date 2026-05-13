@@ -58,11 +58,31 @@ func _ready() -> void:
 	if not GameManager.cutscene_played:
 		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.disabled = true
 		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.modulate.a = 0.4
-
+ 
+	GameManager.tutorial_completed = false
+	tutorial_done = false
 	safe_set_visible(finished_btn, GameManager.tutorial_completed)
 	safe_set_visible(skip_btn, false)
-
 	print("🎮 Tutorial mode started - Done button visible")
+	
+	var arrow_tutorial = get_node("YourArrowTutorialNodePath")  # adjust path
+	if arrow_tutorial:
+		arrow_tutorial.tutorial_finished.connect(on_tutorial_finished)
+
+func _process(delta):
+	if not tutorial_done and GameManager.tutorial_completed:
+		tutorial_done = true
+		safe_set_visible(finished_btn, true)
+		print("✅ Done button shown via GameManager")
+
+	if is_timer_active and not is_game_finished and tutorial_done:
+		if time_left > 0:
+			time_left -= delta
+			if time_label and is_instance_valid(time_label):
+				time_label.text = str(ceil(time_left))
+		else:
+			is_timer_active = false
+			on_time_out()
 
 func safe_set_visible(node: Node, visible: bool):
 	if node and is_instance_valid(node):
@@ -85,6 +105,7 @@ func on_tutorial_finished():
 	GameManager.save_game()
 	safe_set_visible(finished_btn, true)
 
+# DELETE this whole function from your GUI script
 func _unhandled_input(event):
 	if tutorial_done:
 		return
@@ -128,21 +149,6 @@ func show_reward():
 	safe_set_visible(skip_btn, false)
 	safe_set_visible(finished_btn, true)
 	$AnimationPlayer.play_backwards("blur")
-
-func _process(delta):
-	if not tutorial_done and GameManager.tutorial_completed:
-		tutorial_done = true
-		safe_set_visible(finished_btn, true)
-		print("✅ Done button shown via GameManager")
-
-	if is_timer_active and not is_game_finished and tutorial_done:
-		if time_left > 0:
-			time_left -= delta
-			if time_label and is_instance_valid(time_label):
-				time_label.text = str(ceil(time_left))
-		else:
-			is_timer_active = false
-			on_time_out()
 
 func setup_word_pool():
 	randomize()

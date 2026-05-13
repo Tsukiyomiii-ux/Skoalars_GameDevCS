@@ -4,6 +4,7 @@ extends Control
 
 func _ready():
 	# 1. Make sure the game is definitely unpaused so the video and timer run
+	AudioManager.stop_music()
 	get_tree().paused = false
 	
 	# 2. Connect the timer to the function that switches scenes

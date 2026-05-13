@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready() -> void:
-	#GameManager.reset_game()
+	GameManager.reset_game()
 	AudioManager.play_music(preload("res://Assets/Audio/Soft_Eng_LoFi.wav"))
 	if not GameManager.cutscene_played:
 		$Popup/Exit/VBoxContainer2/VBoxContainer/HBoxContainer2/NinePatchRect4/study_btn.disabled = true       # grays it out and blocks clicks

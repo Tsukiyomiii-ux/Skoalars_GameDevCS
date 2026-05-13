@@ -427,6 +427,35 @@ texture_margin_right = 15.0
 texture_margin_bottom = 15.0
 region_rect = Rect2(224, 160, 544, 176)
 
+[sub_resource type="FontFile" id="FontFile_wo1e8"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/200/0/ascent = 0.0
+cache/0/200/0/descent = 0.0
+cache/0/200/0/underline_position = 0.0
+cache/0/200/0/underline_thickness = 0.0
+cache/0/200/0/scale = 1.0
+cache/0/600/0/ascent = 0.0
+cache/0/600/0/descent = 0.0
+cache/0/600/0/underline_position = 0.0
+cache/0/600/0/underline_thickness = 0.0
+cache/0/600/0/scale = 1.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbpqs"]
 texture = ExtResource("9_yqgn5")
 region_rect = Rect2(448, 336, 120, 104)
@@ -866,6 +895,26 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_03i5e")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4wq3e")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8miks")
 
+[node name="ColorRect" type="ColorRect" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn" unique_id=57633370]
+layout_mode = 0
+offset_left = -954.055
+offset_top = -915.482
+offset_right = 4057.28
+offset_bottom = 99.69299
+color = Color(0, 0, 0, 0.6509804)
+
+[node name="Label" type="Label" parent="Control/MarginContainer/bottom_cont/MarginContainer/HBoxContainer2/NinePatchRect/mapStart_btn/ColorRect" unique_id=1232934629]
+layout_mode = 0
+offset_left = 90.403
+offset_top = -49.343
+offset_right = 2617.403
+offset_bottom = 487.657
+scale = Vector2(1.85, 1.85)
+theme_override_fonts/font = SubResource("FontFile_wo1e8")
+theme_override_font_sizes/font_size = 200
+text = "Press Button if you want to 
+start playing"
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/bottom_cont/MarginContainer" unique_id=1194375763]
 layout_mode = 2
 size_flags_horizontal = 0
@@ -931,11 +980,10 @@ offset_bottom = 5000.0
 texture = ExtResource("11_14q07")
 
 [node name="count" type="NinePatchRect" parent="Control/Minimaps" unique_id=1634564447 groups=["minimap_count"]]
-visible = false
 layout_mode = 0
 offset_right = 6000.0
 offset_bottom = 5000.0
-texture = ExtResource("12_o1xuy")
+texture = ExtResource("14_wo1e8")
 
 [node name="blooms" type="NinePatchRect" parent="Control/Minimaps" unique_id=453268230 groups=["minimap_blooms"]]
 visible = false

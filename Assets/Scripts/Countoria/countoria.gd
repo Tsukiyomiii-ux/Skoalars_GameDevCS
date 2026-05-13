@@ -3,6 +3,11 @@ extends Area2D
 func _ready() -> void:
 	AudioManager.play_music(preload("res://Assets/Audio/GameBG.wav"))
 	GameManager.set_current_island("island_2")
+	# ✅ Force HUD to refresh minimap after island is set
+	await get_tree().process_frame
+	var hud = get_tree().get_first_node_in_group("hud")
+	if hud and hud.has_method("_update_minimap_visibility"):
+		hud._update_minimap_visibility()
 	monitoring = true
 	monitorable = true
 
