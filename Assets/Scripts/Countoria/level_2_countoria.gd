@@ -187,7 +187,13 @@ func setup_board_buttons():
 		if not quit_btn.pressed.is_connected(_on_menu_pressed):
 			quit_btn.pressed.connect(_on_menu_pressed)
 
+var reward_collected: bool = false
+
 func _on_rewards_claimed():
+	if reward_collected:
+		return
+	reward_collected = true
+	
 	if tapping_audio: tapping_audio.play()
 	GameManager.collect_island_reward("island_2.5")
 	GameManager.collect_island_reward("island_2")
@@ -200,10 +206,15 @@ func _on_rewards_claimed():
 			tween.tween_property(icon, "scale", Vector2(1.2, 1.2), 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 			tween.chain().tween_property(icon, "scale", Vector2.ONE, 0.2)
 
+	# Disable rewards button so it can't be pressed again
+	var rewards_btn = $CanvasLayer3/completion_board/rewards_button
+	rewards_btn.disabled = true
+	rewards_btn.modulate = Color(0.5, 0.5, 0.5)
+
 	# Enable back button after reward is claimed
 	var btn = $CanvasLayer3/completion_board/back_button
 	btn.disabled = false
-	btn.modulate = Color(1, 1, 1)  # restore normal color
+	btn.modulate = Color(1, 1, 1)
 
 func _on_rescue_pressed():
 	if video_player:

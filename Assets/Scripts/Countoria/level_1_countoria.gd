@@ -415,7 +415,13 @@ func _on_next_button_pressed() -> void:
 func _on_quit_button_pressed() -> void:
 	_on_quit_pressed()
 
+var reward_collected: bool = false
+
 func _on_collect_rewards_pressed() -> void:
+	if reward_collected:
+		return
+	reward_collected = true
+	
 	GameManager.receive_island_reward("island_2")
 	GameManager.complete_minigame("island_2")
 	var btn = $ui_layer/win_board/next_button
@@ -424,3 +430,7 @@ func _on_collect_rewards_pressed() -> void:
 	btn.modulate = Color(1, 1, 1)
 	qbtn.disabled = false
 	qbtn.modulate = Color(1, 1, 1)
+	
+	# Disable the button visually too
+	collect_btn.disabled = true
+	collect_btn.modulate = Color(0.5, 0.5, 0.5)
